@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="">
+
+    <meta name="keywords" content="Poo&#39;s Notes">
+    <meta name="description" content="Poo&#39;s Notes - 一个测试人的自虐。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>地空神一</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css" media="all">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class='nav'>
+        <div class='sitename'><a href="/">地空神一</a></div>
+        <div class='about'><a href="/about.html">关于</a></div>
+    </div>
+    <div class='main'>
+        
+<div class='article'>
+    <div class="post-title">
+        <h2>Git命令全解</h2>
+    </div>
+    <div class="post-date">
+        2020.05.12 20:54 | 类别 :
+        
+            git
+        
+    </div>
+    <div class="post-body">
+        <h3 id="git">初次运行 Git 前的配置</h3>
+<h4 id="_1">用户信息</h4>
+<div class="codehilite"><pre><span></span>$ git config --global user.name <span class="s2">&quot;John Doe&quot;</span>  <span class="c1"># 设置用户名</span>
+$ git config --global user.email johndoe@example.com  <span class="c1"># 设置邮箱</span>
+</pre></div>
+
+
+<h4 id="_2">文本编辑器</h4>
+<div class="codehilite"><pre><span></span>$ git config --global core.editor emacs  <span class="c1"># 设置默认文本编辑器</span>
+</pre></div>
+
+
+<p>检查配置信息</p>
+<div class="codehilite"><pre><span></span>$ git config --list
+user.name<span class="o">=</span>John Doe
+user.email<span class="o">=</span>johndoe@example.com
+color.status<span class="o">=</span>auto
+color.branch<span class="o">=</span>auto
+color.interactive<span class="o">=</span>auto
+color.diff<span class="o">=</span>auto
+...
+</pre></div>
+
+
+<h4 id="_3">检查具体配置信息</h4>
+<div class="codehilite"><pre><span></span>$ git config user.name
+John Doe
+</pre></div>
+
+
+<h4 id="_4">获取帮助</h4>
+<div class="codehilite"><pre><span></span>$ git <span class="nb">help</span> &lt;verb&gt;
+$ git &lt;verb&gt; --help
+$ man git-&lt;verb&gt;
+例如，要想获得 config 命令的手册，执行
+
+$ git <span class="nb">help</span> config
+</pre></div>
+
+
+<h3 id="git_1">获取 Git 仓库</h3>
+<h4 id="_5">在现有目录中初始化仓库</h4>
+<div class="codehilite"><pre><span></span>$ git init  <span class="c1"># 初始化仓库</span>
+</pre></div>
+
+
+<h4 id="_6">克隆现有的仓库</h4>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/poooooooo/insect
+$ git clone git@github.com:poooooooo/insect.git
+</pre></div>
+
+
+<p>也可以使用 SSH 传输协议，比如user@server:path/to/repo.git。</p>
+<p>在克隆远程仓库的时候，自定义本地仓库的名字</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/poooooooo/insect poo
+</pre></div>
+
+
+<h3 id="_7">记录每次更新到仓库</h3>
+<h4 id="_8">检查当前文件状态</h4>
+<div class="codehilite"><pre><span></span>$ git status
+On branch master
+nothing to commit, working directory clean
+</pre></div>
+
+
+<h4 id="_9">跟踪新文件</h4>
+<div class="codehilite"><pre><span></span>$ git add README
+</pre></div>
+
+
+<h4 id="_10">状态简览</h4>
+<div class="codehilite"><pre><span></span>$ git status -s
+</pre></div>
+
+
+<h4 id="_11">忽略文件</h4>
+<div class="codehilite"><pre><span></span><span class="err">$</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="p">.</span><span class="n">gitignore</span><span class="w"></span>
+<span class="o">*</span><span class="p">.</span><span class="o">[</span><span class="n">oa</span><span class="o">]</span><span class="w"></span>
+<span class="o">*~</span><span class="w"></span>
+</pre></div>
+
+
+<h4 id="_12">查看数据更新内容</h4>
+<div class="codehilite"><pre><span></span><span class="err">git diff  # 查看尚未暂存的文件更新内容</span>
+<span class="err">git diff --cached  # 查看已暂存的将要添加到下次提交里的内容</span>
+<span class="err">git diff --staged  # 同上</span>
+</pre></div>
+
+
+<h4 id="_13">提交更新</h4>
+<div class="codehilite"><pre><span></span><span class="err">git commit</span>
+<span class="err">git commit -m &quot;Story 182: Fix benchmarks for speed&quot;  # 将提交信息与命令放在同一行</span>
+<span class="err">git commit -a -m &#39;added new benchmarks&#39;  # 把所有已经跟踪过的文件暂存起来一并提交</span>
+</pre></div>
+
+
+<h4 id="_14">移除文件</h4>
+<div class="codehilite"><pre><span></span><span class="err">git rm PROJECTS.md</span>
+</pre></div>
+
+
+<h4 id="_15">移动文件</h4>
+<div class="codehilite"><pre><span></span>$ git mv file_from file_to
+</pre></div>
+
+
+<h3 id="_16">查看提交历史</h3>
+<h4 id="_17">查看提交历史</h4>
+<div class="codehilite"><pre><span></span>$ git log
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td align="center">按补丁格式显示每个更新之间的差异。</td>
+</tr>
+<tr>
+<td>--stat</td>
+<td align="center">显示每次更新的文件修改统计信息。</td>
+</tr>
+<tr>
+<td>--shortstat</td>
+<td align="center">只显示 --stat 中最后的行数修改添加移除统计。</td>
+</tr>
+<tr>
+<td>--name-only</td>
+<td align="center">仅在提交信息后显示已修改的文件清单。</td>
+</tr>
+<tr>
+<td>--name-status</td>
+<td align="center">显示新增、修改、删除的文件清单。</td>
+</tr>
+<tr>
+<td>--abbrev-commit</td>
+<td align="center">仅显示 SHA-1 的前几个字符，而非所有的 40 个字符。</td>
+</tr>
+<tr>
+<td>--relative-date</td>
+<td align="center">使用较短的相对时间显示（比如，“2 weeks ago”）。</td>
+</tr>
+<tr>
+<td>--graph</td>
+<td align="center">显示 ASCII 图形表示的分支合并历史。</td>
+</tr>
+<tr>
+<td>--pretty</td>
+<td align="center">使用其他格式显示历史提交信息。可用的选项包括 oneline，short，full，fuller 和 format（后跟指定格式）。</td>
+</tr>
+<tr>
+<td>-(n)</td>
+<td align="center">仅显示最近的 n 条提交</td>
+</tr>
+<tr>
+<td>--since, --after</td>
+<td align="center">仅显示指定时间之后的提交。</td>
+</tr>
+<tr>
+<td>--until, --before</td>
+<td align="center">仅显示指定时间之前的提交。</td>
+</tr>
+<tr>
+<td>--author</td>
+<td align="center">仅显示指定作者相关的提交。</td>
+</tr>
+<tr>
+<td>--committer</td>
+<td align="center">仅显示指定提交者相关的提交。</td>
+</tr>
+<tr>
+<td>--grep</td>
+<td align="center">仅显示含指定关键字的提交</td>
+</tr>
+<tr>
+<td>-S</td>
+<td align="center">仅显示添加或移除了某个关键字的提交</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_18">撤消操作</h3>
+<div class="codehilite"><pre><span></span>$ git commit -m <span class="s1">&#39;initial commit&#39;</span>
+$ git add forgotten_file
+$ git commit --amend  <span class="c1"># 最终你只会有一个提交 - 第二次提交将代替第一次提交的结果</span>
+</pre></div>
+
+
+<h4 id="_19">取消暂存的文件</h4>
+<div class="codehilite"><pre><span></span>$ git reset HEAD CONTRIBUTING.md
+</pre></div>
+
+
+<h4 id="_20">撤消对文件的修改</h4>
+<div class="codehilite"><pre><span></span>$ git checkout -- CONTRIBUTING.md
+</pre></div>
+
+
+<h3 id="_21">远程仓库的使用</h3>
+<h4 id="_22">查看远程仓库</h4>
+<div class="codehilite"><pre><span></span>$ git remote  <span class="c1"># 查看远程仓库</span>
+$ git remote -v  <span class="c1"># 显示简写和URL</span>
+</pre></div>
+
+
+<h4 id="_23">添加远程仓库</h4>
+<div class="codehilite"><pre><span></span>$ git remote add pb https://github.com/paulboone/ticgit <span class="c1"># pb代替URL</span>
+</pre></div>
+
+
+<h4 id="_24">从远程仓库中抓取与拉取</h4>
+<div class="codehilite"><pre><span></span>$ git fetch <span class="o">[</span>remote-name<span class="o">]</span>
+</pre></div>
+
+
+<h4 id="_25">推送到远程仓库</h4>
+<div class="codehilite"><pre><span></span>$ git push origin master
+</pre></div>
+
+
+<h4 id="_26">查看远程仓库</h4>
+<div class="codehilite"><pre><span></span>$ git remote show origin
+</pre></div>
+
+
+<h4 id="_27">远程仓库的移除与重命名</h4>
+<div class="codehilite"><pre><span></span>$ git remote rename pb paul  <span class="c1"># pb修改为paul</span>
+$ git remote rm paul  <span class="c1"># 移除paul</span>
+</pre></div>
+
+
+<h3 id="_28">打标签</h3>
+<h4 id="_29">列出标签</h4>
+<div class="codehilite"><pre><span></span>$ git tag
+$ git tag -l <span class="s1">&#39;v1.8.5*&#39;</span>  <span class="c1"># 查询和&#39;v1.8.5&#39;有关的</span>
+</pre></div>
+
+
+<h4 id="_30">创建标签</h4>
+<p>附注标签</p>
+<div class="codehilite"><pre><span></span>$ git tag -a v1.4 -m <span class="s1">&#39;my version 1.4&#39;</span>
+</pre></div>
+
+
+<p>轻量标签</p>
+<div class="codehilite"><pre><span></span>$ git tag v1.4-lw
+</pre></div>
+
+
+<p>后期打标签</p>
+<div class="codehilite"><pre><span></span>$ git log --pretty<span class="o">=</span>oneline
+9fceb02d0ae598e95dc970b74767f19372d61af8 updated rakefile
+
+$ git tag -a v1.2 9fceb02  <span class="c1">#需要在命令的末尾指定提交的校验和（或部分校验和）</span>
+</pre></div>
+
+
+<p>共享标签</p>
+<div class="codehilite"><pre><span></span>$ git push origin v1.5  <span class="c1"># 推送单一tag</span>
+$ git push origin --tags  <span class="c1"># 推送所有tag</span>
+</pre></div>
+
+
+<p>检出标签</p>
+<div class="codehilite"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">[</span><span class="n">branchname</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">tagname</span><span class="o">]</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">version2</span><span class="w"> </span><span class="n">v2</span><span class="mf">.0.0</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">version2</span><span class="o">==</span><span class="n">branchname</span><span class="p">,</span><span class="n">v2</span><span class="mf">.0.0</span><span class="o">==</span><span class="n">tagname</span><span class="w"></span>
+</pre></div>
+
+
+<h3 id="git_2">Git 别名</h3>
+<div class="codehilite"><pre><span></span>$ git config --global alias.co checkout  <span class="c1"># git co==git checkout</span>
+$ git config --global alias.br branch  <span class="c1"># git br==git branch</span>
+$ git config --global alias.ci commit  <span class="c1"># git ci==git commit</span>
+$ git config --global alias.st status  <span class="c1"># git st==git status</span>
+</pre></div>
+
+
+<h3 id="_31">分支</h3>
+<h4 id="_32">分支创建</h4>
+<div class="codehilite"><pre><span></span>$ git branch testing  <span class="c1"># testing是分支</span>
+</pre></div>
+
+
+<h4 id="_33">分支切换</h4>
+<div class="codehilite"><pre><span></span>$ git checkout testing
+</pre></div>
+
+
+<h4 id="_34">分支的新建与合并</h4>
+<div class="codehilite"><pre><span></span>$ git checkout -b iss53  <span class="c1"># 创建一个新分支</span>
+Switched to a new branch <span class="s2">&quot;iss53&quot;</span>
+</pre></div>
+
+
+<p>它是下面两条命令的简写：</p>
+<div class="codehilite"><pre><span></span>$ git branch iss53
+$ git checkout iss53
+
+$ git merge iss53  <span class="c1"># 合并分支</span>
+
+$ git branch -d iss53  <span class="c1"># 删除分支</span>
+</pre></div>
+
+
+<h3 id="_35">分支管理</h3>
+<div class="codehilite"><pre><span></span>$ git branch  <span class="c1">#分支列表</span>
+$ git branch -v  <span class="c1"># 查看每个分支最后一次提交的信息</span>
+$ git branch --merged  <span class="c1"># 查看已经合并到当前分支的分支</span>
+$ git branch --no-merged  <span class="c1"># 查看所有包含未合并工作的分支</span>
+</pre></div>
+
+
+<h3 id="_36">远程分支</h3>
+<h4 id="_37">推送</h4>
+<div class="codehilite"><pre><span></span><span class="err">git push (remote) (branch)</span>
+<span class="err">$ git push origin serverfix  # origin==remote,serverfix==branch</span>
+</pre></div>
+
+
+<h4 id="_38">跟踪分支</h4>
+<div class="codehilite"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">[</span><span class="n">branch</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">remotename</span><span class="o">]/[</span><span class="n">branch</span><span class="o">]</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="c1">--track origin/serverfix</span>
+</pre></div>
+
+
+<h4 id="_39">删除远程分支</h4>
+<div class="codehilite"><pre><span></span>$ git push origin --delete serverfix
+</pre></div>
+    </div>
+</div>
+<div class="post-meta">
+    
+    <span class="post-meta-item-text">标签 :
+    
+        git
+    
+    </span>
+    
+</div>
+<div class="prenex">
+    <div class="previous">
+        
+        <a href="https://testpoo.github.io/post/分分种学会python3.html">分分种学会python3</a>
+        
+    </div>
+    <div class="nexts">
+        
+        <a href="https://testpoo.github.io/post/SQL基础-DCL和帮助.html">SQL基础-DCL和帮助</a>
+        
+    </div>
+</div>
+
+    </div>
+    <div class='footer'>
+        <span class="save">授权协议 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>(CC) BY-NC-SA</a> <span class="del">|</span><span class="save"> 订阅 <a href="/rss.xml">RSS</a> <span class="del">|</span><span class="save"> 微信 : puyaweis</span>
+    </div>
+</body>
+
+</html>

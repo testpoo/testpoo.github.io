@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="">
+
+    <meta name="keywords" content="Poo&#39;s Notes">
+    <meta name="description" content="Poo&#39;s Notes - 一个测试人的自虐。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>地空神一</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css" media="all">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class='nav'>
+        <div class='sitename'><a href="/">地空神一</a></div>
+        <div class='about'><a href="/about.html">关于</a></div>
+    </div>
+    <div class='main'>
+        
+<div class='article'>
+    <div class="post-title">
+        <h2>SQL基础-DDL</h2>
+    </div>
+    <div class="post-date">
+        2020.05.10 20:54 | 类别 :
+        
+            mysql
+        
+    </div>
+    <div class="post-body">
+        <h3 id="sql-ddl">SQL 分类-DDL</h3>
+<p>SQL 语句主要可以划分为以下 3 个类别。</p>
+<ul>
+<li>
+<p>DDL（Data Definition Languages）语句：数据定义语言，这些语句定义了不同的数据段、
+数据库、表、列、索引等数据库对象的定义。常用的语句关键字主要包括 create、drop、alter
+等。</p>
+</li>
+<li>
+<p>DML（Data Manipulation Language）语句<strong>：</strong>数据操纵语句，用于添加、删除、更新和查
+询数据库记录，并检查数据完整性，常用的语句关键字主要包括 insert、delete、udpate 和
+select 等。</p>
+</li>
+<li>
+<p>DCL（Data Control Language）语句：数据控制语句，用于控制不同数据段直接的许可和
+访问级别的语句。这些语句定义了数据库、表、字段、用户的访问权限和安全级别。主要的
+语句关键字包括 grant、revoke 等。</p>
+</li>
+</ul>
+<h3 id="ddl">DDL 语句</h3>
+<ul>
+<li>创建数据库</li>
+</ul>
+<div class="codehilite"><pre><span></span>  <span class="o">#</span> <span class="err">创建数据库</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">TEST</span><span class="p">;</span>
+  <span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">1</span> <span class="k">row</span> <span class="n">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="n">sec</span><span class="p">)</span>
+
+  <span class="o">#</span> <span class="err">查询所有数据库</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">databases</span><span class="p">;</span>
+  <span class="o">+</span><span class="c1">--------------------+</span>
+  <span class="o">|</span> <span class="k">Database</span>           <span class="o">|</span>
+  <span class="o">+</span><span class="c1">--------------------+</span>
+  <span class="o">|</span> <span class="n">information_schema</span> <span class="o">|</span>
+  <span class="o">|</span> <span class="n">mysql</span>              <span class="o">|</span>
+  <span class="o">|</span> <span class="n">performance_schema</span> <span class="o">|</span>
+  <span class="o">|</span> <span class="n">sakila</span>             <span class="o">|</span>
+  <span class="o">|</span> <span class="n">test</span>               <span class="o">|</span>
+  <span class="o">+</span><span class="c1">--------------------+</span>
+  <span class="mi">5</span> <span class="k">rows</span> <span class="k">in</span> <span class="k">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="n">sec</span><span class="p">)</span>
+
+  <span class="o">#</span> <span class="err">选择要操作数据库</span>
+  <span class="c1">-- use dbname; # 语法</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="n">use</span> <span class="n">test</span><span class="p">;</span>
+  <span class="k">Database</span> <span class="n">changed</span>
+
+  <span class="o">#</span> <span class="err">查看当前数据库所有表</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">tables</span><span class="p">;</span> <span class="o">#</span> <span class="err">空库查询</span>
+  <span class="n">Empty</span> <span class="k">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="n">use</span> <span class="n">mysql</span><span class="p">;</span>
+  <span class="k">Database</span> <span class="n">changed</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">tables</span><span class="p">;</span>  <span class="o">#</span> <span class="err">非空库查询</span>
+  <span class="o">+</span><span class="c1">---------------------------+</span>
+  <span class="o">|</span> <span class="n">Tables_in_mysql</span>           <span class="o">|</span>
+  <span class="o">+</span><span class="c1">---------------------------+</span>
+  <span class="o">|</span> <span class="n">columns_priv</span>              <span class="o">|</span>
+  <span class="o">|</span> <span class="n">db</span>                        <span class="o">|</span>
+  <span class="o">|</span> <span class="n">event</span>                     <span class="o">|</span>
+  <span class="o">|</span> <span class="n">func</span>                      <span class="o">|</span>
+  <span class="o">|</span> <span class="n">general_log</span>               <span class="o">|</span>
+  <span class="o">|</span> <span class="n">help_category</span>             <span class="o">|</span>
+  <span class="o">|</span> <span class="n">help_keyword</span>              <span class="o">|</span>
+  <span class="o">|</span> <span class="n">help_relation</span>             <span class="o">|</span>
+  <span class="o">|</span> <span class="n">help_topic</span>                <span class="o">|</span>
+  <span class="o">|</span> <span class="n">innodb_index_stats</span>        <span class="o">|</span>
+  <span class="o">|</span> <span class="n">innodb_table_stats</span>        <span class="o">|</span>
+  <span class="o">|</span> <span class="n">ndb_binlog_index</span>          <span class="o">|</span>
+  <span class="o">|</span> <span class="n">plugin</span>                    <span class="o">|</span>
+  <span class="o">|</span> <span class="n">proc</span>                      <span class="o">|</span>
+  <span class="o">|</span> <span class="n">procs_priv</span>                <span class="o">|</span>
+  <span class="o">|</span> <span class="n">proxies_priv</span>              <span class="o">|</span>
+  <span class="o">|</span> <span class="n">servers</span>                   <span class="o">|</span>
+  <span class="o">|</span> <span class="n">slave_master_info</span>         <span class="o">|</span>
+  <span class="o">|</span> <span class="n">slave_relay_log_info</span>      <span class="o">|</span>
+  <span class="o">|</span> <span class="n">slave_worker_info</span>         <span class="o">|</span>
+  <span class="o">|</span> <span class="n">slow_log</span>                  <span class="o">|</span>
+  <span class="o">|</span> <span class="n">tables_priv</span>               <span class="o">|</span>
+  <span class="o">|</span> <span class="n">time_zone</span>                 <span class="o">|</span>
+  <span class="o">|</span> <span class="n">time_zone_leap_second</span>     <span class="o">|</span>
+  <span class="o">|</span> <span class="n">time_zone_name</span>            <span class="o">|</span>
+  <span class="o">|</span> <span class="n">time_zone_transition</span>      <span class="o">|</span>
+  <span class="o">|</span> <span class="n">time_zone_transition_type</span> <span class="o">|</span>
+  <span class="o">|</span> <span class="k">user</span>                      <span class="o">|</span>
+  <span class="o">+</span><span class="c1">---------------------------+</span>
+  <span class="mi">28</span> <span class="k">rows</span> <span class="k">in</span> <span class="k">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>删除数据库</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">  -- drop database dbname; # 语法</span>
+<span class="err">  mysql&gt; drop database test; </span>
+<span class="err">  Query OK, 0 rows affected (0.01 sec)</span>
+</pre></div>
+
+
+<ul>
+<li>创建表</li>
+</ul>
+<div class="codehilite"><pre><span></span>  <span class="c1"># 创建表</span>
+  <span class="c1">-- CREATE TABLE tablename (column_name_1 column_type_1 constraints,column_name_2 column_type_2 constraints, ……column_name_n column_type_n constraints) # 语法</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">table</span> <span class="nf">emp</span><span class="p">(</span><span class="n">ename</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="n">hiredate</span> <span class="kt">date</span><span class="p">,</span><span class="n">sal</span> <span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">deptno</span> <span class="kt">int</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+  <span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">0</span> <span class="n">rows</span> <span class="nf">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span> <span class="n">sec</span><span class="p">)</span>
+
+  <span class="c1"># 查看表定义</span>
+  <span class="c1">-- DESC tablename # 语法</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">desc</span> <span class="n">emp</span><span class="p">;</span>
+  <span class="o">+----------+---------------+------+-----+---------+-------+</span>
+  <span class="o">|</span> <span class="n">Field</span>    <span class="o">|</span> <span class="n">Type</span>          <span class="o">|</span> <span class="no">Null</span> <span class="o">|</span> <span class="k">Key</span> <span class="o">|</span> <span class="k">Default</span> <span class="o">|</span> <span class="n">Extra</span> <span class="o">|</span>
+  <span class="o">+----------+---------------+------+-----+---------+-------+</span>
+  <span class="o">|</span> <span class="n">ename</span>    <span class="o">|</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="o">|</span> <span class="n">YES</span>  <span class="o">|</span>     <span class="o">|</span> <span class="no">NULL</span>    <span class="o">|</span>       <span class="o">|</span>
+  <span class="o">|</span> <span class="n">hiredate</span> <span class="o">|</span> <span class="kt">date</span>          <span class="o">|</span> <span class="n">YES</span>  <span class="o">|</span>     <span class="o">|</span> <span class="no">NULL</span>    <span class="o">|</span>       <span class="o">|</span>
+  <span class="o">|</span> <span class="n">sal</span>      <span class="o">|</span> <span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">|</span> <span class="n">YES</span>  <span class="o">|</span>     <span class="o">|</span> <span class="no">NULL</span>    <span class="o">|</span>       <span class="o">|</span>
+  <span class="o">|</span> <span class="n">deptno</span>   <span class="o">|</span> <span class="kt">int</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>        <span class="o">|</span> <span class="n">YES</span>  <span class="o">|</span>     <span class="o">|</span> <span class="no">NULL</span>    <span class="o">|</span>       <span class="o">|</span>
+  <span class="o">+----------+---------------+------+-----+---------+-------+</span>
+  <span class="mi">4</span> <span class="n">rows</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">02</span> <span class="n">sec</span><span class="p">)</span>
+
+  <span class="c1"># 查看全面的表定义</span>
+  <span class="c1">-- SHOW CREATE TABLE TABKENAME # 语法</span>
+  <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="k">create</span> <span class="k">table</span> <span class="n">emp</span><span class="p">;</span>
+  <span class="o">+-------+--------------------------------+</span>
+  <span class="o">|</span> <span class="k">Table</span> <span class="o">|</span> <span class="k">Create</span> <span class="k">Table</span>                   <span class="o">|</span>
+  <span class="o">+-------+--------------------------------+</span>
+  <span class="o">|</span> <span class="n">emp</span>   <span class="o">|</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="ss">`emp`</span> <span class="p">(</span>
+    <span class="ss">`ename`</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+    <span class="ss">`hiredate`</span> <span class="kt">date</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+    <span class="ss">`sal`</span> <span class="kt">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span><span class="p">,</span>
+    <span class="ss">`deptno`</span> <span class="kt">int</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="no">NULL</span>
+  <span class="p">)</span> <span class="kp">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="kp">CHARSET</span><span class="o">=</span><span class="n">latin1</span>   <span class="o">|</span>
+  <span class="o">+-------+--------------------------------+</span>
+  <span class="mi">1</span> <span class="n">row</span> <span class="k">in</span> <span class="kt">set</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>删除表</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">  # 删除表</span>
+<span class="err">  -- DROP TABLE tablename # 语法</span>
+<span class="err">  mysql&gt; drop table emp;</span>
+<span class="err">  Query OK, 0 rows affected (0.02 sec)</span>
+</pre></div>
+
+
+<ul>
+<li>修改表</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">修改表类型</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- ALTER TABLE tablename MODIFY [COLUMN] column_definition [FIRST | AFTER col_name] # 语法</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w">  </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">modify</span><span class="w"> </span><span class="n">ename</span><span class="w"> </span><span class="nc">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.08</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">增加表字段</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- ALTER TABLE tablename ADD [COLUMN] column_definition [FIRST | AFTER col_name] # 语法</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.05</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">删除表字段</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- ALTER TABLE tablename DROP [COLUMN] col_name # 语法</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">drop</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.07</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">字段改名</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- ALTER TABLE tablename CHANGE [COLUMN] old_col_name column_definition [FIRST|AFTER col_name] # 语法</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="nc">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.01</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">修改字段排列顺序</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- 添加字段birth放到ename后面</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">birth</span><span class="w"> </span><span class="nc">date</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">ename</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.07</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- 将salary放到最前面</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="k">modify</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.07</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nl">Records</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Duplicates</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">  </span><span class="nl">Warnings</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+</pre></div>
+
+
+<ul>
+<li>修改表名</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">修改表名</span><span class="w"></span>
+<span class="w">  </span><span class="c1">-- ALTER TABLE tablename RENAME [TO] new_tablename # 语法</span>
+<span class="w">  </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">alter</span><span class="w"> </span><span class="nc">table</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">rename</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mf">0.02</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+    </div>
+</div>
+<div class="post-meta">
+    
+    <span class="post-meta-item-text">标签 :
+    
+        ddl
+    
+    </span>
+    
+</div>
+<div class="prenex">
+    <div class="previous">
+        
+        <a href="https://testpoo.github.io/post/SQL基础-DML.html">SQL基础-DML</a>
+        
+    </div>
+    <div class="nexts">
+        
+        <a href="https://testpoo.github.io">已经是最后一篇了</a>
+        
+    </div>
+</div>
+
+    </div>
+    <div class='footer'>
+        <span class="save">授权协议 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>(CC) BY-NC-SA</a> <span class="del">|</span><span class="save"> 订阅 <a href="/rss.xml">RSS</a> <span class="del">|</span><span class="save"> 微信 : puyaweis</span>
+    </div>
+</body>
+
+</html>

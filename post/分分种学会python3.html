@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="">
+
+    <meta name="keywords" content="Poo&#39;s Notes">
+    <meta name="description" content="Poo&#39;s Notes - 一个测试人的自虐。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>地空神一</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css" media="all">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class='nav'>
+        <div class='sitename'><a href="/">地空神一</a></div>
+        <div class='about'><a href="/about.html">关于</a></div>
+    </div>
+    <div class='main'>
+        
+<div class='article'>
+    <div class="post-title">
+        <h2>分分种学会python3</h2>
+    </div>
+    <div class="post-date">
+        2020.05.14 20:54 | 类别 :
+        
+            python
+        
+    </div>
+    <div class="post-body">
+        <h1 id="python3x">python3.x</h1>
+<div class="codehilite"><pre><span></span><span class="err"># 单行注释由一个井号开头。</span>
+<span class="err">&quot;&quot;&quot; </span>
+<span class="err">   三个双引号（或单引号）之间可以写多行字符串，</span>
+<span class="err">   通常用来写注释。</span>
+<span class="err">&quot;&quot;&quot;</span>
+</pre></div>
+
+
+<h3 id="_1">基本数据类型和操作符</h3>
+<div class="codehilite"><pre><span></span><span class="err"># 数字就是数字</span>
+<span class="err">3 #=&gt; 3</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 四则运算也是你所期望的那样</span>
+<span class="err">1 + 1 #=&gt; 2</span>
+<span class="err">8 - 1 #=&gt; 7</span>
+<span class="err">10 * 2 #=&gt; 20</span>
+<span class="err">35 / 5 #=&gt; 7.0</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 为了修正除法的问题，我们需要先学习浮点数。</span>
+<span class="err">2.0     # This is a float</span>
+<span class="err">2.0     # 这是一个浮点数</span>
+<span class="err">11.0 / 4.0 #=&gt; 2.75 ahhh...much better</span>
+<span class="err">11.0 / 4.0 #=&gt; 2.75 啊……这样就好多了</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 使用小括号来强制计算的优先顺序</span>
+<span class="err">(1 + 3) * 2 #=&gt; 8</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 布尔值也是基本数据类型</span>
+<span class="err">True</span>
+<span class="err">False</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 使用 not 来取反</span>
+<span class="err">not True #=&gt; False</span>
+<span class="err">not False #=&gt; True</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 等式判断用 ==</span>
+<span class="err">1 == 1 #=&gt; True</span>
+<span class="err">2 == 1 #=&gt; False</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 不等式判断是用 !=</span>
+<span class="err">1 != 1 #=&gt; False</span>
+<span class="err">2 != 1 #=&gt; True</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 还有更多的比较运算</span>
+<span class="err">1 &lt; 10 #=&gt; True</span>
+<span class="err">1 &gt; 10 #=&gt; False</span>
+<span class="err">2 &lt;= 2 #=&gt; True</span>
+<span class="err">2 &gt;= 2 #=&gt; True</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 居然可以把比较运算串连起来！</span>
+<span class="err">1 &lt; 2 &lt; 3 #=&gt; True</span>
+<span class="err">2 &lt; 3 &lt; 2 #=&gt; False</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 使用 &quot; 或 &#39; 来创建字符串</span>
+<span class="err">&quot;This is a string.&quot;</span>
+<span class="err">&#39;This is also a string.&#39;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 字符串也可以相加！</span>
+<span class="err">&quot;Hello &quot; + &quot;world!&quot; #=&gt; &quot;Hello world!&quot;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 一个字符串可以视为一个字符的列表</span>
+<span class="err">&quot;This is a string&quot;[0] #=&gt; &#39;T&#39;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># % 可以用来格式化字符串，就像这样：</span>
+<span class="err">&quot;%s can be %s&quot; % (&quot;strings&quot;, &quot;interpolated&quot;)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 格式化字符串的新方法：format 方法。</span>
+<span class="err">&quot;{0} can be {1}&quot;.format(&quot;strings&quot;, &quot;formatted&quot;)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 如果你不喜欢数数的话，可以使用关键字（变量）。</span>
+<span class="err">&quot;{name} wants to eat {food}&quot;.format(name=&quot;Bob&quot;, food=&quot;lasagna&quot;)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># None 是一个对象</span>
+<span class="err">None #=&gt; None</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="c1"># 不要使用相等符号 `==` 来把对象和 None 进行比较，</span>
+<span class="c1"># 而要用 `is`。</span>
+<span class="s2">&quot;etc&quot;</span> <span class="k">is</span> <span class="n">None</span> <span class="c1">#=&gt; False</span>
+<span class="n">None</span> <span class="k">is</span> <span class="n">None</span>  <span class="c1">#=&gt; True</span>
+
+<span class="c1"># 这个 `is` 操作符用于比较两个对象的标识。</span>
+<span class="c1"># （译注：对象一旦建立，其标识就不会改变，可以认为它就是对象的内存地址。）</span>
+<span class="c1"># 在处理基本数据类型时基本用不上，</span>
+<span class="c1"># 但它在处理对象时很有用。</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># None、0 以及空字符串和空列表都等于 False，</span>
+<span class="err"># 除此以外的所有值都等于 True。</span>
+<span class="err">0 == False  #=&gt; True</span>
+<span class="err">&quot;&quot; == False #=&gt; True</span>
+</pre></div>
+
+
+<h3 id="_2">变量和集合</h3>
+<div class="codehilite"><pre><span></span><span class="err"># 打印输出很简单</span>
+<span class="err">print(&quot;I&#39;m Python. Nice to meet you!&quot;)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 在赋值给变量之前不需要声明</span>
+<span class="err">some_var = 5   # 变量名的约定是使用下划线分隔的小写单词</span>
+<span class="err">some_var #=&gt; 5</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># 访问一个未赋值的变量会产生一个异常。</span>
+<span class="err">some_other_var  # 会抛出一个名称错误 NameError: name &#39;some_other_var&#39; is not defined</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="err"># if 可以作为表达式来使用</span>
+<span class="err">&quot;yahoo!&quot; if 3 &gt; 2 else 2 #=&gt; &quot;yahoo!&quot;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">列表用于存储序列</span>
+<span class="n">li</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">#</span> <span class="err">我们先尝试一个预先填充好的列表</span>
+<span class="n">other_li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="n">append</span> <span class="err">方法把元素添加到列表的尾部</span>
+<span class="n">li</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="o">#</span><span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">li</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="o">#</span><span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">li</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>   <span class="o">#</span><span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">li</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="o">#</span><span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="n">pop</span> <span class="err">来移除最后一个元素</span>
+<span class="n">li</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>       <span class="o">#=&gt;</span> <span class="mi">3</span><span class="err">，然后</span> <span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">#</span> <span class="err">我们再把它放回去</span>
+<span class="n">li</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>   <span class="o">#</span> <span class="n">li</span> <span class="err">现在又是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="err">了</span>
+
+<span class="o">#</span> <span class="err">像访问其它语言的数组那样访问列表</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="mi">1</span>
+<span class="o">#</span> <span class="err">查询最后一个元素</span>
+<span class="n">li</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="mi">3</span>
+
+<span class="o">#</span> <span class="err">越界查询会产生一个索引错误</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">#</span> <span class="err">抛出一个索引错误</span> <span class="n">IndexError</span><span class="p">:</span> <span class="n">list</span> <span class="k">index</span> <span class="k">out</span> <span class="k">of</span> <span class="n">range</span>
+
+<span class="o">#</span> <span class="err">你可以使用切片语法来查询列表的一个范围。</span>
+<span class="o">#</span> <span class="err">（这个范围相当于数学中的左闭右开区间。）</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">#</span> <span class="err">省略开头</span>
+<span class="n">li</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="o">#</span> <span class="err">省略结尾</span>
+<span class="n">li</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="n">del</span> <span class="err">来删除列表中的任意元素</span>
+<span class="n">del</span> <span class="n">li</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">#</span> <span class="n">li</span> <span class="err">现在是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">可以把列表相加</span>
+<span class="n">other_li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">li</span> <span class="o">+</span> <span class="n">other_li</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="o">-</span> <span class="err">请留意</span> <span class="n">li</span> <span class="err">和</span> <span class="n">other_li</span> <span class="err">并不会被修改</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="n">extend</span> <span class="err">来合并列表</span>
+<span class="n">li</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">other_li</span><span class="p">)</span> <span class="o">#</span> <span class="err">现在</span> <span class="n">li</span> <span class="err">是</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">用</span> <span class="k">in</span> <span class="err">来检查是否存在于某个列表中</span>
+<span class="mi">1</span> <span class="k">in</span> <span class="n">li</span> <span class="o">#=&gt;</span> <span class="k">True</span>
+
+<span class="o">#</span> <span class="err">用</span> <span class="n">len</span> <span class="err">来检测列表的长度</span>
+<span class="n">len</span><span class="p">(</span><span class="n">li</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">6</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">元组很像列表，但它是“不可变”的。</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="mi">1</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>  <span class="o">#</span> <span class="err">抛出一个类型错误</span> <span class="n">SyntaxError</span><span class="p">:</span> <span class="n">can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">assign</span> <span class="k">to</span> <span class="k">function</span> <span class="k">call</span>
+
+<span class="o">#</span> <span class="err">操作列表的方式通常也能用在元组身上</span>
+<span class="n">len</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">3</span>
+<span class="n">tup</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">tup</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">2</span> <span class="k">in</span> <span class="n">tup</span> <span class="o">#=&gt;</span> <span class="k">True</span>
+
+<span class="o">#</span> <span class="err">你可以把元组（或列表）中的元素解包赋值给多个变量</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="k">c</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>    <span class="o">#</span> <span class="err">现在</span> <span class="n">a</span> <span class="err">是</span> <span class="mi">1</span><span class="err">，</span><span class="n">b</span> <span class="err">是</span> <span class="mi">2</span><span class="err">，</span><span class="k">c</span> <span class="err">是</span> <span class="mi">3</span>
+<span class="o">#</span> <span class="err">如果你省去了小括号，那么元组会被自动创建</span>
+<span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span>
+<span class="o">#</span> <span class="err">再来看看交换两个值是多么简单。</span>
+<span class="n">e</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span>    <span class="o">#</span> <span class="err">现在</span> <span class="n">d</span> <span class="err">是</span> <span class="mi">5</span> <span class="err">而</span> <span class="n">e</span> <span class="err">是</span> <span class="mi">4</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">字典用于存储映射关系</span>
+<span class="n">empty_dict</span> <span class="o">=</span> <span class="err">{}</span>
+<span class="o">#</span> <span class="err">这是一个预先填充的字典</span>
+<span class="n">filled_dict</span> <span class="o">=</span> <span class="err">{</span><span class="ss">&quot;one&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;two&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;three&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="p">[]</span> <span class="err">来查询键值</span>
+<span class="n">filled_dict</span><span class="p">[</span><span class="ss">&quot;one&quot;</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="mi">1</span>
+
+<span class="o">#</span> <span class="err">将字典的所有键名获取为一个列表</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="ss">&quot;three&quot;</span><span class="p">,</span> <span class="ss">&quot;two&quot;</span><span class="p">,</span> <span class="ss">&quot;one&quot;</span><span class="p">]</span>
+<span class="o">#</span> <span class="err">请注意：无法保证字典键名的顺序如何排列。</span>
+<span class="o">#</span> <span class="err">你得到的结果可能跟上面的示例不一致。</span>
+
+<span class="o">#</span> <span class="err">将字典的所有键值获取为一个列表</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="k">values</span><span class="p">()</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="o">#</span> <span class="err">请注意：顺序的问题和上面一样。</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="k">in</span> <span class="err">来检查一个字典是否包含某个键名</span>
+<span class="ss">&quot;one&quot;</span> <span class="k">in</span> <span class="n">filled_dict</span> <span class="o">#=&gt;</span> <span class="k">True</span>
+<span class="mi">1</span> <span class="k">in</span> <span class="n">filled_dict</span> <span class="o">#=&gt;</span> <span class="k">False</span>
+
+<span class="o">#</span> <span class="err">查询一个不存在的键名会产生一个键名错误</span>
+<span class="n">filled_dict</span><span class="p">[</span><span class="ss">&quot;four&quot;</span><span class="p">]</span> <span class="o">#</span> <span class="err">键名错误</span> <span class="n">KeyError</span><span class="p">:</span> <span class="s1">&#39;four&#39;</span>
+
+<span class="o">#</span> <span class="err">所以要使用</span> <span class="k">get</span> <span class="err">方法来避免键名错误</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;one&quot;</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">1</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;four&quot;</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="k">None</span>
+<span class="o">#</span> <span class="k">get</span> <span class="err">方法支持传入一个默认值参数，将在取不到值时返回。</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;one&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">1</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;four&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">4</span>
+
+<span class="o">#</span> <span class="n">Setdefault</span> <span class="err">方法可以安全地把新的名值对添加到字典里</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="ss">&quot;five&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">#</span><span class="n">filled_dict</span><span class="p">[</span><span class="ss">&quot;five&quot;</span><span class="p">]</span> <span class="err">被设置为</span> <span class="mi">5</span>
+<span class="n">filled_dict</span><span class="p">.</span><span class="n">setdefault</span><span class="p">(</span><span class="ss">&quot;five&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">#</span><span class="n">filled_dict</span><span class="p">[</span><span class="ss">&quot;five&quot;</span><span class="p">]</span> <span class="err">仍然为</span> <span class="mi">5</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">set</span> <span class="err">用于保存集合</span>
+<span class="n">empty_set</span> <span class="o">=</span> <span class="k">set</span><span class="p">()</span>
+<span class="o">#</span> <span class="err">使用一堆值来初始化一个集合</span>
+<span class="n">some_set</span> <span class="o">=</span> <span class="k">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="o">#</span> <span class="n">some_set</span> <span class="err">现在是</span> <span class="k">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="o">#</span> <span class="err">{}</span> <span class="err">可以用来声明一个集合</span>
+<span class="n">filled_set</span> <span class="o">=</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="err">}</span> <span class="o">#</span> <span class="o">=&gt;</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="err">}</span>
+<span class="o">#</span> <span class="err">集合是种无序不重复的元素集，因此重复的</span> <span class="mi">2</span> <span class="err">被滤除了。</span>
+<span class="o">#</span> <span class="err">{}</span> <span class="err">不会创建一个空集合，只会创建一个空字典。</span>
+
+<span class="o">#</span> <span class="err">把更多的元素添加进一个集合</span>
+<span class="n">filled_set</span><span class="p">.</span><span class="k">add</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">#</span> <span class="n">filled_set</span> <span class="err">现在是</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="o">&amp;</span> <span class="err">来获取交集</span>
+<span class="n">other_set</span> <span class="o">=</span> <span class="err">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="err">}</span>
+<span class="n">filled_set</span> <span class="o">&amp;</span> <span class="n">other_set</span> <span class="o">#=&gt;</span> <span class="err">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="o">|</span> <span class="err">来获取并集</span>
+<span class="n">filled_set</span> <span class="o">|</span> <span class="n">other_set</span> <span class="o">#=&gt;</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="o">-</span> <span class="err">来获取补集</span>
+<span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="err">}</span> <span class="o">-</span> <span class="err">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="err">}</span> <span class="o">#=&gt;</span> <span class="err">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">使用</span> <span class="k">in</span> <span class="err">来检查是否存在于某个集合中</span>
+<span class="mi">2</span> <span class="k">in</span> <span class="n">filled_set</span> <span class="o">#=&gt;</span> <span class="k">True</span>
+<span class="mi">10</span> <span class="k">in</span> <span class="n">filled_set</span> <span class="o">#=&gt;</span> <span class="k">False</span>
+</pre></div>
+
+
+<h3 id="_3">控制流</h3>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">我们先创建一个变量</span>
+<span class="n">some_var</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="o">#</span> <span class="err">这里有一个条件语句。缩进在</span> <span class="n">Python</span> <span class="err">中可是很重要的哦！</span>
+<span class="o">#</span> <span class="err">程序会打印出</span> <span class="ss">&quot;some_var is smaller than 10&quot;</span>
+<span class="k">if</span> <span class="n">some_var</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">print</span><span class="p">(</span><span class="ss">&quot;some_var is totally bigger than 10.&quot;</span><span class="p">)</span>
+<span class="n">elif</span> <span class="n">some_var</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>   <span class="o">#</span> <span class="err">这里的</span> <span class="n">elif</span> <span class="err">子句是可选的</span>
+   <span class="n">print</span><span class="p">(</span><span class="ss">&quot;some_var is smaller than 10.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>          <span class="o">#</span> <span class="err">这一句也是可选的</span>
+   <span class="n">print</span><span class="p">(</span><span class="ss">&quot;some_var is indeed 10.&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">for</span> <span class="err">循环可以遍历列表</span>
+<span class="o">#</span> <span class="err">如果要打印出：</span>
+<span class="n">dog</span> <span class="k">is</span> <span class="n">a</span> <span class="n">mammal</span>
+<span class="n">cat</span> <span class="k">is</span> <span class="n">a</span> <span class="n">mammal</span>
+<span class="n">mouse</span> <span class="k">is</span> <span class="n">a</span> <span class="n">mammal</span>
+
+<span class="k">for</span> <span class="n">animal</span> <span class="k">in</span> <span class="p">[</span><span class="ss">&quot;dog&quot;</span><span class="p">,</span> <span class="ss">&quot;cat&quot;</span><span class="p">,</span> <span class="ss">&quot;mouse&quot;</span><span class="p">]:</span>
+   <span class="o">#</span> <span class="err">别忘了你可以使用</span> <span class="o">%</span> <span class="err">来格式化字符串</span>
+   <span class="n">print</span><span class="p">(</span><span class="ss">&quot;%s is a mammal&quot;</span> <span class="o">%</span> <span class="n">animal</span><span class="p">)</span>
+   <span class="o">#</span> <span class="err">（译注：意为“</span><span class="o">%</span><span class="n">s</span> <span class="err">是哺乳动物”。）</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">range</span><span class="p">(</span><span class="err">数字</span><span class="p">)</span> <span class="err">会返回一个数字列表，这个列表将包含从零到给定的数字。</span>
+<span class="err">如果要打印出：</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+   <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">while</span> <span class="err">循环会一直继续，直到条件不再满足。</span>
+<span class="err">如果要打印出：</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+   <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+   <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="o">#</span> <span class="err">这是</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="err">的简写方式</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">使用</span> <span class="n">try</span><span class="o">/</span><span class="k">except</span> <span class="err">代码块来处理异常</span>
+
+<span class="n">try</span><span class="p">:</span>
+   <span class="o">#</span> <span class="err">使用</span> <span class="n">raise</span> <span class="err">来抛出一个错误</span>
+   <span class="o">#</span> <span class="err">抛出一个索引错误：“这是一个索引错误”。</span>
+<span class="k">except</span> <span class="n">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+   <span class="n">pass</span>    <span class="o">#</span> <span class="n">pass</span> <span class="err">只是一个空操作。通常你应该在这里做一些恢复工作。</span>
+</pre></div>
+
+
+<h3 id="_4">函数</h3>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">使用</span> <span class="n">def</span> <span class="err">来创建新函数</span>
+<span class="n">def</span> <span class="k">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+   <span class="n">print</span><span class="p">(</span><span class="ss">&quot;x is %s and y is %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+   <span class="o">#</span> <span class="err">（译注：意为</span><span class="ss">&quot;x 是 %s 而且 y 是 %s&quot;</span><span class="err">。）</span>
+   <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>    <span class="o">#</span> <span class="err">使用</span> <span class="k">return</span> <span class="err">语句来返回值</span>
+
+<span class="o">#</span> <span class="err">调用函数并传入参数</span>
+<span class="k">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="err">意为“</span><span class="n">x</span> <span class="err">是</span> <span class="mi">5</span> <span class="err">而且</span> <span class="n">y</span> <span class="err">是</span> <span class="mi">6</span><span class="err">”，并返回</span> <span class="mi">11</span>
+
+<span class="o">#</span> <span class="err">调用函数的另一种方式是传入关键字参数</span>
+<span class="k">add</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="o">#</span> <span class="err">关键字参数可以以任意顺序传入</span>
+
+<span class="o">#</span> <span class="err">你可以定义一个函数，并让它接受可变数量的定位参数。</span>
+<span class="n">def</span> <span class="n">varargs</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">args</span>
+
+<span class="n">varargs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">#</span> <span class="err">你也可以定义一个函数，并让它接受可变数量的关键字参数。</span>
+<span class="n">def</span> <span class="n">keyword_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">kwargs</span>
+
+<span class="o">#</span> <span class="err">我们试着调用它，看看会发生什么：</span>
+<span class="n">keyword_args</span><span class="p">(</span><span class="n">big</span><span class="o">=</span><span class="ss">&quot;foot&quot;</span><span class="p">,</span> <span class="n">loch</span><span class="o">=</span><span class="ss">&quot;ness&quot;</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="err">{</span><span class="ss">&quot;big&quot;</span><span class="p">:</span> <span class="ss">&quot;foot&quot;</span><span class="p">,</span> <span class="ss">&quot;loch&quot;</span><span class="p">:</span> <span class="ss">&quot;ness&quot;</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">你还可以同时使用这两类参数，只要你愿意：</span>
+<span class="n">def</span> <span class="n">all_the_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+   <span class="n">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+   <span class="n">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="n">all_the_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="n">prints</span><span class="p">:</span>
+   <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+   <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;b&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="err">}</span>
+
+<span class="o">#</span> <span class="err">在调用函数时，定位参数和关键字参数还可以反过来用。</span>
+<span class="o">#</span> <span class="err">使用</span> <span class="o">*</span> <span class="err">来展开元组，使用</span> <span class="o">**</span> <span class="err">来展开关键字参数。</span>
+<span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;b&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="err">}</span>
+<span class="n">all_the_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">#</span> <span class="err">相当于</span> <span class="n">all_the_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">all_the_args</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">#</span> <span class="err">相当于</span> <span class="n">all_the_args</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">all_the_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">#</span> <span class="err">相当于</span> <span class="n">all_the_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="o">#</span> <span class="err">函数在</span> <span class="n">Python</span> <span class="err">中是一等公民</span>
+<span class="n">def</span> <span class="n">create_adder</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+   <span class="n">def</span> <span class="n">adder</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+       <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+   <span class="k">return</span> <span class="n">adder</span>
+
+<span class="n">add_10</span> <span class="o">=</span> <span class="n">create_adder</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">add_10</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="mi">13</span>
+
+<span class="o">#</span> <span class="err">还有匿名函数</span>
+<span class="p">(</span><span class="n">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span> <span class="o">#=&gt;</span> <span class="k">True</span>
+
+<span class="o">#</span> <span class="err">还有一些内建的高阶函数</span>
+<span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="n">add_10</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span><span class="n">l</span>
+<span class="n">list</span><span class="p">(</span><span class="n">filter</span><span class="p">(</span><span class="n">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="o">#</span> <span class="err">我们可以使用列表推导式来模拟</span> <span class="k">map</span> <span class="err">和</span> <span class="n">filter</span>
+<span class="p">[</span><span class="n">add_10</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span> <span class="o">#=&gt;</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</pre></div>
+
+
+<h3 id="_5">类</h3>
+<div class="codehilite"><pre><span></span><span class="err">#</span><span class="w"> </span><span class="n">我们可以从对象中继承</span><span class="err">，</span><span class="n">来得到一个类</span><span class="err">。</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="n">Human</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">下面是一个类属性</span><span class="err">。</span><span class="n">它将被这个类的所有实例共享</span><span class="err">。</span><span class="w"></span>
+<span class="w">   </span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;H. sapiens&quot;</span><span class="w"></span>
+
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">基本的初始化函数</span><span class="err">（</span><span class="n">构造函数</span><span class="err">）</span><span class="w"></span>
+<span class="w">   </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="n">把参数赋值为实例的</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">属性</span><span class="w"></span>
+<span class="w">       </span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
+
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">下面是一个实例方法</span><span class="err">。</span><span class="n">所有方法都以</span><span class="w"> </span><span class="n">self</span><span class="w"> </span><span class="n">作为第一个参数</span><span class="err">。</span><span class="w"></span>
+<span class="w">   </span><span class="n">def</span><span class="w"> </span><span class="n">say</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="ss">&quot;%s: %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">类方法会被所有实例共享</span><span class="err">。</span><span class="w"></span>
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">类方法在调用时</span><span class="err">，</span><span class="n">会将类本身作为第一个函数传入</span><span class="err">。</span><span class="w"></span>
+<span class="w">   </span><span class="nv">@classmethod</span><span class="w"></span>
+<span class="w">   </span><span class="n">def</span><span class="w"> </span><span class="n">get_species</span><span class="p">(</span><span class="n">cls</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="n">species</span><span class="w"></span>
+
+<span class="w">   </span><span class="err">#</span><span class="w"> </span><span class="n">静态方法在调用时</span><span class="err">，</span><span class="n">不会传入类或实例的引用</span><span class="err">。</span><span class="w"></span>
+<span class="w">   </span><span class="nv">@staticmethod</span><span class="w"></span>
+<span class="w">   </span><span class="n">def</span><span class="w"> </span><span class="n">grunt</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="ss">&quot;*grunt*&quot;</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">实例化一个类</span><span class="w"></span>
+<span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Human</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;Ian&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="k">print</span><span class="err">（</span><span class="n">i</span><span class="p">.</span><span class="n">say</span><span class="p">(</span><span class="ss">&quot;hi&quot;</span><span class="p">)</span><span class="err">）</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">打印出</span><span class="w"> </span><span class="ss">&quot;Ian: hi&quot;</span><span class="w"></span>
+
+<span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Human</span><span class="p">(</span><span class="ss">&quot;Joel&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">say</span><span class="p">(</span><span class="ss">&quot;hello&quot;</span><span class="p">))</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">打印出</span><span class="w"> </span><span class="ss">&quot;Joel: hello&quot;</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">调用我们的类方法</span><span class="w"></span>
+<span class="n">i</span><span class="p">.</span><span class="n">get_species</span><span class="p">()</span><span class="w"> </span><span class="err">#</span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">&quot;H. sapiens&quot;</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">修改共享属性</span><span class="w"></span>
+<span class="n">Human</span><span class="p">.</span><span class="n">species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;H. neanderthalensis&quot;</span><span class="w"></span>
+<span class="n">i</span><span class="p">.</span><span class="n">get_species</span><span class="p">()</span><span class="w"> </span><span class="err">#</span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">&quot;H. neanderthalensis&quot;</span><span class="w"></span>
+<span class="n">j</span><span class="p">.</span><span class="n">get_species</span><span class="p">()</span><span class="w"> </span><span class="err">#</span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">&quot;H. neanderthalensis&quot;</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">调用静态方法</span><span class="w"></span>
+<span class="n">Human</span><span class="p">.</span><span class="n">grunt</span><span class="p">()</span><span class="w"> </span><span class="err">#</span><span class="o">=&gt;</span><span class="w"> </span><span class="ss">&quot;*grunt*&quot;</span><span class="w"></span>
+</pre></div>
+
+
+<h3 id="_6">模块</h3>
+<div class="codehilite"><pre><span></span><span class="c1"># 你可以导入模块</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span> <span class="c1">#=&gt; 4</span>
+
+<span class="c1"># 也可以从一个模块中获取指定的函数</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">ceil</span><span class="p">,</span> <span class="n">floor</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="mf">3.7</span><span class="p">))</span>  <span class="c1">#=&gt; 4.0</span>
+<span class="k">print</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="mf">3.7</span><span class="p">))</span> <span class="c1">#=&gt; 3.0</span>
+
+<span class="c1"># 你可以从一个模块中导入所有函数</span>
+<span class="c1"># 警告：不建议使用这种方式</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># 你可以缩短模块的名称</span>
+<span class="kn">import</span> <span class="nn">math</span> <span class="kn">as</span> <span class="nn">m</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="c1">#=&gt; True</span>
+
+<span class="c1"># Python 模块就是普通的 Python 文件。</span>
+<span class="c1"># 你可以编写你自己的模块，然后导入它们。</span>
+<span class="c1"># 模块的名称与文件名相同。</span>
+
+<span class="c1"># 你可以查出一个模块里有哪些函数和属性，定义一个模块</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</pre></div>
+    </div>
+</div>
+<div class="post-meta">
+    
+    <span class="post-meta-item-text">标签 :
+    
+        python
+    
+    </span>
+    
+</div>
+<div class="prenex">
+    <div class="previous">
+        
+        <a href="https://testpoo.github.io">已经是第一篇了</a>
+        
+    </div>
+    <div class="nexts">
+        
+        <a href="https://testpoo.github.io/post/Git命令全解.html">Git命令全解</a>
+        
+    </div>
+</div>
+
+    </div>
+    <div class='footer'>
+        <span class="save">授权协议 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>(CC) BY-NC-SA</a> <span class="del">|</span><span class="save"> 订阅 <a href="/rss.xml">RSS</a> <span class="del">|</span><span class="save"> 微信 : puyaweis</span>
+    </div>
+</body>
+
+</html>

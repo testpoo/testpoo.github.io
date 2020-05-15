@@ -1747,5 +1747,322 @@ select 等。</p>
     </item>
     
     
+    
+    <item> 
+      <title>mysql的安装</title>  
+      <description><h3 id="mysql">Mysql的安装</h3>
+<p>以centos离线安装为例</p>
+<h3 id="mysql_1">下载mysql安装包</h3>
+<p>从Mysql官方网站内下载 <a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
+<p>选择以下版本进行安装</p>
+<div class="codehilite"><pre><span></span><span class="n">Red</span> <span class="n">Hat</span> <span class="n">Enterprice</span> <span class="n">Linux</span> <span class="o">/</span> <span class="n">Oracle</span> <span class="n">Linux</span>
+<span class="n">Red</span> <span class="n">Hat</span> <span class="n">Enterprice</span> <span class="n">Linux</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">Oracle</span> <span class="n">Linux</span> <span class="mi">8</span> <span class="p">(</span><span class="n">x86</span><span class="p">,</span><span class="mi">64</span><span class="o">-</span><span class="nb">bit</span><span class="p">)</span>
+
+<span class="err">下载包信息：</span><span class="n">mysql</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span><span class="o">-</span><span class="n">bundle</span><span class="p">.</span><span class="n">tar</span><span class="o">|</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">|</span><span class="mi">650</span><span class="p">.</span><span class="mi">2</span><span class="n">M</span>    
+</pre></div>
+
+
+<h3 id="mariadb">删除mariadb</h3>
+<p>查看系统中是否存的mariadb，如果存在，将其删除，即可以如下操作：</p>
+<div class="codehilite"><pre><span></span><span class="err">rpm -qa | grep mariadb</span>
+<span class="err"># 如果有返回信息，说明存在mariadb，如下：</span>
+<span class="err">mariadb-libs-5.5.56-2.el7.x86_64</span>
+<span class="err"># 删除命令为：</span>
+<span class="err">rpm -e --nodeps mariadb-libs-5.5.56-2.el7.x86_64</span>
+</pre></div>
+
+
+<h3 id="_1">安装离线包</h3>
+<p>解压缩mysql离线安装包</p>
+<div class="codehilite"><pre><span></span><span class="err">cd /home/test</span>
+<span class="err">tar -xvf mysql-8.0.20-1.el8.x86_64.rpm-bundle.tar</span>
+</pre></div>
+
+
+<p>解压缩之后，包含以下rpm包</p>
+<div class="codehilite"><pre><span></span><span class="err">mysql-community-libs-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-embedded-compat-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-devel-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-server-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-libs-compat-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-client-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-common-8.0.20-1.el8.x86_64.rpm</span>
+<span class="err">mysql-community-test-8.0.20-1.el8.x86_64.rpm</span>
+</pre></div>
+
+
+<p>安装rmp包，逐个安装，命令如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="err">必须安装</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">libs</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="o">#</span> <span class="err">非必须安装</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">libs</span><span class="o">-</span><span class="n">compat</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">embedded</span><span class="o">-</span><span class="n">compat</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">devel</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="n">el8</span><span class="p">.</span><span class="n">x86_64</span><span class="p">.</span><span class="n">rpm</span>
+
+<span class="err">注意：如果有依赖缺失的问题，请按照错误提示，自行安装缺失的依赖</span>
+</pre></div>
+
+
+<h3 id="mysql_2">创建mysql用户和组</h3>
+<div class="codehilite"><pre><span></span><span class="n">groupadd</span> <span class="n">mysql</span>
+<span class="n">useradd</span> <span class="o">-</span><span class="k">g</span> <span class="n">mysql</span> <span class="n">mysql</span>
+
+<span class="o">#</span> <span class="err">设置用户的密码</span>
+<span class="n">passwd</span> <span class="n">mysql</span>
+</pre></div>
+
+
+<h3 id="mysql_3">Mysql配置</h3>
+<p>新建my.cnf文件</p>
+<div class="codehilite"><pre><span></span><span class="err">touch /etc/my.cnf</span>
+</pre></div>
+
+
+<p>配置文件内容</p>
+<div class="codehilite"><pre><span></span><span class="k">[mysqld]</span>
+<span class="c1">########basic settings########</span>
+<span class="na">federated</span>
+<span class="na">user</span><span class="o">=</span><span class="s">mysql</span>
+<span class="na">datadir</span> <span class="o">=</span> <span class="s">/data/mysql</span>
+<span class="na">transaction_isolation</span> <span class="o">=</span> <span class="s">READ-COMMITTED</span>
+<span class="na">explicit_defaults_for_timestamp</span> <span class="o">=</span> <span class="s">1</span>
+<span class="c1">#bind-address = 0.0.0.0  # 表示允许任何主机登陆MySQL</span>
+<span class="na">port</span> <span class="o">=</span> <span class="s">3306</span>
+<span class="na">socket</span> <span class="o">=</span> <span class="s">/tmp/mysql.sock</span>
+<span class="na">federated</span>
+<span class="c1">########log settings##########</span>
+<span class="na">log-bin</span><span class="o">=</span><span class="s">mysql-bin</span>
+<span class="na">expire_logs_days</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">log-error</span> <span class="o">=</span> <span class="s">/data/mysql_log/error.log</span>
+<span class="na">long_query_time</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">slow_query_log</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">slow_query_log_file</span> <span class="o">=</span> <span class="s">/data/mysql_log/slowquery.log</span>
+<span class="na">log_throttle_queries_not_using_indexes</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">binlog_format</span><span class="o">=</span><span class="s">ROW</span>
+<span class="c1">########innodb settings########</span>
+<span class="c1">#索引和数据缓冲区大小，一般设置物理内存的60%-70%</span>
+<span class="na">innodb_buffer_pool_size</span><span class="o">=</span><span class="s">6G</span>
+<span class="na">innodb_buffer_pool_instances</span> <span class="o">=</span> <span class="s">8</span>
+<span class="na">innodb_buffer_pool_load_at_startup</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_buffer_pool_dump_at_shutdown</span> <span class="o">=</span> <span class="s">1</span>
+<span class="c1">#innodb_page_size = 8192</span>
+<span class="na">innodb_lock_wait_timeout</span> <span class="o">=</span> <span class="s">50</span>
+<span class="na">innodb_file_format</span> <span class="o">=</span> <span class="s">Barracuda</span>
+<span class="na">innodb_file_format_max</span> <span class="o">=</span> <span class="s">Barracuda</span>
+<span class="na">innodb_purge_threads</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">innodb_large_prefix</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_print_all_deadlocks</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_strict_mode</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_sort_buffer_size</span> <span class="o">=</span> <span class="s">32M</span>
+<span class="c1">#默认值为 48M. 有很高写入吞吐量</span>
+<span class="na">innodb_log_file_size</span><span class="o">=</span><span class="s">1G</span>
+<span class="c1">#InnoDB 存储引擎的事务日志所使用的缓冲区</span>
+<span class="na">innodb_log_buffer_size</span> <span class="o">=</span> <span class="s">16M</span>
+<span class="na">innodb_flush_log_at_trx_commit</span><span class="o">=</span><span class="s">2</span>
+<span class="c1">#修改InnoDB为独立表空间模式,每个数据库的每个表都会生成一个数据空间</span>
+<span class="na">innodb_file_per_table</span><span class="o">=</span><span class="s">1</span>
+<span class="c1">#限制Innodb能打开的表的数据</span>
+<span class="c1">#innodb_file_io_threads=4</span>
+<span class="c1">#5.6以后分为读和写，根据事务特性进行修改，原则为总数加起来&lt;=cpu个数*每个cpu核数</span>
+<span class="na">innodb_read_io_threads</span><span class="o">=</span><span class="s">4</span>
+<span class="na">innodb_write_io_threads</span><span class="o">=</span><span class="s">4</span>
+<span class="c1">#如果使用硬件RAID磁盘控制器, 需要设置为 O_DIRECT</span>
+<span class="c1">#innodb_flush_method=O_DIRECT</span>
+<span class="c1">#设置会影响InnoDB每秒在后台执行多少操作</span>
+<span class="na">innodb_io_capacity</span><span class="o">=</span><span class="s">800</span>
+<span class="k">[mysqld]</span>
+<span class="c1">########basic settings########</span>
+<span class="na">federated</span>
+<span class="na">user</span><span class="o">=</span><span class="s">mysql</span>
+<span class="na">datadir</span> <span class="o">=</span> <span class="s">/data/mysql</span>
+<span class="na">transaction_isolation</span> <span class="o">=</span> <span class="s">READ-COMMITTED</span>
+<span class="na">explicit_defaults_for_timestamp</span> <span class="o">=</span> <span class="s">1</span>
+<span class="c1">#bind-address = 0.0.0.0  # 表示允许任何主机登陆MySQL</span>
+<span class="na">port</span> <span class="o">=</span> <span class="s">3306</span>
+<span class="na">socket</span> <span class="o">=</span> <span class="s">/tmp/mysql.sock</span>
+<span class="na">federated</span>
+<span class="c1">########log settings##########</span>
+<span class="na">log-bin</span><span class="o">=</span><span class="s">mysql-bin</span>
+<span class="na">expire_logs_days</span> <span class="o">=</span> <span class="s">5</span>
+<span class="na">log-error</span> <span class="o">=</span> <span class="s">/data/mysql_log/error.log</span>
+<span class="na">long_query_time</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">slow_query_log</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">slow_query_log_file</span> <span class="o">=</span> <span class="s">/data/mysql_log/slowquery.log</span>
+<span class="na">log_throttle_queries_not_using_indexes</span> <span class="o">=</span> <span class="s">10</span>
+<span class="na">binlog_format</span><span class="o">=</span><span class="s">ROW</span>
+<span class="c1">########innodb settings########</span>
+<span class="c1">#索引和数据缓冲区大小，一般设置物理内存的60%-70%</span>
+<span class="na">innodb_buffer_pool_size</span><span class="o">=</span><span class="s">6G</span>
+<span class="na">innodb_buffer_pool_instances</span> <span class="o">=</span> <span class="s">8</span>
+<span class="na">innodb_buffer_pool_load_at_startup</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_buffer_pool_dump_at_shutdown</span> <span class="o">=</span> <span class="s">1</span>
+<span class="c1">#innodb_page_size = 8192</span>
+<span class="na">innodb_lock_wait_timeout</span> <span class="o">=</span> <span class="s">50</span>
+<span class="na">innodb_file_format</span> <span class="o">=</span> <span class="s">Barracuda</span>
+<span class="na">innodb_file_format_max</span> <span class="o">=</span> <span class="s">Barracuda</span>
+<span class="na">innodb_purge_threads</span> <span class="o">=</span> <span class="s">4</span>
+<span class="na">innodb_large_prefix</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_print_all_deadlocks</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_strict_mode</span> <span class="o">=</span> <span class="s">1</span>
+<span class="na">innodb_sort_buffer_size</span> <span class="o">=</span> <span class="s">32M</span>
+<span class="c1">#默认值为 48M. 有很高写入吞吐量</span>
+<span class="na">innodb_log_file_size</span><span class="o">=</span><span class="s">1G</span>
+<span class="c1">#InnoDB 存储引擎的事务日志所使用的缓冲区</span>
+<span class="na">innodb_log_buffer_size</span> <span class="o">=</span> <span class="s">16M</span>
+<span class="c1">#关键参数，0代表大约每秒写入到日志并同步到磁盘，数据库故障会丢失1秒左右事务数据。1为每执行一条SQL后写入到日志并同步到磁盘，I/O开销大，执行完SQL要等待日志读写，效率低。2代表只把日志写入到系统缓存区，再每秒同步到磁盘，效率很高，如果服&gt;务器故障，才会丢失事务数据。对数据安全性要求不是很高的推荐设置2，性能高，修改后效果明显。</span>
+<span class="na">innodb_flush_log_at_trx_commit</span><span class="o">=</span><span class="s">2</span>
+<span class="c1">#修改InnoDB为独立表空间模式,每个数据库的每个表都会生成一个数据空间</span>
+<span class="na">innodb_file_per_table</span><span class="o">=</span><span class="s">1</span>
+<span class="c1">#限制Innodb能打开的表的数据</span>
+<span class="c1">#innodb_file_io_threads=4</span>
+<span class="c1">#5.6以后分为读和写，根据事务特性进行修改，原则为总数加起来&lt;=cpu个数*每个cpu核数</span>
+<span class="na">innodb_read_io_threads</span><span class="o">=</span><span class="s">4</span>
+<span class="na">innodb_write_io_threads</span><span class="o">=</span><span class="s">4</span>
+<span class="c1">#如果使用硬件RAID磁盘控制器, 需要设置为 O_DIRECT</span>
+<span class="c1">#innodb_flush_method=O_DIRECT</span>
+<span class="c1">#设置会影响InnoDB每秒在后台执行多少操作</span>
+<span class="na">innodb_io_capacity</span><span class="o">=</span><span class="s">800</span>
+<span class="na">innodb_io_capacity_max</span><span class="o">=</span><span class="s">1000</span>
+<span class="c1">#这个参数必须要和innodb_io_capacity设置一样</span>
+<span class="na">innodb_lru_scan_depth</span><span class="o">=</span><span class="s">800</span>
+<span class="c1">#限制了一次有多少线程能进入内核,0表示不限制进入内核的数量</span>
+<span class="na">innodb_thread_concurrency</span> <span class="o">=</span> <span class="s">32</span>
+<span class="c1">#除了缓存表数据和索引外,可以为操作所需的其他内部项分配缓存来提升InnoDB的性能,这些内存就可以通过此参数来分配</span>
+<span class="na">innodb_additional_mem_pool_size</span><span class="o">=</span><span class="s">8M</span>
+<span class="c1">#修改为基于行的复制</span>
+<span class="na">innodb_autoinc_lock_mode</span> <span class="o">=</span> <span class="s">2</span>
+
+<span class="na">secure_file_priv</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+<span class="c1">##############cache#############</span>
+<span class="na">max_allowed_packet</span> <span class="o">=</span> <span class="s">2048M</span>
+<span class="c1">#内部内存临时表的最大值</span>
+<span class="na">tmp_table_size</span><span class="o">=</span><span class="s">128M</span>
+<span class="na">tmpdir</span> <span class="o">=</span> <span class="s">/data/mysql/mysql_tmp</span>
+<span class="na">collation_server</span><span class="o">=</span><span class="s">utf8_general_ci</span>
+<span class="na">character_set_server</span><span class="o">=</span><span class="s">utf8</span>
+<span class="c1">#即跳过外部锁定</span>
+<span class="na">skip-external-locking</span>
+<span class="na">skip-name-resolve</span>
+<span class="c1">#MySQL能暂存的连接数量(根据实际设置)</span>
+<span class="na">back_log</span><span class="o">=</span><span class="s">1024</span>
+<span class="c1">#指定索引缓冲区的大小,只对MyISAM表起作用,这里写上也没有关系</span>
+<span class="na">key_buffer_size</span><span class="o">=</span><span class="s">128M</span>
+<span class="c1">#这条指令限定用于每个数据库线程的栈大小</span>
+<span class="na">thread_stack</span><span class="o">=</span><span class="s">256k</span>
+<span class="c1">#当一个查询不断地扫描某一个表,MySQL会为它分配一段内存缓冲区</span>
+<span class="na">read_buffer_size</span><span class="o">=</span><span class="s">128M</span>
+<span class="c1">#线程缓存</span>
+<span class="na">thread_cache_size</span><span class="o">=</span><span class="s">16</span>
+<span class="c1">#查询缓存大小</span>
+<span class="na">query_cache_size</span><span class="o">=</span><span class="s">128M</span>
+<span class="c1">#内部内存临时表的最大值,每个线程都要分配</span>
+<span class="na">max_heap_table_size</span><span class="o">=</span><span class="s">128M</span>
+<span class="c1">#将查询结果放入查询缓存中</span>
+<span class="na">query_cache_limit</span> <span class="o">=</span> <span class="s">3M</span>
+<span class="na">query_cache_min_res_unit</span> <span class="o">=</span> <span class="s">2k</span>
+<span class="na">bulk_insert_buffer_size</span> <span class="o">=</span> <span class="s">64M</span>
+<span class="na">query_cache_type</span><span class="o">=</span><span class="s">1</span>
+<span class="c1">#代表在事务过程中容纳二进制日志SQL语句的缓存大小</span>
+<span class="na">binlog_cache_size</span> <span class="o">=</span> <span class="s">2M</span>
+<span class="c1">#同样是缓存表大小</span>
+<span class="na">table_open_cache</span><span class="o">=</span><span class="s">128</span>
+<span class="c1">#缓存线程</span>
+<span class="c1">#thread_cache=16000</span>
+<span class="c1">#推荐设置为服务器 CPU核数的2倍</span>
+<span class="na">thread_concurrency</span><span class="o">=</span><span class="s">16</span>
+<span class="na">interactive_timeout</span><span class="o">=</span><span class="s">28800</span>
+<span class="na">wait_timeout</span><span class="o">=</span><span class="s">28800</span>
+<span class="c1">#表和表联接的缓冲区的大小</span>
+<span class="na">join_buffer_size</span> <span class="o">=</span> <span class="s">32M</span>
+<span class="c1">#是一个connection级参数,在每个connection第一次需要使用这个buffer的时候,一次性分配设置的内存</span>
+<span class="na">sort_buffer_size</span> <span class="o">=</span> <span class="s">32M</span>
+<span class="c1">#随机读取数据缓冲区使用内存</span>
+<span class="na">read_rnd_buffer_size</span> <span class="o">=</span> <span class="s">32M</span>
+<span class="na">group_concat_max_len</span> <span class="o">=</span> <span class="s">102400 #你要的最大长度</span>
+<span class="c1">##################################################</span>
+<span class="c1">#connect 是一个MySQL中与安全有关的计数器值,它负责阻止过多尝试失败的客户端以防止暴力破解密码</span>
+<span class="na">max-connect-errors</span><span class="o">=</span><span class="s">1000</span>
+<span class="c1">#连接数</span>
+<span class="na">max-connections</span><span class="o">=</span><span class="s">1000</span>
+<span class="c1">##################################################</span>
+<span class="c1">#开启查询缓存</span>
+<span class="na">explicit_defaults_for_timestamp</span><span class="o">=</span><span class="s">true</span>
+<span class="c1">###################################################</span>
+<span class="k">[client]</span>
+<span class="na">socket</span><span class="o">=</span><span class="s">/tmp/mysql.sock</span>
+</pre></div>
+
+
+<h3 id="_2">服务启停</h3>
+<ul>
+<li>查看服务状态</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">systemctl status mysqld</span>
+</pre></div>
+
+
+<ul>
+<li>停止服务</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">service mysqld stop</span>
+</pre></div>
+
+
+<ul>
+<li>初始化数据库</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">mysqld --initialize --console</span>
+</pre></div>
+
+
+<ul>
+<li>目录授权</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">chown -R mysql:mysql /var/lib/mysql/</span>
+</pre></div>
+
+
+<ul>
+<li>启动mysql服务</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">systemctl start mysqld</span>
+<span class="err">systemctl status mysqld</span>
+</pre></div>
+
+
+<h3 id="_3">数据库操作</h3>
+<ul>
+<li>查看临时密码：</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">grep &#39;password&#39; /var/log/mysqld.log |head -n 1</span>
+</pre></div>
+
+
+<ul>
+<li>用临时密码登录数据库</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">mysql -u root -p 回车键</span>
+<span class="err">然后输入临时密码（输入时不会显示出来，输入完直接回车）</span>
+</pre></div>
+
+
+<ul>
+<li>修改mysql密码    </li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;</span>
+</pre></div></description>  
+      <pubDate></pubDate>  
+      <link>https://testpoo.github.io/post/mysql的安装.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/post/mysql的安装.html</guid>
+       
+      <category>mysql</category> 
+      
+    </item>
+    
+    
   </channel> 
 </rss>

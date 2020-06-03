@@ -2365,7 +2365,7 @@ GOOGLE.COM<br />
 以下实例演示了脚注的用法：</p>
 <div class="codehilite"><pre><span></span><span class="err">创建脚注格式类似这样</span> <span class="p">[</span><span class="o">^</span><span class="n">TESTPOO</span><span class="p">]</span><span class="err">。</span>
 
-<span class="p">[</span><span class="o">^</span><span class="n">TESTPOO</span><span class="p">]:</span> <span class="err">菜鸟教程</span> <span class="c1">-- 学的不仅是技术，更是梦想！！！</span>
+<span class="p">[</span><span class="o">^</span><span class="n">TESTPOO</span><span class="p">]:</span> <span class="n">Markdown笔记</span> <span class="c1">-- 做个记录方便查找！！！</span>
 </pre></div>
 
 
@@ -2463,9 +2463,9 @@ GOOGLE.COM<br />
 
 <p>显示结果如下：</p>
 <blockquote>
-<p>区块引用
-Markdown笔记
-做个记录方便查找</p>
+<p>区块引用</p>
+<p>Markdown笔记</p>
+<p>做个记录方便查找</p>
 </blockquote>
 <p>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推：</p>
 <div class="codehilite"><pre><span></span><span class="err">&gt; 最外层</span>
@@ -2516,10 +2516,14 @@ Markdown笔记
 
 <p>显示结果如下：</p>
 <ul>
-<li>第一项
-    &gt; Markdown笔记
-    &gt; 做个记录方便查找</li>
-<li>第二项</li>
+<li>
+<p>第一项
+    &gt; Markdown笔记</p>
+<blockquote>
+<p>做个记录方便查找
+* 第二项</p>
+</blockquote>
+</li>
 </ul>
 <h3 id="5-markdown">5. Markdown 代码</h3>
 <p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
@@ -2754,7 +2758,8 @@ $$
 
 
 <p>输出结果为：</p>
-<p>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+<p>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
 \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
 \frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \
 \frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \

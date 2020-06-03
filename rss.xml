@@ -2340,14 +2340,14 @@ select 等。</p>
 <hr />
 <h4 id="_12">删除线</h4>
 <p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<div class="codehilite"><pre><span></span><span class="err">RUNOOB.COM</span>
+<div class="codehilite"><pre><span></span><span class="err">BING.COM</span>
 <span class="err">GOOGLE.COM</span>
 <span class="err">~~BAIDU.COM~~</span>
 </pre></div>
 
 
 <p>显示效果如下所示：</p>
-<p>RUNOOB.COM<br />
+<p>BING.COM<br />
 GOOGLE.COM<br />
 ~~BAIDU.COM~~  </p>
 <h4 id="_13">下划线</h4>
@@ -2589,7 +2589,7 @@ GOOGLE.COM<br />
 <h3 id="_19">高级链接</h3>
 <p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：</p>
 <div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Baidu</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="w"></span>
-<span class="n">这个链接用</span><span class="w"> </span><span class="n">runoob</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Testpoo</span><span class="o">][</span><span class="n">testpoo</span><span class="o">]</span><span class="w"></span>
+<span class="n">这个链接用</span><span class="w"> </span><span class="n">testpoo</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Testpoo</span><span class="o">][</span><span class="n">testpoo</span><span class="o">]</span><span class="w"></span>
 <span class="n">然后在文档的结尾为变量赋值</span><span class="err">（</span><span class="n">网址</span><span class="err">）</span><span class="w"></span>
 
 <span class="w">  </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">baidu</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="w"></span>
@@ -2598,8 +2598,8 @@ GOOGLE.COM<br />
 
 
 <p>显示结果如下：</p>
-<p>这个链接用 1 作为网址变量 <a href="http://static.runoob.com/images/runoob-logo.png">Baidu</a></p>
-<p>这个链接用 runoob 作为网址变量 <a href="https://testpoo.github.io/">Testpoo</a></p>
+<p>这个链接用 1 作为网址变量 <a href="https://testpoo.github.io/favicon.png">Baidu</a></p>
+<p>这个链接用 testpoo 作为网址变量 <a href="https://testpoo.github.io/">Testpoo</a></p>
 <p>然后在文档的结尾为变量赋值（网址）</p>
 <h3 id="7-markdown">7. Markdown 图片</h3>
 <p>Markdown 图片语法格式如下：</p>
@@ -2625,7 +2625,7 @@ GOOGLE.COM<br />
 <p><img alt="TESTPOO 图标" src="https://testpoo.github.io/favicon.png" /></p>
 <p><img alt="TESTPOO 图标" src="https://testpoo.github.io/favicon.png" title="TESTPOO" /></p>
 <p>当然，你也可以像网址那样对图片网址使用变量:</p>
-<div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">RUNOOB</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="p">.</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">TESTPOO</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="p">.</span><span class="w"></span>
 <span class="n">然后在文档的结尾为变量赋值</span><span class="err">（</span><span class="n">网址</span><span class="err">）</span><span class="w"></span>
 
 <span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">favicon</span><span class="p">.</span><span class="n">png</span><span class="w"></span>
@@ -2633,7 +2633,7 @@ GOOGLE.COM<br />
 
 
 <p>显示结果如下：</p>
-<p>这个链接用 1 作为网址变量 <a href="http://static.runoob.com/images/runoob-logo.png">RUNOOB</a>.
+<p>这个链接用 1 作为网址变量 <a href="https://testpoo.github.io/favicon.png">TESTPOO</a>.
 然后在文档的结尾为变量赋值（网址）</p>
 <p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
 <div class="codehilite"><pre><span></span><span class="err">&lt;img src=&quot;https://testpoo.github.io/favicon.png&quot; width=&quot;50%&quot;&gt;</span>
@@ -2717,7 +2717,7 @@ GOOGLE.COM<br />
 
 
 <p>输出结果为：</p>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/image/Markdown笔记/kbd.png" title="TESTPOO" /></p>
 <h4 id="_20">转义</h4>
 <p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
 <div class="codehilite"><pre><span></span><span class="err">**文本加粗** </span>
@@ -2758,14 +2758,7 @@ $$
 
 
 <p>输出结果为：</p>
-<p>$$
-\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
-\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
-\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \
-\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \
-\end{vmatrix}
-${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
-$$</p>
+<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/image/Markdown笔记/公式.png" title="TESTPOO" /></p>
 <div class="footnote">
 <hr />
 <ol>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="">
+
+    <meta name="keywords" content="Poo&#39;s Notes">
+    <meta name="description" content="Poo&#39;s Notes - 一个测试人的自虐。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>地空神一</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css" media="all">
+    <link rel="icon" type="image/png" href="https://testpoo.github.io/favicon.png">
+</head>
+
+<body>
+    <div class='nav'>
+        <div class='sitename'><a href="/">地空神一</a></div>
+        <div class='about'><a href="/about.html">关于</a></div>
+    </div>
+    <div class='main'>
+        
+<div class='article'>
+    <div class="post-title">
+        <h2>svn命令全解</h2>
+    </div>
+    <div class="post-date">
+        2020.06.03 11:24 | 类别 :
+        
+            svn
+        
+    </div>
+    <div class="post-body">
+        <ul>
+<li>将文件checkout到本地</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">checkout</span> <span class="n">path</span><span class="p">(</span><span class="n">path是服务器的目录</span><span class="p">)</span>
+
+<span class="err">例如</span> <span class="err">：</span><span class="n">svn</span> <span class="n">checkout</span> <span class="n">svn</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">pro</span><span class="o">/</span><span class="k">domain</span>
+</pre></div>
+
+
+<ul>
+<li>往版本库中添加新的文件</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="k">add</span> <span class="n">filename</span>
+
+<span class="err">例如：</span><span class="n">svn</span> <span class="k">add</span> <span class="n">test</span><span class="p">.</span><span class="n">cpp</span>
+</pre></div>
+
+
+<ul>
+<li>将改动的文件提交到版本库</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;注释&quot;</span> <span class="p">[</span><span class="o">-</span><span class="n">N</span><span class="p">]</span> <span class="p">[</span><span class="c1">--no-unlock] PATH(如果选择了保持锁，就使用--no-unlock开关)</span>
+
+<span class="err">例如：</span><span class="n">svn</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;注释&quot;</span> <span class="n">test</span><span class="p">.</span><span class="n">cpp</span>
+
+<span class="err">简写：</span><span class="n">svn</span> <span class="n">ci</span>
+</pre></div>
+
+
+<ul>
+<li>加锁/解锁</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="k">lock</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;注释&quot;</span> <span class="n">path</span>
+
+<span class="err">例如</span><span class="p">:</span> <span class="n">svn</span> <span class="k">lock</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;注释&quot;</span> <span class="n">test</span><span class="p">.</span><span class="n">cpp</span>
+
+<span class="n">svn</span> <span class="n">unlock</span> <span class="n">path</span>
+</pre></div>
+
+
+<ul>
+<li>更新到某个版本</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="k">update</span> <span class="o">-</span><span class="n">r</span> <span class="err">版本号</span> <span class="n">path</span>
+
+<span class="n">svn</span> <span class="k">update</span> <span class="err">更新当前目录以及子目录下的所有文件到最新版本</span>
+
+<span class="n">svn</span> <span class="n">upate</span> <span class="o">-</span><span class="n">r</span> <span class="mi">200</span> <span class="n">test</span><span class="p">.</span><span class="n">cpp</span> <span class="err">将版本库中的</span><span class="n">test</span><span class="p">.</span><span class="n">cpp还原到版本200</span>
+
+<span class="err">简写</span> <span class="n">svn</span> <span class="n">up</span>
+</pre></div>
+
+
+<ul>
+<li>查看文件或者目录状态</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">（</span><span class="nt">1</span><span class="err">）</span><span class="nt">svn</span> <span class="nt">status</span> <span class="nt">path</span> <span class="err">（</span><span class="nt">显示目录下的文件和子目录下的文件状态</span><span class="o">,</span><span class="nt">正常状态不显示</span><span class="err">）</span>
+
+<span class="err">【</span><span class="o">?</span><span class="p">:</span><span class="nd">不在svn控制中</span><span class="o">;</span><span class="nt">M</span><span class="p">:</span><span class="nd">内容被修改</span><span class="o">;</span><span class="nt">C</span><span class="err">：</span><span class="nt">发生冲突</span><span class="o">;</span><span class="nt">A</span><span class="p">:</span><span class="nd">预定义加入到版本库</span><span class="o">;</span><span class="nt">K</span><span class="p">:</span><span class="nd">被锁定</span><span class="err">】</span>
+
+<span class="err">（</span><span class="nt">2</span><span class="err">）</span><span class="nt">svn</span> <span class="nt">status</span> <span class="nt">-v</span> <span class="nt">path</span> <span class="err">（</span><span class="nt">显示文件和子目录状态</span><span class="err">）</span>
+
+<span class="nt">注意</span><span class="err">：</span><span class="nt">svn</span> <span class="nt">status</span><span class="err">、</span><span class="nt">svn</span> <span class="nt">diff和svn</span> <span class="nt">revert这三条命令在没有网络情况下可以执行</span><span class="err">，</span><span class="nt">因为svn在本地</span><span class="p">.</span><span class="nc">svn中保留了本地版本原始拷贝</span><span class="err">。</span>
+
+<span class="nt">简写</span><span class="err">：</span> <span class="nt">svn</span> <span class="nt">st</span>
+</pre></div>
+
+
+<ul>
+<li>删除文件</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="k">delete</span> <span class="n">path</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;注释&quot;</span>
+
+<span class="err">例如</span><span class="p">:</span> <span class="n">svn</span> <span class="k">delete</span> <span class="n">svn</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">pro</span><span class="o">/</span><span class="k">domain</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;delete test file&quot;</span>
+
+<span class="err">或者直接</span><span class="n">svn</span> <span class="k">delete</span> <span class="n">test</span><span class="p">.</span><span class="n">php</span> <span class="err">然后再</span><span class="n">svn</span> <span class="n">ci</span> <span class="o">-</span><span class="n">m</span> <span class="err">&#39;</span><span class="k">delete</span> <span class="n">test</span> <span class="n">file</span><span class="err">‘，推荐使用这种</span>
+
+<span class="err">简写：</span> <span class="n">svn</span> <span class="p">(</span><span class="n">del</span><span class="err">、</span><span class="n">remove</span><span class="err">、</span><span class="n">rm</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>查看日志</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">svn log path</span>
+</pre></div>
+
+
+<ul>
+<li>查看文件详细信息</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">svn info path</span>
+</pre></div>
+
+
+<ul>
+<li>比较差异</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">diff</span> <span class="n">path</span><span class="err">（将修改的文件与基础版本比较）</span>
+
+<span class="n">svn</span> <span class="n">diff</span> <span class="o">-</span><span class="n">r</span> <span class="n">m</span><span class="p">:</span><span class="n">n</span> <span class="err">（将修改的文件</span><span class="n">m版本和n版本比较</span><span class="err">）</span>
+
+<span class="err">简写</span> <span class="n">svn</span> <span class="n">di</span>
+</pre></div>
+
+
+<ul>
+<li>将两个版本的文件的差异合并到当前文件</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="n">r</span> <span class="n">m</span><span class="p">:</span><span class="n">n</span> <span class="n">path</span>
+
+ <span class="err">例如：</span><span class="n">svn</span> <span class="n">merge</span> <span class="o">-</span><span class="n">r</span> <span class="mi">20</span><span class="p">:</span><span class="mi">25</span> <span class="n">test</span><span class="p">.</span><span class="n">cpp</span><span class="err">（将版本</span><span class="mi">20</span><span class="err">与</span><span class="mi">25</span><span class="err">之间的差异合并到当前文件，但一般会发生冲突，需要处理一下）</span>
+</pre></div>
+
+
+<ul>
+<li>SVN帮助</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">help</span>
+
+<span class="err">以上为常用命令，下面为不常用命令</span>
+</pre></div>
+
+
+<ul>
+<li>查看版本库下的文件和列表</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">list</span> <span class="n">path</span> <span class="err">（显示</span><span class="n">path目录下的所属于版本的文件和目录</span><span class="err">）</span>
+
+<span class="err">简写</span><span class="p">:</span> <span class="n">svn</span> <span class="n">ls</span>
+</pre></div>
+
+
+<ul>
+<li>创建纳入版本控制下的新目录</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">mkdir</span><span class="p">:</span> <span class="err">创建纳入版本控制下的新目录。</span>
+
+<span class="err">用法</span><span class="p">:</span> <span class="mi">1</span><span class="err">、</span><span class="n">mkdir</span> <span class="n">PATH</span><span class="p">...</span>
+         <span class="mi">2</span><span class="err">、</span><span class="n">mkdir</span> <span class="n">URL</span><span class="p">...</span>
+<span class="err">创建版本控制的目录。</span>
+<span class="mi">1</span><span class="err">、每一个以工作副本</span> <span class="n">PATH</span> <span class="err">指定的目录，都会创建在本地端，并且加入新增调度，以待下一次的提交。</span>
+<span class="mi">2</span><span class="err">、每个以</span><span class="n">URL指定的目录</span><span class="err">，都会透过立即提交于仓库中创建。在这两个情况下，所有的中间目录都必须事先存在。</span>
+</pre></div>
+
+
+<ul>
+<li>恢复本地修改</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">revert</span><span class="err">：恢复原始未改变的工作副本文件（恢复大部分的本地修改）</span><span class="n">revert用法</span><span class="err">：</span><span class="n">revert</span> <span class="n">path</span>
+
+<span class="err">注意：本子命令不会存储网络，并且会解除冲突的情况。但它不会恢复被创建的目录</span>
+</pre></div>
+
+
+<ul>
+<li>代码库URL变更</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span><span class="w"> </span><span class="n">switch</span><span class="p">(</span><span class="n">sw</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">更新工作副本到不同的URL</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">用法</span><span class="w"> </span><span class="mi">1</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">[</span><span class="n">PATH</span><span class="o">]</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="c1">--relocate FROM TO [PATH]</span>
+
+<span class="mi">1</span><span class="err">、</span><span class="n">更新工作副本</span><span class="err">，</span><span class="n">映射到一个新的URL</span><span class="err">，</span><span class="n">会将服务上的文件与本地文件合并</span><span class="err">。</span><span class="n">这是将工作副本对应到同一创库的某个分支或者标记的方法</span><span class="err">。</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">、</span><span class="n">改写工作副本URL元数据</span><span class="err">，</span><span class="n">以反映URL的变更</span><span class="err">，</span><span class="n">创库URL变动但工作副本仍旧对映同一创库的同一目录时使用该命令更新工作副本与创库的对应关系</span><span class="err">。</span><span class="w"></span>
+</pre></div>
+
+
+<ul>
+<li>解决冲突</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">svn</span> <span class="n">resolved</span><span class="err">：移除工作副本的目录或文件的“冲突”状态。</span>
+
+<span class="err">用法</span> <span class="n">resolved</span> <span class="n">path</span>
+
+<span class="err">注意：本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的相关文件，然后让</span><span class="n">path可以再次提交</span><span class="err">。</span>
+</pre></div>
+
+
+<ul>
+<li>输出指定文件的URL内容</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。</span>
+</pre></div>
+    </div>
+</div>
+<div class="post-meta">
+    
+    <span class="post-meta-item-text">标签 :
+    
+        svn
+    
+    </span>
+    
+</div>
+<div class="prenex">
+    <div class="previous">
+        
+        <a href="https://testpoo.github.io">已经是第一篇了</a>
+        
+    </div>
+    <div class="nexts">
+        
+        <a href="https://testpoo.github.io/post/分分种学会python3.html">分分种学会python3</a>
+        
+    </div>
+</div>
+
+    </div>
+    <div class='footer'>
+        <span class="save">授权协议 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>(CC) BY-NC-SA</a> <span class="del">|</span><span class="save"> 订阅 <a href="/rss.xml">RSS</a> <span class="del">|</span><span class="save"> 微信 : puyaweis</span>
+    </div>
+</body>
+
+</html>

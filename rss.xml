@@ -2262,5 +2262,521 @@ select 等。</p>
     </item>
     
     
+    
+    <item> 
+      <title>Markdown笔记</title>  
+      <description><h3 id="1-markdown">1. Markdown 标题</h3>
+<h4 id="-">使用 = 和 - 标记一级和二级标题</h4>
+<p>= 和 - 标记语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">我展示的是一级标题</span>
+<span class="o">=================</span>
+
+<span class="err">我展示的是二级标题</span>
+<span class="c1">-----------------</span>
+</pre></div>
+
+
+<p>显示效果如下图：</p>
+<h1 id="_1">我展示的是一级标题</h1>
+<h2 id="_2">我展示的是二级标题</h2>
+<h4 id="_3">使用 # 号标记</h4>
+<p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<div class="codehilite"><pre><span></span><span class="err"># 一级标题</span>
+<span class="err">## 二级标题</span>
+<span class="err">### 三级标题</span>
+<span class="err">#### 四级标题</span>
+<span class="err">##### 五级标题</span>
+<span class="err">###### 六级标题</span>
+</pre></div>
+
+
+<p>显示效果如下图：</p>
+<h1 id="_4">一级标题</h1>
+<h2 id="_5">二级标题</h2>
+<h3 id="_6">三级标题</h3>
+<h4 id="_7">四级标题</h4>
+<h5 id="_8">五级标题</h5>
+<h6 id="_9">六级标题</h6>
+<h3 id="2-markdown">2. Markdown 段落</h3>
+<p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。</p>
+<p>当然也可以在段落后面使用一个空行来表示重新开始一个段落。</p>
+<h4 id="_10">字体</h4>
+<p>Markdown 可以使用以下几种字体：</p>
+<div class="codehilite"><pre><span></span><span class="err">*斜体文本*</span>
+<span class="err">_斜体文本_</span>
+<span class="err">**粗体文本**</span>
+<span class="err">__粗体文本__</span>
+<span class="err">***粗斜体文本***</span>
+<span class="err">___粗斜体文本___</span>
+</pre></div>
+
+
+<p>显示效果如下所示：</p>
+<p><em>斜体文本</em><br />
+<em>斜体文本</em><br />
+<strong>粗体文本</strong><br />
+<strong>粗体文本</strong><br />
+<strong><em>粗斜体文本</em></strong><br />
+<strong><em>粗斜体文本</em></strong>  </p>
+<h4 id="_11">分隔线</h4>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<div class="codehilite"><pre><span></span><span class="o">***</span>
+
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span>
+
+<span class="o">*****</span>
+
+<span class="o">-</span> <span class="o">-</span> <span class="o">-</span>
+
+<span class="c1">----------</span>
+</pre></div>
+
+
+<p>显示效果如下所示：</p>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h4 id="_12">删除线</h4>
+<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">RUNOOB.COM</span>
+<span class="err">GOOGLE.COM</span>
+<span class="err">~~BAIDU.COM~~</span>
+</pre></div>
+
+
+<p>显示效果如下所示：</p>
+<p>RUNOOB.COM<br />
+GOOGLE.COM<br />
+~~BAIDU.COM~~  </p>
+<h4 id="_13">下划线</h4>
+<p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;u&gt;</span>带下划线文本<span class="nt">&lt;/u&gt;</span>
+</pre></div>
+
+
+<p>显示效果如下所示：</p>
+<p><u>带下划线文本</u></p>
+<h4 id="_14">脚注</h4>
+<p>脚注是对文本的补充说明。</p>
+<p>Markdown 脚注的格式如下:</p>
+<p>[^要注明的文本]
+以下实例演示了脚注的用法：</p>
+<div class="codehilite"><pre><span></span><span class="err">创建脚注格式类似这样</span> <span class="p">[</span><span class="o">^</span><span class="n">TESTPOO</span><span class="p">]</span><span class="err">。</span>
+
+<span class="p">[</span><span class="o">^</span><span class="n">TESTPOO</span><span class="p">]:</span> <span class="err">菜鸟教程</span> <span class="c1">-- 学的不仅是技术，更是梦想！！！</span>
+</pre></div>
+
+
+<p>演示效果如下：</p>
+<p>创建脚注格式类似这样 <sup id="fnref:TESTPOO"><a class="footnote-ref" href="#fn:TESTPOO">1</a></sup>。</p>
+<h3 id="3-markdown">3. Markdown 列表</h3>
+<p>Markdown 支持有序列表和无序列表。</p>
+<ul>
+<li><strong>无序列表使用星号<code>(*)</code>、加号<code>(+)</code>或是减号<code>(-)</code>作为列表标记：</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="o">*</span> <span class="err">第一项</span>
+<span class="o">*</span> <span class="err">第二项</span>
+<span class="o">*</span> <span class="err">第三项</span>
+
+<span class="o">+</span> <span class="err">第一项</span>
+<span class="o">+</span> <span class="err">第二项</span>
+<span class="o">+</span> <span class="err">第三项</span>
+
+<span class="o">-</span> <span class="err">第一项</span>
+<span class="o">-</span> <span class="err">第二项</span>
+<span class="o">-</span> <span class="err">第三项</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>
+<p>第三项</p>
+</li>
+<li>
+<p>第一项</p>
+</li>
+<li>第二项</li>
+<li>
+<p>第三项</p>
+</li>
+<li>
+<p>第一项</p>
+</li>
+<li>第二项</li>
+<li>
+<p>第三项</p>
+</li>
+<li>
+<p><strong>有序列表使用数字并加上<code>.</code>号来表示，如：</strong></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">1. 第一项</span>
+<span class="err">2. 第二项</span>
+<span class="err">3. 第三项</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h4 id="_15">列表嵌套</h4>
+<ul>
+<li><strong>列表嵌套只需在子列表中的选项添加四个空格即可：</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">1. 第一项：</span>
+<span class="err">    - 第一项嵌套的第一个元素</span>
+<span class="err">    - 第一项嵌套的第二个元素</span>
+<span class="err">2. 第二项：</span>
+<span class="err">    - 第二项嵌套的第一个元素</span>
+<span class="err">    - 第二项嵌套的第二个元素</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-markdown">4. Markdown 区块</h3>
+<p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<div class="codehilite"><pre><span></span><span class="err">&gt; 区块引用</span>
+<span class="err">&gt; Markdown笔记</span>
+<span class="err">&gt; 做个记录方便查找</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<blockquote>
+<p>区块引用
+Markdown笔记
+做个记录方便查找</p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推：</p>
+<div class="codehilite"><pre><span></span><span class="err">&gt; 最外层</span>
+<span class="err">&gt; &gt; 第一层嵌套</span>
+<span class="err">&gt; &gt; &gt; 第二层嵌套</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="_16">区块中使用列表</h4>
+<p>区块中使用列表实例如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">&gt; 区块中使用列表</span>
+<span class="err">&gt; 1. 第一项</span>
+<span class="err">&gt; 2. 第二项</span>
+<span class="err">&gt; + 第一项</span>
+<span class="err">&gt; + 第二项</span>
+<span class="err">&gt; + 第三项</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<blockquote>
+<p>区块中使用列表
+1. 第一项
+2. 第二项
++ 第一项
++ 第二项
++ 第三项</p>
+</blockquote>
+<h4 id="_17">列表中使用区块</h4>
+<p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
+<p>区块中使用列表实例如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">* 第一项</span>
+<span class="err">    &gt; Markdown笔记</span>
+<span class="err">    &gt; 做个记录方便查找</span>
+<span class="err">* 第二项</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<ul>
+<li>第一项
+    &gt; Markdown笔记
+    &gt; 做个记录方便查找</li>
+<li>第二项</li>
+</ul>
+<h3 id="5-markdown">5. Markdown 代码</h3>
+<p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
+<div class="codehilite"><pre><span></span><span class="err">`print()` 函数</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p><code>print()</code> 函数</p>
+<h4 id="_18">代码区块</h4>
+<p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p>
+<p>实例如下：</p>
+<div class="codehilite"><pre><span></span>    <span class="n">print</span><span class="p">(</span><span class="s1">&#39;这是Tab&#39;</span><span class="p">)</span>
+
+    <span class="n">print</span><span class="p">(</span><span class="s1">&#39;这是四个空格&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<div class="codehilite"><pre><span></span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;这是Tab&#39;</span><span class="p">)</span>
+
+<span class="n">print</span><span class="p">(</span><span class="s1">&#39;这是四个空格&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>你也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<div class="codehilite"><pre><span></span><span class="err">```python</span>
+<span class="err">print(&#39;This is a test!&#39;)</span>
+<span class="err">```</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<div class="codehilite"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is a test!&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="6-markdown">6. Markdown 链接</h3>
+<p>链接使用方法如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">[链接名称](链接地址)</span>
+</pre></div>
+
+
+<p>或者</p>
+<div class="codehilite"><pre><span></span><span class="err">&lt;链接地址&gt;</span>
+</pre></div>
+
+
+<p>例如：</p>
+<div class="codehilite"><pre><span></span><span class="n">这是一个链接</span><span class="w"> </span><span class="o">[</span><span class="n">Markdown笔记</span><span class="o">]</span><span class="p">(</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p>这是一个链接 <a href="https://testpoo.github.io/">Markdown笔记</a></p>
+<p>直接使用链接地址：</p>
+<div class="codehilite"><pre><span></span><span class="err">&lt;https://testpoo.github.io/&gt;</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p><a href="https://testpoo.github.io/">https://testpoo.github.io/</a></p>
+<h3 id="_19">高级链接</h3>
+<p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：</p>
+<div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Baidu</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="w"></span>
+<span class="n">这个链接用</span><span class="w"> </span><span class="n">runoob</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Testpoo</span><span class="o">][</span><span class="n">testpoo</span><span class="o">]</span><span class="w"></span>
+<span class="n">然后在文档的结尾为变量赋值</span><span class="err">（</span><span class="n">网址</span><span class="err">）</span><span class="w"></span>
+
+<span class="w">  </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">baidu</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="w"></span>
+<span class="w">  </span><span class="o">[</span><span class="n">testpoo</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="w"></span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://static.runoob.com/images/runoob-logo.png">Baidu</a></p>
+<p>这个链接用 runoob 作为网址变量 <a href="https://testpoo.github.io/">Testpoo</a></p>
+<p>然后在文档的结尾为变量赋值（网址）</p>
+<h3 id="7-markdown">7. Markdown 图片</h3>
+<p>Markdown 图片语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">alt</span> <span class="err">属性文本</span><span class="p">](</span><span class="err">图片地址</span><span class="p">)</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">alt</span> <span class="err">属性文本</span><span class="p">](</span><span class="err">图片地址</span> <span class="ss">&quot;可选标题&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>开头一个感叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。</li>
+</ul>
+<p>使用实例：</p>
+<div class="codehilite"><pre><span></span><span class="o">!</span><span class="p">[</span><span class="n">TESTPOO</span> <span class="err">图标</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">favicon</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">TESTPOO</span> <span class="err">图标</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">favicon</span><span class="p">.</span><span class="n">png</span> <span class="ss">&quot;TESTPOO&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/favicon.png" /></p>
+<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/favicon.png" title="TESTPOO" /></p>
+<p>当然，你也可以像网址那样对图片网址使用变量:</p>
+<div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">RUNOOB</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="p">.</span><span class="w"></span>
+<span class="n">然后在文档的结尾为变量赋值</span><span class="err">（</span><span class="n">网址</span><span class="err">）</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">testpoo</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">favicon</span><span class="p">.</span><span class="n">png</span><span class="w"></span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://static.runoob.com/images/runoob-logo.png">RUNOOB</a>.
+然后在文档的结尾为变量赋值（网址）</p>
+<p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
+<div class="codehilite"><pre><span></span><span class="err">&lt;img src=&quot;https://testpoo.github.io/favicon.png&quot; width=&quot;50%&quot;&gt;</span>
+</pre></div>
+
+
+<p>显示结果如下：</p>
+<p><img src="https://testpoo.github.io/favicon.png" width="50%"></p>
+<h3 id="8-markdown">8. Markdown 表格</h3>
+<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
+<p>语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="err">|  表头   | 表头  |</span>
+<span class="err">|  ----  | ----  |</span>
+<span class="err">| 单元格  | 单元格 |</span>
+<span class="err">| 单元格  | 单元格 |</span>
+</pre></div>
+
+
+<p>以上代码显示结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<p>对齐方式</p>
+<p><strong>我们可以设置表格的对齐方式：</strong></p>
+<ul>
+<li>-: 设置内容和标题栏居右对齐。</li>
+<li>:- 设置内容和标题栏居左对齐。</li>
+<li>:-: 设置内容和标题栏居中对齐。</li>
+</ul>
+<p>实例如下：</p>
+<div class="codehilite"><pre><span></span><span class="p">|</span> <span class="s s-Atom">左对齐</span> <span class="p">|</span> <span class="s s-Atom">右对齐</span> <span class="p">|</span> <span class="s s-Atom">居中对齐</span> <span class="p">|</span>
+<span class="p">|</span> <span class="p">:-</span><span class="s s-Atom">----</span><span class="p">|</span> <span class="s s-Atom">----:</span> <span class="p">|</span> <span class="p">:-</span><span class="s s-Atom">---:</span> <span class="p">|</span>
+<span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span>
+<span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span> <span class="s s-Atom">单元格</span> <span class="p">|</span>
+</pre></div>
+
+
+<p>以上代码显示结果如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-markdown">9. Markdown 高级技巧</h3>
+<p><strong>支持的 HTML 元素</strong>
+不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<div class="codehilite"><pre><span></span>使用 <span class="nt">&lt;kbd&gt;</span>Ctrl<span class="nt">&lt;/kbd&gt;</span>+<span class="nt">&lt;kbd&gt;</span>Alt<span class="nt">&lt;/kbd&gt;</span>+<span class="nt">&lt;kbd&gt;</span>Del<span class="nt">&lt;/kbd&gt;</span> 重启电脑
+</pre></div>
+
+
+<p>输出结果为：</p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<h4 id="_20">转义</h4>
+<p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<div class="codehilite"><pre><span></span><span class="err">**文本加粗** </span>
+<span class="err">\*\* 正常显示星号 \*\*</span>
+</pre></div>
+
+
+<p>输出结果为：</p>
+<p><strong>文本加粗</strong> </p>
+<p>** 正常显示星号 **</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<div class="codehilite"><pre><span></span><span class="err">\   反斜线</span>
+<span class="err">`   反引号</span>
+<span class="err">*   星号</span>
+<span class="err">_   下划线</span>
+<span class="err">{}  花括号</span>
+<span class="err">[]  方括号</span>
+<span class="err">()  小括号</span>
+<span class="err">#   井字号</span>
+<span class="err">+   加号</span>
+<span class="err">-   减号</span>
+<span class="err">.   英文句点</span>
+<span class="err">!   感叹号</span>
+</pre></div>
+
+
+<h4 id="_21">公式</h4>
+<p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<div class="codehilite"><pre><span></span>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} <span class="err">&amp;</span> \mathbf{j} <span class="err">&amp;</span> \mathbf{k} \\
+\frac{\partial X}{\partial u} <span class="err">&amp;</span>  \frac{\partial Y}{\partial u} <span class="err">&amp;</span> 0 \\
+\frac{\partial X}{\partial v} <span class="err">&amp;</span>  \frac{\partial Y}{\partial v} <span class="err">&amp;</span> 0 \\
+\end{vmatrix}
+<span class="cp">${</span><span class="err">$</span><span class="n">tep1</span><span class="cp">}</span>{\style{visibility:hidden}{(x+1)(x+1)}}
+$$
+</pre></div>
+
+
+<p>输出结果为：</p>
+<p>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:TESTPOO">
+<p>Markdown笔记 -- 做个记录方便查找！！！&#160;<a class="footnote-backref" href="#fnref:TESTPOO" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></description>  
+      <pubDate></pubDate>  
+      <link>https://testpoo.github.io/post/Markdown笔记.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/post/Markdown笔记.html</guid>
+       
+      <category>markdown</category> 
+      
+    </item>
+    
+    
   </channel> 
 </rss>

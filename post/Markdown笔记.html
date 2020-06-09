@@ -111,19 +111,7 @@
 <hr />
 <hr />
 <hr />
-<h4 id="_12">删除线</h4>
-<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<div class="codehilite"><pre><span></span><span class="err">BING.COM</span>
-<span class="err">GOOGLE.COM</span>
-<span class="err">~~BAIDU.COM~~</span>
-</pre></div>
-
-
-<p>显示效果如下所示：</p>
-<p>BING.COM<br />
-GOOGLE.COM<br />
-~~BAIDU.COM~~  </p>
-<h4 id="_13">下划线</h4>
+<h4 id="_12">下划线</h4>
 <p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
 <div class="codehilite"><pre><span></span><span class="nt">&lt;u&gt;</span>带下划线文本<span class="nt">&lt;/u&gt;</span>
 </pre></div>
@@ -131,7 +119,7 @@ GOOGLE.COM<br />
 
 <p>显示效果如下所示：</p>
 <p><u>带下划线文本</u></p>
-<h4 id="_14">脚注</h4>
+<h4 id="_13">脚注</h4>
 <p>脚注是对文本的补充说明。</p>
 <p>Markdown 脚注的格式如下:</p>
 <p>[^要注明的文本]
@@ -200,7 +188,7 @@ GOOGLE.COM<br />
 <li>第二项</li>
 <li>第三项</li>
 </ol>
-<h4 id="_15">列表嵌套</h4>
+<h4 id="_14">列表嵌套</h4>
 <ul>
 <li><strong>列表嵌套只需在子列表中的选项添加四个空格即可：</strong></li>
 </ul>
@@ -257,7 +245,7 @@ GOOGLE.COM<br />
 </blockquote>
 </blockquote>
 </blockquote>
-<h4 id="_16">区块中使用列表</h4>
+<h4 id="_15">区块中使用列表</h4>
 <p>区块中使用列表实例如下：</p>
 <div class="codehilite"><pre><span></span><span class="err">&gt; 区块中使用列表</span>
 <span class="err">&gt; 1. 第一项</span>
@@ -270,14 +258,26 @@ GOOGLE.COM<br />
 
 <p>显示结果如下：</p>
 <blockquote>
-<p>区块中使用列表
-1. 第一项
-2. 第二项
-+ 第一项
-+ 第二项
-+ 第三项</p>
+<p>区块中使用列表</p>
+<ol>
+<li>
+<p>第一项</p>
+</li>
+<li>
+<p>第二项</p>
+</li>
+<li>
+<p>第一项</p>
+</li>
+<li>
+<p>第二项</p>
+</li>
+<li>
+<p>第三项</p>
+</li>
+</ol>
 </blockquote>
-<h4 id="_17">列表中使用区块</h4>
+<h4 id="_16">列表中使用区块</h4>
 <p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
 <p>区块中使用列表实例如下：</p>
 <div class="codehilite"><pre><span></span><span class="err">* 第一项</span>
@@ -290,12 +290,14 @@ GOOGLE.COM<br />
 <p>显示结果如下：</p>
 <ul>
 <li>
-<p>第一项
-    &gt; Markdown笔记</p>
+<p>第一项</p>
 <blockquote>
-<p>做个记录方便查找
-* 第二项</p>
+<p>Markdown笔记</p>
+<p>做个记录方便查找</p>
 </blockquote>
+</li>
+<li>
+<p>第二项</p>
 </li>
 </ul>
 <h3 id="5-markdown">5. Markdown 代码</h3>
@@ -306,7 +308,7 @@ GOOGLE.COM<br />
 
 <p>显示结果如下：</p>
 <p><code>print()</code> 函数</p>
-<h4 id="_18">代码区块</h4>
+<h4 id="_17">代码区块</h4>
 <p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p>
 <p>实例如下：</p>
 <div class="codehilite"><pre><span></span>    <span class="n">print</span><span class="p">(</span><span class="s1">&#39;这是Tab&#39;</span><span class="p">)</span>
@@ -359,7 +361,7 @@ GOOGLE.COM<br />
 
 <p>显示结果如下：</p>
 <p><a href="https://testpoo.github.io/">https://testpoo.github.io/</a></p>
-<h3 id="_19">高级链接</h3>
+<h3 id="_18">高级链接</h3>
 <p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：</p>
 <div class="codehilite"><pre><span></span><span class="n">这个链接用</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Baidu</span><span class="o">][</span><span class="n">1</span><span class="o">]</span><span class="w"></span>
 <span class="n">这个链接用</span><span class="w"> </span><span class="n">testpoo</span><span class="w"> </span><span class="n">作为网址变量</span><span class="w"> </span><span class="o">[</span><span class="n">Testpoo</span><span class="o">][</span><span class="n">testpoo</span><span class="o">]</span><span class="w"></span>
@@ -490,8 +492,8 @@ GOOGLE.COM<br />
 
 
 <p>输出结果为：</p>
-<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/image/Markdown笔记/kbd.png" title="TESTPOO" /></p>
-<h4 id="_20">转义</h4>
+<p><img alt="TESTPOO kbd" src="https://testpoo.github.io/image/Markdown笔记/kbd.png" title="kbd" /></p>
+<h4 id="_19">转义</h4>
 <p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
 <div class="codehilite"><pre><span></span><span class="err">**文本加粗** </span>
 <span class="err">\*\* 正常显示星号 \*\*</span>
@@ -517,7 +519,7 @@ GOOGLE.COM<br />
 </pre></div>
 
 
-<h4 id="_21">公式</h4>
+<h4 id="_20">公式</h4>
 <p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
 <div class="codehilite"><pre><span></span>$$
 \mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
@@ -531,7 +533,7 @@ $$
 
 
 <p>输出结果为：</p>
-<p><img alt="TESTPOO 图标" src="https://testpoo.github.io/image/Markdown笔记/公式.png" title="TESTPOO" /></p>
+<p><img alt="TESTPOO 公式" src="https://testpoo.github.io/image/Markdown笔记/公式.png" title="公式" /></p>
 <div class="footnote">
 <hr />
 <ol>

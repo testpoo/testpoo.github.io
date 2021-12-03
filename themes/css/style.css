@@ -108,8 +108,8 @@ li {
 
 .links ul li {
     float: left;
-    width: 286px;
-    padding: 30px 17px;
+    width: 266px;
+    padding: 30px 27px;
     border-bottom: 1px solid #eee;
 }
 
@@ -165,4 +165,38 @@ li {
 
 #footer a {
     color: #999;
+}
+
+#footer p br {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #navigation, #banner, .links, #category, #footer {
+        width: 100%;
+    }
+
+    #category span {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .links ul li {
+        margin: 0 auto;
+    }
+
+    #footer p span {
+        display: none;
+    }
+
+    #footer p br {
+        display: block;
+    }
 }

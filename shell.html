@@ -1,0 +1,811 @@
+<!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>测试窝</title>
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/themes/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/themes/css/xui.css">
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/themes/css/markdown.css">
+    <link rel="shortcut icon" type="image/ico" href="http://127.0.0.1:8000/themes/img/favicon.ico">
+
+  </head>
+
+  <body>
+    <div class="sider">
+      <div class="categories">
+        <div class="title">
+          <img src="http://127.0.0.1:8000/themes/img/title.jpg">
+          <div class="linkbutton testpoo">测试窝</div>
+        </div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="http://127.0.0.1:8000/Docker入门教程.html"><label style="color: #ffba48"></label>&nbsp;docker</a></li>
+            
+            <li><a href="http://127.0.0.1:8000/mysql函数.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
+            
+            <li><a href="http://127.0.0.1:8000/shell.html"><label style="color: #ffba48"></label>&nbsp;shell</a></li>
+            
+          </ul>
+        </div>
+        <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="http://127.0.0.1:8000/rss.xml" target="_blank"></a></div>
+      </div>
+      <div class="articles">
+        <div class="category">分类：shell</div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="http://127.0.0.1:8000/shell.html"><span><label style="color: #38b6fd"></label>&nbsp;shell</span><span>2022-04-18&nbsp;&nbsp;共25855个字</span></a></li>
+            
+          </ul>
+        </div>
+        <div class="item-num">总共1项</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header"><span>shell</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 14:58:00</span></div>
+      <input class="xswitch xonoff" type="checkbox" id="catalog">
+      <div class="posts"><div class="toc">
+<ul>
+<li><a href="#_1">本文摘要</a></li>
+<li><a href="#shell">Shell编程概述</a></li>
+<li><a href="#shell_1">Shell 注释</a></li>
+<li><a href="#shell_2">Shell关键字</a></li>
+<li><a href="#shell_3">Shell变量</a><ul>
+<li><a href="#1">1. 用户自定义变量</a></li>
+<li><a href="#2">2. 预定义变量</a></li>
+<li><a href="#3">3. 环境变量</a></li>
+<li><a href="#4">4.字符串变量</a></li>
+</ul>
+</li>
+<li><a href="#5">5. 数组</a></li>
+<li><a href="#shell_4">Shell运算</a><ul>
+<li><a href="#1_1">1. 算数运算</a></li>
+<li><a href="#2_1">2. 数字关系运算符</a></li>
+<li><a href="#3_1">3. 字符串运算符</a></li>
+<li><a href="#4_1">4. 布尔运算符</a></li>
+<li><a href="#5_1">5. 逻辑运算符</a></li>
+<li><a href="#6">6. 文件运算符</a></li>
+</ul>
+</li>
+<li><a href="#shell_5">Shell语句</a><ul>
+<li><a href="#1-if">1. if语句</a></li>
+<li><a href="#2-case">2. case语句</a></li>
+<li><a href="#3-for">3. for循环</a></li>
+<li><a href="#4-while">4. while 循环</a></li>
+<li><a href="#5until">5.until 循环</a></li>
+<li><a href="#6-break">6. break</a></li>
+<li><a href="#7-continue">7. continue</a></li>
+</ul>
+</li>
+<li><a href="#shell_6">Shell 函数</a><ul>
+<li><a href="#1_2">1. 定义函数</a></li>
+<li><a href="#2_2">2. 调用函数</a></li>
+<li><a href="#3_2">3. 获取返回值</a></li>
+<li><a href="#4_2">4. 定义本地变量</a></li>
+</ul>
+</li>
+<li><a href="#_2">调试</a></li>
+<li><a href="#shell_7">Shell 易错点</a></li>
+</ul>
+</div>
+<h3 id="_1">本文摘要</h3>
+<p>本文主要介绍Linux Shell编程的基础知识，包含下面8个方面：</p>
+<ol>
+<li>
+<p>Shell编程概述</p>
+</li>
+<li>
+<p>Shell关键字</p>
+</li>
+<li>
+<p>Shell变量</p>
+</li>
+<li>
+<p>Shell运算</p>
+</li>
+<li>
+<p>Shell语句</p>
+</li>
+<li>
+<p>Shell函数</p>
+</li>
+<li>
+<p>Shell调试</p>
+</li>
+<li>
+<p>Shell易错点</p>
+</li>
+</ol>
+<h3 id="shell">Shell编程概述</h3>
+<p>在Linux下有一门脚本语言叫做：Shell脚本。Shell 是外壳的意思，就是操作系统的外壳。我们可以通过 Shell 命令来操作和控制系统，比如 Linux 中的 Shell 命令就包括 ls、cd、pwd等等，Shell 是一个命令解释器，它通过接受用户输入的 Shell 命令来启动、暂停、停止的运行或对计算机进行控制。</p>
+<p>Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。</p>
+<p>Shell 本身并不是内核的一部分，它中是站在内核的基础上编写的一个应用程序。</p>
+<p>那什么是 Shell 脚本。Shell 脚本就是由 Shell 命令组成的执行文件，将一些命令整合到一个文件中，进行处理业务逻辑，脚本不用编译即可运行。它通过解释器运行，所以速度相对来主说比较慢。</p>
+<p>一个简单的hello.sh脚本像下面这样，第一行#！/bin/bash标识该脚本由哪个Shell解释：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+</code></pre></div>
+
+<p><strong>赋予权限才可以执行</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 赋予可执行权限</span>
+chmod +x hello.sh
+
+<span class="c1"># 执行</span>
+./hello.sh
+
+<span class="c1"># 结果</span>
+Hello World!
+</code></pre></div>
+
+<p>Shell的编写流程：</p>
+<ol>
+<li>
+<p>编写Shell脚本</p>
+</li>
+<li>
+<p>赋予可执行权限</p>
+</li>
+<li>
+<p>执行，调试</p>
+</li>
+</ol>
+<p>下面来介绍具体的用法。</p>
+<h3 id="shell_1">Shell 注释</h3>
+<ul>
+<li>单行注释：#</li>
+<li>多行注释：:,&lt;&lt;</li>
+</ul>
+<p>看个例子</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 这个是单行注释</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="s">&lt;&lt;COMMENT</span>
+<span class="s">    这个是多行注释</span>
+<span class="s">    这个是多行注释</span>
+<span class="s">    这个是多行注释</span>
+<span class="s">COMMENT</span>
+
+: <span class="s1">&#39;</span>
+<span class="s1">这个也是多行注释(: + 空格 + 单引号)</span>
+<span class="s1">这个也是多行注释(: + 空格 + 单引号)</span>
+<span class="s1">这个也是多行注释(: + 空格 + 单引号)</span>
+<span class="s1">&#39;</span>
+</code></pre></div>
+
+<h3 id="shell_2">Shell关键字</h3>
+<p>常用的关键字如下：</p>
+<ol>
+<li>
+<p>echo: 打印文字到屏幕</p>
+</li>
+<li>
+<p>exec: 执行另一个Shell脚本</p>
+</li>
+<li>
+<p>read: 读标准输入</p>
+</li>
+<li>
+<p>expr: 对整数型变量进行算术运算</p>
+</li>
+<li>
+<p>test: 用于测试变量是否相等、是否为空、文件类型等</p>
+</li>
+<li>
+<p>exit: 退出</p>
+</li>
+</ol>
+<p>看个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;hello Shell&quot;</span>
+
+<span class="c1"># 读入变量</span>
+<span class="nb">read</span> VAR
+<span class="nb">echo</span> <span class="s2">&quot;VAE is </span><span class="nv">$VAR</span><span class="s2">&quot;</span>
+
+<span class="c1"># 计算变量</span>
+expr <span class="nv">$VAR</span> -5
+
+<span class="c1"># 测试字符串</span>
+<span class="nb">test</span> <span class="s2">&quot;Hello&quot;</span><span class="o">=</span><span class="s2">&quot;Helloword&quot;</span>
+
+<span class="c1"># 测试整数</span>
+<span class="nb">test</span> -d ./Android
+
+<span class="c1"># 执行其他Shell脚本</span>
+<span class="nb">exec</span> ./othershell.sh
+
+<span class="c1"># 退出</span>
+<span class="nb">exit</span>
+</code></pre></div>
+
+<p>运行前，你需要新建一个<code>othershell.sh</code>的文件，让它输出<code>I'm othershell</code>，并且中途需要一次输入，我这里输入的是10：</p>
+<div class="codehilite"><pre><span></span><code>Hello Shell
+<span class="m">10</span>
+VAR is <span class="m">10</span>
+<span class="m">5</span>
+I<span class="err">&#39;</span>m othershell
+</code></pre></div>
+
+<p>学习任何一门语言都要了解它的变量定义方法，Shell也不例外。</p>
+<h3 id="shell_3">Shell变量</h3>
+<p>Shell变量分为3种：</p>
+<ol>
+<li>
+<p>用户自定义变量</p>
+</li>
+<li>
+<p>预定义变量</p>
+</li>
+<li>
+<p>环境变量</p>
+</li>
+</ol>
+<p>定义变量需要注意下面2点：</p>
+<ol>
+<li>
+<p>等号前后不要有空格：NUM=10</p>
+</li>
+<li>
+<p>一般变量名用大写：M=1</p>
+</li>
+</ol>
+<p>使用$VAR调用变量：</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span> <span class="nv">$VAR</span>
+</code></pre></div>
+
+<h4 id="1">1. 用户自定义变量</h4>
+<p>这种变量只支持字符串类型，不支持其他字符，浮点等类型，常见有这3个前缀：</p>
+<ol>
+<li>
+<p>unset: 删除变量</p>
+</li>
+<li>
+<p>readonly: 标记只读变量</p>
+</li>
+<li>
+<p>export: 指定全局变量</p>
+</li>
+</ol>
+<p>一个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># 定义旁通变量</span>
+<span class="nv">CITY</span><span class="o">=</span>SHENZHEN
+
+<span class="c1"># 定义全局变量</span>
+<span class="nb">export</span> <span class="nv">NAME</span><span class="o">=</span>cdeveloper
+
+<span class="c1"># 定义只读变量</span>
+<span class="nb">readonly</span> <span class="nv">AGE</span><span class="o">=</span><span class="m">21</span>
+
+<span class="c1"># 打印变量的值</span>
+<span class="nb">echo</span> <span class="nv">$CITY</span>
+</code></pre></div>
+
+<p>运维结果：</p>
+<div class="codehilite"><pre><span></span><code>SHENZHEN
+cdeveloper
+21
+</code></pre></div>
+
+<h4 id="2">2. 预定义变量</h4>
+<p>预定义变量常用来获取命令行的输入，有下面这些：
+1. $0: 脚本文件名
+2. $1-9: 第1-9命令行参数名
+3. $#: 命令行参数个数
+4. $@: 所有命令行参数
+5. $*: 所有命令行参数
+6. $?: 前一个命令的退出状态，可用于获取函数返回值
+7. \$$: 执行的进程ID
+8. $!: 后台运行的最后一个进程的ID</p>
+<p>一个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;print </span>$<span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$0 = </span><span class="nv">$0</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$1 = </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$2 = </span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$# = </span><span class="nv">$#</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$@ = </span><span class="nv">$@</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$* = </span><span class="nv">$*</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$</span>$<span class="s2"> = </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;\$? = </span><span class="nv">$?</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>执行<code>./hello.sh 1 2 3 4 5</code>的结果：</p>
+<div class="codehilite"><pre><span></span><code>print $
+
+# 程序名
+$0 = ./hello.sh
+
+# 第一个参数
+$1 = 1
+
+# 第二个参数
+$2 = 2
+
+# 一共有5个参数
+$# = 5
+
+# 打印出所有参数
+$@ = 1 2 3 4 5
+
+# 打印出所有参数
+$* = 1 2 3 4 5
+
+# 进程ID
+$$ = 854
+
+# 之前没有执行其他命令或者函数
+$? = 0
+</code></pre></div>
+
+<h4 id="3">3. 环境变量</h4>
+<p>环境变量默认存在，常用的有下面这几个：
+1. HOME：用户主目录
+2. PATH：系统环境变量PATH
+3. TERM：当前终端
+4. UID: 当前用户ID
+5. PWD：当前工作目录，绝对路径</p>
+<p>还是看例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;print env&quot;</span>
+
+<span class="nb">echo</span> <span class="nv">$HOME</span>
+<span class="nb">echo</span> <span class="nv">$PATH</span>
+<span class="nb">echo</span> <span class="nv">$TERM</span>
+<span class="nb">echo</span> <span class="nv">$PWD</span>
+<span class="nb">echo</span> <span class="nv">$UID</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code>print env
+
+# 当前主目录
+/home/poo
+
+# PATH环境变量
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+# 当前终端
+xterm
+
+# 当前目录
+/home/poo/poo
+
+# 用户ID
+1000
+</code></pre></div>
+
+<h4 id="4">4.字符串变量</h4>
+<p>1）单引号
+- 单引号变量var='test'，只能原样输出，变量无效
+- 单引号不能出现一个单独的单引号，转义也不可以</p>
+<p>2）双引号
+- 双引号变量<code>var="my name is ${name}"</code>，变量有效
+- 可以出现转义符</p>
+<p>3）拼接字符串
+- 中间无任何+,之类的字符
+- <code>name="this is"" my name";name="this is my name";name="this" is "my name"等效</code>
+- <code>name='this is'' my name'; name='this is my name'; name='this' is 'my name' 等效</code></p>
+<p>4）获取字符串长度
+- 在${}中使用“#”获取长度</p>
+<div class="codehilite"><pre><span></span><code>  name=&quot;test&quot;;
+  echo <span class="cp">${</span><span class="c1">#name</span><span class="cp">}</span>; # 输出为4
+</code></pre></div>
+
+<p>5）提取子字符串
+- 1:4 从第2个开始 往后截取4个字符
+- ::4 从第一个字符开始 往后截取4个字符</p>
+<div class="codehilite"><pre><span></span><code>  name=&quot;this is my name&quot;;
+  echo <span class="cp">${</span><span class="n">name</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="cp">}</span> #输出 is i
+  echo <span class="cp">${</span><span class="n">name</span><span class="p">::</span><span class="mi">4</span><span class="cp">}</span> #输出 this
+</code></pre></div>
+
+<h3 id="5">5. 数组</h3>
+<p>bash只支持一维数组，不支持多维数组</p>
+<ul>
+<li>定义数组：array_name=(li wang xiang zhang) （小括号做边界、使用空格分离）</li>
+<li>单独定义数组的元素： array_para[0]="w"; array_para[3]="s" （定义时下标不连续也可以）</li>
+<li>赋值数组元素：array_name[0]="zhao";</li>
+<li>获取数组元素：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  array_name[0]=&quot;li&quot;
+  array_name[3]=&quot;zhang&quot;
+  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;li&quot;
+  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="cp">}</span> # 输出&quot; &quot;
+  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;zhang&quot;
+  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="o">@</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;li zhang&quot; 输出数组所有元素，没有元素的下标省略
+  取得元素个数：<span class="cp">${</span><span class="c1">#array_name[@]</span><span class="cp">}</span> 或者 <span class="cp">${</span><span class="c1">#array_name</span><span class="cp">}</span>
+  取得单个元素长度：<span class="cp">${</span><span class="c1">#array_name[1]</span><span class="cp">}</span>
+</code></pre></div>
+
+<p>Shell变量就介绍到这里，下面来介绍Shell的变量运算。</p>
+<h3 id="shell_4">Shell运算</h3>
+<h4 id="1_1">1. 算数运算</h4>
+<blockquote>
+<p>+ 、-、*、\ ： 乘号前必须加\进行转义才可以进行乘法运算</p>
+</blockquote>
+<p>我们经常需要在Shell脚本中计算，掌握基本的运算方法很有必要，下面就是4种比较常见的运算方法，功能都是将m + 1:
+1. m=$[m+1]
+2. m=`expr $m + 1` # 用``字符包起来
+3. let m=m+1
+4. m=$(( m + 1 ))</p>
+<p>来看一个实际的例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">m</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">m</span><span class="o">=</span>$<span class="o">[</span> m + <span class="m">1</span> <span class="o">]</span>
+<span class="nb">echo</span> <span class="nv">$m</span>
+
+<span class="nv">m</span><span class="o">=</span><span class="sb">`</span>expr <span class="nv">$m</span> + <span class="m">1</span><span class="sb">`</span>
+<span class="nb">echo</span> <span class="nv">$m</span>
+
+<span class="c1"># 注意：+ 号左右不要加空格</span>
+<span class="nb">let</span> <span class="nv">m</span><span class="o">=</span>m+1
+<span class="nb">echo</span> <span class="nv">$m</span>
+
+<span class="nv">m</span><span class="o">=</span><span class="k">$((</span> m <span class="o">+</span> <span class="m">1</span> <span class="k">))</span>
+<span class="nb">echo</span> <span class="nv">$m</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
+</code></pre></div>
+
+<h4 id="2_1">2. 数字关系运算符</h4>
+<blockquote>
+<p>关系运算符只支持数字，不支持字符串，除非字符串的值是数字。下面假定变量 a 为 10，变量 b 为 20</p>
+</blockquote>
+<ul>
+<li>-eq ：检测两个数是否相等，相等返回 true。 [ $a -eq $b ] 返回 false。</li>
+<li>-ne： 检测两个数是否不相等，不相等返回 true。 [ $a -ne $b ] 返回 true。</li>
+<li>-gt： 检测左边的数是否大于右边的，如果是，则返回 true。 [ $a -gt $b ] 返回 false。</li>
+<li>-lt ： 检测左边的数是否小于右边的，如果是，则返回 true。 [ $a -lt $b ] 返回 true。</li>
+<li>-ge： 检测左边的数是否大于等于右边的，如果是，则返回 true。 [ $a -ge $b ] 返回 false。</li>
+<li>-le ： 检测左边的数是否小于等于右边的，如果是，则返回 true。 [ $a -le $b ] 返回 true。</li>
+</ul>
+<h4 id="3_1">3. 字符串运算符</h4>
+<blockquote>
+<p>下表列出了常用的字符串运算符，假定变量 a 为 "abc"，变量 b 为 "efg"：
+- = ：检测两个字符串是否相等，相等返回 true。 [ $a = $b ] 返回 false。
+- != ：检测两个字符串是否相等，不相等返回 true。 [ $a != $b ] 返回 true。
+- -z ：检测字符串长度是否为0，为0返回 true。 [ -z $a ] 返回 false。
+- -n ：检测字符串长度是否为0，不为0返回 true。 [ -n "$a" ] 返回 true。
+- $ ：检测字符串是否为空，不为空返回 true。 [ $a ] 返回 true。</p>
+</blockquote>
+<h4 id="4_1">4. 布尔运算符</h4>
+<blockquote>
+<p>下表列出了常用的布尔运算符，假定变量 a 为 10，变量 b 为 20：
+- ! ：非运算，表达式为 true 则返回 false，否则返回 true。 [ ! false ] 返回 true。
+- -o ：或运算，有一个表达式为 true 则返回 true。 [ $a -lt 20 -o $b -gt 100 ] 返回 true。
+- -a ：与运算，两个表达式都为 true 才返回 true。 [ $a -lt 20 -a $b -gt 100 ] 返回 false。</p>
+</blockquote>
+<h4 id="5_1">5. 逻辑运算符</h4>
+<blockquote>
+<p>以下介绍 Shell 的逻辑运算符，假定变量 a 为 10，变量 b 为 20:</p>
+</blockquote>
+<ul>
+<li>&amp;&amp; ：逻辑的 AND [[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</li>
+<li>|| ：逻辑的 OR [[ $a -lt 100 || $b -gt 100 ]] 返回 true</li>
+</ul>
+<h4 id="6">6. 文件运算符</h4>
+<ul>
+<li>-b file ：检测文件是否是块设备文件，如果是，则返回 true。 [ -b $file ] 返回 false。</li>
+<li>-c file ：检测文件是否是字符设备文件，如果是，则返回 true。 [ -c $file ] 返回 false。</li>
+<li>-d file ：检测文件是否是目录，如果是，则返回 true。 [ -d $file ] 返回 false。</li>
+<li>-f file ：检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。 [ -f $file ] 返回 true。</li>
+<li>-g file ：检测文件是否设置了 SGID 位，如果是，则返回 true。 [ -g $file ] 返回 false。</li>
+<li>-k file ：检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。 [ -k $file ] 返回 false。</li>
+<li>-p file ：检测文件是否是有名管道，如果是，则返回 true。 [ -p $file ] 返回 false。</li>
+<li>-u file ：检测文件是否设置了 SUID 位，如果是，则返回 true。 [ -u $file ] 返回 false。</li>
+<li>-r file ：检测文件是否可读，如果是，则返回 true。 [ -r $file ] 返回 true。</li>
+<li>-w file ：检测文件是否可写，如果是，则返回 true。 [ -w $file ] 返回 true。</li>
+<li>-x file ：检测文件是否可执行，如果是，则返回 true。 [ -x $file ] 返回 true。</li>
+<li>-s file ：检测文件是否为空（文件大小是否大于0），不为空返回 true。 [ -s $file ] 返回 true。</li>
+<li>-e file ：检测文件（包括目录）是否存在，如果是，则返回 true。 [ -e $file ] 返回 true。</li>
+</ul>
+<p>了解了基本的运算方法，下面进一步来学习shell的语句。</p>
+<h3 id="shell_5">Shell语句</h3>
+<p>Shell语句跟高级语言有些类似，也包括分支、跳转、循环，下面就带大家一个一个突破。</p>
+<h4 id="1-if">1. if语句</h4>
+<p>这个跟高级语言的<code>if - else - if</code>类似，只是格式有些不同而已，也来看个例子吧：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">read</span> VAR
+
+<span class="c1"># 下面这两种判断方法都可以，使用 [] 注意左右加空格</span>
+<span class="c1"># if test $VAR -eq 10</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$VART</span> -eq <span class="m">10</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;true&quot;</span>
+<span class="k">else</span>
+    <span class="nb">echo</span> <span class="s2">&quot;false&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
+
+<h4 id="2-case">2. case语句</h4>
+<p>case语句有些复杂，要注意格式：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">read</span> NAME
+<span class="c1"># 格式有点复杂，一定要注意</span>
+<span class="k">case</span> <span class="nv">$NAME</span> <span class="k">in</span>
+    <span class="s2">&quot;Linux&quot;</span><span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Linux&quot;</span>
+        <span class="p">;;</span>
+    <span class="s2">&quot;cdeveloper&quot;</span><span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;cdeveloper&quot;</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        <span class="nb">echo</span> <span class="s2">&quot;other&quot;</span>
+        <span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code># 输入 Linux
+Linux
+Linux
+
+# 输入 cdeveloper
+cdeveloper
+cdeveloper
+
+# 输入其他的字段
+hello
+other
+</code></pre></div>
+
+<h4 id="3-for">3. for循环</h4>
+<p>这是一个for循环的使用例子，挺简单的，有点类似Python：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># 普通 for 循环</span>
+<span class="k">for</span> <span class="o">((</span><span class="nv">i</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span> i &lt;<span class="o">=</span> <span class="m">3</span><span class="p">;</span> i++<span class="o">))</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
+
+<span class="c1"># VAR 依次代表每个元素</span>
+<span class="k">for</span> VAR <span class="k">in</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+</code></pre></div>
+
+<h4 id="4-while">4. while 循环</h4>
+<p>注意与 for 循环的区别：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">VAR</span><span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># 如果 VAR 小于 10，就打印出来</span>
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$VAR</span> -lt <span class="m">10</span> <span class="o">]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$VAR</span>
+    <span class="c1"># VAR  自增 1</span>
+    <span class="nv">VAR</span><span class="o">=</span>$<span class="o">[</span> <span class="nv">$VAR</span> + <span class="m">1</span> <span class="o">]</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
+<span class="mf">6</span>
+<span class="mf">7</span>
+<span class="mf">8</span>
+<span class="mf">9</span>
+</code></pre></div>
+
+<h4 id="5until">5.until 循环</h4>
+<p>until 语句与上面的循环的不同点是它的结束条件为1：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">i</span><span class="o">=</span><span class="m">0</span>
+
+<span class="c1"># i 大于 5 时，循环结束</span>
+<span class="k">until</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span> -gt <span class="m">5</span> <span class="o">]]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$i</span>
+    <span class="nv">i</span><span class="o">=</span>$<span class="o">[</span> <span class="nv">$i</span> + <span class="m">1</span> <span class="o">]</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
+</code></pre></div>
+
+<h4 id="6-break">6. break</h4>
+<p>Shell 中的 <code>break</code> 用法与高级语言相同，都是跳出循环，来看个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span> VAR <span class="k">in</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span>
+<span class="k">do</span>
+<span class="c1"># 如何 VAR 等于 2 就跳出循环</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$VAR</span> -eq <span class="m">2</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="nb">break</span>
+    <span class="k">fi</span>
+
+    <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+</code></pre></div>
+
+<h4 id="7-continue">7. continue</h4>
+<p><code>continue</code>用来跳过本次循环，进入下一次循环，再来看看上面的例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span> VAR <span class="k">in</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span>
+<span class="k">do</span>
+<span class="c1"># 如果 VAR 等于 2，就跳过，直接进入下一次 VAR = 3 的循环</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$VAR</span> -eq <span class="m">2</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="k">continue</span>
+    <span class="k">fi</span>
+
+    <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>运行结果：</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">3</span>
+</code></pre></div>
+
+<p>下面介绍 Shell 编程中比较重要的函数，好像每种编程语言的函数都很重要。</p>
+<h3 id="shell_6">Shell 函数</h3>
+<p>函数可以用一句话解释：带有输入输出的具有一定功能的黑盒子，相信有过编程经验的同学不会陌生。那么，我们先来看看 Shell 中函数定义的格式。</p>
+<h4 id="1_2">1. 定义函数</h4>
+<p>有 2 种常见格式：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">fun_name</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">fun_name</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>例如：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">function</span> hello_world<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;hello world fun&quot;</span>
+    <span class="nb">echo</span> <span class="nv">$1</span> <span class="nv">$2</span>
+    <span class="k">return</span> <span class="m">1</span>
+<span class="o">}</span>
+
+hello<span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;hello fun&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h4 id="2_2">2. 调用函数</h4>
+<p>如何调用上面的 2 个函数</p>
+<div class="codehilite"><pre><span></span><code># 1. 直接用函数名调用 hello 函数
+hello
+
+# 2. 使用[函数名 函数参数]来传递参数
+hello_world 1 2
+
+# 3. 使用[FUN=`函数名 函数参数`]来间接调用
+FUN=`hello_world 1 2`
+echo $FUN
+</code></pre></div>
+
+<h4 id="3_2">3. 获取返回值</h4>
+<p>如何获取 <code>hello_world</code> 函数的返回值？还记得 <code>$?</code> 吗？</p>
+<div class="codehilite"><pre><span></span><code>hello_world 1 2
+# $? 可用于获取前一个函数的返回值，这里的结果是1
+echo $?
+</code></pre></div>
+
+<h4 id="4_2">4. 定义本地变量</h4>
+<p>使用 <code>local</code> 来在函数中定义本地变量：</p>
+<div class="codehilite"><pre><span></span><code>fun()
+{
+    local x=1
+    echo $x
+}
+</code></pre></div>
+
+<p>俗话说，程序 3 分靠写，7 分靠调，下面我们就来看看如何调试 Shell 程序。</p>
+<h3 id="_2">调试</h3>
+<p>使用下面的命令来检查是否有语法错误：</p>
+<div class="codehilite"><pre><span></span><code>sh -n script_name.sh
+</code></pre></div>
+
+<p>使用下面的命令来执行并调试 Shell 脚本：</p>
+<div class="codehilite"><pre><span></span><code>sh -x script_name.sh
+</code></pre></div>
+
+<p>来看个实际的例子，我们来调试下面这个 <code>test.sh</code> 程序：</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="k">for</span> VAR <span class="k">in</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span>
+<span class="k">do</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$VAR</span> -eq <span class="m">2</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="k">continue</span>
+    <span class="k">fi</span>
+    <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">done</span>
+</code></pre></div>
+
+<p>首先检查有无语法错误：</p>
+<div class="codehilite"><pre><span></span><code>sh -n test.sh
+</code></pre></div>
+
+<p>没有输出，说明没有错误，开始实际高度：</p>
+<div class="codehilite"><pre><span></span><code>sh -x test.sh
+</code></pre></div>
+
+<p>调试结果如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="o">+</span> [ <span class="mi">1</span> <span class="o">-</span><span class="nv">eq</span> <span class="mi">2</span> ]
+<span class="o">+</span> <span class="nv">echo</span> <span class="mi">1</span>
+<span class="mi">1</span>
+<span class="o">+</span> [ <span class="mi">2</span> <span class="o">-</span><span class="nv">eq</span> <span class="mi">2</span> ]
+<span class="o">+</span> <span class="k">continue</span>
+<span class="o">+</span> [ <span class="mi">3</span> <span class="o">-</span><span class="nv">eq</span> <span class="mi">2</span> ]
+<span class="o">+</span> <span class="nv">echo</span> <span class="mi">3</span>
+<span class="mi">3</span>
+</code></pre></div>
+
+<p>其中<strong>带有 <code>+</code> 表示的是 Shell 调试器的输出，不带 <code>+</code> 表示我们程序的输出。</strong></p>
+<h3 id="shell_7">Shell 易错点</h3>
+<p>这里我总结了一些初学 Shell 编程容易犯的错误，大多都是语法错误：
+1. <code>[]</code> 内不能嵌套 <code>()</code>，可以嵌套 <code>[]</code>
+2. <code>$[ val + 1 ]</code> 是变量加 1 的常用方法
+3. <code>[]</code> 在测试或者计算中里面的内容最好都加空格
+4. 单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号
+5. 一定要注意语句的格式，例如缩进</p></div>
+    </div>
+    <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
+    <div class="nav">
+      <ul>
+        
+        <li><a href="http://127.0.0.1:8000/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
+        
+        <li><a href="http://127.0.0.1:8000/mysql函数.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数</span></a></li>
+        
+        <li><a href="http://127.0.0.1:8000/shell.html"><span><label style="color: #38b6fd"></label>&nbsp;shell</span></a></li>
+        
+      </ul>
+    </div>
+  </body>
+
+  </html>

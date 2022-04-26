@@ -1,0 +1,253 @@
+<!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"
+    <title>测试窝</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
+    <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
+
+  </head>
+
+  <body>
+    <div class="sider">
+      <div class="categories">
+        <div class="title">
+          <a href="https://testpoo.github.io">
+            <img src="https://testpoo.github.io/themes/img/title.jpg">
+            <div class="linkbutton testpoo">测试窝</div>
+          </a>
+        </div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
+            
+            <li><a href="https://testpoo.github.io/mysql笔记.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
+            
+            <li><a href="https://testpoo.github.io/shell简介.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
+            
+            <li><a href="https://testpoo.github.io/Docker入门教程.html"><label style="color: #ffba48"></label>&nbsp;docker</a></li>
+            
+            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><label style="color: #ffba48"></label>&nbsp;性能测试</a></li>
+            
+            <li><a href="https://testpoo.github.io/python标准异常.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
+            
+            <li><a href="https://testpoo.github.io/Git简介.html"><label style="color: #ffba48"></label>&nbsp;git</a></li>
+            
+            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
+            
+            <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><label style="color: #ffba48"></label>&nbsp;sqlite</a></li>
+            
+            <li><a href="https://testpoo.github.io/svn命令.html"><label style="color: #ffba48"></label>&nbsp;svn</a></li>
+            
+          </ul>
+        </div>
+        <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
+      </div>
+      <div class="articles">
+        <div class="category">分类：svn</div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="https://testpoo.github.io/Linux下SVN服务器的配置及搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的配置及搭建</span><span>2020-01-01&nbsp;&nbsp;共66293个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/svn命令.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令</span><span>2019-10-11&nbsp;&nbsp;共6736个字</span></a></li>
+            
+          </ul>
+        </div>
+        <div class="item-num">总共2项</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header"><span>svn命令</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 21:57:38</span></div>
+      <input class="xswitch xonoff" type="checkbox" id="catalog">
+      <div class="posts"><h4 id="checkout">将文件checkout到本地</h4>
+<div class="codehilite"><pre><span></span><code>svn checkout path(path是服务器的目录)
+
+例如 ：svn checkout svn://192.168.####1/pro/domain
+</code></pre></div>
+
+<h4 id="_1">往版本库中添加新的文件</h4>
+<div class="codehilite"><pre><span></span><code>svn add filename
+
+例如：svn add test.cpp
+</code></pre></div>
+
+<h4 id="_2">将改动的文件提交到版本库</h4>
+<div class="codehilite"><pre><span></span><code>svn commit -m &quot;注释&quot; [-N] [--no-unlock] PATH(如果选择了保持锁，就使用--no-unlock开关)
+
+例如：svn commit -m &quot;注释&quot; test.cpp
+
+简写：svn ci
+</code></pre></div>
+
+<h4 id="_3">加锁/解锁</h4>
+<div class="codehilite"><pre><span></span><code>svn lock -m &quot;注释&quot; path
+
+例如: svn lock -m &quot;注释&quot; test.cpp
+
+svn unlock path
+</code></pre></div>
+
+<h4 id="_4">更新到某个版本</h4>
+<div class="codehilite"><pre><span></span><code>svn update -r 版本号 path
+
+svn update 更新当前目录以及子目录下的所有文件到最新版本
+
+svn upate -r 200 test.cpp 将版本库中的test.cpp还原到版本200
+
+简写 svn up
+</code></pre></div>
+
+<h4 id="_5">查看文件或者目录状态</h4>
+<div class="codehilite"><pre><span></span><code><span class="err">（</span><span class="nt">1</span><span class="err">）</span><span class="nt">svn</span><span class="w"> </span><span class="nt">status</span><span class="w"> </span><span class="nt">path</span><span class="w"> </span><span class="err">（</span><span class="nt">显示目录下的文件和子目录下的文件状态</span><span class="o">,</span><span class="nt">正常状态不显示</span><span class="err">）</span><span class="w"></span>
+
+<span class="err">【</span><span class="o">?</span><span class="p">:</span><span class="nd">不在svn控制中</span><span class="o">;</span><span class="nt">M</span><span class="p">:</span><span class="nd">内容被修改</span><span class="o">;</span><span class="nt">C</span><span class="err">：</span><span class="nt">发生冲突</span><span class="o">;</span><span class="nt">A</span><span class="p">:</span><span class="nd">预定义加入到版本库</span><span class="o">;</span><span class="nt">K</span><span class="p">:</span><span class="nd">被锁定</span><span class="err">】</span><span class="w"></span>
+
+<span class="err">（</span><span class="nt">2</span><span class="err">）</span><span class="nt">svn</span><span class="w"> </span><span class="nt">status</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nt">path</span><span class="w"> </span><span class="err">（</span><span class="nt">显示文件和子目录状态</span><span class="err">）</span><span class="w"></span>
+
+<span class="nt">注意</span><span class="err">：</span><span class="nt">svn</span><span class="w"> </span><span class="nt">status</span><span class="err">、</span><span class="nt">svn</span><span class="w"> </span><span class="nt">diff和svn</span><span class="w"> </span><span class="nt">revert这三条命令在没有网络情况下可以执行</span><span class="err">，</span><span class="nt">因为svn在本地</span><span class="p">.</span><span class="nc">svn中保留了本地版本原始拷贝</span><span class="err">。</span><span class="w"></span>
+
+<span class="nt">简写</span><span class="err">：</span><span class="w"> </span><span class="nt">svn</span><span class="w"> </span><span class="nt">st</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="_6">删除文件</h4>
+<div class="codehilite"><pre><span></span><code>svn delete path -m &quot;注释&quot;
+
+例如: svn delete svn://192.168.####1/pro/domain/test.cpp -m &quot;delete test file&quot;
+
+或者直接svn delete test.php 然后再svn ci -m &#39;delete test file‘，推荐使用这种
+
+简写： svn (del、remove、rm)
+</code></pre></div>
+
+<h4 id="_7">查看日志</h4>
+<div class="codehilite"><pre><span></span><code>svn log path
+</code></pre></div>
+
+<h4 id="_8">查看文件详细信息</h4>
+<div class="codehilite"><pre><span></span><code>svn info path
+</code></pre></div>
+
+<h4 id="_9">比较差异</h4>
+<div class="codehilite"><pre><span></span><code>svn diff path（将修改的文件与基础版本比较）
+
+svn diff -r m:n （将修改的文件m版本和n版本比较）
+
+简写 svn di
+</code></pre></div>
+
+<h4 id="_10">将两个版本的文件的差异合并到当前文件</h4>
+<div class="codehilite"><pre><span></span><code>svn merge -r m:n path
+
+ 例如：svn merge -r 20:25 test.cpp（将版本20与25之间的差异合并到当前文件，但一般会发生冲突，需要处理一下）
+</code></pre></div>
+
+<h4 id="svn">SVN帮助</h4>
+<div class="codehilite"><pre><span></span><code>svn help
+
+以上为常用命令，下面为不常用命令
+</code></pre></div>
+
+<h4 id="_11">查看版本库下的文件和列表</h4>
+<div class="codehilite"><pre><span></span><code>svn list path （显示path目录下的所属于版本的文件和目录）
+
+简写: svn ls
+</code></pre></div>
+
+<h4 id="_12">创建纳入版本控制下的新目录</h4>
+<div class="codehilite"><pre><span></span><code>svn mkdir: 创建纳入版本控制下的新目录。
+
+用法: 1、mkdir PATH...
+         2、mkdir URL...
+创建版本控制的目录。
+1、每一个以工作副本 PATH 指定的目录，都会创建在本地端，并且加入新增调度，以待下一次的提交。
+2、每个以URL指定的目录，都会透过立即提交于仓库中创建。在这两个情况下，所有的中间目录都必须事先存在。
+</code></pre></div>
+
+<h4 id="_13">恢复本地修改</h4>
+<div class="codehilite"><pre><span></span><code>svn revert：恢复原始未改变的工作副本文件（恢复大部分的本地修改）revert用法：revert path
+
+注意：本子命令不会存储网络，并且会解除冲突的情况。但它不会恢复被创建的目录
+</code></pre></div>
+
+<h4 id="url">代码库URL变更</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">svn</span><span class="w"> </span><span class="n">switch</span><span class="p">(</span><span class="n">sw</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">更新工作副本到不同的URL</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">用法</span><span class="w"> </span>
+<span class="mi">1</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">[</span><span class="n">PATH</span><span class="o">]</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="o">--</span><span class="n">relocate</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">[</span><span class="n">PATH</span><span class="o">]</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">、</span><span class="n">更新工作副本</span><span class="err">，</span><span class="n">映射到一个新的URL</span><span class="err">，</span><span class="n">会将服务上的文件与本地文件合并</span><span class="err">。</span><span class="n">这是将工作副本对应到同一创库的某个分支或者标记的方法</span><span class="err">。</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">、</span><span class="n">改写工作副本URL元数据</span><span class="err">，</span><span class="n">以反映URL的变更</span><span class="err">，</span><span class="n">创库URL变动但工作副本仍旧对映同一创库的同一目录时使用该命令更新工作副本与创库的对应关系</span><span class="err">。</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="_14">解决冲突</h4>
+<div class="codehilite"><pre><span></span><code>svn resolved：移除工作副本的目录或文件的“冲突”状态。
+
+用法 resolved path
+
+注意：本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的相关文件，然后让path可以再次提交。
+</code></pre></div>
+
+<h4 id="url_1">输出指定文件的URL内容</h4>
+<div class="codehilite"><pre><span></span><code>svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
+</code></pre></div></div>
+    </div>
+    <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
+    <div class="nav">
+      <ul>
+        
+        <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作--查看数据表信息</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Linux下SVN服务器的配置及搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的配置及搭建</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
+        
+      </ul>
+    </div>
+  </body>
+
+  </html>

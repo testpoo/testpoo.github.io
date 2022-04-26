@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"
     <title>测试窝</title>
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
@@ -25,7 +26,7 @@
             
             <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
             
-            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
+            <li><a href="https://testpoo.github.io/mysql笔记.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
             
             <li><a href="https://testpoo.github.io/shell简介.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
             
@@ -33,11 +34,15 @@
             
             <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><label style="color: #ffba48"></label>&nbsp;性能测试</a></li>
             
-            <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
+            <li><a href="https://testpoo.github.io/python标准异常.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
             
             <li><a href="https://testpoo.github.io/Git简介.html"><label style="color: #ffba48"></label>&nbsp;git</a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
+            
+            <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><label style="color: #ffba48"></label>&nbsp;sqlite</a></li>
+            
+            <li><a href="https://testpoo.github.io/svn命令.html"><label style="color: #ffba48"></label>&nbsp;svn</a></li>
             
           </ul>
         </div>
@@ -48,15 +53,17 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共91544个字</span></a></li>
+            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共95799个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span><span>2019-10-11&nbsp;&nbsp;共23402个字</span></a></li>
             
           </ul>
         </div>
-        <div class="item-num">总共1项</div>
+        <div class="item-num">总共2项</div>
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>mysql函数汇总</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 17:41:17</span></div>
+      <div class="header"><span>mysql函数汇总</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 21:57:38</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -781,14 +788,14 @@
 <h3 id="datediff">DATEDIFF函数：获取两个日期的时间间隔</h3>
 <p><code>DATEDIFF(date1，date2)</code> 返回起始时间 date1 和结束时间 date2 之间的天数。date1 和 date2 为日期或 <code>date-and-time</code> 表达式。计算时只用到这些值的日期部分。</p>
 <p>如：使用 <code>DATEDIFF()</code> 函数计算两个日期之间的间隔天数，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="s">&#39;2022-04-19&#39;</span><span class="p">,</span><span class="s">&#39;2022-04-18&#39;</span><span class="p">)</span> <span class="kr">AS</span> <span class="n">COL1</span><span class="p">,</span>
-    <span class="o">-&gt;</span> <span class="n">DATEDIFF</span><span class="p">(</span><span class="s">&#39;2022-04-19&#39;</span><span class="p">,</span><span class="s">&#39;2022-05-04&#39;</span><span class="p">)</span> <span class="kr">AS</span> <span class="n">col2</span><span class="p">;</span>
-<span class="o">+------+------+</span>
-<span class="o">|</span> <span class="n">COL1</span> <span class="o">|</span> <span class="n">col2</span> <span class="o">|</span>
-<span class="o">+------+------+</span>
-<span class="o">|</span>    <span class="mi">1</span> <span class="o">|</span>  <span class="o">-</span><span class="mi">15</span> <span class="o">|</span>
-<span class="o">+------+------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.00</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="s">&#39;2022-04-19&#39;</span><span class="p">,</span><span class="s">&#39;2022-04-18&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">COL1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="s">&#39;2022-04-19&#39;</span><span class="p">,</span><span class="s">&#39;2022-05-04&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">col2</span><span class="p">;</span><span class="w"></span>
+<span class="o">+------+------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">COL1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+------+------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">    </span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="o">-</span><span class="mi">15</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+------+------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.00</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由运行结果可知，DATEDIFF() 函数返回 date1-date2 后的值，因此 <code>DATEDIFF('2022-04-19','2022-04-18')</code> 的返回值为 1，<code>DATEDIFF('2022-04-19','2022-05-04')</code> 的返回值为 -15。</p>
@@ -977,29 +984,29 @@ mysql&gt; SELECT * FROM tb_students_score;
 </code></pre></div>
 
 <p>如：在 tb_students_score 表中查找最高的成绩，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">max_score</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span> <span class="n">max_score</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span>       <span class="mi">100</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.06</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="nf">MAX</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">max_score</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">max_score</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">       </span><span class="mi">100</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.06</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由运行结果可以看到，<code>MAX()</code> 函数查询出 <code>student_score</code> 字段的最大值为 100。</p>
 <p><code>MAX()</code> 函数不仅适用于查找数值类型，也可应用于字符类型。</p>
 <p>如：在 <code>tb_students_score</code> 表中查找 <code>student_name</code> 的最大值，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">student_name</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">max_name</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+----------+</span>
-<span class="o">|</span> <span class="n">max_name</span> <span class="o">|</span>
-<span class="o">+----------+</span>
-<span class="o">|</span> <span class="n">Tom</span>      <span class="o">|</span>
-<span class="o">+----------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.03</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="nf">MAX</span><span class="p">(</span><span class="n">student_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">max_name</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">max_name</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">Tom</span><span class="w">      </span><span class="o">|</span><span class="w"></span>
+<span class="o">+----------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.03</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由运行结果可以看到，<code>MAX()</code> 函数可以对字母进行大小判断，并返回最大的字符或者字符串值。
@@ -1008,15 +1015,15 @@ mysql&gt; SELECT * FROM tb_students_score;
 <p><code>MIN()</code> 函数是用来返回查询列中的最小值。</p>
 <p>为了便于理解，需要用到在上一节讲 MAX() 函数时创建的数据表 <code>tb_students_score</code>。</p>
 <p>如：在 <code>tb_students_score</code> 表中查找最低的成绩，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">min_score</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span> <span class="n">min_score</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span>        <span class="mi">88</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.00</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="nf">MIN</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">min_score</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">min_score</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">        </span><span class="mi">88</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.00</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由结果可以看到，<code>MIN()</code> 函数查询出 <code>student_score</code> 字段的最小值为 88。
@@ -1027,15 +1034,15 @@ mysql&gt; SELECT * FROM tb_students_score;
 <code>COUNT(字段名)</code>计算指定列下总的行数，计算时将忽略空值的行。</p>
 <p>这里需要用到以下在介绍 <code>MAX()</code> 函数时创建的表 <code>tb_students_score</code> 。</p>
 <p>如：查询 <code>tb_students_score</code> 表中总的行数，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">student_name</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">students_number</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+-----------------+</span>
-<span class="o">|</span> <span class="n">students_number</span> <span class="o">|</span>
-<span class="o">+-----------------+</span>
-<span class="o">|</span>              <span class="mi">10</span> <span class="o">|</span>
-<span class="o">+-----------------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.03</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="nf">COUNT</span><span class="p">(</span><span class="n">student_name</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">students_number</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+-----------------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">students_number</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">              </span><span class="mi">10</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.03</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由查询结果可以看到，<code>COUNT(*)</code> 返回 <code>tb_students_score</code> 表中记录的总行数，无论值是什么。返回的总数的名称为 <code>students_number</code>。
@@ -1048,15 +1055,15 @@ mysql&gt; SELECT * FROM tb_students_score;
 <code>SUM</code> 函数忽略计算中的 NULL 值。</p>
 <p>这里需要用到以下在介绍 <code>MAX()</code> 函数时创建的表 <code>tb_students_score</code> 。</p>
 <p>如：在 <code>tb_students_score</code> 表中计算学生成绩的总分，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="nf">SUM</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">score_sum</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span> <span class="n">score_sum</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span>       <span class="mi">942</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.00</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="nf">SUM</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">score_sum</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">score_sum</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">       </span><span class="mi">942</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.00</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>由查询结果可以看到，<code>SUM()</code> 函数返回学生的所有成绩之和为 942。
@@ -1065,15 +1072,15 @@ mysql&gt; SELECT * FROM tb_students_score;
 <p><code>AVG()</code> 函数通过计算返回的行数和每一行数据的和，求得指定列数据的平均值。</p>
 <p>这里需要用到以下在介绍 <code>MAX()</code> 函数时创建的表 <code>tb_students_score</code> 。</p>
 <p>如：在 <code>tb_students_score</code> 表中，查询所有学生成绩的平均值，输入的 SQL 语句和执行结果如下所示。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="n">AVG</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span>
-    <span class="o">-&gt;</span> <span class="kr">AS</span> <span class="n">score_avg</span>
-    <span class="o">-&gt;</span> <span class="n">FROM</span> <span class="n">tb_students_score</span><span class="p">;</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span> <span class="n">score_avg</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="o">|</span>   <span class="mf">94.2000</span> <span class="o">|</span>
-<span class="o">+-----------+</span>
-<span class="mi">1</span> <span class="nf">row</span> <span class="kr">in</span> <span class="nf">set</span> <span class="p">(</span><span class="mf">0.03</span> <span class="n">sec</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="n">AVG</span><span class="p">(</span><span class="n">student_score</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">AS</span><span class="w"> </span><span class="n">score_avg</span><span class="w"></span>
+<span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">tb_students_score</span><span class="p">;</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w"> </span><span class="n">score_avg</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="o">|</span><span class="w">   </span><span class="mf">94.2000</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="o">+-----------+</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="nf">row</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">set</span><span class="w"> </span><span class="p">(</span><span class="mf">0.03</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 <p>提示：使用 <code>AVG()</code> 函数时，参数为要计算的列名称，若要得到多个列的平均值，则需要在每一列都使用 AVG() 函数。</p>
@@ -1177,9 +1184,9 @@ mysql&gt; SELECT * FROM tb_students_score;
     <div class="nav">
       <ul>
         
-        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
-        
         <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
@@ -1199,11 +1206,23 @@ mysql&gt; SELECT * FROM tb_students_score;
         
         <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        
         <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作--查看数据表信息</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Linux下SVN服务器的配置及搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的配置及搭建</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

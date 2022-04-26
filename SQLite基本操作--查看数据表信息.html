@@ -49,11 +49,11 @@
         <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
       </div>
       <div class="articles">
-        <div class="category">分类：常用链接</div>
+        <div class="category">分类：sqlite</div>
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span><span>2022-04-26&nbsp;&nbsp;共1316个字</span></a></li>
+            <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作--查看数据表信息</span><span>2020-01-02&nbsp;&nbsp;共992个字</span></a></li>
             
           </ul>
         </div>
@@ -61,48 +61,47 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>常用链接</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 21:57:38</span></div>
+      <div class="header"><span>SQLite基本操作--查看数据表信息</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 21:57:38</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
-      <div class="posts"><div class="toc">
-<ul>
-<li><a href="#_1">工具</a></li>
-<li><a href="#_2">教程</a></li>
-<li><a href="#_3">测开</a></li>
-<li><a href="#linux">Linux</a></li>
-<li><a href="#_4">缴费查询</a></li>
-</ul>
-</div>
-<h3 id="_1">工具</h3>
-<ul>
-<li><a href="https://wannianli.tianqi.com/">万年历</a></li>
-<li><a href="https://www.bejson.com/">JSON格式化,xml转json工具</a></li>
-<li><a href="https://www.baidu.com">百度一下，你就知道</a></li>
-<li><a href="https://www.intogif.com/">在线gif动画制作工具</a></li>
-<li><a href="https://www.processon.com/login?f=index">在线协作绘图平台</a></li>
-</ul>
-<h3 id="_2">教程</h3>
-<ul>
-<li><a href="https://git-scm.com/book/zh/v2">Git官方文档</a></li>
-<li><a href="https://docs.python.org/zh-cn/3/">Python3官方中文文档</a></li>
-<li><a href="https://www.liaoxuefeng.com/">廖雪峰的官方网站</a></li>
-<li><a href="https://www.kuangstudy.com/course">自学交流社区</a></li>
-<li><a href="http://markdown.p2hp.com/basic-syntax/">Markdown基本语法</a></li>
-</ul>
-<h3 id="_3">测开</h3>
-<ul>
-<li><a href="http://testerhome.com/">测试之家</a></li>
-<li><a href="https://www.github.com">Github</a></li>
-</ul>
-<h3 id="linux">Linux</h3>
-<ul>
-<li><a href="https://www.xfce.org/">XFCE</a></li>
-<li><a href="https://www.debian.org">Debian</a></li>
-</ul>
-<h3 id="_4">缴费查询</h3>
-<ul>
-<li><a href="http://1.85.55.147:17007">陕西政务服务网</a></li>
-<li><a href="http://1.85.18.186:8615/">西安市人社局</a></li>
-</ul></div>
+      <div class="posts"><div class="codehilite"><pre><span></span><code># 查看当前数据库所有表
+sqlite&gt;.tables
+
+# 查看当前数据库指定表
+sqlite&gt;.tablestable_name
+
+# 查看当前数据库所有表的建表(CREATE)语句
+sqlite&gt;.schema
+
+# 查看指定数据表的建表语句
+sqlite&gt;.schematable_name
+
+# 查看所有表结构及索引信息
+sqlite&gt;select*fromsqlite_masterfrom;
+
+# 查看所有表结构信息
+sqlite&gt;select*fromsqlite_masterwheretype=&#39;table&#39;;
+
+# 对于表来说，name字段指表名，查询所有表
+sqlite&gt;selectnamefromsqlite_masterwheretype=&#39;table&#39;;
+
+# 查看指定表结构信息
+sqlite&gt;select*fromsqlite_masterwheretype=&#39;table&#39;andname=&#39;table_name&#39;;
+
+# 查看所有表索引信息，查询所有索引
+sqlite&gt;select*fromsqlite_masterwheretype=&#39;index&#39;;
+
+# 对于索引来说，name字段指索引名
+sqlite&gt;selectnamefromsqlite_masterwheretype=&#39;table&#39;;
+
+# 查看指定表索引信息
+sqlite&gt;select*fromsqlite_masterwheretype=&#39;index&#39;andname=&#39;table_name&#39;;
+
+# 查看指定表所有字段信息，类似于msyql：desctable_name
+sqlite&gt;pragmatable_info(&#39;table_name&#39;)
+
+# 查看指定表字段【column】类型，括号内可不输引号
+sqlite&gt;selecttypeof(&#39;column&#39;)fromtable_name;
+</code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

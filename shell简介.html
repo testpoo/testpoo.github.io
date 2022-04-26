@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"
     <title>测试窝</title>
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
@@ -25,7 +26,7 @@
             
             <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
             
-            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
+            <li><a href="https://testpoo.github.io/mysql笔记.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
             
             <li><a href="https://testpoo.github.io/shell简介.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
             
@@ -33,11 +34,15 @@
             
             <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><label style="color: #ffba48"></label>&nbsp;性能测试</a></li>
             
-            <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
+            <li><a href="https://testpoo.github.io/python标准异常.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
             
             <li><a href="https://testpoo.github.io/Git简介.html"><label style="color: #ffba48"></label>&nbsp;git</a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
+            
+            <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><label style="color: #ffba48"></label>&nbsp;sqlite</a></li>
+            
+            <li><a href="https://testpoo.github.io/svn命令.html"><label style="color: #ffba48"></label>&nbsp;svn</a></li>
             
           </ul>
         </div>
@@ -48,7 +53,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span><span>2022-04-18&nbsp;&nbsp;共25855个字</span></a></li>
+            <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span><span>2022-04-18&nbsp;&nbsp;共28891个字</span></a></li>
             
           </ul>
         </div>
@@ -56,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>shell简介</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 17:41:17</span></div>
+      <div class="header"><span>shell简介</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 21:57:38</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -329,31 +334,31 @@ cdeveloper
 </code></pre></div>
 
 <p>执行<code>./hello.sh 1 2 3 4 5</code>的结果：</p>
-<div class="codehilite"><pre><span></span><code>print $
+<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="w"> </span><span class="p">$</span><span class="w"></span>
 
-# 程序名
-$0 = ./hello.sh
+<span class="o">#</span><span class="w"> </span>程序名<span class="w"></span>
+<span class="p">$</span><span class="mi">0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">./</span><span class="nv">hello</span><span class="o">.</span><span class="nv">sh</span><span class="w"></span>
 
-# 第一个参数
-$1 = 1
+<span class="o">#</span><span class="w"> </span>第一个参数<span class="w"></span>
+<span class="p">$</span><span class="mi">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 
-# 第二个参数
-$2 = 2
+<span class="o">#</span><span class="w"> </span>第二个参数<span class="w"></span>
+<span class="p">$</span><span class="mi">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
 
-# 一共有5个参数
-$# = 5
+<span class="o">#</span><span class="w"> </span>一共有<span class="mi">5</span>个参数<span class="w"></span>
+<span class="p">$</span><span class="o">#</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 
-# 打印出所有参数
-$@ = 1 2 3 4 5
+<span class="o">#</span><span class="w"> </span>打印出所有参数<span class="w"></span>
+<span class="p">$</span><span class="o">@</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 
-# 打印出所有参数
-$* = 1 2 3 4 5
+<span class="o">#</span><span class="w"> </span>打印出所有参数<span class="w"></span>
+<span class="p">$</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 
-# 进程ID
-$$ = 854
+<span class="o">#</span><span class="w"> </span>进程<span class="nv">ID</span><span class="w"></span>
+<span class="p">$$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">854</span><span class="w"></span>
 
-# 之前没有执行其他命令或者函数
-$? = 0
+<span class="o">#</span><span class="w"> </span>之前没有执行其他命令或者函数<span class="w"></span>
+<span class="p">$</span>?<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="3">3. 环境变量</h4>
@@ -467,10 +472,10 @@ xterm
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">4</span>
-<span class="mf">5</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">2</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
+<span class="mf">4</span><span class="w"></span>
+<span class="mf">5</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="2_1">2. 数字关系运算符</h4>
@@ -595,12 +600,12 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
+<span class="mf">2</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
+<span class="mf">1</span><span class="w"></span>
+<span class="mf">2</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="4-while">4. while 循环</h4>
@@ -619,15 +624,15 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">4</span>
-<span class="mf">5</span>
-<span class="mf">6</span>
-<span class="mf">7</span>
-<span class="mf">8</span>
-<span class="mf">9</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
+<span class="mf">2</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
+<span class="mf">4</span><span class="w"></span>
+<span class="mf">5</span><span class="w"></span>
+<span class="mf">6</span><span class="w"></span>
+<span class="mf">7</span><span class="w"></span>
+<span class="mf">8</span><span class="w"></span>
+<span class="mf">9</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="5until">5.until 循环</h4>
@@ -645,12 +650,12 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">0</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">4</span>
-<span class="mf">5</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">0</span><span class="w"></span>
+<span class="mf">1</span><span class="w"></span>
+<span class="mf">2</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
+<span class="mf">4</span><span class="w"></span>
+<span class="mf">5</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="6-break">6. break</h4>
@@ -670,7 +675,7 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
 </code></pre></div>
 
 <h4 id="7-continue">7. continue</h4>
@@ -690,8 +695,8 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
-<span class="mf">3</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
+<span class="mf">3</span><span class="w"></span>
 </code></pre></div>
 
 <p>下面介绍 Shell 编程中比较重要的函数，好像每种编程语言的函数都很重要。</p>
@@ -810,9 +815,9 @@ echo $?
     <div class="nav">
       <ul>
         
-        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
-        
         <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
@@ -832,11 +837,23 @@ echo $?
         
         <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        
         <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        <li><a href="https://testpoo.github.io/SQLite基本操作--查看数据表信息.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作--查看数据表信息</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Linux下SVN服务器的配置及搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的配置及搭建</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

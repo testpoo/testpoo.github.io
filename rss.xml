@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试窝/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-04-26 17:35:30</pubDate>  
-    <lastBuildDate>2022-04-26 17:35:30</lastBuildDate>  
+    <pubDate>2022-04-26 17:41:17</pubDate>  
+    <lastBuildDate>2022-04-26 17:41:17</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     
@@ -33,7 +33,7 @@
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/关于我.html</link>  
       <guid isPermaLink="true">测试窝/post/关于我.html</guid>
        
@@ -85,7 +85,7 @@
 &lt;li&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/常用链接.html</link>  
       <guid isPermaLink="true">测试窝/post/常用链接.html</guid>
        
@@ -1211,7 +1211,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/mysql函数汇总.html</link>  
       <guid isPermaLink="true">测试窝/post/mysql函数汇总.html</guid>
        
@@ -1970,7 +1970,7 @@ echo $?
 3. &lt;code&gt;[]&lt;/code&gt; 在测试或者计算中里面的内容最好都加空格
 4. 单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号
 5. 一定要注意语句的格式，例如缩进&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/shell简介.html</link>  
       <guid isPermaLink="true">测试窝/post/shell简介.html</guid>
        
@@ -2359,7 +2359,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker container cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;containID&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;/path/to/file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/Docker入门教程.html</link>  
       <guid isPermaLink="true">测试窝/post/Docker入门教程.html</guid>
        
@@ -4243,7 +4243,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">测试窝/post/性能监控各指令详解.html</guid>
        
@@ -5576,7 +5576,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/Python进阶.html</link>  
       <guid isPermaLink="true">测试窝/post/Python进阶.html</guid>
        
@@ -6399,7 +6399,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/Git简介.html</link>  
       <guid isPermaLink="true">测试窝/post/Git简介.html</guid>
        
@@ -6444,7 +6444,7 @@ print(add(3, 5))
 &lt;li&gt;&lt;a href=&#34;#re_3&#34;&gt;五、re模块异常&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;六、注意事项&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1_2&#34;&gt;1. 字节串与字符串&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2_2&#34;&gt;2.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-r&#34;&gt;2. r 的作用&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#3_1&#34;&gt;3.正则查找函数 返回匹配对象&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#4_1&#34;&gt;4.重复使用某个正则&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -6467,43 +6467,43 @@ print(add(3, 5))
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;.&lt;/td&gt;
-&lt;td&gt;匹配除“\n”之外的任何单个字符。如果指定了标签 DOTALL ，它将匹配包括换行符的任意字符。&lt;/td&gt;
+&lt;td&gt;匹配除“\n”之外的任何单个字符。如果指定了标签DOTALL，它将匹配包括换行符的任意字符。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;^&lt;/td&gt;
-&lt;td&gt;匹配输入字符串的开始位置，并且在 MULTILINE 模式也匹配换行后的首个符号。&lt;/td&gt;
+&lt;td&gt;匹配输入字符串的开始位置，并且在MULTILINE模式也匹配换行后的首个符号。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$&lt;/td&gt;
-&lt;td&gt;匹配输入字符串的结束位置。在 MULTILINE 模式下也会匹配换行符之前的文本。&lt;/td&gt;
+&lt;td&gt;匹配输入字符串的结束位置。在MULTILINE模式下也会匹配换行符之前的文本。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;*&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式零次或多次。例如，ab* 会匹配 &#39;a&#39;，&#39;ab&#39;，或者 &#39;a&#39; 后面跟随任意个 &#39;b&#39;。&lt;/td&gt;
+&lt;td&gt;匹配前面的子表达式零次或多次。例如，ab*会匹配&#39;a&#39;，&#39;ab&#39;，或者&#39;a&#39;后面跟随任意个&#39;b&#39;。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;+&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式一次或多次。例如， ab+ 会匹配 &#39;a&#39; 后面跟随1个以上到任意个 &#39;b&#39;，它不会匹配 &#39;a&#39;。&lt;/td&gt;
+&lt;td&gt;匹配前面的子表达式一次或多次。例如，ab+会匹配&#39;a&#39;后面跟随1个以上到任意个&#39;b&#39;，它不会匹配&#39;a&#39;。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;?&lt;/td&gt;
-&lt;td&gt;匹配前面的子表达式零次或一次。例如，ab? 会匹配 &#39;a&#39; 或者 &#39;ab&#39;。&lt;/td&gt;
+&lt;td&gt;匹配前面的子表达式零次或一次。例如，ab?会匹配&#39;a&#39;或者&#39;ab&#39;。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;*?, +?, ??&lt;/td&gt;
-&lt;td&gt;&#39;&lt;em&gt;&#39;, &#39;+&#39;，和 &#39;?&#39; 修饰符都是贪婪的；它们在字符串进行尽可能多的匹配。有时候并不需要这种行为。如果正则式 &amp;lt;.&lt;/em&gt;&amp;gt; 希望找到 &#39;&lt;a&gt; b &lt;c&gt;&#39;，它将会匹配整个字符串，而不仅是 &#39;&lt;a&gt;&#39;。在修饰符之后添加 ? 将使样式以非贪婪方式或者最小方式进行匹配；尽量少的字符将会被匹配。使用正则式 &amp;lt;.*?&amp;gt; 将会仅仅匹配 &#39;&lt;a&gt;&#39;。&lt;/td&gt;
+&lt;td&gt;*?,+?,??&lt;/td&gt;
+&lt;td&gt;&#39;&lt;em&gt;&#39;,&#39;+&#39;，和&#39;?&#39;修饰符都是贪婪的；它们在字符串进行尽可能多的匹配。有时候并不需要这种行为。如果正则式&amp;lt;.&lt;/em&gt;&amp;gt;希望找到&#39;&lt;a&gt;b&lt;c&gt;&#39;，它将会匹配整个字符串，而不仅是&#39;&lt;a&gt;&#39;。在修饰符之后添加?将使样式以非贪婪方式或者最小方式进行匹配；尽量少的字符将会被匹配。使用正则式&amp;lt;.*?&amp;gt;将会仅仅匹配&#39;&lt;a&gt;&#39;。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;{m}&lt;/td&gt;
-&lt;td&gt;m是一个非负整数。匹配确定m次。例如， a{6} 将匹配6个 &#39;a&#39; , 但是不能是5个。&lt;/td&gt;
+&lt;td&gt;m是一个非负整数。匹配确定m次。例如，a{6}将匹配6个&#39;a&#39;, 但是不能是5个。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;{m,n}&lt;/td&gt;
-&lt;td&gt;对正则式进行 m 到 n 次匹配，在 m 和 n 之间取尽量多。例如，a{3,5} 将匹配 3 到 5个 &#39;a&#39;。忽略 m 意为指定下界为0，忽略 n 指定上界为无限次。 比如 a{4,}b 将匹配 &#39;aaaab&#39; 或者1000个 &#39;a&#39; 尾随一个 &#39;b&#39;，但不能匹配 &#39;aaab&#39;。逗号不能省略，否则无法辨别修饰符应该忽略哪个边界。&lt;/td&gt;
+&lt;td&gt;对正则式进行m到n次匹配，在m和n之间取尽量多。例如，a{3,5}将匹配 3 到 5个&#39;a&#39;。忽略m意为指定下界为0，忽略n指定上界为无限次。 比如a{4,}b将匹配&#39;aaaab&#39;或者1000个&#39;a&#39;尾随一个&#39;b&#39;，但不能匹配&#39;aaab&#39;。逗号不能省略，否则无法辨别修饰符应该忽略哪个边界。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;{n,m}?&lt;/td&gt;
-&lt;td&gt;前一个修饰符的非贪婪模式，只匹配尽量少的字符次数。比如，对于 &#39;aaaaaa&#39;， a{3,5} 匹配 5个 &#39;a&#39; ，而 a{3,5}? 只匹配3个 &#39;a&#39;。&lt;/td&gt;
+&lt;td&gt;前一个修饰符的非贪婪模式，只匹配尽量少的字符次数。比如，对于&#39;aaaaaa&#39;，a{3,5}匹配 5个&#39;a&#39;，而a{3,5}?只匹配3个&#39;a&#39;。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;\&lt;/td&gt;
@@ -6511,11 +6511,11 @@ print(add(3, 5))
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;[]&lt;/td&gt;
-&lt;td&gt;字符可以单独列出，比如 [amk] 匹配 &#39;a&#39;， &#39;m&#39;， 或者 &#39;k&#39;。&lt;br/&gt;可以表示字符范围，通过用 &#39;-&#39; 将两个字符连起来。比如 [a-z] 将匹配任何小写ASCII字符， [0-5][0-9] 将匹配从 00 到 59 的两位数字， [0-9A-Fa-f] 将匹配任何十六进制数位。 如果 - 进行了转义 （比如 [a-z]）或者它的位置在首位或者末尾（如 [-a] 或 [a-]），它就只表示普通字符 &#39;-&#39;。&lt;br/&gt;特殊字符在集合中，失去它的特殊含义。比如 [(+&lt;em&gt;)] 只会匹配这几个文法字符 &#39;(&#39;, &#39;+&#39;, &#39;&lt;/em&gt;&#39;, or &#39;)&#39;。&lt;br/&gt;字符类如 \w 或者 \S (如下定义) 在集合内可以接受，它们可以匹配的字符由 ASCII 或者 LOCALE 模式决定。&lt;br/&gt;不在集合范围内的字符可以通过取反来进行匹配。如果集合首字符是 &#39;^&#39; ，所有不在集合内的字符将会被匹配，比如 [^5] 将匹配所有字符，除了&#39;5&#39;，[^^] 将匹配所有字符，除了&#39;^&#39;。^ 如果不在集合首位，就没有特殊含义。&lt;br/&gt;在集合内要匹配一个字符 &#39;]&#39;，有两种方法，要么就在它之前加上反斜杠，要么就把它放到集合首位。比如， [()[]{}] 和 &lt;a href=&#34;&#34;&gt;&lt;/a&gt;[{}] 都可以匹配括号。&lt;/td&gt;
+&lt;td&gt;字符可以单独列出，比如[amk]匹配&#39;a&#39;，&#39;m&#39;， 或者&#39;k&#39;。&lt;br/&gt;可以表示字符范围，通过用&#39;-&#39;将两个字符连起来。比如[a-z]将匹配任何小写ASCII字符，[0-5][0-9]将匹配从00到59的两位数字，[0-9A-Fa-f]将匹配任何十六进制数位。 如果-进行了转义 （比如[a-z]）或者它的位置在首位或者末尾（如[-a]或[a-]），它就只表示普通字符&#39;-&#39;。&lt;br/&gt;特殊字符在集合中，失去它的特殊含义。比如[(+&lt;em&gt;)]只会匹配这几个文法字符&#39;(&#39;,&#39;+&#39;,&#39;&lt;/em&gt;&#39;, or&#39;)&#39;。&lt;br/&gt;字符类如\w或者\S(如下定义) 在集合内可以接受，它们可以匹配的字符由ASCII或者LOCALE模式决定。&lt;br/&gt;不在集合范围内的字符可以通过取反来进行匹配。如果集合首字符是&#39;^&#39;，所有不在集合内的字符将会被匹配，比如[^5]将匹配所有字符，除了&#39;5&#39;，[^^]将匹配所有字符，除了&#39;^&#39;。^如果不在集合首位，就没有特殊含义。&lt;br/&gt;在集合内要匹配一个字符&#39;]&#39;，有两种方法，要么就在它之前加上反斜杠，要么就把它放到集合首位。比如，[()[]{}]和&lt;a href=&#34;&#34;&gt;&lt;/a&gt;[{}]都可以匹配括号。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;|&lt;/td&gt;
-&lt;td&gt;A|B， A 和 B 可以是任意正则表达式，创建一个正则表达式，匹配 A 或者 B. 任意个正则表达式可以用 &#39;|&#39; 连接。它也可以在组合（见下列）内使用。扫描目标字符串时， &#39;|&#39; 分隔开的正则样式从左到右进行匹配。当一个样式完全匹配时，这个分支就被接受。意思就是，一旦 A 匹配成功， B 就不再进行匹配，即便它能产生一个更好的匹配。或者说，&#39;|&#39; 操作符绝不贪婪。 如果要匹配 &#39;|&#39; 字符，使用 \|， 或者把它包含在字符集里，比如 [|].&lt;/td&gt;
+&lt;td&gt;A|B，A和B可以是任意正则表达式，创建一个正则表达式，匹配A或者B. 任意个正则表达式可以用&#39;|&#39;连接。它也可以在组合（见下列）内使用。扫描目标字符串时，&#39;|&#39;分隔开的正则样式从左到右进行匹配。当一个样式完全匹配时，这个分支就被接受。意思就是，一旦A匹配成功，B就不再进行匹配，即便它能产生一个更好的匹配。或者说，&#39;|&#39;操作符绝不贪婪。 如果要匹配&#39;|&#39;字符，使用\|， 或者把它包含在字符集里，比如[|].&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;(pattern)&lt;/td&gt;
@@ -6543,7 +6543,7 @@ print(add(3, 5))
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;\number&lt;/td&gt;
-&lt;td&gt;匹配数字代表的组合。每个括号是一个组合，组合从1开始编号。比如 (.+) \1 匹配 &#39;the the&#39; 或者 &#39;55 55&#39;, 但不会匹配 &#39;thethe&#39; (注意组合后面的空格)。这个特殊序列只能用于匹配前面99个组合。如果 number 的第一个数位是0， 或者 number 是三个八进制数，它将不会被看作是一个组合，而是八进制的数字值。在 &#39;[&#39; 和 &#39;]&#39; 字符集合内，任何数字转义都被看作是字符。&lt;/td&gt;
+&lt;td&gt;匹配数字代表的组合。每个括号是一个组合，组合从1开始编号。比如(.+)\1匹配&#39;thethe&#39;或者&#39;5555&#39;, 但不会匹配&#39;thethe&#39;(注意组合后面的空格)。这个特殊序列只能用于匹配前面99个组合。如果number的第一个数位是0， 或者number是三个八进制数，它将不会被看作是一个组合，而是八进制的数字值。在&#39;[&#39;和&#39;]&#39;字符集合内，任何数字转义都被看作是字符。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;\A&lt;/td&gt;
@@ -6652,19 +6652,19 @@ int(re.DEBUG) == 128  = 27
 
 &lt;p&gt;下面我们来快速学习这些常量的作用及如何使用他们，按常用度排序！&lt;/p&gt;
 &lt;h4 id=&#34;1-ignorecase&#34;&gt;1. IGNORECASE&lt;/h4&gt;
-&lt;p&gt;语法： re.IGNORECASE 或简写为 re.I&lt;/p&gt;
-&lt;p&gt;作用： 进行忽略大小写匹配。&lt;/p&gt;
+&lt;p&gt;语法：re.IGNORECASE 或简写为 re.I&lt;/p&gt;
+&lt;p&gt;作用：进行忽略大小写匹配。&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TEST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写模式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写模式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TEST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写模式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写模式&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6675,19 +6675,19 @@ int(re.DEBUG) == 128  = 27
 
 &lt;p&gt;在默认匹配模式下大写字母B无法匹配小写字母b，而在忽略大小写模式下是可以的。&lt;/p&gt;
 &lt;h4 id=&#34;2-ascii&#34;&gt;2. ASCII&lt;/h4&gt;
-&lt;p&gt;语法： re.ASCII 或简写为 re.A&lt;/p&gt;
-&lt;p&gt;作用： 顾名思义，ASCII表示ASCII码的意思，让\w, \W, \b, \B, \d, \D, \s 和 \S只匹配ASCII，而不是Unicode。&lt;/p&gt;
+&lt;p&gt;语法：re.ASCII 或简写为 re.A&lt;/p&gt;
+&lt;p&gt;作用：顾名思义，ASCII表示ASCII码的意思，让\w,\W,\b,\B,\d,\D,\s和\S只匹配ASCII，而不是Unicode。&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a测b试c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\w+&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;Unicode:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ASCII:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ASCII:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a测b试c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\w+&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;Unicode:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ASCII:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ASCII:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6699,19 +6699,19 @@ ASCII: [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;p&gt;在默认匹配模式下\w+匹配到了所有字符串，而在ASCII模式下，只匹配到了a、b、c（ASCII编码支持的字符）。&lt;/p&gt;
 &lt;p&gt;注意：这只对字符串匹配模式有效，对字节匹配模式无效。&lt;/p&gt;
 &lt;h4 id=&#34;3-dotall&#34;&gt;3. DOTALL&lt;/h4&gt;
-&lt;p&gt;语法： re.DOTALL 或简写为 re.S&lt;/p&gt;
-&lt;p&gt;作用： DOT表示.，ALL表示所有，连起来就是.匹配所有，包括换行符\n。默认模式下.是不能匹配行符\n的。&lt;/p&gt;
+&lt;p&gt;语法：re.DOTALL 或简写为 re.S&lt;/p&gt;
+&lt;p&gt;作用：DOT表示.，ALL表示所有，连起来就是.匹配所有，包括换行符\n。默认模式下.是不能匹配行符\n的。&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DOTALL&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;匹配所有模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DOTALL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;匹配所有模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DOTALL&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;匹配所有模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DOTALL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;匹配所有模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6723,19 +6723,19 @@ ASCII: [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;p&gt;在默认匹配模式下.并没有匹配换行符\n，而是将字符串分开匹配；而在re.DOTALL模式下，换行符\n与字符串一起被匹配到。&lt;/p&gt;
 &lt;p&gt;注意：默认匹配模式下.并不会匹配换行符\n。&lt;/p&gt;
 &lt;h4 id=&#34;4-multiline&#34;&gt;4. MULTILINE&lt;/h4&gt;
-&lt;p&gt;语法： re.MULTILINE 或简写为 re.M&lt;/p&gt;
-&lt;p&gt;作用： 多行模式，当某字符串中有换行符\n，默认模式下是不支持换行符特性的，比如：行开头和行结尾，而多行模式下是支持匹配行开头的。&lt;/p&gt;
+&lt;p&gt;语法：re.MULTILINE 或简写为 re.M&lt;/p&gt;
+&lt;p&gt;作用：多行模式，当某字符串中有换行符\n，默认模式下是不支持换行符特性的，比如：行开头和行结尾，而多行模式下是支持匹配行开头的。&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6747,21 +6747,21 @@ ASCII: [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 &lt;p&gt;正则表达式中^表示匹配行的开头，默认模式下它只能匹配字符串的开头；而在多行模式下，它还可以匹配换行符\n后面的字符。&lt;/p&gt;
 &lt;p&gt;注意：正则语法中^匹配行开头、\A匹配字符串开头，单行模式下它两效果一致，多行模式下\A不能识别\n。&lt;/p&gt;
 &lt;h4 id=&#34;5-verbose&#34;&gt;5. VERBOSE&lt;/h4&gt;
-&lt;p&gt;语法： re.VERBOSE 或简写为 re.X&lt;/p&gt;
-&lt;p&gt;作用： 详细模式，可以在正则表达式中加注解！&lt;/p&gt;
+&lt;p&gt;语法：re.VERBOSE 或简写为 re.X&lt;/p&gt;
+&lt;p&gt;作用：详细模式，可以在正则表达式中加注解！&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERBOSE&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;第一个字&lt;/span&gt;
-                   &lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;第二个字&lt;/span&gt;
-                &lt;span class=&#34;p&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;详细模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERBOSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;详细模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERBOSE&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;第一个字&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;第二个字&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;详细模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VERBOSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;详细模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6772,24 +6772,24 @@ ASCII: [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]
 
 &lt;p&gt;默认模式下并不能识别正则表达式中的注释，而详细模式是可以识别的。当一个正则表达式十分复杂的时候，详细模式或许能为你提供另一种注释方式，但它不应该成为炫技的手段，建议谨慎考虑后使用！&lt;/p&gt;
 &lt;h4 id=&#34;6-locale&#34;&gt;6. LOCALE&lt;/h4&gt;
-&lt;p&gt;语法： re.LOCALE 或简写为 re.L&lt;/p&gt;
-&lt;p&gt;作用： 由当前语言区域决定 \w, \W, \b, \B 和大小写敏感匹配，这个标记只能对byte样式有效。这个标记官方已经不推荐使用，因为语言区域机制很不可靠，它一次只能处理一个 &#34;习惯”，而且只对8位字节有效。&lt;/p&gt;
-&lt;p&gt;注意： 由于这个标记官方已经不推荐使用！&lt;/p&gt;
+&lt;p&gt;语法：re.LOCALE 或简写为 re.L&lt;/p&gt;
+&lt;p&gt;作用：由当前语言区域决定\w,\W,\b,\B和大小写敏感匹配，这个标记只能对byte样式有效。这个标记官方已经不推荐使用，因为语言区域机制很不可靠，它一次只能处理一个 &#34;习惯”，而且只对8位字节有效。&lt;/p&gt;
+&lt;p&gt;注意：由于这个标记官方已经不推荐使用！&lt;/p&gt;
 &lt;h4 id=&#34;7-unicode&#34;&gt;7. UNICODE&lt;/h4&gt;
-&lt;p&gt;语法： re.UNICODE 或简写为 re.U&lt;/p&gt;
-&lt;p&gt;作用： 与 ASCII 模式类似，匹配unicode编码支持的字符，但是 Python 3 默认字符串已经是Unicode，所以有点冗余。&lt;/p&gt;
+&lt;p&gt;语法：re.UNICODE 或简写为 re.U&lt;/p&gt;
+&lt;p&gt;作用：与 ASCII 模式类似，匹配unicode编码支持的字符，但是 Python 3 默认字符串已经是Unicode，所以有点冗余。&lt;/p&gt;
 &lt;h4 id=&#34;8-debug&#34;&gt;8. DEBUG&lt;/h4&gt;
-&lt;p&gt;语法： re.DEBUG&lt;/p&gt;
-&lt;p&gt;作用： 显示编译时的debug信息。&lt;/p&gt;
+&lt;p&gt;语法：re.DEBUG&lt;/p&gt;
+&lt;p&gt;作用：显示编译时的debug信息。&lt;/p&gt;
 &lt;p&gt;代码案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DEBUG&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;试&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debug模式&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DEBUG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DEBUG&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测试&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;试&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debug模式&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DEBUG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6807,22 +6807,22 @@ debug模式： [&amp;#39;试&amp;#39;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;9-template&#34;&gt;9. TEMPLATE&lt;/h4&gt;
-&lt;p&gt;语法： re.TEMPLATE 或简写为 re.T&lt;/p&gt;
-&lt;p&gt;作用： 暂时没搞懂TEMPLATE的具体用处，源码注释中写着：disable backtracking(禁用回溯)！&lt;/p&gt;
+&lt;p&gt;语法：re.TEMPLATE 或简写为 re.T&lt;/p&gt;
+&lt;p&gt;作用：暂时没搞懂TEMPLATE的具体用处，源码注释中写着：disable backtracking(禁用回溯)！&lt;/p&gt;
 &lt;h4 id=&#34;10&#34;&gt;10. 常量总结&lt;/h4&gt;
 &lt;p&gt;① 9个常量中，前5个（IGNORECASE、ASCII、DOTALL、MULTILINE、VERBOSE）有用处，两个（LOCALE、UNICODE）官方不建议使用、两个（TEMPLATE、DEBUG）试验性功能，不能依赖。&lt;/p&gt;
 &lt;p&gt;② 常量在re常用函数中都可以使用，查看源码可得知。&lt;/p&gt;
-&lt;p&gt;③ 常量可叠加使用，因为常量值都是2的幂次方值，所以是可以叠加使用的，叠加时请使用 | 符号，请勿使用+ 符号！&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;regexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;
-    &lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试b&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;p&gt;③ 常量可叠加使用，因为常量值都是2的幂次方值，所以是可以叠加使用的，叠加时请使用|符号，请勿使用+符号！&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;defregexFlag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;演示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re模块常量的使用&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ASCII&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;测&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;\n试b&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;试&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;默认模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MULTILINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;忽略大小写&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;多行模式：&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;#39;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6835,22 +6835,22 @@ debug模式： [&amp;#39;试&amp;#39;]
 &lt;p&gt;re模块有12个函数，我们以功能分类来讲解；这样更具有比较性，同时也方便记忆。&lt;/p&gt;
 &lt;h4 id=&#34;1_1&#34;&gt;1. 查找一个匹配项&lt;/h4&gt;
 &lt;p&gt;查找并返回一个匹配项的函数有3个：search、match、fullmatch，他们的区别分别是：&lt;/p&gt;
-&lt;p&gt;① search： 查找任意位置的匹配项&lt;/p&gt;
-&lt;p&gt;② match： 必须从字符串开头匹配&lt;/p&gt;
-&lt;p&gt;③ fullmatch： 整个字符串与正则完全匹配&lt;/p&gt;
+&lt;p&gt;① search：查找任意位置的匹配项&lt;/p&gt;
+&lt;p&gt;② match：必须从字符串开头匹配&lt;/p&gt;
+&lt;p&gt;③ fullmatch：整个字符串与正则完全匹配&lt;/p&gt;
 &lt;p&gt;我们再来根据实际的代码案例比较：&lt;/p&gt;
 &lt;p&gt;案例1:&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-# 1.查找一个匹配项
-text = &amp;#39;a功能测试b，功能测试b&amp;#39;
-pattern = r&amp;#39;功能测试b&amp;#39;
-# 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text).group())
-# 从字符串开头匹配
-print(&amp;#39;match:&amp;#39;,  re.match(pattern, text))
-# 整个字符串完全匹配
-print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text))
+#1.查找一个匹配项
+text=&amp;#39;a功能测试b，功能测试b&amp;#39;
+pattern=r&amp;#39;功能测试b&amp;#39;
+#查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text).group())
+#从字符串开头匹配
+print(&amp;#39;match:&amp;#39;,re.match(pattern,text))
+#整个字符串完全匹配
+print(&amp;#39;fullmatch:&amp;#39;,re.fullmatch(pattern,text))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6862,17 +6862,17 @@ print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text))
 &lt;p&gt;案例1中search函数是在字符串中任意位置匹配，只要有符合正则表达式的字符串就匹配成功，其实有两个匹配项，但search函数值返回一个。&lt;/p&gt;
 &lt;p&gt;而match函数是要从头开始匹配，而字符串开头多了个字母a，所以无法匹配，fullmatch函数需要完全相同，故也不匹配！&lt;/p&gt;
 &lt;p&gt;案例2:&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-# 1.查找一个匹配项
-text = &amp;#39;功能测试b，功能测试b&amp;#39;
-pattern = r&amp;#39;功能测试b&amp;#39;
-# 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text).group())
-# 从字符串开头匹配
-print(&amp;#39;match:&amp;#39;,  re.match(pattern, text).group())
-# 整个字符串完全匹配
-print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text))
+#1.查找一个匹配项
+text=&amp;#39;功能测试b，功能测试b&amp;#39;
+pattern=r&amp;#39;功能测试b&amp;#39;
+#查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text).group())
+#从字符串开头匹配
+print(&amp;#39;match:&amp;#39;,re.match(pattern,text).group())
+#整个字符串完全匹配
+print(&amp;#39;fullmatch:&amp;#39;,re.fullmatch(pattern,text))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6883,17 +6883,17 @@ print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text))
 
 &lt;p&gt;案例2删除了text最开头的字母a，这样match函数就可以匹配啦，而fullmatch函数依然不能完全匹配！&lt;/p&gt;
 &lt;p&gt;案例3:&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-# 1.查找一个匹配项
-text = &amp;#39;功能测试b&amp;#39;
-pattern = r&amp;#39;功能测试b&amp;#39;
-# 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text).group())
-# 从字符串开头匹配
-print(&amp;#39;match:&amp;#39;,  re.match(pattern, text).group())
-# 整个字符串完全匹配
-print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text).group())
+#1.查找一个匹配项
+text=&amp;#39;功能测试b&amp;#39;
+pattern=r&amp;#39;功能测试b&amp;#39;
+#查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text).group())
+#从字符串开头匹配
+print(&amp;#39;match:&amp;#39;,re.match(pattern,text).group())
+#整个字符串完全匹配
+print(&amp;#39;fullmatch:&amp;#39;,re.fullmatch(pattern,text).group())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6905,18 +6905,18 @@ print(&amp;#39;fullmatch:&amp;#39;, re.fullmatch(pattern, text).group())
 &lt;p&gt;案例3中，我们只留下一段文字，并且与正则表达式一致；这时fullmatch函数终于可以匹配了。&lt;/p&gt;
 &lt;p&gt;注意：查找一个匹配项返回的都是一个匹配对象（Match）。&lt;/p&gt;
 &lt;h4 id=&#34;2_1&#34;&gt;2.查找多个匹配项&lt;/h4&gt;
-&lt;p&gt;讲完查找一项，现在来看看查找多项吧，查找多项函数主要有：findall函数 与 finditer函数：&lt;/p&gt;
-&lt;p&gt;① findall： 从字符串任意位置查找，返回一个列表&lt;/p&gt;
+&lt;p&gt;讲完查找一项，现在来看看查找多项吧，查找多项函数主要有：findall函数与finditer函数：&lt;/p&gt;
+&lt;p&gt;① findall：从字符串任意位置查找，返回一个列表&lt;/p&gt;
 &lt;p&gt;② finditer：从字符串任意位置查找，返回一个迭代器&lt;/p&gt;
 &lt;p&gt;两个方法基本类似，只不过一个是返回列表，一个是返回迭代器。我们知道列表是一次性生成在内存中，而迭代器是需要使用时一点一点生成出来的，内存使用更优。&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;a功能测试b，功能测试b&amp;#39;
-pattern = r&amp;#39;功能测试b&amp;#39;
-# 查找所有匹配项，返回一个list
-print(&amp;#39;findall:&amp;#39;, re.findall(pattern, text))
-# 查找所有匹配项，返回一个迭代器
-print(&amp;#39;finditer:&amp;#39;,  list(re.finditer(pattern, text)))
+text=&amp;#39;a功能测试b，功能测试b&amp;#39;
+pattern=r&amp;#39;功能测试b&amp;#39;
+#查找所有匹配项，返回一个list
+print(&amp;#39;findall:&amp;#39;,re.findall(pattern,text))
+#查找所有匹配项，返回一个迭代器
+print(&amp;#39;finditer:&amp;#39;,list(re.finditer(pattern,text)))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6926,13 +6926,13 @@ print(&amp;#39;finditer:&amp;#39;,  list(re.finditer(pattern, text)))
 
 &lt;p&gt;如果可能存在大量的匹配项的话，建议使用finditer函数，一般情况使用findall函数基本没啥影响。&lt;/p&gt;
 &lt;h4 id=&#34;3&#34;&gt;3. 分割&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;re.split(pattern, string, maxsplit=0, flags=0)&lt;/code&gt; 函数：用 pattern 分开string ， maxsplit表示最多进行分割次数， flags表示模式，就是上面我们讲解的常量！&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;p&gt;&lt;code&gt;re.split(pattern, string, maxsplit=0, flags=0)&lt;/code&gt;函数：用pattern分开string ，maxsplit表示最多进行分割次数，flags表示模式，就是上面我们讲解的常量！&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;a功能测试b，b功能测试b，c功能测试b&amp;#39;
-pattern = r&amp;#39;，&amp;#39;
-# 正则切割
-print(&amp;#39;split:&amp;#39;, re.split(pattern, text, maxsplit=1, flags=re.IGNORECASE))
+text=&amp;#39;a功能测试b，b功能测试b，c功能测试b&amp;#39;
+pattern=r&amp;#39;，&amp;#39;
+#正则切割
+print(&amp;#39;split:&amp;#39;,re.split(pattern,text,maxsplit=1,flags=re.IGNORECASE))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6941,47 +6941,47 @@ print(&amp;#39;split:&amp;#39;, re.split(pattern, text, maxsplit=1, flags=re
 
 &lt;p&gt;注意：str模块也有一个 split函数 ，str.split函数功能简单，不支持正则分割，而re.split支持正则。大数据量下re.split花费的时间比str.split少。所以在不需要正则支持且数据量和数次不多的情况下使用str.split函数更合适，反之则使用re.split函数。&lt;/p&gt;
 &lt;h4 id=&#34;4&#34;&gt;4. 替换&lt;/h4&gt;
-&lt;p&gt;替换主要有sub函数 与 subn函数，他们功能类似！&lt;/p&gt;
+&lt;p&gt;替换主要有sub函数与subn函数，他们功能类似！&lt;/p&gt;
 &lt;p&gt;先来看看sub函数的用法：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;re.sub(pattern, repl, string, count=0, flags=0)&lt;/code&gt; 函数参数讲解：repl替换掉string中被pattern匹配的字符，count表示最大替换次数，flags表示正则表达式的常量。&lt;/p&gt;
-&lt;p&gt;值得注意的是：sub函数中的入参：repl替换内容既可以是字符串，也可以是一个函数！ 如果repl为函数时，只能有一个入参：Match匹配对象。&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;p&gt;&lt;code&gt;re.sub(pattern, repl, string, count=0, flags=0)&lt;/code&gt;函数参数讲解：repl替换掉string中被pattern匹配的字符，count表示最大替换次数，flags表示正则表达式的常量。&lt;/p&gt;
+&lt;p&gt;值得注意的是：sub函数中的入参：repl替换内容既可以是字符串，也可以是一个函数！如果repl为函数时，只能有一个入参：Match匹配对象。&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;1功能测试b，2功能测试b，3功能测试b&amp;#39;
-pattern = r&amp;#39;, &amp;#39;
-# repl为字符串
-repl = r&amp;#39;、&amp;#39;
-# 替换
-print(&amp;#39;sub-repl为字符串:&amp;#39;, re.sub(pattern, repl, text, count=2, flags=re.IGNORECASE))
+text=&amp;#39;1功能测试b，2功能测试b，3功能测试b&amp;#39;
+pattern=r&amp;#39;,&amp;#39;
+#repl为字符串
+repl=r&amp;#39;、&amp;#39;
+#替换
+print(&amp;#39;sub-repl为字符串:&amp;#39;,re.sub(pattern,repl,text,count=2,flags=re.IGNORECASE))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sub-repl为字符串: 1功能测试b、2功能测试b、3功能测试b
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;re&lt;/span&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;importre&lt;/span&gt;
 
-&lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1功能测试b，2功能测试b。3功能测试b&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;，|。&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-# &lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt;为函数
-&lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;matchobj&lt;/span&gt;: &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;matchobj&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-# 替换
-&lt;span class=&#34;nv&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;sub-repl为字符串:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;re&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;sub&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;pattern&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;re&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1功能测试b，2功能测试b。3功能测试b&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;，|。&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+#&lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt;为函数
+&lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lambdamatchobj&lt;/span&gt;:&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ifmatchobj&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;、&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+#替换
+&lt;span class=&#34;nv&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;sub-repl为字符串:&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;re&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;sub&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;pattern&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;repl&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;re&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;IGNORECASE&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sub-repl为字符串: 1功能测试b、2功能测试b 3功能测试b
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code&gt;re.subn(pattern, repl, string, count=0, flags=0)&lt;/code&gt; 函数与 re.sub函数 功能一致，只不过返回一个元组 (字符串, 替换次数)。&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;p&gt;&lt;code&gt;re.subn(pattern, repl, string, count=0, flags=0)&lt;/code&gt;函数与re.sub函数功能一致，只不过返回一个元组 (字符串, 替换次数)。&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;1功能测试b，2功能测试b，3功能测试b&amp;#39;
-pattern = r&amp;#39;，&amp;#39;
-# repl为字符串
-repl = r&amp;#39;、&amp;#39;
-# 替换
-print(&amp;#39;sub-repl为字符串:&amp;#39;, re.subn(pattern, repl, text, count=2, flags=re.IGNORECASE))
+text=&amp;#39;1功能测试b，2功能测试b，3功能测试b&amp;#39;
+pattern=r&amp;#39;，&amp;#39;
+#repl为字符串
+repl=r&amp;#39;、&amp;#39;
+#替换
+print(&amp;#39;sub-repl为字符串:&amp;#39;,re.subn(pattern,repl,text,count=2,flags=re.IGNORECASE))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -6989,41 +6989,41 @@ print(&amp;#39;sub-repl为字符串:&amp;#39;, re.subn(pattern, repl, text, 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;5&#34;&gt;5. 编译正则对象&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;compile&lt;/code&gt;函数 与 &lt;code&gt;template&lt;/code&gt;函数 将正则表达式的样式编译为一个正则表达式对象（正则对象Pattern），这个对象与re模块有同样的正则函数。&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;p&gt;&lt;code&gt;compile&lt;/code&gt;函数与&lt;code&gt;template&lt;/code&gt;函数将正则表达式的样式编译为一个正则表达式对象（正则对象Pattern），这个对象与re模块有同样的正则函数。&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;a功能测试b，功能测试b&amp;#39;
-pattern = r&amp;#39;功能测试b&amp;#39;
-pattern_obj = re.compile(pattern)
-# 查找任意位置
-print(&amp;#39;pattern_obj.search:&amp;#39;, pattern_obj.search(text).group())
+text=&amp;#39;a功能测试b，功能测试b&amp;#39;
+pattern=r&amp;#39;功能测试b&amp;#39;
+pattern_obj=re.compile(pattern)
+#查找任意位置
+print(&amp;#39;pattern_obj.search:&amp;#39;,pattern_obj.search(text).group())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pattern_obj.search: 功能测试b
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;而template函数 与 compile函数 类似，只不过是增加了我们之前说的re.TEMPLATE 模式，我们可以看看源码。&lt;/p&gt;
+&lt;p&gt;而template函数与compile函数类似，只不过是增加了我们之前说的re.TEMPLATE模式，我们可以看看源码。&lt;/p&gt;
 &lt;h4 id=&#34;6&#34;&gt;6. 其他&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;re.escape(pattern)&lt;/code&gt; 可以转义正则表达式中具有特殊含义的字符，比如：. 或者 * ，举个实际的案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;p&gt;&lt;code&gt;re.escape(pattern)&lt;/code&gt;可以转义正则表达式中具有特殊含义的字符，比如：.或者*，举个实际的案例：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;功.能测*试&amp;#39;
-pattern = r&amp;#39;功\.能测\*试&amp;#39;
-&lt;span class=&#34;gh&#34;&gt;#&lt;/span&gt; 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
+text=&amp;#39;功.能测*试&amp;#39;
+pattern=r&amp;#39;功\.能测\*试&amp;#39;
+&lt;span class=&#34;gh&#34;&gt;#&lt;/span&gt;查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nt&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Match&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class=&#34;nt&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;importre&lt;/span&gt;
 
-&lt;span class=&#34;nt&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;escape&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;查找任意位置&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;转义后的正则：&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;search:&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;escape&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;查找任意位置&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;转义后的正则：&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;search:&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pattern&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -7031,18 +7031,18 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;span class=&#34;nt&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Match&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;match&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;功.能测*试&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code&gt;re.escape(pattern)&lt;/code&gt; 看似非常好用省去了我们自己加转义，但是使用它很容易出现转义错误的问题，所以并不建议使用它转义，而建议大家自己手动转义！&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;re.purge()&lt;/code&gt; 函数作用就是清除 正则表达式缓存，具体有什么缓存呢？我们来看看源码就知道它背地里干了什么：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;re.escape(pattern)&lt;/code&gt;看似非常好用省去了我们自己加转义，但是使用它很容易出现转义错误的问题，所以并不建议使用它转义，而建议大家自己手动转义！&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;re.purge()&lt;/code&gt;函数作用就是清除正则表达式缓存，具体有什么缓存呢？我们来看看源码就知道它背地里干了什么：&lt;/p&gt;
 &lt;p&gt;看方法大概是清除缓存吧，我们再来看看具体的案例：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;功.能测*试&amp;#39;
-pattern = r&amp;#39;功\.能测\*试&amp;#39;
-&lt;span class=&#34;gh&#34;&gt;#&lt;/span&gt; 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
-print(&amp;#39;_cache:&amp;#39;, re._cache)
+text=&amp;#39;功.能测*试&amp;#39;
+pattern=r&amp;#39;功\.能测\*试&amp;#39;
+&lt;span class=&#34;gh&#34;&gt;#&lt;/span&gt;查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text))
+print(&amp;#39;_cache:&amp;#39;,re._cache)
 re.purge()
-print(&amp;#39;_cache:&amp;#39;, re._cache)
+print(&amp;#39;_cache:&amp;#39;,re._cache)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -7055,12 +7055,12 @@ print(&amp;#39;_cache:&amp;#39;, re._cache)
 &lt;h3 id=&#34;re_3&#34;&gt;五、re模块异常&lt;/h3&gt;
 &lt;p&gt;re模块还包含了一个正则表达式的编译错误，当我们给出的正则表达式是一个无效的表达式（就是表达式本身有问题）时，就会raise一个异常！&lt;/p&gt;
 &lt;p&gt;我们来看看具体的案例吧：&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;import re
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;importre
 
-text = &amp;#39;功.能测*试&amp;#39;
-pattern = r&amp;#39;(测试))&amp;#39;
-# 查找任意位置
-print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
+text=&amp;#39;功.能测*试&amp;#39;
+pattern=r&amp;#39;(测试))&amp;#39;
+#查找任意位置
+print(&amp;#39;search:&amp;#39;,re.search(pattern,text))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;执行结果：&lt;/p&gt;
@@ -7084,17 +7084,16 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;Python 正则表达式知识基本讲解完毕，最后稍微给大家提一提需要注意的点。&lt;/p&gt;
 &lt;h4 id=&#34;1_2&#34;&gt;1. 字节串与字符串&lt;/h4&gt;
 &lt;p&gt;模式和被搜索的字符串既可以是Unicode字符串(str)，也可以是8位字节串(bytes)。但是，Unicode字符串与8位字节串不能混用！&lt;/p&gt;
-&lt;h4 id=&#34;2_2&#34;&gt;2.&lt;/h4&gt;
-&lt;p&gt;r 的作用
-正则表达式使用反斜杠（\）来表示特殊形式，或者把特殊字符转义成普通字符。&lt;/p&gt;
+&lt;h4 id=&#34;2-r&#34;&gt;2. r 的作用&lt;/h4&gt;
+&lt;p&gt;正则表达式使用反斜杠（\）来表示特殊形式，或者把特殊字符转义成普通字符。&lt;/p&gt;
 &lt;p&gt;而反斜杠在普通的 Python 字符串里也有相同的作用，所以就产生了冲突。&lt;/p&gt;
 &lt;p&gt;解决办法是对于正则表达式样式使用 Python 的原始字符串表示法；在带有‘r’前缀的字符串字面值中，反斜杠不必做任何特殊处理。&lt;/p&gt;
 &lt;h4 id=&#34;3_1&#34;&gt;3.正则查找函数 返回匹配对象&lt;/h4&gt;
-&lt;p&gt;查找一个匹配项（search、match、fullmatch）的函数返回值都是一个匹配对象Match ，需要通过match.group()获取匹配值，这个很容易忘记。&lt;/p&gt;
-&lt;p&gt;另外还需要注意：match.group() 与match.groups() 函数的差别！&lt;/p&gt;
+&lt;p&gt;查找一个匹配项（search、match、fullmatch）的函数返回值都是一个匹配对象Match，需要通过match.group()获取匹配值，这个很容易忘记。&lt;/p&gt;
+&lt;p&gt;另外还需要注意：match.group()与match.groups()函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
-&lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 re.compile(pattern)函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+&lt;p&gt;如果要重复使用某个正则表达式，推荐先使用re.compile(pattern)函数返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/Python正则表达式.html</link>  
       <guid isPermaLink="true">测试窝/post/Python正则表达式.html</guid>
        
@@ -8184,7 +8183,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/nose简介.html</link>  
       <guid isPermaLink="true">测试窝/post/nose简介.html</guid>
        
@@ -9205,7 +9204,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">测试窝/post/Python自动化之unittest.html</guid>
        
@@ -9227,7 +9226,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/debian+gnome安装过程.html</link>  
       <guid isPermaLink="true">测试窝/post/debian+gnome安装过程.html</guid>
        
@@ -9384,7 +9383,7 @@ reboot
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">测试窝/post/debian+i3安装过程.html</guid>
        
@@ -9604,7 +9603,7 @@ WALLPAPER=/usr/share/backgrounds/background.png
 &lt;ul&gt;
 &lt;li&gt;安装xfce4-docklike-plugin合并启动器和窗口管理器&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/debian+xfce安装过程.html</link>  
       <guid isPermaLink="true">测试窝/post/debian+xfce安装过程.html</guid>
        
@@ -9805,7 +9804,7 @@ WALLPAPER=/usr/share/backgrounds/background.png
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-26 17:35:30</pubDate>  
+      <pubDate>2022-04-26 17:41:17</pubDate>  
       <link>测试窝/post/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">测试窝/post/debian命令apt和dpkg用法.html</guid>
        

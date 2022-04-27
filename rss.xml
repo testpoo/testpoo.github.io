@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-04-27 15:07:22</pubDate>  
-    <lastBuildDate>2022-04-27 15:07:22</lastBuildDate>  
+    <pubDate>2022-04-27 15:11:17</pubDate>  
+    <lastBuildDate>2022-04-27 15:11:17</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -52,7 +52,7 @@
 &lt;li&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -1176,7 +1176,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -1949,7 +1949,7 @@ echo $?
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -2336,7 +2336,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker container cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;containID&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;/path/to/file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -4218,7 +4218,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -5549,7 +5549,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -6370,7 +6370,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -7062,7 +7062,7 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;另外还需要注意：match.group() 与match.groups() 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 re.compile(pattern)函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -8268,7 +8268,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -9275,7 +9275,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -9295,7 +9295,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/debian+gnome安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome安装过程.html</guid>
        
@@ -9464,7 +9464,7 @@ reboot
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -9683,7 +9683,7 @@ WALLPAPER=/usr/share/backgrounds/background.png
 &lt;ul&gt;
 &lt;li&gt;安装xfce4-docklike-plugin合并启动器和窗口管理器&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/debian+xfce安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce安装过程.html</guid>
        
@@ -9995,7 +9995,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alter USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -10470,7 +10470,7 @@ except IndexError as e:
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -10975,7 +10975,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -11024,7 +11024,7 @@ sqlite&amp;gt;pragmatable_info(&amp;#39;table_name&amp;#39;)
 # 查看指定表字段【column】类型，括号内可不输引号
 sqlite&amp;gt;selecttypeof(&amp;#39;column&amp;#39;)fromtable_name;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/SQLite基本操作.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/SQLite基本操作.html</guid>
        
@@ -11378,7 +11378,7 @@ shenyi = 123456
 &lt;span class=&#34;c&#34;&gt;保存未加密的密码(yes/no)? yes&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;取出版本 0。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -11426,7 +11426,7 @@ shenyi = 123456
 &lt;p&gt;钉钉: &lt;a href=&#34;https://alidocs.dingtalk.com/i/p/nb9XJlJ7QbxN8GyA/docs/ROGpvEna5YQWmaPgQ156W4ykmK3zoB27&#34;&gt;https://alidocs.dingtalk.com/i/p/nb9XJlJ7QbxN8GyA/docs/ROGpvEna5YQWmaPgQ156W4ykmK3zoB27&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/Debain必备软件.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain必备软件.html</guid>
        
@@ -11600,7 +11600,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;导出特定表的结构&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mysqldump&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uroot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B数据库名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;tab&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;le&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -11804,7 +11804,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -11948,7 +11948,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -12147,7 +12147,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -12198,7 +12198,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-27 15:07:22</pubDate>  
+      <pubDate>2022-04-27 15:11:17</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

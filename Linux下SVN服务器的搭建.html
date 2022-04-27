@@ -57,11 +57,11 @@
             
             <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span><span>2020-04-03&nbsp;&nbsp;共14659个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/SQLite基本操作.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作</span><span>2020-01-02&nbsp;&nbsp;共992个字</span></a></li>
+            <li><a href="https://testpoo.github.io/SQLite基本操作.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作</span><span>2020-01-02&nbsp;&nbsp;共1027个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共63303个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共63734个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共6345个字</span></a></li>
+            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共7058个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span><span>1999-12-31&nbsp;&nbsp;共1550个字</span></a></li>
             
@@ -71,9 +71,23 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Linux下SVN服务器的搭建</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-27 15:11:17</span></div>
+      <div class="header"><span>Linux下SVN服务器的搭建</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-27 15:19:02</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
-      <div class="posts"><h3 id="ubuntusvn">Ubuntu下SVN服务器的配置及搭建</h3>
+      <div class="posts"><div class="toc">
+<ul>
+<li><a href="#ubuntusvn">Ubuntu下SVN服务器的配置及搭建</a><ul>
+<li><a href="#svn">检查是否安装SVN</a></li>
+<li><a href="#svnsvn">配置svn并启动svn服务</a></li>
+<li><a href="#svn_1">检测svn服务是否正常启动</a></li>
+<li><a href="#svnadminsvn">使用svnadmin建立svn项目版本库</a></li>
+<li><a href="#testdoc">配置testdoc版本可的权限</a></li>
+<li><a href="#svn_2">为Svn版本库创建用户并授权访问指定项目版本库</a></li>
+<li><a href="#svn_3">重新启动svn服务进行验证</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="ubuntusvn">Ubuntu下SVN服务器的配置及搭建</h3>
 <p>SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。互联网上很多版本控制服务已从CVS迁移到Subversion。说得简单一点SVN就是用于多个人共同开发同一个项目，共用资源的目的。</p>
 <h4 id="svn">检查是否安装SVN</h4>
 <div class="codehilite"><pre><span></span><code>dpkg --get-selections|grep &#39;subversion&#39;

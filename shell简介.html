@@ -4,12 +4,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>测试窝</title>
+    <title>测试铺</title>
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
     <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
-
+    <style>
+      pre>code {
+        white-space: pre-line;
+      }
+    </style>>
   </head>
 
   <body>
@@ -18,7 +22,7 @@
         <div class="title">
           <a href="https://testpoo.github.io">
             <img src="https://testpoo.github.io/themes/img/title.jpg">
-            <div class="linkbutton testpoo">测试窝</div>
+            <div class="linkbutton testpoo">测试铺</div>
           </a>
         </div>
         <div class="scrollheight">
@@ -30,19 +34,11 @@
             
             <li><a href="https://testpoo.github.io/shell简介.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
             
-            <li><a href="https://testpoo.github.io/Docker入门教程.html"><label style="color: #ffba48"></label>&nbsp;docker</a></li>
-            
-            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><label style="color: #ffba48"></label>&nbsp;性能测试</a></li>
+            <li><a href="https://testpoo.github.io/关于我.html"><label style="color: #ffba48"></label>&nbsp;笔记</a></li>
             
             <li><a href="https://testpoo.github.io/python标准异常.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
             
-            <li><a href="https://testpoo.github.io/Git简介.html"><label style="color: #ffba48"></label>&nbsp;git</a></li>
-            
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
-            
-            <li><a href="https://testpoo.github.io/SQLite基本操作.html"><label style="color: #ffba48"></label>&nbsp;sqlite</a></li>
-            
-            <li><a href="https://testpoo.github.io/svn命令.html"><label style="color: #ffba48"></label>&nbsp;svn</a></li>
             
           </ul>
         </div>
@@ -53,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span><span>2022-04-18&nbsp;&nbsp;共28891个字</span></a></li>
+            <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span><span>2022-04-18&nbsp;&nbsp;共24867个字</span></a></li>
             
           </ul>
         </div>
@@ -61,7 +57,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>shell简介</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-26 23:03:37</span></div>
+      <div class="header"><span>shell简介</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-27 15:07:22</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -310,15 +306,17 @@ cdeveloper
 </code></pre></div>
 
 <h4 id="2">2. 预定义变量</h4>
-<p>预定义变量常用来获取命令行的输入，有下面这些：
-1. $0: 脚本文件名
-2. $1-9: 第1-9命令行参数名
-3. $#: 命令行参数个数
-4. $@: 所有命令行参数
-5. $*: 所有命令行参数
-6. $?: 前一个命令的退出状态，可用于获取函数返回值
-7. \$$: 执行的进程ID
-8. $!: 后台运行的最后一个进程的ID</p>
+<p>预定义变量常用来获取命令行的输入，有下面这些：</p>
+<ol>
+<li>$0: 脚本文件名</li>
+<li>$1-9: 第1-9命令行参数名</li>
+<li>$#: 命令行参数个数</li>
+<li>$@: 所有命令行参数</li>
+<li>$*: 所有命令行参数</li>
+<li>$?: 前一个命令的退出状态，可用于获取函数返回值</li>
+<li>\$$: 执行的进程ID</li>
+<li>$!: 后台运行的最后一个进程的ID</li>
+</ol>
 <p>一个例子：</p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
@@ -334,40 +332,42 @@ cdeveloper
 </code></pre></div>
 
 <p>执行<code>./hello.sh 1 2 3 4 5</code>的结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="w"> </span><span class="p">$</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code>print $
 
-<span class="o">#</span><span class="w"> </span>程序名<span class="w"></span>
-<span class="p">$</span><span class="mi">0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">./</span><span class="nv">hello</span><span class="o">.</span><span class="nv">sh</span><span class="w"></span>
+# 程序名
+$0 = ./hello.sh
 
-<span class="o">#</span><span class="w"> </span>第一个参数<span class="w"></span>
-<span class="p">$</span><span class="mi">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+# 第一个参数
+$1 = 1
 
-<span class="o">#</span><span class="w"> </span>第二个参数<span class="w"></span>
-<span class="p">$</span><span class="mi">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+# 第二个参数
+$2 = 2
 
-<span class="o">#</span><span class="w"> </span>一共有<span class="mi">5</span>个参数<span class="w"></span>
-<span class="p">$</span><span class="o">#</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+# 一共有5个参数
+$# = 5
 
-<span class="o">#</span><span class="w"> </span>打印出所有参数<span class="w"></span>
-<span class="p">$</span><span class="o">@</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+# 打印出所有参数
+$@ = 1 2 3 4 5
 
-<span class="o">#</span><span class="w"> </span>打印出所有参数<span class="w"></span>
-<span class="p">$</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+# 打印出所有参数
+$* = 1 2 3 4 5
 
-<span class="o">#</span><span class="w"> </span>进程<span class="nv">ID</span><span class="w"></span>
-<span class="p">$$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">854</span><span class="w"></span>
+# 进程ID
+$$ = 854
 
-<span class="o">#</span><span class="w"> </span>之前没有执行其他命令或者函数<span class="w"></span>
-<span class="p">$</span>?<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+# 之前没有执行其他命令或者函数
+$? = 0
 </code></pre></div>
 
 <h4 id="3">3. 环境变量</h4>
-<p>环境变量默认存在，常用的有下面这几个：
-1. HOME：用户主目录
-2. PATH：系统环境变量PATH
-3. TERM：当前终端
-4. UID: 当前用户ID
-5. PWD：当前工作目录，绝对路径</p>
+<p>环境变量默认存在，常用的有下面这几个：</p>
+<ol>
+<li>HOME：用户主目录</li>
+<li>PATH：系统环境变量PATH</li>
+<li>TERM：当前终端</li>
+<li>UID: 当前用户ID</li>
+<li>PWD：当前工作目录，绝对路径</li>
+</ol>
 <p>还是看例子：</p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
@@ -400,30 +400,36 @@ xterm
 </code></pre></div>
 
 <h4 id="4">4.字符串变量</h4>
-<p>1）单引号
-- 单引号变量var='test'，只能原样输出，变量无效
-- 单引号不能出现一个单独的单引号，转义也不可以</p>
-<p>2）双引号
-- 双引号变量<code>var="my name is ${name}"</code>，变量有效
-- 可以出现转义符</p>
-<p>3）拼接字符串
-- 中间无任何+,之类的字符
-- <code>name="this is"" my name";name="this is my name";name="this" is "my name"等效</code>
-- <code>name='this is'' my name'; name='this is my name'; name='this' is 'my name' 等效</code></p>
-<p>4）获取字符串长度
-- 在${}中使用“#”获取长度</p>
-<div class="codehilite"><pre><span></span><code>  name=&quot;test&quot;;
-  echo <span class="cp">${</span><span class="c1">#name</span><span class="cp">}</span>; # 输出为4
-</code></pre></div>
-
-<p>5）提取子字符串
-- 1:4 从第2个开始 往后截取4个字符
-- ::4 从第一个字符开始 往后截取4个字符</p>
-<div class="codehilite"><pre><span></span><code>  name=&quot;this is my name&quot;;
-  echo <span class="cp">${</span><span class="n">name</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="cp">}</span> #输出 is i
-  echo <span class="cp">${</span><span class="n">name</span><span class="p">::</span><span class="mi">4</span><span class="cp">}</span> #输出 this
-</code></pre></div>
-
+<p>1）单引号</p>
+<ul>
+<li>单引号变量var='test'，只能原样输出，变量无效</li>
+<li>单引号不能出现一个单独的单引号，转义也不可以</li>
+</ul>
+<p>2）双引号</p>
+<ul>
+<li>双引号变量<code>var="my name is ${name}"</code>，变量有效</li>
+<li>可以出现转义符</li>
+</ul>
+<p>3）拼接字符串</p>
+<ul>
+<li>中间无任何+,之类的字符</li>
+<li><code>name="this is"" my name";name="this is my name";name="this" is "my name"等效</code></li>
+<li><code>name='this is'' my name'; name='this is my name'; name='this' is 'my name' 等效</code></li>
+</ul>
+<p>4）获取字符串长度</p>
+<ul>
+<li>在${}中使用“#”获取长度</li>
+</ul>
+<p><code>name="test";
+  echo ${#name}; # 输出为4</code></p>
+<p>5）提取子字符串</p>
+<ul>
+<li>1:4 从第2个开始 往后截取4个字符</li>
+<li>::4 从第一个字符开始 往后截取4个字符</li>
+</ul>
+<p><code>name="this is my name";
+  echo ${name:1:4} #输出 is i
+  echo ${name::4} #输出 this</code></p>
 <h3 id="5">5. 数组</h3>
 <p>bash只支持一维数组，不支持多维数组</p>
 <ul>
@@ -432,27 +438,27 @@ xterm
 <li>赋值数组元素：array_name[0]="zhao";</li>
 <li>获取数组元素：</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>  array_name[0]=&quot;li&quot;
-  array_name[3]=&quot;zhang&quot;
-  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;li&quot;
-  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="cp">}</span> # 输出&quot; &quot;
-  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;zhang&quot;
-  echo <span class="cp">${</span><span class="n">array_name</span><span class="p">[</span><span class="o">@</span><span class="p">]</span><span class="cp">}</span> # 输出&quot;li zhang&quot; 输出数组所有元素，没有元素的下标省略
-  取得元素个数：<span class="cp">${</span><span class="c1">#array_name[@]</span><span class="cp">}</span> 或者 <span class="cp">${</span><span class="c1">#array_name</span><span class="cp">}</span>
-  取得单个元素长度：<span class="cp">${</span><span class="c1">#array_name[1]</span><span class="cp">}</span>
-</code></pre></div>
-
+<p><code>array_name[0]="li"
+  array_name[3]="zhang"
+  echo ${array_name[0]} # 输出"li"
+  echo ${array_name[1]} # 输出" "
+  echo ${array_name[3]} # 输出"zhang"
+  echo ${array_name[@]} # 输出"li zhang" 输出数组所有元素，没有元素的下标省略
+  取得元素个数：${#array_name[@]} 或者 ${#array_name}
+  取得单个元素长度：${#array_name[1]}</code></p>
 <p>Shell变量就介绍到这里，下面来介绍Shell的变量运算。</p>
 <h3 id="shell_4">Shell运算</h3>
 <h4 id="1_1">1. 算数运算</h4>
 <blockquote>
 <p>+ 、-、*、\ ： 乘号前必须加\进行转义才可以进行乘法运算</p>
 </blockquote>
-<p>我们经常需要在Shell脚本中计算，掌握基本的运算方法很有必要，下面就是4种比较常见的运算方法，功能都是将m + 1:
-1. m=$[m+1]
-2. m=`expr $m + 1` # 用``字符包起来
-3. let m=m+1
-4. m=$(( m + 1 ))</p>
+<p>我们经常需要在Shell脚本中计算，掌握基本的运算方法很有必要，下面就是4种比较常见的运算方法，功能都是将m + 1:</p>
+<ol>
+<li>m=$[m+1]</li>
+<li>m=`expr $m + 1` # 用``字符包起来</li>
+<li>let m=m+1</li>
+<li>m=$(( m + 1 ))</li>
+</ol>
 <p>来看一个实际的例子：</p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
@@ -472,10 +478,10 @@ xterm
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
-<span class="mf">4</span><span class="w"></span>
-<span class="mf">5</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
 </code></pre></div>
 
 <h4 id="2_1">2. 数字关系运算符</h4>
@@ -492,20 +498,24 @@ xterm
 </ul>
 <h4 id="3_1">3. 字符串运算符</h4>
 <blockquote>
-<p>下表列出了常用的字符串运算符，假定变量 a 为 "abc"，变量 b 为 "efg"：
-- = ：检测两个字符串是否相等，相等返回 true。 [ $a = $b ] 返回 false。
-- != ：检测两个字符串是否相等，不相等返回 true。 [ $a != $b ] 返回 true。
-- -z ：检测字符串长度是否为0，为0返回 true。 [ -z $a ] 返回 false。
-- -n ：检测字符串长度是否为0，不为0返回 true。 [ -n "$a" ] 返回 true。
-- $ ：检测字符串是否为空，不为空返回 true。 [ $a ] 返回 true。</p>
+<p>下表列出了常用的字符串运算符，假定变量 a 为 "abc"，变量 b 为 "efg"：</p>
 </blockquote>
+<ul>
+<li>= ：检测两个字符串是否相等，相等返回 true。 [ $a = $b ] 返回 false。</li>
+<li>!= ：检测两个字符串是否相等，不相等返回 true。 [ $a != $b ] 返回 true。</li>
+<li>-z ：检测字符串长度是否为0，为0返回 true。 [ -z $a ] 返回 false。</li>
+<li>-n ：检测字符串长度是否为0，不为0返回 true。 [ -n "$a" ] 返回 true。</li>
+<li>$ ：检测字符串是否为空，不为空返回 true。 [ $a ] 返回 true。</li>
+</ul>
 <h4 id="4_1">4. 布尔运算符</h4>
 <blockquote>
-<p>下表列出了常用的布尔运算符，假定变量 a 为 10，变量 b 为 20：
-- ! ：非运算，表达式为 true 则返回 false，否则返回 true。 [ ! false ] 返回 true。
-- -o ：或运算，有一个表达式为 true 则返回 true。 [ $a -lt 20 -o $b -gt 100 ] 返回 true。
-- -a ：与运算，两个表达式都为 true 才返回 true。 [ $a -lt 20 -a $b -gt 100 ] 返回 false。</p>
+<p>下表列出了常用的布尔运算符，假定变量 a 为 10，变量 b 为 20：</p>
 </blockquote>
+<ul>
+<li>! ：非运算，表达式为 true 则返回 false，否则返回 true。 [ ! false ] 返回 true。</li>
+<li>-o ：或运算，有一个表达式为 true 则返回 true。 [ $a -lt 20 -o $b -gt 100 ] 返回 true。</li>
+<li>-a ：与运算，两个表达式都为 true 才返回 true。 [ $a -lt 20 -a $b -gt 100 ] 返回 false。</li>
+</ul>
 <h4 id="5_1">5. 逻辑运算符</h4>
 <blockquote>
 <p>以下介绍 Shell 的逻辑运算符，假定变量 a 为 10，变量 b 为 20:</p>
@@ -600,12 +610,12 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
-<span class="mf">2</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
-<span class="mf">1</span><span class="w"></span>
-<span class="mf">2</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
 </code></pre></div>
 
 <h4 id="4-while">4. while 循环</h4>
@@ -624,15 +634,15 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
-<span class="mf">2</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
-<span class="mf">4</span><span class="w"></span>
-<span class="mf">5</span><span class="w"></span>
-<span class="mf">6</span><span class="w"></span>
-<span class="mf">7</span><span class="w"></span>
-<span class="mf">8</span><span class="w"></span>
-<span class="mf">9</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
+<span class="mf">6</span>
+<span class="mf">7</span>
+<span class="mf">8</span>
+<span class="mf">9</span>
 </code></pre></div>
 
 <h4 id="5until">5.until 循环</h4>
@@ -650,12 +660,12 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">0</span><span class="w"></span>
-<span class="mf">1</span><span class="w"></span>
-<span class="mf">2</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
-<span class="mf">4</span><span class="w"></span>
-<span class="mf">5</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+<span class="mf">5</span>
 </code></pre></div>
 
 <h4 id="6-break">6. break</h4>
@@ -675,7 +685,7 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
 </code></pre></div>
 
 <h4 id="7-continue">7. continue</h4>
@@ -695,8 +705,8 @@ other
 </code></pre></div>
 
 <p>运行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="w"></span>
-<span class="mf">3</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">3</span>
 </code></pre></div>
 
 <p>下面介绍 Shell 编程中比较重要的函数，好像每种编程语言的函数都很重要。</p>
@@ -804,20 +814,20 @@ echo $?
 
 <p>其中<strong>带有 <code>+</code> 表示的是 Shell 调试器的输出，不带 <code>+</code> 表示我们程序的输出。</strong></p>
 <h3 id="shell_7">Shell 易错点</h3>
-<p>这里我总结了一些初学 Shell 编程容易犯的错误，大多都是语法错误：
-1. <code>[]</code> 内不能嵌套 <code>()</code>，可以嵌套 <code>[]</code>
-2. <code>$[ val + 1 ]</code> 是变量加 1 的常用方法
-3. <code>[]</code> 在测试或者计算中里面的内容最好都加空格
-4. 单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号
-5. 一定要注意语句的格式，例如缩进</p></div>
+<p>这里我总结了一些初学 Shell 编程容易犯的错误，大多都是语法错误：</p>
+<ol>
+<li><code>[]</code> 内不能嵌套 <code>()</code>，可以嵌套 <code>[]</code></li>
+<li><code>$[ val + 1 ]</code> 是变量加 1 的常用方法</li>
+<li><code>[]</code> 在测试或者计算中里面的内容最好都加空格</li>
+<li>单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号</li>
+<li>一定要注意语句的格式，例如缩进</li>
+</ol></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">
       <ul>
         
         <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
@@ -837,11 +847,17 @@ echo $?
         
         <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
-        
         <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/SQLite基本操作.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作</span></a></li>
         
@@ -849,13 +865,15 @@ echo $?
         
         <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span></a></li>
         
-        <li><a href="https://testpoo.github.io/svn命令.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
         
       </ul>
     </div>

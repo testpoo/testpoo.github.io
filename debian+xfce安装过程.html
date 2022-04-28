@@ -55,7 +55,7 @@
             
             <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-04-08&nbsp;&nbsp;共19561个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span><span>2019-11-14&nbsp;&nbsp;共1694个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span><span>2019-11-14&nbsp;&nbsp;共1238个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共7088个字</span></a></li>
             
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-27 16:02:32</span></div>
+      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 09:27:42</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -97,7 +97,7 @@
 <h3 id="1">1. 下载链接</h3>
 <p>https://www.debian.org/download</p>
 <h3 id="2">2. 下载驱动</h3>
-<p>https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bullseye/current/firmware.zip</p>
+<p>https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</p>
 <h3 id="3-u">3. 制作自启动U盘</h3>
 <h3 id="4">4. 安装</h3>
 <h3 id="5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</h3>
@@ -112,14 +112,14 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 
 <h3 id="6">6. 修改源</h3>
 <div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bullseye</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bullseye-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bullseye-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bullseye-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bookworm-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free</span>
 </code></pre></div>
 
 <h3 id="7">7. 安装软件</h3>
@@ -153,7 +153,7 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 
 <h3 id="11">11. 缺少驱动</h3>
 <div class="codehilite"><pre><span></span><code># 添加驱动
-https://packages.debian.org/bullseye/firmware-misc-nonfree
+https://packages.debian.org/bookworm/firmware-misc-nonfree
 </code></pre></div>
 
 <h3 id="12">12. 图片路径</h3>

@@ -51,7 +51,7 @@
             
             <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span><span>2021-11-30&nbsp;&nbsp;共121649个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共41629个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共44727个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共206400个字</span></a></li>
             
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python正则表达式</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 09:58:56</span></div>
+      <div class="header"><span>Python正则表达式</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 11:08:15</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -243,12 +243,9 @@
 <td>\Z</td>
 <td>只匹配字符串尾。</td>
 </tr>
-<tr>
-<td>绝大部分Python的标准转义字符也被正则表达式分析器支持:</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<p>绝大部分Python的标准转义字符也被正则表达式分析器支持:</p>
 <div class="codehilite"><pre><span></span><code>\a，\b，\f，\n，\N，\r，\t，\u，\U，\v，\x，\\
 </code></pre></div>
 
@@ -296,16 +293,28 @@
 <p>re模块库源码：<a href="https://github.com/python/cpython/blob/3.8/Lib/re.py">https://github.com/python/cpython/blob/3.8/Lib/re.py</a></p>
 <h3 id="re_1">三、re模块常量</h3>
 <p>常量即表示不可更改的变量，一般用于做标记。</p>
-<p>re模块中有9个常量，如下图。</p>
-<div class="codehilite"><pre><span></span><code>int(re.I) == 2 == 21
-int(re.A) == 256 == 28
-int(re.L) == 4 == 22
-int(re.U) == 32 == 25
-int(re.M) == 8 == 23
-int(re.S) == 16 == 24
-int(re.X) == 64 == 26
-int(re.T) == 1 == 20
-int(re.DEBUG) == 128  = 27
+<p>re模块中有9个常量，如下。</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">ASCII</span> <span class="o">=</span> <span class="nv">A</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_ASCII</span> # <span class="nv">assume</span> <span class="nv">sacii</span> <span class="s2">&quot;</span><span class="s">locale</span><span class="s2">&quot;</span>
+<span class="nv">IGNORECASE</span> <span class="o">=</span> <span class="nv">I</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_IGNORECASE</span> # <span class="nv">ignore</span> <span class="nv">case</span>
+<span class="nv">LOCALE</span> <span class="o">=</span> <span class="nv">L</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_LOCALE</span> # <span class="nv">assume</span> <span class="nv">current</span> <span class="mi">8</span><span class="o">-</span><span class="nv">bit</span> <span class="nv">locale</span>
+<span class="nv">UNICODE</span> <span class="o">=</span> <span class="nv">U</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_UNICODE</span> # <span class="nv">assume</span> <span class="nv">unicode</span> <span class="s2">&quot;</span><span class="s">locale</span><span class="s2">&quot;</span>
+<span class="nv">MUJLTILINE</span> <span class="o">=</span> <span class="nv">M</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_MULTILINE</span> # <span class="nv">make</span> <span class="nv">anchors</span> <span class="nv">look</span> <span class="k">for</span> <span class="nv">newline</span>
+<span class="nv">DOTALL</span> <span class="o">=</span> <span class="nv">S</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_DOTALL</span> # <span class="nv">make</span> <span class="nv">dot</span> <span class="nv">match</span> <span class="nv">newline</span>
+<span class="nv">VERBOSE</span> <span class="o">=</span> <span class="nv">X</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_VERBOSE</span> # <span class="nv">ignore</span> <span class="nv">whitespace</span> <span class="nv">and</span> <span class="nv">comments</span>
+# <span class="nv">sre</span> <span class="nv">extensions</span> <span class="ss">(</span><span class="nv">experimental</span>, <span class="nv">don</span><span class="s1">&#39;</span><span class="s">t rely on these)</span>
+<span class="nv">TEMPLATE</span> <span class="o">=</span> <span class="nv">T</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_TEMPLATE</span> # <span class="nv">disable</span> <span class="nv">backtracking</span>
+<span class="nv">DEBUG</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_DEBUG</span> # <span class="nv">dump</span> <span class="nv">pattern</span> <span class="nv">after</span> <span class="nv">compilation</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>int(re.I) == 2 == 2^1^
+int(re.A) == 256 == 2^8^
+int(re.L) == 4 == 2^2^
+int(re.U) == 32 == 2^5^
+int(re.M) == 8 == 2^3^
+int(re.S) == 16 == 2^4^
+int(re.X) == 64 == 2^6^
+int(re.T) == 1 == 2^0^
+int(re.DEBUG) == 128  = 2^7^
 </code></pre></div>
 
 <p>下面我们来快速学习这些常量的作用及如何使用他们，按常用度排序！</p>
@@ -747,10 +756,10 @@ print(&#39;search:&#39;, re.search(pattern, text))
 <p>而反斜杠在普通的 Python 字符串里也有相同的作用，所以就产生了冲突。</p>
 <p>解决办法是对于正则表达式样式使用 Python 的原始字符串表示法；在带有‘r’前缀的字符串字面值中，反斜杠不必做任何特殊处理。</p>
 <h4 id="3_1">3.正则查找函数 返回匹配对象</h4>
-<p>查找一个匹配项（search、match、fullmatch）的函数返回值都是一个匹配对象Match ，需要通过match.group()获取匹配值，这个很容易忘记。</p>
-<p>另外还需要注意：match.group() 与match.groups() 函数的差别！</p>
+<p>查找一个匹配项<code>（search、match、fullmatch）</code>的函数返回值都是一个匹配对象Match ，需要通过match.group()获取匹配值，这个很容易忘记。</p>
+<p>另外还需要注意：<code>match.group()</code> 与<code>match.groups()</code> 函数的差别！</p>
 <h4 id="4_1">4.重复使用某个正则</h4>
-<p>如果要重复使用某个正则表达式，推荐先使用 re.compile(pattern)函数 返回一个正则对象，然后复用这个正则对象，这样会更快！</p></div>
+<p>如果要重复使用某个正则表达式，推荐先使用 <code>re.compile(pattern)</code>函数 返回一个正则对象，然后复用这个正则对象，这样会更快！</p></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

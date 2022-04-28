@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-04-28 09:58:56</pubDate>  
-    <lastBuildDate>2022-04-28 09:58:56</lastBuildDate>  
+    <pubDate>2022-04-28 11:08:15</pubDate>  
+    <lastBuildDate>2022-04-28 11:08:15</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -53,7 +53,7 @@
 &lt;li&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -1177,7 +1177,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -1950,7 +1950,7 @@ echo $?
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -2337,7 +2337,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker container cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;containID&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;/path/to/file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -4219,7 +4219,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -5550,7 +5550,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -6371,7 +6371,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -6555,12 +6555,9 @@ print(add(3, 5))
 &lt;td&gt;\Z&lt;/td&gt;
 &lt;td&gt;只匹配字符串尾。&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;绝大部分Python的标准转义字符也被正则表达式分析器支持:&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;绝大部分Python的标准转义字符也被正则表达式分析器支持:&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;\a，\b，\f，\n，\N，\r，\t，\u，\U，\v，\x，\\
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -6608,16 +6605,28 @@ print(add(3, 5))
 &lt;p&gt;re模块库源码：&lt;a href=&#34;https://github.com/python/cpython/blob/3.8/Lib/re.py&#34;&gt;https://github.com/python/cpython/blob/3.8/Lib/re.py&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;re_1&#34;&gt;三、re模块常量&lt;/h3&gt;
 &lt;p&gt;常量即表示不可更改的变量，一般用于做标记。&lt;/p&gt;
-&lt;p&gt;re模块中有9个常量，如下图。&lt;/p&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;int(re.I) == 2 == 21
-int(re.A) == 256 == 28
-int(re.L) == 4 == 22
-int(re.U) == 32 == 25
-int(re.M) == 8 == 23
-int(re.S) == 16 == 24
-int(re.X) == 64 == 26
-int(re.T) == 1 == 20
-int(re.DEBUG) == 128  = 27
+&lt;p&gt;re模块中有9个常量，如下。&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;ASCII&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_ASCII&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;assume&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sacii&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;locale&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IGNORECASE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_IGNORECASE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;ignore&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;case&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;LOCALE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;L&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_LOCALE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;assume&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;current&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;bit&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;locale&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;UNICODE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;U&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_UNICODE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;assume&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;unicode&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;locale&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;MUJLTILINE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;M&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_MULTILINE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;anchors&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;look&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;newline&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DOTALL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_DOTALL&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;dot&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;newline&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;VERBOSE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;X&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_VERBOSE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;ignore&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;whitespace&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;comments&lt;/span&gt;
+# &lt;span class=&#34;nv&#34;&gt;sre&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;extensions&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;experimental&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;don&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;t rely on these)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;TEMPLATE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_TEMPLATE&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;disable&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backtracking&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DEBUG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;sre_compile&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;SRE_FLAG_DEBUG&lt;/span&gt; # &lt;span class=&#34;nv&#34;&gt;dump&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;pattern&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;compilation&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;int(re.I) == 2 == 2^1^
+int(re.A) == 256 == 2^8^
+int(re.L) == 4 == 2^2^
+int(re.U) == 32 == 2^5^
+int(re.M) == 8 == 2^3^
+int(re.S) == 16 == 2^4^
+int(re.X) == 64 == 2^6^
+int(re.T) == 1 == 2^0^
+int(re.DEBUG) == 128  = 2^7^
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;下面我们来快速学习这些常量的作用及如何使用他们，按常用度排序！&lt;/p&gt;
@@ -7059,11 +7068,11 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;而反斜杠在普通的 Python 字符串里也有相同的作用，所以就产生了冲突。&lt;/p&gt;
 &lt;p&gt;解决办法是对于正则表达式样式使用 Python 的原始字符串表示法；在带有‘r’前缀的字符串字面值中，反斜杠不必做任何特殊处理。&lt;/p&gt;
 &lt;h4 id=&#34;3_1&#34;&gt;3.正则查找函数 返回匹配对象&lt;/h4&gt;
-&lt;p&gt;查找一个匹配项（search、match、fullmatch）的函数返回值都是一个匹配对象Match ，需要通过match.group()获取匹配值，这个很容易忘记。&lt;/p&gt;
-&lt;p&gt;另外还需要注意：match.group() 与match.groups() 函数的差别！&lt;/p&gt;
+&lt;p&gt;查找一个匹配项&lt;code&gt;（search、match、fullmatch）&lt;/code&gt;的函数返回值都是一个匹配对象Match ，需要通过match.group()获取匹配值，这个很容易忘记。&lt;/p&gt;
+&lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
-&lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 re.compile(pattern)函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+&lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -8269,7 +8278,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -9276,7 +9285,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -9296,7 +9305,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/debian+gnome安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome安装过程.html</guid>
        
@@ -9463,7 +9472,7 @@ reboot
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -9682,7 +9691,7 @@ WALLPAPER=/usr/share/backgrounds/background.png
 &lt;ul&gt;
 &lt;li&gt;安装xfce4-docklike-plugin合并启动器和窗口管理器&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/debian+xfce安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce安装过程.html</guid>
        
@@ -9994,7 +10003,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alter USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -10469,7 +10478,7 @@ except IndexError as e:
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -10974,7 +10983,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -11026,7 +11035,7 @@ sqlite&amp;gt;pragmatable_info(&amp;#39;table_name&amp;#39;)
 # 查看指定表字段【column】类型，括号内可不输引号
 sqlite&amp;gt;selecttypeof(&amp;#39;column&amp;#39;)fromtable_name;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/SQLite基本操作.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/SQLite基本操作.html</guid>
        
@@ -11394,7 +11403,7 @@ shenyi = 123456
 &lt;span class=&#34;c&#34;&gt;保存未加密的密码(yes/no)? yes&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;取出版本 0。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -11445,7 +11454,7 @@ shenyi = 123456
 &lt;p&gt;&lt;a href=&#34;https://alidocs.dingtalk.com/i/p/nb9XJlJ7QbxN8GyA/docs/ROGpvEna5YQWmaPgQ156W4ykmK3zoB27&#34;&gt;钉钉&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/Debain必备软件.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain必备软件.html</guid>
        
@@ -11619,7 +11628,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;导出特定表的结构&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mysqldump&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uroot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B数据库名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;tab&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;le&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -11826,7 +11835,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -11992,7 +12001,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -12191,7 +12200,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -12242,7 +12251,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-04-28 09:58:56</pubDate>  
+      <pubDate>2022-04-28 11:08:15</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

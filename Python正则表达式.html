@@ -51,7 +51,7 @@
             
             <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span><span>2021-11-30&nbsp;&nbsp;共121649个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共44727个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共45046个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共206400个字</span></a></li>
             
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python正则表达式</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 11:08:15</span></div>
+      <div class="header"><span>Python正则表达式</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 11:23:29</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -260,27 +260,27 @@
 <tbody>
 <tr>
 <td>用户名</td>
-<td>/^[a-z0-9_-]{3,16}$/</td>
+<td><code>/^[a-z0-9_-]{3,16}$/</code></td>
 </tr>
 <tr>
 <td>密码</td>
-<td>/^[a-z0-9_-]{6,18}$/</td>
+<td><code>/^[a-z0-9_-]{6,18}$/</code></td>
 </tr>
 <tr>
 <td>十六进制值</td>
-<td>/^#?([a-f0-9]{6}</td>
+<td><code>/^#?([a-f0-9]{6}</code></td>
 </tr>
 <tr>
 <td>电子邮箱</td>
-<td>/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/<br />/^[a-z\d]+(.[a-z\d]+)*@(<a href="-[\da-z]">\da-z</a>?)+(.{1,2}[a-z]+)+$/</td>
+<td><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/&lt;br /&gt;/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/</code></td>
 </tr>
 <tr>
 <td>URL</td>
-<td>/^(https?:\/\/)?([\da-z.-]+).([a-z.]{2,6})([\/\w .-]<em>)</em>\/?$/</td>
+<td><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code></td>
 </tr>
 <tr>
 <td>IP 地址</td>
-<td>/((2[0-4]\d</td>
+<td><code>/((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/</code> <br /> <code>/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</code></td>
 </tr>
 </tbody>
 </table>
@@ -306,17 +306,15 @@
 <span class="nv">DEBUG</span> <span class="o">=</span> <span class="nv">sre_compile</span>.<span class="nv">SRE_FLAG_DEBUG</span> # <span class="nv">dump</span> <span class="nv">pattern</span> <span class="nv">after</span> <span class="nv">compilation</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>int(re.I) == 2 == 2^1^
-int(re.A) == 256 == 2^8^
-int(re.L) == 4 == 2^2^
-int(re.U) == 32 == 2^5^
-int(re.M) == 8 == 2^3^
-int(re.S) == 16 == 2^4^
-int(re.X) == 64 == 2^6^
-int(re.T) == 1 == 2^0^
-int(re.DEBUG) == 128  = 2^7^
-</code></pre></div>
-
+<p>int(re.I) == 2 == 2<sup>1</sup><br />
+int(re.A) == 256 == 2<sup>8</sup><br />
+int(re.L) == 4 == 2<sup>2</sup><br />
+int(re.U) == 32 == 2<sup>5</sup><br />
+int(re.M) == 8 == 2<sup>3</sup><br />
+int(re.S) == 16 == 2<sup>4</sup><br />
+int(re.X) == 64 == 2<sup>6</sup><br />
+int(re.T) == 1 == 2<sup>0</sup><br />
+int(re.DEBUG) == 128  = 2<sup>7</sup><br /></p>
 <p>下面我们来快速学习这些常量的作用及如何使用他们，按常用度排序！</p>
 <h4 id="1-ignorecase">1. IGNORECASE</h4>
 <p>语法： re.IGNORECASE 或简写为 re.I</p>

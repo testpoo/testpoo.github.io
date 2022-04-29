@@ -9,11 +9,6 @@
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
     <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
-    <style>
-      pre>code {
-        white-space: pre-line;
-      }
-    </style>
   </head>
 
   <body>
@@ -49,13 +44,13 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共717个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共669个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共10168个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-04-08&nbsp;&nbsp;共19561个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-04-08&nbsp;&nbsp;共19683个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span><span>2019-11-14&nbsp;&nbsp;共1238个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span><span>2019-11-14&nbsp;&nbsp;共1485个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共7088个字</span></a></li>
             
@@ -65,7 +60,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-28 11:23:29</span></div>
+      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-29 11:12:02</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -95,9 +90,9 @@
 </ul>
 </div>
 <h3 id="1">1. 下载链接</h3>
-<p>https://www.debian.org/download</p>
+<p><a href="https://www.debian.org/download">https://www.debian.org/download</a></p>
 <h3 id="2">2. 下载驱动</h3>
-<p>https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip">https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</a></p>
 <h3 id="3-u">3. 制作自启动U盘</h3>
 <h3 id="4">4. 安装</h3>
 <h3 id="5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</h3>
@@ -123,10 +118,8 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 </code></pre></div>
 
 <h3 id="7">7. 安装软件</h3>
-<div class="codehilite"><pre><span></span><code># sudo apt install filezilla stacer meld uget aria2 intel-microcode fonts-noto-cjk arc-theme moka-icon-theme
-sudo apt install filezilla stacer meld intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman catfish drawing
-</code></pre></div>
-
+<p><code># sudo apt install filezilla stacer meld uget aria2 intel-microcode fonts-noto-cjk arc-theme moka-icon-theme</code></p>
+<p><code>sudo apt install filezilla stacer meld intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman catfish drawing</code></p>
 <h3 id="8">8. 删除软件</h3>
 <div class="codehilite"><pre><span></span><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge

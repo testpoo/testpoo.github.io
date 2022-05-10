@@ -33,7 +33,7 @@
             
             <li><a href="https://testpoo.github.io/Python进阶.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
             
-            <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
             
           </ul>
         </div>
@@ -44,11 +44,11 @@
         <div class="scrollheight">
           <ul>
             
+            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共27152个字</span></a></li>
+            
             <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共669个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共10168个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-04-08&nbsp;&nbsp;共19683个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/Debain必备软件.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain必备软件</span><span>2019-11-14&nbsp;&nbsp;共1485个字</span></a></li>
             
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-04-29 11:12:02</span></div>
+      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-05-10 10:16:23</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -268,7 +268,217 @@ WALLPAPER=/usr/share/backgrounds/background.png
 <h3 id="23-xfce4-docklike-plugin">23. 安装xfce4-docklike-plugin</h3>
 <ul>
 <li>安装xfce4-docklike-plugin合并启动器和窗口管理器</li>
-</ul></div>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 编译使用到的软件</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">xfce4</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libglib2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libgtk</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">devhelp</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libwnck</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4ui</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4panel</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4panel</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">dev</span>
+</code></pre></div>
+
+<ul>
+<li>汉化内容如下(zh_CN.po)：</li>
+</ul>
+<p>放到<code>xfce4-docklike-plugin\po</code>目录中编译</p>
+<div class="codehilite"><pre><span></span><code># SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE&#39;S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <span class="nt">&lt;pu_yawei</span><span class="err">@qq.com</span><span class="nt">&gt;</span>, YEAR.
+#
+msgid &quot;&quot;
+msgstr &quot;&quot;
+&quot;Project-Id-Version: \n&quot;
+&quot;Report-Msgid-Bugs-To: \n&quot;
+&quot;POT-Creation-Date: 2022-03-31 19:31-0700\n&quot;
+&quot;PO-Revision-Date: 2022-03-31 19:31+0800\n&quot;
+&quot;Language-Team: \n&quot;
+&quot;MIME-Version: 1.0\n&quot;
+&quot;Content-Type: text/plain; charset=UTF-8\n&quot;
+&quot;Content-Transfer-Encoding: 8bit\n&quot;
+&quot;X-Generator: Poedit 2.2.2\n&quot;
+&quot;Plural-Forms: nplurals=1; plural=0;\n&quot;
+&quot;Last-Translator: \n&quot;
+&quot;Language: zh_CN\n&quot;
+
+#: ../src/Wnck.cpp:198
+msgid &quot;Pinned to Dock&quot;
+msgstr &quot;固定到任务栏&quot;
+
+#: ../src/Wnck.cpp:198
+msgid &quot;Pin to Dock&quot;
+msgstr &quot;固定到任务栏&quot;
+
+#: ../src/Wnck.cpp:199
+msgid &quot;Edit Launcher&quot;
+msgstr &quot;编辑启动器&quot;
+
+#: ../src/Wnck.cpp:226
+msgid &quot;Close All&quot;
+msgstr &quot;关闭全部&quot;
+
+#: ../src/Wnck.cpp:245
+msgid &quot;Remove&quot;
+msgstr &quot;移除&quot;
+
+#: ../src/SettingsDialog.cpp:197
+#, c-format
+msgid &quot;<span class="nt">&lt;b&gt;</span>Only the first %u hotkeys(s) are enabled.<span class="nt">&lt;/b&gt;</span>\n&quot;
+msgstr &quot;<span class="nt">&lt;b&gt;</span>仅启用第一个 %u 热键。<span class="nt">&lt;/b&gt;</span>\n&quot;
+
+#: ../src/SettingsDialog.cpp:199
+#, c-format
+msgid &quot;&quot;
+&quot;The <span class="ni">&amp;lt;</span>SUPER<span class="ni">&amp;gt;</span>+%u combination seems already in use by another process.\n&quot;
+&quot;Check your Xfce settings.&quot;
+msgstr &quot;&quot;
+&quot;<span class="ni">&amp;lt;</span>SUPER<span class="ni">&amp;gt;</span>+%u组合似乎已被占用，\n&quot;
+&quot;检查您的 Xfce 设置。&quot;
+
+#. namespace SettingsDialog
+#: ../src/docklike.desktop.in.h:1
+msgid &quot;A modern, minimalist taskbar for Xfce&quot;
+msgstr &quot;适用于 Xfce 的现代简约任务栏&quot;
+
+#: ../src/_dialogs.xml.h:1
+msgid &quot;_Help&quot;
+msgstr &quot;_帮助&quot;
+
+#: ../src/_dialogs.xml.h:2
+msgid &quot;_Close&quot;
+msgstr &quot;_关闭&quot;
+
+#: ../src/_dialogs.xml.h:3
+msgid &quot;Don&#39;t show the window list for a single window&quot;
+msgstr &quot;不显示单个窗口的窗口列表&quot;
+
+#: ../src/_dialogs.xml.h:4
+msgid &quot;Only show applications on the current workspace&quot;
+msgstr &quot;仅显示当前工作区上的应用程序&quot;
+
+#: ../src/_dialogs.xml.h:5
+msgid &quot;Only show applications on the current display&quot;
+msgstr &quot;仅在当前显示屏上显示应用程序&quot;
+
+#: ../src/_dialogs.xml.h:6
+msgid &quot;Show preview thumbnails for open windows&quot;
+msgstr &quot;显示打开窗口的预览缩略图&quot;
+
+#: ../src/_dialogs.xml.h:7
+msgid &quot;Show the number of open windows (if more than 2)&quot;
+msgstr &quot;显示打开的窗口数（如果超过 2 个）&quot;
+
+#: ../src/_dialogs.xml.h:8
+msgid &quot;Behavior&quot;
+msgstr &quot;行为&quot;
+
+#: ../src/_dialogs.xml.h:9
+msgid &quot;Indicator style:&quot;
+msgstr &quot;指标样式：&quot;
+
+#: ../src/_dialogs.xml.h:10
+msgid &quot;Bars&quot;
+msgstr &quot;条&quot;
+
+#: ../src/_dialogs.xml.h:11
+msgid &quot;Dots&quot;
+msgstr &quot;点&quot;
+
+#: ../src/_dialogs.xml.h:12
+msgid &quot;Ciliora&quot;
+msgstr &quot;细条&quot;
+
+#: ../src/_dialogs.xml.h:13
+msgid &quot;Circles&quot;
+msgstr &quot;圆形&quot;
+
+#: ../src/_dialogs.xml.h:14
+msgid &quot;Rectangles&quot;
+msgstr &quot;矩形&quot;
+
+#: ../src/_dialogs.xml.h:15
+msgid &quot;None&quot;
+msgstr &quot;无&quot;
+
+#: ../src/_dialogs.xml.h:16
+msgid &quot;Indicator orientation:&quot;
+msgstr &quot;指标方向：&quot;
+
+#: ../src/_dialogs.xml.h:17
+msgid &quot;Automatic&quot;
+msgstr &quot;自动&quot;
+
+#: ../src/_dialogs.xml.h:18
+msgid &quot;Bottom&quot;
+msgstr &quot;底部&quot;
+
+#: ../src/_dialogs.xml.h:19
+msgid &quot;Right&quot;
+msgstr &quot;右边&quot;
+
+#: ../src/_dialogs.xml.h:20
+msgid &quot;Top&quot;
+msgstr &quot;顶部&quot;
+
+#: ../src/_dialogs.xml.h:21
+msgid &quot;Left&quot;
+msgstr &quot;左边&quot;
+
+#: ../src/_dialogs.xml.h:22
+msgid &quot;Active indicator:&quot;
+msgstr &quot;活动指标：&quot;
+
+#: ../src/_dialogs.xml.h:23
+msgid &quot;Force icon size:&quot;
+msgstr &quot;强制图标大小：&quot;
+
+#: ../src/_dialogs.xml.h:24
+msgid &quot;Inactive indicator:&quot;
+msgstr &quot;非活动指标：&quot;
+
+#: ../src/_dialogs.xml.h:25
+msgid &quot;Appearance&quot;
+msgstr &quot;外观&quot;
+
+#: ../src/_dialogs.xml.h:26
+msgid &quot;Switch between applications with <span class="nt">&lt;SUPER&gt;</span>+[1, 2, ...]&quot;
+msgstr &quot;使用 <span class="nt">&lt;SUPER&gt;</span>+[1， 2， ...] 在应用程序之间切换&quot;
+
+#: ../src/_dialogs.xml.h:27
+msgid &quot;Switch to the last window with <span class="nt">&lt;SUPER&gt;</span>&quot;
+msgstr &quot;使用<span class="nt">&lt;SUPER&gt;</span>切换到最后一个窗口&quot;
+
+#: ../src/_dialogs.xml.h:28
+msgid &quot;&quot;
+&quot;<span class="nt">&lt;b&gt;</span>This feature is disabled.<span class="nt">&lt;/b&gt;</span>\n&quot;
+&quot;It requires X11 XInput2.0 extension which is is not provided by your system.&quot;
+msgstr &quot;&quot;
+&quot;<span class="nt">&lt;b&gt;</span>此功能已禁用。<span class="nt">&lt;/b&gt;</span>\n&quot;
+&quot;它需要 X11 XInput2.0 扩展，而您的系统不提供该扩展。&quot;
+
+#: ../src/_dialogs.xml.h:30
+msgid &quot;Keyboard hotkeys&quot;
+msgstr &quot;键盘热键&quot;
+
+#: ../src/_dialogs.xml.h:31
+msgid &quot;Active indicator style:&quot;
+msgstr &quot;活动指标样式：&quot;
+
+#: ../src/_dialogs.xml.h:32
+msgid &quot;Inactive indicator style:&quot;
+msgstr &quot;非活动指标样式：&quot;
+
+#: ../src/_dialogs.xml.h:33
+msgid &quot;Get indicator color from theme&quot;
+msgstr &quot;从主题获取指示器颜色&quot;
+
+#: ../src/_dialogs.xml.h:34
+msgid &quot;Docklike Taskbar&quot;
+msgstr &quot;Docklike任务栏&quot;
+</code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">
@@ -292,13 +502,13 @@ WALLPAPER=/usr/share/backgrounds/background.png
         
         <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
         

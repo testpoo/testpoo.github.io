@@ -44,7 +44,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共27152个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共30288个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共669个字</span></a></li>
             
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后编辑于2022-05-10 10:16:23</span></div>
+      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-11 17:23:09</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -86,6 +86,7 @@
 <li><a href="#20">20. 添加右键</a></li>
 <li><a href="#21-thunar">21. thunar侧边栏添加位置</a></li>
 <li><a href="#22">22. 启动花屏</a></li>
+<li><a href="#23-gtkcss">23. 添加gtk.css</a></li>
 <li><a href="#23-xfce4-docklike-plugin">23. 安装xfce4-docklike-plugin</a></li>
 </ul>
 </div>
@@ -265,6 +266,27 @@ WALLPAPER=/usr/share/backgrounds/background.png
 <div class="codehilite"><pre><span></span><code><span class="n">xfwm4</span><span class="o">--&gt;</span><span class="n">vblank_mode</span><span class="o">=</span><span class="n">off</span>
 </code></pre></div>
 
+<h3 id="23-gtkcss">23. 添加gtk.css</h3>
+<ul>
+<li>路径<code>~/config/gtk3.0/gtk.css</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="p">#</span><span class="nn">pulseaudio-button</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-power-manager-plugin</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-notification-plugin</span> <span class="nt">image</span><span class="p">{</span>
+            <span class="nv">-gtk-icon-transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">clock-button</span> <span class="p">{</span><span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;}</span>
+
+<span class="p">#</span><span class="nn">indicator-button</span><span class="o">*</span> <span class="p">{</span> <span class="nv">-gtk-icon-transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span> <span class="p">}</span>
+
+<span class="p">#</span><span class="nn">whiskermenu-window</span> <span class="p">{</span>
+   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffbba4</span><span class="p">;</span>
+   <span class="k">background-image</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mh">#e66465</span><span class="p">,</span> <span class="mh">#9198e5</span><span class="p">);</span>
+   <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">calendar</span><span class="p">.</span><span class="nc">highlight</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">calendar</span> <span class="p">{</span><span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span> <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;}</span>
+</code></pre></div>
+
 <h3 id="23-xfce4-docklike-plugin">23. 安装xfce4-docklike-plugin</h3>
 <ul>
 <li>安装xfce4-docklike-plugin合并启动器和窗口管理器</li>
@@ -287,7 +309,7 @@ WALLPAPER=/usr/share/backgrounds/background.png
 <div class="codehilite"><pre><span></span><code># SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE&#39;S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <span class="nt">&lt;pu_yawei</span><span class="err">@qq.com</span><span class="nt">&gt;</span>, YEAR.
+# FIRST AUTHOR <span class="nt">&lt;pu_yawei</span><span class="err">@qq.com</span><span class="nt">&gt;</span>, YEAR 2022.
 #
 msgid &quot;&quot;
 msgstr &quot;&quot;
@@ -478,6 +500,20 @@ msgstr &quot;从主题获取指示器颜色&quot;
 #: ../src/_dialogs.xml.h:34
 msgid &quot;Docklike Taskbar&quot;
 msgstr &quot;Docklike任务栏&quot;
+</code></pre></div>
+
+<ul>
+<li>编译成功后，从系统提取可用文件，语言文件这里只提取了中文</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+mkdir -p ~/usr/share/xfce4/panel/plugins/
+mkdir -p ~/usr/lib/xfce4/panel/plugins/
+mkdir -p ~/usr/share/locale/zh_CN/LC_MESSAGES/
+cp /usr/share/xfce4/panel/plugins/docklike.desktop ~/usr/share/xfce4/panel/plugins/
+cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/locale/zh_CN/LC_MESSAGES/
+cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
+cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 </code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">

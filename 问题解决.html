@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共2949个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共2943个字</span></a></li>
             
           </ul>
         </div>
@@ -54,29 +54,29 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-19 10:24:48</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-19 10:56:07</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
-<li><a href="#vmwarecentos8">VMware安装CentOS后时间相差8小时解决方法</a></li>
+<li><a href="#vmwarecentos8">VMware安装CentOS相差8小时解决方法</a></li>
 </ul>
 </div>
-<h3 id="vmwarecentos8">VMware安装CentOS后时间相差8小时解决方法</h3>
-<ol>
+<h3 id="vmwarecentos8">VMware安装CentOS相差8小时解决方法</h3>
+<ul>
 <li>
 <p>如果发现date与现在的时间差8个小时，需要修改。</p>
 </li>
 <li>
 <p>date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</p>
 </li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
 <span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="o">-</span><span class="mi">08</span><span class="w"></span>
 </code></pre></div>
 
-<ol>
+<ul>
 <li>将/etc/localtime指向上海时间</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 </code></pre></div>
 
@@ -85,27 +85,27 @@
 <span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
 </code></pre></div>
 
-<ol>
+<ul>
 <li>下载ntp（需要联网）</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code># yum -y install ntp
 </code></pre></div>
 
-<ol>
+<ul>
 <li>校对时间</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code># ntpdate cn.pool.ntp.org
 </code></pre></div>
 
-<ol>
+<ul>
 <li>将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code># hwclock -w
 </code></pre></div>
 
-<ol>
+<ul>
 <li>查看date</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
 <span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
 </code></pre></div></div>

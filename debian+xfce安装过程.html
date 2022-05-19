@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共30288个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共29157个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共669个字</span></a></li>
             
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-19 10:24:48</span></div>
+      <div class="header"><span>debian+xfce安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-19 10:56:07</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -83,12 +83,11 @@
 <li><a href="#15-mtp">15. 支持mtp，连接安卓</a></li>
 <li><a href="#16">16. 设置关闭按钮</a></li>
 <li><a href="#17-gtk">17. 启动gtk编辑器</a></li>
-<li><a href="#18-xfce">18. 设置xfce样式</a></li>
-<li><a href="#19-grub">19. 修改grub背景</a></li>
-<li><a href="#20">20. 添加右键</a></li>
-<li><a href="#21-thunar">21. thunar侧边栏添加位置</a></li>
-<li><a href="#22">22. 启动花屏</a></li>
-<li><a href="#23-gtkcss">23. 添加gtk.css</a></li>
+<li><a href="#18-grub">18. 修改grub背景</a></li>
+<li><a href="#19">19. 添加右键</a></li>
+<li><a href="#20-thunar">20. thunar侧边栏添加位置</a></li>
+<li><a href="#21">21. 启动花屏</a></li>
+<li><a href="#22-gtkcss">22. 添加gtk.css</a></li>
 <li><a href="#23-xfce4-docklike-plugin">23. 安装xfce4-docklike-plugin</a></li>
 </ul>
 </div>
@@ -227,20 +226,13 @@ patch:
 重启xfce-panel:xfce4-panel -r
 </code></pre></div>
 
-<h3 id="18-xfce">18. 设置xfce样式</h3>
-<div class="codehilite"><pre><span></span><code><span class="o">~/</span><span class="p">.</span><span class="nc">config</span><span class="o">/</span><span class="nt">gtk-3</span><span class="p">.</span><span class="nc">0</span><span class="o">/</span><span class="nt">gtk</span><span class="p">.</span><span class="nc">css</span>
-<span class="p">#</span><span class="nn">pulseaudio-button</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-power-manager-plugin</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-notification-plugin</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">showdesktop-button</span> <span class="nt">image</span><span class="p">{</span>
-    <span class="nv">-gtk-icon-transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<h3 id="19-grub">19. 修改grub背景</h3>
+<h3 id="18-grub">18. 修改grub背景</h3>
 <div class="codehilite"><pre><span></span><code>/usr/share/desktop-base/homeworld-theme/grub/grub_background.sh
 WALLPAPER=/usr/share/backgrounds/background.png
 注：必须是png格式
 </code></pre></div>
 
-<h3 id="20">20. 添加右键</h3>
+<h3 id="19">19. 添加右键</h3>
 <div class="codehilite"><pre><span></span><code><span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">%</span><span class="nv">f</span> <span class="s1">&#39;</span><span class="s">Link to %n</span><span class="s1">&#39;</span>
 <span class="nv">Create</span> <span class="nv">a</span> <span class="nv">Link</span>
 创建链接
@@ -260,15 +252,15 @@ WALLPAPER=/usr/share/backgrounds/background.png
 搜索文件
 </code></pre></div>
 
-<h3 id="21-thunar">21. thunar侧边栏添加位置</h3>
+<h3 id="20-thunar">20. thunar侧边栏添加位置</h3>
 <ul>
 <li>点击文件右键<code>send to--&gt;Side Panel</code></li>
 </ul>
-<h3 id="22">22. 启动花屏</h3>
+<h3 id="21">21. 启动花屏</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">xfwm4</span><span class="o">--&gt;</span><span class="n">vblank_mode</span><span class="o">=</span><span class="n">off</span>
 </code></pre></div>
 
-<h3 id="23-gtkcss">23. 添加gtk.css</h3>
+<h3 id="22-gtkcss">22. 添加gtk.css</h3>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>

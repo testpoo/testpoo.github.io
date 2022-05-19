@@ -35,80 +35,79 @@
             
             <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
             
+            <li><a href="https://testpoo.github.io/问题解决.html"><label style="color: #ffba48"></label>&nbsp;问题解决</a></li>
+            
           </ul>
         </div>
         <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
       </div>
       <div class="articles">
-        <div class="category">分类：笔记</div>
+        <div class="category">分类：问题解决</div>
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共18641个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共102613个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span><span>2021-09-15&nbsp;&nbsp;共39809个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span><span>2020-04-03&nbsp;&nbsp;共14659个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/SQLite基本操作.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作</span><span>2020-01-02&nbsp;&nbsp;共1027个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共63734个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共7058个字</span></a></li>
-            
-            <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span><span>1999-12-31&nbsp;&nbsp;共1545个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共2949个字</span></a></li>
             
           </ul>
         </div>
-        <div class="item-num">总共8项</div>
+        <div class="item-num">总共1项</div>
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>SQLite基本操作</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-11 17:23:09</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-19 10:24:48</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
-<ul></ul>
+<ul>
+<li><a href="#vmwarecentos8">VMware安装CentOS后时间相差8小时解决方法</a></li>
+</ul>
 </div>
-<div class="codehilite"><pre><span></span><code># 查看当前数据库所有表
-sqlite&gt;.tables
+<h3 id="vmwarecentos8">VMware安装CentOS后时间相差8小时解决方法</h3>
+<ol>
+<li>
+<p>如果发现date与现在的时间差8个小时，需要修改。</p>
+</li>
+<li>
+<p>date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
+<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="o">-</span><span class="mi">08</span><span class="w"></span>
+</code></pre></div>
 
-# 查看当前数据库指定表
-sqlite&gt;.tablestable_name
+<ol>
+<li>将/etc/localtime指向上海时间</li>
+</ol>
+<div class="codehilite"><pre><span></span><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre></div>
 
-# 查看当前数据库所有表的建表(CREATE)语句
-sqlite&gt;.schema
+<p>然后再date可以看到CST了。</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
+<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
+</code></pre></div>
 
-# 查看指定数据表的建表语句
-sqlite&gt;.schematable_name
+<ol>
+<li>下载ntp（需要联网）</li>
+</ol>
+<div class="codehilite"><pre><span></span><code># yum -y install ntp
+</code></pre></div>
 
-# 查看所有表结构及索引信息
-sqlite&gt;select*fromsqlite_masterfrom;
+<ol>
+<li>校对时间</li>
+</ol>
+<div class="codehilite"><pre><span></span><code># ntpdate cn.pool.ntp.org
+</code></pre></div>
 
-# 查看所有表结构信息
-sqlite&gt;select*fromsqlite_masterwheretype=&#39;table&#39;;
+<ol>
+<li>将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）</li>
+</ol>
+<div class="codehilite"><pre><span></span><code># hwclock -w
+</code></pre></div>
 
-# 对于表来说，name字段指表名，查询所有表
-sqlite&gt;selectnamefromsqlite_masterwheretype=&#39;table&#39;;
-
-# 查看指定表结构信息
-sqlite&gt;select*fromsqlite_masterwheretype=&#39;table&#39;andname=&#39;table_name&#39;;
-
-# 查看所有表索引信息，查询所有索引
-sqlite&gt;select*fromsqlite_masterwheretype=&#39;index&#39;;
-
-# 对于索引来说，name字段指索引名
-sqlite&gt;selectnamefromsqlite_masterwheretype=&#39;table&#39;;
-
-# 查看指定表索引信息
-sqlite&gt;select*fromsqlite_masterwheretype=&#39;index&#39;andname=&#39;table_name&#39;;
-
-# 查看指定表所有字段信息，类似于msyql：desctable_name
-sqlite&gt;pragmatable_info(&#39;table_name&#39;)
-
-# 查看指定表字段【column】类型，括号内可不输引号
-sqlite&gt;selecttypeof(&#39;column&#39;)fromtable_name;
+<ol>
+<li>查看date</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
+<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
 </code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
@@ -143,11 +142,11 @@ sqlite&gt;selecttypeof(&#39;column&#39;)fromtable_name;
         
         <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
         
+        <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span></a></li>
+        
         <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span></a></li>
         
         <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/SQLite基本操作.html"><span><label style="color: #38b6fd"></label>&nbsp;SQLite基本操作</span></a></li>
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         

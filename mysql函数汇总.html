@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共91544个字</span></a></li>
+            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共92210个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span><span>2020.05.09&nbsp;&nbsp;共17915个字</span></a></li>
             
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>mysql函数汇总</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-24 13:47:31</span></div>
+      <div class="header"><span>mysql函数汇总</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-24 19:48:33</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -495,15 +495,24 @@
 <p><code>CURDATE()</code> 和 <code>CURRENT_DATE()</code> 函数的作用相同，将当前日期按照<code>YYYY-MM-DD</code>或<code>YYYYMMDD</code>格式的值返回，具体格式根据函数用在字符串或数字语境中而定。</p>
 <p>如：使用日期函数 <code>CURDATE</code> 和 <code>CURRENT_DATE</code> 获取系统当前日期，输入的 SQL 语句和执行结果如下所示。</p>
 <p>由运行结果可以看到，两个函数的作用相同，返回了相同的系统当前日期，“CURDATE()+0”将当前日期值转换为数值型的。</p>
-<h3 id="curtimecurrent_time">CURTIME和CURRENT_TIME函数：获取系统当前时间</h3>
-<p><code>CURTIME()</code> 和 <code>CURRENT_TIME()</code> 函数的作用相同，将当前时间以<code>HH:MM:SS</code>或<code>HHMMSS</code>格式返回，具体格式根据函数用在字符串或数字语境中而定。</p>
-<p>如：使用时间函数 <code>CURTIME</code> 和 <code>CURRENT_TIME</code> 获取系统当前时间，输入的 SQL 语句和执行结果如下所示。</p>
 <div class="codehilite"><pre><span></span><code><span class="c">mysql</span><span class="nv">&gt;</span><span class="c"> SELECT CURDATE()</span><span class="nt">,</span><span class="c">CURRENT_DATE()</span><span class="nt">,</span><span class="c">CURRENT_DATE()</span><span class="nb">+</span><span class="c">0;</span>
 <span class="nb">+------------+----------------+------------------+</span><span class="c"></span>
 <span class="c">| CURDATE()  | CURRENT_DATE() | CURRENT_DATE()</span><span class="nb">+</span><span class="c">0 |</span>
 <span class="nb">+------------+----------------+------------------+</span><span class="c"></span>
 <span class="c">| 2022</span><span class="nb">-</span><span class="c">04</span><span class="nb">-</span><span class="c">19 | 2022</span><span class="nb">-</span><span class="c">04</span><span class="nb">-</span><span class="c">19     |         20220419 |</span>
 <span class="nb">+------------+----------------+------------------+</span><span class="c"></span>
+<span class="c">1 row in set (0</span><span class="nt">.</span><span class="c">00 sec)</span>
+</code></pre></div>
+
+<h3 id="curtimecurrent_time">CURTIME和CURRENT_TIME函数：获取系统当前时间</h3>
+<p><code>CURTIME()</code> 和 <code>CURRENT_TIME()</code> 函数的作用相同，将当前时间以<code>HH:MM:SS</code>或<code>HHMMSS</code>格式返回，具体格式根据函数用在字符串或数字语境中而定。</p>
+<p>如：使用时间函数 <code>CURTIME</code> 和 <code>CURRENT_TIME</code> 获取系统当前时间，输入的 SQL 语句和执行结果如下所示。</p>
+<div class="codehilite"><pre><span></span><code><span class="c">mysql</span><span class="nv">&gt;</span><span class="c"> SELECT CURTIME()</span><span class="nt">,</span><span class="c">CURRENT_TIME();</span>
+<span class="nb">+-----------+----------------+</span><span class="c"></span>
+<span class="c">| CURTIME() | CURRENT_TIME() |</span>
+<span class="nb">+-----------+----------------+</span><span class="c"></span>
+<span class="c">| 18:34:43  | 18:34:43       |</span>
+<span class="nb">+-----------+----------------+</span><span class="c"></span>
 <span class="c">1 row in set (0</span><span class="nt">.</span><span class="c">00 sec)</span>
 </code></pre></div>
 
@@ -936,7 +945,7 @@
 <span class="nb">+-------------------------+-------------------------+</span><span class="c"></span>
 <span class="c">| col1                    | col2                    |</span>
 <span class="nb">+-------------------------+-------------------------+</span><span class="c"></span>
-<span class="c">| Tuesday April 19th 2022 | 02:i PM April 19th 2022 |</span>
+<span class="c">| Tuesday April 19th 2022 | 02:16 PM April 19th 2022 |</span>
 <span class="nb">+-------------------------+-------------------------+</span><span class="c"></span>
 <span class="c">1 row in set (0</span><span class="nt">.</span><span class="c">00 sec)</span>
 </code></pre></div>

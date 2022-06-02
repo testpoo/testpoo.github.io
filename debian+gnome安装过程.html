@@ -46,11 +46,11 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共1663个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共8564个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+xfce安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce安装过程</span><span>2021-05-10&nbsp;&nbsp;共29157个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共1192个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+gnome安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome安装过程</span><span>2021-04-08&nbsp;&nbsp;共7654个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共10168个字</span></a></li>
             
@@ -64,34 +64,103 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+gnome安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-05-31 20:34:53</span></div>
+      <div class="header"><span>debian+gnome安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-06-02 10:37:12</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
-<li><a href="#1">1. 安装</a></li>
-<li><a href="#2">2. 删除不需要软件</a></li>
-<li><a href="#3-ibus-rime">3. ibus-rime横排</a></li>
+<li><a href="#1">1. 下载链接</a></li>
+<li><a href="#2">2. 下载驱动</a></li>
+<li><a href="#3-u">3. 制作自启动U盘</a></li>
+<li><a href="#4">4. 安装</a></li>
+<li><a href="#5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</a></li>
+<li><a href="#6">6. 修改源</a></li>
+<li><a href="#7">7. 安装软件</a></li>
+<li><a href="#8">8. 删除不需要软件</a></li>
+<li><a href="#9">9. 设置</a></li>
+<li><a href="#10">10. 安装第三方软件</a></li>
+<li><a href="#11">11. 缺少驱动</a></li>
+<li><a href="#12">12. 安装输入法</a></li>
+<li><a href="#13">13. 删除多余的扩展</a></li>
 </ul>
 </div>
-<h3 id="1">1. 安装</h3>
-<h3 id="2">2. 删除不需要软件</h3>
+<h3 id="1">1. 下载链接</h3>
+<p><a href="https://www.debian.org/download">https://www.debian.org/download</a></p>
+<h3 id="2">2. 下载驱动</h3>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip">https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</a></p>
+<h3 id="3-u">3. 制作自启动U盘</h3>
+<h3 id="4">4. 安装</h3>
+<h3 id="5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</h3>
+<div class="codehilite"><pre><span></span><code>su root
+nano /etc/sudoers添加 poo ALL=(ALL:ALL) ALL
+nano /etc/default/grub
+找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
+修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
+修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
+sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
+</code></pre></div>
+
+<h3 id="6">6. 修改源</h3>
+<div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bookworm-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free</span>
+</code></pre></div>
+
+<h3 id="7">7. 安装软件</h3>
+<p><code>sudo apt install intel-microcode fonts-noto-cjk arc-theme git ibus-rime librime-data-wubi</code></p>
+<h3 id="8">8. 删除不需要软件</h3>
 <p><code>apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*</code></p>
-<h3 id="3-ibus-rime">3. ibus-rime横排</h3>
+<h3 id="9">9. 设置</h3>
 <ul>
-<li>创建空白文件</li>
+<li>快捷键设置:设置--&gt;键盘--&gt;应用程度快捷键</li>
+<li>窗口样式设置：设置--&gt;窗口管理器--&gt;样式+按钮布局</li>
+<li>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;辅助功能  最大化窗口时隐藏标题</li>
+<li>主题/字体设置：外观--&gt;样式+字体</li>
+<li>设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>~/.config/ibus/rime/build/ibus_rime.yaml
+<h3 id="10">10. 安装第三方软件</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">wps</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">linux</span><span class="o">.</span><span class="n">wps</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span>
+<span class="n">baidu网盘</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pan</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span> <span class="err">需要依赖</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="o">.</span><span class="n">csdn</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">weixin_45447477</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">115188938</span>
+<span class="n">vscode</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">code</span><span class="o">.</span><span class="n">visualstudio</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
+<span class="n">QQ音乐</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">y</span><span class="o">.</span><span class="n">qq</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span>
+<span class="n">QQ</span><span class="err">：</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">im</span><span class="o">.</span><span class="n">qq</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">linuxqq</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span>
+<span class="n">sublime</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">sublimetext</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span>
+<span class="n">typora</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">typora</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="c1">#linux</span>
+<span class="n">Motrix</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">motrix</span><span class="o">.</span><span class="n">app</span><span class="o">/</span>
 </code></pre></div>
 
-<ul>
-<li>向 ibus_rime.yaml 写入并保存以下内容</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="n">style</span><span class="o">:</span>
-   <span class="n">horizontal</span><span class="o">:</span> <span class="kc">true</span>
+<h3 id="11">11. 缺少驱动</h3>
+<div class="codehilite"><pre><span></span><code># 添加驱动
+https://packages.debian.org/bookworm/firmware-misc-nonfree
 </code></pre></div>
 
+<h3 id="12">12. 安装输入法</h3>
+<div class="codehilite"><pre><span></span><code>sudo apt install ibus-rime librime-data-wubi
+nano ~/.config/ibus/rime/default.custom.yaml
+patch:
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+
+nano ~/.config/ibus/rime/build/ibus_rime.yaml
+
+# 修改ibus_rime.yaml中horizontal为true
+
+style:
+   horizontal: true
+
+# 重新部署 ibus-rime
+</code></pre></div>
+
+<h3 id="13">13. 删除多余的扩展</h3>
 <ul>
-<li>重新部署 ibus-rime</li>
+<li>删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展</li>
 </ul></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">

@@ -6,9 +6,1475 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-06-02 13:12:58</pubDate>  
-    <lastBuildDate>2022-06-02 13:12:58</lastBuildDate>  
+    <pubDate>2022-06-15 09:07:36</pubDate>  
+    <lastBuildDate>2022-06-15 09:07:36</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>UI自动化测试神器-Cypress</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 简介&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11-cypress&#34;&gt;1.1 谁能使用 Cypress ？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-cypress&#34;&gt;1.2 Cypress 生态系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;1.3 特性&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#131&#34;&gt;1.3.1 设置测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#132&#34;&gt;1.3.2 编写测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#133&#34;&gt;1.3.3 运行测试&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#134&#34;&gt;1.3.4 调试测试&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 环境搭建&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#21-node&#34;&gt;2.1 安装node&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#22-cypress&#34;&gt;2.2 安装Cypress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#23-cypress&#34;&gt;2.3 打开Cypress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#23-npm&#34;&gt;2.3 添加npm脚本&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-e2e&#34;&gt;3. 编写第一个E2E测试用例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 写你第一个自己的测试用例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5&#34;&gt;5. 写一个真正的测试用例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 执行测试用例&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#61&#34;&gt;6.1 测试策略&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 命令&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#71&#34;&gt;7.1 查找页面元素的基本方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#72&#34;&gt;7.2 查找页面元素的辅助方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#73&#34;&gt;7.3 点击命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#74&#34;&gt;7.4 操作页面元素的命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#75&#34;&gt;7.5 获取页面全局对象的命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#76&#34;&gt;7.6 操作浏览器的命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#77&#34;&gt;7.7 操作上一条命令返回结果的命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#78&#34;&gt;7.8 操作文件相关命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#79&#34;&gt;7.9 网络相关命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#710-cookie&#34;&gt;7.10 操作 Cookie 相关命令&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#711-cypress-api&#34;&gt;7.11 Cypress API 命令大全&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8. 断言&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#81-bdd&#34;&gt;8.1 BDD 断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#82-tdd&#34;&gt;8.2 TDD 断言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#83-chai-jquery&#34;&gt;8.3 Chai-jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#84-sinon-chai&#34;&gt;8.4 Sinon-Chai&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
+&lt;p&gt;Cypress 是为现代网络而构建的下一代前端测试工具。我们解决开发人员和质量保证工程师在测试现代应用程序时面临的关键难题。&lt;/p&gt;
+&lt;p&gt;我们使它很简单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置测试&lt;/li&gt;
+&lt;li&gt;编写测试&lt;/li&gt;
+&lt;li&gt;运行测试&lt;/li&gt;
+&lt;li&gt;调试测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cypress 经常和 Selenium 相提并论；然而，Cypress 在结构和基础上与之有所不同。Cypress 不受 Selenium 限制。&lt;/p&gt;
+&lt;p&gt;这能够使你编写更快、更简单和更可靠的测试。&lt;/p&gt;
+&lt;h4 id=&#34;11-cypress&#34;&gt;1.1 谁能使用 Cypress ？&lt;/h4&gt;
+&lt;p&gt;我们的用户通常是使用现代 JavaScript 构建 Web 应用程序的开发人员或者 QA 工程师。&lt;/p&gt;
+&lt;p&gt;Cypress 能够帮助你编写各种类型的测试：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端到端测试&lt;/li&gt;
+&lt;li&gt;集成测试&lt;/li&gt;
+&lt;li&gt;单元测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cypress可以测试运行在浏览器中的任何东西。&lt;/p&gt;
+&lt;h4 id=&#34;12-cypress&#34;&gt;1.2 Cypress 生态系统&lt;/h4&gt;
+&lt;p&gt;Cypress 是一款免费、开源、本地安装的测试工具和记录测试的服务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;首先：&lt;/strong&gt; 在本地构建应用程序时，Cypress 能够容易的设置并编写测试。TDD 是最好的例子。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;其次：&lt;/strong&gt; 在建立一套测试系统并将 Cypress 与的 CI 集成后，我们的控制台能够记录你的测试运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;13&#34;&gt;1.3 特性&lt;/h4&gt;
+&lt;p&gt;Cypress 支持全面。这里是一些 Cypress 能够但是其他框架不能够做到的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装简单&lt;/strong&gt;：在网络正常的情况下，10分钟就可以安装好Cypress框架，一天则可以入门，写一些简单的用例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;运行速度快&lt;/strong&gt;：相较于Selenium来说，Cypress的运行速度真的是相当快了，它不需要web driver来驱动浏览器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;脚本实时调试&lt;/strong&gt;：在脚本编写过程中，只要编辑器中进行保存，脚本就会自动运行，可以快速高效的知道脚本是否正确。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;随时查看执行情况：&lt;/strong&gt; 当你执行测试的时候 Cypress 会进行快照。只需在命令日志中鼠标悬停，就能查看每一步的具体情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可调试性&lt;/strong&gt;：直接从熟悉的工具（如：Chrome DevTools）进行调试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自动等待：&lt;/strong&gt; 不需要在测试中添加等待。在继续执行之前，Cypress 能够自动等待命令和断言。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;截图和视频：&lt;/strong&gt; 脚本运行失败后，会在..\cypress\screenshots文件夹下面自动保存失败用例的截图，方便我们追踪到失败用例的原因。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;脚本运行完成后&lt;/strong&gt;，会在..\cypress\videos文件夹下自动保存脚本运行过程录制的视频。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;跨浏览器测试&lt;/strong&gt;：支持Firefox 和 Chrome 系列浏览器（包括 Edge 和 Electron）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;131&#34;&gt;1.3.1 设置测试&lt;/h5&gt;
+&lt;p&gt;没有服务器、驱动程序或者其他任何依赖项的安装或配置。你可以在 60 秒内写出你的第一个能够通过的测试。&lt;/p&gt;
+&lt;h5 id=&#34;132&#34;&gt;1.3.2 编写测试&lt;/h5&gt;
+&lt;p&gt;使用 Cypress 编写的测试很容易阅读和理解。我们的 API 已经完全支持你已经熟悉的工具。&lt;/p&gt;
+&lt;h5 id=&#34;133&#34;&gt;1.3.3 运行测试&lt;/h5&gt;
+&lt;p&gt;Cypress 的运行速度与浏览器渲染内容一样快。你可以在开发应用程序时实时观看测试。&lt;/p&gt;
+&lt;h5 id=&#34;134&#34;&gt;1.3.4 调试测试&lt;/h5&gt;
+&lt;p&gt;可读的错误消息可帮助您快速调试。您还可以访问您熟悉并喜爱的任何开发调试工具。&lt;/p&gt;
+&lt;h3 id=&#34;2&#34;&gt;2. 环境搭建&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本次安装基于Windows10&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;21-node&#34;&gt;2.1 安装node&lt;/h4&gt;
+&lt;p&gt;下载地址：&lt;code&gt;http://nodejs.cn/download/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;从上面的地址可下载你想要的版本，本次下载的是：&lt;code&gt;https://npmmirror.com/mirrors/node/v16.15.0/node-v16.15.0-x64.msi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后，检查版本，如下：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# node -v
+v16.15.0
+
+# npm -v
+8.5.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;均正常显示版本，则安装成功。&lt;/p&gt;
+&lt;h4 id=&#34;22-cypress&#34;&gt;2.2 安装Cypress&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在要安装的地方，新建一个文件夹，如cypress，并进入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化项目：在当前目录下执行命令 &lt;code&gt;npm init&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装Cypress：&lt;code&gt;npm install cypress --save-dev&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;23-cypress&#34;&gt;2.3 打开Cypress&lt;/h4&gt;
+&lt;p&gt;以下有多种打开方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;./node_modules/.bin/cypress open&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;$(npm bin)/cypress open&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;npx cypress open&lt;/code&gt;，需要&lt;code&gt;npm &amp;gt; v5.2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;yarn run cypress open&lt;/code&gt;，需要提前安装&lt;code&gt;yarn&lt;/code&gt;，命令如下：&lt;code&gt;npm install -g yarn&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后Cypress会启动。&lt;/p&gt;
+&lt;h4 id=&#34;23-npm&#34;&gt;2.3 添加npm脚本&lt;/h4&gt;
+&lt;p&gt;如果启动正常，你可以在package.json中添加启动脚本，方便Cypress启动，如下：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;cypress:open&amp;quot;: &amp;quot;cypress open&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;然后就可以像下面那样启动Cypress了&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;npm run cypress:open
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;启动后会有&#34;Welcome to Cypress！&#34;字样出现，说明已经启动成功。&lt;/p&gt;
+&lt;h3 id=&#34;3-e2e&#34;&gt;3. 编写第一个E2E测试用例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击E2E Testing&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择对应的浏览器，进入页面后会看到一些例子，这个是Cypress自带的，在目录在.cypress\cypress\e2e下，本次我们选择Edge，然后点击&lt;code&gt;Start E2E Testing in Edge&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后点击右上角&lt;code&gt;+ New Spec&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再然后点击右侧&lt;code&gt;Create new empty spec&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;默认或输入新名称，然后点击&lt;code&gt;Create Spec&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以看到一个新的用例展示，可以直接支持，或者关掉窗口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;```
+  # cypress\e2e\spec.cy.js&lt;/p&gt;
+&lt;p&gt;describe(&#39;empty spec&#39;, () =&amp;gt; {
+    it(&#39;passes&#39;, () =&amp;gt; {
+      cy.visit(&#39;https://example.cypress.io&#39;)
+    })
+  })
+  ```&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后就能在用例列表中找到他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4&#34;&gt;4. 写你第一个自己的测试用例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;先让我们看一个通过性测试的用例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;My First Test&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span class=&#34;ss&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; {
+  &lt;span class=&#34;nv&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Does not do much!&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span class=&#34;ss&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; {
+    &lt;span class=&#34;nv&#34;&gt;expect&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;to&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;equal&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+  }&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;My&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;First&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Test&lt;/span&gt;
+√ &lt;span class=&#34;nv&#34;&gt;Does&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;much&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;TEST&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;BODY&lt;/span&gt;
+        &lt;span class=&#34;nv&#34;&gt;assert&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;expected&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equal&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;尽管这个测试用例没有什么实际用处，但却是我们第一个执行通过的用例。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;再看一个不能过的测试用例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;My First Test&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span class=&#34;ss&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; {
+  &lt;span class=&#34;nv&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Does not do much!&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span class=&#34;ss&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; {
+    &lt;span class=&#34;nv&#34;&gt;expect&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;to&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;equal&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+  }&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+}&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;nv&#34;&gt;My&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;First&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Test&lt;/span&gt;
+✖ &lt;span class=&#34;nv&#34;&gt;Does&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;much&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;TEST&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;BODY&lt;/span&gt;
+    &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;nv&#34;&gt;assert&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;expected&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equal&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;false&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;  &lt;span class=&#34;nv&#34;&gt;AssertionError&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;expected&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;equal&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;false&lt;/span&gt;
+      &lt;span class=&#34;nv&#34;&gt;cypress&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;e2e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;false&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;cy&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;js&lt;/span&gt;:&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;:&lt;span class=&#34;mi&#34;&gt;21&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;测试结果中会断言失败的地方高亮显示出来，并指出问题所在地方。&lt;/p&gt;
+&lt;h3 id=&#34;5&#34;&gt;5. 写一个真正的测试用例&lt;/h3&gt;
+&lt;p&gt;通常测试包括3个阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;编写测试用例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对执行结果做一个断言&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在 ，我们通过Cypress来操作这些步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;访问一个页面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查询一个元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;元素间的交互&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;页面内容的断言&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;步骤1：访问一个页面（visit），如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;describe(&amp;#39;第一个测试&amp;#39;, () =&amp;gt; {
+  it(&amp;#39;打开SiCAP&amp;#39;, () =&amp;gt; {
+    cy.visit(&amp;#39;https://192.168.214.55&amp;#39;)
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以看到第一行显示describe的内容，第二行显示it的内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TEST BODY显示所有的请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右侧显示每一个请求的执行情况，当然你需要使用鼠标划过对应的请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;步骤2：查找一个元素（get、contains），如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;describe(&amp;#39;第一个测试&amp;#39;, () =&amp;gt; {
+  it(&amp;#39;打开SiCAP&amp;#39;, () =&amp;gt; {
+    cy.visit(&amp;#39;https://192.168.214.55&amp;#39;)
+    cy.get(&amp;#39;#username&amp;#39;)
+    cy.contains(&amp;#39;登 录&amp;#39;)
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可以看到第一行显示describe的内容，第二行显示it的内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TEST BODY显示所有的请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在对应的请求中，我们可以清晰的看到程序找到了&lt;code&gt;#username&lt;/code&gt;，&lt;code&gt;登 录&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;步骤3：给文本框输入值（type），如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;k&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登录SiCAP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;passes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://192.168.214.55/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#username&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#password&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.login_btn&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;contains&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登 录&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;click&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户和密码正常输入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;步骤4：断言（should），如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;k&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登录SiCAP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;passes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://192.168.214.55/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#username&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#password&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.login_btn&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;contains&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登 录&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;click&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户和密码正常断言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;步骤5：点击一个元素（click），如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;k&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登录SiCAP&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;passes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://192.168.214.55/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#username&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;#password&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;should&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;have.value&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;p@ssw0rd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.login_btn&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;contains&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;登 录&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;click&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;执行结果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击后，正常进入系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6&#34;&gt;6. 执行测试用例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;启动server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问你的server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置Cypress&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cypress\cypress.config.js&lt;/p&gt;
+&lt;p&gt;如配置基础url，在后面的访问页面的时候就不需要写baseUrl。&lt;/p&gt;
+&lt;p&gt;```
+  const { defineConfig } = require(&#39;cypress&#39;)&lt;/p&gt;
+&lt;p&gt;module.exports = defineConfig({
+    e2e: {
+      baseUrl: &#39;http://localhost:8080&#39;
+    }
+  })
+  ```&lt;/p&gt;
+&lt;p&gt;配置后，访问链接如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;describe(&#39;The Home Page&#39;, () =&amp;gt; {
+    it(&#39;successfully loads&#39;, () =&amp;gt; {
+      cy.visit(&#39;/&#39;)
+    })
+  })&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;61&#34;&gt;6.1 测试策略&lt;/h4&gt;
+&lt;p&gt;在执行测试用例前，有时候需要做一些前置动作，所以Cypress安排了一个特定的命令来执行它，如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cy.exec()&lt;/code&gt;：用来执行系统命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cy.task()&lt;/code&gt;：通过 setupNodeEvents 函数在 Node 中运行代码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cy.request()&lt;/code&gt;：用来发出HTTP请求&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你想在你的服务上执行npm，你可以加一个before或者beforeEach沟子去执行一个npm任务。如下：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;The Home Page&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;beforeEach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reset&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;seed&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;database&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prior&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;every&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;npm run db:reset &amp;amp;&amp;amp; npm run db:seed&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+
+  &lt;span class=&#34;n&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;successfully loads&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;再如，你可以在你的测试用例中，执行多个请求。&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;describe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;The Home Page&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;beforeEach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reset&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;seed&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;database&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prior&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;every&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;npm run db:reset &amp;amp;&amp;amp; npm run db:seed&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;seed&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;we&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;our&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/test/seed/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;First Post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;authorId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;seed&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;user&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;we&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;can&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;our&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/test/seed/user&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Jane&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;its&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;as&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;currentUser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+
+  &lt;span class=&#34;n&#34;&gt;it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;successfully loads&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;currentUser&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;will&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;now&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;point&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;body&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;that&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;we&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;could&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;use&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;work&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;some&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;way&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;cy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;注意：第一 次测试时的登录不要去用UI，请使用request。&lt;/p&gt;
+&lt;h3 id=&#34;7&#34;&gt;7. 命令&lt;/h3&gt;
+&lt;h4 id=&#34;71&#34;&gt;7.1 查找页面元素的基本方法&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;注释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;get()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;通过选择器或别名获取一个或多个 DOM 元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;find()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取特定选择器的下位DOM元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;contains()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取包含文本的 DOM 元素，可模糊匹配。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;72&#34;&gt;7.2 查找页面元素的辅助方法&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;注释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;children()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组DOM元素中每个DOM元素的子元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;parents()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组DOM元素的父DOM元素。请注意 .parents() 在 DOM 树中向上移动多个级别，而不是.parent ()命令在 DOM 树中向上移动一个级别。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;parent()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组DOM元素的父DOM元素。请注意，与.parents（）命令相反， .parent() 仅沿DOM树向上移动一个级别。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;siblings()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取同级DOM元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;first()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组DOM元素中的第一个DOM元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;last()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组DOM元素中的最后一个DOM元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;next()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组 DOM 元素中每个 DOM 元素的紧随其后的元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;nextAll()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;在一组匹配的 DOM 元素中获取每个 DOM 元素的所有后续元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;nextUntil(selector)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组匹配的 DOM 元素中每个 DOM 元素的所有后续元素，但不包括提供的元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;prev()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组元素中每个元素的前一个同级元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;prevUntil()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取一组匹配的 DOM 元素中每个 DOM 元素的所有前置元素，但不包括提供的元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;each()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;遍历类似结构的数组（具有 length 属性的数组或对象）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;eq()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;在一个元素数组的特定索引处获取一个DOM元素。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;closest()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取与选择器相匹配的第一个DOM元素(无论是它本身还是它的一个祖先)。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;73&#34;&gt;7.3 点击命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;click()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;单击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;dbclick()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;双击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;rightclick()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;右键点击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;74&#34;&gt;7.4 操作页面元素的命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;type()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;输入框输入文本元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;focus()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;聚焦DOM元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;blur()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;DOM元素失去焦点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;clear()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;清空DOM元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;submit()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;提交表单&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;click()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;点击DOM元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;dbclick()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;双击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;rightclick()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;右键点击&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;check()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;选中单选框、复选框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;uncheck()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;取消选中复选框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;select()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;select&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;scrollIntoView()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;将DOM元素滑动到可视区域&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;trigger()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;DOM元素上触发事件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;scrollTo()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;滑动滚动条&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;75&#34;&gt;7.5 获取页面全局对象的命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;window()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的窗口对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;title()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;url()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;location()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的全局window.location对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;document()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的全局windowd.document对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;hash()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取当前页面的URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;root()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取根DOM元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;76&#34;&gt;7.6 操作浏览器的命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;go()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;浏览器前进、后退&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;reload()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;刷新页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;viewport()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;控制浏览器窗口的大小和方向&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;visit()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;访问指定的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;wait()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;强制等待&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;77&#34;&gt;7.7 操作上一条命令返回结果的命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;then()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;将上一条命令返回的结果注入到下一个命令中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;and()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;创建一个断言。断言将自动重试，直到它们通过或超时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;should()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;and()的别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;invoke()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;对上一条命令的结果执行调用方法操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;its()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取对象的属性值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;as()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;取别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;within()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;限定命令作用域&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;each()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;遍历当前元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;spread()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;将数组内容作为单独的参数传回到回调函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;78&#34;&gt;7.8 操作文件相关命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;fixture()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;加载数据文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;readFile()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;读取文件并生成其内容。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;writeFile()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;把指定同内容写入一个文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;79&#34;&gt;7.9 网络相关命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;request()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;发送HTTP请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;route()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;用来管理网络请求的行为&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;server()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;启动服务器以开始将响应路由到cy.route()并更改网络请求的行为。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;intercept()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;监视和存根网络请求和响应。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;710-cookie&#34;&gt;7.10 操作 Cookie 相关命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;getCookies()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;获取所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;setCookie()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;设置一个&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;clearCookie()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;清除指定名称的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;clearCookies()&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;清除所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;711-cypress-api&#34;&gt;7.11 Cypress API 命令大全&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;命令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.Commands&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.Cookies&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.config&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.env&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.dom&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.platform&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.version&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.arch&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.spec&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.browser&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Cypress.log&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;8&#34;&gt;8. 断言&lt;/h3&gt;
+&lt;h4 id=&#34;81-bdd&#34;&gt;8.1 BDD 断言&lt;/h4&gt;
+&lt;p&gt;这些链接器可用于 BDD 断言（&lt;code&gt;expect&lt;/code&gt;/&lt;code&gt;should&lt;/code&gt;）。 列出的别名可以与其原始链接器互换使用。 您可以在 &lt;a href=&#34;http://chaijs.com/api/bdd/&#34;&gt;此处&lt;/a&gt; 查看可用 BDD Chai 断言的完整列表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chainer&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;not&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(name).to.not.equal(&#39;Jane&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deep&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(obj).to.deep.equal({ name: &#39;Jane&#39; })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nested&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect({a: {b: [&#39;x&#39;, &#39;y&#39;]}}).to.have.nested.property(&#39;a.b[1]&#39;)&lt;/code&gt;&lt;br&gt;&lt;code&gt;expect({a: {b: [&#39;x&#39;, &#39;y&#39;]}}).to.nested.include({&#39;a.b[1]&#39;: &#39;y&#39;})&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ordered&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect([1, 2]).to.have.ordered.members([1, 2]).but.not.have.ordered.members([2, 1])&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;any&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(arr).to.have.any.keys(&#39;age&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;all&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(arr).to.have.all.keys(&#39;name&#39;, &#39;age&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;a(&lt;em&gt;type&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; an&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;test&#39;).to.be.a(&#39;string&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;include(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; contain, includes, contains&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect([1,2,3]).to.include(2)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ok&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(undefined).to.not.be.ok&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(true).to.be.true&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(false).to.be.false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(null).to.be.null&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;undefined&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(undefined).to.be.undefined&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exist&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(myVar).to.exist&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;empty&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect([]).to.be.empty&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;arguments&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; Arguments&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(arguments).to.be.arguments&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;equal(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; equals, eq&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(42).to.equal(42)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deep.equal(&lt;em&gt;value&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect({ name: &#39;Jane&#39; }).to.deep.equal({ name: &#39;Jane&#39; })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eql(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; eqls&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect({ name: &#39;Jane&#39; }).to.eql({ name: &#39;Jane&#39; })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;greaterThan(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; gt, above&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(10).to.be.greaterThan(5)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;least(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; gte&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(10).to.be.at.least(10)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lessThan(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; lt, below&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(5).to.be.lessThan(10)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;most(&lt;em&gt;value&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; lte&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;test&#39;).to.have.length.of.at.most(4)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;within(&lt;em&gt;start&lt;/em&gt;, &lt;em&gt;finish&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(7).to.be.within(5,10)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;instanceOf(&lt;em&gt;constructor&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; instanceof&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect([1, 2, 3]).to.be.instanceOf(Array)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;property(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(obj).to.have.property(&#39;name&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;deep.property(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(deepObj).to.have.deep.property(&#39;tests[1]&#39;, &#39;e2e&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ownProperty(&lt;em&gt;name&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; haveOwnProperty, own.property&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;test&#39;).to.have.ownProperty(&#39;length&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ownPropertyDescriptor(&lt;em&gt;name&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; haveOwnPropertyDescriptor&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect({a: 1}).to.have.ownPropertyDescriptor(&#39;a&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lengthOf(&lt;em&gt;value&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;test&#39;).to.have.lengthOf(3)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;match(&lt;em&gt;RegExp&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; matches&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;testing&#39;).to.match(/^test/)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string(&lt;em&gt;string&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(&#39;testing&#39;).to.have.string(&#39;test&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;keys(&lt;em&gt;key1&lt;/em&gt;, &lt;em&gt;[key2]&lt;/em&gt;, &lt;em&gt;[...]&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; key&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect({ pass: 1, fail: 2 }).to.have.keys(&#39;pass&#39;, &#39;fail&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;throw(&lt;em&gt;constructor&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; throws, Throw&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(fn).to.throw(Error)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;respondTo(&lt;em&gt;method&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; respondsTo&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(obj).to.respondTo(&#39;getName&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;itself&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(Foo).itself.to.respondTo(&#39;bar&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;satisfy(&lt;em&gt;method&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; satisfies&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(1).to.satisfy((num) =&amp;gt; { return num &amp;gt; 0 })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;closeTo(&lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;delta&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; approximately&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(1.5).to.be.closeTo(1, 0.5)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;members(&lt;em&gt;set&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect([1, 2, 3]).to.include.members([3, 2])&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;oneOf(&lt;em&gt;values&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(2).to.be.oneOf([1,2,3])&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;change(&lt;em&gt;function&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; changes&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(fn).to.change(obj, &#39;val&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;increase(&lt;em&gt;function&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; increases&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(fn).to.increase(obj, &#39;val&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;decrease(&lt;em&gt;function&lt;/em&gt;)&lt;br&gt;&lt;strong&gt;Aliases:&lt;/strong&gt; decreases&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(fn).to.decrease(obj, &#39;val&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These getters are also available for BDD assertions. They don&#39;t actually do anything, but they enable you to write clear, english sentences.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chainable getters&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;to&lt;/code&gt;, &lt;code&gt;be&lt;/code&gt;, &lt;code&gt;been&lt;/code&gt;, &lt;code&gt;is&lt;/code&gt;, &lt;code&gt;that&lt;/code&gt;, &lt;code&gt;which&lt;/code&gt;, &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;has&lt;/code&gt;, &lt;code&gt;have&lt;/code&gt;, &lt;code&gt;with&lt;/code&gt;, &lt;code&gt;at&lt;/code&gt;, &lt;code&gt;of&lt;/code&gt;, &lt;code&gt;same&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;82-tdd&#34;&gt;8.2 TDD 断言&lt;/h4&gt;
+&lt;p&gt;这些断言可用于 TDD 断言（&lt;code&gt;assert&lt;/code&gt;）。 您可以在 &lt;a href=&#34;http://chaijs.com/api/assert/&#34;&gt;此处&lt;/a&gt; 查看可用 Chai 断言的完整列表。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Assertion&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.isOk(&lt;em&gt;object&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isOk(&#39;everything&#39;, &#39;everything is ok&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotOk(&lt;em&gt;object&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotOk(false, &#39;this will pass&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.equal(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.equal(3, 3, &#39;vals equal&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.notEqual(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.notEqual(3, 4, &#39;vals not equal&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.strictEqual(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.strictEqual(true, true, &#39;bools strict eq&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.notStrictEqual(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.notStrictEqual(5, &#39;5&#39;, &#39;not strict eq&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.deepEqual(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.deepEqual({ id: &#39;1&#39; }, { id: &#39;1&#39; })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.notDeepEqual(&lt;em&gt;actual&lt;/em&gt;, &lt;em&gt;expected&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.notDeepEqual({ id: &#39;1&#39; }, { id: &#39;2&#39; })&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isAbove(&lt;em&gt;valueToCheck&lt;/em&gt;, &lt;em&gt;valueToBeAbove&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isAbove(6, 1, &#39;6 greater than 1&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isAtLeast(&lt;em&gt;valueToCheck&lt;/em&gt;, &lt;em&gt;valueToBeAtLeast&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isAtLeast(5, 2, &#39;5 gt or eq to 2&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isBelow(&lt;em&gt;valueToCheck&lt;/em&gt;, &lt;em&gt;valueToBeBelow&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isBelow(3, 6, &#39;3 strict lt 6&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isAtMost(&lt;em&gt;valueToCheck&lt;/em&gt;, &lt;em&gt;valueToBeAtMost&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isAtMost(4, 4, &#39;4 lt or eq to 4&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isTrue(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isTrue(true, &#39;this val is true&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotTrue(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotTrue(&#39;tests are no fun&#39;, &#39;val not true&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isFalse(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isFalse(false, &#39;val is false&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotFalse(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotFalse(&#39;tests are fun&#39;, &#39;val not false&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNull(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNull(err, &#39;there was no error&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotNull(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotNull(&#39;hello&#39;, &#39;is not null&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNaN(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNaN(NaN, &#39;NaN is NaN&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotNaN(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotNaN(5, &#39;5 is not NaN&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.exists(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.exists(5, &#39;5 is not null or undefined&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.notExists(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.notExists(null, &#39;val is null or undefined&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isUndefined(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isUndefined(undefined, &#39;val is undefined&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isDefined(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isDefined(&#39;hello&#39;, &#39;val has been defined&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isFunction(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isFunction(x =&amp;gt; x * x, &#39;val is func&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotFunction(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotFunction(5, &#39;val not funct&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isObject(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isObject({num: 5}, &#39;val is object&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotObject(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotObject(3, &#39;val not object&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isArray(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isArray([&#39;unit&#39;, &#39;e2e&#39;], &#39;val is array&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotArray(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotArray(&#39;e2e&#39;, &#39;val not array&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isString(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isString(&#39;e2e&#39;, &#39;val is string&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotString(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotString(2, &#39;val not string&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNumber(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNumber(2, &#39;val is number&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotNumber(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotNumber(&#39;e2e&#39;, &#39;val not number&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isFinite(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isFinite(&#39;e2e&#39;, &#39;val is finite&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isBoolean(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isBoolean(true, &#39;val is bool&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.isNotBoolean(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.isNotBoolean(&#39;true&#39;, &#39;val not bool&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.typeOf(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.typeOf(&#39;e2e&#39;, &#39;string&#39;, &#39;val is string&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;.notTypeOf(&lt;em&gt;value&lt;/em&gt;, &lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[message]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;assert.notTypeOf(&#39;e2e&#39;, &#39;number&#39;, &#39;val not number&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;83-chai-jquery&#34;&gt;8.3 Chai-jQuery&lt;/h4&gt;
+&lt;p&gt;这些链接器在断言 DOM 对象时可用。 在使用 DOM 命令后，您通常会使用这些链接器，例如： &lt;a href=&#34;https://docs.cypress.io/api/commands/get&#34;&gt;&lt;code&gt;cy.get()&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://docs.cypress.io/api/commands/contains&#34;&gt;&lt;code&gt;cy.contains()&lt;/code&gt;&lt;/a&gt;,等。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chainers&lt;/th&gt;
+&lt;th&gt;Assertion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;attr(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.attr(&#39;foo&#39;, &#39;bar&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;prop(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.prop(&#39;disabled&#39;, false)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;css(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.css(&#39;background-color&#39;, &#39;rgb(0, 0, 0)&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;data(&lt;em&gt;name&lt;/em&gt;, &lt;em&gt;[value]&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.data(&#39;foo&#39;, &#39;bar&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;class(&lt;em&gt;className&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.class(&#39;foo&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id(&lt;em&gt;id&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.id(&#39;foo&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;html(&lt;em&gt;html&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.html(&#39;I love testing&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;text(&lt;em&gt;text&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.text(&#39;I love testing&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value(&lt;em&gt;value&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.value(&#39;test@dev.com&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;visible&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.be.visible&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hidden&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.be.hidden&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;selected&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($option).not.to.be.selected&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;checked&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($input).not.to.be.checked&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;focus[ed]&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($input).not.to.be.focused&lt;/code&gt;&lt;br&gt;&lt;code&gt;expect($input).to.have.focus&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;enabled&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($input).to.be.enabled&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;disabled&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($input).to.be.disabled&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;empty&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).not.to.be.empty&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exist&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($nonexistent).not.to.exist&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;match(&lt;em&gt;selector&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($emptyEl).to.match(&#39;:empty&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;contain(&lt;em&gt;text&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.contain(&#39;text&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;descendants(&lt;em&gt;selector&lt;/em&gt;)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect($el).to.have.descendants(&#39;div&#39;)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;84-sinon-chai&#34;&gt;8.4 Sinon-Chai&lt;/h4&gt;
+&lt;p&gt;这些链接器用于带有 &lt;a href=&#34;https://docs.cypress.io/api/commands/stub&#34;&gt;&lt;code&gt;cy.stub()&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://docs.cypress.io/api/commands/spy&#34;&gt;&lt;code&gt;cy.spy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sinon.JS property/method&lt;/th&gt;
+&lt;th&gt;Assertion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;called&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.called&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;callCount&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.have.callCount(n)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledOnce&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledOnce&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledTwice&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledTwice&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledThrice&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledThrice&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledBefore&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy1).to.be.calledBefore(spy2)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledAfter&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy1).to.be.calledAfter(spy2)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledWithNew&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledWithNew&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysCalledWithNew&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.always.be.calledWithNew&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledOn&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledOn(context)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysCalledOn&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.always.be.calledOn(context)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledWith&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledWith(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysCalledWith&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.always.be.calledWith(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledWithExactly&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledWithExactly(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysCalledWithExactly&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.always.be.calledWithExactly(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;calledWithMatch&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.be.calledWithMatch(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysCalledWithMatch&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.always.be.calledWithMatch(...args)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;returned&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.have.returned(returnVal)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysReturned&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.have.always.returned(returnVal)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;threw&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.have.thrown(errorObjOrErrorTypeStringOrNothing)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alwaysThrew&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;expect(spy).to.have.always.thrown(errorObjOrErrorTypeStringOrNothing)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
+      <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
+       
+      <category>笔记</category> 
+      
+    </item>
     
     <item> 
       <title>如何用自动化测试搞垮团队</title>  
@@ -118,7 +1584,7 @@
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -147,10 +1613,10 @@
 &lt;h3 id=&#34;_4&#34;&gt;测开&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://testerhome.com/&#34;&gt;测试之家&lt;/a&gt; | &lt;a href=&#34;https://www.github.com&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -1283,7 +2749,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -2058,7 +3524,7 @@ echo $?
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -2445,7 +3911,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker container cp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;containID&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;:&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;/path/to/file&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -4327,7 +5793,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -5658,7 +7124,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -6479,7 +7945,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -7178,7 +8644,7 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -8384,7 +9850,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -8537,7 +10003,7 @@ patch:
     - schema: luna_pinyin_simp
     - schema: wubi86
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/debian+kde安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde安装过程.html</guid>
        
@@ -8992,7 +10458,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/loca
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/debian+xfce安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce安装过程.html</guid>
        
@@ -9999,7 +11465,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -10101,7 +11567,7 @@ style:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/debian+gnome安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome安装过程.html</guid>
        
@@ -10268,7 +11734,7 @@ reboot
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -10580,7 +12046,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alter USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -10657,7 +12123,7 @@ systemctl status mysqld
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root@localhost ~&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;2022&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;年&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;月&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;日&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;星期四&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CST&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -11132,7 +12598,7 @@ except IndexError as e:
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -11637,7 +13103,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -12005,7 +13471,7 @@ shenyi = 123456
 &lt;span class=&#34;c&#34;&gt;保存未加密的密码(yes/no)? yes&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;取出版本 0。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -12065,7 +13531,7 @@ shenyi = 123456
 &lt;p&gt;&lt;a href=&#34;https://srf.baidu.com/site/guanwang_linux/index.html&#34;&gt;百度输入法&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/Debain必备软件.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain必备软件.html</guid>
        
@@ -12239,7 +13705,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;导出特定表的结构&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mysqldump&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uroot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B数据库名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;tab&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;le&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -12446,7 +13912,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -12612,7 +14078,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -12811,7 +14277,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -12862,7 +14328,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-06-02 13:12:58</pubDate>  
+      <pubDate>2022-06-15 09:07:36</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

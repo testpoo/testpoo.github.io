@@ -42,87 +42,81 @@
         <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
       </div>
       <div class="articles">
-        <div class="category">分类：问题解决</div>
+        <div class="category">分类：笔记</div>
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共3346个字</span></a></li>
+            <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span><span>2022-06-21&nbsp;&nbsp;共939个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共50320个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span><span>2022-05-24&nbsp;&nbsp;共6145个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共18641个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共102613个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span><span>2021-09-15&nbsp;&nbsp;共39809个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span><span>2020-04-03&nbsp;&nbsp;共14659个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共63734个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共7058个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span><span>1999-12-31&nbsp;&nbsp;共1545个字</span></a></li>
             
           </ul>
         </div>
-        <div class="item-num">总共1项</div>
+        <div class="item-num">总共10项</div>
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-06-21 14:36:10</span></div>
+      <div class="header"><span>面试问答</span><span>一个80后老人，专注测试领域<br />最后更新于2022-06-21 14:36:10</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
-<ul>
-<li><a href="#vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</a></li>
-<li><a href="#vmwarecentos8">VMware安装CentOS相差8小时解决方法</a></li>
-</ul>
+<ul></ul>
 </div>
-<h3 id="vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</h3>
 <ol>
-<li>
-<p>新建虚拟机</p>
-</li>
-<li>
-<p>在虚拟机工作目录下找到.vmx格式文件</p>
-</li>
-<li>
-<p>编辑该文件，在文件中添加：<code>firmware = "efi"</code></p>
-</li>
+<li>你来我们公司的时候，有没有提前了解一下我公司的情况？</li>
 </ol>
-<h3 id="vmwarecentos8">VMware安装CentOS相差8小时解决方法</h3>
-<ul>
-<li>如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="o">-</span><span class="mi">08</span><span class="w"></span>
-</code></pre></div>
-
-<ul>
-<li>将/etc/localtime指向上海时间</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</code></pre></div>
-
-<p>然后再date可以看到CST了。</p>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
-</code></pre></div>
-
-<ul>
-<li>下载ntp（需要联网）</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># yum -y install ntp
-</code></pre></div>
-
-<ul>
-<li>停止旧的ntp</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># service ntpd stop
-</code></pre></div>
-
-<ul>
-<li>校对时间</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># ntpdate cn.pool.ntp.org
-</code></pre></div>
-
-<ul>
-<li>将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># hwclock -w
-</code></pre></div>
-
-<ul>
-<li>查看date</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
-</code></pre></div></div>
+<p>考察面试者的自我学习能力与对将要做的事情的把控能力，避免盲目性，提高可塑性。</p>
+<ol>
+<li>你最近3~5年的职业规划是什么？</li>
+</ol>
+<p>考察面试者的职业发展方向是否与当前职位相符？从侧面看出其稳定性。</p>
+<ol>
+<li>请详细介绍一个你以前参与的项目，可以从做了什么、对你的帮助等内容介绍？</li>
+</ol>
+<p>考察面试者在以往的测试工作中的能力提升方面，可以看出其工作深度。另外，通过其介绍过程，可以了解面试者的沟通与交流能力。</p>
+<ol>
+<li>工作过程中，是否曾主动总结过什么东西与他人分享？具体案例？</li>
+</ol>
+<p>考察面试者的心态与学习能力，是否更容易融入团队。</p>
+<ol>
+<li>通常做测试时会碰到，提交的某个bug开发人员不认同你的观点？这时你怎么办？</li>
+</ol>
+<p>考察面试者是否坚持自己的价值观？是否具备协调沟通处理问题能力。</p>
+<ol>
+<li>有没有看过什么测试书，具体是哪本？带给你的收获是？</li>
+</ol>
+<p>考察面试者是否真正热爱测试职业，是否付出过努力。从中也可以看出这个测试人员是否有上进心？是否有求知心。</p>
+<ol>
+<li>某个项目上线后，出现问题，恰巧你负责的，你如何应对这突如其来的事件？</li>
+</ol>
+<p>考察面试者应对问题的压力，责任感，及处理问题的能力。</p>
+<ol>
+<li>你平时都有什么业余爱好？</li>
+</ol>
+<p>考察面试者的性格特点。</p>
+<ol>
+<li>编写过什么测试资料，文档编写能力如何？</li>
+</ol>
+<p>考察面试者的文字功底，尤其是测试人员，必须能够用文字表达自己的观点。</p>
+<ol>
+<li>你自己所期待加入的测试团队是什么样的？</li>
+</ol>
+<p>考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！</p></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

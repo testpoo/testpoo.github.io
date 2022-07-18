@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+kde安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-18 17:41:45</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-18 17:41:45</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -77,15 +77,10 @@
 <li><a href="#5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</a></li>
 <li><a href="#6">6. 修改源</a></li>
 <li><a href="#7">7. 安装软件</a></li>
-<li><a href="#8">8. 删除不需要软件</a></li>
-<li><a href="#9">9. 安装图标主题</a></li>
-<li><a href="#10">10. 安装窗口装饰</a></li>
-<li><a href="#11-sddm">11. 安装SDDM主题</a></li>
-<li><a href="#12">12. 解决无法更换头像</a></li>
-<li><a href="#13">13. 修改设置</a></li>
-<li><a href="#14">14. 安装第三方软件</a></li>
-<li><a href="#15">15. 缺少驱动</a></li>
-<li><a href="#16">16. 安装输入法</a></li>
+<li><a href="#8">8. 设置</a></li>
+<li><a href="#9">9. 安装第三方软件</a></li>
+<li><a href="#10">10. 缺少驱动</a></li>
+<li><a href="#11">11. 安装输入法</a></li>
 </ul>
 </div>
 <h3 id="1">1. 下载链接</h3>
@@ -117,71 +112,25 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 </code></pre></div>
 
 <h3 id="7">7. 安装软件</h3>
-<p><code>sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi</code></p>
-<h3 id="8">8. 删除不需要软件</h3>
-<p><code>apt autoremove --purge kmail kaddressbook korganizer okular knotes akregator konqueror kwalletmanager k3b libreoffice*</code></p>
-<h3 id="9">9. 安装图标主题</h3>
+<p><code>apt install openbox xinit tint2 jgmenu sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light</code></p>
+<div class="codehilite"><pre><span></span><code>light-亮度
+slock-锁屏
+jgmenu-菜单
+neofetch-系统信息
+tint2-任务栏
+sakura-设置背景
+lxappearance-外观
+pulseaudio-声音驱动
+blueman-蓝牙
+</code></pre></div>
+
+<h3 id="8">8. 设置</h3>
 <ul>
-<li>
-<p>通过<code>https://github.com/yeyushengfan258/Win11-icon-theme</code>下载</p>
-</li>
-<li>
-<p>进入<code>Win11-icon-theme</code>目录，执行<code>./install.sh -a</code>命令</p>
-</li>
+<li>openbox</li>
+<li>jgmenu</li>
+<li>tint2</li>
 </ul>
-<h3 id="10">10. 安装窗口装饰</h3>
-<ul>
-<li>
-<p>通过<code>https://github.com/vinceliuice/Colloid-kde/</code>下载</p>
-</li>
-<li>
-<p>安装窗口装饰元素<code>Colloid-light-round</code>到<code>~/.local/share/aurorae/themes/</code>下</p>
-</li>
-</ul>
-<h3 id="11-sddm">11. 安装SDDM主题</h3>
-<ul>
-<li>
-<p>通过<code>https://github.com/MarianArlt/kde-plasma-chili</code>下载</p>
-</li>
-<li>
-<p>进入<code>kde-plasma-chili</code>目录，执行<code>cp -r kde-plasma-chili /usr/share/sddm/themes</code>命令</p>
-</li>
-</ul>
-<h3 id="12">12. 解决无法更换头像</h3>
-<ul>
-<li>这是账号服务的一个缺陷: 打开<code>sudo nano /usr/lib/systemd/system/accounts-daemon.service</code>文件，修改<code>PrivateTmp=true</code>为<code>PrivateTmp=false</code>，然后重启即可解决问题。</li>
-</ul>
-<h3 id="13">13. 修改设置</h3>
-<ul>
-<li>
-<p>桌面背景修改：设置--&gt;更改壁纸--&gt;壁纸类型：每日一图--&gt;提供：必应</p>
-</li>
-<li>
-<p>双击打开文件：设置--&gt;点击文件或文件夹时--&gt;选中他们</p>
-</li>
-<li>
-<p>去掉程序特效：设置--&gt;外观--&gt;程序启动动效，沟选“无动效”，沟去“启动动效”。</p>
-</li>
-<li>
-<p>去掉欢迎屏幕：设置--&gt;外观--&gt;欢迎屏幕选无。</p>
-</li>
-<li>
-<p>锁屏背景修改：设置--&gt;工作区行为--&gt;锁屏--&gt;配置--&gt;壁纸类型：每日一图--&gt;提供：必应</p>
-</li>
-<li>
-<p>修改登录画面：设置--&gt;开机与关机--&gt;登录屏幕(SDDM)--&gt;选择安装的新画面</p>
-</li>
-<li>
-<p>修改用户头像：设置--&gt;用户--&gt;修改用户头像</p>
-</li>
-<li>
-<p>触摸板设置：设置--&gt;输入设备--&gt;触摸板--&gt;手指轻触</p>
-</li>
-<li>
-<p>绽放设置：设置--&gt;显示器配置--&gt;全局缩放率：125%</p>
-</li>
-</ul>
-<h3 id="14">14. 安装第三方软件</h3>
+<h3 id="9">9. 安装第三方软件</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">wps</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">linux</span><span class="o">.</span><span class="n">wps</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span>
 <span class="n">baidu网盘</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pan</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span> <span class="err">需要依赖</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="o">.</span><span class="n">csdn</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">weixin_45447477</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">115188938</span>
 <span class="n">vscode</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">code</span><span class="o">.</span><span class="n">visualstudio</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
@@ -192,12 +141,12 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 <span class="n">Motrix</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">motrix</span><span class="o">.</span><span class="n">app</span><span class="o">/</span>
 </code></pre></div>
 
-<h3 id="15">15. 缺少驱动</h3>
+<h3 id="10">10. 缺少驱动</h3>
 <div class="codehilite"><pre><span></span><code># 添加驱动
 https://packages.debian.org/bookworm/firmware-misc-nonfree
 </code></pre></div>
 
-<h3 id="16">16. 安装输入法</h3>
+<h3 id="11">11. 安装输入法</h3>
 <div class="codehilite"><pre><span></span><code># sudo apt install ibus-rime librime-data-wubi
 # /home/poo/.config/ibus/rime/default.custom.yaml
 sudo apt install fcitx-rime librime-data-wubi

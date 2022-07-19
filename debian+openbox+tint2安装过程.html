@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7103个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共17837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共8556个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-18 17:41:45</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-19 09:24:18</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -127,9 +127,137 @@ blueman-蓝牙
 <h3 id="8">8. 设置</h3>
 <ul>
 <li>openbox</li>
+</ul>
+<div class="codehilite"><pre><span></span><code># autostart.sh
+
+tint2 &amp;
+fcitx &amp;
+blueman-applet &amp;
+feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code># keyboard中加入如下代码
+
+    <span class="c">&lt;!--自定义--&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-mute @DEFAULT_SINK@ toggle<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ -5%<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ +5%<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>light -A 5<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>light -U 5<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+</code></pre></div>
+
+<ul>
 <li>jgmenu</li>
+</ul>
+<div class="codehilite"><pre><span></span><code># jgmenurc
+
+stay_alive           = 1
+tint2_look           = 0
+position_mode        = fixed
+terminal_exec        = termite
+terminal_args        = -e
+menu_width           = 200
+menu_padding_top     = 40
+menu_padding_right   = 2
+menu_padding_bottom  = 5
+menu_padding_left    = 2
+menu_radius          = 0
+menu_border          = 1
+menu_halign          = left
+sub_hover_action     = 1
+item_margin_y        = 5
+item_height          = 30
+item_padding_x       = 8
+item_radius          = 0
+item_border          = 0
+sep_height           = 5
+font                 = Ubuntu 15px
+icon_size            = 30
+color_menu_bg        = #eeeeee 100
+color_norm_bg        = #2b303b 0
+color_norm_fg        = #000000 100
+color_sel_bg         = #8fa1b3 60
+color_sel_fg         = #2b303b 100
+color_sep_fg         = #8fa1b3 40
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code># <span class="nv">append</span>.<span class="nv">csv</span>
+
+<span class="o">^</span><span class="nv">sep</span><span class="ss">()</span>
+退出,<span class="o">^</span><span class="nv">checkout</span><span class="ss">(</span><span class="k">exit</span><span class="ss">)</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">shutdown</span>
+<span class="o">^</span><span class="nv">tag</span><span class="ss">(</span><span class="k">exit</span><span class="ss">)</span>
+锁屏,<span class="nv">slock</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">lock</span><span class="o">-</span><span class="nv">screen</span>
+退出,<span class="nv">openbox</span> <span class="o">--</span><span class="k">exit</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">out</span>
+挂起,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">suspend</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">out</span>
+休眠,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">hibernate</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">hibernate</span>
+重启,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">reboot</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">reboot</span>
+关机,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">poweroff</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">shutdown</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">prepend</span><span class="p">.</span><span class="n">csv</span><span class="w"></span>
+
+<span class="nv">@rect</span><span class="p">,,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nf">left</span><span class="p">,</span><span class="k">top</span><span class="p">,</span><span class="n">#000000</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">#656565</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"></span>
+<span class="nv">@search</span><span class="p">,,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">185</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nf">left</span><span class="p">,</span><span class="k">top</span><span class="p">,</span><span class="n">#eeeeee</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="n">#000000</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="o">^</span><span class="n">sep</span><span class="p">()</span><span class="w"></span>
+<span class="n">终端</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">terminal</span><span class="o">-</span><span class="n">emulator</span><span class="p">,</span><span class="n">utilities</span><span class="o">-</span><span class="n">terminal</span><span class="w"></span>
+<span class="n">文件</span><span class="p">,</span><span class="n">thunar</span><span class="p">,</span><span class="k">system</span><span class="o">-</span><span class="k">file</span><span class="o">-</span><span class="n">manager</span><span class="w"></span>
+<span class="n">火狐</span><span class="p">,</span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="p">,</span><span class="n">firefox</span><span class="w"></span>
+<span class="o">^</span><span class="n">sep</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
 <li>tint2</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 亮度</span>
+<span class="n">echo</span> <span class="s2">&quot;☀️$(light|cut --delimiter=. -f1)%&quot;</span>
+
+<span class="c1"># 声音(volume.py)</span>
+
+<span class="c1"># coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">mute</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;否&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+
+<span class="c1"># 网络(network.py)</span>
+
+<span class="c1"># coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Down&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
+</code></pre></div>
+
 <h3 id="9">9. 安装第三方软件</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">wps</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">linux</span><span class="o">.</span><span class="n">wps</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span>
 <span class="n">baidu网盘</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pan</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span> <span class="err">需要依赖</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">blog</span><span class="o">.</span><span class="n">csdn</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">weixin_45447477</span><span class="o">/</span><span class="n">article</span><span class="o">/</span><span class="n">details</span><span class="o">/</span><span class="mi">115188938</span>

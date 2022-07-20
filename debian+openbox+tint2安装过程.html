@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共17837个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共17902个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共8556个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-19 09:24:18</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-20 17:51:35</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -228,10 +228,11 @@ color_sep_fg         = #8fa1b3 40
 <ul>
 <li>tint2</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 亮度</span>
-<span class="n">echo</span> <span class="s2">&quot;☀️$(light|cut --delimiter=. -f1)%&quot;</span>
+<div class="codehilite"><pre><span></span><code># 亮度
+echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
+</code></pre></div>
 
-<span class="c1"># 声音(volume.py)</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 声音(volume.py)</span>
 
 <span class="c1"># coding=utf-8</span>
 
@@ -243,8 +244,9 @@ color_sep_fg         = #8fa1b3 40
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+</code></pre></div>
 
-<span class="c1"># 网络(network.py)</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 网络(network.py)</span>
 
 <span class="c1"># coding=utf-8</span>
 
@@ -253,7 +255,7 @@ color_sep_fg         = #8fa1b3 40
 <span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Down&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
 </code></pre></div>

@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共17902个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共18733个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共8556个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-20 17:51:35</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-25 16:42:43</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -112,16 +112,18 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 </code></pre></div>
 
 <h3 id="7">7. 安装软件</h3>
-<p><code>apt install openbox xinit tint2 jgmenu sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light</code></p>
-<div class="codehilite"><pre><span></span><code>light-亮度
-slock-锁屏
-jgmenu-菜单
-neofetch-系统信息
-tint2-任务栏
-sakura-设置背景
-lxappearance-外观
-pulseaudio-声音驱动
-blueman-蓝牙
+<p><code>apt install openbox xinit tint2 jgmenu sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light libnotify-bin volumeicon-alsa</code></p>
+<div class="codehilite"><pre><span></span><code>light 亮度
+slock 锁屏
+jgmenu 菜单
+neofetch 系统信息
+tint2 任务栏
+sakura 设置背景
+lxappearance 外观
+pulseaudio 声音驱动
+blueman 蓝牙
+libnotify-bin 通知
+volumeicon-alsa 音量控制
 </code></pre></div>
 
 <h3 id="8">8. 设置</h3>
@@ -133,6 +135,7 @@ blueman-蓝牙
 tint2 &amp;
 fcitx &amp;
 blueman-applet &amp;
+volumeicon &amp;
 feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
 </code></pre></div>
 
@@ -230,6 +233,18 @@ color_sep_fg         = #8fa1b3 40
 </ul>
 <div class="codehilite"><pre><span></span><code># 亮度
 echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 增加亮度</span>
+light -A <span class="m">5</span>
+notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 减少亮度</span>
+light -U <span class="m">5</span>
+notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># 声音(volume.py)</span>

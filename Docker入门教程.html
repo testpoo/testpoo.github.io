@@ -52,7 +52,7 @@
             
             <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span><span>2022-05-24&nbsp;&nbsp;共6145个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共18641个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共25430个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共102613个字</span></a></li>
             
@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Docker入门教程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-07-25 16:42:43</span></div>
+      <div class="header"><span>Docker入门教程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-08-26 10:50:53</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -156,8 +156,7 @@
 <li>卸载老版本</li>
 </ul>
 <p>老版本的Docker叫<code>docker</code> 或者<code>docker-engine</code>，如果它们安装了，需要先卸载它们以及相关的依赖，如下：</p>
-<p><code>bash
-   sudo yum remove docker \
+<p><code>sudo yum remove docker \
                     docker-client \
                     docker-client-latest \
                     docker-common \
@@ -169,8 +168,7 @@
 <li>安装方法</li>
 </ul>
 <p>安装包含<code>yum-config-manager</code>程序的 <code>yum-utils</code>包，然后添加稳定源，如下：</p>
-<p><code>bash
-   sudo yum install -y yum-utils
+<p><code>sudo yum install -y yum-utils
    sudo yum-config-manager \
       --add-repo \
       https://download.docker.com/linux/centos/docker-ce.repo</code></p>
@@ -180,58 +178,53 @@
 </li>
 <li>
 <p>安装最新的Docker引擎和容器</p>
-<p><code>bash
-  sudo yum install docker-ce docker-ce-cli containerd.io</code></p>
+<p><code>sudo yum install docker-ce docker-ce-cli containerd.io</code></p>
 <p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
 </li>
 <li>
 <p>安装一个特殊版本的Docker引擎，首先查出可用的版本，然后选择安装。如下：</p>
-<p><code>bash
- $ yum list docker-ce --showduplicates | sort -r
+<p><code>$ yum list docker-ce --showduplicates | sort -r
  docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
  docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
  docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
  docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable</code></p>
 <p>选择一个版本安装，安装特殊版本需要写上全称，如<code>docker-ce-18.09.1</code>，如下：</p>
-<p><code>bash
-  sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</code></p>
+<p><code>sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</code></p>
 <p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
 </li>
 <li>
 <p>启动docker</p>
-<p><code>bash
-  sudo systemctl start docker</code></p>
+<p><code>sudo systemctl start docker</code></p>
 </li>
 </ul>
 <p>安装完成后，运行下面的命令，验证是否安装成功。</p>
-<p><code>bash
-  $ docker version
+<p><code>$ docker version
   # 或者
   $ docker info</code></p>
 <p>Docker 需要用户具有 sudo 权限，为了避免每次命令都输入<code>sudo</code>，可以把用户加入 Docker 用户组。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 创建docker用户组.</span>
+<div class="codehilite"><pre><span></span><code># 创建docker用户组.
 sudo groupadd docker
 
-<span class="c1"># 把你的用户加入到docker用户组.</span>
-$ sudo usermod -aG docker <span class="nv">$USER</span>
+# 把你的用户加入到docker用户组.
+$ sudo usermod -aG docker $USER
 </code></pre></div>
 
 <p>Docker 是服务器----客户端架构。命令行运行<code>docker</code>命令的时候，需要本机有 Docker 服务。如果这项服务没有启动，可以用下面的命令启动。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># service 命令的用法</span>
+<div class="codehilite"><pre><span></span><code># service 命令的用法
 $ sudo service docker start
 
-<span class="c1"># systemctl 命令的用法</span>
+# systemctl 命令的用法
 $ sudo systemctl start docker
 </code></pre></div>
 
 <h2 id="image">六、image 文件</h2>
 <p>Docker 把应用程序及其依赖，打包在 image 文件里面。只有通过这个文件，才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。</p>
 <p>image 是二进制文件。实际开发中，一个 image 文件往往通过继承另一个 image 文件，加上一些个性化设置而生成。举例来说，你可以在 Ubuntu 的 image 基础上，往里面加入 Apache 服务器，形成你的 image。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 列出本机的所有 image 文件。</span>
-$ docker image ls
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">列出本机的所有</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">文件</span><span class="err">。</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">ls</span><span class="w"></span>
 
-<span class="c1"># 删除 image 文件</span>
-$ docker image rm <span class="o">[</span>imageName<span class="o">]</span>
+<span class="err">#</span><span class="w"> </span><span class="n">删除</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">文件</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">[</span><span class="n">imageName</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>image 文件是通用的，一台机器的 image 文件拷贝到另一台机器，照样可以使用。一般来说，为了节省时间，我们应该尽量使用别人制作好的 image 文件，而不是自己制作。即使要定制，也应该基于别人的 image 文件进行加工，而不是从零开始制作。</p>
@@ -239,7 +232,7 @@ $ docker image rm <span class="o">[</span>imageName<span class="o">]</span>
 <h2 id="hello-world">七、实例：hello world</h2>
 <p>操作之前需要从仓库下载 image 文件，但是国内访问 Docker 的官方仓库很慢，还经常断线，所以要把仓库网址改成国内的镜像站。这里推荐使用官方镜像 registry.docker-cn.com 。下面是Debian 系统的默认仓库修改方法：</p>
 <p>打开<code>/etc/default/docker</code>文件（需要<code>root</code>权限），在文件的底部加上一行。</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">DOCKER_OPTS</span><span class="o">=</span><span class="s2">&quot;--registry-mirror=https://registry.docker-cn.com&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">DOCKER_OPTS</span><span class="o">=</span><span class="s">&quot;--registry-mirror=https://registry.docker-cn.com&quot;</span>
 </code></pre></div>
 
 <p>然后，重启 Docker 服务。</p>
@@ -281,21 +274,21 @@ This message shows that your installation appears to be working correctly.
 </code></pre></div>
 
 <p>对于那些不会自动终止的容器，必须使用<code>docker container kill</code>命令手动终止。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container <span class="nb">kill</span> <span class="o">[</span>containID<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="k">kill</span><span class="w"> </span><span class="o">[</span><span class="n">containID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="_3">八、容器文件</h2>
 <p>image 文件生成的容器实例，本身也是一个文件，称为容器文件。也就是说，一旦容器生成，就会同时存在两个文件： image 文件和容器文件。而且关闭容器并不会删除容器文件，只是容器停止运行而已。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 列出本机正在运行的容器</span>
+<div class="codehilite"><pre><span></span><code># 列出本机正在运行的容器
 $ docker container ls
 
-<span class="c1"># 列出本机所有容器，包括终止运行的容器</span>
+# 列出本机所有容器，包括终止运行的容器
 $ docker container ls --all
 </code></pre></div>
 
 <p>上面命令的输出结果之中，包括容器的 ID。很多地方都需要提供这个 ID，比如上一节终止容器运行的<code>docker container kill</code>命令。</p>
 <p>终止运行的容器文件，依然会占据硬盘空间，可以使用<code>docker container rm</code>命令删除。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container rm <span class="o">[</span>containerID<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>运行上面的命令之后，再使用<code>docker container ls --all</code>命令，就会发现被删除的容器文件已经消失了。</p>
@@ -310,18 +303,18 @@ $ <span class="nb">cd</span> <span class="nb">test</span>
 
 <h3 id="101-dockerfile">10.1 编写 Dockerfile 文件</h3>
 <p>首先，在项目的根目录下，新建一个文本文件<code>.dockerignore</code>，写入下面的内容。</p>
-<div class="codehilite"><pre><span></span><code>.git
-node_modules
-npm-debug.log
+<div class="codehilite"><pre><span></span><code><span class="na">.git</span>
+<span class="nf">node_modules</span>
+<span class="nf">npm-debug.log</span>
 </code></pre></div>
 
 <p>上面代码表示，这三个路径要排除，不要打包进入 image 文件。如果你没有路径要排除，这个文件可以不新建。</p>
 <p>然后，在项目的根目录下，新建一个文本文件 Dockerfile，写入下面的内容。</p>
-<div class="codehilite"><pre><span></span><code>FROM node:8.4
-COPY . /app
-WORKDIR /app
-RUN npm install --registry<span class="o">=</span>https://registry.npm.taobao.org
-EXPOSE <span class="m">3000</span>
+<div class="codehilite"><pre><span></span><code><span class="n">FROM</span> <span class="nl">node:</span><span class="mf">8.4</span>
+<span class="n">COPY</span> <span class="p">.</span> <span class="o">/</span><span class="n">app</span>
+<span class="n">WORKDIR</span> <span class="o">/</span><span class="n">app</span>
+<span class="n">RUN</span> <span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">registry</span><span class="o">=</span><span class="nl">https:</span><span class="c1">//registry.npm.taobao.org</span>
+<span class="n">EXPOSE</span> <span class="mh">3000</span>
 </code></pre></div>
 
 <p>上面代码一共五行，含义如下。</p>
@@ -359,28 +352,28 @@ $ docker container run -p <span class="m">8000</span>:3000 -it test:0.0.1 /bin/b
 <li><code>/bin/bash</code>：容器启动以后，内部第一个执行的命令。这里是启动 Bash，保证用户可以使用 Shell。</li>
 </ul>
 <p>如果一切正常，运行上面的命令以后，就会返回一个命令行提示符。</p>
-<div class="codehilite"><pre><span></span><code>root@66d80f4aaf1e:/app#
+<div class="codehilite"><pre><span></span><code><span class="n">root</span><span class="mi">@66</span><span class="nl">d80f4aaf1e</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="err">#</span><span class="w"></span>
 </code></pre></div>
 
 <p>这表示你已经在容器里面了，返回的提示符就是容器内部的 Shell 提示符。执行下面的命令。</p>
-<div class="codehilite"><pre><span></span><code>root@66d80f4aaf1e:/app# node demos/01.js
+<div class="codehilite"><pre><span></span><code><span class="n">root</span><span class="mi">@66</span><span class="nl">d80f4aaf1e</span><span class="p">:</span><span class="o">/</span><span class="n">app</span><span class="err">#</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">demos</span><span class="o">/</span><span class="mf">01.</span><span class="n">js</span><span class="w"></span>
 </code></pre></div>
 
 <p>这时，test框架已经运行起来了。这个例子中，Node 进程运行在 Docker 容器的虚拟环境里面，进程接触到的文件系统和网络接口都是虚拟的，与本机的文件系统和网络接口是隔离的，因此需要定义容器与物理机的端口映射（map）。</p>
 <p>现在，在容器的命令行，按下 Ctrl + c 停止 Node 进程，然后按下 Ctrl + d （或者输入 exit）退出容器。此外，也可以用<code>docker container kill</code>终止容器运行。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 在本机的另一个终端窗口，查出容器的 ID</span>
-$ docker container ls
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">在本机的另一个终端窗口</span><span class="err">，</span><span class="n">查出容器的</span><span class="w"> </span><span class="n">ID</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">ls</span><span class="w"></span>
 
-<span class="c1"># 停止指定的容器运行</span>
-$ docker container <span class="nb">kill</span> <span class="o">[</span>containerID<span class="o">]</span>
+<span class="err">#</span><span class="w"> </span><span class="n">停止指定的容器运行</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="k">kill</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>容器停止运行之后，并不会消失，用下面的命令删除容器文件。</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 查出容器的 ID</span>
-$ docker container ls --all
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">查出容器的</span><span class="w"> </span><span class="n">ID</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">ls</span><span class="w"> </span><span class="o">--</span><span class="ow">all</span><span class="w"></span>
 
-<span class="c1"># 删除指定的容器文件</span>
-$ docker container rm <span class="o">[</span>containerID<span class="o">]</span>
+<span class="err">#</span><span class="w"> </span><span class="n">删除指定的容器文件</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>也可以使用<code>docker container run</code>命令的<code>--rm</code>参数，在容器终止运行后自动删除容器文件。</p>
@@ -389,12 +382,12 @@ $ docker container rm <span class="o">[</span>containerID<span class="o">]</span
 
 <h3 id="104-cmd">10.4 CMD 命令</h3>
 <p>上一节的例子里面，容器启动以后，需要手动输入命令<code>node demos/01.js</code>。我们可以把这个命令写在 Dockerfile 里面，这样容器启动以后，这个命令就已经执行了，不用再手动输入了。</p>
-<div class="codehilite"><pre><span></span><code>FROM node:8.4
-COPY . /app
-WORKDIR /app
-RUN npm install --registry<span class="o">=</span>https://registry.npm.taobao.org
-EXPOSE <span class="m">3000</span>
-CMD node demos/01.js
+<div class="codehilite"><pre><span></span><code><span class="n">FROM</span> <span class="nl">node:</span><span class="mf">8.4</span>
+<span class="n">COPY</span> <span class="p">.</span> <span class="o">/</span><span class="n">app</span>
+<span class="n">WORKDIR</span> <span class="o">/</span><span class="n">app</span>
+<span class="n">RUN</span> <span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">registry</span><span class="o">=</span><span class="nl">https:</span><span class="c1">//registry.npm.taobao.org</span>
+<span class="n">EXPOSE</span> <span class="mh">3000</span>
+<span class="n">CMD</span> <span class="n">node</span> <span class="n">demos</span><span class="o">/</span><span class="mf">01.</span><span class="n">js</span>
 </code></pre></div>
 
 <p>上面的 Dockerfile 里面，多了最后一行<code>CMD node demos/01.js</code>，它表示容器启动后自动执行<code>node demos/01.js</code>。</p>
@@ -410,17 +403,17 @@ CMD node demos/01.js
 </code></pre></div>
 
 <p>接着，为本地的 image 标注用户名和版本。</p>
-<div class="codehilite"><pre><span></span><code>$ docker image tag <span class="o">[</span>imageName<span class="o">]</span> <span class="o">[</span>username<span class="o">]</span>/<span class="o">[</span>repository<span class="o">]</span>:<span class="o">[</span>tag<span class="o">]</span>
-<span class="c1"># 实例</span>
-$ docker image tag test:0.0.1 testpoo/test:0.0.1
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">[</span><span class="n">imageName</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">username</span><span class="o">]/[</span><span class="n">repository</span><span class="o">]</span><span class="err">:</span><span class="o">[</span><span class="n">tag</span><span class="o">]</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">实例</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="nl">test</span><span class="p">:</span><span class="mf">0.0.1</span><span class="w"> </span><span class="n">testpoo</span><span class="o">/</span><span class="nl">test</span><span class="p">:</span><span class="mf">0.0.1</span><span class="w"></span>
 </code></pre></div>
 
 <p>也可以不标注用户名，重新构建一下 image 文件。</p>
-<div class="codehilite"><pre><span></span><code>$ docker image build -t <span class="o">[</span>username<span class="o">]</span>/<span class="o">[</span>repository<span class="o">]</span>:<span class="o">[</span>tag<span class="o">]</span> .
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="o">[</span><span class="n">username</span><span class="o">]/[</span><span class="n">repository</span><span class="o">]</span><span class="err">:</span><span class="o">[</span><span class="n">tag</span><span class="o">]</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 </code></pre></div>
 
 <p>最后，发布 image 文件。</p>
-<div class="codehilite"><pre><span></span><code>$ docker image push <span class="o">[</span>username<span class="o">]</span>/<span class="o">[</span>repository<span class="o">]</span>:<span class="o">[</span>tag<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="nc">image</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="o">[</span><span class="n">username</span><span class="o">]/[</span><span class="n">repository</span><span class="o">]</span><span class="err">:</span><span class="o">[</span><span class="n">tag</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>发布成功以后，登录 hub.docker.com，就可以看到已经发布的 image 文件。</p>
@@ -428,28 +421,28 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 <p>docker 的主要用法就是上面这些，此外还有几个命令，也非常有用。</p>
 <p><strong>（1）docker container start</strong></p>
 <p>前面的<code>docker container run</code>命令是新建容器，每运行一次，就会新建一个容器。同样的命令运行两次，就会生成两个一模一样的容器文件。如果希望重复使用容器，就要使用<code>docker container start</code>命令，它用来启动已经生成、已经停止运行的容器文件。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container start <span class="o">[</span>containerID<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p><strong>（2）docker container stop</strong></p>
 <p>前面的<code>docker container kill</code>命令终止容器运行，相当于向容器里面的主进程发出 SIGKILL 信号。而<code>docker container stop</code>命令也是用来终止容器运行，相当于向容器里面的主进程发出 SIGTERM 信号，然后过一段时间再发出 SIGKILL 信号。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container stop <span class="o">[</span>containerID<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p>这两个信号的差别是，应用程序收到 SIGTERM 信号以后，可以自行进行收尾清理工作，但也可以不理会这个信号。如果收到 SIGKILL 信号，就会强行立即终止，那些正在进行中的操作会全部丢失。</p>
 <p><strong>（3）docker container logs</strong></p>
 <p><code>docker container logs</code>命令用来查看 docker 容器的输出，即容器里面 Shell 的标准输出。如果<code>docker run</code>命令运行容器的时候，没有使用<code>-it</code>参数，就要用这个命令查看输出。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container logs <span class="o">[</span>containerID<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"></span>
 </code></pre></div>
 
 <p><strong>（4）docker container exec</strong></p>
 <p><code>docker container exec</code>命令用于进入一个正在运行的 docker 容器。如果<code>docker run</code>命令运行容器的时候，没有使用<code>-it</code>参数，就要用这个命令进入容器。一旦进入了容器，就可以在容器的 Shell 执行命令了。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container <span class="nb">exec</span> -it <span class="o">[</span>containerID<span class="o">]</span> /bin/bash
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="k">exec</span><span class="w"> </span><span class="o">-</span><span class="n">it</span><span class="w"> </span><span class="o">[</span><span class="n">containerID</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span><span class="w"></span>
 </code></pre></div>
 
 <p><strong>（5）docker container cp</strong></p>
 <p><code>docker container cp</code>命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。</p>
-<div class="codehilite"><pre><span></span><code>$ docker container cp <span class="o">[</span>containID<span class="o">]</span>:<span class="o">[</span>/path/to/file<span class="o">]</span> .
+<div class="codehilite"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">container</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">[</span><span class="n">containID</span><span class="o">]</span><span class="err">:</span><span class="o">[</span><span class="n">/path/to/file</span><span class="o">]</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 </code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">

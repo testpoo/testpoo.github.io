@@ -52,7 +52,7 @@
             
             <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span><span>2022-05-24&nbsp;&nbsp;共6145个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共25430个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共27384个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共102613个字</span></a></li>
             
@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Docker入门教程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-08-26 10:50:53</span></div>
+      <div class="header"><span>Docker入门教程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-08-26 10:57:38</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -156,51 +156,65 @@
 <li>卸载老版本</li>
 </ul>
 <p>老版本的Docker叫<code>docker</code> 或者<code>docker-engine</code>，如果它们安装了，需要先卸载它们以及相关的依赖，如下：</p>
-<p><code>sudo yum remove docker \
-                    docker-client \
-                    docker-client-latest \
-                    docker-common \
-                    docker-latest \
-                    docker-latest-logrotate \
-                    docker-logrotate \
-                    docker-engine</code></p>
+<div class="codehilite"><pre><span></span><code><span class="nv">sudo</span> <span class="nv">yum</span> <span class="nv">remove</span> <span class="nv">docker</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">client</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">latest</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">common</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">latest</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">latest</span><span class="o">-</span><span class="k">logrotate</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="k">logrotate</span> \
+                <span class="nv">docker</span><span class="o">-</span><span class="nv">engine</span>
+</code></pre></div>
+
 <ul>
 <li>安装方法</li>
 </ul>
 <p>安装包含<code>yum-config-manager</code>程序的 <code>yum-utils</code>包，然后添加稳定源，如下：</p>
-<p><code>sudo yum install -y yum-utils
-   sudo yum-config-manager \
-      --add-repo \
-      https://download.docker.com/linux/centos/docker-ce.repo</code></p>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">yum</span><span class="o">-</span><span class="n">utils</span>
+<span class="n">sudo</span> <span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span> \
+   <span class="o">--</span><span class="n">add</span><span class="o">-</span><span class="n">repo</span> \
+   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">docker</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">centos</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">.</span><span class="n">repo</span>
+</code></pre></div>
+
 <ul>
 <li>
 <p>安装Docker引擎</p>
 </li>
 <li>
 <p>安装最新的Docker引擎和容器</p>
-<p><code>sudo yum install docker-ce docker-ce-cli containerd.io</code></p>
-<p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
-</li>
-<li>
-<p>安装一个特殊版本的Docker引擎，首先查出可用的版本，然后选择安装。如下：</p>
-<p><code>$ yum list docker-ce --showduplicates | sort -r
- docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
- docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
- docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
- docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable</code></p>
-<p>选择一个版本安装，安装特殊版本需要写上全称，如<code>docker-ce-18.09.1</code>，如下：</p>
-<p><code>sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</code></p>
-<p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
-</li>
-<li>
-<p>启动docker</p>
-<p><code>sudo systemctl start docker</code></p>
 </li>
 </ul>
+<div class="codehilite"><pre><span></span><code>sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre></div>
+
+<p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
+<ol>
+<li>安装一个特殊版本的Docker引擎，首先查出可用的版本，然后选择安装。如下：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>$ yum list docker-ce --showduplicates <span class="p">|</span> sort -r
+docker-ce.x86_64  <span class="m">3</span>:18.09.1-3.el7                     docker-ce-stable
+docker-ce.x86_64  <span class="m">3</span>:18.09.0-3.el7                     docker-ce-stable
+docker-ce.x86_64  <span class="m">18</span>.06.1.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64  <span class="m">18</span>.06.0.ce-3.el7                    docker-ce-stable
+</code></pre></div>
+
+<p>选择一个版本安装，安装特殊版本需要写上全称，如<code>docker-ce-18.09.1</code>，如下：</p>
+<div class="codehilite"><pre><span></span><code>sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io
+</code></pre></div>
+
+<p>该命令只安装Docker，但不会启动Docker。不过它会创建一个docker组，默认情况下不会向该组添加任何用户。</p>
+<ol>
+<li>启动docker</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>sudo systemctl start docker
+</code></pre></div>
+
 <p>安装完成后，运行下面的命令，验证是否安装成功。</p>
-<p><code>$ docker version
-  # 或者
-  $ docker info</code></p>
+<div class="codehilite"><pre><span></span><code>$ docker version
+<span class="c1"># 或者</span>
+$ docker info
+</code></pre></div>
+
 <p>Docker 需要用户具有 sudo 权限，为了避免每次命令都输入<code>sudo</code>，可以把用户加入 Docker 用户组。</p>
 <div class="codehilite"><pre><span></span><code># 创建docker用户组.
 sudo groupadd docker

@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-09-20 17:47:50</pubDate>  
-    <lastBuildDate>2022-09-20 17:47:50</lastBuildDate>  
+    <pubDate>2022-10-16 10:05:25</pubDate>  
+    <lastBuildDate>2022-10-16 10:05:25</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -3012,7 +3012,7 @@ OK
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Redis入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Redis入门教程.html</guid>
        
@@ -3028,13 +3028,18 @@ OK
 &lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 下载驱动&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#3-u&#34;&gt;3. 制作自启动U盘&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 安装&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#5-debain5&#34;&gt;5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 修改源&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 安装软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8. 设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#9&#34;&gt;9. 安装第三方软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10. 缺少驱动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11. 安装输入法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-wifi&#34;&gt;5. 连接wifi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6-debain5&#34;&gt;6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 修改源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8. 安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9-openbox&#34;&gt;9. 启动openbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10. 触摸板修改&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11. 字符图标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-dpi&#34;&gt;12. 设置dpi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;13. 设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#14&#34;&gt;14. 安装第三方软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#15&#34;&gt;15. 缺少驱动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#16&#34;&gt;16. 安装输入法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 下载链接&lt;/h3&gt;
@@ -3043,7 +3048,40 @@ OK
 &lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-u&#34;&gt;3. 制作自启动U盘&lt;/h3&gt;
 &lt;h3 id=&#34;4&#34;&gt;4. 安装&lt;/h3&gt;
-&lt;h3 id=&#34;5-debain5&#34;&gt;5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h3&gt;
+&lt;h3 id=&#34;5-wifi&#34;&gt;5. 连接wifi&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看网卡：&lt;code&gt;ip a&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;先安装 &lt;code&gt;wpa_supplicant&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置网络参数：&lt;code&gt;su -l -c &#34;wpa_passphrase WIFI名字 WIFI密码 &amp;gt; /etc/wpa_supplicant/wpa_supplicant.conf&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看WIFI网卡名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编辑文件/etc/network/interfaces&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加接口参数如下：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;auto wlp1s0 #(wlp1s0 为网卡名)
+iface wlp1s0 inet dhcp
+    wpa-deriver wext
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;启动网卡：&lt;code&gt;ifup wlp1s0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-debain5&#34;&gt;6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;su root
 nano /etc/sudoers添加 poo ALL=(ALL:ALL) ALL
 nano /etc/default/grub
@@ -3053,7 +3091,7 @@ nano /etc/default/grub
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;6&#34;&gt;6. 修改源&lt;/h3&gt;
+&lt;h3 id=&#34;7&#34;&gt;7. 修改源&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c&#34;&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;deb&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian/&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;bookworm&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;contrib&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;non-free&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free&lt;/span&gt;
@@ -3065,22 +3103,61 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 &lt;span class=&#34;c&#34;&gt;# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;7&#34;&gt;7. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;apt install openbox xinit tint2 jgmenu sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light libnotify-bin volumeicon-alsa&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8&#34;&gt;8. 安装软件&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;apt install openbox xinit tint2 sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;light 亮度
 slock 锁屏
-jgmenu 菜单
 neofetch 系统信息
 tint2 任务栏
 sakura 设置背景
 lxappearance 外观
 pulseaudio 声音驱动
 blueman 蓝牙
+
+# 可选
+jgmenu 菜单：进程杀不死
 libnotify-bin 通知
+dunst 通知
 volumeicon-alsa 音量控制
+network-manager 网络
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;8&#34;&gt;8. 设置&lt;/h3&gt;
+&lt;h3 id=&#34;9-openbox&#34;&gt;9. 启动openbox&lt;/h3&gt;
+&lt;p&gt;编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：&lt;/p&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; [ &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;$D&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ISPLAY&lt;/span&gt; ] &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; [ $&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/dev/tty1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; ]&lt;span class=&#34;c1&#34;&gt;;then`&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;startx&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;fi&lt;/span&gt;
+# 查看&lt;span class=&#34;nv&#34;&gt;Ctrl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F1&lt;/span&gt;对应的那个&lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;echo&lt;/span&gt; $&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;10&#34;&gt;10. 触摸板修改&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/usr/share/X11/xrog.conf.d/40-libinput.conf
+
+Section &amp;quot;InputClass&amp;quot;
+        Identifier &amp;quot;libinput touchpad catchall&amp;quot;
+        MatchIsTouchpad &amp;quot;on&amp;quot;
+        MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
+        Driver &amp;quot;libinput&amp;quot;
+
+        Option &amp;quot;Tapping&amp;quot; &amp;quot;on&amp;quot; # 触摸以点击
+        Option &amp;quot;ClickMethod&amp;quot; &amp;quot;clickfinger&amp;quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
+        Option &amp;quot;NaturalScrolling&amp;quot; &amp;quot;true&amp;quot; # 自然滚动（反方向滚动）
+#        Option &amp;quot;ScrollMethod&amp;quot; &amp;quot;edge&amp;quot; # 边缘滚动页面
+EndSection
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;11&#34;&gt;11. 字符图标&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.fontawesome.com.cn/cheatsheet/&#34;&gt;http://www.fontawesome.com.cn/cheatsheet/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-dpi&#34;&gt;12. 设置dpi&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nano .Xresources
+
+Xft.dpi:120
+sudo xrdb ~/.Xresources
+reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;13&#34;&gt;13. 设置&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;openbox&lt;/li&gt;
 &lt;/ul&gt;
@@ -3093,7 +3170,7 @@ $ cp /etc/xdg/openbox/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;rc.xml,menu.xm
 tint2 &amp;amp;
 fcitx &amp;amp;
 blueman-applet &amp;amp;
-volumeicon &amp;amp;
+#volumeicon &amp;amp;
 feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3125,6 +3202,289 @@ feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;execute&amp;gt;&lt;/span&gt;light -U 5&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&lt;/span&gt;
       &lt;span class=&#34;nt&#34;&gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;/keybind&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# menu.xml
+
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;openbox_menu&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://openbox.org/&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;xmlns:xsi=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://openbox.org/&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;                file:///usr/share/openbox/menu.xsd&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;menu&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;root-menu&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Openbox 3&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;终端&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/terminal.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;x-terminal-emulator&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;浏览器&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/browser.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;x-www-browser&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;文件&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/Thunar.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;Thunar&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- This requires the presence of the &amp;#39;obamenu&amp;#39; package to work --&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;menu&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/Debian&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;separator&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;menu&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;applications-menu&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;程序&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/preferences-other.svg&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;execute=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/home/poo/.poo/obamenu.py&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;separator&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;配置OpenBox&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/preferences-theme.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;obconf&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;重置OpenBox&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/systemback.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Reconfigure&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;重启OpenBox&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-reboot.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Restart&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;separator&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;退出OpenBox&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Exit&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;separator&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;menu&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;system-out&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;退出&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&amp;quot;&lt;/span&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;锁屏&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-lock-screen.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;slock&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;挂起&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-log-out.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;systemctl -i suspend&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;休眼&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-hibernate.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;systemctl -i hibernate&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;重启&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-reboot.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;systemctl -i reboot&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;关机&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;icon=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Execute&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;execute&amp;gt;&lt;/span&gt;systemctl -i poweroff&lt;span class=&#34;nt&#34;&gt;&amp;lt;/execute&amp;gt;&amp;lt;/action&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/menu&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/menu&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/openbox_menu&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;obamenu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;py&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;python3&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;-*-&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;coding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;utf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;-*-&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.1.7&lt;/span&gt; 
+&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;----&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;---&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;applications_dirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/share/applications&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/share&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;without&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;pixmaps&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;-/usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;share&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;FreeBSD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;share&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;linux&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Papirus&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;image_cat_prefix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;applications-&amp;quot;&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;empty&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;will&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;no&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;only&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;menu&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;application_groups&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Office&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Development&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Graphics&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Internet&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Games&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;System&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Multimedia&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Utilities&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;Settings&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;application_groups_zh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;办公&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;开发&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;图形&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;互联网&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;游戏&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;系统&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;多媒体&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;实用工具&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;设置&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;group_aliases&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Audio&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Multimedia&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;AudioVideo&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Multimedia&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Network&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Internet&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Game&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Games&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Utility&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Utilities&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;GTK&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;GNOME&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;ignoreList&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;evince-previewer&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Ted&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;wingide3.2&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;python3.4&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;feh&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;xfce4-power-manager-settings&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;terminal_string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;evte -e&amp;quot;&lt;/span&gt;    &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;favourites&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;terminal&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;string&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;simpleOBheader&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;False&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;full&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;xml&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OB&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;header&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;---&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;End&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;user&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;---&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;glob&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dtItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;__&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;fName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;fileName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;fName&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Comment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Exec&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Terminal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;None&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Categories&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;xescape&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addComment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Comment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addExec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;&amp;#39;%&amp;#39;:&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;rid&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;filemanager&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;arguments&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;dt&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;files&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Exec&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addIcon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_cat_prefix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;image_dir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/icons/&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/24x24/apps/&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;di&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;di&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Error in %s: Invalid or no icon &amp;#39;%s&amp;#39;&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;% (self.fileName,  di)&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;dix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;di&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;it&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;full&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;path?&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;dix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;dix&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;yes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;its&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;..&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...)&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;di&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;#else&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;short&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;like&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;myapp&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;di&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;.*&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addTerminal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;True&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Terminal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;True&lt;/span&gt;
+    &lt;span class=&#34;nn&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Terminal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;False&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;addCategories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Categories&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;data&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getCatIcon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;iconDir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/icons/&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/24x24/apps/&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_cat_prefix&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;iconDir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;.*&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;xescape&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;Rep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;apos;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;sl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;last&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;last&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;last&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;True&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;break&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;last&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;i&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;r&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;s&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;process_category&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;curCats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;appGroups&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;application_groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;aliases&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;group_aliases&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;aliases&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;aliases&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;aliases&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;                &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;ignore&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;one&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;aliases&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;appGroups&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;curCats:&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;valid&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;categories&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;only&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;no&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;doublettes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;please&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;curCats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+
+&lt;span class=&#34;s s-Atom&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;process_dtfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;dtf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;catDict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;extract&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;relevant&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;info&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;False&lt;/span&gt;      &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;parse&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;only&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;[Desktop Entry]&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;line&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;fh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;dtf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;lines&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;fh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;readlines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dtItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;dtf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;lines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;[Desktop Entry]&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;True&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;continue&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;active&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;we&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;don&amp;#39;t care about licenses or other comments&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    if l == None or len(l) &amp;lt; 1 or l[0] == &amp;#39;#&amp;#39;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    if l[0]== &amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;&amp;#39; and l !=  &amp;quot;[Desktop Entry]&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      active = False&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    # else&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    eqi = l.split(&amp;#39;=&amp;#39;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    if len(eqi) &amp;lt; 2:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      print(&amp;quot;Error: Invalid .desktop line&amp;#39;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; + l + &amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;&amp;#39;&amp;quot;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    # Check what it is ...&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    if eqi[0] == &amp;quot;Name[zh_CN]&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addName(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Name&amp;quot; and this.Name == &amp;quot;&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addName(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Comment&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addComment(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Exec&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addExec(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Icon&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addIcon(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Terminal&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addTerminal(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Type&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      if eqi[1] != &amp;quot;Application&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;        continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addType(eqi[1])&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    elif eqi[0] == &amp;quot;Categories&amp;quot;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      if eqi[1] and eqi[1][-1] == &amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;&amp;#39;:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;        eqi[1] = eqi[1][0:-1]&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      cats = []&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      # DEBUG &lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      dtCats = eqi[1].split(&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;&amp;#39;)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      for cat in dtCats:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;        result = process_category(cat,  cats)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      this.addCategories(cats)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    else:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  # add to catDict&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  #this.dprint()&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  if len(this.Categories) &amp;gt; 0:    # don&amp;#39;t&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;care&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;about&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;stuff&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;category&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Categories&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;catDict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;categoryDict&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;__&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;init&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;application&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dict&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;which&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;will&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;contain&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;apps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;appGroup&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;application_groups:&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;categoryDict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;appGroup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+  &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;now&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;let&amp;#39;s look  into the app dirs ...&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  for appDir in applications_dirs:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    appDir += &amp;quot;/*.desktop&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    dtFiles = glob.glob(appDir)&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;    # process each .desktop file in dir&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    for dtf in dtFiles:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      skipFlag = False&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      for ifn in ignoreList:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;        if dtf.find(ifn) &amp;gt;= 0:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;          skipFlag = True&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      if skipFlag == False:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;        process_dtfile(dtf,  categoryDict)&lt;/span&gt;
+
+&lt;span class=&#34;s s-Atom&#34;&gt;  # now, generate jwm menu include&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  if simpleOBheader == True:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    print(&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;openbox_pipe_menu&amp;gt;&amp;#39;)     # magic header&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  else:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    print(&amp;#39;&amp;lt;?xml&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;version=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;encoding=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;?&amp;gt;&amp;lt;openbox_pipe_menu&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;xmlns=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;http://openbox.org/&amp;quot;&lt;/span&gt;  &lt;span class=&#34;nn&#34;&gt;xmlns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;xsi=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;/span&gt;  &lt;span class=&#34;nn&#34;&gt;xsi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;schemaLocation=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;http://openbox.org/&amp;quot;&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;&amp;gt;&amp;#39;)    # magic header&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  appGroupLen = len(application_groups)&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;  for ag in range(appGroupLen ):&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    catList = categoryDict[application_groups[ag]]&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;    if len(catList) &amp;lt; 1:&lt;/span&gt;
+&lt;span class=&#34;s s-Atom&#34;&gt;      continue        # don&amp;#39;t&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;empty&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;menus&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;catStr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;menu id=\&amp;quot;openbox-%s\&amp;quot; label=\&amp;quot;%s\&amp;quot; &amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;% (application_groups[ag], application_groups_zh[ag])&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getCatIcon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;application_groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;ag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;catStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;icon=\&amp;quot;%s\&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;% tmp&lt;/span&gt;
+    &lt;span class=&#34;nn&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;catStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;icon=\&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/icons/&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/24x24/actions/settings.svg\&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;catStr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;s s-Atom&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;app&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;catList:&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;item &amp;quot;&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;label=\&amp;quot;%s\&amp;quot; &amp;quot;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;% app.Name&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Icon&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;icon=\&amp;quot;%s\&amp;quot; &amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;% app.Icon&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;蓝牙适配器&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;icon=\&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/icons/&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/24x24/devices/blueman-device.svg\&amp;quot;&amp;quot;&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;输入法&amp;quot;&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;icon=\&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;image_dir_base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/icons/&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;icon_Theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/24x24/devices/input-keyboard.svg\&amp;quot;&amp;quot;&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;lt;action name=\&amp;quot;Execute\&amp;quot;&amp;gt;&amp;lt;command&amp;gt;&amp;lt;![CDATA[&amp;quot;&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Terminal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;terminal_string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;
+      &lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;%s]]&amp;gt;&amp;lt;/command&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/item&amp;gt;&amp;quot;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;% app.Exec&lt;/span&gt;
+      &lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;progStr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;/menu&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nf&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;/openbox_pipe_menu&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;magic&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;footer&lt;/span&gt;
+  &lt;span class=&#34;s s-Atom&#34;&gt;pass&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;debug&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;break&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -3233,7 +3593,341 @@ notify-send &lt;span class=&#34;s2&#34;&gt;&amp;quot;当前亮度为: &lt;/span&
     &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;📶Nokia&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;9&#34;&gt;9. 安装第三方软件&lt;/h3&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;#---- Generated by tint2conf a94d ----&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# See https://gitlab.com/o9000/tint2/wikis/Configure for &lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# full documentation of the configuration options.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Gradients&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Backgrounds&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Background 1: Panel&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#bbbbbb 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#bbbbbb 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#bbbbbb 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 2: Default task, Iconified task&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 3: Active task&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aaaaaa 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 4: Urgent task&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa4400 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa7733 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa4400 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa7733 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa4400 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#aa7733 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 5: Tooltip&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#ffffaa 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#ffffaa 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#ffffaa 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 6: Inactive desktop name&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#eeeeee 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 7: Active desktop name&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#999999 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Background 8: Systray&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;rounded&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_sides&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TBLR&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_content_tint_weight&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_hover&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;background_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#dddddd 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;border_color_pressed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#cccccc 100&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Panel&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_items&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LTEEEBSC&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_margin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;wm_menu&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_dock&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_pivot_struts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_position&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bottom&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;center&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;horizontal&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_layer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;normal&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_shrink&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;autohide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;autohide_show_timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;autohide_hide_timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;autohide_height&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;strut_policy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;follow_size&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;panel_window_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tint2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;disable_transparency&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_effects&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;font_shadow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_hover_icon_asb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_pressed_icon_asb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;scale_relative_to_dpi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;scale_relative_to_screen_height&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Taskbar&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_mode&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;single_desktop&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_hide_if_empty&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_active_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_hide_inactive_tasks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_hide_different_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_hide_different_desktop&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_always_show_all_desktop_tasks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_active_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_name_active_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_distribute_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;taskbar_sort_order&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;none&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_align&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;left&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Task&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_centered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;urgent_nb_of_blink&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100000&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_maximum_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;140&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;35&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_thumbnail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_thumbnail_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;210&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_icon_asb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_active_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_urgent_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;task_iconified_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toggle_iconify&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_middle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;none&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_right&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_scroll_up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prev_task&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;mouse_scroll_down&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_task&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# System tray (notification area)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_sort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ascending&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_icon_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;22&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_icon_asb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;systray_name_filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Launcher&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_icon_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_icon_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;38&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_icon_asb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_icon_theme&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Papirus&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Light&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_icon_theme_override&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;startup_notifications&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_item_app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;applications&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;thunar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_item_app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;applications&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sakura&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_item_app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;applications&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;microsoft&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;edge&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;launcher_item_app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;applications&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sublime_text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Clock&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;time1_format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;time2_format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;time1_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;time1_timezone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;time2_timezone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;time2_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;clock_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;clock_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;clock_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;clock_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;F&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;H&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;第&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V周&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;clock_tooltip_timezone&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;clock_lclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;clock_rclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;clock_mclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;clock_uwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;clock_dwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Battery&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_low_status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_low_cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xmessage&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;tint2: Battery low!&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_full_cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;bat1_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;bat2_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sans&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;bat1_format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;⚡&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;bat2_format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;battery_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_hide&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;101&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;battery_lclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;battery_rclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;battery_mclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;battery_uwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;battery_dwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;ac_connected_cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;ac_disconnected_cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Executor 1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;poo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;poo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;network&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_interval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_has_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_cache_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_continuous&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;网络&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_lclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_rclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_mclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_uwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_dwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#000000 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_centered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Executor 2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;home&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;poo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;poo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;volume&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_interval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_has_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_cache_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_continuous&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;声音&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_lclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_rclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_mclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_uwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_dwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#000000 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_centered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Executor 3&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;☀️$(light|cut --delimiter=. -f1)%&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_interval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_has_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_cache_icon&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_continuous&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_monitor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;all&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_tooltip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;亮度&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_lclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_rclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_mclick_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_uwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_dwheel_command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 
+&lt;span class=&#34;n&#34;&gt;execp_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Bold&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#000000 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_centered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;execp_icon_h&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#-------------------------------------&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Tooltip&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_show_timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_hide_timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_padding&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_background_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tooltip_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;14&#34;&gt;14. 安装第三方软件&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;wps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wps&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;baidu网盘&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pan&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;baidu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;需要依赖&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;blog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csdn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;net&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;weixin_45447477&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;details&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;115188938&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;vscode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visualstudio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
@@ -3244,12 +3938,12 @@ notify-send &lt;span class=&#34;s2&#34;&gt;&amp;quot;当前亮度为: &lt;/span&
 &lt;span class=&#34;n&#34;&gt;Motrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;motrix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;10&#34;&gt;10. 缺少驱动&lt;/h3&gt;
+&lt;h3 id=&#34;15&#34;&gt;15. 缺少驱动&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# 添加驱动
 https://packages.debian.org/bookworm/firmware-misc-nonfree
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;11&#34;&gt;11. 安装输入法&lt;/h3&gt;
+&lt;h3 id=&#34;16&#34;&gt;16. 安装输入法&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# sudo apt install ibus-rime librime-data-wubi
 # /home/poo/.config/ibus/rime/default.custom.yaml
 sudo apt install fcitx-rime librime-data-wubi
@@ -3263,7 +3957,7 @@ patch:
     - schema: luna_pinyin_simp
     - schema: wubi86
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -3316,7 +4010,7 @@ patch:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -4782,7 +5476,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -4898,7 +5592,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -4930,7 +5624,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -6063,7 +6757,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -6838,7 +7532,7 @@ echo $?
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -7232,7 +7926,7 @@ $ docker container run -p &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;:3000 -
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;docker&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;container&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cp&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;containID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;/path/to/file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -9114,7 +9808,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -10445,7 +11139,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -11266,7 +11960,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -11965,7 +12659,7 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -13171,7 +13865,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -13324,7 +14018,7 @@ patch:
     - schema: luna_pinyin_simp
     - schema: wubi86
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian+kde安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde安装过程.html</guid>
        
@@ -13779,7 +14473,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/loca
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian+xfce安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce安装过程.html</guid>
        
@@ -14786,7 +15480,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -14888,7 +15582,7 @@ style:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian+gnome安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome安装过程.html</guid>
        
@@ -15055,7 +15749,7 @@ reboot
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -15367,7 +16061,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alter USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -15447,7 +16141,7 @@ systemctl status mysqld
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root@localhost ~&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;2022&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;年&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;月&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;日&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;星期四&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CST&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -15922,7 +16616,7 @@ except IndexError as e:
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -16427,7 +17121,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -16795,7 +17489,7 @@ shenyi = 123456
 &lt;span class=&#34;c&#34;&gt;保存未加密的密码(yes/no)? yes&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;取出版本 0。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -16855,7 +17549,7 @@ shenyi = 123456
 &lt;p&gt;&lt;a href=&#34;https://srf.baidu.com/site/guanwang_linux/index.html&#34;&gt;百度输入法&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/Debain必备软件.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain必备软件.html</guid>
        
@@ -17029,7 +17723,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;导出特定表的结构&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mysqldump&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uroot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B数据库名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;tab&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;le&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -17236,7 +17930,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -17402,7 +18096,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -17601,7 +18295,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -17652,7 +18346,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-09-20 17:47:50</pubDate>  
+      <pubDate>2022-10-16 10:05:25</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

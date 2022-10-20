@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共3529个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共3728个字</span></a></li>
             
           </ul>
         </div>
@@ -54,15 +54,19 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-10-16 10:05:25</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-10-20 13:34:29</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
+<li><a href="#m">去除^M</a></li>
 <li><a href="#windowspythonpid">Windows下查找python进程PID</a></li>
 <li><a href="#vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</a></li>
 <li><a href="#vmwarecentos8">VMware安装CentOS相差8小时解决方法</a></li>
 </ul>
 </div>
+<h3 id="m">去除^M</h3>
+<p>vi下 <code>:%s/^M//g</code> 或者 <code>:1,$s/^M//g</code> 均可</p>
+<p>补充一点：<code>^M</code>是使用 <code>CTRL-V CTRL-M</code> 而不是字面上的 <code>^M</code></p>
 <h3 id="windowspythonpid">Windows下查找python进程PID</h3>
 <p><code>wmic process where name="python.exe" list full</code></p>
 <h3 id="vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</h3>

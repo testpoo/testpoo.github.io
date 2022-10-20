@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共98868个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共99142个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde安装过程</span><span>2021-05-31&nbsp;&nbsp;共8556个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-10-16 10:05:25</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-10-20 13:34:29</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -178,7 +178,7 @@ network-manager 网络
 </code></pre></div>
 
 <h3 id="10">10. 触摸板修改</h3>
-<div class="codehilite"><pre><span></span><code>/usr/share/X11/xrog.conf.d/40-libinput.conf
+<div class="codehilite"><pre><span></span><code>/usr/share/X11/xorg.conf.d/40-libinput.conf
 
 Section &quot;InputClass&quot;
         Identifier &quot;libinput touchpad catchall&quot;
@@ -189,6 +189,9 @@ Section &quot;InputClass&quot;
         Option &quot;Tapping&quot; &quot;on&quot; # 触摸以点击
         Option &quot;ClickMethod&quot; &quot;clickfinger&quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
         Option &quot;NaturalScrolling&quot; &quot;true&quot; # 自然滚动（反方向滚动）
+        Option &quot;SendEventsMode&quot; &quot;disabled-on-external-mouse&quot; # 当检测到 USB 鼠标时，它将禁用触摸板。
+        Option &quot;DisableWhileTyping&quot; &quot;True&quot; # 防止打字时误触触控板
+        Option &quot;TappingDrag&quot; &quot;True&quot; # 轻击后手指按住会使单个按钮关闭，此手指的所有动作都将转换为拖动动作。
 #        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
 EndSection
 </code></pre></div>

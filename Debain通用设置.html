@@ -46,17 +46,17 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共91921个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共92199个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22575个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共11155个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7439个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-01 17:30:02</span></div>
+      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-03 10:45:28</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -75,10 +75,11 @@
 <li><a href="#12">1.2. 下载驱动</a></li>
 <li><a href="#13-u">1.3. 制作自启动U盘</a></li>
 <li><a href="#14">1.4. 安装</a></li>
-<li><a href="#15-debain5">1.5. 去掉debain开机启动项停留的5秒和电池的问题</a></li>
-<li><a href="#16">1.6. 修改源</a></li>
-<li><a href="#17">1.7. 缺少驱动</a></li>
-<li><a href="#18">1.8. 安装输入法</a></li>
+<li><a href="#15-sudo">1.5. 将当前用户加入sudo</a></li>
+<li><a href="#16-debain5">1.6. 去掉debain开机启动项停留的5秒和电池的问题</a></li>
+<li><a href="#17">1.7. 修改源</a></li>
+<li><a href="#18">1.8. 缺少驱动</a></li>
+<li><a href="#19">1.9. 安装输入法</a></li>
 </ul>
 </li>
 <li><a href="#2-i3openbox">2. i3/OpenBox中的通用设置</a><ul>
@@ -88,37 +89,48 @@
 <li><a href="#24-i3openbox">2.4. 启动i3/OpenBox</a></li>
 </ul>
 </li>
-<li><a href="#3">3. 常用软件</a></li>
 </ul>
 </div>
 <h3 id="1">1. 通用设置</h3>
 <h4 id="11">1.1. 下载特殊版本链接</h4>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 无驱动稳定版</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span>
-<span class="c1"># 无驱动测试版</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdimage</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">cdimage</span><span class="o">/</span><span class="n">weekly</span><span class="o">-</span><span class="n">builds</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">iso</span><span class="o">-</span><span class="n">cd</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">amd64</span><span class="o">-</span><span class="n">netinst</span><span class="o">.</span><span class="n">iso</span>
-<span class="c1"># 有驱动稳定版</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdimage</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">cdimage</span><span class="o">/</span><span class="n">unofficial</span><span class="o">/</span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">/</span><span class="n">cd</span><span class="o">-</span><span class="n">including</span><span class="o">-</span><span class="n">firmware</span><span class="o">/</span><span class="n">current</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">iso</span><span class="o">-</span><span class="n">cd</span><span class="o">/</span><span class="n">firmware</span><span class="o">-</span><span class="mf">11.5</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">amd64</span><span class="o">-</span><span class="n">netinst</span><span class="o">.</span><span class="n">iso</span>
-<span class="c1"># 有驱动测试版</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cdimage</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">cdimage</span><span class="o">/</span><span class="n">unofficial</span><span class="o">/</span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">/</span><span class="n">cd</span><span class="o">-</span><span class="n">including</span><span class="o">-</span><span class="n">firmware</span><span class="o">/</span><span class="n">weekly</span><span class="o">-</span><span class="n">builds</span><span class="o">/</span><span class="n">amd64</span><span class="o">/</span><span class="n">iso</span><span class="o">-</span><span class="n">cd</span><span class="o">/</span><span class="n">firmware</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">amd64</span><span class="o">-</span><span class="n">netinst</span><span class="o">.</span><span class="n">iso</span>
+<ul>
+<li>
+<p><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso">无驱动稳定版debian-11.5.0-amd64-netinst.iso</a></p>
+</li>
+<li>
+<p><a href="https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso">无驱动测试版debian-testing-amd64-netinst.iso</a></p>
+</li>
+<li>
+<p><a href="https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-11.5.0-amd64-netinst.iso">有驱动稳定版firmware-11.5.0-amd64-netinst.iso</a></p>
+</li>
+<li>
+<p><a href="https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/firmware-testing-amd64-netinst.iso">有驱动测试版firmware-testing-amd64-netinst.iso</a></p>
+</li>
+</ul>
+<h4 id="12">1.2. 下载驱动</h4>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip">https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</a></p>
+<h4 id="13-u">1.3. 制作自启动U盘</h4>
+<p><code>dd if=xxx.iso of=/dev/disk</code></p>
+<h4 id="14">1.4. 安装</h4>
+<h4 id="15-sudo">1.5. 将当前用户加入sudo</h4>
+<div class="codehilite"><pre><span></span><code># 方法一
+su root
+nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
+
+# 方法二
+useradd -a -G sudo username
+reboot
 </code></pre></div>
 
-<h4 id="12">1.2. 下载驱动</h4>
-<p>https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip</p>
-<h4 id="13-u">1.3. 制作自启动U盘</h4>
-<p><code>dd if=xxx.iso of=/dev/disk2</code></p>
-<h4 id="14">1.4. 安装</h4>
-<h4 id="15-debain5">1.5. 去掉debain开机启动项停留的5秒和电池的问题</h4>
-<div class="codehilite"><pre><span></span><code>su root
-nano /etc/sudoers添加 poo ALL=(ALL:ALL) ALL
-nano /etc/default/grub
+<h4 id="16-debain5">1.6. 去掉debain开机启动项停留的5秒和电池的问题</h4>
+<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
 找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
 </code></pre></div>
 
-<h4 id="16">1.6. 修改源</h4>
+<h4 id="17">1.7. 修改源</h4>
 <div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
 <span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
 <span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free</span>
@@ -130,12 +142,12 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 <span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free</span>
 </code></pre></div>
 
-<h4 id="17">1.7. 缺少驱动</h4>
+<h4 id="18">1.8. 缺少驱动</h4>
 <div class="codehilite"><pre><span></span><code># 添加驱动
 https://packages.debian.org/bookworm/firmware-misc-nonfree
 </code></pre></div>
 
-<h4 id="18">1.8. 安装输入法</h4>
+<h4 id="19">1.9. 安装输入法</h4>
 <ul>
 <li>fcitx-rime</li>
 </ul>
@@ -174,7 +186,7 @@ style:
 
 <h3 id="2-i3openbox">2. i3/OpenBox中的通用设置</h3>
 <h4 id="21">2.1. 触摸板修改</h4>
-<div class="codehilite"><pre><span></span><code>/usr/share/X11/xrog.conf.d/40-libinput.conf
+<div class="codehilite"><pre><span></span><code>sudo nano /usr/share/X11/xrog.conf.d/40-libinput.conf
 
 Section &quot;InputClass&quot;
         Identifier &quot;libinput touchpad catchall&quot;
@@ -237,50 +249,7 @@ iface wlp1s0 inet dhcp
 <span class="nv">fi</span>
 # 查看<span class="nv">Ctrl</span><span class="o">-</span><span class="nv">Alt</span><span class="o">-</span><span class="nv">F1</span>对应的那个<span class="nv">tty</span>
 <span class="nv">echo</span> $<span class="ss">(</span><span class="nv">tty</span><span class="ss">)</span>
-</code></pre></div>
-
-<h3 id="3">3. 常用软件</h3>
-<ul>
-<li>
-<p><a href="https://music.163.com/#/download">网易云音乐-音乐软件</a></p>
-</li>
-<li>
-<p><a href="https://dbeaver.io/download/">dbeaver-数据库客户端</a></p>
-</li>
-<li>
-<p><a href="https://www.smartsvn.com/download/">smartsvn-svn客户端</a></p>
-</li>
-<li>
-<p><a href="https://github.com/oguzhaninan/Stacer">Stacer-系统清理</a></p>
-</li>
-<li>
-<p><a href="https://linux.wps.cn/">wps</a></p>
-</li>
-<li>
-<p><a href="https://pan.baidu.com/download">baidu网盘</a> 依赖: <a href="http://ftp.cn.debian.org/debian/pool/main/libi/libindicator/libindicator3-7_0.5.0-2_amd64.deb">libindicator3-7</a> <a href="http://mirrors.ustc.edu.cn/debian/pool/main/liba/libappindicator/libappindicator3-1_0.4.92-3.1_amd64.deb">libappindicator3-1</a></p>
-</li>
-<li>
-<p><a href="https://code.visualstudio.com/">vscode</a></p>
-</li>
-<li>
-<p><a href="https://y.qq.com/download/download.html">QQ音乐</a></p>
-</li>
-<li>
-<p><a href="https://im.qq.com/linuxqq/download.html">QQ</a></p>
-</li>
-<li>
-<p><a href="https://www.sublimetext.com/download">sublime</a></p>
-</li>
-<li>
-<p><a href="https://motrix.app/">Motrix</a></p>
-</li>
-<li>
-<p><a href="https://alidocs.dingtalk.com/i/p/nb9XJlJ7QbxN8GyA/docs/ROGpvEna5YQWmaPgQ156W4ykmK3zoB27">钉钉</a></p>
-</li>
-<li>
-<p><a href="http://www.hellodesk.cn/download.html">ToDesk</a></p>
-</li>
-</ul></div>
+</code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

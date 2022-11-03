@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2022-11-01 17:30:02</pubDate>  
-    <lastBuildDate>2022-11-01 17:30:02</lastBuildDate>  
+    <pubDate>2022-11-03 10:45:28</pubDate>  
+    <lastBuildDate>2022-11-03 10:45:28</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -42,11 +42,13 @@ mate-power-manager 电源
 &lt;ul&gt;
 &lt;li&gt;openbox&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;复制配置文件&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ mkdir -p ~/.config/openbox
 &lt;span class=&#34;c1&#34;&gt;# openbox有以下文件{rc.xml,menu.xml,autostart,environment}&lt;/span&gt;
 $ cp /etc/xdg/openbox/* ~/.config/openbox/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;设置启动项&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# autostart.sh
 
 tint2 &amp;amp;
@@ -56,6 +58,7 @@ blueman-applet &amp;amp;
 feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;添加快捷键&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# keyboard中加入如下代码 声音和亮度快捷键绑定
 
     &lt;span class=&#34;c&#34;&gt;&amp;lt;!--自定义--&amp;gt;&lt;/span&gt;
@@ -86,6 +89,7 @@ feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;/keybind&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;配置菜单&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# menu.xml
 
 &lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
@@ -146,6 +150,7 @@ feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;/openbox_menu&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;菜单生成脚本&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;obamenu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;py&lt;/span&gt;
 
 &lt;span class=&#34;s s-Atom&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;s s-Atom&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;s s-Atom&#34;&gt;python3&lt;/span&gt;
@@ -372,6 +377,7 @@ feh --bg-scale &amp;quot;/home/poo/.poo/bg.jpg&amp;quot; &amp;amp;
 &lt;ul&gt;
 &lt;li&gt;jgmenu&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;jgmenu样式&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# jgmenurc
 
 stay_alive           = 1
@@ -404,6 +410,7 @@ color_sel_fg         = #2b303b 100
 color_sep_fg         = #8fa1b3 40
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;添加附加项目&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# &lt;span class=&#34;nv&#34;&gt;append&lt;/span&gt;.&lt;span class=&#34;nv&#34;&gt;csv&lt;/span&gt;
 
 &lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;()&lt;/span&gt;
@@ -417,6 +424,7 @@ color_sep_fg         = #8fa1b3 40
 关机,&lt;span class=&#34;nv&#34;&gt;systemctl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;poweroff&lt;/span&gt;,&lt;span class=&#34;nv&#34;&gt;system&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;shutdown&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;添加前置项目&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prepend&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;@rect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;190&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;#000000&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;#656565&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
@@ -475,6 +483,7 @@ notify-send &lt;span class=&#34;s2&#34;&gt;&amp;quot;当前亮度为: &lt;/span&
     &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;📶Nokia&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;tint2配置&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;#---- Generated by tint2conf a94d ----&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# See https://gitlab.com/o9000/tint2/wikis/Configure for &lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# full documentation of the configuration options.&lt;/span&gt;
@@ -808,7 +817,7 @@ notify-send &lt;span class=&#34;s2&#34;&gt;&amp;quot;当前亮度为: &lt;/span&
 &lt;span class=&#34;n&#34;&gt;tooltip_font_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#222222 100&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;tooltip_font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;霞鹜文楷&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -861,7 +870,7 @@ notify-send &lt;span class=&#34;s2&#34;&gt;&amp;quot;当前亮度为: &lt;/span&
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -2327,7 +2336,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -2443,7 +2452,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -2475,7 +2484,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -3608,7 +3617,7 @@ mysql&amp;gt; SELECT * FROM tb_students_score;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -4383,7 +4392,7 @@ echo $?
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -4777,7 +4786,7 @@ $ docker container run -p &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt;:3000 -
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;docker&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;container&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cp&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;containID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;/path/to/file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -6659,7 +6668,7 @@ Space&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;空格&lt;span class=&#34;o&#34
 &lt;span class=&#34;n&#34;&gt;TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;：该进程启动后占用的总的&lt;span class=&#34;n&#34;&gt;CPU时间&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;COMMAND&lt;/span&gt;：进程启动的启动命令名&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -7990,7 +7999,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -8811,7 +8820,7 @@ print(add(3, 5))
 &lt;span class=&#34;go&#34;&gt;* master  7a98805 Merge branch &amp;#39;iss53&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;go&#34;&gt;  testing 782fd34 add scott to the author list in the readmes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -9510,7 +9519,7 @@ print(&amp;#39;search:&amp;#39;, re.search(pattern, text))
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -10716,7 +10725,7 @@ exec  pdb
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -10802,7 +10811,7 @@ exec  pdb
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -10844,7 +10853,7 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 &lt;li&gt;窗口样式设置：设置--&amp;gt;窗口管理器--&amp;gt;样式+按钮布局&lt;/li&gt;
 &lt;li&gt;窗口管理器微调：设置--&amp;gt;窗口管理器微调--&amp;gt;辅助功能  最大化窗口时隐藏标题&lt;/li&gt;
 &lt;li&gt;主题/字体设置：外观--&amp;gt;样式+字体&lt;/li&gt;
-&lt;li&gt;设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M&lt;/li&gt;
+&lt;li&gt;设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M  %H:%M%n%Y/%m/%d&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;4&#34;&gt;4. 图片路径&lt;/h3&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/usr/share/backgrounds
@@ -11189,7 +11198,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/loca
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -12196,7 +12205,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -12221,7 +12230,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -12315,7 +12324,7 @@ runner.run(discover) # 通过 run 函数运行测试用例
 &lt;span class=&#34;nl&#34;&gt;https:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//www.lifewire.com/beginners-guide-to-conky-4043352&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;展示在桌面：&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;own_window_type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -12627,7 +12636,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;alter USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -12639,18 +12648,32 @@ systemctl status mysqld
       <title>问题解决</title>  
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ssh-key&#34;&gt;创建一个 SSH key&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#m&#34;&gt;去除^M&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vmware-workstation-player-uefi&#34;&gt;VMware Workstation Player 虚拟机支持UEFI配置方法&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#vmwarecentos8&#34;&gt;VMware安装CentOS相差8小时解决方法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;ssh-key&#34;&gt;创建一个 SSH key&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keygen&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rsa&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;&amp;quot;your_email@example.com&amp;quot;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;默认生成地址&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;~/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id_rsa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
 &lt;h3 id=&#34;m&#34;&gt;去除^M&lt;/h3&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;vi下 &lt;code&gt;:%s/^M//g&lt;/code&gt; 或者 &lt;code&gt;:1,$s/^M//g&lt;/code&gt; 均可&lt;/p&gt;
 &lt;p&gt;补充一点：&lt;code&gt;^M&lt;/code&gt;是使用 &lt;code&gt;CTRL-V CTRL-M&lt;/code&gt; 而不是字面上的 &lt;code&gt;^M&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;h3 id=&#34;windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/h3&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;wmic process where name=&#34;python.exe&#34; list full&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;h3 id=&#34;vmware-workstation-player-uefi&#34;&gt;VMware Workstation Player 虚拟机支持UEFI配置方法&lt;/h3&gt;
+&lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;新建虚拟机&lt;/p&gt;
@@ -12662,7 +12685,9 @@ systemctl status mysqld
 &lt;p&gt;编辑该文件，在文件中添加：&lt;code&gt;firmware = &#34;efi&#34;&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;blockquote&gt;
 &lt;h3 id=&#34;vmwarecentos8&#34;&gt;VMware安装CentOS相差8小时解决方法&lt;/h3&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）&lt;/li&gt;
 &lt;/ul&gt;
@@ -12711,7 +12736,7 @@ systemctl status mysqld
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root@localhost ~&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;2022&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;年&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;月&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;日&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;星期四&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CST&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -13186,7 +13211,7 @@ except IndexError as e:
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;math&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -13691,7 +13716,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -14059,7 +14084,7 @@ shenyi = 123456
 &lt;span class=&#34;c&#34;&gt;保存未加密的密码(yes/no)? yes&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;取出版本 0。&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -14076,10 +14101,11 @@ shenyi = 123456
 &lt;li&gt;&lt;a href=&#34;#12&#34;&gt;1.2. 下载驱动&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#13-u&#34;&gt;1.3. 制作自启动U盘&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#14&#34;&gt;1.4. 安装&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#15-debain5&#34;&gt;1.5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#16&#34;&gt;1.6. 修改源&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#17&#34;&gt;1.7. 缺少驱动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#18&#34;&gt;1.8. 安装输入法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#15-sudo&#34;&gt;1.5. 将当前用户加入sudo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#16-debain5&#34;&gt;1.6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#17&#34;&gt;1.7. 修改源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#18&#34;&gt;1.8. 缺少驱动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#19&#34;&gt;1.9. 安装输入法&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-i3openbox&#34;&gt;2. i3/OpenBox中的通用设置&lt;/a&gt;&lt;ul&gt;
@@ -14089,37 +14115,48 @@ shenyi = 123456
 &lt;li&gt;&lt;a href=&#34;#24-i3openbox&#34;&gt;2.4. 启动i3/OpenBox&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 常用软件&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 通用设置&lt;/h3&gt;
 &lt;h4 id=&#34;11&#34;&gt;1.1. 下载特殊版本链接&lt;/h4&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c1&#34;&gt;# 无驱动稳定版&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;www&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debian&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# 无驱动测试版&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debian&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;weekly&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debian&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;testing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;netinst&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# 有驱动稳定版&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debian&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unofficial&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;non&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;free&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;including&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firmware&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;current&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firmware&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;11.5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;netinst&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# 有驱动测试版&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;debian&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cdimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unofficial&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;non&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;free&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;including&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firmware&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;weekly&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;firmware&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;testing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amd64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;netinst&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iso&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso&#34;&gt;无驱动稳定版debian-11.5.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso&#34;&gt;无驱动测试版debian-testing-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-11.5.0-amd64-netinst.iso&#34;&gt;有驱动稳定版firmware-11.5.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/firmware-testing-amd64-netinst.iso&#34;&gt;有驱动测试版firmware-testing-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;12&#34;&gt;1.2. 下载驱动&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;13-u&#34;&gt;1.3. 制作自启动U盘&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;dd if=xxx.iso of=/dev/disk&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;14&#34;&gt;1.4. 安装&lt;/h4&gt;
+&lt;h4 id=&#34;15-sudo&#34;&gt;1.5. 将当前用户加入sudo&lt;/h4&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# 方法一
+su root
+nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
+
+# 方法二
+useradd -a -G sudo username
+reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;12&#34;&gt;1.2. 下载驱动&lt;/h4&gt;
-&lt;p&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/p&gt;
-&lt;h4 id=&#34;13-u&#34;&gt;1.3. 制作自启动U盘&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;dd if=xxx.iso of=/dev/disk2&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;14&#34;&gt;1.4. 安装&lt;/h4&gt;
-&lt;h4 id=&#34;15-debain5&#34;&gt;1.5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h4&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;su root
-nano /etc/sudoers添加 poo ALL=(ALL:ALL) ALL
-nano /etc/default/grub
+&lt;h4 id=&#34;16-debain5&#34;&gt;1.6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h4&gt;
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;nano /etc/default/grub
 找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet&amp;quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;16&#34;&gt;1.6. 修改源&lt;/h4&gt;
+&lt;h4 id=&#34;17&#34;&gt;1.7. 修改源&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;c&#34;&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;deb&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian/&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;bookworm&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;contrib&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;non-free&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free&lt;/span&gt;
@@ -14131,12 +14168,12 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 &lt;span class=&#34;c&#34;&gt;# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;17&#34;&gt;1.7. 缺少驱动&lt;/h4&gt;
+&lt;h4 id=&#34;18&#34;&gt;1.8. 缺少驱动&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# 添加驱动
 https://packages.debian.org/bookworm/firmware-misc-nonfree
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;18&#34;&gt;1.8. 安装输入法&lt;/h4&gt;
+&lt;h4 id=&#34;19&#34;&gt;1.9. 安装输入法&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;fcitx-rime&lt;/li&gt;
 &lt;/ul&gt;
@@ -14175,7 +14212,7 @@ style:
 
 &lt;h3 id=&#34;2-i3openbox&#34;&gt;2. i3/OpenBox中的通用设置&lt;/h3&gt;
 &lt;h4 id=&#34;21&#34;&gt;2.1. 触摸板修改&lt;/h4&gt;
-&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;/usr/share/X11/xrog.conf.d/40-libinput.conf
+&lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo nano /usr/share/X11/xrog.conf.d/40-libinput.conf
 
 Section &amp;quot;InputClass&amp;quot;
         Identifier &amp;quot;libinput touchpad catchall&amp;quot;
@@ -14238,51 +14275,8 @@ iface wlp1s0 inet dhcp
 &lt;span class=&#34;nv&#34;&gt;fi&lt;/span&gt;
 # 查看&lt;span class=&#34;nv&#34;&gt;Ctrl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;F1&lt;/span&gt;对应的那个&lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;echo&lt;/span&gt; $&lt;span class=&#34;ss&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&#34;3&#34;&gt;3. 常用软件&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://music.163.com/#/download&#34;&gt;网易云音乐-音乐软件&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://dbeaver.io/download/&#34;&gt;dbeaver-数据库客户端&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.smartsvn.com/download/&#34;&gt;smartsvn-svn客户端&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/oguzhaninan/Stacer&#34;&gt;Stacer-系统清理&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://linux.wps.cn/&#34;&gt;wps&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/download&#34;&gt;baidu网盘&lt;/a&gt; 依赖: &lt;a href=&#34;http://ftp.cn.debian.org/debian/pool/main/libi/libindicator/libindicator3-7_0.5.0-2_amd64.deb&#34;&gt;libindicator3-7&lt;/a&gt; &lt;a href=&#34;http://mirrors.ustc.edu.cn/debian/pool/main/liba/libappindicator/libappindicator3-1_0.4.92-3.1_amd64.deb&#34;&gt;libappindicator3-1&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;vscode&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://y.qq.com/download/download.html&#34;&gt;QQ音乐&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://im.qq.com/linuxqq/download.html&#34;&gt;QQ&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.sublimetext.com/download&#34;&gt;sublime&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://motrix.app/&#34;&gt;Motrix&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://alidocs.dingtalk.com/i/p/nb9XJlJ7QbxN8GyA/docs/ROGpvEna5YQWmaPgQ156W4ykmK3zoB27&#34;&gt;钉钉&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.hellodesk.cn/download.html&#34;&gt;ToDesk&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -14456,7 +14450,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;span class=&#34;mf&#34;&gt;4.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;导出特定表的结构&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mysqldump&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uroot&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B数据库名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;tab&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;le&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;表名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xxx&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -14663,7 +14657,7 @@ mysqldump -utest -p123 --databases test  &amp;lt; testdp.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -14829,7 +14823,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -15060,7 +15054,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;div class=&#34;codehilite&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -15087,13 +15081,13 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;我不知道该怎么来写自己，介绍自己，因为我认为自己是善变的。我有时喜欢温柔的钢琴曲，有时又会喜欢一些很High的吉他音，有时沉稳、理智，有时暴躁、愤怒。或许这就是我吧，一个不定怎样的人。&lt;/p&gt;
 &lt;p&gt;或许在以后的以后，我会记录下我是怎样的一个人~！&lt;/p&gt;
 &lt;h3 id=&#34;_2&#34;&gt;个人笔记&lt;/h3&gt;
-&lt;p&gt;域名：&lt;a href=&#34;https://testpoo.github.io/&#34;&gt;testpoo.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;主机：&lt;a href=&#34;https://github.com/testpoo&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;博客：&lt;a href=&#34;https://github.com/testpoo/PyBlog&#34;&gt;PyBlog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;网址：&lt;a href=&#34;https://testpoo.github.io/&#34;&gt;testpoo.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;托管：&lt;a href=&#34;https://github.com/testpoo&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;程序：&lt;a href=&#34;https://github.com/testpoo/PyBlog&#34;&gt;PyBlog&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_3&#34;&gt;个人情况&lt;/h3&gt;
 &lt;p&gt;网名：地空神一&lt;/p&gt;
-&lt;p&gt;籍贯：雍城&lt;/p&gt;
-&lt;p&gt;现居：长安&lt;/p&gt;
+&lt;p&gt;籍贯：陕西&lt;/p&gt;
+&lt;p&gt;现居：西安&lt;/p&gt;
 &lt;p&gt;职业：&amp;lt;/&amp;gt;&lt;/p&gt;
 &lt;p&gt;副业：艰难寻找中&lt;/p&gt;
 &lt;p&gt;语言：西府话、普通话、英文&lt;/p&gt;
@@ -15111,7 +15105,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2022-11-01 17:30:02</pubDate>  
+      <pubDate>2022-11-03 10:45:28</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

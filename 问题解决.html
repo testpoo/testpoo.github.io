@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共3728个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共4622个字</span></a></li>
             
           </ul>
         </div>
@@ -54,22 +54,36 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-01 17:30:02</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-03 10:45:28</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
+<li><a href="#ssh-key">创建一个 SSH key</a></li>
 <li><a href="#m">去除^M</a></li>
 <li><a href="#windowspythonpid">Windows下查找python进程PID</a></li>
 <li><a href="#vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</a></li>
 <li><a href="#vmwarecentos8">VMware安装CentOS相差8小时解决方法</a></li>
 </ul>
 </div>
+<blockquote>
+<h3 id="ssh-key">创建一个 SSH key</h3>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">rsa</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="ss">&quot;your_email@example.com&quot;</span><span class="w"></span>
+<span class="n">默认生成地址</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span><span class="w"></span>
+</code></pre></div>
+
+<blockquote>
 <h3 id="m">去除^M</h3>
+</blockquote>
 <p>vi下 <code>:%s/^M//g</code> 或者 <code>:1,$s/^M//g</code> 均可</p>
 <p>补充一点：<code>^M</code>是使用 <code>CTRL-V CTRL-M</code> 而不是字面上的 <code>^M</code></p>
+<blockquote>
 <h3 id="windowspythonpid">Windows下查找python进程PID</h3>
+</blockquote>
 <p><code>wmic process where name="python.exe" list full</code></p>
+<blockquote>
 <h3 id="vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</h3>
+</blockquote>
 <ol>
 <li>
 <p>新建虚拟机</p>
@@ -81,7 +95,9 @@
 <p>编辑该文件，在文件中添加：<code>firmware = "efi"</code></p>
 </li>
 </ol>
+<blockquote>
 <h3 id="vmwarecentos8">VMware安装CentOS相差8小时解决方法</h3>
+</blockquote>
 <ul>
 <li>如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</li>
 </ul>

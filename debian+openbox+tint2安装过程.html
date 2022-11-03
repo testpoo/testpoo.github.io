@@ -46,17 +46,17 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共91921个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共92199个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22575个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共11155个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7439个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-01 17:30:02</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-03 10:45:28</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -98,11 +98,13 @@ mate-power-manager 电源
 <ul>
 <li>openbox</li>
 </ul>
+<p><strong>复制配置文件</strong></p>
 <div class="codehilite"><pre><span></span><code>$ mkdir -p ~/.config/openbox
 <span class="c1"># openbox有以下文件{rc.xml,menu.xml,autostart,environment}</span>
 $ cp /etc/xdg/openbox/* ~/.config/openbox/
 </code></pre></div>
 
+<p><strong>设置启动项</strong></p>
 <div class="codehilite"><pre><span></span><code># autostart.sh
 
 tint2 &amp;
@@ -112,6 +114,7 @@ blueman-applet &amp;
 feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
 </code></pre></div>
 
+<p><strong>添加快捷键</strong></p>
 <div class="codehilite"><pre><span></span><code># keyboard中加入如下代码 声音和亮度快捷键绑定
 
     <span class="c">&lt;!--自定义--&gt;</span>
@@ -142,6 +145,7 @@ feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
     <span class="nt">&lt;/keybind&gt;</span>
 </code></pre></div>
 
+<p><strong>配置菜单</strong></p>
 <div class="codehilite"><pre><span></span><code># menu.xml
 
 <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
@@ -202,6 +206,7 @@ feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
 <span class="nt">&lt;/openbox_menu&gt;</span>
 </code></pre></div>
 
+<p><strong>菜单生成脚本</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="s s-Atom">#</span> <span class="s s-Atom">obamenu</span><span class="p">.</span><span class="s s-Atom">py</span>
 
 <span class="s s-Atom">#</span><span class="p">!</span><span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">env</span> <span class="s s-Atom">python3</span>
@@ -428,6 +433,7 @@ feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
 <ul>
 <li>jgmenu</li>
 </ul>
+<p><strong>jgmenu样式</strong></p>
 <div class="codehilite"><pre><span></span><code># jgmenurc
 
 stay_alive           = 1
@@ -460,6 +466,7 @@ color_sel_fg         = #2b303b 100
 color_sep_fg         = #8fa1b3 40
 </code></pre></div>
 
+<p><strong>添加附加项目</strong></p>
 <div class="codehilite"><pre><span></span><code># <span class="nv">append</span>.<span class="nv">csv</span>
 
 <span class="o">^</span><span class="nv">sep</span><span class="ss">()</span>
@@ -473,6 +480,7 @@ color_sep_fg         = #8fa1b3 40
 关机,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">poweroff</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">shutdown</span>
 </code></pre></div>
 
+<p><strong>添加前置项目</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">prepend</span><span class="p">.</span><span class="n">csv</span><span class="w"></span>
 
 <span class="nv">@rect</span><span class="p">,,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nf">left</span><span class="p">,</span><span class="k">top</span><span class="p">,</span><span class="n">#000000</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">#656565</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"></span>
@@ -531,6 +539,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
 </code></pre></div>
 
+<p><strong>tint2配置</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#---- Generated by tint2conf a94d ----</span>
 <span class="c1"># See https://gitlab.com/o9000/tint2/wikis/Configure for </span>
 <span class="c1"># full documentation of the configuration options.</span>

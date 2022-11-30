@@ -1,0 +1,1729 @@
+<!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>测试铺</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
+    <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
+  </head>
+
+  <body>
+    <div class="sider">
+      <div class="categories">
+        <div class="title">
+          <a href="https://testpoo.github.io">
+            <img src="https://testpoo.github.io/themes/img/title.jpg">
+            <div class="linkbutton testpoo">测试铺</div>
+          </a>
+        </div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
+            
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><label style="color: #ffba48"></label>&nbsp;debian</a></li>
+            
+            <li><a href="https://testpoo.github.io/面试问答.html"><label style="color: #ffba48"></label>&nbsp;笔记</a></li>
+            
+            <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
+            
+            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
+            
+            <li><a href="https://testpoo.github.io/shell简介.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
+            
+            <li><a href="https://testpoo.github.io/问题解决.html"><label style="color: #ffba48"></label>&nbsp;问题解决</a></li>
+            
+          </ul>
+        </div>
+        <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:TestPoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
+      </div>
+      <div class="articles">
+        <div class="category">分类：python</div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共115995个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span><span>2022-11-14&nbsp;&nbsp;共264953个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span><span>2021-11-30&nbsp;&nbsp;共121649个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共45046个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共206400个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共92782个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span><span>2020-05-14&nbsp;&nbsp;共33494个字</span></a></li>
+            
+            <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span><span>2019-10-11&nbsp;&nbsp;共2684个字</span></a></li>
+            
+          </ul>
+        </div>
+        <div class="item-num">总共8项</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header"><span>BeautifulSoup简介</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-30 09:24:00</span></div>
+      <input class="xswitch xonoff" type="checkbox" id="catalog">
+      <div class="posts"><div class="toc">
+<ul>
+<li><a href="#1-beautiful-soup">1. Beautiful Soup简介</a><ul>
+<li><a href="#11">1.1 举个例子</a></li>
+</ul>
+</li>
+<li><a href="#2-beautiful-soup">2. 安装 Beautiful Soup</a></li>
+<li><a href="#3">3. 安装解析器</a></li>
+<li><a href="#4">4. 使用方法</a></li>
+<li><a href="#5">5. 对象的种类</a><ul>
+<li><a href="#51-tag">5.1 Tag</a></li>
+<li><a href="#52">5.2 可遍历的字符串</a></li>
+<li><a href="#53-beautifulsoup">5.3 BeautifulSoup</a></li>
+<li><a href="#54">5.4 注释及特殊字符串</a></li>
+</ul>
+</li>
+<li><a href="#6">6. 遍历方法</a><ul>
+<li><a href="#61">6.1 子节点</a></li>
+<li><a href="#62">6.2 父节点</a></li>
+<li><a href="#63">6.3 兄弟节点</a></li>
+<li><a href="#64">6.4 回退和前进</a></li>
+</ul>
+</li>
+<li><a href="#7">7. 搜索方法</a><ul>
+<li><a href="#71">7.1 过滤器</a></li>
+<li><a href="#72-find_all">7.2 find_all()</a></li>
+<li><a href="#73-find">7.3 find()</a></li>
+<li><a href="#74-find_parentsfind_parent">7.4 find_parents()和find_parent()</a></li>
+<li><a href="#75-find_next_siblingfind_next_sibling">7.5 find_next_sibling()和find_next_sibling()</a></li>
+<li><a href="#76-find_previous_sibingsfind_previous_sibing">7.6 find_previous_sibings()和find_previous_sibing()</a></li>
+<li><a href="#77-find_all_nextfind_next">7.7 find_all_next()和find_next()</a></li>
+<li><a href="#78-find_all_previousfind_previous">7.8 find_all_previous()和find_previous()</a></li>
+<li><a href="#79-css">7.9 CSS选择器</a></li>
+</ul>
+</li>
+<li><a href="#8">8. 修改方法</a><ul>
+<li><a href="#81-tag">8.1 修改tag的名称和属性</a></li>
+<li><a href="#82-string">8.2 修改 .string</a></li>
+<li><a href="#83-append">8.3 append()</a></li>
+<li><a href="#84-navigablestring-new_tag">8.4 NavigableString() 和 .new_tag()</a></li>
+<li><a href="#85-insert">8.5 insert()</a></li>
+<li><a href="#86-insert_before-insert_after">8.6 insert_before() 和 insert_after()</a></li>
+<li><a href="#87-clear">8.7 clear()</a></li>
+<li><a href="#88-extract">8.8 extract()</a></li>
+<li><a href="#89-decompose">8.9 decompose()</a></li>
+<li><a href="#810-replace_with">8.10 replace_with()</a></li>
+<li><a href="#811-wrap">8.11 wrap()</a></li>
+<li><a href="#812-unwrap">8.12 unwrap()</a></li>
+</ul>
+</li>
+<li><a href="#9">9. 输出</a><ul>
+<li><a href="#91">9.1 格式化输出</a></li>
+<li><a href="#92">9.2 压缩输出</a></li>
+<li><a href="#93">9.3 输出格式</a></li>
+<li><a href="#94-get_text">9.4 get_text()</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="1-beautiful-soup">1. Beautiful Soup简介</h3>
+<p>Beautiful Soup 是一个可以从HTML或XML文件中提取数据的Python库.</p>
+<h4 id="11">1.1 举个例子</h4>
+<div class="codehilite"><pre><span></span><code>html_doc = &quot;&quot;&quot;
+<span class="nt">&lt;html&gt;&lt;head&gt;&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;story&quot;</span><span class="nt">&gt;</span>从前有三个人;他们的名字是
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">class=</span><span class="s">&quot;peopele&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>,
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">class=</span><span class="s">&quot;peopele&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span> 和
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">class=</span><span class="s">&quot;peopele&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>;
+他们住在一个四合院。<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+&quot;&quot;&quot;
+</code></pre></div>
+
+<ul>
+<li>格式化输出<code>html_doc</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">)</span>
+
+<span class="c1"># 输出结果：</span>
+<span class="o">&lt;</span><span class="n">bound</span> <span class="n">method</span> <span class="n">Tag</span><span class="o">.</span><span class="n">prettify</span> <span class="n">of</span> 
+<span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">这是一个例子</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">这是一个例子</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;story&quot;</span><span class="o">&gt;</span><span class="n">从前有三个人</span><span class="p">;</span><span class="n">他们的名字是</span>
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;peopele&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://example.com/zhangsan&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link1&quot;</span><span class="o">&gt;</span><span class="n">张三</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;peopele&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://example.com/lisi&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link2&quot;</span><span class="o">&gt;</span><span class="n">李四</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">和</span>
+<span class="o">&lt;</span><span class="n">a</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;peopele&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://example.com/wangwu&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="o">&gt;</span><span class="n">王五</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">他们住在一个四合院</span><span class="err">。</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="o">&gt;...&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;/</span><span class="n">html</span><span class="o">&gt;&gt;</span>
+</code></pre></div>
+
+<ul>
+<li>输出标题</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.title)
+
+# 输出结果：
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+
+<ul>
+<li>输出标题标签</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.title.name)
+
+# 输出结果：
+title
+</code></pre></div>
+
+<ul>
+<li>输出标题内容</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.title.string)
+
+# 输出结果：
+这是一个例子
+</code></pre></div>
+
+<ul>
+<li>输出标题的父标签</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.title.parent.name)
+
+# 输出结果：
+head
+</code></pre></div>
+
+<ul>
+<li>查找第一个<code>p</code>元素</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.p)
+
+# 输出结果：
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+</code></pre></div>
+
+<ul>
+<li>查找第一个<code>p</code>元素的<code>class</code>属性内容</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.p[&#39;class&#39;])
+
+# 输出结果：
+[&#39;title&#39;]
+</code></pre></div>
+
+<ul>
+<li>查找第一个<code>a</code>元素</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.a)
+
+# 输出结果：
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<ul>
+<li>查找所有<code>a</code>元素</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&#39;a&#39;))
+
+# 输出结果：
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>查找<code>id</code>为<code>link3</code>的元素</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>print(soup.find(id=&quot;link3&quot;))
+
+# 输出结果：
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<h3 id="2-beautiful-soup">2. 安装 Beautiful Soup</h3>
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">beautifulsoup4</span> <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+
+<span class="n">Looking</span> <span class="ow">in</span> <span class="n">indexes</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+<span class="n">Collecting</span> <span class="n">beautifulsoup4</span>
+  <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="mi">9</span><span class="n">c</span><span class="o">/</span><span class="n">d8</span><span class="o">/</span><span class="mi">909</span><span class="n">c4089dbe4ade9f9705f143c9f13f065049a9d5e7d34c828aefdd0a97c</span><span class="o">/</span><span class="n">beautifulsoup4</span><span class="o">-</span><span class="mf">4.11</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">128</span> <span class="n">kB</span><span class="p">)</span>
+     <span class="err">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="mf">128.2</span><span class="o">/</span><span class="mf">128.2</span> <span class="n">kB</span> <span class="mf">1.3</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span> <span class="n">eta</span> <span class="mi">0</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Collecting</span> <span class="n">soupsieve</span><span class="o">&gt;</span><span class="mf">1.2</span>
+  <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="n">e3</span><span class="o">/</span><span class="mi">4</span><span class="n">ad79882b92617e3a4a0df1960d6bce08edfb637737ac5c3f3ba29022e25</span><span class="o">/</span><span class="n">soupsieve</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mf">2.</span><span class="n">post1</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">37</span> <span class="n">kB</span><span class="p">)</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">soupsieve</span><span class="p">,</span> <span class="n">beautifulsoup4</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">beautifulsoup4</span><span class="o">-</span><span class="mf">4.11</span><span class="o">.</span><span class="mi">1</span> <span class="n">soupsieve</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mf">2.</span><span class="n">post1</span>
+</code></pre></div>
+
+<h3 id="3">3. 安装解析器</h3>
+<div class="codehilite"><pre><span></span><code>pip install lxml
+pip install html5lib
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">lxml</span>  <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+<span class="n">Looking</span> <span class="ow">in</span> <span class="n">indexes</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>
+<span class="n">Collecting</span> <span class="n">lxml</span>
+  <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">tuna</span><span class="o">.</span><span class="n">tsinghua</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">b9</span><span class="o">/</span><span class="n">bb</span><span class="o">/</span><span class="mi">00637</span><span class="n">cce419a958a8254ee4371b15446fd5cd41d8f53513aed52a1fbbe20</span><span class="o">/</span><span class="n">lxml</span><span class="o">-</span><span class="mf">4.9</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">cp310</span><span class="o">-</span><span class="n">cp310</span><span class="o">-</span><span class="n">win_amd64</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mf">3.6</span> <span class="n">MB</span><span class="p">)</span>
+     <span class="err">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="mf">3.6</span><span class="o">/</span><span class="mf">3.6</span> <span class="n">MB</span> <span class="mf">2.1</span> <span class="n">MB</span><span class="o">/</span><span class="n">s</span> <span class="n">eta</span> <span class="mi">0</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">lxml</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">lxml</span><span class="o">-</span><span class="mf">4.9</span><span class="o">.</span><span class="mi">1</span>
+</code></pre></div>
+
+<h3 id="4">4. 使用方法</h3>
+<div class="codehilite"><pre><span></span><code># Python标准库
+
+BeautifulSoup(markup,&quot;html.parser&quot;)
+
+# lxml HTML解析器
+
+BeautifulSoup(markup,&quot;lxml&quot;)
+
+# lxml XML解析器
+
+BeautifulSoup(markup,&quot;lxml-xml&quot;) or BeautifulSoup(markup,&quot;xml&quot;)
+
+# html5lib
+
+BeautifulSoup(markup,&quot;html5lib&quot;)
+</code></pre></div>
+
+<h3 id="5">5. 对象的种类</h3>
+<p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:<code>Tag</code>,<code>NavigableString</code>,<code>BeautifulSoup</code>,<code>Comment</code>.</p>
+<h4 id="51-tag">5.1 Tag</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;test&quot;&gt;测试一下&lt;/b&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="p">))</span>
+
+<span class="c1"># 输出结果：</span>
+<span class="o">&lt;</span><span class="n">b</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="o">&gt;</span><span class="n">测试一下</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bs4</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">Tag</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>Tag有很多方法和属性,后面会详细解释.现在主要说一下<code>name</code>和<code>attributes</code>两个属性</p>
+<ul>
+<li><strong>Name</strong></li>
+</ul>
+<p>每个tag都有自己的名字,通过<code>.name</code>来获取:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;test&quot;&gt;测试一下&lt;/b&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">b</span>
+</code></pre></div>
+
+<p>如果改变了tag的name,那将影响所有通过当前Beautiful Soup对象生成的HTML文档:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;test&quot;&gt;测试一下&lt;/b&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;blockquote&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="n">blockquote</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="o">&gt;</span><span class="n">测试一下</span><span class="o">&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<ul>
+<li><strong>Attributes</strong></li>
+</ul>
+<p>一个tag可能有很多个属性. tag<code>&lt;b class="test"&gt;</code>有一个 “class” 的属性,值为 “test” . tag的属性的操作方法与字典相同，也可以直接”点”取属性, 比如:<code>.attrs</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># coding=utf-8</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;test&quot;&gt;测试一下&lt;/b&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">attrs</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+<span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]}</span>
+</code></pre></div>
+
+<p>tag的属性可以被添加,删除或修改:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># coding=utf-8</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;test&quot;&gt;测试一下&lt;/b&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tester&#39;</span>
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">))</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="n">b</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;tester&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="o">&gt;</span><span class="n">测试一下</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">测试一下</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="ne">KeyError</span><span class="p">:</span> <span class="s1">&#39;class&#39;</span>
+<span class="kc">None</span>
+</code></pre></div>
+
+<ul>
+<li>多值属性</li>
+</ul>
+<p>一个<code>tag</code>可以有多个<code>class</code>，还有一些属性<code>rel</code>，<code>rev</code>，<code>accept-charset</code>，<code>headers</code>，<code>accesskey</code>，多值属性返回的类型是<code>list</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test dev&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+
+<span class="c1"># 输出结果</span>
+<span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;dev&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>一些属性只能有单个值，那么其以字符串返回：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p id=&quot;test&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">test</span>
+</code></pre></div>
+
+<p>将tag转换成字符串时,多值属性会合并为一个值</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p&gt;Back to the &lt;a rel=&quot;index&quot;&gt;homepage&lt;/a&gt;&lt;/p&gt;&#39;</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;rel&#39;</span><span class="p">])</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;contents&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span>
+<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Back</span> <span class="n">to</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;index contents&quot;</span><span class="o">&gt;</span><span class="n">homepage</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>如果转换的文档是XML格式,那么tag中不包含多值属性</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test dev&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;lxml-xml&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">test</span> <span class="n">dev</span>
+</code></pre></div>
+
+<h4 id="52">5.2 可遍历的字符串</h4>
+<p>字符串常被包含在tag内.Beautiful Soup用 NavigableString 类来包装tag中的字符串:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test&quot;&gt;测试一下&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">))</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">测试一下</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bs4</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">NavigableString</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>通过 str() 方法可以直接将 NavigableString 对象转换成字符串:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test&quot;&gt;测试一下&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">p</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">))</span>
+<span class="n">str_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">str_string</span><span class="p">))</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bs4</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">NavigableString</span><span class="s1">&#39;&gt;</span>
+<span class="n">测试一下</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>tag中包含的字符串不能编辑,但是可以被替换成其它的字符串,用 replace_with() 方法:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test&quot;&gt;测试一下&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">p</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="s2">&quot;洗洗睡吧&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="o">&gt;</span><span class="n">洗洗睡吧</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<p>如果想在Beautiful Soup之外使用 NavigableString 对象，需要用str()方法将其转换成字符串。</p>
+<h4 id="53-beautifulsoup">5.3 BeautifulSoup</h4>
+<p><code>BeautifulSoup</code>对象表示的是一个文档的全部内容。大部分时候，可以把他当作<code>tag</code>对象。因为<code>BeautifulSoup</code>对象并不是真正的HTML或XML的tag，所以它没有<code>name</code>和<code>attribute</code>属性，但为了查看方便，给<code>BeautifulSoup</code>对象一个<code>[document]</code>的特殊属性。</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;test&quot;&gt;测试一下&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="p">[</span><span class="n">document</span><span class="p">]</span>
+</code></pre></div>
+
+<h4 id="54">5.4 注释及特殊字符串</h4>
+<p>除<code>Tag</code>，<code>NavigableString</code>，<code>BeautifulSoup</code>外，还有一些特殊对象，是文档的注释部分:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;&lt;!--你好，兄弟。这里有一个缺陷不要乱动？--&gt;&lt;/b&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">comment</span><span class="p">))</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bs4</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">Comment</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>Comment 对象是一个特殊类型的 NavigableString 对象:</p>
+<div class="codehilite"><pre><span></span><code>print(comment)
+
+# 输出结果
+你好，兄弟。这里有一个缺陷不要乱动？
+</code></pre></div>
+
+<p>当它出现在HTML文档中时，<code>Comment</code>可以格式化输出：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.b.prettify())
+
+# 输出结果
+<span class="nt">&lt;b&gt;</span>
+ <span class="c">&lt;!--你好，兄弟。这里有一个缺陷不要乱动？--&gt;</span>
+<span class="nt">&lt;/b&gt;</span>
+</code></pre></div>
+
+<p>Beautiful Soup中定义的<code>CData</code>，<code>ProcessingInstruction</code>，<code>Declaration</code>，<code>Doctype</code>与<code>Comment</code>对象类似,这些类都是 <code>NavigableString</code>的子类,下面是用CDATA来替代注释的例子:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">CData</span>
+
+<span class="n">cdata</span> <span class="o">=</span> <span class="n">CData</span><span class="p">(</span><span class="s2">&quot;A CDATA block&quot;</span><span class="p">)</span>
+<span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;&lt;!--你好，兄弟。这里有一个缺陷不要乱动？--&gt;&lt;/b&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span>
+<span class="n">comment</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">cdata</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="err">!</span><span class="p">[</span><span class="n">CDATA</span><span class="p">[</span><span class="n">A</span> <span class="n">CDATA</span> <span class="n">block</span><span class="p">]]</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<h3 id="6">6. 遍历方法</h3>
+<p>从文档的一段内容中查找另一段内容</p>
+<p>举个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;这是一个例子&lt;/title&gt;&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;这是一个例子&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;从前有三个人;他们的名字是</span>
+<span class="s2">&lt;a href=&quot;http://example.com/zhangsan&quot; class=&quot;people&quot; id=&quot;link1&quot;&gt;张三&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lisi&quot; class=&quot;people&quot; id=&quot;link2&quot;&gt;李四&lt;/a&gt; 和</span>
+<span class="s2">&lt;a href=&quot;http://example.com/wangwu&quot; class=&quot;people&quot; id=&quot;link3&quot;&gt;王五&lt;/a&gt;;</span>
+<span class="s2">他们住在一个四合院。&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;example&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="61">6.1 子节点</h4>
+<p>一个<code>Tag</code>下的字符串或<code>Tag</code>，都是其子节点。注：字符串子节点不支持这些属性。</p>
+<ul>
+<li>tag的属性</li>
+</ul>
+<p>获取tag的head：<code>soup.head</code>:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.head)
+
+# 输出结果：
+<span class="nt">&lt;head&gt;&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+</code></pre></div>
+
+<p>获取tag的title：<code>soup.title</code>:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.title)
+
+# 输出结果：
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+
+<p>获取<body>标签下第一个<b>标签：<code>soup.body.b</code>:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.body.b)
+
+# 输出结果：
+<span class="nt">&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;</span>
+</code></pre></div>
+
+<p>获取tag下第一个<code>&lt;a&gt;</code>标签：<code>soup.a</code>:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.a)
+
+# 输出结果：
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<p>获取tag下所有<code>&lt;a&gt;</code>标签：<code>soup.find_all('a')</code>:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&#39;a&#39;))
+
+# 输出结果：
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>.contents 和 .children</li>
+</ul>
+<p>tag的<code>.contents</code>属性可以将tag的子节点以列表方式输出：</p>
+<div class="codehilite"><pre><span></span><code>head_tag = soup.head
+print(head_tag)
+print(head_tag.contents)
+
+title_tag = head_tag.contents[0]
+print(title_tag)
+print(title_tag.contents)
+
+# 输出结果
+<span class="nt">&lt;head&gt;&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+[&#39;这是一个例子&#39;]
+</code></pre></div>
+
+<p>BeautifulSoup对象一定包含子节点,也就是说<code>&lt;html&gt;</code>标签也是 BeautifulSoup 对象的子节点:</p>
+<div class="codehilite"><pre><span></span><code>print(len(soup.contents))
+print(soup.contents[0].name)
+
+# 输出结果
+1
+html
+</code></pre></div>
+
+<p>字符串没有 .contents 属性,因为字符串没有子节点:</p>
+<div class="codehilite"><pre><span></span><code>head_tag = soup.head
+title_tag = head_tag.contents[0]
+text = title_tag.contents[0]
+print(text.contents)
+
+# 输出结果
+AttributeError: &#39;NavigableString&#39; object has no attribute &#39;contents&#39;
+</code></pre></div>
+
+<p>通过tag的 .children 生成器,可以对tag的子节点进行循环:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">head_tag</span> <span class="o">=</span> <span class="nv">soup</span>.<span class="nv">head</span>
+<span class="nv">title_tag</span> <span class="o">=</span> <span class="nv">head_tag</span>.<span class="nv">contents</span>[<span class="mi">0</span>]
+<span class="k">for</span> <span class="nv">child</span> <span class="nv">in</span> <span class="nv">title_tag</span>.<span class="nv">children</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="nv">child</span><span class="ss">)</span>
+
+# 输出结果
+这是一个例子
+</code></pre></div>
+
+<ul>
+<li>.descendants</li>
+</ul>
+<p>.contents 和 .children 属性仅包含tag的直接子节点.例如,<code>&lt;head&gt;</code>标签只有一个直接子节点<code>&lt;title&gt;</code>,但是<code>&lt;title&gt;</code>标签也包含一个子节点:字符串 “这是一个例子”, 其也属于<code>&lt;head&gt;</code>标签的子孙节点. .descendants 属性可以对所有tag的子孙节点进行递归循环:</p>
+<div class="codehilite"><pre><span></span><code>for child in head_tag.descendants:
+    print(child)
+
+# 输出结果
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+这是一个例子
+</code></pre></div>
+
+<p>上面的例子中, <code>&lt;head&gt;</code>标签只有一个子节点,但是有2个子孙节点:<code>&lt;head&gt;</code>节点和<code>&lt;head&gt;</code>的子节点, BeautifulSoup 有一个直接子节点(<html>节点),也有很多子孙节点:</p>
+<div class="codehilite"><pre><span></span><code>print(len(list(soup.children)))
+print(len(list(soup.descendants)))
+
+# 输出结果：
+1
+26
+</code></pre></div>
+
+<ul>
+<li>.string</li>
+</ul>
+<p>如果tag只有一个 NavigableString 类型子节点,那么这个tag可以使用 .string 得到子节点:</p>
+<div class="codehilite"><pre><span></span><code>head_tag = soup.head
+title_tag = head_tag.contents[0]
+print(title_tag.string)
+
+# 输出结果：
+这是一个例子
+</code></pre></div>
+
+<p>如果一个tag仅有一个子节点,那么这个tag也可以使用 .string 方法,输出结果与当前唯一子节点的 .string 结果相同:</p>
+<div class="codehilite"><pre><span></span><code>head_tag = soup.head
+print(head_tag.contents)
+print(head_tag.string)
+
+# 输出结果：
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+这是一个例子
+</code></pre></div>
+
+<p>如果tag包含了多个子节点,tag就无法确定 .string 方法应该调用哪个子节点的内容, .string 的输出结果是 None :</p>
+<div class="codehilite"><pre><span></span><code>print(soup.html.string)
+# 输出结果：
+None
+</code></pre></div>
+
+<ul>
+<li>.strings 和 stripped_strings</li>
+</ul>
+<p>如果tag中包含多个字符串,可以使用 .strings 来循环获取:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">for</span> <span class="nt">string</span> <span class="nt">in</span> <span class="nt">soup</span><span class="p">.</span><span class="nc">strings</span><span class="o">:</span>
+    <span class="nt">print</span><span class="o">(</span><span class="nt">repr</span><span class="o">(</span><span class="nt">string</span><span class="o">))</span>
+
+<span class="err">#</span> <span class="nt">输出结果</span>
+<span class="s1">&#39;这是一个例子&#39;</span>
+<span class="s1">&#39;\n&#39;</span>
+<span class="s1">&#39;\n&#39;</span>
+<span class="s1">&#39;这是一个例子&#39;</span>
+<span class="s1">&#39;\n&#39;</span>
+<span class="s1">&#39;从前有三个人;他们的名字是\n&#39;</span>
+<span class="s1">&#39;张三&#39;</span>
+<span class="s1">&#39;,\n&#39;</span>
+<span class="s1">&#39;李四&#39;</span>
+<span class="s1">&#39; 和\n&#39;</span>
+<span class="s1">&#39;王五&#39;</span>
+<span class="s1">&#39;;\n他们住在一个四合院。&#39;</span>
+<span class="s1">&#39;\n&#39;</span>
+<span class="s1">&#39;...&#39;</span>
+<span class="s1">&#39;\n&#39;</span>
+</code></pre></div>
+
+<p>输出的字符串中可能包含了很多空格或空行,使用 .stripped_strings 可以去除多余空白内容:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">for</span> <span class="nt">string</span> <span class="nt">in</span> <span class="nt">soup</span><span class="p">.</span><span class="nc">stripped_strings</span><span class="o">:</span>
+    <span class="nt">print</span><span class="o">(</span><span class="nt">repr</span><span class="o">(</span><span class="nt">string</span><span class="o">))</span>
+
+<span class="err">#</span> <span class="nt">输出结果</span>
+<span class="s1">&#39;这是一个例子&#39;</span>
+<span class="s1">&#39;这是一个例子&#39;</span>
+<span class="s1">&#39;从前有三个人;他们的名字是&#39;</span>
+<span class="s1">&#39;张三&#39;</span>
+<span class="s1">&#39;,&#39;</span>
+<span class="s1">&#39;李四&#39;</span>
+<span class="s1">&#39;和&#39;</span>
+<span class="s1">&#39;王五&#39;</span>
+<span class="s1">&#39;;\n他们住在一个四合院。&#39;</span>
+<span class="s1">&#39;...&#39;</span>
+</code></pre></div>
+
+<h4 id="62">6.2 父节点</h4>
+<p>每个tag或字符串都有父节点</p>
+<ul>
+<li>.parent</li>
+</ul>
+<p>通过 .parent 属性来获取某个元素的父节点.在上面例子中,<code>&lt;head&gt;</code>标签是<code>&lt;title&gt;</code>标签的父节点:</p>
+<div class="codehilite"><pre><span></span><code>title_tag = soup.title
+print(title_tag)
+print(title_tag.parent)
+
+# 输出结果
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;head&gt;&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;&lt;/head&gt;</span>
+</code></pre></div>
+
+<p>title标签下的字符串也有父节点:<code>&lt;title&gt;</code>标签</p>
+<div class="codehilite"><pre><span></span><code>title_tag = soup.title
+print(title_tag.string.parent)
+
+# 输出结果
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+
+<p>文档的顶层节点比如<html>的父节点是 BeautifulSoup 对象:</p>
+<div class="codehilite"><pre><span></span><code>html_tag = soup.html
+print(type(html_tag.parent))
+
+# 输出结果
+&lt;class &#39;bs4.BeautifulSoup&#39;&gt;
+</code></pre></div>
+
+<p>BeautifulSoup 对象的 .parent 是None:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.parent)
+
+# 输出结果
+None
+</code></pre></div>
+
+<ul>
+<li>.parents</li>
+</ul>
+<p>通过元素的 .parents 属性可以递归得到元素的所有父辈节点</p>
+<div class="codehilite"><pre><span></span><code><span class="n">link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">soup</span><span class="p">.</span><span class="n">a</span><span class="w"></span>
+<span class="k">print</span><span class="p">(</span><span class="n">link</span><span class="p">)</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">link</span><span class="p">.</span><span class="nl">parents</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="p">(</span><span class="n">parent</span><span class="p">.</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">输出结果</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="k">class</span><span class="o">=</span><span class="ss">&quot;people&quot;</span><span class="w"> </span><span class="n">href</span><span class="o">=</span><span class="ss">&quot;http://example.com/zhangsan&quot;</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="ss">&quot;link1&quot;</span><span class="o">&gt;</span><span class="n">张三</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">p</span><span class="w"></span>
+<span class="n">body</span><span class="w"></span>
+<span class="n">html</span><span class="w"></span>
+<span class="o">[</span><span class="n">document</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="63">6.3 兄弟节点</h4>
+<p>如下：</p>
+<div class="codehilite"><pre><span></span><code>sibling_soup = BeautifulSoup(&quot;<span class="nt">&lt;a&gt;&lt;b&gt;</span>text1<span class="nt">&lt;/b&gt;&lt;c&gt;</span>text2<span class="nt">&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;</span>&quot;, &#39;html.parser&#39;)
+print(sibling_soup.prettify())
+
+# 输出结果
+<span class="nt">&lt;html&gt;</span>
+ <span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;a&gt;</span>
+   <span class="nt">&lt;b&gt;</span>
+    text1
+   <span class="nt">&lt;/b&gt;</span>
+   <span class="nt">&lt;c&gt;</span>
+    text2
+   <span class="nt">&lt;/c&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+
+<p>同一个缩进级别的称为兄弟节点</p>
+<ul>
+<li>.next_sibling 和 .previous_sibling</li>
+</ul>
+<p>使用 .next_sibling 和 .previous_sibling 属性来查询兄弟节点:</p>
+<div class="codehilite"><pre><span></span><code>sibling_soup = BeautifulSoup(&quot;<span class="nt">&lt;a&gt;&lt;b&gt;</span>text1<span class="nt">&lt;/b&gt;&lt;c&gt;</span>text2<span class="nt">&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;</span>&quot;,&#39;html.parser&#39;)
+print(sibling_soup.b.next_sibling)
+print(sibling_soup.c.previous_sibling)
+
+# 输出结果
+<span class="nt">&lt;c&gt;</span>text2<span class="nt">&lt;/c&gt;</span> # b的下一个节点是c
+<span class="nt">&lt;b&gt;</span>text1<span class="nt">&lt;/b&gt;</span> # c的上一个节点是b
+</code></pre></div>
+
+<p>如果没有上一节点或下一节点，则显示<code>None</code></p>
+<div class="codehilite"><pre><span></span><code>sibling_soup = BeautifulSoup(&quot;<span class="nt">&lt;a&gt;&lt;b&gt;</span>text1<span class="nt">&lt;/b&gt;&lt;c&gt;</span>text2<span class="nt">&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;</span>&quot;,&#39;html.parser&#39;)
+print(sibling_soup.c.next_sibling)
+print(sibling_soup.b.previous_sibling)
+
+# 输出结果
+None
+None
+</code></pre></div>
+
+<p>tag的 .next_sibling 和 .previous_sibling 属性通常是字符串或空白,如下：</p>
+<div class="codehilite"><pre><span></span><code>link = soup.a
+print(link)
+print(link.next_sibling)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+,\n
+</code></pre></div>
+
+<p><code>link</code>的下一个兄弟结点是<code>,\n</code></p>
+<ul>
+<li>.next_siblings 和 .previous_siblings</li>
+</ul>
+<p>通过 .next_siblings 和 .previous_siblings 属性可以对当前节点的兄弟节点迭代输出:</p>
+<div class="codehilite"><pre><span></span><code>for sibling in soup.a.next_siblings:
+    print(repr(sibling))
+
+# 输出结果
+&#39;,\n&#39;
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>
+&#39; 和\n&#39;
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>
+&#39;;\n他们住在一个四合院。&#39;
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>for sibling in soup.find(id=&quot;link3&quot;).previous_siblings:
+    print(repr(sibling))
+
+# 输出结果
+&#39; 和\n&#39;
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>
+&#39;,\n&#39;
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+&#39;从前有三个人;他们的名字是\n&#39;
+</code></pre></div>
+
+<h4 id="64">6.4 回退和前进</h4>
+<ul>
+<li>.next_element 和 .previous_element</li>
+</ul>
+<p>.next_element 和 .next_sibling 相似，但通常输出结果不一致</p>
+<div class="codehilite"><pre><span></span><code>last_a_tag = soup.find(&quot;a&quot;, id=&quot;link3&quot;)
+print(last_a_tag)
+print(last_a_tag.next_sibling)
+print(last_a_tag.next_element)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>
+;
+他们住在一个四合院。
+王五
+</code></pre></div>
+
+<p>对比一下，.next_sibling输出的是闭合区间的下一个，.next_element输出的是非闭合区间的下一个</p>
+<p>.previous_element 属性刚好与 .next_element 相反,它指向当前被解析的对象的前一个解析对象:</p>
+<div class="codehilite"><pre><span></span><code>last_a_tag = soup.find(&quot;a&quot;, id=&quot;link3&quot;)
+print(last_a_tag)
+print(last_a_tag.previous_sibling)
+print(last_a_tag.previous_element)
+
+# 输出结果
+ 和\n
+ 和\n
+</code></pre></div>
+
+<ul>
+<li>.next_elements 和 .previous_elements</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>last_a_tag = soup.find(&quot;a&quot;, id=&quot;link3&quot;)
+for element in last_a_tag.next_elements:
+    print(repr(element))
+
+# 输出结果
+&#39;王五&#39;
+&#39;;\n他们住在一个四合院。&#39;
+&#39;\n&#39;
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+&#39;...&#39;
+&#39;\n&#39;
+</code></pre></div>
+
+<h3 id="7">7. 搜索方法</h3>
+<p>Beautiful Soup有很多搜索方法，这里主要说一下: <code>find()</code>和<code>find_all()</code>。</p>
+<p>举个例子：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;这是一个例子&lt;/title&gt;&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;这是一个例子&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;从前有三个人;他们的名字是</span>
+<span class="s2">&lt;a href=&quot;http://example.com/zhangsan&quot; class=&quot;people&quot; id=&quot;link1&quot;&gt;张三&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lisi&quot; class=&quot;people&quot; id=&quot;link2&quot;&gt;李四&lt;/a&gt; 和</span>
+<span class="s2">&lt;a href=&quot;http://example.com/wangwu&quot; class=&quot;people&quot; id=&quot;link3&quot;&gt;王五&lt;/a&gt;;</span>
+<span class="s2">他们住在一个四合院。&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;example&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="71">7.1 过滤器</h4>
+<p>过滤器主要有字符串、正则表达式、列表、True、方法等</p>
+<ul>
+<li>字符串</li>
+</ul>
+<p>在Beautiful Soup中传入一个字符串，查找与字符串完整匹配的内容，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&#39;b&#39;))
+
+# 输出结果
+[<span class="nt">&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>正则表达式</li>
+</ul>
+<p>在Beautiful Soup中传入正则表达式，则通过search()来匹配内容，如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">body</span>
+<span class="n">b</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="n">html</span>
+<span class="n">title</span>
+</code></pre></div>
+
+<ul>
+<li>列表</li>
+</ul>
+<p>在Beautiful Soup中传入列表，则匹配列表中任一元素的内容，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all([&quot;a&quot;, &quot;b&quot;]))
+
+# 输出结果
+[<span class="nt">&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>True</li>
+</ul>
+<p>True或以匹配任何值，如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="nv">tag</span> <span class="nv">in</span> <span class="nv">soup</span>.<span class="nv">find_all</span><span class="ss">(</span><span class="nv">True</span><span class="ss">)</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="nv">tag</span>.<span class="nv">name</span><span class="ss">)</span>
+
+# 输出结果
+<span class="nv">html</span>
+<span class="nv">head</span>
+<span class="nv">title</span>
+<span class="nv">body</span>
+<span class="nv">p</span>
+<span class="nv">b</span>
+<span class="nv">p</span>
+<span class="nv">a</span>
+<span class="nv">a</span>
+<span class="nv">a</span>
+<span class="nv">p</span>
+</code></pre></div>
+
+<ul>
+<li>方法</li>
+</ul>
+<p>如果没有合适的过滤器，那就自定义一个方法，方法只接受一个参数，如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">not_zhangsan</span><span class="ss">(</span><span class="nv">href</span><span class="ss">)</span>:
+    <span class="k">return</span> <span class="nv">href</span> <span class="nv">and</span> <span class="nv">not</span> <span class="nv">re</span>.<span class="nv">compile</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">zhangsan</span><span class="s2">&quot;</span><span class="ss">)</span>.<span class="nv">search</span><span class="ss">(</span><span class="nv">href</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>使用这个方法可以得到链接中没有<code>zhangsan</code>的其他链接，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(href=not_zhangsan))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<h4 id="72-find_all">7.2 find_all()</h4>
+<p><code>find_all()</code>格式如下：<code>find_all( name , attrs , recursive , string , **kwargs )</code></p>
+<p><code>find_all</code>方法搜索当前tag的所有符合过滤器条件的子节点，如下：</p>
+<ul>
+<li>name参数</li>
+</ul>
+<p><code>name</code>参数可以查找所有名字为<code>name</code>的tag，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&quot;title&quot;))
+
+# 输出结果
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>keyword参数</li>
+</ul>
+<p>查找指定参数包含的关键字的tag，如下：</p>
+<p>查找id为link2的tag</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(id=&quot;link2&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>查找href中包含zhangsan的tag, 如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">href</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;zhangsan&quot;</span><span class="p">)))</span>
+
+<span class="c1"># 输出结果</span>
+<span class="p">[</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;people&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://example.com/zhangsan&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link1&quot;</span><span class="o">&gt;</span><span class="n">张三</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>查找有id属性的tag, 如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(id=True))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>同时指定多个过滤属性，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(href=re.compile(&quot;example.com&quot;), id=&#39;link1&#39;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>有些tag属性在搜索不能使用,比如HTML5中的 data-* 属性, 但是可以通过 find_all() 方法的 attrs 参数定义一个字典参数来搜索包含特殊属性的tag::</p>
+<div class="codehilite"><pre><span></span><code>data_soup = BeautifulSoup(&#39;<span class="nt">&lt;div</span> <span class="na">data-foo=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>foo!<span class="nt">&lt;/div&gt;</span>&#39;, &#39;html.parser&#39;)
+print(data_soup.find_all(attrs={&quot;data-foo&quot;: &quot;value&quot;}))
+
+# 输出结果
+[<span class="nt">&lt;div</span> <span class="na">data-foo=</span><span class="s">&quot;value&quot;</span><span class="nt">&gt;</span>foo!<span class="nt">&lt;/div&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>按CSS搜索</li>
+</ul>
+<p>通过<code>class_</code>参数搜索指定的CSS类名tag, 如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&quot;a&quot;, class_=&quot;people&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p><code>class_</code>参数可接受各种类型的过滤器，如字符串、正则表达式、方法和True:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(class_=re.compile(&quot;itl&quot;)))
+# 输出结果
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>]
+
+def has_six_characters(css_class):
+    return css_class is not None and len(css_class) == 6
+print(soup.find_all(class_=has_six_characters))
+# 输出结果
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>tag的<code>class</code>可以是多个，每个都能用，也可以完全匹配，完全匹配时类名顺序不可变，如下：</p>
+<div class="codehilite"><pre><span></span><code>css_soup = BeautifulSoup(&#39;<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;dev test&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>&#39;, &#39;html.parser&#39;)
+print(css_soup.find_all(&quot;p&quot;, class_=&quot;dev&quot;))
+print(css_soup.find_all(&quot;p&quot;, class_=&quot;test&quot;))
+print(css_soup.find_all(&quot;p&quot;, class_=&quot;dev test&quot;))
+
+# 输出结果
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;dev test&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>]
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;dev test&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>]
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;dev test&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>]
+</code></pre></div>
+
+<p>还可以通过<code>attrs</code>来查找相关的内容，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&quot;a&quot;, attrs={&quot;class&quot;: &quot;people&quot;}))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>string参数</li>
+</ul>
+<p>通过 string 参数可以搜搜文档中的字符串内容，如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="ss">(</span><span class="nv">soup</span>.<span class="nv">find_all</span><span class="ss">(</span><span class="nv">string</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">张三</span><span class="s2">&quot;</span><span class="ss">))</span>
+# 输出结果
+[<span class="s1">&#39;</span><span class="s">张三</span><span class="s1">&#39;</span>]
+
+<span class="nv">print</span><span class="ss">(</span><span class="nv">soup</span>.<span class="nv">find_all</span><span class="ss">(</span><span class="nv">string</span><span class="o">=</span>[<span class="s2">&quot;</span><span class="s">张三</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">李四</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">王五</span><span class="s2">&quot;</span>]<span class="ss">))</span>
+# 输出结果
+[<span class="s1">&#39;</span><span class="s">张三</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">李四</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">王五</span><span class="s1">&#39;</span>]
+
+<span class="nv">print</span><span class="ss">(</span><span class="nv">soup</span>.<span class="nv">find_all</span><span class="ss">(</span><span class="nv">string</span><span class="o">=</span><span class="nv">re</span>.<span class="nv">compile</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">例子</span><span class="s2">&quot;</span><span class="ss">)))</span>
+# 输出结果
+[<span class="s1">&#39;</span><span class="s">这是一个例子</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">这是一个例子</span><span class="s1">&#39;</span>]
+
+<span class="nv">def</span> <span class="nv">is_the_only_string_within_a_tag</span><span class="ss">(</span><span class="nv">s</span><span class="ss">)</span>:
+    <span class="k">return</span> <span class="ss">(</span><span class="nv">s</span> <span class="o">==</span> <span class="nv">s</span>.<span class="nv">parent</span>.<span class="nv">string</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">soup</span>.<span class="nv">find_all</span><span class="ss">(</span><span class="nv">string</span><span class="o">=</span><span class="nv">is_the_only_string_within_a_tag</span><span class="ss">))</span>
+# 输出结果
+[<span class="s1">&#39;</span><span class="s">这是一个例子</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">这是一个例子</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">张三</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">李四</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">王五</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">...</span><span class="s1">&#39;</span>]
+</code></pre></div>
+
+<p>string参数还可以与其它参数混合使用，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&quot;a&quot;, string=&quot;张三&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>limit参数</li>
+</ul>
+<p>limit参数可限制搜索的量，与mysql中的limit有些相似，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&quot;a&quot;, limit=1))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<ul>
+<li>recursive参数</li>
+</ul>
+<p><code>recursive=False</code>只搜索tag的直接子节点，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.html.find_all(&quot;title&quot;))
+print(soup.html.find_all(&quot;title&quot;, recursive=False))
+
+输出结果：
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+[]
+</code></pre></div>
+
+<ul>
+<li><code>find_all()</code>的简写方法</li>
+</ul>
+<p>下面的代码是等价的，如下：</p>
+<div class="codehilite"><pre><span></span><code>soup.find_all(&quot;a&quot;)
+soup(&quot;a&quot;)
+
+soup.title.find_all(string=True)
+soup.title(string=True)
+</code></pre></div>
+
+<h4 id="73-find">7.3 find()</h4>
+<p>find函数格式，如下：</p>
+<div class="codehilite"><pre><span></span><code>find( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find()函数返回找到的第一个结果，等同于find_all()方法设置limit=1的情况，如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&#39;title&#39;, limit=1))
+print(soup.find(&#39;title&#39;))
+
+# 输出结果
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+
+<p>不同的是，find_all()返回的是列表，find()返回的是字符串。</p>
+<p>目标为空时，find_all()返回[]，find()返回None。</p>
+<div class="codehilite"><pre><span></span><code>print(soup.find_all(&#39;test&#39;))
+print(soup.find(&#39;test&#39;))
+
+# 输出结果
+[]
+None
+</code></pre></div>
+
+<p>find()函数的简写：</p>
+<div class="codehilite"><pre><span></span><code>soup.head.title 等同于soup.find(&quot;head&quot;).find(&quot;title&quot;)
+</code></pre></div>
+
+<h4 id="74-find_parentsfind_parent">7.4 find_parents()和find_parent()</h4>
+<p>find_parents()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_parents( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_parent()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_parent( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_parents()用来搜索当前节点的父辈节点，find_parent() 用来搜索当前节点的父辈节点的第一个结果, 如下：</p>
+<div class="codehilite"><pre><span></span><code>string = soup.find(string=&quot;张三&quot;)
+print(string)
+print(string.find_parents(&quot;a&quot;))
+print(string.find_parent(&quot;a&quot;))
+print(string.find_parents(&quot;p&quot;, id = &quot;link1&quot;))
+
+# 输出结果
+张三
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+[]
+</code></pre></div>
+
+<p>从上面的结果看出，<code>find_parents()</code>输出的是列表，<code>find_parent()</code>输出的是字符串。还有包含id值为link1的<code>&lt;p&gt;</code>标签找不到。</p>
+<h4 id="75-find_next_siblingfind_next_sibling">7.5 find_next_sibling()和find_next_sibling()</h4>
+<p>find_next_sibling()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_next_siblings( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_next_sibling()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_next_sibling( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p><code>find_next_siblings()</code>方法返回所有符合条件的后面的兄弟节点, <code>find_next_sibling()</code>只返回符合条件的后面的第一个tag节点, 举例如下：</p>
+<div class="codehilite"><pre><span></span><code>first_link = soup.a
+print(first_link)
+print(first_link.find_next_siblings(&quot;a&quot;))
+first_story_paragraph = soup.find(&quot;p&quot;, &quot;story&quot;)
+print(first_story_paragraph.find_next_sibling(&quot;p&quot;))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+
+<h4 id="76-find_previous_sibingsfind_previous_sibing">7.6 find_previous_sibings()和find_previous_sibing()</h4>
+<p>find_previous_sibings()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_previous_siblings( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_previous_sibing()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_previous_sibling( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p><code>find_previous_siblings()</code>方法返回所有符合条件的前面的兄弟节点, <code>find_previous_sibling()</code>方法返回第一个符合条件的前面的兄弟节点, 举例如下：</p>
+<div class="codehilite"><pre><span></span><code>last_link = soup.find(&quot;a&quot;, id=&quot;link3&quot;)
+print(last_link)
+print(last_link.find_previous_siblings(&quot;a&quot;))
+first_story_paragraph = soup.find(&quot;p&quot;, &quot;story&quot;)
+print(first_story_paragraph.find_previous_sibling(&quot;p&quot;))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+</code></pre></div>
+
+<h4 id="77-find_all_nextfind_next">7.7 find_all_next()和find_next()</h4>
+<p>find_all_next()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_all_next( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_next()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_next( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p><code>find_all_next()</code>方法返回所有符合条件的节点, <code>find_next()</code>方法返回第一个符合条件的节点，举例如下：</p>
+<div class="codehilite"><pre><span></span><code>first_link = soup.a
+print(first_link)
+print(first_link.find_all_next(string=True))
+print(first_link.find_next(&quot;p&quot;))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+[&#39;张三&#39;, &#39;,\n&#39;, &#39;李四&#39;, &#39; 和\n&#39;, &#39;王五&#39;, &#39;;\n他们住在一个四合院。&#39;, &#39;\n&#39;, &#39;...&#39;, &#39;\n&#39;]
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+
+<h4 id="78-find_all_previousfind_previous">7.8 find_all_previous()和find_previous()</h4>
+<p>find_all_previous()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_all_previous( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p>find_previous()格式如下：</p>
+<div class="codehilite"><pre><span></span><code>find_previous( name , attrs , recursive , string , **kwargs )
+</code></pre></div>
+
+<p><code>find_all_previous()</code>方法返回所有符合条件的节点, <code>find_previous()</code>方法返回第一个符合条件的节点，举例如下：</p>
+<div class="codehilite"><pre><span></span><code>first_link = soup.a
+print(first_link)
+print(first_link.find_all_previous(&quot;p&quot;))
+print(first_link.find_previous(&quot;title&quot;))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;story&quot;</span><span class="nt">&gt;</span>从前有三个人;他们的名字是
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>,
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span> 和
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>;
+他们住在一个四合院。<span class="nt">&lt;/p&gt;</span>, <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>]
+<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>
+</code></pre></div>
+
+<h4 id="79-css">7.9 CSS选择器</h4>
+<p>在 Tag 或 BeautifulSoup 对象的 .select() 方法中传入字符串参数, 即可使用CSS选择器的语法找到tag，举例如下：</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&quot;title&quot;))
+print(soup.select(&quot;p:nth-of-type(3)&quot;))
+
+# 输出结果
+[<span class="nt">&lt;title&gt;</span>这是一个例子<span class="nt">&lt;/title&gt;</span>]
+[<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;example&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>]
+</code></pre></div>
+
+<p>找到兄弟节点标签:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&quot;#link1 ~ .people&quot;))
+print(soup.select(&quot;#link1 + .people&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>通过CSS的类名查找:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&quot;.people&quot;))
+print(soup.select(&quot;[class~=people]&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>通过tag的id查找:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&quot;#link1&quot;))
+print(soup.select(&quot;a#link2&quot;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>同时用多种CSS选择器查询元素:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&quot;#link1,#link2&quot;))
+
+# 输出结果
+</code></pre></div>
+
+<p>通过是否存在某个属性来查找:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="k">select</span><span class="p">(</span><span class="s1">&#39;a[href]&#39;</span><span class="p">))</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">输出结果</span><span class="w"></span>
+<span class="o">[</span><span class="n">&lt;a class=&quot;people&quot; href=&quot;http://example.com/zhangsan&quot; id=&quot;link1&quot;&gt;张三&lt;/a&gt;, &lt;a class=&quot;people&quot; href=&quot;http://example.com/lisi&quot; id=&quot;link2&quot;&gt;李四&lt;/a&gt;</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<p>通过属性的值来查找:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select(&#39;a[href=&quot;http://example.com/zhangsan&quot;]&#39;))
+print(soup.select(&#39;a[href^=&quot;http://example.com/&quot;]&#39;))
+print(soup.select(&#39;a[href$=&quot;lisi&quot;]&#39;))
+print(soup.select(&#39;a[href*=&quot;.com/wa&quot;]&#39;))
+
+# 输出结果
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/lisi&quot;</span> <span class="na">id=</span><span class="s">&quot;link2&quot;</span><span class="nt">&gt;</span>李四<span class="nt">&lt;/a&gt;</span>]
+[<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/wangwu&quot;</span> <span class="na">id=</span><span class="s">&quot;link3&quot;</span><span class="nt">&gt;</span>王五<span class="nt">&lt;/a&gt;</span>]
+</code></pre></div>
+
+<p>返回查找到的元素的第一个</p>
+<div class="codehilite"><pre><span></span><code>print(soup.select_one(&quot;.people&quot;))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;people&quot;</span> <span class="na">href=</span><span class="s">&quot;http://example.com/zhangsan&quot;</span> <span class="na">id=</span><span class="s">&quot;link1&quot;</span><span class="nt">&gt;</span>张三<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<h3 id="8">8. 修改方法</h3>
+<h4 id="81-tag">8.1 修改tag的名称和属性</h4>
+<p>修改tag的名字，改变属性的值，添加或者删除属性</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&#39;<span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;test&quot;</span><span class="nt">&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;</span>&#39;, &#39;html.parser&#39;)
+tag = soup.b
+
+tag.name = &quot;blockquote&quot;
+tag[&#39;class&#39;] = &#39;dev&#39;
+tag[&#39;id&#39;] = 1
+print(tag)
+
+del tag[&#39;class&#39;]
+del tag[&#39;id&#39;]
+print(tag)
+
+# 输出结果
+<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">&quot;dev&quot;</span> <span class="na">id=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>这是一个例子<span class="nt">&lt;/blockquote&gt;</span>
+<span class="nt">&lt;blockquote&gt;</span>这是一个例子<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre></div>
+
+<h4 id="82-string">8.2 修改 .string</h4>
+<p>给tag的 .string 属性赋值，替代原来的内容：</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个链接<span class="nt">&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+
+tag = soup.a
+print(tag)
+tag.string = &quot;新链接&quot;
+print(tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个链接<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>新链接<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<h4 id="83-append">8.3 append()</h4>
+<p><code>append()</code>给tag添加内容，同python append()方法：</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&quot;<span class="nt">&lt;a&gt;</span>测试<span class="nt">&lt;/a&gt;</span>&quot;, &#39;html.parser&#39;)
+soup.a.append(&quot;开发&quot;)
+
+print(soup)
+print(soup.a.contents)
+
+# 输出结果
+<span class="nt">&lt;a&gt;</span>测试开发<span class="nt">&lt;/a&gt;</span>
+[&#39;测试&#39;, &#39;开发&#39;]
+</code></pre></div>
+
+<h4 id="84-navigablestring-new_tag">8.4 NavigableString() 和 .new_tag()</h4>
+<p>添加一段文本内容或注释，用<code>NavigableString()</code>, 如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">NavigableString</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;b&gt;&lt;/b&gt;&quot;</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;你好&quot;</span><span class="p">)</span>
+<span class="n">new_string</span> <span class="o">=</span> <span class="n">NavigableString</span><span class="p">(</span><span class="s2">&quot; 我是谁&quot;</span><span class="p">)</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">Comment</span>
+<span class="n">new_comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_string</span><span class="p">(</span><span class="s2">&quot;这是一个注释。&quot;</span><span class="p">,</span> <span class="n">Comment</span><span class="p">)</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_comment</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+
+<span class="c1"># 输出结果</span>
+<span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">你好</span> <span class="n">我是谁</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39; 我是谁&#39;</span><span class="p">]</span>
+<span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">你好</span> <span class="n">我是谁</span><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="n">这是一个注释</span><span class="err">。</span><span class="o">--&gt;&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="s1">&#39;你好&#39;</span><span class="p">,</span> <span class="s1">&#39; 我是谁&#39;</span><span class="p">,</span> <span class="s1">&#39;这是一个注释。&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>创建一个tag用<code>.new_tag()</code>, 如下：</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&quot;<span class="nt">&lt;b&gt;&lt;/b&gt;</span>&quot;, &#39;html.parser&#39;)
+tag = soup.b
+
+new_tag = soup.new_tag(&quot;a&quot;, href=&quot;http://www.example.com&quot;)
+print(new_tag)
+tag.append(new_tag)
+print(tag)
+
+new_tag.string = &quot;看这里&quot;
+print(tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.example.com&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;b&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.example.com&quot;</span><span class="nt">&gt;&lt;/a&gt;&lt;/b&gt;</span>
+<span class="nt">&lt;b&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.example.com&quot;</span><span class="nt">&gt;</span>看这里<span class="nt">&lt;/a&gt;&lt;/b&gt;</span>
+</code></pre></div>
+
+<h4 id="85-insert">8.5 insert()</h4>
+<p><code>insert()</code>将内容插入到指定位置，如下：</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这<span class="nt">&lt;i&gt;</span>是<span class="nt">&lt;/i&gt;</span>一个例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+tag = soup.a
+
+tag.insert(1, &quot;不&quot;)
+print(tag)
+print(tag.contents)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这不<span class="nt">&lt;i&gt;</span>是<span class="nt">&lt;/i&gt;</span>一个例子<span class="nt">&lt;/a&gt;</span>
+[&#39;这&#39;, &#39;不&#39;, <span class="nt">&lt;i&gt;</span>是<span class="nt">&lt;/i&gt;</span>, &#39;一个例子&#39;]
+</code></pre></div>
+
+<h4 id="86-insert_before-insert_after">8.6 insert_before() 和 insert_after()</h4>
+<p><code>insert_before()</code>在当前tag或文本节点前插入内容，<code>insert_after()</code>方法在当前tag或文本节点后插入内容，如下：</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&quot;<span class="nt">&lt;b&gt;</span>吃苹果<span class="nt">&lt;/b&gt;</span>&quot;, &#39;html.parser&#39;)
+tag = soup.new_tag(&quot;i&quot;)
+tag.string = &quot;不要&quot;
+soup.b.string.insert_before(tag)
+print(soup.b)
+soup.b.i.insert_after(soup.new_string(&quot;不要&quot;))
+print(soup.b)
+
+# 输出结果
+<span class="nt">&lt;b&gt;&lt;i&gt;</span>不要<span class="nt">&lt;/i&gt;</span>吃苹果<span class="nt">&lt;/b&gt;</span>
+<span class="nt">&lt;b&gt;&lt;i&gt;</span>不要<span class="nt">&lt;/i&gt;</span>不要吃苹果<span class="nt">&lt;/b&gt;</span>
+</code></pre></div>
+
+<h4 id="87-clear">8.7 clear()</h4>
+<p><code>clear()</code>方法移除当前tag的内容:</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个例子<span class="nt">&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+tag = soup.a
+print(tag)
+tag.clear()
+print(tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个例子<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+</code></pre></div>
+
+<h4 id="88-extract">8.8 extract()</h4>
+<p><code>extract()</code>方法将当前tag移除,并作为方法结果返回:</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+a_tag = soup.a
+i_tag = soup.i.extract()
+print(a_tag)
+print(i_tag)
+print(i_tag.parent)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;</span>
+None
+</code></pre></div>
+
+<h4 id="89-decompose">8.9 decompose()</h4>
+<p><code>decompose()</code>方法将当前节点移除并完全销毁:</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+a_tag = soup.a
+i_tag = soup.i.decompose()
+print(a_tag)
+print(i_tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;/a&gt;</span>
+None
+</code></pre></div>
+
+<h4 id="810-replace_with">8.10 replace_with()</h4>
+<p><code>replace_with()</code>方法移除某段内容,并用新tag或文本节点替代它:</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+a_tag = soup.a
+new_tag = soup.new_tag(&quot;b&quot;)
+new_tag.string = &quot;错误&quot;
+a_tag.i.replace_with(new_tag)
+print(a_tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;b&gt;</span>错误<span class="nt">&lt;/b&gt;&lt;/a&gt;</span>
+</code></pre></div>
+
+<h4 id="811-wrap">8.11 wrap()</h4>
+<p><code>wrap()</code>方法可以对指定的tag元素进行包装,并返回包装后的结果:</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&quot;<span class="nt">&lt;p&gt;</span>这是一个例子<span class="nt">&lt;/p&gt;</span>&quot;, &#39;html.parser&#39;)
+print(soup.p.string.wrap(soup.new_tag(&quot;b&quot;)))
+print(soup.p.wrap(soup.new_tag(&quot;div&quot;)))
+
+# 输出结果
+<span class="nt">&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;</span>
+<span class="nt">&lt;div&gt;&lt;p&gt;&lt;b&gt;</span>这是一个例子<span class="nt">&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;</span>
+</code></pre></div>
+
+<h4 id="812-unwrap">8.12 unwrap()</h4>
+<p><code>wrap()</code>方法将移除tag内的所有tag标签:</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+a_tag = soup.a
+i_tag = a_tag.i.unwrap()
+print(a_tag)
+print(i_tag)
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个例子<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;i&gt;&lt;/i&gt;</span>
+</code></pre></div>
+
+<h3 id="9">9. 输出</h3>
+<h4 id="91">9.1 格式化输出</h4>
+<p><code>prettify()</code>方法将Beautiful Soup格式化输出，如下：</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+print(soup.prettify())
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>
+ 这是一个
+ <span class="nt">&lt;i&gt;</span>
+  例子
+ <span class="nt">&lt;/i&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<h4 id="92">9.2 压缩输出</h4>
+<p>使用<code>str()</code>得到一个字符串，如下：</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+print(str(soup))
+
+# 输出结果
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span>这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;&lt;/a&gt;</span>
+</code></pre></div>
+
+<h4 id="93">9.3 输出格式</h4>
+<p>转化Beautiful Soup中的HTML特殊字符，如下：</p>
+<div class="codehilite"><pre><span></span><code>soup = BeautifulSoup(&quot;&amp;ldquo;Dammit!&amp;rdquo; he said.&quot;,&#39;html.parser&#39;)
+print(str(soup))
+
+# 输出结果
+“Dammit!” he said.
+</code></pre></div>
+
+<h4 id="94-get_text">9.4 get_text()</h4>
+<p>得到tag中的文本内容，使用<code>get_text()</code>, 如下：</p>
+<div class="codehilite"><pre><span></span><code>markup = &#39;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://example.com/&quot;</span><span class="nt">&gt;</span> 这是一个<span class="nt">&lt;i&gt;</span>例子<span class="nt">&lt;/i&gt;</span> <span class="nt">&lt;/a&gt;</span>&#39;
+soup = BeautifulSoup(markup, &#39;html.parser&#39;)
+print(soup.get_text())
+print(soup.i.get_text())
+
+# 输出结果
+ 这是一个例子 
+例子
+</code></pre></div>
+
+<p>可以通过参数指定tag的文本内容的分隔符:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.get_text(&quot;|&quot;))
+
+# 输出结果
+ 这是一个|例子| 
+</code></pre></div>
+
+<p>还可以去除获得文本内容的前后空格:</p>
+<div class="codehilite"><pre><span></span><code>print(soup.get_text(&quot;|&quot;, strip=True))
+
+# 输出结果
+这是一个|例子
+</code></pre></div>
+
+<p>使用<code>stripped_strings</code>生成器,以列表存储获得的文本:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="ss">(</span>[<span class="nv">text</span> <span class="k">for</span> <span class="nv">text</span> <span class="nv">in</span> <span class="nv">soup</span>.<span class="nv">stripped_strings</span>]<span class="ss">)</span>
+
+# 输出结果
+[<span class="s1">&#39;</span><span class="s">这是一个</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">例子</span><span class="s1">&#39;</span>]
+</code></pre></div></div>
+    </div>
+    <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
+    <div class="nav">
+      <ul>
+        
+        <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
+        
+      </ul>
+    </div>
+  </body>
+
+  </html>

@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共92199个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共93511个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
@@ -56,7 +56,7 @@
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7439个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7438个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2022-11-30 09:24:00</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-04 17:19:12</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -75,7 +75,7 @@
 </ul>
 </div>
 <h3 id="1">1. 安装软件</h3>
-<p><code>apt install openbox xinit tint2 sakura thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin neofetch ristretto intel-microcode fonts-noto-cjk slock light</code></p>
+<p><code>apt install openbox xinit tint2 sakura pcamnfm feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman neofetch intel-microcode fonts-noto-cjk slock light</code></p>
 <div class="codehilite"><pre><span></span><code>light 亮度
 slock 锁屏
 neofetch 系统信息
@@ -112,6 +112,13 @@ fcitx &amp;
 blueman-applet &amp;
 #volumeicon &amp;
 feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
+</code></pre></div>
+
+<p><strong>feh定时更新背景</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="nv">true</span><span class="c1">; do</span>
+  <span class="nv">feh</span> <span class="o">--</span><span class="nv">bg</span><span class="o">-</span><span class="nv">fill</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">fehbg</span> <span class="o">--</span><span class="nv">randomize</span> <span class="o">~/</span>.<span class="nv">feh</span><span class="cm">/*</span>
+<span class="cm">  sleep 300</span>
+<span class="cm">done</span>
 </code></pre></div>
 
 <p><strong>添加快捷键</strong></p>
@@ -694,7 +701,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">taskbar_name_padding</span> <span class="o">=</span> <span class="mi">6</span> <span class="mi">3</span>
 <span class="n">taskbar_name_background_id</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">taskbar_name_active_background_id</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">taskbar_name_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">11</span>
+<span class="n">taskbar_name_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">11</span>
 <span class="n">taskbar_name_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
 <span class="n">taskbar_name_active_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
 <span class="n">taskbar_distribute_size</span> <span class="o">=</span> <span class="mi">1</span>
@@ -709,7 +716,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">urgent_nb_of_blink</span> <span class="o">=</span> <span class="mi">100000</span>
 <span class="n">task_maximum_size</span> <span class="o">=</span> <span class="mi">140</span> <span class="mi">35</span>
 <span class="n">task_padding</span> <span class="o">=</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">4</span>
-<span class="n">task_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="mi">10</span>
+<span class="n">task_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">10</span>
 <span class="n">task_tooltip</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">task_thumbnail</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">task_thumbnail_size</span> <span class="o">=</span> <span class="mi">210</span>
@@ -755,10 +762,10 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="c1"># Clock</span>
 <span class="n">time1_format</span> <span class="o">=</span> <span class="o">%</span><span class="n">F</span>
 <span class="n">time2_format</span> <span class="o">=</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span>
-<span class="n">time1_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">10</span>
+<span class="n">time1_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">10</span>
 <span class="n">time1_timezone</span> <span class="o">=</span> 
 <span class="n">time2_timezone</span> <span class="o">=</span> 
-<span class="n">time2_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="mi">9</span>
+<span class="n">time2_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">9</span>
 <span class="n">clock_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
 <span class="n">clock_padding</span> <span class="o">=</span> <span class="mi">1</span> <span class="mi">0</span>
 <span class="n">clock_background_id</span> <span class="o">=</span> <span class="mi">0</span>
@@ -776,7 +783,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">battery_low_status</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">battery_low_cmd</span> <span class="o">=</span> <span class="n">xmessage</span> <span class="s1">&#39;tint2: Battery low!&#39;</span>
 <span class="n">battery_full_cmd</span> <span class="o">=</span> 
-<span class="n">bat1_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">12</span>
+<span class="n">bat1_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
 <span class="n">bat2_font</span> <span class="o">=</span> <span class="n">sans</span> <span class="mi">6</span>
 <span class="n">battery_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
 <span class="n">bat1_format</span> <span class="o">=</span> <span class="err">⚡</span><span class="o">%</span><span class="n">p</span>
@@ -808,7 +815,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">execp_mclick_command</span> <span class="o">=</span> 
 <span class="n">execp_uwheel_command</span> <span class="o">=</span> 
 <span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">12</span>
+<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
 <span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
 <span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
 <span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
@@ -832,7 +839,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">execp_mclick_command</span> <span class="o">=</span> 
 <span class="n">execp_uwheel_command</span> <span class="o">=</span> 
 <span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">12</span>
+<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
 <span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
 <span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
 <span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
@@ -856,7 +863,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">execp_mclick_command</span> <span class="o">=</span> 
 <span class="n">execp_uwheel_command</span> <span class="o">=</span> 
 <span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="n">Bold</span> <span class="mi">12</span>
+<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
 <span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
 <span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
 <span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
@@ -871,7 +878,7 @@ notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</s
 <span class="n">tooltip_padding</span> <span class="o">=</span> <span class="mi">2</span> <span class="mi">2</span>
 <span class="n">tooltip_background_id</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">tooltip_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">tooltip_font</span> <span class="o">=</span> <span class="err">霞鹜文楷</span> <span class="mi">11</span>
+<span class="n">tooltip_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">11</span>
 </code></pre></div></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">

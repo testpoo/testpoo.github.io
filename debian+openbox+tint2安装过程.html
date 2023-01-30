@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共93511个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共5376个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
@@ -66,16 +66,26 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-04 17:19:12</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-30 10:47:27</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
 <li><a href="#1">1. 安装软件</a></li>
 <li><a href="#2">2. 设置</a></li>
+<li><a href="#keyboard">keyboard中加入如下代码 声音和亮度快捷键绑定</a></li>
+<li><a href="#_1">亮度</a></li>
+<li><a href="#binbash">!/bin/bash</a></li>
+<li><a href="#_2">增加亮度</a></li>
+<li><a href="#binbash_1">!/bin/bash</a></li>
+<li><a href="#_3">减少亮度</a></li>
+<li><a href="#volumepy">声音(volume.py)</a></li>
+<li><a href="#codingutf-8">coding=utf-8</a></li>
+<li><a href="#networkpy">网络(network.py)</a></li>
+<li><a href="#codingutf-8_1">coding=utf-8</a></li>
 </ul>
 </div>
 <h3 id="1">1. 安装软件</h3>
-<p><code>apt install openbox xinit tint2 sakura pcamnfm feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman neofetch intel-microcode fonts-noto-cjk slock light</code></p>
+<p><code>apt install openbox xinit tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light</code></p>
 <div class="codehilite"><pre><span></span><code>light 亮度
 slock 锁屏
 neofetch 系统信息
@@ -108,778 +118,86 @@ $ cp /etc/xdg/openbox/* ~/.config/openbox/
 <div class="codehilite"><pre><span></span><code># autostart.sh
 
 tint2 &amp;
-fcitx &amp;
+pcmanfm --desktop &amp;
 blueman-applet &amp;
 #volumeicon &amp;
-feh --bg-scale &quot;/home/poo/.poo/bg.jpg&quot; &amp;
 </code></pre></div>
 
-<p><strong>feh定时更新背景</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="nv">true</span><span class="c1">; do</span>
-  <span class="nv">feh</span> <span class="o">--</span><span class="nv">bg</span><span class="o">-</span><span class="nv">fill</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">fehbg</span> <span class="o">--</span><span class="nv">randomize</span> <span class="o">~/</span>.<span class="nv">feh</span><span class="cm">/*</span>
-<span class="cm">  sleep 300</span>
-<span class="cm">done</span>
+<div class="codehilite"><pre><span></span><code>**添加快捷键**
 </code></pre></div>
 
-<p><strong>添加快捷键</strong></p>
-<div class="codehilite"><pre><span></span><code># keyboard中加入如下代码 声音和亮度快捷键绑定
-
-    <span class="c">&lt;!--自定义--&gt;</span>
-    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;execute&gt;</span>pactl set-sink-mute @DEFAULT_SINK@ toggle<span class="nt">&lt;/execute&gt;</span>
-      <span class="nt">&lt;/action&gt;</span>
-    <span class="nt">&lt;/keybind&gt;</span>
-    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ -5%<span class="nt">&lt;/execute&gt;</span>
-      <span class="nt">&lt;/action&gt;</span>
-    <span class="nt">&lt;/keybind&gt;</span>
-    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ +5%<span class="nt">&lt;/execute&gt;</span>
-      <span class="nt">&lt;/action&gt;</span>
-    <span class="nt">&lt;/keybind&gt;</span>
-    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;execute&gt;</span>light -A 5<span class="nt">&lt;/execute&gt;</span>
-      <span class="nt">&lt;/action&gt;</span>
-    <span class="nt">&lt;/keybind&gt;</span>
-    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;execute&gt;</span>light -U 5<span class="nt">&lt;/execute&gt;</span>
-      <span class="nt">&lt;/action&gt;</span>
-    <span class="nt">&lt;/keybind&gt;</span>
+<h1 id="keyboard">keyboard中加入如下代码 声音和亮度快捷键绑定</h1>
+<div class="codehilite"><pre><span></span><code><span class="c">&lt;!--自定义--&gt;</span>
+<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;execute&gt;</span>pactl set-sink-mute @DEFAULT_SINK@ toggle<span class="nt">&lt;/execute&gt;</span>
+  <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/keybind&gt;</span>
+<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ -5%<span class="nt">&lt;/execute&gt;</span>
+  <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/keybind&gt;</span>
+<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ +5%<span class="nt">&lt;/execute&gt;</span>
+  <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/keybind&gt;</span>
+<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;execute&gt;</span>light -A 5<span class="nt">&lt;/execute&gt;</span>
+  <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/keybind&gt;</span>
+<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;execute&gt;</span>light -U 5<span class="nt">&lt;/execute&gt;</span>
+  <span class="nt">&lt;/action&gt;</span>
+<span class="nt">&lt;/keybind&gt;</span>
 </code></pre></div>
 
-<p><strong>配置菜单</strong></p>
-<div class="codehilite"><pre><span></span><code># menu.xml
-
-<span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-
-<span class="nt">&lt;openbox_menu</span> <span class="na">xmlns=</span><span class="s">&quot;http://openbox.org/&quot;</span>
-        <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-        <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://openbox.org/</span>
-<span class="s">                file:///usr/share/openbox/menu.xsd&quot;</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;root-menu&quot;</span> <span class="na">label=</span><span class="s">&quot;Openbox 3&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;终端&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/terminal.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>x-terminal-emulator<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;浏览器&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/browser.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>x-www-browser<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;文件&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/Thunar.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>Thunar<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="c">&lt;!-- This requires the presence of the &#39;obamenu&#39; package to work --&gt;</span>
-  <span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;/Debian&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;separator</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;applications-menu&quot;</span> <span class="na">label=</span><span class="s">&quot;程序&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/preferences-other.svg&quot;</span> <span class="na">execute=</span><span class="s">&quot;/home/poo/.poo/obamenu.py&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;separator</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;配置OpenBox&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/preferences-theme.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>obconf<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;重置OpenBox&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/systemback.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Reconfigure&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;重启OpenBox&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-reboot.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Restart&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;separator</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;退出OpenBox&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Exit&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;separator</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;system-out&quot;</span> <span class="na">label=</span><span class="s">&quot;退出&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&quot;</span>  <span class="nt">&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;锁屏&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-lock-screen.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>slock<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;挂起&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-log-out.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>systemctl -i suspend<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;休眼&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-hibernate.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>systemctl -i hibernate<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;重启&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-reboot.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>systemctl -i reboot<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-  <span class="nt">&lt;item</span> <span class="na">label=</span><span class="s">&quot;关机&quot;</span> <span class="na">icon=</span><span class="s">&quot;/usr/share/icons/Papirus-Light/24x24/apps/system-shutdown.svg&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;&lt;execute&gt;</span>systemctl -i poweroff<span class="nt">&lt;/execute&gt;&lt;/action&gt;</span>
-  <span class="nt">&lt;/item&gt;</span>
-<span class="nt">&lt;/menu&gt;</span>
-<span class="nt">&lt;/menu&gt;</span>
-
-<span class="nt">&lt;/openbox_menu&gt;</span>
+<div class="codehilite"><pre><span></span><code>- tint2
 </code></pre></div>
 
-<p><strong>菜单生成脚本</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="s s-Atom">#</span> <span class="s s-Atom">obamenu</span><span class="p">.</span><span class="s s-Atom">py</span>
-
-<span class="s s-Atom">#</span><span class="p">!</span><span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">env</span> <span class="s s-Atom">python3</span>
-<span class="s s-Atom">#</span> <span class="s s-Atom">-*-</span> <span class="nn">coding</span><span class="p">:</span> <span class="s s-Atom">utf</span><span class="o">-</span><span class="mi">8</span> <span class="s s-Atom">-*-</span>
-
-<span class="s s-Atom">#</span> <span class="nv">Version</span> <span class="mf">1.1.7</span> 
-<span class="s s-Atom">#</span> <span class="s s-Atom">----</span> <span class="s s-Atom">config</span> <span class="s s-Atom">---</span>
-<span class="s s-Atom">applications_dirs</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;/usr/share/applications&quot;</span><span class="p">,</span> <span class="p">)</span>
-<span class="s s-Atom">image_dir_base</span> <span class="o">=</span> <span class="s2">&quot;/usr/share&quot;</span> <span class="s s-Atom">#</span> <span class="s s-Atom">without</span> <span class="s2">&quot;pixmaps&quot;</span> <span class="s s-Atom">-/usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">share</span> <span class="s s-Atom">in</span> <span class="nv">FreeBSD</span><span class="p">,</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">share</span> <span class="s s-Atom">on</span> <span class="s s-Atom">linux</span>
-<span class="s s-Atom">icon_Theme</span> <span class="o">=</span> <span class="s2">&quot;Papirus&quot;</span>
-<span class="s s-Atom">image_cat_prefix</span> <span class="o">=</span> <span class="s2">&quot;applications-&quot;</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">if</span> <span class="s s-Atom">empty</span> <span class="s s-Atom">will</span> <span class="s s-Atom">create</span> <span class="s s-Atom">no</span> <span class="s s-Atom">icon</span> <span class="s s-Atom">text</span> <span class="s s-Atom">only</span> <span class="s s-Atom">menu</span>
-<span class="s s-Atom">application_groups</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Office&quot;</span><span class="p">,</span>  <span class="s2">&quot;Development&quot;</span><span class="p">,</span>  <span class="s2">&quot;Graphics&quot;</span><span class="p">,</span> <span class="s2">&quot;Internet&quot;</span><span class="p">,</span>  <span class="s2">&quot;Games&quot;</span><span class="p">,</span> <span class="s2">&quot;System&quot;</span><span class="p">,</span>  <span class="s2">&quot;Multimedia&quot;</span><span class="p">,</span>  <span class="s2">&quot;Utilities&quot;</span><span class="p">,</span>  <span class="s2">&quot;Settings&quot;</span><span class="p">)</span>
-<span class="s s-Atom">application_groups_zh</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;办公&quot;</span><span class="p">,</span>  <span class="s2">&quot;开发&quot;</span><span class="p">,</span>  <span class="s2">&quot;图形&quot;</span><span class="p">,</span> <span class="s2">&quot;互联网&quot;</span><span class="p">,</span>  <span class="s2">&quot;游戏&quot;</span><span class="p">,</span> <span class="s2">&quot;系统&quot;</span><span class="p">,</span>  <span class="s2">&quot;多媒体&quot;</span><span class="p">,</span>  <span class="s2">&quot;实用工具&quot;</span><span class="p">,</span>  <span class="s2">&quot;设置&quot;</span><span class="p">)</span>
-<span class="s s-Atom">group_aliases</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Audio&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;Multimedia&quot;</span><span class="p">,</span><span class="s2">&quot;AudioVideo&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;Multimedia&quot;</span><span class="p">,</span><span class="s2">&quot;Network&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;Internet&quot;</span><span class="p">,</span><span class="s2">&quot;Game&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;Games&quot;</span><span class="p">,</span> <span class="s2">&quot;Utility&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;Utilities&quot;</span><span class="p">,</span> <span class="s2">&quot;GTK&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="s2">&quot;GNOME&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
-<span class="s s-Atom">ignoreList</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;evince-previewer&quot;</span><span class="p">,</span> <span class="s2">&quot;Ted&quot;</span><span class="p">,</span>  <span class="s2">&quot;wingide3.2&quot;</span><span class="p">,</span> <span class="s2">&quot;python3.4&quot;</span><span class="p">,</span> <span class="s2">&quot;feh&quot;</span><span class="p">,</span><span class="s2">&quot;xfce4-power-manager-settings&quot;</span> <span class="p">)</span>
-<span class="s s-Atom">terminal_string</span> <span class="o">=</span> <span class="s2">&quot;evte -e&quot;</span>    <span class="s s-Atom">#</span> <span class="s s-Atom">your</span> <span class="s s-Atom">favourites</span> <span class="s s-Atom">terminal</span> <span class="s s-Atom">exec</span> <span class="s s-Atom">string</span>
-<span class="s s-Atom">simpleOBheader</span> <span class="o">=</span> <span class="nv">False</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">print</span> <span class="s s-Atom">full</span> <span class="s s-Atom">xml</span> <span class="s s-Atom">style</span> <span class="nv">OB</span> <span class="s s-Atom">header</span>
-<span class="s s-Atom">#</span> <span class="s s-Atom">---</span> <span class="nv">End</span> <span class="s s-Atom">of</span> <span class="s s-Atom">user</span> <span class="s s-Atom">config</span> <span class="s s-Atom">---</span>
-
-<span class="s s-Atom">import</span> <span class="s s-Atom">glob</span>
-
-<span class="s s-Atom">class</span> <span class="nf">dtItem</span><span class="p">(</span><span class="s s-Atom">object</span><span class="p">)</span><span class="s s-Atom">:</span>
-  <span class="s s-Atom">def</span> <span class="k">__</span><span class="nf">init__</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">fName</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="s s-Atom">fileName</span> <span class="o">=</span> <span class="s s-Atom">fName</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Comment</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Exec</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Terminal</span> <span class="o">=</span> <span class="nv">None</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Type</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Icon</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Categories</span> <span class="o">=</span> <span class="p">()</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addName</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="nf">xescape</span><span class="p">(</span><span class="s s-Atom">data</span><span class="p">)</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addComment</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Comment</span> <span class="o">=</span> <span class="s s-Atom">data</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addExec</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="s s-Atom">and</span> <span class="s s-Atom">data</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s s-Atom">&#39;%&#39;:</span> <span class="s s-Atom">#</span> <span class="s s-Atom">get</span> <span class="s s-Atom">rid</span> <span class="s s-Atom">of</span> <span class="s s-Atom">filemanager</span> <span class="s s-Atom">arguments</span> <span class="s s-Atom">in</span> <span class="s s-Atom">dt</span> <span class="s s-Atom">files</span>
-      <span class="s s-Atom">data</span> <span class="o">=</span> <span class="s s-Atom">data</span><span class="p">[:-</span><span class="mi">2</span><span class="p">].</span><span class="nf">strip</span><span class="p">()</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Exec</span> <span class="o">=</span> <span class="s s-Atom">data</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addIcon</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Icon</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">image_cat_prefix</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">return</span>
-    <span class="s s-Atom">image_dir</span> <span class="o">=</span> <span class="s s-Atom">image_dir_base</span> <span class="o">+</span> <span class="s2">&quot;/icons/&quot;</span> <span class="o">+</span> <span class="s s-Atom">icon_Theme</span> <span class="o">+</span> <span class="s2">&quot;/24x24/apps/&quot;</span>
-    <span class="s s-Atom">di</span> <span class="o">=</span> <span class="s s-Atom">data</span><span class="p">.</span><span class="nf">strip</span><span class="p">()</span>
-    <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">di</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">#</span><span class="s2">&quot;Error in %s: Invalid or no icon &#39;%s&#39;&quot;</span> <span class="c1">% (self.fileName,  di)</span>
-      <span class="s s-Atom">return</span>
-    <span class="s s-Atom">dix</span> <span class="o">=</span> <span class="s s-Atom">di</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>    <span class="s s-Atom">#</span> <span class="o">is</span> <span class="s s-Atom">it</span> <span class="s s-Atom">a</span> <span class="s s-Atom">full</span> <span class="s s-Atom">path?</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">dix</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="s s-Atom">and</span> <span class="s s-Atom">dix</span> <span class="s s-Atom">&lt;=</span> <span class="mi">2</span><span class="s s-Atom">:</span> <span class="s s-Atom">#</span> <span class="s s-Atom">yes</span><span class="p">,</span> <span class="s s-Atom">its</span> <span class="s s-Atom">a</span> <span class="nf">path</span> <span class="p">(.</span><span class="o">/</span><span class="s s-Atom">path</span> <span class="s s-Atom">or</span> <span class="p">..</span><span class="o">/</span><span class="s s-Atom">path</span> <span class="s s-Atom">or</span> <span class="o">/</span><span class="s s-Atom">path</span> <span class="p">...)</span>
-      <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Icon</span> <span class="o">=</span> <span class="s s-Atom">di</span>
-      <span class="s s-Atom">return</span>
-    <span class="s s-Atom">#else</span> <span class="s s-Atom">a</span> <span class="s s-Atom">short</span> <span class="s s-Atom">name</span> <span class="s s-Atom">like</span> <span class="s2">&quot;myapp&quot;</span>
-    <span class="s s-Atom">tmp</span> <span class="o">=</span> <span class="s s-Atom">image_dir</span> <span class="o">+</span> <span class="s s-Atom">di</span> <span class="o">+</span> <span class="s2">&quot;.*&quot;</span>
-    <span class="s s-Atom">tmp</span> <span class="o">=</span> <span class="s s-Atom">glob</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s s-Atom">tmp</span><span class="p">)</span>
-    <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Icon</span> <span class="o">=</span> <span class="s s-Atom">tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="s s-Atom">return</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addTerminal</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">data</span> <span class="o">==</span> <span class="s2">&quot;True&quot;</span> <span class="s s-Atom">or</span> <span class="s s-Atom">data</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Terminal</span> <span class="o">=</span> <span class="nv">True</span>
-    <span class="nn">else</span><span class="p">:</span>
-      <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Terminal</span> <span class="o">=</span> <span class="nv">False</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addType</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Type</span> <span class="o">=</span> <span class="s s-Atom">data</span>
-
-  <span class="s s-Atom">def</span> <span class="nf">addCategories</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">data</span><span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Categories</span> <span class="o">=</span> <span class="s s-Atom">data</span>
-
-<span class="s s-Atom">def</span> <span class="nf">getCatIcon</span><span class="p">(</span><span class="s s-Atom">cat</span><span class="p">)</span><span class="s s-Atom">:</span>
-  <span class="s s-Atom">iconDir</span> <span class="o">=</span> <span class="s s-Atom">image_dir_base</span> <span class="o">+</span> <span class="s2">&quot;/icons/&quot;</span> <span class="o">+</span> <span class="s s-Atom">icon_Theme</span> <span class="o">+</span> <span class="s2">&quot;/24x24/apps/&quot;</span>
-  <span class="s s-Atom">cat</span> <span class="o">=</span> <span class="s s-Atom">image_cat_prefix</span> <span class="o">+</span> <span class="s s-Atom">cat</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>
-  <span class="s s-Atom">tmp</span> <span class="o">=</span> <span class="s s-Atom">glob</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s s-Atom">iconDir</span> <span class="o">+</span> <span class="s s-Atom">cat</span> <span class="o">+</span> <span class="s2">&quot;.*&quot;</span><span class="p">)</span>
-  <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">tmp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">return</span> <span class="s s-Atom">tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-  <span class="s s-Atom">return</span> <span class="s2">&quot;&quot;</span>
-
-<span class="s s-Atom">def</span> <span class="nf">xescape</span><span class="p">(</span><span class="s s-Atom">s</span><span class="p">)</span><span class="s s-Atom">:</span>
-  <span class="nv">Rep</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;&amp;&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&gt;&quot;</span><span class="p">,</span>  <span class="s2">&quot;&#39;&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&amp;apos;&quot;</span><span class="p">,</span> <span class="s2">&quot;\&quot;&quot;</span><span class="s s-Atom">:</span><span class="s2">&quot;&quot;&quot;}</span>
-<span class="s2">  for p in (&quot;</span><span class="s s-Atom">&amp;</span><span class="s2">&quot;, &quot;</span><span class="s s-Atom">&lt;</span><span class="s2">&quot;, &quot;</span><span class="s s-Atom">&gt;</span><span class="s2">&quot;,  &quot;</span><span class="s s-Atom">&#39;&quot;,&quot;\&quot;&quot;):</span>
-<span class="s s-Atom">    sl = len(s); last = -1</span>
-<span class="s s-Atom">    while last &lt; sl:</span>
-<span class="s s-Atom">      i = s.find(p,  last+1)</span>
-<span class="s s-Atom">      if i &lt; 0:</span>
-<span class="s s-Atom">        done = True</span>
-<span class="s s-Atom">        break</span>
-<span class="s s-Atom">      last = i</span>
-<span class="s s-Atom">      l = s[:i]</span>
-<span class="s s-Atom">      r = s[i+1:]</span>
-<span class="s s-Atom">      s = l + Rep[p] + r</span>
-<span class="s s-Atom">  return s</span>
-
-<span class="s s-Atom">def process_category(cat, curCats,  appGroups = application_groups,  aliases = group_aliases ):</span>
-<span class="s s-Atom">  # first process aliases</span>
-<span class="s s-Atom">  if cat in aliases:</span>
-<span class="s s-Atom">    if aliases[cat] == &quot;&quot;:</span>
-<span class="s s-Atom">      return &quot;&quot;                # ignore this one</span>
-<span class="s s-Atom">    cat = aliases[cat]</span>
-<span class="s s-Atom">  if cat in appGroups and cat not in curCats:  # valid categories only and no doublettes, please</span>
-<span class="s s-Atom">    curCats.append(cat)</span>
-<span class="s s-Atom">    return cat</span>
-<span class="s s-Atom">  return &quot;&quot;</span>
-
-
-<span class="s s-Atom">def process_dtfile(dtf,  catDict):  # process this file &amp; extract relevant info</span>
-<span class="s s-Atom">  active = False      # parse only after &quot;[Desktop Entry]&quot; line</span>
-<span class="s s-Atom">  fh = open(dtf,  &quot;r&quot;)</span>
-<span class="s s-Atom">  lines = fh.readlines()</span>
-<span class="s s-Atom">  this = dtItem(dtf)</span>
-<span class="s s-Atom">  for l in lines:</span>
-<span class="s s-Atom">    l = l.strip()</span>
-<span class="s s-Atom">    if l == &quot;[Desktop Entry]&quot;:</span>
-<span class="s s-Atom">      active = True</span>
-<span class="s s-Atom">      continue</span>
-<span class="s s-Atom">    if active == False:  # we don&#39;t</span> <span class="s s-Atom">care</span> <span class="s s-Atom">about</span> <span class="s s-Atom">licenses</span> <span class="s s-Atom">or</span> <span class="s s-Atom">other</span> <span class="s s-Atom">comments</span>
-      <span class="s s-Atom">continue</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">l</span> <span class="o">==</span> <span class="nv">None</span> <span class="s s-Atom">or</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">l</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="s s-Atom">or</span> <span class="s s-Atom">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s s-Atom">&#39;#&#39;:</span>
-      <span class="s s-Atom">continue</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="s s-Atom">&#39;[&#39;</span> <span class="s s-Atom">and</span> <span class="s s-Atom">l</span> <span class="p">!</span><span class="o">=</span>  <span class="s2">&quot;[Desktop Entry]&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">active</span> <span class="o">=</span> <span class="nv">False</span>
-      <span class="s s-Atom">continue</span>
-    <span class="s s-Atom">#</span> <span class="s s-Atom">else</span>
-    <span class="s s-Atom">eqi</span> <span class="o">=</span> <span class="s s-Atom">l</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s s-Atom">&#39;=&#39;</span><span class="p">)</span>
-    <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="s s-Atom">:</span>
-      <span class="nf">print</span><span class="p">(</span><span class="s2">&quot;Error: Invalid .desktop line&#39;&quot;</span> <span class="o">+</span> <span class="s s-Atom">l</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">)</span>
-      <span class="s s-Atom">continue</span>
-    <span class="s s-Atom">#</span> <span class="nv">Check</span> <span class="s s-Atom">what</span> <span class="s s-Atom">it</span> <span class="o">is</span> <span class="p">...</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Name[zh_CN]&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addName</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Name&quot;</span> <span class="s s-Atom">and</span> <span class="s s-Atom">this</span><span class="p">.</span><span class="nv">Name</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addName</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Comment&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addComment</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Exec&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addExec</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Icon&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addIcon</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Terminal&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addTerminal</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Type&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">if</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">!</span><span class="o">=</span> <span class="s2">&quot;Application&quot;</span><span class="s s-Atom">:</span>
-        <span class="s s-Atom">continue</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addType</span><span class="p">(</span><span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="s s-Atom">elif</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Categories&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">if</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="s s-Atom">and</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s s-Atom">&#39;;&#39;:</span>
-        <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">:-</span><span class="mi">1</span><span class="p">]</span>
-      <span class="s s-Atom">cats</span> <span class="o">=</span> <span class="p">[]</span>
-      <span class="s s-Atom">#</span> <span class="nv">DEBUG</span> 
-      <span class="s s-Atom">dtCats</span> <span class="o">=</span> <span class="s s-Atom">eqi</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="s s-Atom">&#39;;&#39;</span><span class="p">)</span>
-      <span class="s s-Atom">for</span> <span class="s s-Atom">cat</span> <span class="s s-Atom">in</span> <span class="s s-Atom">dtCats:</span>
-        <span class="s s-Atom">result</span> <span class="o">=</span> <span class="nf">process_category</span><span class="p">(</span><span class="s s-Atom">cat</span><span class="p">,</span>  <span class="s s-Atom">cats</span><span class="p">)</span>
-      <span class="s s-Atom">this</span><span class="p">.</span><span class="nf">addCategories</span><span class="p">(</span><span class="s s-Atom">cats</span><span class="p">)</span>
-    <span class="nn">else</span><span class="p">:</span>
-      <span class="s s-Atom">continue</span>
-  <span class="s s-Atom">#</span> <span class="s s-Atom">add</span> <span class="s s-Atom">to</span> <span class="s s-Atom">catDict</span>
-  <span class="s s-Atom">#this</span><span class="p">.</span><span class="nf">dprint</span><span class="p">()</span>
-  <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">this</span><span class="p">.</span><span class="nv">Categories</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="s s-Atom">:</span>    <span class="s s-Atom">#</span> <span class="s s-Atom">don&#39;t care about stuff w/o category</span>
-<span class="s s-Atom">    for cat in this.Categories:</span>
-<span class="s s-Atom">      catDict[cat].append(this)</span>
-
-<span class="s s-Atom">categoryDict = {}</span>
-
-<span class="s s-Atom">if __name__ == &quot;__main__&quot;:</span>
-<span class="s s-Atom">  # init the application group dict (which will contain list of apps)</span>
-<span class="s s-Atom">  for appGroup in application_groups:</span>
-<span class="s s-Atom">    categoryDict[appGroup] = []</span>
-
-<span class="s s-Atom">  # now let&#39;s</span> <span class="s s-Atom">look</span>  <span class="s s-Atom">into</span> <span class="s s-Atom">the</span> <span class="s s-Atom">app</span> <span class="s s-Atom">dirs</span> <span class="p">...</span>
-  <span class="s s-Atom">for</span> <span class="s s-Atom">appDir</span> <span class="s s-Atom">in</span> <span class="s s-Atom">applications_dirs:</span>
-    <span class="s s-Atom">appDir</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;/*.desktop&quot;</span>
-    <span class="s s-Atom">dtFiles</span> <span class="o">=</span> <span class="s s-Atom">glob</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s s-Atom">appDir</span><span class="p">)</span>
-
-    <span class="s s-Atom">#</span> <span class="s s-Atom">process</span> <span class="s s-Atom">each</span> <span class="p">.</span><span class="s s-Atom">desktop</span> <span class="s s-Atom">file</span> <span class="s s-Atom">in</span> <span class="s s-Atom">dir</span>
-    <span class="s s-Atom">for</span> <span class="s s-Atom">dtf</span> <span class="s s-Atom">in</span> <span class="s s-Atom">dtFiles:</span>
-      <span class="s s-Atom">skipFlag</span> <span class="o">=</span> <span class="nv">False</span>
-      <span class="s s-Atom">for</span> <span class="s s-Atom">ifn</span> <span class="s s-Atom">in</span> <span class="s s-Atom">ignoreList:</span>
-        <span class="s s-Atom">if</span> <span class="s s-Atom">dtf</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s s-Atom">ifn</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="s s-Atom">:</span>
-          <span class="s s-Atom">skipFlag</span> <span class="o">=</span> <span class="nv">True</span>
-      <span class="s s-Atom">if</span> <span class="s s-Atom">skipFlag</span> <span class="o">==</span> <span class="nv">False</span><span class="s s-Atom">:</span>
-        <span class="nf">process_dtfile</span><span class="p">(</span><span class="s s-Atom">dtf</span><span class="p">,</span>  <span class="s s-Atom">categoryDict</span><span class="p">)</span>
-
-  <span class="s s-Atom">#</span> <span class="s s-Atom">now</span><span class="p">,</span> <span class="s s-Atom">generate</span> <span class="s s-Atom">jwm</span> <span class="s s-Atom">menu</span> <span class="s s-Atom">include</span>
-  <span class="s s-Atom">if</span> <span class="s s-Atom">simpleOBheader</span> <span class="o">==</span> <span class="nv">True</span><span class="s s-Atom">:</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">&#39;&lt;openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>     <span class="s s-Atom">#</span> <span class="s s-Atom">magic</span> <span class="s s-Atom">header</span>
-  <span class="nn">else</span><span class="p">:</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">&#39;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;openbox_pipe_menu xmlns=&quot;http://openbox.org/&quot;  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  xsi:schemaLocation=&quot;http://openbox.org/&quot; &gt;&#39;</span><span class="p">)</span>    <span class="s s-Atom">#</span> <span class="s s-Atom">magic</span> <span class="s s-Atom">header</span>
-  <span class="s s-Atom">appGroupLen</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">application_groups</span><span class="p">)</span>
-  <span class="s s-Atom">for</span> <span class="s s-Atom">ag</span> <span class="s s-Atom">in</span> <span class="nf">range</span><span class="p">(</span><span class="s s-Atom">appGroupLen</span> <span class="p">)</span><span class="s s-Atom">:</span>
-    <span class="s s-Atom">catList</span> <span class="o">=</span> <span class="s s-Atom">categoryDict</span><span class="p">[</span><span class="s s-Atom">application_groups</span><span class="p">[</span><span class="s s-Atom">ag</span><span class="p">]]</span>
-    <span class="s s-Atom">if</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">catList</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">continue</span>        <span class="s s-Atom">#</span> <span class="s s-Atom">don</span><span class="err">&#39;</span><span class="s s-Atom">t</span> <span class="s s-Atom">create</span> <span class="s s-Atom">empty</span> <span class="s s-Atom">menus</span>
-    <span class="s s-Atom">catStr</span> <span class="o">=</span> <span class="s2">&quot;&lt;menu id=\&quot;openbox-%s\&quot; label=\&quot;%s\&quot; &quot;</span> <span class="c1">% (application_groups[ag], application_groups_zh[ag])</span>
-    <span class="s s-Atom">tmp</span> <span class="o">=</span> <span class="nf">getCatIcon</span><span class="p">(</span><span class="s s-Atom">application_groups</span><span class="p">[</span><span class="s s-Atom">ag</span><span class="p">])</span>
-    <span class="s s-Atom">if</span> <span class="s s-Atom">tmp</span> <span class="p">!</span><span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="s s-Atom">:</span>
-      <span class="s s-Atom">catStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;icon=\&quot;%s\&quot;&quot;</span> <span class="c1">% tmp</span>
-    <span class="nn">else</span><span class="p">:</span>
-      <span class="s s-Atom">catStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;icon=\&quot;&quot;</span> <span class="o">+</span> <span class="s s-Atom">image_dir_base</span> <span class="o">+</span> <span class="s2">&quot;/icons/&quot;</span> <span class="o">+</span> <span class="s s-Atom">icon_Theme</span> <span class="o">+</span> <span class="s2">&quot;/24x24/actions/settings.svg\&quot;&quot;</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">catStr</span><span class="p">,</span>  <span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
-    <span class="s s-Atom">for</span> <span class="s s-Atom">app</span> <span class="s s-Atom">in</span> <span class="s s-Atom">catList:</span>
-      <span class="s s-Atom">progStr</span> <span class="o">=</span> <span class="s2">&quot;&lt;item &quot;</span>
-      <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;label=\&quot;%s\&quot; &quot;</span>  <span class="c1">% app.Name</span>
-      <span class="s s-Atom">if</span> <span class="s s-Atom">app</span><span class="p">.</span><span class="nv">Icon</span> <span class="p">!</span><span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="s s-Atom">:</span>
-        <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;icon=\&quot;%s\&quot; &quot;</span> <span class="c1">% app.Icon</span>
-      <span class="s s-Atom">elif</span> <span class="s s-Atom">app</span><span class="p">.</span><span class="nv">Name</span> <span class="o">==</span> <span class="s2">&quot;蓝牙适配器&quot;</span><span class="s s-Atom">:</span>
-        <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;icon=\&quot;&quot;</span> <span class="o">+</span> <span class="s s-Atom">image_dir_base</span> <span class="o">+</span> <span class="s2">&quot;/icons/&quot;</span> <span class="o">+</span> <span class="s s-Atom">icon_Theme</span> <span class="o">+</span> <span class="s2">&quot;/24x24/devices/blueman-device.svg\&quot;&quot;</span>
-      <span class="s s-Atom">elif</span> <span class="s s-Atom">app</span><span class="p">.</span><span class="nv">Name</span> <span class="o">==</span> <span class="s2">&quot;输入法&quot;</span><span class="s s-Atom">:</span>
-        <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;icon=\&quot;&quot;</span> <span class="o">+</span> <span class="s s-Atom">image_dir_base</span> <span class="o">+</span> <span class="s2">&quot;/icons/&quot;</span> <span class="o">+</span> <span class="s s-Atom">icon_Theme</span> <span class="o">+</span> <span class="s2">&quot;/24x24/devices/input-keyboard.svg\&quot;&quot;</span>
-      <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;&gt;&lt;action name=\&quot;Execute\&quot;&gt;&lt;command&gt;&lt;![CDATA[&quot;</span>
-      <span class="s s-Atom">if</span> <span class="s s-Atom">app</span><span class="p">.</span><span class="nv">Terminal</span> <span class="o">==</span> <span class="nv">True</span><span class="s s-Atom">:</span>
-        <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">terminal_string</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
-      <span class="s s-Atom">progStr</span> <span class="s s-Atom">+=</span> <span class="s2">&quot;%s]]&gt;&lt;/command&gt;&lt;/action&gt;&lt;/item&gt;&quot;</span>  <span class="c1">% app.Exec</span>
-      <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">progStr</span><span class="p">)</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s2">&quot;&lt;/menu&gt;&quot;</span><span class="p">)</span>
-  <span class="nf">print</span><span class="p">(</span><span class="s2">&quot;&lt;/openbox_pipe_menu&gt;&quot;</span><span class="p">)</span>    <span class="s s-Atom">#</span> <span class="s s-Atom">magic</span> <span class="s s-Atom">footer</span>
-  <span class="s s-Atom">pass</span> <span class="s s-Atom">#</span> <span class="s s-Atom">done</span><span class="o">/</span><span class="s s-Atom">debug</span> <span class="s s-Atom">break</span>
+<h1 id="_1">亮度</h1>
+<p>echo "☀️$(light|cut --delimiter=. -f1)%"</p>
+<div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
-<ul>
-<li>jgmenu</li>
-</ul>
-<p><strong>jgmenu样式</strong></p>
-<div class="codehilite"><pre><span></span><code># jgmenurc
-
-stay_alive           = 1
-tint2_look           = 0
-position_mode        = fixed
-terminal_exec        = termite
-terminal_args        = -e
-menu_width           = 200
-menu_padding_top     = 40
-menu_padding_right   = 2
-menu_padding_bottom  = 5
-menu_padding_left    = 2
-menu_radius          = 0
-menu_border          = 1
-menu_halign          = left
-sub_hover_action     = 1
-item_margin_y        = 5
-item_height          = 30
-item_padding_x       = 8
-item_radius          = 0
-item_border          = 0
-sep_height           = 5
-font                 = Ubuntu 15px
-icon_size            = 30
-color_menu_bg        = #eeeeee 100
-color_norm_bg        = #2b303b 0
-color_norm_fg        = #000000 100
-color_sel_bg         = #8fa1b3 60
-color_sel_fg         = #2b303b 100
-color_sep_fg         = #8fa1b3 40
+<h1 id="binbash">!/bin/bash</h1>
+<h1 id="_2">增加亮度</h1>
+<p>light -A 5
+notify-send "当前亮度为: $(light|cut --delimiter=. -f1)%"</p>
+<div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
-<p><strong>添加附加项目</strong></p>
-<div class="codehilite"><pre><span></span><code># <span class="nv">append</span>.<span class="nv">csv</span>
-
-<span class="o">^</span><span class="nv">sep</span><span class="ss">()</span>
-退出,<span class="o">^</span><span class="nv">checkout</span><span class="ss">(</span><span class="k">exit</span><span class="ss">)</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">shutdown</span>
-<span class="o">^</span><span class="nv">tag</span><span class="ss">(</span><span class="k">exit</span><span class="ss">)</span>
-锁屏,<span class="nv">slock</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">lock</span><span class="o">-</span><span class="nv">screen</span>
-退出,<span class="nv">openbox</span> <span class="o">--</span><span class="k">exit</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">out</span>
-挂起,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">suspend</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">out</span>
-休眠,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">hibernate</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">hibernate</span>
-重启,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">reboot</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">reboot</span>
-关机,<span class="nv">systemctl</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">poweroff</span>,<span class="nv">system</span><span class="o">-</span><span class="nv">shutdown</span>
+<h1 id="binbash_1">!/bin/bash</h1>
+<h1 id="_3">减少亮度</h1>
+<p>light -U 5
+notify-send "当前亮度为: $(light|cut --delimiter=. -f1)%"</p>
+<div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
-<p><strong>添加前置项目</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">prepend</span><span class="p">.</span><span class="n">csv</span><span class="w"></span>
-
-<span class="nv">@rect</span><span class="p">,,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">190</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nf">left</span><span class="p">,</span><span class="k">top</span><span class="p">,</span><span class="n">#000000</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="n">#656565</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"></span>
-<span class="nv">@search</span><span class="p">,,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">185</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nf">left</span><span class="p">,</span><span class="k">top</span><span class="p">,</span><span class="n">#eeeeee</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="n">#000000</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="o">^</span><span class="n">sep</span><span class="p">()</span><span class="w"></span>
-<span class="n">终端</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">terminal</span><span class="o">-</span><span class="n">emulator</span><span class="p">,</span><span class="n">utilities</span><span class="o">-</span><span class="n">terminal</span><span class="w"></span>
-<span class="n">文件</span><span class="p">,</span><span class="n">thunar</span><span class="p">,</span><span class="k">system</span><span class="o">-</span><span class="k">file</span><span class="o">-</span><span class="n">manager</span><span class="w"></span>
-<span class="n">火狐</span><span class="p">,</span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="p">,</span><span class="n">firefox</span><span class="w"></span>
-<span class="o">^</span><span class="n">sep</span><span class="p">()</span><span class="w"></span>
+<h1 id="volumepy">声音(volume.py)</h1>
+<h1 id="codingutf-8">coding=utf-8</h1>
+<p>import os</p>
+<p>mute = os.popen('pactl get-sink-mute @DEFAULT_SINK@').read()
+volume = os.popen('pactl get-sink-volume @DEFAULT_SINK@').read()
+if mute[6] == "否":
+    print('🔊'+volume[29:32])
+else:
+    print('🔇'+volume[29:32])</p>
+<div class="codehilite"><pre><span></span><code>
 </code></pre></div>
 
-<ul>
-<li>tint2</li>
-</ul>
-<div class="codehilite"><pre><span></span><code># 亮度
-echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="c1"># 增加亮度</span>
-light -A <span class="m">5</span>
-notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-<span class="c1"># 减少亮度</span>
-light -U <span class="m">5</span>
-notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="c1"># 声音(volume.py)</span>
-
-<span class="c1"># coding=utf-8</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="n">mute</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">volume</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;否&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="c1"># 网络(network.py)</span>
-
-<span class="c1"># coding=utf-8</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<p><strong>tint2配置</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="c1">#---- Generated by tint2conf a94d ----</span>
-<span class="c1"># See https://gitlab.com/o9000/tint2/wikis/Configure for </span>
-<span class="c1"># full documentation of the configuration options.</span>
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Gradients</span>
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Backgrounds</span>
-<span class="c1"># Background 1: Panel</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#bbbbbb 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#bbbbbb 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#bbbbbb 100</span>
-
-<span class="c1"># Background 2: Default task, Iconified task</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-
-<span class="c1"># Background 3: Active task</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#aaaaaa 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-
-<span class="c1"># Background 4: Urgent task</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#aa4400 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#aa7733 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#aa4400 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#aa7733 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#aa4400 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#aa7733 100</span>
-
-<span class="c1"># Background 5: Tooltip</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#ffffaa 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#ffffaa 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#ffffaa 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-
-<span class="c1"># Background 6: Inactive desktop name</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#eeeeee 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-
-<span class="c1"># Background 7: Active desktop name</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#999999 100</span>
-
-<span class="c1"># Background 8: Systray</span>
-<span class="n">rounded</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">border_width</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">border_sides</span> <span class="o">=</span> <span class="n">TBLR</span>
-<span class="n">border_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_content_tint_weight</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">background_color</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">background_color_hover</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color_hover</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-<span class="n">background_color_pressed</span> <span class="o">=</span> <span class="c1">#dddddd 100</span>
-<span class="n">border_color_pressed</span> <span class="o">=</span> <span class="c1">#cccccc 100</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Panel</span>
-<span class="n">panel_items</span> <span class="o">=</span> <span class="n">LTEEEBSC</span>
-<span class="n">panel_size</span> <span class="o">=</span> <span class="mi">100</span><span class="o">%</span> <span class="mi">40</span>
-<span class="n">panel_margin</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">panel_padding</span> <span class="o">=</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">4</span>
-<span class="n">panel_background_id</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">wm_menu</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">panel_dock</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">panel_pivot_struts</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">panel_position</span> <span class="o">=</span> <span class="n">bottom</span> <span class="n">center</span> <span class="n">horizontal</span>
-<span class="n">panel_layer</span> <span class="o">=</span> <span class="n">normal</span>
-<span class="n">panel_monitor</span> <span class="o">=</span> <span class="n">all</span>
-<span class="n">panel_shrink</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">autohide</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">autohide_show_timeout</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">autohide_hide_timeout</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">autohide_height</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">strut_policy</span> <span class="o">=</span> <span class="n">follow_size</span>
-<span class="n">panel_window_name</span> <span class="o">=</span> <span class="n">tint2</span>
-<span class="n">disable_transparency</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">mouse_effects</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">font_shadow</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">mouse_hover_icon_asb</span> <span class="o">=</span> <span class="mi">100</span> <span class="mi">0</span> <span class="mi">10</span>
-<span class="n">mouse_pressed_icon_asb</span> <span class="o">=</span> <span class="mi">100</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">scale_relative_to_dpi</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">scale_relative_to_screen_height</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Taskbar</span>
-<span class="n">taskbar_mode</span> <span class="o">=</span> <span class="n">single_desktop</span>
-<span class="n">taskbar_hide_if_empty</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">2</span>
-<span class="n">taskbar_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_active_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_name</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_hide_inactive_tasks</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_hide_different_monitor</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_hide_different_desktop</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_always_show_all_desktop_tasks</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">taskbar_name_padding</span> <span class="o">=</span> <span class="mi">6</span> <span class="mi">3</span>
-<span class="n">taskbar_name_background_id</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">taskbar_name_active_background_id</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">taskbar_name_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">11</span>
-<span class="n">taskbar_name_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">taskbar_name_active_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">taskbar_distribute_size</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">taskbar_sort_order</span> <span class="o">=</span> <span class="n">none</span>
-<span class="n">task_align</span> <span class="o">=</span> <span class="n">left</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Task</span>
-<span class="n">task_text</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">task_icon</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">task_centered</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">urgent_nb_of_blink</span> <span class="o">=</span> <span class="mi">100000</span>
-<span class="n">task_maximum_size</span> <span class="o">=</span> <span class="mi">140</span> <span class="mi">35</span>
-<span class="n">task_padding</span> <span class="o">=</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">4</span>
-<span class="n">task_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">10</span>
-<span class="n">task_tooltip</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">task_thumbnail</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">task_thumbnail_size</span> <span class="o">=</span> <span class="mi">210</span>
-<span class="n">task_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">task_icon_asb</span> <span class="o">=</span> <span class="mi">100</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">task_background_id</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">task_active_background_id</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">task_urgent_background_id</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">task_iconified_background_id</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">mouse_left</span> <span class="o">=</span> <span class="n">toggle_iconify</span>
-<span class="n">mouse_middle</span> <span class="o">=</span> <span class="n">none</span>
-<span class="n">mouse_right</span> <span class="o">=</span> <span class="n">close</span>
-<span class="n">mouse_scroll_up</span> <span class="o">=</span> <span class="n">prev_task</span>
-<span class="n">mouse_scroll_down</span> <span class="o">=</span> <span class="n">next_task</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># System tray (notification area)</span>
-<span class="n">systray_padding</span> <span class="o">=</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">2</span>
-<span class="n">systray_background_id</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">systray_sort</span> <span class="o">=</span> <span class="n">ascending</span>
-<span class="n">systray_icon_size</span> <span class="o">=</span> <span class="mi">22</span>
-<span class="n">systray_icon_asb</span> <span class="o">=</span> <span class="mi">100</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">systray_monitor</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">systray_name_filter</span> <span class="o">=</span> 
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Launcher</span>
-<span class="n">launcher_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">2</span>
-<span class="n">launcher_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">launcher_icon_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">launcher_icon_size</span> <span class="o">=</span> <span class="mi">38</span>
-<span class="n">launcher_icon_asb</span> <span class="o">=</span> <span class="mi">100</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">launcher_icon_theme</span> <span class="o">=</span> <span class="n">Papirus</span><span class="o">-</span><span class="n">Light</span>
-<span class="n">launcher_icon_theme_override</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">startup_notifications</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">launcher_tooltip</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">launcher_item_app</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">thunar</span><span class="o">.</span><span class="n">desktop</span>
-<span class="n">launcher_item_app</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">sakura</span><span class="o">.</span><span class="n">desktop</span>
-<span class="n">launcher_item_app</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">microsoft</span><span class="o">-</span><span class="n">edge</span><span class="o">.</span><span class="n">desktop</span>
-<span class="n">launcher_item_app</span> <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">sublime_text</span><span class="o">.</span><span class="n">desktop</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Clock</span>
-<span class="n">time1_format</span> <span class="o">=</span> <span class="o">%</span><span class="n">F</span>
-<span class="n">time2_format</span> <span class="o">=</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span>
-<span class="n">time1_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">10</span>
-<span class="n">time1_timezone</span> <span class="o">=</span> 
-<span class="n">time2_timezone</span> <span class="o">=</span> 
-<span class="n">time2_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">9</span>
-<span class="n">clock_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">clock_padding</span> <span class="o">=</span> <span class="mi">1</span> <span class="mi">0</span>
-<span class="n">clock_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">clock_tooltip</span> <span class="o">=</span> <span class="o">%</span><span class="n">A</span> <span class="o">%</span><span class="n">F</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span> <span class="err">第</span><span class="o">%</span><span class="n">V周</span>
-<span class="n">clock_tooltip_timezone</span> <span class="o">=</span> 
-<span class="n">clock_lclick_command</span> <span class="o">=</span> 
-<span class="n">clock_rclick_command</span> <span class="o">=</span> 
-<span class="n">clock_mclick_command</span> <span class="o">=</span> 
-<span class="n">clock_uwheel_command</span> <span class="o">=</span> 
-<span class="n">clock_dwheel_command</span> <span class="o">=</span> 
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Battery</span>
-<span class="n">battery_tooltip</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">battery_low_status</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">battery_low_cmd</span> <span class="o">=</span> <span class="n">xmessage</span> <span class="s1">&#39;tint2: Battery low!&#39;</span>
-<span class="n">battery_full_cmd</span> <span class="o">=</span> 
-<span class="n">bat1_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
-<span class="n">bat2_font</span> <span class="o">=</span> <span class="n">sans</span> <span class="mi">6</span>
-<span class="n">battery_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">bat1_format</span> <span class="o">=</span> <span class="err">⚡</span><span class="o">%</span><span class="n">p</span>
-<span class="n">bat2_format</span> <span class="o">=</span> 
-<span class="n">battery_padding</span> <span class="o">=</span> <span class="mi">1</span> <span class="mi">0</span>
-<span class="n">battery_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">battery_hide</span> <span class="o">=</span> <span class="mi">101</span>
-<span class="n">battery_lclick_command</span> <span class="o">=</span> 
-<span class="n">battery_rclick_command</span> <span class="o">=</span> 
-<span class="n">battery_mclick_command</span> <span class="o">=</span> 
-<span class="n">battery_uwheel_command</span> <span class="o">=</span> 
-<span class="n">battery_dwheel_command</span> <span class="o">=</span> 
-<span class="n">ac_connected_cmd</span> <span class="o">=</span> 
-<span class="n">ac_disconnected_cmd</span> <span class="o">=</span> 
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Executor 1</span>
-<span class="n">execp</span> <span class="o">=</span> <span class="n">new</span>
-<span class="n">execp_command</span> <span class="o">=</span> <span class="n">python3</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">poo</span><span class="o">/.</span><span class="n">poo</span><span class="o">/</span><span class="n">network</span><span class="o">.</span><span class="n">py</span>
-<span class="n">execp_interval</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_has_icon</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_cache_icon</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_continuous</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_markup</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_monitor</span> <span class="o">=</span> <span class="n">all</span>
-<span class="n">execp_tooltip</span> <span class="o">=</span> <span class="err">网络</span>
-<span class="n">execp_lclick_command</span> <span class="o">=</span> 
-<span class="n">execp_rclick_command</span> <span class="o">=</span> 
-<span class="n">execp_mclick_command</span> <span class="o">=</span> 
-<span class="n">execp_uwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
-<span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
-<span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_centered</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_w</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_h</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Executor 2</span>
-<span class="n">execp</span> <span class="o">=</span> <span class="n">new</span>
-<span class="n">execp_command</span> <span class="o">=</span> <span class="n">python3</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">poo</span><span class="o">/.</span><span class="n">poo</span><span class="o">/</span><span class="n">volume</span><span class="o">.</span><span class="n">py</span>
-<span class="n">execp_interval</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_has_icon</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_cache_icon</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_continuous</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_markup</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_monitor</span> <span class="o">=</span> <span class="n">all</span>
-<span class="n">execp_tooltip</span> <span class="o">=</span> <span class="err">声音</span>
-<span class="n">execp_lclick_command</span> <span class="o">=</span> 
-<span class="n">execp_rclick_command</span> <span class="o">=</span> 
-<span class="n">execp_mclick_command</span> <span class="o">=</span> 
-<span class="n">execp_uwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
-<span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
-<span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_centered</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_w</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_h</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Executor 3</span>
-<span class="n">execp</span> <span class="o">=</span> <span class="n">new</span>
-<span class="n">execp_command</span> <span class="o">=</span> <span class="n">echo</span> <span class="s2">&quot;☀️$(light|cut --delimiter=. -f1)%&quot;</span>
-<span class="n">execp_interval</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_has_icon</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_cache_icon</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_continuous</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_markup</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">execp_monitor</span> <span class="o">=</span> <span class="n">all</span>
-<span class="n">execp_tooltip</span> <span class="o">=</span> <span class="err">亮度</span>
-<span class="n">execp_lclick_command</span> <span class="o">=</span> 
-<span class="n">execp_rclick_command</span> <span class="o">=</span> 
-<span class="n">execp_mclick_command</span> <span class="o">=</span> 
-<span class="n">execp_uwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_dwheel_command</span> <span class="o">=</span> 
-<span class="n">execp_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="n">Bold</span> <span class="mi">12</span>
-<span class="n">execp_font_color</span> <span class="o">=</span> <span class="c1">#000000 100</span>
-<span class="n">execp_padding</span> <span class="o">=</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="n">execp_background_id</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_centered</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_w</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">execp_icon_h</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1">#-------------------------------------</span>
-<span class="c1"># Tooltip</span>
-<span class="n">tooltip_show_timeout</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">tooltip_hide_timeout</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">tooltip_padding</span> <span class="o">=</span> <span class="mi">2</span> <span class="mi">2</span>
-<span class="n">tooltip_background_id</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">tooltip_font_color</span> <span class="o">=</span> <span class="c1">#222222 100</span>
-<span class="n">tooltip_font</span> <span class="o">=</span> <span class="n">Noto</span> <span class="n">Sans</span> <span class="n">CJK</span> <span class="n">SC</span> <span class="mi">11</span>
-</code></pre></div></div>
+<h1 id="networkpy">网络(network.py)</h1>
+<h1 id="codingutf-8_1">coding=utf-8</h1>
+<p>import os</p>
+<p>network = os.popen('hostname -I').read()</p>
+<p>if network == '\n':
+    print('🌐Down')
+else:
+    print('📶Nokia')
+```</p></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

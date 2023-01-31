@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共5376个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7448个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
@@ -66,22 +66,13 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-30 10:47:27</span></div>
+      <div class="header"><span>debian+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-31 15:07:36</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
 <li><a href="#1">1. 安装软件</a></li>
 <li><a href="#2">2. 设置</a></li>
-<li><a href="#keyboard">keyboard中加入如下代码 声音和亮度快捷键绑定</a></li>
-<li><a href="#_1">亮度</a></li>
-<li><a href="#binbash">!/bin/bash</a></li>
-<li><a href="#_2">增加亮度</a></li>
-<li><a href="#binbash_1">!/bin/bash</a></li>
-<li><a href="#_3">减少亮度</a></li>
-<li><a href="#volumepy">声音(volume.py)</a></li>
-<li><a href="#codingutf-8">coding=utf-8</a></li>
-<li><a href="#networkpy">网络(network.py)</a></li>
-<li><a href="#codingutf-8_1">coding=utf-8</a></li>
+<li><a href="#3">3. 详细配置文件</a></li>
 </ul>
 </div>
 <h3 id="1">1. 安装软件</h3>
@@ -123,81 +114,86 @@ blueman-applet &amp;
 #volumeicon &amp;
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>**添加快捷键**
+<p><strong>添加快捷键</strong></p>
+<div class="codehilite"><pre><span></span><code># keyboard中加入如下代码 声音和亮度快捷键绑定
+
+    <span class="c">&lt;!--自定义--&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-mute @DEFAULT_SINK@ toggle<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ -5%<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ +5%<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>light -A 5<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;execute&gt;</span>light -U 5<span class="nt">&lt;/execute&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
 </code></pre></div>
 
-<h1 id="keyboard">keyboard中加入如下代码 声音和亮度快捷键绑定</h1>
-<div class="codehilite"><pre><span></span><code><span class="c">&lt;!--自定义--&gt;</span>
-<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;execute&gt;</span>pactl set-sink-mute @DEFAULT_SINK@ toggle<span class="nt">&lt;/execute&gt;</span>
-  <span class="nt">&lt;/action&gt;</span>
-<span class="nt">&lt;/keybind&gt;</span>
-<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ -5%<span class="nt">&lt;/execute&gt;</span>
-  <span class="nt">&lt;/action&gt;</span>
-<span class="nt">&lt;/keybind&gt;</span>
-<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;execute&gt;</span>pactl set-sink-volume @DEFAULT_SINK@ +5%<span class="nt">&lt;/execute&gt;</span>
-  <span class="nt">&lt;/action&gt;</span>
-<span class="nt">&lt;/keybind&gt;</span>
-<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;execute&gt;</span>light -A 5<span class="nt">&lt;/execute&gt;</span>
-  <span class="nt">&lt;/action&gt;</span>
-<span class="nt">&lt;/keybind&gt;</span>
-<span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;execute&gt;</span>light -U 5<span class="nt">&lt;/execute&gt;</span>
-  <span class="nt">&lt;/action&gt;</span>
-<span class="nt">&lt;/keybind&gt;</span>
+<ul>
+<li>tint2</li>
+</ul>
+<div class="codehilite"><pre><span></span><code># 亮度
+echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>- tint2
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 增加亮度</span>
+light -A <span class="m">5</span>
+notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
 </code></pre></div>
 
-<h1 id="_1">亮度</h1>
-<p>echo "☀️$(light|cut --delimiter=. -f1)%"</p>
-<div class="codehilite"><pre><span></span><code>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 减少亮度</span>
+light -U <span class="m">5</span>
+notify-send <span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut --delimiter<span class="o">=</span>. -f1<span class="k">)</span><span class="s2">%&quot;</span>
 </code></pre></div>
 
-<h1 id="binbash">!/bin/bash</h1>
-<h1 id="_2">增加亮度</h1>
-<p>light -A 5
-notify-send "当前亮度为: $(light|cut --delimiter=. -f1)%"</p>
-<div class="codehilite"><pre><span></span><code>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 声音(volume.py)</span>
+
+<span class="c1"># coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">mute</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;否&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </code></pre></div>
 
-<h1 id="binbash_1">!/bin/bash</h1>
-<h1 id="_3">减少亮度</h1>
-<p>light -U 5
-notify-send "当前亮度为: $(light|cut --delimiter=. -f1)%"</p>
-<div class="codehilite"><pre><span></span><code>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 网络(network.py)</span>
+
+<span class="c1"># coding=utf-8</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-<h1 id="volumepy">声音(volume.py)</h1>
-<h1 id="codingutf-8">coding=utf-8</h1>
-<p>import os</p>
-<p>mute = os.popen('pactl get-sink-mute @DEFAULT_SINK@').read()
-volume = os.popen('pactl get-sink-volume @DEFAULT_SINK@').read()
-if mute[6] == "否":
-    print('🔊'+volume[29:32])
-else:
-    print('🔇'+volume[29:32])</p>
-<div class="codehilite"><pre><span></span><code>
-</code></pre></div>
-
-<h1 id="networkpy">网络(network.py)</h1>
-<h1 id="codingutf-8_1">coding=utf-8</h1>
-<p>import os</p>
-<p>network = os.popen('hostname -I').read()</p>
-<p>if network == '\n':
-    print('🌐Down')
-else:
-    print('📶Nokia')
-```</p></div>
+<h3 id="3">3. 详细配置文件</h3>
+<p><code>https://github.com/testpoo/obconfig</code></p></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7448个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共13726个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
@@ -56,7 +56,7 @@
             
             <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7438个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7946个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
             
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-01-31 15:07:36</span></div>
+      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -132,14 +132,16 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 
 <h4 id="17">1.7. 修改源</h4>
 <div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bookworm-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span>
+<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bookworm-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
 </code></pre></div>
 
 <h4 id="18">1.8. 缺少驱动</h4>

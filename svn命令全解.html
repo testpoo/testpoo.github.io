@@ -48,21 +48,21 @@
             
             <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span><span>2022-06-21&nbsp;&nbsp;共1079个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共50320个字</span></a></li>
+            <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共37890个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span><span>2022-05-24&nbsp;&nbsp;共6145个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共27384个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span><span>2022-03-02&nbsp;&nbsp;共16064个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共102613个字</span></a></li>
+            <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共46307个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span><span>2021-09-15&nbsp;&nbsp;共39809个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span><span>2021-09-15&nbsp;&nbsp;共29722个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span><span>2020-04-03&nbsp;&nbsp;共14659个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span><span>2020-04-03&nbsp;&nbsp;共9889个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共63734个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span><span>2020-01-01&nbsp;&nbsp;共13069个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共7058个字</span></a></li>
+            <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span><span>2019-10-11&nbsp;&nbsp;共3837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span><span>1999-12-31&nbsp;&nbsp;共1544个字</span></a></li>
             
@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>svn命令全解</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>svn命令全解</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -97,139 +97,139 @@
 </ul>
 </div>
 <h4 id="checkout">将文件checkout到本地</h4>
-<div class="codehilite"><pre><span></span><code>svn checkout path(path是服务器的目录)
+<pre class="codehilite"><code>svn checkout path(path是服务器的目录)
 
 例如 ：svn checkout svn://192.168.214.1/pro/domain
-</code></pre></div>
+</code></pre>
 
 <h4 id="_1">往版本库中添加新的文件</h4>
-<div class="codehilite"><pre><span></span><code>svn add filename
+<pre class="codehilite"><code>svn add filename
 
 例如：svn add test.cpp
-</code></pre></div>
+</code></pre>
 
 <h4 id="_2">将改动的文件提交到版本库</h4>
-<div class="codehilite"><pre><span></span><code>svn commit -m &quot;注释&quot; [-N] [--no-unlock] PATH(如果选择了保持锁，就使用--no-unlock开关)
+<pre class="codehilite"><code>svn commit -m &quot;注释&quot; [-N] [--no-unlock] PATH(如果选择了保持锁，就使用--no-unlock开关)
 
 例如：svn commit -m &quot;注释&quot; test.cpp
 
 简写：svn ci
-</code></pre></div>
+</code></pre>
 
 <h4 id="_3">加锁/解锁</h4>
-<div class="codehilite"><pre><span></span><code>svn lock -m &quot;注释&quot; path
+<pre class="codehilite"><code>svn lock -m &quot;注释&quot; path
 
 例如: svn lock -m &quot;注释&quot; test.cpp
 
 svn unlock path
-</code></pre></div>
+</code></pre>
 
 <h4 id="_4">更新到某个版本</h4>
-<div class="codehilite"><pre><span></span><code>svn update -r 版本号 path
+<pre class="codehilite"><code>svn update -r 版本号 path
 
 svn update 更新当前目录以及子目录下的所有文件到最新版本
 
 svn upate -r 200 test.cpp 将版本库中的test.cpp还原到版本200
 
 简写 svn up
-</code></pre></div>
+</code></pre>
 
 <h4 id="_5">查看文件或者目录状态</h4>
-<div class="codehilite"><pre><span></span><code><span class="err">（</span><span class="nt">1</span><span class="err">）</span><span class="nt">svn</span> <span class="nt">status</span> <span class="nt">path</span> <span class="err">（</span><span class="nt">显示目录下的文件和子目录下的文件状态</span><span class="o">,</span><span class="nt">正常状态不显示</span><span class="err">）</span>
+<pre class="codehilite"><code>（1）svn status path （显示目录下的文件和子目录下的文件状态,正常状态不显示）
 
-<span class="err">【</span><span class="o">?</span><span class="p">:</span><span class="nd">不在svn控制中</span><span class="o">;</span><span class="nt">M</span><span class="p">:</span><span class="nd">内容被修改</span><span class="o">;</span><span class="nt">C</span><span class="err">：</span><span class="nt">发生冲突</span><span class="o">;</span><span class="nt">A</span><span class="p">:</span><span class="nd">预定义加入到版本库</span><span class="o">;</span><span class="nt">K</span><span class="p">:</span><span class="nd">被锁定</span><span class="err">】</span>
+【?:不在svn控制中;M:内容被修改;C：发生冲突;A:预定义加入到版本库;K:被锁定】
 
-<span class="err">（</span><span class="nt">2</span><span class="err">）</span><span class="nt">svn</span> <span class="nt">status</span> <span class="nt">-v</span> <span class="nt">path</span> <span class="err">（</span><span class="nt">显示文件和子目录状态</span><span class="err">）</span>
+（2）svn status -v path （显示文件和子目录状态）
 
-<span class="nt">注意</span><span class="err">：</span><span class="nt">svn</span> <span class="nt">status</span><span class="err">、</span><span class="nt">svn</span> <span class="nt">diff和svn</span> <span class="nt">revert这三条命令在没有网络情况下可以执行</span><span class="err">，</span><span class="nt">因为svn在本地</span><span class="p">.</span><span class="nc">svn中保留了本地版本原始拷贝</span><span class="err">。</span>
+注意：svn status、svn diff和svn revert这三条命令在没有网络情况下可以执行，因为svn在本地.svn中保留了本地版本原始拷贝。
 
-<span class="nt">简写</span><span class="err">：</span> <span class="nt">svn</span> <span class="nt">st</span>
-</code></pre></div>
+简写： svn st
+</code></pre>
 
 <h4 id="_6">删除文件</h4>
-<div class="codehilite"><pre><span></span><code>svn delete path -m &quot;注释&quot;
+<pre class="codehilite"><code>svn delete path -m &quot;注释&quot;
 
 例如: svn delete svn://192.168.####1/pro/domain/test.cpp -m &quot;delete test file&quot;
 
-或者直接svn delete test.php 然后再svn ci -m &#39;delete test file‘，推荐使用这种
+或者直接svn delete test.php 然后再svn ci -m 'delete test file‘，推荐使用这种
 
 简写： svn (del、remove、rm)
-</code></pre></div>
+</code></pre>
 
 <h4 id="_7">查看日志</h4>
-<div class="codehilite"><pre><span></span><code>svn log path
-</code></pre></div>
+<pre class="codehilite"><code>svn log path
+</code></pre>
 
 <h4 id="_8">查看文件详细信息</h4>
-<div class="codehilite"><pre><span></span><code>svn info path
-</code></pre></div>
+<pre class="codehilite"><code>svn info path
+</code></pre>
 
 <h4 id="_9">比较差异</h4>
-<div class="codehilite"><pre><span></span><code>svn diff path（将修改的文件与基础版本比较）
+<pre class="codehilite"><code>svn diff path（将修改的文件与基础版本比较）
 
 svn diff -r m:n （将修改的文件m版本和n版本比较）
 
 简写 svn di
-</code></pre></div>
+</code></pre>
 
 <h4 id="_10">将两个版本的文件的差异合并到当前文件</h4>
-<div class="codehilite"><pre><span></span><code>svn merge -r m:n path
+<pre class="codehilite"><code>svn merge -r m:n path
 
  例如：svn merge -r 20:25 test.cpp（将版本20与25之间的差异合并到当前文件，但一般会发生冲突，需要处理一下）
-</code></pre></div>
+</code></pre>
 
 <h4 id="svn">SVN帮助</h4>
-<div class="codehilite"><pre><span></span><code>svn help
+<pre class="codehilite"><code>svn help
 
 以上为常用命令，下面为不常用命令
-</code></pre></div>
+</code></pre>
 
 <h4 id="_11">查看版本库下的文件和列表</h4>
-<div class="codehilite"><pre><span></span><code>svn list path （显示path目录下的所属于版本的文件和目录）
+<pre class="codehilite"><code>svn list path （显示path目录下的所属于版本的文件和目录）
 
 简写: svn ls
-</code></pre></div>
+</code></pre>
 
 <h4 id="_12">创建纳入版本控制下的新目录</h4>
-<div class="codehilite"><pre><span></span><code>svn mkdir: 创建纳入版本控制下的新目录。
+<pre class="codehilite"><code>svn mkdir: 创建纳入版本控制下的新目录。
 
 用法: 1、mkdir PATH...
          2、mkdir URL...
 创建版本控制的目录。
 1、每一个以工作副本 PATH 指定的目录，都会创建在本地端，并且加入新增调度，以待下一次的提交。
 2、每个以URL指定的目录，都会透过立即提交于仓库中创建。在这两个情况下，所有的中间目录都必须事先存在。
-</code></pre></div>
+</code></pre>
 
 <h4 id="_13">恢复本地修改</h4>
-<div class="codehilite"><pre><span></span><code>svn revert：恢复原始未改变的工作副本文件（恢复大部分的本地修改）revert用法：revert path
+<pre class="codehilite"><code>svn revert：恢复原始未改变的工作副本文件（恢复大部分的本地修改）revert用法：revert path
 
 注意：本子命令不会存储网络，并且会解除冲突的情况。但它不会恢复被创建的目录
-</code></pre></div>
+</code></pre>
 
 <h4 id="url">代码库URL变更</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">svn</span><span class="w"> </span><span class="n">switch</span><span class="p">(</span><span class="n">sw</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">更新工作副本到不同的URL</span><span class="err">。</span><span class="w"></span>
+<pre class="codehilite"><code>svn switch(sw): 更新工作副本到不同的URL。
 
-<span class="n">用法</span><span class="w"> </span>
-<span class="mi">1</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">[</span><span class="n">PATH</span><span class="o">]</span><span class="w"></span>
+用法 
+1、switch URL [PATH]
 
-<span class="mi">2</span><span class="err">、</span><span class="n">switch</span><span class="w"> </span><span class="o">--</span><span class="n">relocate</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">[</span><span class="n">PATH</span><span class="o">]</span><span class="w"></span>
+2、switch --relocate FROM TO [PATH]
 
-<span class="mi">1</span><span class="err">、</span><span class="n">更新工作副本</span><span class="err">，</span><span class="n">映射到一个新的URL</span><span class="err">，</span><span class="n">会将服务上的文件与本地文件合并</span><span class="err">。</span><span class="n">这是将工作副本对应到同一创库的某个分支或者标记的方法</span><span class="err">。</span><span class="w"></span>
+1、更新工作副本，映射到一个新的URL，会将服务上的文件与本地文件合并。这是将工作副本对应到同一创库的某个分支或者标记的方法。
 
-<span class="mi">2</span><span class="err">、</span><span class="n">改写工作副本URL元数据</span><span class="err">，</span><span class="n">以反映URL的变更</span><span class="err">，</span><span class="n">创库URL变动但工作副本仍旧对映同一创库的同一目录时使用该命令更新工作副本与创库的对应关系</span><span class="err">。</span><span class="w"></span>
-</code></pre></div>
+2、改写工作副本URL元数据，以反映URL的变更，创库URL变动但工作副本仍旧对映同一创库的同一目录时使用该命令更新工作副本与创库的对应关系。
+</code></pre>
 
 <h4 id="_14">解决冲突</h4>
-<div class="codehilite"><pre><span></span><code>svn resolved：移除工作副本的目录或文件的“冲突”状态。
+<pre class="codehilite"><code>svn resolved：移除工作副本的目录或文件的“冲突”状态。
 
 用法 resolved path
 
 注意：本子命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的相关文件，然后让path可以再次提交。
-</code></pre></div>
+</code></pre>
 
 <h4 id="url_1">输出指定文件的URL内容</h4>
-<div class="codehilite"><pre><span></span><code>svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
-</code></pre></div></div>
+<pre class="codehilite"><code>svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

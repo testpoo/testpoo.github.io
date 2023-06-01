@@ -46,7 +46,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共4622个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共2883个字</span></a></li>
             
           </ul>
         </div>
@@ -54,10 +54,11 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
+<li><a href="#ssh">麒麟下ssh无法启动的问题处理</a></li>
 <li><a href="#ssh-key">创建一个 SSH key</a></li>
 <li><a href="#m">去除^M</a></li>
 <li><a href="#windowspythonpid">Windows下查找python进程PID</a></li>
@@ -66,11 +67,30 @@
 </ul>
 </div>
 <blockquote>
+<h3 id="ssh">麒麟下ssh无法启动的问题处理</h3>
+</blockquote>
+<p><strong>解决方案</strong>
+这应该算是Ubuntu的一个bug，可以用下面的方法解决:</p>
+<pre class="codehilite"><code class="language-shell">ubuntugubuntu:-$ sudo /usr/sbin/sshd
+Missing privilege separation directory: /var/run/sshd
+ubuntugubuntu:-$ sudo mkdir /var/run/sshd
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
+ubuntugubuntu:-$ netstat -nlt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address Foreign Address State
+tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
+tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN
+tcp6 0 0 :::22 :::* LISTEN
+</code></pre>
+
+<p>启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下</p>
+<blockquote>
 <h3 id="ssh-key">创建一个 SSH key</h3>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">rsa</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="ss">&quot;your_email@example.com&quot;</span><span class="w"></span>
-<span class="n">默认生成地址</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+默认生成地址~/.ssh/id_rsa.pub
+</code></pre>
 
 <blockquote>
 <h3 id="m">去除^M</h3>
@@ -101,51 +121,51 @@
 <ul>
 <li>如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="o">-</span><span class="mi">08</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>[root@localhost ~]# date
+2022年 05月 19日 星期四 10：14 -08
+</code></pre>
 
 <ul>
 <li>将/etc/localtime指向上海时间</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</code></pre></div>
+<pre class="codehilite"><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre>
 
 <p>然后再date可以看到CST了。</p>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>[root@localhost ~]# date
+2022年 05月 19日 星期四 10：14 CST
+</code></pre>
 
 <ul>
 <li>下载ntp（需要联网）</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># yum -y install ntp
-</code></pre></div>
+<pre class="codehilite"><code># yum -y install ntp
+</code></pre>
 
 <ul>
 <li>停止旧的ntp</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># service ntpd stop
-</code></pre></div>
+<pre class="codehilite"><code># service ntpd stop
+</code></pre>
 
 <ul>
 <li>校对时间</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># ntpdate cn.pool.ntp.org
-</code></pre></div>
+<pre class="codehilite"><code># ntpdate cn.pool.ntp.org
+</code></pre>
 
 <ul>
 <li>将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># hwclock -w
-</code></pre></div>
+<pre class="codehilite"><code># hwclock -w
+</code></pre>
 
 <ul>
 <li>查看date</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="nc">date</span><span class="w"></span>
-<span class="mi">2022</span><span class="n">年</span><span class="w"> </span><span class="mi">05</span><span class="n">月</span><span class="w"> </span><span class="mi">19</span><span class="n">日</span><span class="w"> </span><span class="n">星期四</span><span class="w"> </span><span class="mi">10</span><span class="err">：</span><span class="mi">14</span><span class="w"> </span><span class="n">CST</span><span class="w"></span>
-</code></pre></div></div>
+<pre class="codehilite"><code>[root@localhost ~]# date
+2022年 05月 19日 星期四 10：14 CST
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

@@ -46,19 +46,19 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共13726个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共10409个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2805个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7946个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共6264个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共6575个字</span></a></li>
             
           </ul>
         </div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>Debain通用设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -113,47 +113,47 @@
 <p><code>dd if=xxx.iso of=/dev/disk</code></p>
 <h4 id="14">1.4. 安装</h4>
 <h4 id="15-sudo">1.5. 将当前用户加入sudo</h4>
-<div class="codehilite"><pre><span></span><code># 方法一
+<pre class="codehilite"><code># 方法一
 su root
 nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
 
 # 方法二
 useradd -a -G sudo username
 reboot
-</code></pre></div>
+</code></pre>
 
 <h4 id="16-debain5">1.6. 去掉debain开机启动项停留的5秒和电池的问题</h4>
-<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
+<pre class="codehilite"><code>nano /etc/default/grub
 找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-</code></pre></div>
+</code></pre>
 
 <h4 id="17">1.7. 修改源</h4>
-<div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-updates</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span> <span class="kp">bookworm-backports</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span>
-<span class="k">deb</span> <span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span> <span class="kp">bookworm-security</span> <span class="kp">main</span> <span class="kp">contrib</span> <span class="kp">non-free</span> <span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span>
-<span class="c"># deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
-<span class="c"># # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
-</code></pre></div>
+<pre class="codehilite"><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+</code></pre>
 
 <h4 id="18">1.8. 缺少驱动</h4>
-<div class="codehilite"><pre><span></span><code># 添加驱动
+<pre class="codehilite"><code># 添加驱动
 https://packages.debian.org/bookworm/firmware-misc-nonfree
-</code></pre></div>
+</code></pre>
 
 <h4 id="19">1.9. 安装输入法</h4>
 <ul>
 <li>fcitx-rime</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>sudo apt install fcitx-rime librime-data-wubi
+<pre class="codehilite"><code>sudo apt install fcitx-rime librime-data-wubi
 nano ~/.config/fcitx/rime/default.custom.yaml
 patch:
   &quot;style/horizontal&quot;: true
@@ -163,12 +163,12 @@ patch:
     - schema: wubi_pinyin
     - schema: luna_pinyin_simp
     - schema: wubi86
-</code></pre></div>
+</code></pre>
 
 <ul>
 <li>ibus-rime</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>sudo apt install ibus-rime librime-data-wubi
+<pre class="codehilite"><code>sudo apt install ibus-rime librime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
@@ -184,11 +184,11 @@ style:
    horizontal: true
 
 # 重新部署 ibus-rime
-</code></pre></div>
+</code></pre>
 
 <h3 id="2-i3openbox">2. i3/OpenBox中的通用设置</h3>
 <h4 id="21">2.1. 触摸板修改</h4>
-<div class="codehilite"><pre><span></span><code>sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
+<pre class="codehilite"><code>sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
 
 Section &quot;InputClass&quot;
         Identifier &quot;libinput touchpad catchall&quot;
@@ -201,15 +201,15 @@ Section &quot;InputClass&quot;
         Option &quot;NaturalScrolling&quot; &quot;true&quot; # 自然滚动（反方向滚动）
 #        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
 EndSection
-</code></pre></div>
+</code></pre>
 
 <h4 id="22-dpi">2.2. 设置dpi</h4>
-<div class="codehilite"><pre><span></span><code>nano .Xresources
+<pre class="codehilite"><code>nano .Xresources
 
 Xft.dpi:120
 sudo xrdb ~/.Xresources
 reboot
-</code></pre></div>
+</code></pre>
 
 <h4 id="23-wifi">2.3. 连接wifi</h4>
 <ul>
@@ -235,23 +235,23 @@ reboot
 <p>添加接口参数如下：</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code>auto wlp1s0 #(wlp1s0 为网卡名)
+<pre class="codehilite"><code>auto wlp1s0 #(wlp1s0 为网卡名)
 iface wlp1s0 inet dhcp
     wpa-deriver wext
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre></div>
+</code></pre>
 
 <ul>
 <li>启动网卡：<code>ifup wlp1s0</code> 需要在<code>root</code>或<code>su -</code>下重启</li>
 </ul>
 <h4 id="24-i3openbox">2.4. 启动i3/OpenBox</h4>
 <p>编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> [ <span class="o">-</span><span class="nv">z</span> <span class="mh">$D</span><span class="nv">ISPLAY</span> ] <span class="o">&amp;&amp;</span> [ $<span class="ss">(</span><span class="nv">tty</span><span class="ss">)</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">/dev/tty1</span><span class="s2">&quot;</span> ]<span class="c1">;then</span>
-    <span class="nv">startx</span>
-<span class="nv">fi</span>
-# 查看<span class="nv">Ctrl</span><span class="o">-</span><span class="nv">Alt</span><span class="o">-</span><span class="nv">F1</span>对应的那个<span class="nv">tty</span>
-<span class="nv">echo</span> $<span class="ss">(</span><span class="nv">tty</span><span class="ss">)</span>
-</code></pre></div></div>
+<pre class="codehilite"><code>if [ -z $DISPLAY ] &amp;&amp; [ $(tty) = &quot;/dev/tty1&quot; ];then
+    startx
+fi
+# 查看Ctrl-Alt-F1对应的那个tty
+echo $(tty)
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

@@ -46,19 +46,19 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共13726个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共10409个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2805个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7946个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共6264个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共6575个字</span></a></li>
             
           </ul>
         </div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>debian+xfce设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -90,9 +90,9 @@
 <p><code># sudo apt install filezilla stacer meld uget aria2 intel-microcode fonts-noto-cjk arc-theme moka-icon-theme</code></p>
 <p><code>sudo apt install filezilla stacer meld intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman catfish drawing</code></p>
 <h3 id="2">2. 删除软件</h3>
-<div class="codehilite"><pre><span></span><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
+<pre class="codehilite"><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
-</code></pre></div>
+</code></pre>
 
 <h3 id="3">3. 设置</h3>
 <ul>
@@ -103,143 +103,143 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 <li>设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M  %H:%M%n%Y/%m/%d</li>
 </ul>
 <h3 id="4">4. 图片路径</h3>
-<div class="codehilite"><pre><span></span><code>/usr/share/backgrounds
-</code></pre></div>
+<pre class="codehilite"><code>/usr/share/backgrounds
+</code></pre>
 
 <h3 id="5-lightdm">5. lightdm设置</h3>
-<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="n">greeter</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
-<span class="o">[</span><span class="n">greeter</span><span class="o">]</span><span class="w"></span>
-<span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span><span class="w"></span>
-<span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Moka</span><span class="w"></span>
-<span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Noto</span><span class="w"> </span><span class="n">Sans</span><span class="w"> </span><span class="n">Mono</span><span class="w"> </span><span class="mi">11</span><span class="w"></span>
-<span class="k">default</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">backgrounds</span><span class="o">/</span><span class="n">title</span><span class="p">.</span><span class="n">jpg</span><span class="w"></span>
-<span class="n">clock</span><span class="o">-</span><span class="nf">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">A</span><span class="w"> </span><span class="o">%</span><span class="n">F</span><span class="w"> </span><span class="o">%</span><span class="nl">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span><span class="w"> </span><span class="n">第</span><span class="o">%</span><span class="n">V周</span><span class="w"></span>
-<span class="n">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">backgrounds</span><span class="o">/</span><span class="n">background</span><span class="p">.</span><span class="n">png</span><span class="w"></span>
-<span class="n">xft</span><span class="o">-</span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="w"></span>
-<span class="n">indicators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="k">host</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">clock</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">a11y</span><span class="p">;</span><span class="o">~</span><span class="k">session</span><span class="p">;</span><span class="o">~</span><span class="nf">power</span><span class="w"></span>
-<span class="n">#hide</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"></span>
+<pre class="codehilite"><code>/etc/lightdm/lightdm-gtk-greeter.conf
+[greeter]
+theme-name = Arc
+icon-theme-name = Moka
+font-name = Noto Sans Mono 11
+default-user-image = /usr/share/backgrounds/title.jpg
+clock-format = %A %F %H:%M 第%V周
+background = /usr/share/backgrounds/background.png
+xft-dpi = 120
+indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
+#hide-user-image = true
 
-<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
-<span class="n">greeter</span><span class="o">-</span><span class="n">hide</span><span class="o">-</span><span class="n">users</span><span class="o">=</span><span class="k">false</span><span class="w"> </span><span class="n">前的#去掉</span><span class="w"></span>
-</code></pre></div>
+/etc/lightdm/lightdm.conf
+greeter-hide-users=false 前的#去掉
+</code></pre>
 
 <h3 id="6-mtp">6. 支持mtp，连接安卓</h3>
 <ul>
 <li>安装gvfs-backends</li>
 </ul>
 <h3 id="7">7. 设置关闭按钮</h3>
-<div class="codehilite"><pre><span></span><code><span class="err">安装</span><span class="n">xdotool</span><span class="w"></span>
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">close</span><span class="w"></span>
-<span class="n">GenericName</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">close</span><span class="w"></span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">close</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="s">&quot;xdotool key alt+F4&quot;</span><span class="w"></span>
-<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">Icon</span><span class="o">=</span><span class="n">window</span><span class="o">-</span><span class="n">close</span><span class="o">-</span><span class="n">symbolic</span><span class="w"></span>
+<pre class="codehilite"><code>安装xdotool
+[Desktop Entry]
+Name=close
+GenericName=window close
+Comment=window close
+Exec=sh -c &quot;xdotool key alt+F4&quot;
+Terminal=false
+Icon=window-close-symbolic
 
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">minimize</span><span class="w"></span>
-<span class="n">GenericName</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">minimize</span><span class="w"></span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">minimize</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="s">&quot;xdotool key alt+F9&quot;</span><span class="w"></span>
-<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">Icon</span><span class="o">=</span><span class="n">window</span><span class="o">-</span><span class="n">minimize</span><span class="o">-</span><span class="n">symbolic</span><span class="w"></span>
+[Desktop Entry]
+Name=minimize
+GenericName=window minimize
+Comment=window minimize
+Exec=sh -c &quot;xdotool key alt+F9&quot;
+Terminal=false
+Icon=window-minimize-symbolic
 
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">maximize</span><span class="w"></span>
-<span class="n">GenericName</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">maximize</span><span class="w"></span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">window</span><span class="w"> </span><span class="n">maximize</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">sh</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="s">&quot;xdotool key alt+F10&quot;</span><span class="w"></span>
-<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">Icon</span><span class="o">=</span><span class="n">window</span><span class="o">-</span><span class="n">maximize</span><span class="o">-</span><span class="n">symbolic</span><span class="w"></span>
+[Desktop Entry]
+Name=maximize
+GenericName=window maximize
+Comment=window maximize
+Exec=sh -c &quot;xdotool key alt+F10&quot;
+Terminal=false
+Icon=window-maximize-symbolic
 
-<span class="err">当下的激活窗口，使用包</span><span class="w"> </span><span class="n">xdotool</span><span class="err">：</span><span class="w"></span>
-<span class="n">xdotool</span><span class="w"> </span><span class="n">getwindowfocus</span><span class="w"> </span><span class="n">windowkill</span><span class="w"></span>
-</code></pre></div>
+当下的激活窗口，使用包 xdotool：
+xdotool getwindowfocus windowkill
+</code></pre>
 
 <h3 id="8-gtk">8. 启动gtk编辑器</h3>
-<div class="codehilite"><pre><span></span><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
+<pre class="codehilite"><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
 重启xfce-panel:xfce4-panel -r
-</code></pre></div>
+</code></pre>
 
 <h3 id="9-grub">9. 修改grub背景</h3>
-<div class="codehilite"><pre><span></span><code>/usr/share/desktop-base/homeworld-theme/grub/grub_background.sh
+<pre class="codehilite"><code>/usr/share/desktop-base/homeworld-theme/grub/grub_background.sh
 WALLPAPER=/usr/share/backgrounds/background.png
 注：必须是png格式
-</code></pre></div>
+</code></pre>
 
 <h3 id="10">10. 添加右键</h3>
-<div class="codehilite"><pre><span></span><code><span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">%</span><span class="nv">f</span> <span class="s1">&#39;</span><span class="s">Link to %n</span><span class="s1">&#39;</span>
-<span class="nv">Create</span> <span class="nv">a</span> <span class="nv">Link</span>
+<pre class="codehilite"><code>ln -s %f 'Link to %n'
+Create a Link
 创建链接
-<span class="nv">Create</span> <span class="nv">a</span> <span class="nv">symbolic</span> <span class="nv">link</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">selected</span> <span class="nv">item</span>
+Create a symbolic link for each selected item
 给每个选择的项目创建一个链接
 
-<span class="nv">pkexec</span> <span class="nv">thunar</span> <span class="o">%</span><span class="nv">F</span>
-<span class="nv">Open</span> <span class="nv">as</span> <span class="nv">Root</span>
+pkexec thunar %F
+Open as Root
 管理员打开
-<span class="nv">Open</span> <span class="nv">the</span> <span class="nv">folder</span> <span class="nv">with</span> <span class="nv">administration</span>
+Open the folder with administration
 管理员打开文件夹
 
-<span class="nv">catfish</span> <span class="o">%</span><span class="nv">f</span>
-<span class="nv">Search</span>
+catfish %f
+Search
 搜索
-<span class="nv">Search</span> <span class="k">for</span> <span class="nv">Files</span>
+Search for Files
 搜索文件
-</code></pre></div>
+</code></pre>
 
 <h3 id="11-thunar">11. thunar侧边栏添加位置</h3>
 <ul>
 <li>点击文件右键<code>send to--&gt;Side Panel</code></li>
 </ul>
 <h3 id="12">12. 启动花屏</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">xfwm4</span><span class="o">--&gt;</span><span class="n">vblank_mode</span><span class="o">=</span><span class="n">off</span>
-</code></pre></div>
+<pre class="codehilite"><code>xfwm4--&gt;vblank_mode=off
+</code></pre>
 
 <h3 id="13-gtkcss">13. 添加gtk.css</h3>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="p">#</span><span class="nn">pulseaudio-button</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-power-manager-plugin</span> <span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-notification-plugin</span> <span class="nt">image</span><span class="p">{</span>
-            <span class="nv">-gtk-icon-transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
-<span class="p">}</span>
+<pre class="codehilite"><code>#pulseaudio-button image,#xfce4-power-manager-plugin image,#xfce4-notification-plugin image{
+            -gtk-icon-transform: scale(0.4);
+}
 
-<span class="p">#</span><span class="nn">clock-button</span> <span class="p">{</span><span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;}</span>
+#clock-button {font-size: 14px;}
 
-<span class="p">#</span><span class="nn">indicator-button</span><span class="o">*</span> <span class="p">{</span> <span class="nv">-gtk-icon-transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span> <span class="p">}</span>
+#indicator-button* { -gtk-icon-transform: scale(1.2); }
 
-<span class="p">#</span><span class="nn">whiskermenu-window</span> <span class="p">{</span>
-   <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffbba4</span><span class="p">;</span>
-   <span class="k">background-image</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="mh">#e66465</span><span class="p">,</span> <span class="mh">#9198e5</span><span class="p">);</span>
-   <span class="k">color</span><span class="p">:</span> <span class="mh">#ffffff</span><span class="p">;</span> <span class="p">}</span>
+#whiskermenu-window {
+   background-color: #ffbba4;
+   background-image: linear-gradient(#e66465, #9198e5);
+   color: #ffffff; }
 
-<span class="nt">calendar</span><span class="p">.</span><span class="nc">highlight</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">calendar</span> <span class="p">{</span><span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span> <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;}</span>
-</code></pre></div>
+calendar.highlight { color: red; }
+calendar {padding: 0 10px; font-weight: bold;}
+</code></pre>
 
 <h3 id="14-xfce4-docklike-plugin">14. 安装xfce4-docklike-plugin</h3>
 <ul>
 <li>安装xfce4-docklike-plugin合并启动器和窗口管理器</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 编译使用到的软件</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">xfce4</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libglib2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libgtk</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">devhelp</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libwnck</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4ui</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4panel</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">apt</span> <span class="n">install</span> <span class="n">libxfce4panel</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">dev</span>
-</code></pre></div>
+<pre class="codehilite"><code># 编译使用到的软件
+apt install xfce4-dev-tools
+apt install libglib2.0-dev
+apt install libx11-dev
+apt install build-essential libgtk-3-dev pkg-config devhelp
+apt install libwnck-3-dev
+apt install libxfce4ui-2-dev
+apt install libxfce4panel-2-dev
+apt install libxfce4panel-2.0-dev
+</code></pre>
 
 <ul>
 <li>汉化内容如下(zh_CN.po)：</li>
 </ul>
 <p>放到<code>xfce4-docklike-plugin\po</code>目录中编译</p>
-<div class="codehilite"><pre><span></span><code># SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE&#39;S COPYRIGHT HOLDER
+<pre class="codehilite"><code># SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <span class="nt">&lt;pu_yawei</span><span class="err">@qq.com</span><span class="nt">&gt;</span>, YEAR 2022.
+# FIRST AUTHOR &lt;pu_yawei@qq.com&gt;, YEAR 2022.
 #
 msgid &quot;&quot;
 msgstr &quot;&quot;
@@ -278,16 +278,16 @@ msgstr &quot;移除&quot;
 
 #: ../src/SettingsDialog.cpp:197
 #, c-format
-msgid &quot;<span class="nt">&lt;b&gt;</span>Only the first %u hotkeys(s) are enabled.<span class="nt">&lt;/b&gt;</span>\n&quot;
-msgstr &quot;<span class="nt">&lt;b&gt;</span>仅启用第一个 %u 热键。<span class="nt">&lt;/b&gt;</span>\n&quot;
+msgid &quot;&lt;b&gt;Only the first %u hotkeys(s) are enabled.&lt;/b&gt;\n&quot;
+msgstr &quot;&lt;b&gt;仅启用第一个 %u 热键。&lt;/b&gt;\n&quot;
 
 #: ../src/SettingsDialog.cpp:199
 #, c-format
 msgid &quot;&quot;
-&quot;The <span class="nt">&lt;SUPER&gt;</span>+%u combination seems already in use by another process.\n&quot;
+&quot;The &lt;SUPER&gt;+%u combination seems already in use by another process.\n&quot;
 &quot;Check your Xfce settings.&quot;
 msgstr &quot;&quot;
-&quot;<span class="nt">&lt;SUPER&gt;</span>+%u组合似乎已被占用，\n&quot;
+&quot;&lt;SUPER&gt;+%u组合似乎已被占用，\n&quot;
 &quot;检查您的 Xfce 设置。&quot;
 
 #. namespace SettingsDialog
@@ -304,7 +304,7 @@ msgid &quot;_Close&quot;
 msgstr &quot;_关闭&quot;
 
 #: ../src/_dialogs.xml.h:3
-msgid &quot;Don&#39;t show the window list for a single window&quot;
+msgid &quot;Don't show the window list for a single window&quot;
 msgstr &quot;不显示单个窗口的窗口列表&quot;
 
 #: ../src/_dialogs.xml.h:4
@@ -396,19 +396,19 @@ msgid &quot;Appearance&quot;
 msgstr &quot;外观&quot;
 
 #: ../src/_dialogs.xml.h:26
-msgid &quot;Switch between applications with <span class="nt">&lt;SUPER&gt;</span>+[1, 2, ...]&quot;
-msgstr &quot;使用 <span class="nt">&lt;SUPER&gt;</span>+[1， 2， ...] 在应用程序之间切换&quot;
+msgid &quot;Switch between applications with &lt;SUPER&gt;+[1, 2, ...]&quot;
+msgstr &quot;使用 &lt;SUPER&gt;+[1， 2， ...] 在应用程序之间切换&quot;
 
 #: ../src/_dialogs.xml.h:27
-msgid &quot;Switch to the last window with <span class="nt">&lt;SUPER&gt;</span>&quot;
-msgstr &quot;使用<span class="nt">&lt;SUPER&gt;</span>切换到最后一个窗口&quot;
+msgid &quot;Switch to the last window with &lt;SUPER&gt;&quot;
+msgstr &quot;使用&lt;SUPER&gt;切换到最后一个窗口&quot;
 
 #: ../src/_dialogs.xml.h:28
 msgid &quot;&quot;
-&quot;<span class="nt">&lt;b&gt;</span>This feature is disabled.<span class="nt">&lt;/b&gt;</span>\n&quot;
+&quot;&lt;b&gt;This feature is disabled.&lt;/b&gt;\n&quot;
 &quot;It requires X11 XInput2.0 extension which is is not provided by your system.&quot;
 msgstr &quot;&quot;
-&quot;<span class="nt">&lt;b&gt;</span>此功能已禁用。<span class="nt">&lt;/b&gt;</span>\n&quot;
+&quot;&lt;b&gt;此功能已禁用。&lt;/b&gt;\n&quot;
 &quot;它需要 X11 XInput2.0 扩展，而您的系统不提供该扩展。&quot;
 
 #: ../src/_dialogs.xml.h:30
@@ -430,12 +430,12 @@ msgstr &quot;从主题获取指示器颜色&quot;
 #: ../src/_dialogs.xml.h:34
 msgid &quot;Docklike Taskbar&quot;
 msgstr &quot;Docklike任务栏&quot;
-</code></pre></div>
+</code></pre>
 
 <ul>
 <li>编译成功后，从系统提取可用文件，语言文件这里只提取了中文</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<pre class="codehilite"><code>#!/bin/bash
 
 mkdir -p ~/usr/share/xfce4/panel/plugins/
 mkdir -p ~/usr/lib/xfce4/panel/plugins/
@@ -444,7 +444,7 @@ cp /usr/share/xfce4/panel/plugins/docklike.desktop ~/usr/share/xfce4/panel/plugi
 cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/locale/zh_CN/LC_MESSAGES/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
-</code></pre></div></div>
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

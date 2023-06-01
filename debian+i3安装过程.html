@@ -46,19 +46,19 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共13726个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共10409个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2805个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7946个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共6264个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共6575个字</span></a></li>
             
           </ul>
         </div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+i3安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>debian+i3安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -83,7 +83,7 @@
 </ul>
 </div>
 <h3 id="1">1. 安装软件</h3>
-<div class="codehilite"><pre><span></span><code>apt install i3 xinit sakura rofi thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin deepin-screenshot neofetch ristretto intel-microcode fonts-noto-cjk
+<pre class="codehilite"><code>apt install i3 xinit sakura rofi thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin deepin-screenshot neofetch ristretto intel-microcode fonts-noto-cjk
 
 # 安装xinit  X服务
 # i3 平铺式桌面管理器
@@ -100,58 +100,58 @@
 # deepin-screenshot 截图
 # neofetch 系统信息
 # ristretto 图片查看器
-</code></pre></div>
+</code></pre>
 
 <h3 id="2">2. 配置文件地址</h3>
-<div class="codehilite"><pre><span></span><code>~./config/i3/config
+<pre class="codehilite"><code>~./config/i3/config
 ~./config/i3status/config
-</code></pre></div>
+</code></pre>
 
 <h3 id="3-rofi">3. rofi配置</h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">mkdir</span> <span class="nt">-p</span> <span class="o">~/</span><span class="p">.</span><span class="nc">config</span><span class="o">/</span><span class="nt">rofi</span>
-<span class="nt">rofi</span> <span class="nt">-dump-config</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="nc">config</span><span class="o">/</span><span class="nt">rofi</span><span class="o">/</span><span class="nt">config</span><span class="p">.</span><span class="nc">rasi</span>
-<span class="nt">drun-icon-theme</span><span class="o">:</span> <span class="s2">&quot;MY_ICON_THEME&quot;</span><span class="o">;</span>
-</code></pre></div>
+<pre class="codehilite"><code>mkdir -p ~/.config/rofi
+rofi -dump-config &gt; ~/.config/rofi/config.rasi
+drun-icon-theme: &quot;MY_ICON_THEME&quot;;
+</code></pre>
 
 <h3 id="4">4. 亮度调节</h3>
-<div class="codehilite"><pre><span></span><code># <span class="nv">xorg</span><span class="o">-</span><span class="nv">xbacklight</span> 亮度调节
-<span class="nv">bindsym</span> <span class="nv">XF86MonBrightnessUp</span> <span class="k">exec</span> <span class="nv">light</span> <span class="o">-</span><span class="nv">A</span> <span class="mi">5</span> # <span class="nv">increase</span> <span class="nv">screen</span> <span class="nv">brightness</span>
-<span class="nv">bindsym</span> <span class="nv">XF86MonBrightnessDown</span> <span class="k">exec</span> <span class="nv">light</span> <span class="o">-</span><span class="nv">U</span> <span class="mi">5</span> # <span class="nv">decrease</span> <span class="nv">screen</span> <span class="nv">brightness</span>
+<pre class="codehilite"><code># xorg-xbacklight 亮度调节
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
-<span class="nv">bindsym</span> <span class="nv">XF86MonBrightnessUp</span> <span class="k">exec</span> <span class="nv">light</span> <span class="o">-</span><span class="nv">A</span> <span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="nv">killall</span> <span class="o">-</span><span class="nv">SIGUSR1</span> <span class="nv">i3status</span>
-<span class="nv">bindsym</span> <span class="nv">XF86MonBrightnessDown</span> <span class="k">exec</span> <span class="nv">light</span> <span class="o">-</span><span class="nv">U</span> <span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="nv">killall</span> <span class="o">-</span><span class="nv">SIGUSR1</span> <span class="nv">i3status</span>
-# 如果没有<span class="nv">killall</span>命令，安装<span class="nv">psmisc</span>
-</code></pre></div>
+bindsym XF86MonBrightnessUp exec light -A 10 &amp;&amp; killall -SIGUSR1 i3status
+bindsym XF86MonBrightnessDown exec light -U 10 &amp;&amp; killall -SIGUSR1 i3status
+# 如果没有killall命令，安装psmisc
+</code></pre>
 
 <h3 id="5">5. 添加休眠和锁屏</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">xset</span> <span class="nv">dpms</span> <span class="mi">333</span> <span class="mi">666</span>
-系统闲置<span class="mi">333</span>秒后灭屏，<span class="mi">666</span>秒后系统挂起。
-</code></pre></div>
+<pre class="codehilite"><code>exec --no-startup-id xset dpms 333 666
+系统闲置333秒后灭屏，666秒后系统挂起。
+</code></pre>
 
 <h3 id="6">6. 设置锁屏背景</h3>
-<div class="codehilite"><pre><span></span><code><span class="nv">bindsym</span> <span class="nv">l</span> <span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">i3lock</span> <span class="nv">i3clock</span> <span class="o">-</span><span class="nv">i</span> <span class="o">~/</span>.<span class="nv">poo</span><span class="o">/</span><span class="nv">i3lock</span>.<span class="nv">png</span>
-<span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">xss</span><span class="o">-</span><span class="nv">lock</span> <span class="o">--</span><span class="nv">transfer</span><span class="o">-</span><span class="nv">sleep</span><span class="o">-</span><span class="nv">lock</span> <span class="o">--</span> <span class="nv">i3lock</span> <span class="o">--</span><span class="nv">nofork</span> <span class="o">-</span><span class="nv">i</span> <span class="o">~/</span>.<span class="nv">poo</span><span class="o">/</span><span class="nv">i3lock</span>.<span class="nv">png</span>
-</code></pre></div>
+<pre class="codehilite"><code>bindsym l exec --no-startup-id i3lock i3clock -i ~/.poo/i3lock.png
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/.poo/i3lock.png
+</code></pre>
 
 <h3 id="7">7. 消息通知和蓝牙</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">dunst</span>
-<span class="k">exec</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">startup</span><span class="o">-</span><span class="nv">id</span> <span class="nv">blueman</span><span class="o">-</span><span class="nv">applet</span>
-</code></pre></div>
+<pre class="codehilite"><code>exec --no-startup-id dunst
+exec --no-startup-id blueman-applet
+</code></pre>
 
 <h3 id="8">8. 分配到某个虚拟空间</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">for_windwo</span><span class="w"> </span><span class="o">[</span><span class="n">title=&quot;poo@debian: ~&quot;</span><span class="o">]</span><span class="w"> </span><span class="n">move</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">workspace</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="n">assign</span><span class="w"> </span><span class="o">[</span><span class="n">class=&quot;X-terminal-emulator&quot;</span><span class="o">]</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<pre class="codehilite"><code>for_windwo [title=&quot;poo@debian: ~&quot;] move to workspace 1
+assign [class=&quot;X-terminal-emulator&quot;] 1
 
-<span class="err">#</span><span class="w"> </span><span class="n">注</span><span class="err">：</span><span class="n">可以通过xprop来获取类名</span><span class="err">，</span><span class="n">sublime不支持</span><span class="err">，</span><span class="n">官方解释软件未开源</span><span class="err">，</span><span class="n">无法支持</span><span class="w"></span>
-</code></pre></div>
+# 注：可以通过xprop来获取类名，sublime不支持，官方解释软件未开源，无法支持
+</code></pre>
 
 <h3 id="9">9. 我的配置</h3>
 <p><a href="https://github.com/testpoo/i3config">https://github.com/testpoo/i3config</a></p>
 <h3 id="10conky">10.桌面插件Conky</h3>
-<div class="codehilite"><pre><span></span><code><span class="nl">https:</span><span class="c1">//www.cnblogs.com/LungGiyo/p/6019412.html</span>
-<span class="nl">https:</span><span class="c1">//www.lifewire.com/beginners-guide-to-conky-4043352</span>
-<span class="err">展示在桌面：</span><span class="n">own_window_type</span> <span class="n">override</span>
-</code></pre></div></div>
+<pre class="codehilite"><code>https://www.cnblogs.com/LungGiyo/p/6019412.html
+https://www.lifewire.com/beginners-guide-to-conky-4043352
+展示在桌面：own_window_type override
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

@@ -46,19 +46,19 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共115995个字</span></a></li>
+            <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共51017个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span><span>2022-11-14&nbsp;&nbsp;共264953个字</span></a></li>
+            <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span><span>2022-11-14&nbsp;&nbsp;共94176个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span><span>2021-11-30&nbsp;&nbsp;共121649个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span><span>2021-11-30&nbsp;&nbsp;共39681个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共45046个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共21614个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共206400个字</span></a></li>
+            <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共57734个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共92782个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共27130个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span><span>2020-05-14&nbsp;&nbsp;共33494个字</span></a></li>
+            <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span><span>2020-05-14&nbsp;&nbsp;共10704个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span><span>2019-10-11&nbsp;&nbsp;共2684个字</span></a></li>
             
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python进阶</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>Python进阶</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -153,89 +153,89 @@
 <p>大部分人学习Python，很多时间都搞不清楚<code>*args</code>和<code>**kwargs</code>这两个变量。其实这两个变量并不是必须写<code>*args</code>和<code>**kwargs</code>。只要变量前面的<code>*</code>才是必须的。你也可以写成<code>*var</code>和<code>**vars</code>。写成<code>*args</code>和<code>**kwargs</code>只是一个通俗的命名约定。</p>
 <h4 id="args"><code>*args</code></h4>
 <p><code>*args</code>和<code>**kwargs</code>主要用于函数定义。你可以将不定数量的参数传递给一个函数。这里的不定的意思是：预先并不知道，函数使用者会传递多少个参数给你，所以在这个场景下使用这两个关键字。<code>*args</code>是用来发送一个非键值对的可变数量的参数列表给一个函数。例如：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">test_var_args</span><span class="p">(</span><span class="n">f_arg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第一个普通的参数：&quot;</span><span class="p">,</span> <span class="n">f_arg</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;另外一些通过*argv传递的参数:&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+<pre class="codehilite"><code>def test_var_args(f_arg, *args):
+    print(&quot;第一个普通的参数：&quot;, f_arg)
+    for arg in args:
+        print(&quot;另外一些通过*argv传递的参数:&quot;, arg)
 
-<span class="n">test_var_args</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span><span class="s1">&#39;香蕉&#39;</span><span class="p">,</span><span class="s1">&#39;梨子&#39;</span><span class="p">,</span><span class="s1">&#39;葡萄&#39;</span><span class="p">)</span>
-</code></pre></div>
+test_var_args('苹果','香蕉','梨子','葡萄')
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>第一个普通的参数： 苹果
+<pre class="codehilite"><code>第一个普通的参数： 苹果
 另外一些通过*argv传递的参数: 香蕉
 另外一些通过*argv传递的参数: 梨子
 另外一些通过*argv传递的参数: 葡萄
-</code></pre></div>
+</code></pre>
 
 <h4 id="kwargs"><code>**kwargs</code>的用法</h4>
 <p><code>**kwargs</code>允许你将不定长度的键值对，作为参数传递给一个函数。如果你想要在一个函数里处理带名字的参数，你应该使用<code>**kwargs</code>。例如：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">greet_me</span><span class="ss">(</span><span class="o">**</span><span class="nv">kwargs</span><span class="ss">)</span>:
-    <span class="k">for</span> <span class="nv">key</span>, <span class="nv">value</span> <span class="nv">in</span> <span class="nv">kwargs</span>.<span class="nv">items</span><span class="ss">()</span>:
-        <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">{0} == {1}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">key</span>, <span class="nv">value</span><span class="ss">))</span>
+<pre class="codehilite"><code>def greet_me(**kwargs):
+    for key, value in kwargs.items():
+        print(&quot;{0} == {1}&quot;.format(key, value))
 
-<span class="nv">greet_me</span><span class="ss">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">苹果</span><span class="s2">&quot;</span><span class="ss">)</span>
-</code></pre></div>
+greet_me(name=&quot;苹果&quot;)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>name == 苹果
-</code></pre></div>
+<pre class="codehilite"><code>name == 苹果
+</code></pre>
 
 <p>现在可以看出怎样在一个函数里，处理一个键值对参数了。</p>
 <h4 id="argskwargs_1">使用<code>*args</code>和<code>**kwargs</code>来调用函数</h4>
 <p>现在我们来看看怎样使用<code>*args</code>和<code>**kwargs</code>来调用一个函数。假设，有这样一个函数：</p>
-<div class="codehilite"><pre><span></span><code>def test_args_kwargs(arg1, arg2, arg3): 
+<pre class="codehilite"><code>def test_args_kwargs(arg1, arg2, arg3): 
     print(&quot;arg1:&quot;, arg1) 
     print(&quot;arg2:&quot;, arg2) 
     print(&quot;arg3:&quot;, arg3)
-</code></pre></div>
+</code></pre>
 
 <p>你可以使用<code>*args</code>和<code>**kwargs</code>来给这个函数传递参数，如下：</p>
-<div class="codehilite"><pre><span></span><code># 首先使用*args
+<pre class="codehilite"><code># 首先使用*args
 args = (&quot;二&quot;, 3, 5)
 test_args_kwargs(*args)
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">arg1</span><span class="o">:</span> <span class="err">二</span>
-<span class="n">arg2</span><span class="o">:</span> <span class="mi">3</span>
-<span class="n">arg3</span><span class="o">:</span> <span class="mi">5</span>
-</code></pre></div>
+<pre class="codehilite"><code>arg1: 二
+arg2: 3
+arg3: 5
+</code></pre>
 
-<div class="codehilite"><pre><span></span><code># 现在使⽤ **kwargs: 
+<pre class="codehilite"><code># 现在使⽤ **kwargs: 
 kwargs = {&quot;arg3&quot;: 3, &quot;arg2&quot;: &quot;二&quot;, &quot;arg1&quot;: 5} 
 test_args_kwargs(**kwargs) 
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">arg1</span><span class="o">:</span> <span class="mi">5</span> 
-<span class="n">arg2</span><span class="o">:</span> <span class="err">二</span> 
-<span class="n">arg3</span><span class="o">:</span> <span class="mi">3</span> 
-</code></pre></div>
+<pre class="codehilite"><code>arg1: 5 
+arg2: 二 
+arg3: 3 
+</code></pre>
 
 <p><strong>标准参数与<code>*args</code>和<code>**kwargs</code>在使用时的顺序</strong></p>
 <p>那么如果你想在函数⾥同时使⽤所有这三种参数， 顺序是这样的： </p>
-<div class="codehilite"><pre><span></span><code>some_func(fargs, *args, **kwargs)
-</code></pre></div>
+<pre class="codehilite"><code>some_func(fargs, *args, **kwargs)
+</code></pre>
 
 <h3 id="debugging">调试Debugging</h3>
 <p>利用好调试，能大提高我们捕捉代码的bug。大部分人忽略了Python debugger（pdb）的重要性。在这里会讲一些重要的命令，其他的可以从官方文档中学习。地址如下：</p>
 <p>https://docs.python.org/3/library/pdb.html </p>
 <h4 id="_1">从命令运行</h4>
 <p>你可以在命令行使用Python debugger运行一个脚本，举个例子：</p>
-<div class="codehilite"><pre><span></span><code>python -m pdb my_script.py
-</code></pre></div>
+<pre class="codehilite"><code>python -m pdb my_script.py
+</code></pre>
 
 <p>这会触发debugger在脚本第一行指令处停止执行。这个对比较短的脚本很有帮助。</p>
 <h4 id="_2">从脚本内部运行</h4>
 <p>可以在脚本内设置数点，这样就可以在某些特定点查看变量信息和各种执行时信息了。使用<code>pdb.set_trace()</code>方法来实现。举例说明：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pdb</span> 
-<span class="k">def</span> <span class="nf">make_bread</span><span class="p">():</span> 
-    <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span> 
-    <span class="k">return</span> <span class="s2">&quot;I don&#39;t have time&quot;</span> 
+<pre class="codehilite"><code>import pdb 
+def make_bread(): 
+    pdb.set_trace() 
+    return &quot;I don't have time&quot; 
 
-<span class="nb">print</span><span class="p">(</span><span class="n">make_bread</span><span class="p">())</span>
-</code></pre></div>
+print(make_bread())
+</code></pre>
 
 <p>运行上面的脚本，会立刻进入debugger模式。其操作命令如下：</p>
 <ul>
@@ -272,947 +272,947 @@ test_args_kwargs(**kwargs)
 <p>迭代就是从某个地方（比如一个列表）取出一个元素的过程。当我们使用一个循环来遍历某个东西时，这个过程本身就叫迭代。</p>
 <h4 id="generators_1">生成器（Generators）</h4>
 <p>生成器也是一种迭代器，但是你只能对其迭代一次。这是因为他们并没有把所有的值存在内存中，而是在运行时生成值。你通过遍历来用不用它们，要么用一个”for“循环，要么将它们传递给任意可以进行迭代的函数和结构。大多数时个生成器是以函数来实现的。然而，他们并不返回一个值，而是yield一个值。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">generator_function</span><span class="ss">()</span>:
-    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
-        <span class="nv">yield</span> <span class="nv">i</span>
+<pre class="codehilite"><code>def generator_function():
+    for i in range(10):
+        yield i
 
-<span class="k">for</span> <span class="nv">item</span> <span class="nv">in</span> <span class="nv">generator_function</span><span class="ss">()</span>:
-    <span class="nv">print</span><span class="ss">(</span><span class="nv">item</span><span class="ss">)</span>
-</code></pre></div>
+for item in generator_function():
+    print(item)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">0</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">4</span>
-<span class="mf">5</span>
-<span class="mf">6</span>
-<span class="mf">7</span>
-<span class="mf">8</span>
-<span class="mf">9</span>
-</code></pre></div>
+<pre class="codehilite"><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</code></pre>
 
 <p>这个例子并不是非常实用。生成器最佳应用场景是：你不想同一时间将所有计算出来的大量结果集分配到内存当中，特别是结果集里还包含循环。这样做会消耗大量的资源。</p>
 <p>下面是一个计算斐波那契数列的生成器：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">fibon</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>:
-    <span class="nv">a</span> <span class="o">=</span> <span class="nv">b</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>:
-        <span class="nv">yield</span> <span class="nv">a</span>
-        <span class="nv">a</span>, <span class="nv">b</span> <span class="o">=</span> <span class="nv">b</span>, <span class="nv">a</span> <span class="o">+</span> <span class="nv">b</span>
+<pre class="codehilite"><code>def fibon(n):
+    a = b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
 
-<span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">fibon</span><span class="ss">(</span><span class="mi">1000000</span><span class="ss">)</span>:
-    <span class="nv">print</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
-</code></pre></div>
+for x in fibon(1000000):
+    print(x)
+</code></pre>
 
 <p>用这种方式，我们可以不用担心它会使用大量资源。然而，之前如果我们这样实现的话：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">fibon</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>:
-    <span class="nv">a</span> <span class="o">=</span> <span class="nv">b</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="nb">result</span> <span class="o">=</span> []
-    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>:
-        <span class="nb">result</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span>
-        <span class="nv">a</span>, <span class="nv">b</span> <span class="o">=</span> <span class="nv">b</span>, <span class="nv">a</span> <span class="o">+</span> <span class="nv">b</span>
-    <span class="k">return</span> <span class="nb">result</span>
-</code></pre></div>
+<pre class="codehilite"><code>def fibon(n):
+    a = b = 1
+    result = []
+    for i in range(n):
+        result.append(a)
+        a, b = b, a + b
+    return result
+</code></pre>
 
 <p>这个会在计算很大的输入参数时，占用大量的资源。我们现在来测试一下生成器使用一次迭代，我们使用python的内置函数：<code>next()</code>，它可以获取一个序列的下一个元素。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">generator_function</span><span class="ss">()</span>:
-    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>:
-        <span class="nv">yield</span> <span class="nv">i</span>
+<pre class="codehilite"><code>def generator_function():
+    for i in range(3):
+        yield i
 
-<span class="nv">gen</span> <span class="o">=</span> <span class="nv">generator_function</span><span class="ss">()</span>
+gen = generator_function()
 
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">gen</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">gen</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">gen</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">gen</span><span class="ss">))</span>
-</code></pre></div>
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+</code></pre>
 
 <p>执行结果:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">0</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s">&quot;E:\公司文档\分享内容\markdown\python进阶\8.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">12</span><span class="p">,</span> <span class="n">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="kr">print</span><span class="p">(</span><span class="kr">next</span><span class="p">(</span><span class="n">gen</span><span class="p">))</span>
-<span class="kr">Stop</span><span class="n">Iteration</span>
-</code></pre></div>
+<pre class="codehilite"><code>0
+1
+2
+Traceback (most recent call last):
+  File &quot;E:\公司文档\分享内容\markdown\python进阶\8.py&quot;, line 12, in &lt;module&gt;
+    print(next(gen))
+StopIteration
+</code></pre>
 
 <p>从结果中可以看出，在yield掉所有值后，next()触发了一个StopIteration的异常。这个说明所有的值都已经yield完了。for循环会自动捕捉这个异常并停止调用next()，所以for循环没有这个异常。</p>
 <p>Python中有些内置数据也支持迭代，如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">my_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">tester</span><span class="s2">&quot;</span> 
-<span class="nv">my_iter</span> <span class="o">=</span> <span class="nv">iter</span><span class="ss">(</span><span class="nv">my_string</span><span class="ss">)</span> 
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">my_iter</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">my_iter</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">my_iter</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="k">next</span><span class="ss">(</span><span class="nv">my_iter</span><span class="ss">))</span>
-</code></pre></div>
+<pre class="codehilite"><code>my_string = &quot;tester&quot; 
+my_iter = iter(my_string) 
+print(next(my_iter))
+print(next(my_iter))
+print(next(my_iter))
+print(next(my_iter))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>t
+<pre class="codehilite"><code>t
 e
 s
 t
-</code></pre></div>
+</code></pre>
 
 <h3 id="mapfilterreduce">Map，Filter和Reduce</h3>
 <h4 id="map">Map</h4>
 <p>Map会将一个函数映射到一个输入列表的所有元素上。如下：</p>
-<div class="codehilite"><pre><span></span><code>map(function_to_apply, list_of_inputs)
-</code></pre></div>
+<pre class="codehilite"><code>map(function_to_apply, list_of_inputs)
+</code></pre>
 
 <p>一般而言，要把列表中所有元素一个个地传递给一个函数，并收集输出。应做如下操作：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">items</span> <span class="o">=</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>, <span class="mi">4</span>, <span class="mi">5</span>]
-<span class="nv">squared</span> <span class="o">=</span> []
-<span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">items</span>:
-    <span class="nv">squared</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">i</span><span class="o">**</span><span class="mi">2</span><span class="ss">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>items = [1, 2, 3, 4, 5]
+squared = []
+for i in items:
+    squared.append(i**2)
+</code></pre>
 
 <p>Map可以用一种简单得多的方式来实现。如下：</p>
-<div class="codehilite"><pre><span></span><code>items = [1, 2, 3, 4, 5]
+<pre class="codehilite"><code>items = [1, 2, 3, 4, 5]
 squared = list(map(lambda x:x**2, items))
-</code></pre></div>
+</code></pre>
 
 <p>大多数时候，我们使用匿名函数（lambda）来配合map。其不仅可用于列表的输入，甚至可以用于列表的函数。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">multiply</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
-    <span class="k">return</span> <span class="ss">(</span><span class="nv">x</span><span class="o">*</span><span class="nv">x</span><span class="ss">)</span>
+<pre class="codehilite"><code>def multiply(x):
+    return (x*x)
 
-<span class="nv">def</span> <span class="nv">add</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>:
-    <span class="k">return</span> <span class="ss">(</span><span class="nv">x</span><span class="o">+</span><span class="nv">x</span><span class="ss">)</span>
+def add(x):
+    return (x+x)
 
-<span class="nv">funcs</span> <span class="o">=</span> [<span class="nv">multiply</span>, <span class="nv">add</span>]
-<span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">5</span><span class="ss">)</span>:
-    <span class="nv">value</span> <span class="o">=</span> <span class="nv">list</span><span class="ss">(</span><span class="nv">map</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">x</span>:<span class="nv">x</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span>, <span class="nv">funcs</span><span class="ss">))</span>
-    <span class="nv">print</span><span class="ss">(</span><span class="nv">value</span><span class="ss">)</span>
-</code></pre></div>
+funcs = [multiply, add]
+for i in range(5):
+    value = list(map(lambda x:x(i), funcs))
+    print(value)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[0, 0]</span>
-<span class="k">[1, 2]</span>
-<span class="k">[4, 4]</span>
-<span class="k">[9, 6]</span>
-<span class="k">[16, 8]</span>
-</code></pre></div>
+<pre class="codehilite"><code>[0, 0]
+[1, 2]
+[4, 4]
+[9, 6]
+[16, 8]
+</code></pre>
 
 <h4 id="filter">Filter</h4>
 <p>filter过滤列表中的元素，并返回一个由所有符合要求的元素所构成的列表。如下:</p>
-<div class="codehilite"><pre><span></span><code>number_list = range(-5, 5)
+<pre class="codehilite"><code>number_list = range(-5, 5)
 less_than_zero = list(filter(lambda x:x&lt;0, number_list))
 print(less_than_zero)
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>[-5, -4, -3, -2, -1]
-</code></pre></div>
+<pre class="codehilite"><code>[-5, -4, -3, -2, -1]
+</code></pre>
 
 <p>filter类似for循环，但它是一个内置函数，并且更快。</p>
 <h4 id="reduce">Reduce</h4>
 <p>当需要对一个列表进行一些计算并返回结果时，Reduce是个非常有用的函数。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
-<span class="n">product</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="n">x</span> <span class="o">*</span><span class="n">y</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-</code></pre></div>
+<pre class="codehilite"><code>from functools import reduce
+product = reduce((lambda x, y:x *y), [1, 2, 3, 4])
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">24</span>
-</code></pre></div>
+<pre class="codehilite"><code>24
+</code></pre>
 
 <h3 id="set">set（集合）数据结构</h3>
 <h4 id="set_1">set</h4>
 <p>set（集合）是一个非常有用的数据结构。它与列表（list）的行为类似，区别在于set不能包含重复的值。这在去重和检查列表中是否包含重复元素很有用。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">some_list</span> <span class="o">=</span> [<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">c</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">d</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">m</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">n</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">n</span><span class="s1">&#39;</span>]
-<span class="nv">duplicates</span> <span class="o">=</span> <span class="nv">set</span><span class="ss">(</span>[<span class="nv">x</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">some_list</span> <span class="k">if</span> <span class="nv">some_list</span>.<span class="nv">count</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">1</span>]<span class="ss">)</span>
+<pre class="codehilite"><code>some_list = ['a','b','c','b','d','m','n','n']
+duplicates = set([x for x in some_list if some_list.count(x) &gt; 1])
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">duplicates</span><span class="ss">)</span>
-</code></pre></div>
+print(duplicates)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>{&#39;n&#39;, &#39;b&#39;}
-</code></pre></div>
+<pre class="codehilite"><code>{'n', 'b'}
+</code></pre>
 
 <h4 id="_3">交集</h4>
 <p>对比两个集合的交集，如下：</p>
-<div class="codehilite"><pre><span></span><code>valid = set([&#39;yellow&#39;,&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;,&#39;black&#39;])
-input_set = set([&#39;red&#39;,&#39;brown&#39;])
+<pre class="codehilite"><code>valid = set(['yellow','red','blue','green','black'])
+input_set = set(['red','brown'])
 print(input_set.intersection(valid))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果:</p>
-<div class="codehilite"><pre><span></span><code>{&#39;red&#39;}
-</code></pre></div>
+<pre class="codehilite"><code>{'red'}
+</code></pre>
 
 <p>注：intersection() 方法用于返回两个或更多集合中都包含的元素，即交集。</p>
 <h4 id="_4">差集</h4>
 <p>用差集找出无效的数据，如下：</p>
-<div class="codehilite"><pre><span></span><code>valid = set([&#39;yellow&#39;,&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;,&#39;black&#39;])
-input_set = set([&#39;red&#39;,&#39;brown&#39;])
+<pre class="codehilite"><code>valid = set(['yellow','red','blue','green','black'])
+input_set = set(['red','brown'])
 print(input_set.difference(valid))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果:</p>
-<div class="codehilite"><pre><span></span><code>{&#39;brown&#39;}
-</code></pre></div>
+<pre class="codehilite"><code>{'brown'}
+</code></pre>
 
 <p>注：difference() 方法用于返回集合的差集，即返回的集合元素包含在第一个集合中，但不包含在第二个集合(方法的参数)中。</p>
 <h3 id="_5">三元运算符</h3>
 <p>三元运算符通常被称为条件表达式，这些表达式基于真(true)/假(not)的条件判断。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">condition_is_true</span> <span class="k">if</span> <span class="nv">condiiton</span> <span class="k">else</span> <span class="nv">condition_is_false</span>
-</code></pre></div>
+<pre class="codehilite"><code>condition_is_true if condiiton else condition_is_false
+</code></pre>
 
 <p>举个例子：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">is_fat</span> <span class="o">=</span> <span class="nv">True</span>
-<span class="nv">state</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">fat</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="nv">is_fat</span> <span class="k">else</span> <span class="s2">&quot;</span><span class="s">not fat</span><span class="s2">&quot;</span>
-</code></pre></div>
+<pre class="codehilite"><code>is_fat = True
+state = &quot;fat&quot; if is_fat else &quot;not fat&quot;
+</code></pre>
 
 <p>它还有一种不常用的用法，使用了元组，如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="p">(</span><span class="n">if_test_if_false</span><span class="p">,</span><span class="w"> </span><span class="n">if_test_is_true</span><span class="p">)</span><span class="o">[</span><span class="n">test</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>(if_test_if_false, if_test_is_true)[test]
+</code></pre>
 
 <p>举个例子：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">fat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
-<span class="n">fitness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;skinny&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;fat&quot;</span><span class="p">)</span><span class="o">[</span><span class="n">fat</span><span class="o">]</span><span class="w"></span>
-<span class="k">print</span><span class="p">(</span><span class="ss">&quot;All is&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fitness</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>fat = True
+fitness = (&quot;skinny&quot;, &quot;fat&quot;)[fat]
+print(&quot;All is&quot;, fitness)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>All is fat
-</code></pre></div>
+<pre class="codehilite"><code>All is fat
+</code></pre>
 
 <p>一般不建议使用元组条件表达式的缘故是在元组中会把两个条件都执行，而if else的条件表达式不会。例如：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">condition</span> <span class="o">=</span> <span class="nv">True</span>
-<span class="nv">print</span><span class="ss">(</span><span class="mi">2</span> <span class="k">if</span> <span class="nv">condition</span> <span class="k">else</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="ss">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>condition = True
+print(2 if condition else 1/0)
+</code></pre>
 
 <p>执行如果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2</span>
-</code></pre></div>
+<pre class="codehilite"><code>2
+</code></pre>
 
-<div class="codehilite"><pre><span></span><code><span class="k">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
-<span class="k">print</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span><span class="o">[</span><span class="n">condition</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>condition = True
+print((2, 1/0)[condition])
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">ZeroDivisionError</span><span class="o">:</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
-</code></pre></div>
+<pre class="codehilite"><code>ZeroDivisionError: division by zero
+</code></pre>
 
 <h3 id="_6">装饰器</h3>
 <p>装饰器是修改其他函数的功能的函数。</p>
 <h4 id="_7">第一个装饰器</h4>
 <p>如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">a_new_decorator</span><span class="ss">(</span><span class="nv">a_func</span><span class="ss">)</span>:
+<pre class="codehilite"><code>def a_new_decorator(a_func):
 
-    <span class="nv">def</span> <span class="nv">wrapTheFunction</span><span class="ss">()</span>:
-        <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">在执行a_func函数之前我正在干一些无趣的事情</span><span class="s2">&quot;</span><span class="ss">)</span>
-        <span class="nv">a_func</span><span class="ss">()</span>
-        <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">在执行a_func函数之后我正在干一些无趣的事情</span><span class="s2">&quot;</span><span class="ss">)</span>
+    def wrapTheFunction():
+        print(&quot;在执行a_func函数之前我正在干一些无趣的事情&quot;)
+        a_func()
+        print(&quot;在执行a_func函数之后我正在干一些无趣的事情&quot;)
 
-    <span class="k">return</span> <span class="nv">wrapTheFunction</span>
+    return wrapTheFunction
 
-<span class="nv">def</span> <span class="nv">a_function_requiring_decoration</span><span class="ss">()</span>:
-    <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">我需要一些装饰来掩饰我的伤口</span><span class="s2">&quot;</span><span class="ss">)</span>
-</code></pre></div>
+def a_function_requiring_decoration():
+    print(&quot;我需要一些装饰来掩饰我的伤口&quot;)
+</code></pre>
 
 <p>执行1及结果：</p>
-<div class="codehilite"><pre><span></span><code>a_function_requiring_decoration()
+<pre class="codehilite"><code>a_function_requiring_decoration()
 # 执行结果：
 我需要一些装饰来掩饰我的伤口
-</code></pre></div>
+</code></pre>
 
 <p>执行2及结果：</p>
-<div class="codehilite"><pre><span></span><code>a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
+<pre class="codehilite"><code>a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
 
 a_function_requiring_decoration()
 # 执行结果：
 在执行a_func函数之前我正在干一些无趣的事情
 我需要一些装饰来掩饰我的伤口
 在执行a_func函数之后我正在干一些无趣的事情
-</code></pre></div>
+</code></pre>
 
 <p>以上就是python中装饰器的作用。它封装一个函数，并且用一些方式来修改它的行为。下面我们使用@来运行之前的代码：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">a_new_decorator</span><span class="p">(</span><span class="n">a_func</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<pre class="codehilite"><code>def a_new_decorator(a_func):
 
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">wrapTheFunction</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;在执行a_func函数之前我正在干一些无趣的事情&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">a_func</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;在执行a_func函数之后我正在干一些无趣的事情&quot;</span><span class="p">)</span><span class="w"></span>
+    def wrapTheFunction():
+        print(&quot;在执行a_func函数之前我正在干一些无趣的事情&quot;)
+        a_func()
+        print(&quot;在执行a_func函数之后我正在干一些无趣的事情&quot;)
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">wrapTheFunction</span><span class="w"></span>
+    return wrapTheFunction
 
-<span class="nv">@a_new_decorator</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">a_function_requiring_decoration</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">装饰</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;我需要一些装饰来掩饰我的伤口&quot;</span><span class="p">)</span><span class="w"></span>
+@a_new_decorator
+def a_function_requiring_decoration():
+    # 装饰
+    print(&quot;我需要一些装饰来掩饰我的伤口&quot;)
 
-<span class="n">a_function_requiring_decoration</span><span class="p">()</span><span class="w"></span>
-</code></pre></div>
+a_function_requiring_decoration()
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>在执行a_func函数之前我正在干一些无趣的事情
+<pre class="codehilite"><code>在执行a_func函数之前我正在干一些无趣的事情
 我需要一些装饰来掩饰我的伤口
 在执行a_func函数之后我正在干一些无趣的事情
-</code></pre></div>
+</code></pre>
 
 <p>附：<code>@a_new_decorator</code>是<code>a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)</code>的缩略方式</p>
 <p>现在我们对装饰器有了一个基本的了解。如果我们运行下面的代码会有一个问题：</p>
-<div class="codehilite"><pre><span></span><code>print(a_function_requiring_decoration.__name__)
-</code></pre></div>
+<pre class="codehilite"><code>print(a_function_requiring_decoration.__name__)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>wrapTheFunction
-</code></pre></div>
+<pre class="codehilite"><code>wrapTheFunction
+</code></pre>
 
 <p>这个并不是我们想要的，Python提供了一个函数来解决这个问题，那就是functools.wraps。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<pre class="codehilite"><code>from functools import wraps
 
-<span class="k">def</span> <span class="nf">a_new_decorator</span><span class="p">(</span><span class="n">a_func</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">a_func</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">wrapTheFunction</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;在执行a_func函数之前我正在干一些无趣的事情&quot;</span><span class="p">)</span>
-        <span class="n">a_func</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;在执行a_func函数之后我正在干一些无趣的事情&quot;</span><span class="p">)</span>
+def a_new_decorator(a_func):
+    @wraps(a_func)
+    def wrapTheFunction():
+        print(&quot;在执行a_func函数之前我正在干一些无趣的事情&quot;)
+        a_func()
+        print(&quot;在执行a_func函数之后我正在干一些无趣的事情&quot;)
 
-    <span class="k">return</span> <span class="n">wrapTheFunction</span>
+    return wrapTheFunction
 
-<span class="nd">@a_new_decorator</span>
-<span class="k">def</span> <span class="nf">a_function_requiring_decoration</span><span class="p">():</span>
-    <span class="c1"># 装饰</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;我需要一些装饰来掩饰我的伤口&quot;</span><span class="p">)</span>
+@a_new_decorator
+def a_function_requiring_decoration():
+    # 装饰
+    print(&quot;我需要一些装饰来掩饰我的伤口&quot;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">a_function_requiring_decoration</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-</code></pre></div>
+print(a_function_requiring_decoration.__name__)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>a_function_requiring_decoration
-</code></pre></div>
+<pre class="codehilite"><code>a_function_requiring_decoration
+</code></pre>
 
 <p><strong>装饰器规范</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="k">def</span> <span class="nf">decorator_name</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">decorated</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">can_run</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s2">&quot;Function will not run&quot;</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">decorated</span>
-<span class="nd">@decorator_name</span>
-<span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
-    <span class="k">return</span><span class="p">(</span><span class="s2">&quot;Function is running&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>from functools import wraps
+def decorator_name(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not can_run:
+            return &quot;Function will not run&quot;
+        return f(*args, **kwargs)
+    return decorated
+@decorator_name
+def func():
+    return(&quot;Function is running&quot;)
+</code></pre>
 
 <p>执行1及结果：</p>
-<div class="codehilite"><pre><span></span><code>can_run = True
+<pre class="codehilite"><code>can_run = True
 print(func())
 # 执行结果
 Function is running
-</code></pre></div>
+</code></pre>
 
 <p>执行2及结果：</p>
-<div class="codehilite"><pre><span></span><code>can_run = False
+<pre class="codehilite"><code>can_run = False
 print(func())
 # 执行结果
 Function is not running
-</code></pre></div>
+</code></pre>
 
 <p>注：@wraps接受一个函数来进行装饰，并加入复制函数名称、注释文档、参数列表等功能。</p>
 <h4 id="_8">使用场景</h4>
 <p><strong>授权(Authorization)</strong></p>
 <p>装饰器有助于检查是否被授权去使用一个web应用的端点。它被大量用于Flask和Django框架中。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<pre class="codehilite"><code>from functools import wraps
 
-<span class="k">def</span> <span class="nf">requires_auth</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">decorated</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">auth</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">authorization</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">auth</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">check_auth</span><span class="p">(</span><span class="n">auth</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="n">auth</span><span class="o">.</span><span class="n">password</span><span class="p">):</span>
-            <span class="n">authenticate</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">decorated</span>
-</code></pre></div>
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            authenticate()
+        return f(*args, **kwargs)
+    return decorated
+</code></pre>
 
 <p><strong>日志(Logging)</strong></p>
 <p>日志是装饰器运用的另一个亮点。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<span class="k">def</span> <span class="nf">logit</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">with_logging</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;被调用&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">with_logging</span>
+<pre class="codehilite"><code>from functools import wraps
+def logit(func):
+    @wraps(func)
+    def with_logging(*args, **kwargs):
+        print(func.__name__ + &quot;被调用&quot;)
+        return func(*args, **kwargs)
+    return with_logging
 
-<span class="nd">@logit</span>
-<span class="k">def</span> <span class="nf">addition_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span>
+@logit
+def addition_func(x):
+    return x + x
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">addition_func</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div>
+result = addition_func(4)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>addition_func被调用
-</code></pre></div>
+<pre class="codehilite"><code>addition_func被调用
+</code></pre>
 
 <h4 id="_9">带参数的装饰器</h4>
 <p><strong>在函数中嵌入装饰器</strong></p>
 <p>在刚才的日志铺子中创建一个包裹函数，可以用来指定一个用于输出的日志文件。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<pre class="codehilite"><code>from functools import wraps
 
-<span class="k">def</span> <span class="nf">logit</span><span class="p">(</span><span class="n">logfile</span><span class="o">=</span><span class="s2">&quot;out.log&quot;</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">logging_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapped_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">lgo_string</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;被调用&quot;</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">lgo_string</span><span class="p">)</span>
-            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">logfile</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
-                <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">lgo_string</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">wrapped_function</span>
-    <span class="k">return</span> <span class="n">logging_decorator</span>
-</code></pre></div>
+def logit(logfile=&quot;out.log&quot;):
+    def logging_decorator(func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+            lgo_string = func.__name__ + &quot;被调用&quot;
+            print(lgo_string)
+            with open(logfile, 'a') as opened_file:
+                opened_file.write(lgo_string + '\n')
+            return func(*args, **kwargs)
+        return wrapped_function
+    return logging_decorator
+</code></pre>
 
 <p>执行1及结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@logit</span><span class="p">()</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">myfunc1</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">pass</span><span class="w"></span>
+<pre class="codehilite"><code>@logit()
+def myfunc1():
+    pass
 
-<span class="n">myfunc1</span><span class="p">()</span><span class="w"></span>
-<span class="err">#</span><span class="w"> </span><span class="n">执行结果</span><span class="w"></span>
-<span class="n">myfunc1被调用</span><span class="w"></span>
-<span class="n">#当前目录下会生成文件out</span><span class="p">.</span><span class="nf">log</span><span class="p">,</span><span class="n">而且</span><span class="err">“</span><span class="n">myfunc1被调用</span><span class="err">”</span><span class="n">被写入</span><span class="err">。</span><span class="w"></span>
-</code></pre></div>
+myfunc1()
+# 执行结果
+myfunc1被调用
+#当前目录下会生成文件out.log,而且“myfunc1被调用”被写入。
+</code></pre>
 
 <p>执行2及结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@logit</span><span class="p">(</span><span class="n">logfile</span><span class="o">=</span><span class="ss">&quot;func2.log&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">myfunc2</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">pass</span><span class="w"></span>
+<pre class="codehilite"><code>@logit(logfile=&quot;func2.log&quot;)
+def myfunc2():
+    pass
 
-<span class="n">myfunc2</span><span class="p">()</span><span class="w"></span>
-<span class="err">#</span><span class="w"> </span><span class="n">执行结果</span><span class="w"></span>
-<span class="n">myfunc2被调用</span><span class="w"></span>
-<span class="n">#当前目录下会生成文件func2</span><span class="p">.</span><span class="nf">log</span><span class="p">,</span><span class="n">而且</span><span class="err">“</span><span class="n">myfunc2被调用</span><span class="err">”</span><span class="n">被写入</span><span class="err">。</span><span class="w"></span>
-</code></pre></div>
+myfunc2()
+# 执行结果
+myfunc2被调用
+#当前目录下会生成文件func2.log,而且“myfunc2被调用”被写入。
+</code></pre>
 
 <p><strong>装饰器类</strong></p>
 <p>类也可以用来构建装饰器。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<pre class="codehilite"><code>from functools import wraps
 
-<span class="k">class</span> <span class="nc">logit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logfile</span><span class="o">=</span><span class="s1">&#39;out.log&#39;</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">logfile</span> <span class="o">=</span> <span class="n">logfile</span>
+class logit(object):
+    def __init__(self, logfile='out.log'):
+        self.logfile = logfile
 
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapped_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="n">log_string</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;被调用&quot;</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">log_string</span><span class="p">)</span>
-            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logfile</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
-                <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">log_string</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">wrapped_function</span>
+    def __call__(self, func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+            log_string = func.__name__ + &quot;被调用&quot;
+            print(log_string)
+            with open(self.logfile, 'a') as opened_file:
+                opened_file.write(log_string + '\n')
+            self.notify()
+            return func(*args, **kwargs)
+        return wrapped_function
 
-    <span class="k">def</span> <span class="nf">notify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># 只用于日志</span>
-        <span class="k">pass</span>
-</code></pre></div>
+    def notify(self):
+        # 只用于日志
+        pass
+</code></pre>
 
 <p>执行及结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">@logit</span><span class="p">()</span><span class="w"></span>
-<span class="n">def</span><span class="w"> </span><span class="n">myfunc1</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">pass</span><span class="w"></span>
+<pre class="codehilite"><code>@logit()
+def myfunc1():
+    pass
 
-<span class="n">myfunc1</span><span class="p">()</span><span class="w"></span>
-<span class="err">#</span><span class="w"> </span><span class="n">执行结果</span><span class="w"></span>
-<span class="n">myfunc1被调用</span><span class="w"></span>
-<span class="n">#当前目录下会生成文件out</span><span class="p">.</span><span class="nf">log</span><span class="p">,</span><span class="n">而且</span><span class="err">“</span><span class="n">myfunc1被调用</span><span class="err">”</span><span class="n">被写入</span><span class="err">。</span><span class="w"></span>
-</code></pre></div>
+myfunc1()
+# 执行结果
+myfunc1被调用
+#当前目录下会生成文件out.log,而且“myfunc1被调用”被写入。
+</code></pre>
 
 <p>为了保存日志的同时，给相关人员发送邮件，可以给logit创建一个子类，来添加邮件功能。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">email_logit</span><span class="p">(</span><span class="n">logit</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="o">=</span><span class="ss">&quot;test@test.cn&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">email</span><span class="w"></span>
-<span class="w">        </span><span class="n">super</span><span class="p">(</span><span class="n">logit</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="w"></span>
+<pre class="codehilite"><code>class email_logit(logit):
+    def __init__(self, email=&quot;test@test.cn&quot;, *args, **kwargs):
+        self.email = email
+        super(logit, self).__init__(*args, **kwargs)
 
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">notify</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">邮件功能实现略</span><span class="w"></span>
-<span class="w">        </span><span class="n">pass</span><span class="w"></span>
-</code></pre></div>
+    def notify(self):
+        # 邮件功能实现略
+        pass
+</code></pre>
 
 <p>现在<code>@email_logit</code>在打日志的基础上，还有发邮件的功能。</p>
 <h3 id="globalreturn">Global和Return</h3>
 <p>return和global的作用，如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">add</span><span class="ss">(</span><span class="nv">value1</span>, <span class="nv">value2</span><span class="ss">)</span>:
-    <span class="k">return</span> <span class="nv">value1</span> <span class="o">+</span>  <span class="nv">value2</span>
+<pre class="codehilite"><code>def add(value1, value2):
+    return value1 +  value2
 
-<span class="nb">result</span> <span class="o">=</span> <span class="nv">add</span><span class="ss">(</span><span class="mi">3</span>, <span class="mi">5</span><span class="ss">)</span>
-<span class="nv">print</span><span class="ss">(</span><span class="nb">result</span><span class="ss">)</span>
-</code></pre></div>
+result = add(3, 5)
+print(result)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">8</span>
-</code></pre></div>
+<pre class="codehilite"><code>8
+</code></pre>
 
 <p>return&lt;函数把值赋给了调用它的变量。</p>
-<div class="codehilite"><pre><span></span><code>def add(value1,value2):
+<pre class="codehilite"><code>def add(value1,value2):
     global result
     result = value1 + value2
 
 add(3,5)
 print(result)
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">8</span>
-</code></pre></div>
+<pre class="codehilite"><code>8
+</code></pre>
 
 <p>global的作用是在函数以外的区域都能访问这个变量。举个例子：</p>
-<div class="codehilite"><pre><span></span><code>def add(value1, value2):
+<pre class="codehilite"><code>def add(value1, value2):
     result = value1 + value2
 
 add(2, 4)
 print(result)
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>Traceback (most recent call last):
+<pre class="codehilite"><code>Traceback (most recent call last):
   File &quot;E:\公司文档\分享内容\markdown\python进阶\29.py&quot;, line 7, in &lt;module&gt;
     print(result)
-NameError: name &#39;result&#39; is not defined
-</code></pre></div>
+NameError: name 'result' is not defined
+</code></pre>
 
 <p>函数内的result只是局部变量，不要被用于函数外部。申明global后可正常执行，但应尽量避免使用global，它会引入多余的变量到全局作用域。</p>
 <h4 id="return">多个return值</h4>
 <p>返回多个值，不建议使用global关键字，使用元组(tuple)，列表(list)，字典(dict)是可行的，但并不是最好的，按照惯例如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">profile</span><span class="ss">()</span>:
-    <span class="nv">name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Tester</span><span class="s2">&quot;</span>
-    <span class="nv">age</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="k">return</span> <span class="nv">name</span>, <span class="nv">age</span>
+<pre class="codehilite"><code>def profile():
+    name = &quot;Tester&quot;
+    age = 30
+    return name, age
 
-<span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">name:</span><span class="s2">&quot;</span>,<span class="nv">profile</span><span class="ss">()</span>[<span class="mi">0</span>]<span class="ss">)</span>
-<span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">age:</span><span class="s2">&quot;</span>,<span class="nv">profile</span><span class="ss">()</span>[<span class="mi">1</span>]<span class="ss">)</span>
-</code></pre></div>
+print(&quot;name:&quot;,profile()[0])
+print(&quot;age:&quot;,profile()[1])
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">name</span><span class="o">:</span> <span class="n">Tester</span>
-<span class="n">age</span><span class="o">:</span> <span class="mi">30</span>
-</code></pre></div>
+<pre class="codehilite"><code>name: Tester
+age: 30
+</code></pre>
 
 <h3 id="mutation">对象变动（Mutation)</h3>
 <p>Python中有可变与不可变的数据类型。可变意味着“可以被改动”，而不变的意思就是“常量”。举例如下：</p>
-<div class="codehilite"><pre><span></span><code>poo = [&#39;hi&#39;]
+<pre class="codehilite"><code>poo = ['hi']
 print(poo)
 
 bar = poo
-bar += [&#39;bye&#39;]
+bar += ['bye']
 print(poo)
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[&#39;hi&#39;]</span>
-<span class="k">[&#39;hi&#39;, &#39;bye&#39;]</span>
-</code></pre></div>
+<pre class="codehilite"><code>['hi']
+['hi', 'bye']
+</code></pre>
 
 <p>这不是一个问题。这个是对象可变性。每当你将一个变量赋值为另一个可变类型的变量时，对这个数据的任意改动会同时反映到这两个变量上去。新变量不过是老变量的一个别名。</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">add_to</span><span class="ss">(</span><span class="nv">num</span>, <span class="nv">target</span><span class="o">=</span>[]<span class="ss">)</span>:
-    <span class="nv">target</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">num</span><span class="ss">)</span>
-    <span class="k">return</span> <span class="nv">target</span>
+<pre class="codehilite"><code>def add_to(num, target=[]):
+    target.append(num)
+    return target
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">1</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">2</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">3</span><span class="ss">))</span>
-</code></pre></div>
+print(add_to(1))
+print(add_to(2))
+print(add_to(3))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[1]</span>
-<span class="k">[1, 2]</span>
-<span class="k">[1, 2, 3]</span>
-</code></pre></div>
+<pre class="codehilite"><code>[1]
+[1, 2]
+[1, 2, 3]
+</code></pre>
 
 <p>在Python中当函数被定义时，默认参数只运算一次，而不是每次用时都会重新运算。所以不要定义可变类型的默认参数，除非这个默认参数是你真的需要的。为了达到效果，你可以这样做：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span> <span class="nv">add_to</span><span class="ss">(</span><span class="nv">element</span>, <span class="nv">target</span><span class="o">=</span><span class="nv">None</span><span class="ss">)</span>:
-    <span class="k">if</span> <span class="nv">target</span> <span class="nv">is</span> <span class="nv">None</span>:
-        <span class="nv">target</span> <span class="o">=</span> []
-    <span class="nv">target</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">element</span><span class="ss">)</span>
-    <span class="k">return</span> <span class="nv">target</span>
+<pre class="codehilite"><code>def add_to(element, target=None):
+    if target is None:
+        target = []
+    target.append(element)
+    return target
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">1</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">2</span><span class="ss">))</span>
-<span class="nv">print</span><span class="ss">(</span><span class="nv">add_to</span><span class="ss">(</span><span class="mi">3</span><span class="ss">))</span>
-</code></pre></div>
+print(add_to(1))
+print(add_to(2))
+print(add_to(3))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[1]</span>
-<span class="k">[2]</span>
-<span class="k">[3]</span>
-</code></pre></div>
+<pre class="codehilite"><code>[1]
+[2]
+[3]
+</code></pre>
 
 <h3 id="__slots__"><code>__slots__</code>魔法</h3>
 <p>在Python中，每个类都有实例属性。默认情况下Python用一个字典来保存一个对象的实例属性。不过，这个字典浪费了很多内存。Python不能在对象创建时直接分配一个固定量的来保存所有属性。因此创建许多象，会消耗很多内存。不过可以用<code>__slots__</code>来告诉Python不要使用字典，而且只给一个固定集合的属性分配空间。举个列子：</p>
 <ul>
 <li>不使用<code>__slots__</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">MyClass</span>(<span class="n">object</span>):
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="nb">name</span>, <span class="n">age</span>):
-        <span class="nb">self</span>.<span class="nb">name</span> = <span class="nb">name</span>
-        <span class="nb">self</span>.<span class="n">age</span> = <span class="n">age</span>
-        <span class="nb">self</span>.<span class="n">set_up</span>()
-    <span class="c1"># ...</span>
-</code></pre></div>
+<pre class="codehilite"><code>class MyClass(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.set_up()
+    # ...
+</code></pre>
 
 <ul>
 <li>使用<code>__slots__</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">MyClass</span>(<span class="n">object</span>):
-    <span class="n">__slots__</span> = [<span class="s">&#39;name&#39;</span>, <span class="s">&#39;age&#39;</span>]
-    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="nb">name</span>, <span class="n">age</span>):
-        <span class="nb">self</span>.<span class="nb">name</span> = <span class="nb">name</span>
-        <span class="nb">self</span>.<span class="n">age</span> = <span class="n">age</span>
-        <span class="nb">self</span>.<span class="n">set_up</span>()
-    <span class="c1"># ...</span>
-</code></pre></div>
+<pre class="codehilite"><code>class MyClass(object):
+    __slots__ = ['name', 'age']
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.set_up()
+    # ...
+</code></pre>
 
 <p>第二段代码会减少40~50%的内存占用，可以通过<a href="https://github.com/ianozsvald/ipython_memory_usage">ipython_memory_usage</a>来查看效果，这里安装失败了，暂不对比。</p>
 <h3 id="_10">虚拟环境</h3>
 <h4 id="virtualenv">virtualenv</h4>
 <p>virtualenv是一个可以创建独立（隔离）的Python环境的工具。它可以为每一个程序创建一个独立的环境，只为自己安装依赖的模块，而不用全局安装所有依赖的模块。</p>
 <p>安装virtualenv</p>
-<div class="codehilite"><pre><span></span><code>pip install virtualenv
-</code></pre></div>
+<pre class="codehilite"><code>pip install virtualenv
+</code></pre>
 
 <p>常用的命令：</p>
-<div class="codehilite"><pre><span></span><code># 在myproject文件夹下创建一个隔离的virtualenv环境
+<pre class="codehilite"><code># 在myproject文件夹下创建一个隔离的virtualenv环境
 virtualenv myproject
 # 激活这个隔离的环境
 source bin/activate
 # 退出当前virtualenv
 deactivate  # 恢复使用系统全局Python模块
-</code></pre></div>
+</code></pre>
 
 <p>如果你想让你的virtualenv使用全局模块，可以用<code>--system-site-packages</code>参数创建virtualenv，如下：</p>
-<div class="codehilite"><pre><span></span><code>virtualenv --system-site-packages myproject
-</code></pre></div>
+<pre class="codehilite"><code>virtualenv --system-site-packages myproject
+</code></pre>
 
 <h3 id="collections">容器Collections</h3>
 <p>Python附带一个模块collections，它包含许多容器数据类型，如<code>defaultdict</code>，<code>counter</code>,<code>deque</code>,<code>namedtuple</code>,<code>enum.Enum</code>。</p>
 <h4 id="defaultdict">defaultdict</h4>
 <p>defaultdict，与dict类型不同，不需要检查key是否存在，举例如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<pre class="codehilite"><code>from collections import defaultdict
 
-<span class="n">colours</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="s1">&#39;黄色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="s1">&#39;蓝色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="s1">&#39;绿色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="s1">&#39;黑色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="s1">&#39;红色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;赵六&#39;</span><span class="p">,</span> <span class="s1">&#39;紫色&#39;</span><span class="p">),</span>
-    <span class="p">)</span>
+colours = (
+    ('张三', '黄色'),
+    ('李四', '蓝色'),
+    ('王五', '绿色'),
+    ('李四', '黑色'),
+    ('张三', '红色'),
+    ('赵六', '紫色'),
+    )
 
-<span class="n">favourite_colours</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+favourite_colours = defaultdict(list)
 
-<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">colour</span> <span class="ow">in</span> <span class="n">colours</span><span class="p">:</span>
-    <span class="n">favourite_colours</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colour</span><span class="p">)</span>
+for name, colour in colours:
+    favourite_colours[name].append(colour)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">favourite_colours</span><span class="p">)</span>
-</code></pre></div>
+print(favourite_colours)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>defaultdict(&lt;class &#39;list&#39;&gt;, {&#39;张三&#39;: [&#39;黄色&#39;, &#39;红色&#39;], &#39;李四&#39;: [&#39;蓝色&#39;, &#39;黑色&#39;], &#39;王五&#39;: [&#39;绿色&#39;], &#39;赵六&#39;: [&#39;紫色&#39;]})
-</code></pre></div>
+<pre class="codehilite"><code>defaultdict(&lt;class 'list'&gt;, {'张三': ['黄色', '红色'], '李四': ['蓝色', '黑色'], '王五': ['绿色'], '赵六': ['紫色']})
+</code></pre>
 
 <p>当在一个字典中对一个键进行嵌套赋值时，如果这个键不存在，会触发keyError异常。defaultdict允许绕过这个问题。举例如下：</p>
-<div class="codehilite"><pre><span></span><code>some_dict = {}
-some_dict[&#39;colours&#39;][&#39;favourite&#39;] = &quot;yellow&quot;
-</code></pre></div>
+<pre class="codehilite"><code>some_dict = {}
+some_dict['colours']['favourite'] = &quot;yellow&quot;
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>Traceback (most recent call last):
+<pre class="codehilite"><code>Traceback (most recent call last):
   File &quot;E:\公司文档\分享内容\markdown\python进阶\35.py&quot;, line 2, in &lt;module&gt;
-    some_dict[&#39;colours&#39;][&#39;favourite&#39;] = &quot;yellow&quot;
-KeyError: &#39;colours&#39;
-</code></pre></div>
+    some_dict['colours']['favourite'] = &quot;yellow&quot;
+KeyError: 'colours'
+</code></pre>
 
 <p>解决方案：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">collections</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<pre class="codehilite"><code>import collections
+import json
 
-<span class="n">tree</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span><span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
-<span class="n">some_dict</span> <span class="o">=</span> <span class="n">tree</span><span class="p">()</span>
-<span class="n">some_dict</span><span class="p">[</span><span class="s1">&#39;colours&#39;</span><span class="p">][</span><span class="s1">&#39;favourite&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;yellow&quot;</span>
+tree = lambda:collections.defaultdict(tree)
+some_dict = tree()
+some_dict['colours']['favourite'] = &quot;yellow&quot;
 
-<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">some_dict</span><span class="p">))</span>
-</code></pre></div>
+print(json.dumps(some_dict))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>{&quot;colours&quot;: {&quot;favourite&quot;: &quot;yellow&quot;}}
-</code></pre></div>
+<pre class="codehilite"><code>{&quot;colours&quot;: {&quot;favourite&quot;: &quot;yellow&quot;}}
+</code></pre>
 
 <h4 id="counter">Counter</h4>
 <p>Counter是一个计数器，它可以帮助我们针对某项数据进行计数。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<pre class="codehilite"><code>from collections import Counter
 
-<span class="n">colours</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="s1">&#39;黄色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="s1">&#39;蓝色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="s1">&#39;绿色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="s1">&#39;黑色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="s1">&#39;红色&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;赵六&#39;</span><span class="p">,</span> <span class="s1">&#39;紫色&#39;</span><span class="p">),</span>
-    <span class="p">)</span>
+colours = (
+    ('张三', '黄色'),
+    ('李四', '蓝色'),
+    ('王五', '绿色'),
+    ('李四', '黑色'),
+    ('张三', '红色'),
+    ('赵六', '紫色'),
+    )
 
-<span class="n">favs</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">colour</span> <span class="ow">in</span> <span class="n">colours</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">favs</span><span class="p">)</span>
-</code></pre></div>
+favs = Counter(name for name, colour in colours)
+print(favs)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>Counter({&#39;张三&#39;: 2, &#39;李四&#39;: 2, &#39;王五&#39;: 1, &#39;赵六&#39;: 1})
-</code></pre></div>
+<pre class="codehilite"><code>Counter({'张三': 2, '李四': 2, '王五': 1, '赵六': 1})
+</code></pre>
 
 <h4 id="deque">deque</h4>
 <p>deque提供了一个双端队列，你可以从头/尾两端添加或删除元素。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre class="codehilite"><code>from collections import deque
 
-<span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
-<span class="c1"># 用法和list差不多</span>
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+d = deque()
+# 用法和list差不多
+d.append('1')
+d.append('2')
+d.append('3')
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</code></pre></div>
+print(len(d))
+print(d[0])
+print(d[-1])
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">3</span>
-<span class="mf">1</span>
-<span class="mf">3</span>
-</code></pre></div>
+<pre class="codehilite"><code>3
+1
+3
+</code></pre>
 
 <p>从两端删除数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre class="codehilite"><code>from collections import deque
 
-<span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</code></pre></div>
+d = deque(range(5))
+print(len(d))
+print(d.popleft())
+print(d.pop())
+print(d)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">5</span>
-<span class="mf">0</span>
-<span class="mf">4</span>
-<span class="n">deque</span><span class="p">(</span><span class="err">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="err">]</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>5
+0
+4
+deque([1, 2, 3])
+</code></pre>
 
 <p>可以限制deque的大小，当超过这个限制时，会把左边的数据挤出去。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre class="codehilite"><code>from collections import deque
 
-<span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+d = deque(maxlen=2)
 
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
-<span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+d.append('1')
+d.append('2')
+d.append('3')
 
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</code></pre></div>
+print(d)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>deque([&#39;2&#39;, &#39;3&#39;], maxlen=2)
-</code></pre></div>
+<pre class="codehilite"><code>deque(['2', '3'], maxlen=2)
+</code></pre>
 
 <p>从两端扩展数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<pre class="codehilite"><code>from collections import deque
 
-<span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="n">d</span><span class="o">.</span><span class="n">extendleft</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">d</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</code></pre></div>
+d = deque([1,2,3,4,5])
+d.extendleft([0])
+d.extend([6,7,8])
+print(d)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>deque([0, 1, 2, 3, 4, 5, 6, 7, 8])
-</code></pre></div>
+<pre class="codehilite"><code>deque([0, 1, 2, 3, 4, 5, 6, 7, 8])
+</code></pre>
 
 <h4 id="namedtuple">namedtuple</h4>
 <p>namedtuple把元组变成一个简单任务的容器，不用像元组那样使用整数索引来访问一个namedtuple数据，而是像字典一样访问namedtuple，namedtuple也是不可娈的。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<pre class="codehilite"><code>from collections import namedtuple
 
-<span class="n">Animal</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;name age type&#39;</span><span class="p">)</span>
-<span class="n">perry</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;perry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name=&quot;perry&quot;, age=31, type=&quot;cat&quot;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">perry</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">perry</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</code></pre></div>
+print(perry)
+print(perry.name)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>Animal(name=&#39;perry&#39;, age=31, type=&#39;cat&#39;)
+<pre class="codehilite"><code>Animal(name='perry', age=31, type='cat')
 perry
-</code></pre></div>
+</code></pre>
 
 <p>命名元组是不可娈的。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<pre class="codehilite"><code>from collections import namedtuple
 
-<span class="n">Animal</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;name age type&#39;</span><span class="p">)</span>
-<span class="n">perry</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;perry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
-<span class="n">perry</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">42</span>
-</code></pre></div>
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name=&quot;perry&quot;, age=31, type=&quot;cat&quot;)
+perry.age = 42
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>Traceback (most recent call last):
+<pre class="codehilite"><code>Traceback (most recent call last):
   File &quot;E:\公司文档\分享内容\markdown\python进阶\44.py&quot;, line 7, in &lt;module&gt;
     perry.age = 42
-AttributeError: can&#39;t set attribute
-</code></pre></div>
+AttributeError: can't set attribute
+</code></pre>
 
 <p>命名元组可以兼容普通元组，就是说你也可以用整数索引来访问namedtuple。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<pre class="codehilite"><code>from collections import namedtuple
 
-<span class="n">Animal</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;name age type&#39;</span><span class="p">)</span>
-<span class="n">perry</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;perry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">perry</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</code></pre></div>
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name=&quot;perry&quot;, age=31, type=&quot;cat&quot;)
+print(perry[0])
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>perry
-</code></pre></div>
+<pre class="codehilite"><code>perry
+</code></pre>
 
 <p>命名元组可以转换为字典。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<pre class="codehilite"><code>from collections import namedtuple
 
-<span class="n">Animal</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;name age type&#39;</span><span class="p">)</span>
-<span class="n">perry</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;perry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">perry</span><span class="o">.</span><span class="n">_asdict</span><span class="p">())</span>
-</code></pre></div>
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name=&quot;perry&quot;, age=31, type=&quot;cat&quot;)
+print(perry._asdict())
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>{&#39;name&#39;: &#39;perry&#39;, &#39;age&#39;: 31, &#39;type&#39;: &#39;cat&#39;}
-</code></pre></div>
+<pre class="codehilite"><code>{'name': 'perry', 'age': 31, 'type': 'cat'}
+</code></pre>
 
 <h4 id="enumenum">enum.Enum</h4>
 <p>让我们回顾⼀下上⼀个'Animal'命名元组的例⼦。它有⼀个type字段，问题是，type是⼀个字符串。那么问题来了，万⼀程序员输⼊了Cat，因为他按到了Shift键，或者输⼊了'CAT'，甚⾄'kitten'？枚举可以帮助我们避免这个问题，通过不使⽤字符串。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<pre class="codehilite"><code>from collections import namedtuple
+from enum import Enum
 
-<span class="k">class</span> <span class="nc">Species</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="n">cat</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">dog</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="n">horse</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="n">aardvark</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="n">butterfly</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">owl</span> <span class="o">=</span> <span class="mi">6</span>
-    <span class="n">platypus</span> <span class="o">=</span> <span class="mi">7</span>
-    <span class="n">dragon</span> <span class="o">=</span> <span class="mi">8</span>
-    <span class="n">unicorn</span> <span class="o">=</span> <span class="mi">9</span>
-    <span class="c1"># ……</span>
+class Species(Enum):
+    cat = 1
+    dog = 2
+    horse = 3
+    aardvark = 4
+    butterfly = 5
+    owl = 6
+    platypus = 7
+    dragon = 8
+    unicorn = 9
+    # ……
 
-    <span class="n">kitten</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">puppy</span> <span class="o">=</span> <span class="mi">2</span>
+    kitten = 1
+    puppy = 2
 
-<span class="n">Animal</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Animal&#39;</span><span class="p">,</span> <span class="s1">&#39;name age type&#39;</span><span class="p">)</span>
-<span class="n">perry</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Perry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Species</span><span class="o">.</span><span class="n">cat</span><span class="p">)</span>
-<span class="n">drogon</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Drogon&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Species</span><span class="o">.</span><span class="n">dragon</span><span class="p">)</span>
-<span class="n">tom</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Species</span><span class="o">.</span><span class="n">cat</span><span class="p">)</span>
-<span class="n">charlie</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Charlie&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Species</span><span class="o">.</span><span class="n">kitten</span><span class="p">)</span>
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name=&quot;Perry&quot;, age=31, type=Species.cat)
+drogon = Animal(name=&quot;Drogon&quot;, age=4, type=Species.dragon)
+tom = Animal(name=&quot;Tom&quot;, age=75, type=Species.cat)
+charlie = Animal(name=&quot;Charlie&quot;, age=2, type=Species.kitten)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">charlie</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">tom</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">charlie</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
-</code></pre></div>
+print(charlie.type == tom.type)
+print(charlie.type)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>True
+<pre class="codehilite"><code>True
 Species.cat
-</code></pre></div>
+</code></pre>
 
 <p>这样就没有那么容易错误了，但应该只使用定义了的枚举类型。有三种方法访问枚举类型，如以下方法都可以获取<code>cat</code>的值：</p>
-<div class="codehilite"><pre><span></span><code>Species(1)
-Species[&#39;cat&#39;]
+<pre class="codehilite"><code>Species(1)
+Species['cat']
 Species.cat
-</code></pre></div>
+</code></pre>
 
 <h3 id="enumerate">枚举Enumerate</h3>
 <p>枚举是python的内置函数。它的作用举例来说明，如下：</p>
 <p><strong>枚举允许遍历数据并自动计数。</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">,</span> <span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;梨子&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">some_list</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>some_list = ['苹果', '香蕉', '葡萄', '梨子']
+for counter, value in enumerate(some_list):
+    print(counter, value)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">0</span> <span class="n">苹果</span>
-<span class="mf">1</span> <span class="n">香蕉</span>
-<span class="mf">2</span> <span class="n">葡萄</span>
-<span class="mf">3</span> <span class="n">梨子</span>
-</code></pre></div>
+<pre class="codehilite"><code>0 苹果
+1 香蕉
+2 葡萄
+3 梨子
+</code></pre>
 
 <p><strong>枚举还可以接受一些可选参数。</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">,</span> <span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;梨子&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">enumerate</span><span class="p">(</span><span class="n">some_list</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>   <span class="c1"># 计数从2开始</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>some_list = ['苹果', '香蕉', '葡萄', '梨子']
+for counter, value in enumerate(some_list,2):   # 计数从2开始
+    print(counter, value)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">2</span> <span class="n">苹果</span>
-<span class="mf">3</span> <span class="n">香蕉</span>
-<span class="mf">4</span> <span class="n">葡萄</span>
-<span class="mf">5</span> <span class="n">梨子</span>
-</code></pre></div>
+<pre class="codehilite"><code>2 苹果
+3 香蕉
+4 葡萄
+5 梨子
+</code></pre>
 
 <p><strong>枚举可以用来创建包含索引的元组列表。</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">,</span> <span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;梨子&#39;</span><span class="p">]</span>
-<span class="n">counter_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">enumerate</span><span class="p">(</span><span class="n">some_list</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">counter_list</span><span class="p">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>some_list = ['苹果', '香蕉', '葡萄', '梨子']
+counter_list = list(enumerate(some_list))
+print(counter_list)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>[(0, &#39;苹果&#39;), (1, &#39;香蕉&#39;), (2, &#39;葡萄&#39;), (3, &#39;梨子&#39;)]
-</code></pre></div>
+<pre class="codehilite"><code>[(0, '苹果'), (1, '香蕉'), (2, '葡萄'), (3, '梨子')]
+</code></pre>
 
 <h3 id="_11">对象自省</h3>
 <p>自省，上指在运行时来判断一个对象的类型的能力。</p>
 <h4 id="dir">dir</h4>
 <p>dir是用于自省的最重要的函数之一。它返回一个列表，列出一个对象所拥有的属性和方法。如下：</p>
-<div class="codehilite"><pre><span></span><code>my_list = [1, 2, 3]
+<pre class="codehilite"><code>my_list = [1, 2, 3]
 print(dir(my_list))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__class_getitem__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__delitem__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__iadd__&#39;, &#39;__imul__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__reversed__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__setitem__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;append&#39;, &#39;clear&#39;, &#39;copy&#39;, &#39;count&#39;, &#39;extend&#39;, &#39;index&#39;, &#39;insert&#39;, &#39;pop&#39;, &#39;remove&#39;, &#39;reverse&#39;, &#39;sort&#39;]
-</code></pre></div>
+<pre class="codehilite"><code>['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+</code></pre>
 
 <p>上面的自省给了这个列表对象所有的方法的名字，如果你不清楚其所具有的方法，可以使用dir()来查询。</p>
 <h4 id="typeid">type和id</h4>
 <p><strong>type函数返回一个对象的类型。如下：</strong></p>
-<div class="codehilite"><pre><span></span><code>print(type(&#39;&#39;))
+<pre class="codehilite"><code>print(type(''))
 print(type([]))
 print(type({}))
 print(type(dict))
 print(type(3))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>&lt;class &#39;str&#39;&gt;
-&lt;class &#39;list&#39;&gt;
-&lt;class &#39;dict&#39;&gt;
-&lt;class &#39;type&#39;&gt;
-&lt;class &#39;int&#39;&gt;
-</code></pre></div>
+<pre class="codehilite"><code>&lt;class 'str'&gt;
+&lt;class 'list'&gt;
+&lt;class 'dict'&gt;
+&lt;class 'type'&gt;
+&lt;class 'int'&gt;
+</code></pre>
 
 <p><strong>id()函数返回任意不同各类对象的唯一id。如下：</strong></p>
-<div class="codehilite"><pre><span></span><code>name = &quot;tester&quot;
+<pre class="codehilite"><code>name = &quot;tester&quot;
 print(id(name))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1546700355120</span>
-</code></pre></div>
+<pre class="codehilite"><code>1546700355120
+</code></pre>
 
 <h4 id="inspect">inspect模块</h4>
 <p>inspect模块也提供了许多有用的函数，来获取活跃对象的信息。比如，你可以查看一个对象的成员，只需运行：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">inspect</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
-</code></pre></div>
+<pre class="codehilite"><code>import inspect
+print(inspect.getmembers(str))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="p">[(</span><span class="s">&#39;__add__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__add__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__class__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">class</span> <span class="s">&#39;type&#39;</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__contains__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__contains__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__delattr__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__dir__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__dir__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s">&quot;str(object=&#39;&#39;) -&gt; str\nstr(bytes_or_buffer[, encoding[, errors]]) -&gt; str\n\nCreate a new string object from the given object. If encoding or\nerrors is specified, then the object must expose a data buffer\nthat will be decoded using the given encoding and error handler.\nOtherwise, returns the result of object.__str__() (if defined)\nor repr(object).\nencoding defaults to sys.getdefaultencoding().\nerrors defaults to &#39;</span><span class="n">strict</span><span class="s">&#39;.&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__eq__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__eq__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__format__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__format__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__ge__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__ge__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__getattribute__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__getitem__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__getitem__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__getnewargs__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__getnewargs__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__gt__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__gt__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__hash__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__hash__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__init__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__init__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__init_subclass__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="kr">in</span> <span class="n">method</span> <span class="n">__init_subclass__</span> <span class="kr">of</span> <span class="kr">type</span> <span class="n">object</span> <span class="n">at</span> <span class="mh">0x00007FF9D967AC60</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__iter__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__iter__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__le__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__le__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__len__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__len__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__lt__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__lt__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__mod__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__mod__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__mul__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__mul__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__ne__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__ne__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__new__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="kr">in</span> <span class="n">method</span> <span class="n">__new__</span> <span class="kr">of</span> <span class="kr">type</span> <span class="n">object</span> <span class="n">at</span> <span class="mh">0x00007FF9D967AC60</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__reduce__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__reduce_ex__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__reduce_ex__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__repr__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__repr__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__rmod__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__rmod__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__rmul__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__rmul__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__setattr__&#39;</span> <span class="kr">of</span> <span class="s">&#39;object&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;__sizeof__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__str__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">slot</span> <span class="n">wrapper</span> <span class="s">&#39;__str__&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="kr">in</span> <span class="n">method</span> <span class="n">__subclasshook__</span> <span class="kr">of</span> <span class="kr">type</span> <span class="n">object</span> <span class="n">at</span> <span class="mh">0x00007FF9D967AC60</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;capitalize&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;capitalize&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;casefold&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;casefold&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;center&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;center&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;count&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;count&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;encode&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;encode&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;endswith&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;endswith&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;expandtabs&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;expandtabs&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;find&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;find&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;format&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;format&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;format_map&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;format_map&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;index&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;index&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isalnum&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isalnum&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isalpha&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isalpha&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isascii&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isascii&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isdecimal&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isdecimal&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isdigit&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isdigit&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isidentifier&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isidentifier&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;islower&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;islower&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isnumeric&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isnumeric&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isprintable&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isprintable&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isspace&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isspace&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;istitle&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;istitle&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;isupper&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;isupper&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;join&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;join&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;ljust&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;ljust&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;lower&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;lower&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;lstrip&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;lstrip&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;maketrans&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="kr">in</span> <span class="n">method</span> <span class="n">maketrans</span> <span class="kr">of</span> <span class="kr">type</span> <span class="n">object</span> <span class="n">at</span> <span class="mh">0x00007FF9D967AC60</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;partition&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;partition&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;removeprefix&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;removeprefix&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;removesuffix&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;removesuffix&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;replace&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;replace&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rfind&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rfind&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rindex&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rindex&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rjust&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rjust&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rpartition&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rpartition&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rsplit&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rsplit&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;rstrip&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;rstrip&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;split&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;split&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;splitlines&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;splitlines&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;startswith&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;startswith&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;strip&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;strip&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;swapcase&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;swapcase&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;title&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;translate&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;translate&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;upper&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;upper&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;zfill&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">method</span> <span class="s">&#39;zfill&#39;</span> <span class="kr">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="o">&gt;</span><span class="p">)]</span>
-</code></pre></div>
+<pre class="codehilite"><code>[('__add__', &lt;slot wrapper '__add__' of 'str' objects&gt;), ('__class__', &lt;class 'type'&gt;), ('__contains__', &lt;slot wrapper '__contains__' of 'str' objects&gt;), ('__delattr__', &lt;slot wrapper '__delattr__' of 'object' objects&gt;), ('__dir__', &lt;method '__dir__' of 'object' objects&gt;), ('__doc__', &quot;str(object='') -&gt; str\nstr(bytes_or_buffer[, encoding[, errors]]) -&gt; str\n\nCreate a new string object from the given object. If encoding or\nerrors is specified, then the object must expose a data buffer\nthat will be decoded using the given encoding and error handler.\nOtherwise, returns the result of object.__str__() (if defined)\nor repr(object).\nencoding defaults to sys.getdefaultencoding().\nerrors defaults to 'strict'.&quot;), ('__eq__', &lt;slot wrapper '__eq__' of 'str' objects&gt;), ('__format__', &lt;method '__format__' of 'str' objects&gt;), ('__ge__', &lt;slot wrapper '__ge__' of 'str' objects&gt;), ('__getattribute__', &lt;slot wrapper '__getattribute__' of 'str' objects&gt;), ('__getitem__', &lt;slot wrapper '__getitem__' of 'str' objects&gt;), ('__getnewargs__', &lt;method '__getnewargs__' of 'str' objects&gt;), ('__gt__', &lt;slot wrapper '__gt__' of 'str' objects&gt;), ('__hash__', &lt;slot wrapper '__hash__' of 'str' objects&gt;), ('__init__', &lt;slot wrapper '__init__' of 'object' objects&gt;), ('__init_subclass__', &lt;built-in method __init_subclass__ of type object at 0x00007FF9D967AC60&gt;), ('__iter__', &lt;slot wrapper '__iter__' of 'str' objects&gt;), ('__le__', &lt;slot wrapper '__le__' of 'str' objects&gt;), ('__len__', &lt;slot wrapper '__len__' of 'str' objects&gt;), ('__lt__', &lt;slot wrapper '__lt__' of 'str' objects&gt;), ('__mod__', &lt;slot wrapper '__mod__' of 'str' objects&gt;), ('__mul__', &lt;slot wrapper '__mul__' of 'str' objects&gt;), ('__ne__', &lt;slot wrapper '__ne__' of 'str' objects&gt;), ('__new__', &lt;built-in method __new__ of type object at 0x00007FF9D967AC60&gt;), ('__reduce__', &lt;method '__reduce__' of 'object' objects&gt;), ('__reduce_ex__', &lt;method '__reduce_ex__' of 'object' objects&gt;), ('__repr__', &lt;slot wrapper '__repr__' of 'str' objects&gt;), ('__rmod__', &lt;slot wrapper '__rmod__' of 'str' objects&gt;), ('__rmul__', &lt;slot wrapper '__rmul__' of 'str' objects&gt;), ('__setattr__', &lt;slot wrapper '__setattr__' of 'object' objects&gt;), ('__sizeof__', &lt;method '__sizeof__' of 'str' objects&gt;), ('__str__', &lt;slot wrapper '__str__' of 'str' objects&gt;), ('__subclasshook__', &lt;built-in method __subclasshook__ of type object at 0x00007FF9D967AC60&gt;), ('capitalize', &lt;method 'capitalize' of 'str' objects&gt;), ('casefold', &lt;method 'casefold' of 'str' objects&gt;), ('center', &lt;method 'center' of 'str' objects&gt;), ('count', &lt;method 'count' of 'str' objects&gt;), ('encode', &lt;method 'encode' of 'str' objects&gt;), ('endswith', &lt;method 'endswith' of 'str' objects&gt;), ('expandtabs', &lt;method 'expandtabs' of 'str' objects&gt;), ('find', &lt;method 'find' of 'str' objects&gt;), ('format', &lt;method 'format' of 'str' objects&gt;), ('format_map', &lt;method 'format_map' of 'str' objects&gt;), ('index', &lt;method 'index' of 'str' objects&gt;), ('isalnum', &lt;method 'isalnum' of 'str' objects&gt;), ('isalpha', &lt;method 'isalpha' of 'str' objects&gt;), ('isascii', &lt;method 'isascii' of 'str' objects&gt;), ('isdecimal', &lt;method 'isdecimal' of 'str' objects&gt;), ('isdigit', &lt;method 'isdigit' of 'str' objects&gt;), ('isidentifier', &lt;method 'isidentifier' of 'str' objects&gt;), ('islower', &lt;method 'islower' of 'str' objects&gt;), ('isnumeric', &lt;method 'isnumeric' of 'str' objects&gt;), ('isprintable', &lt;method 'isprintable' of 'str' objects&gt;), ('isspace', &lt;method 'isspace' of 'str' objects&gt;), ('istitle', &lt;method 'istitle' of 'str' objects&gt;), ('isupper', &lt;method 'isupper' of 'str' objects&gt;), ('join', &lt;method 'join' of 'str' objects&gt;), ('ljust', &lt;method 'ljust' of 'str' objects&gt;), ('lower', &lt;method 'lower' of 'str' objects&gt;), ('lstrip', &lt;method 'lstrip' of 'str' objects&gt;), ('maketrans', &lt;built-in method maketrans of type object at 0x00007FF9D967AC60&gt;), ('partition', &lt;method 'partition' of 'str' objects&gt;), ('removeprefix', &lt;method 'removeprefix' of 'str' objects&gt;), ('removesuffix', &lt;method 'removesuffix' of 'str' objects&gt;), ('replace', &lt;method 'replace' of 'str' objects&gt;), ('rfind', &lt;method 'rfind' of 'str' objects&gt;), ('rindex', &lt;method 'rindex' of 'str' objects&gt;), ('rjust', &lt;method 'rjust' of 'str' objects&gt;), ('rpartition', &lt;method 'rpartition' of 'str' objects&gt;), ('rsplit', &lt;method 'rsplit' of 'str' objects&gt;), ('rstrip', &lt;method 'rstrip' of 'str' objects&gt;), ('split', &lt;method 'split' of 'str' objects&gt;), ('splitlines', &lt;method 'splitlines' of 'str' objects&gt;), ('startswith', &lt;method 'startswith' of 'str' objects&gt;), ('strip', &lt;method 'strip' of 'str' objects&gt;), ('swapcase', &lt;method 'swapcase' of 'str' objects&gt;), ('title', &lt;method 'title' of 'str' objects&gt;), ('translate', &lt;method 'translate' of 'str' objects&gt;), ('upper', &lt;method 'upper' of 'str' objects&gt;), ('zfill', &lt;method 'zfill' of 'str' objects&gt;)]
+</code></pre>
 
 <h3 id="comprehension">推导式Comprehension</h3>
 <p>推导式是可以从一个数据序列构建另一个新的数据序列的结构体。共有三种推导：</p>
@@ -1224,69 +1224,69 @@ print(id(name))
 <h4 id="_12">列表推导式</h4>
 <p>列表推导式是在一个中括号里包含一个表达式，然后是一个for语句，然后是0个或多个for或者if语句。</p>
 <p><strong>规范</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="n">variable</span> <span class="o">=</span> <span class="p">[</span><span class="n">out_exp</span> <span class="k">for</span> <span class="n">out_exp</span> <span class="ow">in</span> <span class="n">input_list</span> <span class="k">if</span> <span class="n">out_exp</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
-</code></pre></div>
+<pre class="codehilite"><code>variable = [out_exp for out_exp in input_list if out_exp == 2]
+</code></pre>
 
 <p>举例如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">multiples</span> <span class="o">=</span> [<span class="nv">i</span> <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">30</span><span class="ss">)</span> <span class="k">if</span> <span class="nv">i</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span>]
-<span class="nv">print</span><span class="ss">(</span><span class="nv">multiples</span><span class="ss">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>multiples = [i for i in range(30) if i%3 == 0]
+print(multiples)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-</code></pre></div>
+<pre class="codehilite"><code>[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+</code></pre>
 
 <p>这个对快速生成列表很有用。列表推导式在使用for循环生成一个新列表时，非常好用，如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">squared</span> <span class="o">=</span> []
-<span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>:
-    <span class="nv">squared</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">x</span><span class="o">**</span><span class="mi">2</span><span class="ss">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>squared = []
+for x in range(10):
+    squared.append(x**2)
+</code></pre>
 
 <p>这个用推导式就可以简化为：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">squared</span> <span class="o">=</span> [<span class="nv">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>]
-</code></pre></div>
+<pre class="codehilite"><code>squared = [x**2 for x in range(10)]
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-</code></pre></div>
+<pre class="codehilite"><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre>
 
 <h4 id="_13">字典推导式</h4>
 <p>字典推导式和列表推导式用法是类似的。如下：</p>
 <p>将字典中一个字母但不同大小写的值合并起来：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">mcase</span> <span class="o">=</span> {<span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>: <span class="mi">10</span>, <span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span>: <span class="mi">34</span>, <span class="s1">&#39;</span><span class="s">A</span><span class="s1">&#39;</span>: <span class="mi">7</span>, <span class="s1">&#39;</span><span class="s">Z</span><span class="s1">&#39;</span>: <span class="mi">3</span>}
+<pre class="codehilite"><code>mcase = {'a': 10, 'b': 34, 'A': 7, 'Z': 3}
 
-<span class="nv">mcase_frequency</span> <span class="o">=</span> {
-    <span class="nv">k</span>.<span class="nv">lower</span><span class="ss">()</span>:<span class="nv">mcase</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">k</span>.<span class="nv">lower</span><span class="ss">()</span>, <span class="mi">0</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">mcase</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">k</span>.<span class="nv">upper</span><span class="ss">()</span>, <span class="mi">0</span><span class="ss">)</span>
-    <span class="k">for</span> <span class="nv">k</span> <span class="nv">in</span> <span class="nv">mcase</span>.<span class="nv">keys</span><span class="ss">()</span>
+mcase_frequency = {
+    k.lower():mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0)
+    for k in mcase.keys()
 }
 
-<span class="nv">print</span><span class="ss">(</span><span class="nv">mcase_frequency</span><span class="ss">)</span>
-</code></pre></div>
+print(mcase_frequency)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>{&#39;a&#39;: 17, &#39;b&#39;: 34, &#39;z&#39;: 3}
-</code></pre></div>
+<pre class="codehilite"><code>{'a': 17, 'b': 34, 'z': 3}
+</code></pre>
 
 <h4 id="_14">集合推导式</h4>
 <p>它和列表推导式也是类似的。唯一区别在于它作用大括号{}。举个例子：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">squared</span> <span class="o">=</span> {<span class="nv">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> [<span class="mi">1</span>, <span class="mi">1</span>, <span class="mi">2</span>]}
-</code></pre></div>
+<pre class="codehilite"><code>squared = {x**2 for x in [1, 1, 2]}
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>{1, 4}
-</code></pre></div>
+<pre class="codehilite"><code>{1, 4}
+</code></pre>
 
 <h3 id="_15">异常</h3>
 <p>最基本的就是<code>try/except</code>从句。可能触发异常的代码会放到try语句块里，而处理异常的代码会在except语句块中。举个例子：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">try</span><span class="o">:</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="n">open</span><span class="o">(</span><span class="s1">&#39;test.txe&#39;</span><span class="o">,</span> <span class="s1">&#39;rb&#39;</span><span class="o">)</span>
-<span class="n">except</span> <span class="n">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;一个读写错误发生:{}&quot;</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">args</span><span class="o">[-</span><span class="mi">1</span><span class="o">]))</span>
-</code></pre></div>
+<pre class="codehilite"><code>try:
+    file = open('test.txe', 'rb')
+except IOError as e:
+    print(&quot;一个读写错误发生:{}&quot;.format(e.args[-1]))
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="err">一个读写错误发生</span><span class="o">:</span><span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
-</code></pre></div>
+<pre class="codehilite"><code>一个读写错误发生:No such file or directory
+</code></pre>
 
 <h4 id="_16">处理多个异常</h4>
 <p>有三种方法可以用来处理多个异常。</p>
@@ -1319,54 +1319,54 @@ print(id(name))
 <p>当你不知道程序会抛什么异常的时候，第三种方法比较好用。</p>
 <h4 id="finally">finally从句</h4>
 <p>除了try和eccept从句，还有第三个从句，就是finally从句。finally从句中的代码不管异常是否触发都会执行。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">try</span><span class="o">:</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="n">open</span><span class="o">(</span><span class="s1">&#39;test.txe&#39;</span><span class="o">,</span> <span class="s1">&#39;rb&#39;</span><span class="o">)</span>
-<span class="n">except</span> <span class="o">(</span><span class="n">IOError</span><span class="o">,</span> <span class="n">EOFError</span><span class="o">)</span> <span class="k">as</span> <span class="n">e</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;一个读写错误发生:{}&quot;</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">args</span><span class="o">[-</span><span class="mi">1</span><span class="o">]))</span>
-<span class="n">finally</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;不管是否触发异常都会执行。&quot;</span><span class="o">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>try:
+    file = open('test.txe', 'rb')
+except (IOError, EOFError) as e:
+    print(&quot;一个读写错误发生:{}&quot;.format(e.args[-1]))
+finally:
+    print(&quot;不管是否触发异常都会执行。&quot;)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="err">一个读写错误发生</span><span class="o">:</span><span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
-<span class="err">不管是否触发异常都会执行。</span>
-</code></pre></div>
+<pre class="codehilite"><code>一个读写错误发生:No such file or directory
+不管是否触发异常都会执行。
+</code></pre>
 
 <h4 id="tryelse">try/else从句</h4>
 <p>如果想在没有触发异常的时候执行一些代码，可以用else从句来达到目的。如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">try</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;我确信没有异常发生。&quot;</span><span class="o">)</span>
-<span class="n">except</span> <span class="n">Exception</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;exception.&quot;</span><span class="o">)</span>
-<span class="k">else</span><span class="o">:</span>
-    <span class="err">#</span> <span class="err">这里的代码只会在</span><span class="n">try语句没有触发异常时运行</span>
-    <span class="err">#</span> <span class="err">但这里的异常将不会被捕获</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;这里的代码只会在try语句没有触发异常时运行,异常将不会被捕获。&quot;</span><span class="o">)</span>
-<span class="n">finally</span><span class="o">:</span>
-    <span class="n">print</span><span class="o">(</span><span class="s2">&quot;这里将一直被执行。&quot;</span><span class="o">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>try:
+    print(&quot;我确信没有异常发生。&quot;)
+except Exception:
+    print(&quot;exception.&quot;)
+else:
+    # 这里的代码只会在try语句没有触发异常时运行
+    # 但这里的异常将不会被捕获
+    print(&quot;这里的代码只会在try语句没有触发异常时运行,异常将不会被捕获。&quot;)
+finally:
+    print(&quot;这里将一直被执行。&quot;)
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code>我确信没有异常发生。
+<pre class="codehilite"><code>我确信没有异常发生。
 这里的代码只会在try语句没有触发异常时运行,异常将不会被捕获。
 这里将一直被执行。
-</code></pre></div>
+</code></pre>
 
 <p>else从句只会在没有异常的情况下执行，而且它会在finally语句之前执行。</p>
 <h3 id="lambda">lambda表达式</h3>
 <p>lambada表达式是一行函数，也被称为匿名表达式。</p>
 <p><strong>原型</strong></p>
-<div class="codehilite"><pre><span></span><code>lambda 参数:操作(参数)
-</code></pre></div>
+<pre class="codehilite"><code>lambda 参数:操作(参数)
+</code></pre>
 
 <p>如下：</p>
-<div class="codehilite"><pre><span></span><code>add = lambda x, y:x + y
+<pre class="codehilite"><code>add = lambda x, y:x + y
 print(add(3, 5))
-</code></pre></div>
+</code></pre>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">8</span>
-</code></pre></div>
+<pre class="codehilite"><code>8
+</code></pre>
 
 <p>lambda表达式，可以在一些特殊的情况下使用：</p>
 <ul>

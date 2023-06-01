@@ -46,19 +46,19 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共13726个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox+tint2安装过程</span><span>2022-07-18&nbsp;&nbsp;共7837个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共22592个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共10409个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共7477个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2805个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共7946个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Debain通用设置.html"><span><label style="color: #38b6fd"></label>&nbsp;Debain通用设置</span><span>2019-11-14&nbsp;&nbsp;共6264个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共8940个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span><span>2019-07-05&nbsp;&nbsp;共6575个字</span></a></li>
             
           </ul>
         </div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian命令apt和dpkg用法</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>debian命令apt和dpkg用法</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -120,175 +120,175 @@
 </div>
 <h3 id="1-apt">1. apt命令用法</h3>
 <h4 id="1">1) 从软件源服务器获取最新的软件信息并缓存到本地</h4>
-<div class="codehilite"><pre><span></span><code>apt update
-</code></pre></div>
+<pre class="codehilite"><code>apt update
+</code></pre>
 
 <p>因为很多apt的其他命令都是要通过比对版本信息来进行操作的，如果每次都去对比线上的版本信息效率肯定不理想，也没必要，所以做了一个缓存的机制。</p>
 <h4 id="2">2) 从本地仓库中对比系统中所有已安装的软件，如果有新版本的话则进行升级</h4>
-<div class="codehilite"><pre><span></span><code>apt upgrade
-</code></pre></div>
+<pre class="codehilite"><code>apt upgrade
+</code></pre>
 
 <h3 id="3">3）列出本地仓库中所有的软件包名</h3>
-<div class="codehilite"><pre><span></span><code>apt list
-</code></pre></div>
+<pre class="codehilite"><code>apt list
+</code></pre>
 
 <h4 id="4">4) 从本地仓库中查找指定的包名</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">[</span><span class="n">package</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt list [package]
+</code></pre>
 
 <p>支持通配符，比如"apt list zlib*"就能列出以zlib开头的所有包名</p>
 <h4 id="5">5) 列出系统中所有已安装的包名</h4>
-<div class="codehilite"><pre><span></span><code>apt list --installed
-</code></pre></div>
+<pre class="codehilite"><code>apt list --installed
+</code></pre>
 
 <h4 id="6-list">6) 与list类似，通过给出的关键字进行搜索，列出所有的包和其描述</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="k">search</span><span class="w"> </span><span class="o">[</span><span class="n">key</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt search [key]
+</code></pre>
 
 <h4 id="7">7) 列出指定包的详细情况</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">show</span><span class="w"> </span><span class="o">[</span><span class="n">package</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt show [package]
+</code></pre>
 
 <p>列出指定包的详细情况，包名要填写完整。</p>
 <p>可以看到非常完整的信息，比如版本、大小、依赖的其他包等。</p>
 <h4 id="8">8) 安装指定的包，并同时安装其依赖的其他包</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">[</span><span class="n">package</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt install [package]
+</code></pre>
 
 <h4 id="9">9) 卸载包，但不删除相关配置文件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="o">[</span><span class="n">package</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt remove [package]
+</code></pre>
 
 <p>包名支持通配符</p>
 <h4 id="10">10) 卸载因安装软件自动安装的依赖，而现在又不需要的依赖包</h4>
-<div class="codehilite"><pre><span></span><code>apt autoremove
-</code></pre></div>
+<pre class="codehilite"><code>apt autoremove
+</code></pre>
 
 <h4 id="11">11) 卸载包，同时删除相关配置文件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">apt</span><span class="w"> </span><span class="n">purge</span><span class="w"> </span><span class="o">[</span><span class="n">package</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>apt purge [package]
+</code></pre>
 
 <p>包名支持通配符</p>
 <h4 id="12">12) 删除所有已下载的软件包</h4>
-<div class="codehilite"><pre><span></span><code>apt clean
-</code></pre></div>
+<pre class="codehilite"><code>apt clean
+</code></pre>
 
 <h4 id="13-clean">#### 13) 类似clean，但删除的是过期的包（即已不能下载或者是无用的包）</h4>
-<div class="codehilite"><pre><span></span><code>apt autoclean
-</code></pre></div>
+<pre class="codehilite"><code>apt autoclean
+</code></pre>
 
 <h3 id="2-dpkg">2. dpkg命令用法</h3>
 <p>dpkg是一个Debian的一个命令行工具，它可以用来安装、删除、构建和管理Debian的软件包。
 下面是它的一些命令解释：</p>
 <h4 id="1_1">1）安装软件</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -i &lt;.deb file name&gt;
+<pre class="codehilite"><code>命令行：dpkg -i &lt;.deb file name&gt;
 示例：dpkg -i avg71flm_r28-1_i386.deb
-</code></pre></div>
+</code></pre>
 
 <h4 id="2_1">2）安装一个目录下面所有的软件包</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -R
+<pre class="codehilite"><code>命令行：dpkg -R
 示例：dpkg -R /usr/local/src
-</code></pre></div>
+</code></pre>
 
 <h4 id="3_1">3）释放软件包，但是不进行配置</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –unpack package_file 如果和-R一起使用，参数可以是一个目录
+<pre class="codehilite"><code>命令行：dpkg –unpack package_file 如果和-R一起使用，参数可以是一个目录
 示例：dpkg –unpack avg71flm_r28-1_i386.deb
-</code></pre></div>
+</code></pre>
 
 <h4 id="4_1">4）重新配置和释放软件包</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –configure package_file
+<pre class="codehilite"><code>命令行：dpkg –configure package_file
 如果和-a一起使用，将配置所有没有配置的软件包
 示例：dpkg –configure avg71flm_r28-1_i386.deb
-</code></pre></div>
+</code></pre>
 
 <h4 id="5_1">5）删除软件包（保留其配置信息）</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -r
+<pre class="codehilite"><code>命令行：dpkg -r
 示例：dpkg -r avg71flm
-</code></pre></div>
+</code></pre>
 
 <h4 id="6">6）替代软件包的信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –update-avail &lt;Packages-file&gt;
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –update-avail &lt;Packages-file&gt;
+</code></pre>
 
 <h4 id="7_1">7）合并软件包信息</h4>
-<div class="codehilite"><pre><span></span><code>dpkg –merge-avail &lt;Packages-file&gt;
-</code></pre></div>
+<pre class="codehilite"><code>dpkg –merge-avail &lt;Packages-file&gt;
+</code></pre>
 
 <h4 id="8_1">8）从软件包里面读取软件的信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -A package_file
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -A package_file
+</code></pre>
 
 <h4 id="9_1">9）删除一个包（包括配置信息）</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -P
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -P
+</code></pre>
 
 <h4 id="10uninstall">10）丢失所有的Uninstall的软件包信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –forget-old-unavail
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –forget-old-unavail
+</code></pre>
 
 <h4 id="11avaliable">11）删除软件包的Avaliable信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –clear-avail
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –clear-avail
+</code></pre>
 
 <h4 id="12_1">12）查找只有部分安装的软件包信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -C
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -C
+</code></pre>
 
 <h4 id="13">13）比较同一个包的不同版本之间的差别</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –compare-versions ver1 op ver2
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –compare-versions ver1 op ver2
+</code></pre>
 
 <h4 id="14">14）显示帮助信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –help
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –help
+</code></pre>
 
 <h4 id="15dpkglicence">15）显示dpkg的Licence</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –licence (or) dpkg –license
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –licence (or) dpkg –license
+</code></pre>
 
 <h4 id="16dpkg">16）显示dpkg的版本号</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg –version
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg –version
+</code></pre>
 
 <h4 id="17deb">17）建立一个deb文件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">命令行</span><span class="err">：</span><span class="n">dpkg</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="n">direc</span><span class="err">×</span><span class="n">y</span><span class="w"> </span><span class="o">[</span><span class="n">filename</span><span class="o">]</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -b direc×y [filename]
+</code></pre>
 
 <h4 id="18deb">18）显示一个Deb文件的目录</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -c filename
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -c filename
+</code></pre>
 
 <h4 id="19deb">19）显示一个Deb的说明</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -I filename [control-file]
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -I filename [control-file]
+</code></pre>
 
 <h4 id="20deb">20）搜索Deb包</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -l package-name-pattern
+<pre class="codehilite"><code>命令行：dpkg -l package-name-pattern
 示例：dpkg -I vim
-</code></pre></div>
+</code></pre>
 
 <h4 id="21deb">21)显示所有已经安装的Deb包，同时显示版本号以及简短说明</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -l
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -l
+</code></pre>
 
 <h4 id="22">22）报告指定包的状态信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -s package-name
+<pre class="codehilite"><code>命令行：dpkg -s package-name
 示例：dpkg -s ssh
-</code></pre></div>
+</code></pre>
 
 <h4 id="23">23）显示一个包安装到系统里面的文件目录信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -L package-Name
+<pre class="codehilite"><code>命令行：dpkg -L package-Name
 示例：dpkg -L apache2
-</code></pre></div>
+</code></pre>
 
 <h4 id="24">24）搜索指定包里面的文件（模糊查询）</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -S filename-search-pattern
-</code></pre></div>
+<pre class="codehilite"><code>命令行：dpkg -S filename-search-pattern
+</code></pre>
 
 <h4 id="25">25）显示包的具体信息</h4>
-<div class="codehilite"><pre><span></span><code>命令行：dpkg -p package-name
+<pre class="codehilite"><code>命令行：dpkg -p package-name
 示例：dpkg -p cacti
-</code></pre></div></div>
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

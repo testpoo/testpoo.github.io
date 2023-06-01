@@ -46,11 +46,11 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共92210个字</span></a></li>
+            <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span><span>2022-04-18&nbsp;&nbsp;共48992个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span><span>2020.05.09&nbsp;&nbsp;共17915个字</span></a></li>
+            <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span><span>2020.05.09&nbsp;&nbsp;共8129个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span><span>2019-10-11&nbsp;&nbsp;共19364个字</span></a></li>
+            <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span><span>2019-10-11&nbsp;&nbsp;共4893个字</span></a></li>
             
           </ul>
         </div>
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>mysql笔记</span><span>一个80后老人，专注测试领域<br />最后更新于2023-03-22 09:44:18</span></div>
+      <div class="header"><span>mysql笔记</span><span>一个80后老人，专注测试领域<br />最后更新于2023-06-01 17:18:41</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -77,153 +77,153 @@
 </div>
 <h3 id="_1">创建用户</h3>
 <p>非本地登录</p>
-<div class="codehilite"><pre><span></span><code>CREATE USER &#39;test&#39;@&#39;%&#39; IDENTIFIED BY &#39;test&#39;;
-</code></pre></div>
+<pre class="codehilite"><code>CREATE USER 'test'@'%' IDENTIFIED BY 'test';
+</code></pre>
 
 <p>本地登录</p>
-<div class="codehilite"><pre><span></span><code>CREATE USER &#39;test&#39;@&#39;127.0.0.1&#39; IDENTIFIED BY &#39;test&#39;;
-CREATE USER &#39;test&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;test&#39;;
-</code></pre></div>
+<pre class="codehilite"><code>CREATE USER 'test'@'127.0.0.1' IDENTIFIED BY 'test';
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'test';
+</code></pre>
 
 <p>创建数据库</p>
-<div class="codehilite"><pre><span></span><code>CREATE database testrcb default character set utf8 collate utf8_general_ci;
-</code></pre></div>
+<pre class="codehilite"><code>CREATE database testrcb default character set utf8 collate utf8_general_ci;
+</code></pre>
 
 <p>给用户授权</p>
-<div class="codehilite"><pre><span></span><code><span class="n">grant</span><span class="w"> </span><span class="n">select</span><span class="p">,</span><span class="n">delete</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">create</span><span class="p">,</span><span class="n">drop</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">testrcb</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">test</span><span class="s">@&quot;%&quot;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">增删改查</span><span class="w"></span>
-<span class="n">grant</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">privileges</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">testrcb</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">test</span><span class="p">@</span><span class="n">localhost</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="err">&#39;</span><span class="n">test</span><span class="err">&#39;</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">all</span><span class="w"></span>
-</code></pre></div>
+<pre class="codehilite"><code>grant select,delete,update,create,drop on testrcb.* to test@&quot;%&quot; identified by &quot;test&quot;; -- 增删改查
+grant all privileges on testrcb.* to test@localhost identified by 'test'; -- all
+</code></pre>
 
 <p>修改密码</p>
-<div class="codehilite"><pre><span></span><code>UPDATE mysql.user SET PASSWORD=PASSWORD(&#39;test&#39;) WHERE User = &#39;test&#39;
-</code></pre></div>
+<pre class="codehilite"><code>UPDATE mysql.user SET PASSWORD=PASSWORD('test') WHERE User = 'test'
+</code></pre>
 
 <h3 id="mysql">MYSQL配置</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">[mysql]</span>
+<pre class="codehilite"><code>[mysql]
 
-<span class="c1"># 设置mysql客户端默认字符集</span>
+# 设置mysql客户端默认字符集
 
-<span class="na">default-character-set</span><span class="o">=</span><span class="s">utf8 </span>
+default-character-set=utf8 
 
-<span class="k">[mysqld]</span>
+[mysqld]
 
-<span class="c1">#设置3306端口</span>
-<span class="na">port</span> <span class="o">=</span> <span class="s">3306 </span>
+#设置3306端口
+port = 3306 
 
-<span class="c1"># 设置mysql的安装目录</span>
-<span class="na">basedir</span><span class="o">=</span><span class="s">C:\Program Files\MySQL\MySQL Server 5.6</span>
+# 设置mysql的安装目录
+basedir=C:\Program Files\MySQL\MySQL Server 5.6
 
-<span class="c1"># 设置mysql数据库的数据的存放目录</span>
-<span class="na">datadir</span><span class="o">=</span><span class="s">C:\Program Files\MySQL\MySQL Server 5.6\data</span>
+# 设置mysql数据库的数据的存放目录
+datadir=C:\Program Files\MySQL\MySQL Server 5.6\data
 
-<span class="c1"># 允许最大连接数</span>
-<span class="na">max_connections</span><span class="o">=</span><span class="s">200</span>
+# 允许最大连接数
+max_connections=200
 
-<span class="c1"># 服务端使用的字符集默认为8比特编码的latin1字符集</span>
-<span class="na">character-set-server</span><span class="o">=</span><span class="s">utf8</span>
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+character-set-server=utf8
 
-<span class="c1"># 创建新表时将使用的默认存储引擎</span>
-<span class="na">default-storage-engine</span><span class="o">=</span><span class="s">INNODB</span>
-<span class="na">Access denied for user &#39;test&#39;@&#39;localhost&#39; (using password: YES)</span>
-</code></pre></div>
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+Access denied for user 'test'@'localhost' (using password: YES)
+</code></pre>
 
 <h3 id="_2">字段增加删除修改</h3>
-<div class="codehilite"><pre><span></span><code><span class="err">添加字段的语法：</span><span class="n">alter</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">tablename</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="p">[</span><span class="k">default</span><span class="w"> </span><span class="n">value</span><span class="p">][</span><span class="n">null</span><span class="o">/</span><span class="n">not</span><span class="w"> </span><span class="n">null</span><span class="p">],</span><span class="err">…</span><span class="p">.);</span><span class="w"></span>
-<span class="err">修改字段的语法：</span><span class="n">alter</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">tablename</span><span class="w"> </span><span class="n">modify</span><span class="w"> </span><span class="p">(</span><span class="n">column</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="p">[</span><span class="k">default</span><span class="w"> </span><span class="n">value</span><span class="p">][</span><span class="n">null</span><span class="o">/</span><span class="n">not</span><span class="w"> </span><span class="n">null</span><span class="p">],</span><span class="err">…</span><span class="p">.);</span><span class="w"></span>
-<span class="err">删除字段的语法：</span><span class="n">alter</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">tablename</span><span class="w"> </span><span class="n">drop</span><span class="w"> </span><span class="p">(</span><span class="n">column</span><span class="p">);</span><span class="w"></span>
+<pre class="codehilite"><code>添加字段的语法：alter table tablename add (column datatype [default value][null/not null],….);
+修改字段的语法：alter table tablename modify (column datatype [default value][null/not null],….);
+删除字段的语法：alter table tablename drop (column);
 
-<span class="n">mysql修改字段类型</span><span class="err">：</span><span class="w"></span>
-<span class="o">--</span><span class="err">能修改字段类型、类型长度、默认值、注释</span><span class="w"></span>
-<span class="o">--</span><span class="err">对某字段进行修改</span><span class="w"></span>
-<span class="n">ALTER</span><span class="w">  </span><span class="n">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="n">MODIFY</span><span class="w"> </span><span class="n">COLUMN</span><span class="w"> </span><span class="err">字段名</span><span class="w"> </span><span class="err">新数据类型</span><span class="w"> </span><span class="err">新类型长度</span><span class="w">  </span><span class="err">新默认值</span><span class="w">  </span><span class="err">新注释</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">COLUMN可以省略</span><span class="w"></span>
-<span class="n">alter</span><span class="w">  </span><span class="n">table</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">modify</span><span class="w">  </span><span class="n">column</span><span class="w"> </span><span class="n">column1</span><span class="w">  </span><span class="n">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="err">&#39;注释&#39;</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">正常，能修改字段类型、类型长度、默认值、注释</span><span class="w"></span>
+mysql修改字段类型：
+--能修改字段类型、类型长度、默认值、注释
+--对某字段进行修改
+ALTER  TABLE 表名 MODIFY COLUMN 字段名 新数据类型 新类型长度  新默认值  新注释; -- COLUMN可以省略
+alter  table table1 modify  column column1  decimal(10,1) DEFAULT NULL COMMENT '注释'; -- 正常，能修改字段类型、类型长度、默认值、注释
 
-<span class="n">mysql修改字段名</span><span class="err">：</span><span class="w"></span>
-<span class="n">ALTER</span><span class="w">  </span><span class="n">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="n">CHANGE</span><span class="w"> </span><span class="err">旧字段名</span><span class="w"> </span><span class="err">新字段名</span><span class="w"> </span><span class="err">新数据类型</span><span class="p">;</span><span class="w">     </span>
-<span class="n">alter</span><span class="w">  </span><span class="n">table</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT</span><span class="w"> </span><span class="mf">1.2</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="err">&#39;注释&#39;</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">正常，此时字段名称没有改变，能修改字段类型、类型长度、默认值、注释</span><span class="w"></span>
-<span class="n">alter</span><span class="w">  </span><span class="n">table</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="n">column2</span><span class="w"> </span><span class="n">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="err">&#39;注释&#39;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">正常，能修改字段名、字段类型、类型长度、默认值、注释</span><span class="w"></span>
-<span class="n">alter</span><span class="w">  </span><span class="n">table</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="n">column2</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="n">decimal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="n">COMMENT</span><span class="w"> </span><span class="err">&#39;注释&#39;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">正常，能修改字段名、字段类型、类型长度、默认值、注释</span><span class="w"></span>
-<span class="n">alter</span><span class="w">  </span><span class="n">table</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="n">column2</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">报错</span><span class="w">  </span>
-</code></pre></div>
+mysql修改字段名：
+ALTER  TABLE 表名 CHANGE 旧字段名 新字段名 新数据类型;     
+alter  table table1 change column1 column1 varchar(100) DEFAULT 1.2 COMMENT '注释'; -- 正常，此时字段名称没有改变，能修改字段类型、类型长度、默认值、注释
+alter  table table1 change column1 column2 decimal(10,1) DEFAULT NULL COMMENT '注释' -- 正常，能修改字段名、字段类型、类型长度、默认值、注释
+alter  table table1 change column2 column1 decimal(10,1) DEFAULT NULL COMMENT '注释' -- 正常，能修改字段名、字段类型、类型长度、默认值、注释
+alter  table table1 change column1 column2; -- 报错  
+</code></pre>
 
 <h3 id="_3">替换特定字段的值</h3>
-<div class="codehilite"><pre><span></span><code>update hoyi_zfb_activity_enroll set shop_name = replace(shop_name,&#39;Test&#39;,&#39;&#39;); 
-</code></pre></div>
+<pre class="codehilite"><code>update hoyi_zfb_activity_enroll set shop_name = replace(shop_name,'Test',''); 
+</code></pre>
 
 <h3 id="_4">查找库中含有特定字段的表</h3>
-<div class="codehilite"><pre><span></span><code>SELECT * FROM information_schema.columns WHERE column_name=&#39;shop_name&#39; AND table_schema = &#39;tyrcb14&#39;; 
-SELECT * FROM information_schema.tables WHERE TABLE_NAME LIKE &#39;%shop%&#39; AND table_schema = &#39;tyrcb14&#39;; 
-</code></pre></div>
+<pre class="codehilite"><code>SELECT * FROM information_schema.columns WHERE column_name='shop_name' AND table_schema = 'tyrcb14'; 
+SELECT * FROM information_schema.tables WHERE TABLE_NAME LIKE '%shop%' AND table_schema = 'tyrcb14'; 
+</code></pre>
 
 <h3 id="auto_increment">修改auto_increment</h3>
-<div class="codehilite"><pre><span></span><code>alter table hoyi_etc_order auto_increment=38;
-</code></pre></div>
+<pre class="codehilite"><code>alter table hoyi_etc_order auto_increment=38;
+</code></pre>
 
 <h3 id="foreign_key_checks">查询FOREIGN_KEY_CHECKS的值</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="nb">@@FOREIGN_KEY_CHECKS</span><span class="p">;</span><span class="w"> </span>
-</code></pre></div>
+<pre class="codehilite"><code>SELECT @@FOREIGN_KEY_CHECKS; 
+</code></pre>
 
 <h3 id="_5">备份数据库</h3>
-<div class="codehilite"><pre><span></span><code>mysqldump -utest -p123 --databases test  &gt; testdp.sql
+<pre class="codehilite"><code>mysqldump -utest -p123 --databases test  &gt; testdp.sql
 mysqldump -utest -p123 --databases test  &lt; testdp.sql
-</code></pre></div>
+</code></pre>
 
 <h3 id="mysql_1">MYSQL卡死了就这样搞</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">SHOW</span> <span class="nv">PROCESSLIST</span><span class="c1">;</span>
-<span class="nv">SELECT</span> <span class="o">*</span> <span class="nv">FROM</span> <span class="nv">information_schema</span>.<span class="nv">innodb_trx</span><span class="c1">;</span>
-<span class="nv">SELECT</span> <span class="o">*</span> <span class="nv">FROM</span>  <span class="nv">performance_schema</span>.<span class="nv">events_statements_current</span> <span class="nv">WHERE</span> <span class="nv">sql_text</span> <span class="nv">LIKE</span> <span class="s1">&#39;</span><span class="s">%video%</span><span class="s1">&#39;</span><span class="c1">;</span>
-<span class="nv">KILL</span> <span class="nv">XXX</span><span class="c1">;</span>
-</code></pre></div>
+<pre class="codehilite"><code>SHOW PROCESSLIST;
+SELECT * FROM information_schema.innodb_trx;
+SELECT * FROM  performance_schema.events_statements_current WHERE sql_text LIKE '%video%';
+KILL XXX;
+</code></pre>
 
 <h3 id="mysql_2">Mysql复制表结构、表数据的方法</h3>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="err">、</span><span class="n">复制表结构及数据到新表</span><span class="err">（</span><span class="n">不包含主键</span><span class="err">、</span><span class="n">索引</span><span class="err">、</span><span class="n">分区等</span><span class="err">）</span>
+<pre class="codehilite"><code>1、复制表结构及数据到新表（不包含主键、索引、分区等）
 
-<span class="n">CREATE</span> <span class="nb">TAB</span><span class="n">LE</span> <span class="n">新表</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">旧表</span>
+CREATE TABLE 新表 SELECT * FROM 旧表
 
-<span class="n">或</span> <span class="n">CREATE</span> <span class="nb">TAB</span><span class="n">LE</span> <span class="n">新表</span> <span class="n">AS</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">旧表</span>
+或 CREATE TABLE 新表 AS SELECT * FROM 旧表
 
-<span class="n">这种方法将旧表基本结构和数据复制到新表</span><span class="err">。</span>
+这种方法将旧表基本结构和数据复制到新表。
 
-<span class="n">不过这种方法的一个最不好的地方就是新表中没有了旧表的主键</span><span class="err">、</span><span class="n">索引</span><span class="err">、</span><span class="n">Extra</span><span class="err">（</span><span class="n">auto_increment</span><span class="err">，</span><span class="n">字符集编码及排序</span><span class="err">）、</span><span class="n">注释</span><span class="err">、</span><span class="n">分区等属性</span> <span class="n">以及触发器</span><span class="err">、</span><span class="n">外键等</span><span class="err">。</span>
+不过这种方法的一个最不好的地方就是新表中没有了旧表的主键、索引、Extra（auto_increment，字符集编码及排序）、注释、分区等属性 以及触发器、外键等。
 
-<span class="mf">2</span><span class="err">、</span><span class="n">只复制表结构到新表</span>
+2、只复制表结构到新表
 
-<span class="n">CREATE</span> <span class="nb">TAB</span><span class="n">LE</span> <span class="n">新表</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">旧表</span> <span class="n">WHERE</span> <span class="mf">1</span><span class="o">=</span><span class="mf">2</span> <span class="err">（</span><span class="n">只是第一种方式去除掉数据</span><span class="err">）</span>
+CREATE TABLE 新表 SELECT * FROM 旧表 WHERE 1=2 （只是第一种方式去除掉数据）
 
-<span class="n">CREATE</span> <span class="nb">TAB</span><span class="n">LE</span> <span class="n">新表</span> <span class="n">LIKE</span> <span class="n">旧表</span>
+CREATE TABLE 新表 LIKE 旧表
 
-<span class="n">这种方式的复制可以复制旧表的主键</span><span class="err">、</span><span class="n">索引</span><span class="err">、</span><span class="n">Extra</span><span class="err">（</span><span class="n">auto_increment</span><span class="err">，</span><span class="n">字符集编码及排序</span><span class="err">）、</span><span class="n">注释</span><span class="err">、</span><span class="n">分区等属性</span><span class="err">。</span><span class="n">但是不包含触发器</span><span class="err">、</span><span class="n">外键等</span>
+这种方式的复制可以复制旧表的主键、索引、Extra（auto_increment，字符集编码及排序）、注释、分区等属性。但是不包含触发器、外键等
 
-<span class="mf">3</span><span class="err">、</span><span class="n">复制旧表的数据到新表</span>
+3、复制旧表的数据到新表
 
-<span class="n">INSERT</span> <span class="nb">INT</span><span class="n">O</span> <span class="n">新表</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">旧表</span>
+INSERT INTO 新表 SELECT * FROM 旧表
 
-<span class="n">INSERT</span> <span class="nb">INT</span><span class="n">O</span> <span class="n">新表</span><span class="p">(</span><span class="n">字段1</span><span class="p">,</span><span class="n">字段2</span><span class="p">,</span><span class="mf">.......</span><span class="p">)</span> <span class="n">SELECT</span> <span class="n">字段1</span><span class="p">,</span><span class="n">字段2</span><span class="p">,</span><span class="mf">......</span> <span class="n">FROM</span> <span class="n">旧表</span>
+INSERT INTO 新表(字段1,字段2,.......) SELECT 字段1,字段2,...... FROM 旧表
 
-<span class="n">上面两条语句的前提是新表已经存在</span>
+上面两条语句的前提是新表已经存在
 
-<span class="mf">4</span><span class="err">、</span><span class="n">复制表结构及数据到新表</span><span class="err">（</span><span class="n">包含主键</span><span class="err">、</span><span class="n">索引</span><span class="err">、</span><span class="n">分区等</span><span class="err">）</span>
+4、复制表结构及数据到新表（包含主键、索引、分区等）
 
-<span class="n">结合上述第2</span><span class="err">、</span><span class="mf">3</span><span class="n">点</span><span class="err">，</span><span class="n">即</span><span class="err">：</span>
+结合上述第2、3点，即：
 
-<span class="n">先</span> <span class="n">CREATE</span> <span class="nb">TAB</span><span class="n">LE</span> <span class="n">新表</span> <span class="n">LIKE</span> <span class="n">旧表</span>
+先 CREATE TABLE 新表 LIKE 旧表
 
-<span class="n">然后</span> <span class="n">INSERT</span> <span class="nb">INT</span><span class="n">O</span> <span class="n">新表</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">旧表</span>
-</code></pre></div>
+然后 INSERT INTO 新表 SELECT * FROM 旧表
+</code></pre>
 
 <h3 id="_6">导出表结构和数据</h3>
-<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="n">导出结构不导出数据</span>
-<span class="n">mysqldump</span> <span class="o">-</span><span class="n">d</span> <span class="n">数据库名</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span> <span class="o">&gt;</span> <span class="n">xxx</span><span class="mf">.</span><span class="n">sql</span>
+<pre class="codehilite"><code>1.导出结构不导出数据
+mysqldump -d 数据库名 -uroot -p &gt; xxx.sql
 
-<span class="mf">2.</span><span class="n">导出数据不导出结构</span>
-<span class="n">mysqldump</span> <span class="o">-</span><span class="n">t</span> <span class="n">数据库名</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span> <span class="o">&gt;</span> <span class="n">xxx</span><span class="mf">.</span><span class="n">sql</span>
+2.导出数据不导出结构
+mysqldump -t 数据库名 -uroot -p &gt; xxx.sql
 
-<span class="mf">3.</span><span class="n">导出数据和表结构</span>
-<span class="n">mysqldump</span> <span class="n">数据库名</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span> <span class="o">&gt;</span> <span class="n">xxx</span><span class="mf">.</span><span class="n">sql</span>
+3.导出数据和表结构
+mysqldump 数据库名 -uroot -p &gt; xxx.sql
 
-<span class="mf">4.</span><span class="n">导出特定表的结构</span>
-<span class="n">mysqldump</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">B数据库名</span> <span class="o">--</span><span class="nb">tab</span><span class="n">le</span> <span class="n">表名</span> <span class="o">&gt;</span> <span class="n">xxx</span><span class="mf">.</span><span class="n">sql</span>
-</code></pre></div></div>
+4.导出特定表的结构
+mysqldump -uroot -p -B数据库名 --table 表名 &gt; xxx.sql
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

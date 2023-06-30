@@ -6,9 +6,374 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2023-06-01 17:18:41</pubDate>  
-    <lastBuildDate>2023-06-01 17:18:41</lastBuildDate>  
+    <pubDate>2023-06-30 15:43:22</pubDate>  
+    <lastBuildDate>2023-06-30 15:43:22</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>Arch+openbox+tint2安装过程</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1.连接网络&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2.更新系统时间&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3.建立硬盘分区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4.格式化分区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5&#34;&gt;5.挂载分区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6.安装必需的软件包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7.配置系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8.本地化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9&#34;&gt;9.网络配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#10root&#34;&gt;10.修改root密码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11.安装引导程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12&#34;&gt;12.创建用户&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6_1&#34;&gt;6. 安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7_1&#34;&gt;7.附录&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#71-deepin&#34;&gt;7.1 安装deepin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#72-xfce4&#34;&gt;7.2 安装xfce4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#73&#34;&gt;7.3 网络问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#74-nm&#34;&gt;7.4 nm连接网络命令&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-sudo&#34;&gt;4. 将当前用户加入sudo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8-5&#34;&gt;8. 去掉开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9_1&#34;&gt;9. 安装输入法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10. 触摸板修改&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#11-dpi&#34;&gt;11. 设置dpi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-i3openbox&#34;&gt;12. 启动i3/OpenBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;13. 设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#14&#34;&gt;14. 详细配置文件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1.连接网络&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#iwctl
+[iwd]# device list
+[iwd]# station [device] scan
+[iwd]# station [device] get-networks
+[iwd]# station [device] connect [SSID]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2&#34;&gt;2.更新系统时间&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# timedatectl set-ntp true 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3&#34;&gt;3.建立硬盘分区&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# fdisk -l
+# cfdisk /dev/sda
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4&#34;&gt;4.格式化分区&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# mkfs.fat -F 32 /dev/sda1   --boot分区
+# mkfs.ext4 /dev/sda2  --根分区
+# mkswap /dev/sda3  --交换空间分区
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5&#34;&gt;5.挂载分区&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;mount /dev/sda2 /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+swapon /dev/sda3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;6&#34;&gt;6.安装必需的软件包&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 换源：reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+# 检查硬盘：lsblk
+# 安装系统：pacstrap /mnt base linux linux-firmware
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7&#34;&gt;7.配置系统&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 生成 fstab 文件: genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+# 切换到新系统: arch-chroot /mnt
+# 修改时区: ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# 时间同步: hwclock --systohc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;8&#34;&gt;8.本地化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑 /etc/locale.gen，然后取消掉 en_US.UTF-8 UTF-8, zh_CN.UTF-8 UTF-8前面的&lt;code&gt;#&lt;/code&gt;号&lt;/li&gt;
+&lt;li&gt;然后执行 &lt;code&gt;locale-gen&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后创建/etc/locale.conf,添加LANG=en_US.UTF-8,中文需要zh_CN.UTF-8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9&#34;&gt;9.网络配置&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# /etc/hosts添加以下内容
+/etc/hostname  arch
+/etc/hosts
+127.0.0.1 localhost
+::1       localhost
+127.0.0.1 arch.localdomain arch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;10root&#34;&gt;10.修改root密码&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# passwd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;11&#34;&gt;11.安装引导程序&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# pacman -S grub efibootmgr
+# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+# grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;12&#34;&gt;12.创建用户&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# useradd -m -G wheel poo
+# useradd poo
+# passwd poo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;6_1&#34;&gt;6. 安装软件&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pacman -S xorg-server install openbox obconf tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7_1&#34;&gt;7.附录&lt;/h3&gt;
+&lt;h4 id=&#34;71-deepin&#34;&gt;7.1 安装deepin&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pacman -S xorg-server lightdm networkmanager deepin deepin-extra
+systemctl enable lightdm
+systemctl enable NetworkManager
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;72-xfce4&#34;&gt;7.2 安装xfce4&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pacman -S xfce4 xfce4-goodies nano sudo lightdm lightdm-gtk-greeter networkmanager xf86-video-intel network-manager-applet alsa-utils pulseaudio pulseaudio-alsa pavucontrol
+
+声音问题
+sudo pacman -S alsa-utils
+sudo pacman -S pulseaudio
+sudo pacman -S pulseaudio-alsa
+sudo pacman -S pavucontrol      #与xfce4 panel里面的插件配合使用,必须要有这个进程
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;73&#34;&gt;7.3 网络问题&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 安装nm: pacman -S networkmanager
+# 安装nm图形界面: nm-connection-editor
+# 安装nm系统托盘图标: network-manager-applet（nm-applet）
+# 开机启动nm: systemctl enable NetworkManager
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;74-nm&#34;&gt;7.4 nm连接网络命令&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nmcli 示例
+显示附近的 Wi-Fi 网络：
+
+$ nmcli device wifi list
+连接到 Wi-Fi 网络：
+
+$ nmcli device wifi connect SSID_或_BSSID password 密码
+连接到隐藏的 Wi-Fi 网络：
+
+$ nmcli device wifi connect SSID_或_BSSID password 密码 hidden yes
+连接到 wlan1 网络接口上的 Wi-Fi：
+
+$ nmcli device wifi connect SSID_或_BSSID password 密码 ifname wlan1 profile_name
+断开网络接口上的连接：
+
+$ nmcli device disconnect ifname eth0
+显示连接列表及其名称、UUID、类型和支持设备：
+
+$ nmcli connection show
+激活连接（即使用现有配置文件连接到网络）：
+
+$ nmcli connection up name_或_uuid
+删除连接：
+
+$ nmcli connection delete name_或_uuid
+显示所有网络设备及其状态：
+
+$ nmcli device
+关闭 Wi-Fi：
+
+$ nmcli radio wifi off
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-sudo&#34;&gt;4. 将当前用户加入sudo&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 方法一
+su root
+nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
+
+# 方法二
+useradd -a -G sudo username
+reboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;8-5&#34;&gt;8. 去掉开机启动项停留的5秒和电池的问题&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nano /etc/default/grub
+找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
+修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
+修改GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet&amp;quot; 加acpi=force
+sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;9_1&#34;&gt;9. 安装输入法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fcitx-rime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime librime-data-wubi
+nano ~/.config/fcitx/rime/default.custom.yaml
+patch:
+  &amp;quot;style/horizontal&amp;quot;: true
+  &amp;quot;menu/page_size&amp;quot;: 5
+
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ibus-rime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime librime-data-wubi
+nano ~/.config/ibus/rime/default.custom.yaml
+patch:
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+
+nano ~/.config/ibus/rime/build/ibus_rime.yaml
+
+# 修改ibus_rime.yaml中horizontal为true
+
+style:
+   horizontal: true
+
+# 重新部署 ibus-rime
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;10&#34;&gt;10. 触摸板修改&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
+
+Section &amp;quot;InputClass&amp;quot;
+        Identifier &amp;quot;libinput touchpad catchall&amp;quot;
+        MatchIsTouchpad &amp;quot;on&amp;quot;
+        MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
+        Driver &amp;quot;libinput&amp;quot;
+
+        Option &amp;quot;Tapping&amp;quot; &amp;quot;on&amp;quot; # 触摸以点击
+        Option &amp;quot;ClickMethod&amp;quot; &amp;quot;clickfinger&amp;quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
+        Option &amp;quot;NaturalScrolling&amp;quot; &amp;quot;true&amp;quot; # 自然滚动（反方向滚动）
+#        Option &amp;quot;ScrollMethod&amp;quot; &amp;quot;edge&amp;quot; # 边缘滚动页面
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;11-dpi&#34;&gt;11. 设置dpi&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nano .Xresources
+
+Xft.dpi:120
+sudo xrdb ~/.Xresources
+reboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;12-i3openbox&#34;&gt;12. 启动i3/OpenBox&lt;/h3&gt;
+&lt;p&gt;编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;if [ -z $DISPLAY ] &amp;amp;&amp;amp; [ $(tty) = &amp;quot;/dev/tty1&amp;quot; ];then
+    startx
+fi
+# 查看Ctrl-Alt-F1对应的那个tty
+echo $(tty)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;13&#34;&gt;13. 设置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;openbox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;复制配置文件&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ mkdir -p ~/.config/openbox
+# openbox有以下文件{rc.xml,menu.xml,autostart,environment}
+$ cp /etc/xdg/openbox/* ~/.config/openbox/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;设置启动项&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# autostart.sh
+
+tint2 &amp;amp;
+pcmanfm --desktop &amp;amp;
+blueman-applet &amp;amp;
+#volumeicon &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;添加快捷键&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# keyboard中加入如下代码 声音和亮度快捷键绑定
+
+    &amp;lt;!--自定义--&amp;gt;
+    &amp;lt;keybind key=&amp;quot;XF86AudioMute&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+        &amp;lt;execute&amp;gt;pactl set-sink-mute @DEFAULT_SINK@ toggle&amp;lt;/execute&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+    &amp;lt;keybind key=&amp;quot;XF86AudioLowerVolume&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+        &amp;lt;execute&amp;gt;pactl set-sink-volume @DEFAULT_SINK@ -5%&amp;lt;/execute&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+    &amp;lt;keybind key=&amp;quot;XF86AudioRaiseVolume&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+        &amp;lt;execute&amp;gt;pactl set-sink-volume @DEFAULT_SINK@ +5%&amp;lt;/execute&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+    &amp;lt;keybind key=&amp;quot;XF86MonBrightnessUp&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+        &amp;lt;execute&amp;gt;light -A 5&amp;lt;/execute&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+    &amp;lt;keybind key=&amp;quot;XF86MonBrightnessDown&amp;quot;&amp;gt;
+      &amp;lt;action name=&amp;quot;Execute&amp;quot;&amp;gt;
+        &amp;lt;execute&amp;gt;light -U 5&amp;lt;/execute&amp;gt;
+      &amp;lt;/action&amp;gt;
+    &amp;lt;/keybind&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tint2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 亮度
+echo &amp;quot;☀️$(light|cut --delimiter=. -f1)%&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/bin/bash
+# 增加亮度
+light -A 5
+notify-send &amp;quot;当前亮度为: $(light|cut --delimiter=. -f1)%&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/bin/bash
+# 减少亮度
+light -U 5
+notify-send &amp;quot;当前亮度为: $(light|cut --delimiter=. -f1)%&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 声音(volume.py)
+
+# coding=utf-8
+
+import os
+
+mute = os.popen(&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;).read()
+volume = os.popen(&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;).read()
+if mute[6] == &amp;quot;否&amp;quot;:
+    print(&#39;🔊&#39;+volume[29:32])
+else:
+    print(&#39;🔇&#39;+volume[29:32])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 网络(network.py)
+
+# coding=utf-8
+
+import os
+
+network = os.popen(&#39;hostname -I&#39;).read()
+
+if network == &#39;\n&#39;:
+    print(&#39;🌐Down&#39;)
+else:
+    print(&#39;📶Nokia&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;14&#34;&gt;14. 详细配置文件&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <link>https://testpoo.github.io/Arch+openbox+tint2安装过程.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/Arch+openbox+tint2安装过程.html</guid>
+       
+      <category>linux</category> 
+      
+    </item>
     
     <item> 
       <title>BeautifulSoup简介</title>  
@@ -1597,7 +1962,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -5636,7 +6001,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -5915,7 +6280,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -5968,7 +6333,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -7434,7 +7799,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -7550,7 +7915,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -7571,7 +7936,7 @@ v16.15.0
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;_1&#34;&gt;工具&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34;&gt;JSON格式化,xml转json工具&lt;/a&gt; | &lt;a href=&#34;https://www.intogif.com/&#34;&gt;在线gif动画制作工具&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34;&gt;在线协作绘图平台&lt;/a&gt; |  &lt;a href=&#34;http://www.fontawesome.com.cn/cheatsheet/&#34;&gt;fontawesome&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34;&gt;菜鸟工具，不止于工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34;&gt;猫啃网，最新最全的可免费商用中文字体下载网站！&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34;&gt;JSON格式化,xml转json工具&lt;/a&gt; | &lt;a href=&#34;https://www.intogif.com/&#34;&gt;在线gif动画制作工具&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34;&gt;在线协作绘图平台&lt;/a&gt; |  &lt;a href=&#34;https://fontawesome.com.cn/v4/cheatsheet&#34;&gt;fontawesome&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34;&gt;菜鸟工具，不止于工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34;&gt;猫啃网，最新最全的可免费商用中文字体下载网站！&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_2&#34;&gt;搜索&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗&lt;/a&gt; | &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_3&#34;&gt;教程&lt;/h3&gt;
@@ -7582,7 +7947,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -8715,7 +9080,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -9490,7 +9855,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -9884,7 +10249,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -11766,7 +12131,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -13097,7 +13462,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -13918,7 +14283,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -14617,7 +14982,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -15823,7 +16188,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -15909,7 +16274,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -16296,7 +16661,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/loca
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -17303,7 +17668,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -17328,7 +17693,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -17422,7 +17787,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -17734,7 +18099,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -17854,7 +18219,7 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
 2022年 05月 19日 星期四 10：14 CST
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -18329,7 +18694,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -18834,7 +19199,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -19202,7 +19567,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -19396,7 +19761,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -19570,7 +19935,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -19777,7 +20142,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -19943,7 +20308,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -20174,7 +20539,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -20225,7 +20590,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-01 17:18:41</pubDate>  
+      <pubDate>2023-06-30 15:43:22</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

@@ -6,9 +6,801 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2023-06-30 15:43:22</pubDate>  
-    <lastBuildDate>2023-06-30 15:43:22</lastBuildDate>  
+    <pubDate>2023-08-15 10:37:07</pubDate>  
+    <lastBuildDate>2023-08-15 10:37:07</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>go入门</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 工作区&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 变量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5&#34;&gt;5. 数据类型&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#51&#34;&gt;5.1 数字，字符串 和 布尔型&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#52-arrays-slice-maps&#34;&gt;5.2 数组(Arrays), 切片(Slice) 和 映射(Maps)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 类型转换&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 条件语句&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#71-if-else&#34;&gt;7.1 if else&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#72-switch-case&#34;&gt;7.2 switch case&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#73&#34;&gt;7.3 循环&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8. 指针&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9&#34;&gt;9. 函数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10. 方法、结构体和接口&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#101-struct&#34;&gt;10.1 结构体(Struct)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#102-methods&#34;&gt;10.2 方法(Methods)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#103&#34;&gt;10.3 接口&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11. 包&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#111-go&#34;&gt;11.1 安装一个包go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#112&#34;&gt;11.2 自定义包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#113&#34;&gt;11.3 包的文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-go&#34;&gt;12. Go中的一些内置包&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#121-fmt&#34;&gt;12.1 fmt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#122-json&#34;&gt;12.2 json&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;13. 错误处理&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#131&#34;&gt;13.1 返回自定义错误&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#132-panic&#34;&gt;13.2 Panic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#133-defer&#34;&gt;13.3 Defer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#14&#34;&gt;14. 并发&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#141-go-routine&#34;&gt;14.1 Go routine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#142-channels&#34;&gt;14.2 Channels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#143-channel&#34;&gt;14.3 单向channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#144-selectgo-routinechannel&#34;&gt;14.4 使用select语句在Go routine中处理多个channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#145-buffered-channel&#34;&gt;14.5 Buffered channel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#15-golang&#34;&gt;15. 为什么 Golang 能够成功呢？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
+&lt;p&gt;Go由Google工程师Robert Griesemer，Rob Pike和Ken Thompson设计。它是一种静态类型的编译语言。 2012 年 3 月发布了第一个开源版本。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Go 是一种开源编程语言，可以轻松构建简单、可靠和高效的软件”。— GoLang&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在很多计算机语言中，有很多方式可以去解决一个给定的问题。&lt;/p&gt;
+&lt;p&gt;程序员花费大量的时间去思考最好的方式去解决它。&lt;/p&gt;
+&lt;p&gt;而Go功能简洁，只有一种正确的方式去解决问题。&lt;/p&gt;
+&lt;p&gt;这样可以节约程序员的时间，并且使大型代码库易于维护。&lt;/p&gt;
+&lt;p&gt;Go里面没有像映射(maps)和过滤器(filters)这样富有表现力的特征。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“当你有增加表现力的功能时，它通常会增加成本”——罗伯·派克&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2&#34;&gt;2. 开始&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文以windows为例，所以只安装windows下的 &lt;code&gt;go&lt;/code&gt;，下载地址为：&lt;code&gt;https://golang.google.cn/dl/go1.21.0.windows-amd64.msi&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Go 是由包组成的。 main 包告诉 Go 编译器，程序被编译为可执行文件，而不是共享库。它是应用程序的入口点。主包定义为：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们先写一个简单的 &lt;code&gt;hello world&lt;/code&gt; 示例，方法就是在 Go GOPATH中创建 &lt;code&gt;main.go&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;h3 id=&#34;3&#34;&gt;3. 工作区&lt;/h3&gt;
+&lt;p&gt;Go的工作区是由环境变量&lt;code&gt;GOPATH&lt;/code&gt;决定的。  &lt;/p&gt;
+&lt;p&gt;你可以在工作区里写任意代码，Go会在&lt;code&gt;GOPATH&lt;/code&gt;或者&lt;code&gt;GOROOT&lt;/code&gt;目录下搜索包，这是在安装Go时默认设置的。&lt;code&gt;GOROOT&lt;/code&gt;是Go的安装路径。&lt;/p&gt;
+&lt;p&gt;设置&lt;code&gt;GOPATH&lt;/code&gt;为你想要的目录。现在，咱们设置它的目录为 &lt;code&gt;~/workspace&lt;/code&gt;：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;# 环境变量
+export GOPATH=~/workspace
+# 进入工作区目录
+cd ~/workspace
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上是在linux下设置的，但本次分享是在Windows下进行的，所以我们设置Windows下的环境变量，设置的目录为 &lt;code&gt;D:\learn\gocode&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;# 设置环境变量
+go env GOPATH=D:\learn\gocode
+# 恢复默认
+go env -u GOPATH
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在工作区目录里创建&lt;code&gt;mian.go&lt;/code&gt;文件。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+ &amp;quot;fmt&amp;quot;
+)
+
+func main(){
+  fmt.Println(&amp;quot;Hello World!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上面的例子中，&lt;code&gt;fmt&lt;/code&gt; 是Go中的内置包，主要用来格式化输入/输出。&lt;/p&gt;
+&lt;p&gt;在 Go 中我们使用 &lt;code&gt;import&lt;/code&gt; 来导入一个包文件，&lt;code&gt;func main&lt;/code&gt;是执行代码的入口，&lt;code&gt;Println&lt;/code&gt; 是包fmt中的一个函数，它为我们打印 &lt;code&gt;“hello world”&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;让我们运行这个文件来看看。Go有两种运行方式。正如我们所知，Go 是一种编译语言，所以我们首先要在执行之前编译它。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go build main.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这个命令会生成二进制可执行文件 main，然后我们再运行它。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;main.exe
+#Hello World!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;还有另外一个简单的方法运行程序。&lt;code&gt;go run&lt;/code&gt;可以抽象编译步骤，你可以简单的使用下面的命令执行程序。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go run main.go
+# Hello World!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4&#34;&gt;4. 变量&lt;/h3&gt;
+&lt;p&gt;Go中的变量是显式声明的。Go 是一种静态类型语言。这意味着在变量在声明时会检查变量的类型。变量可以像下面这样声明：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var a int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在本例中，该值默认设置为0。也可以直接指定变量的值，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var a = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在这里，变量被自动赋值为 &lt;code&gt;int&lt;/code&gt; 型。我们也可以对变量进行一个简短的声明，如下:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;message := &amp;quot;hello world&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们也可以在一行声明多个变量，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var b, c int = 2, 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5&#34;&gt;5. 数据类型&lt;/h3&gt;
+&lt;p&gt;像其他一些计算机语言，Go 也支持各种不同的变量类型，如下：&lt;/p&gt;
+&lt;h4 id=&#34;51&#34;&gt;5.1 数字，字符串 和 布尔型&lt;/h4&gt;
+&lt;p&gt;Go 支持的数字存储类型有很多，比如 &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;int8&lt;/code&gt;, &lt;code&gt;int16&lt;/code&gt;, &lt;code&gt;int32&lt;/code&gt;, &lt;code&gt;int64&lt;/code&gt;,&lt;code&gt;uint&lt;/code&gt;, &lt;code&gt;uint8&lt;/code&gt;, &lt;code&gt;uint16&lt;/code&gt;, &lt;code&gt;uint32&lt;/code&gt;, &lt;code&gt;uint64&lt;/code&gt;, &lt;code&gt;uintptr&lt;/code&gt; 等等。&lt;/p&gt;
+&lt;p&gt;字符串类型存储一个字节序列。使用关键字&lt;code&gt;string&lt;/code&gt;来表示和声明。&lt;/p&gt;
+&lt;p&gt;布尔型使用&lt;code&gt;bool&lt;/code&gt;声明。&lt;/p&gt;
+&lt;p&gt;Go 还支持复数类型的数据类型，可以使用&lt;code&gt;complex64&lt;/code&gt;和&lt;code&gt;complex128&lt;/code&gt;进行声明。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var a bool = true
+var b int = 1
+var c string =&amp;quot;hello world&amp;quot;
+var d float32 = 1.222
+var x complex128 = cmplx.Sqrt(-5+12i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;52-arrays-slice-maps&#34;&gt;5.2 数组(Arrays), 切片(Slice) 和 映射(Maps)&lt;/h4&gt;
+&lt;p&gt;数组是具有相同数据类型的元素的序列。数组在声明时定义了固定长度，因此不能随意扩展超。如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var s [5]int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;数组也可以是多维的，声明方式如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var multiD [2][3]int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go 中的数组有一定限制，比如不能修改数组长度、不能添加元素、不能获取子数组。这时候，更适合使用切片(slices)这一类型。&lt;/p&gt;
+&lt;p&gt;切片(slices)用于存储一组元素，允许随时扩展其长度。切片(slices)的声明类似数组，只是去掉了长度声明。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var b []int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这行代码会创建一个 0容量、0长度的切片。也可以使用以下代码设置切片的容量和长度。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;numbers := make([]int,5,10)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里，切片的初始长度是5，容量是10。&lt;/p&gt;
+&lt;p&gt;切片是数组的抽象。切片使用数组作为底层结构。切片包含三个组成部分:容量、长度和指向底层数组的指针。&lt;/p&gt;
+&lt;p&gt;切片的容量可以通过&lt;code&gt;append&lt;/code&gt;或&lt;code&gt;copy&lt;/code&gt;函数来增加。&lt;code&gt;append&lt;/code&gt; 函数将值添加到数组的末尾，并在需要时增加容量。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;numbers = append(numbers, 1, 2, 3, 4)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另一个增加切片容量的方法是&lt;code&gt;copy&lt;/code&gt;函数。只需创建另一个容量更大的片，并将原始片复制到新创建的片：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;// 创建一个新的大容量的切片
+number2 := make([]int, 15)
+// 把原来的切片复制到新切片
+copy(number2, numbers)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们可以创建一个切片的子切片吗？这个可以用如下简单的代码来完成：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;// 初始化一个长度为4并有值的切片
+number2 = []int{1,2,3,4}
+fmt.Println(number2) // -&amp;gt; [1 2 3 4]
+// 创建一个子切片
+slice1 := number2[2:]
+fmt.Println(slice1) // -&amp;gt; [3 4]
+slice2 := number2[:3]
+fmt.Println(slice2) // -&amp;gt; [1 2 3]
+slice3 := number2[1:4]
+fmt.Println(slice3) // -&amp;gt; [2 3 4]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Maps也是Go的一个数据类型，用于记录键值间的映射关系。我们可以用下面的命令定义一个 &lt;code&gt;map&lt;/code&gt; :&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var m map[string]int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里 &lt;code&gt;m&lt;/code&gt;是一个新的 &lt;code&gt;map&lt;/code&gt;变量，它有字符型的主键和整型的值，我们可以很容易的给 &lt;code&gt;map&lt;/code&gt; 加主键和值：&lt;/p&gt;
+&lt;h3 id=&#34;6&#34;&gt;6. 类型转换&lt;/h3&gt;
+&lt;p&gt;可以使用类型转换将一种数据类型转换为另一种数据类型。我们来看一个简单的类型转换:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;a := 1.1
+b := int(a)
+fmt.Println(b)
+//-&amp;gt; 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;并非所有的数据类型都能转换成其他类型。确保数据类型与转换类型相互兼容。&lt;/p&gt;
+&lt;h3 id=&#34;7&#34;&gt;7. 条件语句&lt;/h3&gt;
+&lt;h4 id=&#34;71-if-else&#34;&gt;7.1 if else&lt;/h4&gt;
+&lt;p&gt;对于条件语句，我们可以使用if-else语句，如下例所示。确保花括号与条件在同一行。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;if num := 9; num &amp;lt; 0 {
+ fmt.Println(num, &amp;quot;is negative&amp;quot;)
+} else if num &amp;lt; 10 {
+ fmt.Println(num, &amp;quot;has 1 digit&amp;quot;)
+} else {
+ fmt.Println(num, &amp;quot;has multiple digits&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;72-switch-case&#34;&gt;7.2 switch case&lt;/h4&gt;
+&lt;p&gt;switch-case用于组织多个条件语句，下面的例子展示了一个简单的switch case语句:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;i := 2
+switch i {
+case 1:
+ fmt.Println(&amp;quot;one&amp;quot;)
+case 2:
+ fmt.Println(&amp;quot;two&amp;quot;)
+default:
+ fmt.Println(&amp;quot;none&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;73&#34;&gt;7.3 循环&lt;/h4&gt;
+&lt;p&gt;Go的循环只有一个关键字。&lt;code&gt;for&lt;/code&gt; 循环命令可以帮助实现不同类型的循环:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;i := 0
+sum := 0
+for i &amp;lt; 10 {
+ sum += 1
+  i++
+}
+fmt.Println(sum)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上代码类似于C语言中的&lt;code&gt;while&lt;/code&gt;循环。相同的语句可以用在普通的 &lt;code&gt;for&lt;/code&gt; 循环：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;sum := 0
+for i := 0; i &amp;lt; 10; i++ {
+  sum += i
+}
+fmt.Println(sum)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go中的死循环&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;for {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;8&#34;&gt;8. 指针&lt;/h3&gt;
+&lt;p&gt;Go 提供了指针。指针是保存值的地址的地方。指针由 &lt;code&gt;*&lt;/code&gt; 定义。指针是根据数据类型来定义的。如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var ap *int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里&lt;code&gt;ap&lt;/code&gt;是指向整型的指针。&lt;code&gt;&amp;amp;&lt;/code&gt; 操作符用于获取变量的地址。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;a := 12
+ap = &amp;amp;a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;指针所指向的值可以使用 &lt;code&gt;*&lt;/code&gt; 操作符访问:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;fmt.Println(*ap)
+// =&amp;gt; 12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在将结构体作为参数传递或为已定义的类型声明方法时，通常首选指针。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当传递值时，值实际上被复制，这意味着更多的内存。&lt;/li&gt;
+&lt;li&gt;传递指针后，方法/函数可以直接修改指针所指向的值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func increment(i *int) {
+  *i++
+}
+func main() {
+  i := 10
+  increment(&amp;amp;i)
+  fmt.Println(i)
+}
+//=&amp;gt; 11
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注意：不要忘记在需要的时候写上package main和import fmt或其他包&lt;/p&gt;
+&lt;h3 id=&#34;9&#34;&gt;9. 函数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;main&lt;/code&gt;包中定义的&lt;code&gt;main&lt;/code&gt;函数是go程序执行的入口，我们还可以定义和使用更多其他函数。先来看个例子吧：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func add(a int, b int) int {
+ c := a + b
+ return c
+}
+func main() {
+ fmt.Println(add(2, 1))
+}
+//=&amp;gt; 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如上所示，一个 Go 函数是用 &lt;code&gt;func&lt;/code&gt; 关键字和函数名定义的。函数接受的参数需要根据它的数据类型来定义，最后是返回的数据类型。&lt;/p&gt;
+&lt;p&gt;函数的返回值也可以在函数中提前定义：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func add(a int, b int) (c int) {
+  c = a + b
+  return
+}
+func main() {
+  fmt.Println(add(2, 1))
+}
+//=&amp;gt; 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里 &lt;code&gt;c&lt;/code&gt; 被定义为返回变量。因此，定义的变量 &lt;code&gt;c&lt;/code&gt; 将自动返回，而不需要在最后的返回语句中定义。&lt;/p&gt;
+&lt;p&gt;您也可以从单个函数返回多个返回值，返回值之间用逗号分隔。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func add(a int, b int) (int, string) {
+  c := a + b
+  return c, &amp;quot;successfully added&amp;quot;
+}
+func main() {
+  sum, message := add(2, 1)
+  fmt.Println(message)
+  fmt.Println(sum)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;10&#34;&gt;10. 方法、结构体和接口&lt;/h3&gt;
+&lt;p&gt;Go 并不是一种完全面向对象的语言，但是通过结构、接口和方法，让它有了很多面向对象的支持和效果。&lt;/p&gt;
+&lt;h4 id=&#34;101-struct&#34;&gt;10.1 结构体(Struct)&lt;/h4&gt;
+&lt;p&gt;结构体包含不同类型的字段，可用来对数据进行分组。例如，如果我们要对Person类型的数据进行分组，那么可以定义一个人的各种属性，包括姓名，年龄，性别等。&lt;/p&gt;
+&lt;p&gt;结构体是不同字段的类型化集合。结构体用于将数据进行分组。例如，如果我们想对Person类型的数据进行分组，我们定义一个人的属性，该属性包括姓名、年龄、性别。结构体可以使用以下语法定义:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;type person struct {
+  name string
+  age int
+  gender string
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Person类型定义后，现在我们来创建一个 Person对象:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;//方法 1: 指定参数和值
+p := person{name: &amp;quot;Bob&amp;quot;, age: 42, gender: &amp;quot;Male&amp;quot;}
+//方法 2: 仅指定值
+person{&amp;quot;Bob&amp;quot;, 42, &amp;quot;Male&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们可以容易的使用&lt;code&gt;.&lt;/code&gt;来获取一个对象的参数。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;p.name
+//=&amp;gt; Bob
+p.age
+//=&amp;gt; 42
+p.gender
+//=&amp;gt; Male
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你也可以通过结构体的指针对象来获取参数。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;pp := &amp;amp;person{name: &amp;quot;Bob&amp;quot;, age: 42, gender: &amp;quot;Male&amp;quot;}
+pp.name
+//=&amp;gt; Bob
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;102-methods&#34;&gt;10.2 方法(Methods)&lt;/h4&gt;
+&lt;p&gt;方法是一种带有接收器的特殊函数。一个接收器可以是一个值或指针。我们可以创建一个叫 &lt;code&gt;describe&lt;/code&gt; 的方法作为刚刚创建的Person类型的接收器，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+import &amp;quot;fmt&amp;quot;
+
+// 定义结构体
+type person struct {
+  name   string
+  age    int
+  gender string
+}
+
+// 定义方法
+func (p *person) describe() {
+  fmt.Printf(&amp;quot;%v is %v years old.&amp;quot;, p.name, p.age)
+}
+func (p *person) setAge(age int) {
+  p.age = age
+}
+
+func (p person) setName(name string) {
+  p.name = name
+}
+
+func main() {
+  pp := &amp;amp;person{name: &amp;quot;Bob&amp;quot;, age: 42, gender: &amp;quot;Male&amp;quot;}
+  pp.describe()
+  // =&amp;gt; Bob is 42 years old
+  pp.setAge(45)
+  fmt.Println(pp.age)
+  //=&amp;gt; 45
+  pp.setName(&amp;quot;Hari&amp;quot;)
+  fmt.Println(pp.name)
+  //=&amp;gt; Bob
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;正如我们在上面的例子中看到的那样，现在可以使用点操作符pp.describe来调用该方法。注意，接收器是一个指针。有了指针，我们传递了一个值的引用，所以如果我们在方法中做了任何改变，它将反映在接收器pp中。它也不会创建对象的新副本，这节省了内存。&lt;/p&gt;
+&lt;p&gt;注意，在上面的例子中，&lt;code&gt;age&lt;/code&gt; 的值被改变了，而 &lt;code&gt;name&lt;/code&gt; 的值没有改变，因为 &lt;code&gt;setName&lt;/code&gt;是接收者类型，而 &lt;code&gt;setAge&lt;/code&gt; 是指针类型。&lt;/p&gt;
+&lt;h4 id=&#34;103&#34;&gt;10.3 接口&lt;/h4&gt;
+&lt;p&gt;在 Go 中，接口是方法的集合。接口可以对一个类型的属性进行分组，我们以动物为例，比如：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;type animal interface {
+  description() string
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里&lt;code&gt;animal&lt;/code&gt;是一个接口。现在让我们来创建两种不同类型的动物来实现&lt;code&gt;animal&lt;/code&gt;接口。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+  &amp;quot;fmt&amp;quot;
+)
+
+type animal interface {
+  description() string
+}
+
+type cat struct {
+  Type  string
+  Sound string
+}
+
+type snake struct {
+  Type      string
+  Poisonous bool
+}
+
+func (s snake) description() string {
+  return fmt.Sprintf(&amp;quot;Poisonous: %v&amp;quot;, s.Poisonous)
+}
+
+func (c cat) description() string {
+  return fmt.Sprintf(&amp;quot;Sound: %v&amp;quot;, c.Sound)
+}
+
+func main() {
+  var a animal
+  a = snake{Poisonous: true}
+  fmt.Println(a.description())
+  a = cat{Sound: &amp;quot;Meow!!!&amp;quot;}
+  fmt.Println(a.description())
+}
+
+//=&amp;gt; Poisonous: true
+//=&amp;gt; Sound: Meow!!!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在main函数中，我们创建了 一个类型为 &lt;code&gt;animal&lt;/code&gt;的变量 &lt;code&gt;a&lt;/code&gt;，然后把蛇和猫分配给类型 &lt;code&gt;animal&lt;/code&gt; ，并且打印&lt;code&gt;a.description&lt;/code&gt;。因此我们用两种类型(猫和蛇)以不同的方式实现了方法，最后我们得到了关于动物类型的描述。&lt;/p&gt;
+&lt;h3 id=&#34;11&#34;&gt;11. 包&lt;/h3&gt;
+&lt;p&gt;在 Go 中，所有的代码都写在包里面。&lt;code&gt;main&lt;/code&gt;包是程序执行的入口，Go 自带了很多内置包，最有名的就是刚刚用过的&lt;code&gt;fmt&lt;/code&gt;包。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Go packages in the main mechanism for programming in the large that go provides and they make possible to divvy up a large project into smaller pieces.”&lt;br /&gt;
+— Robert Griesemer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译不出来，感觉大意就是 Go 包是 Go 的特色，可以把大型项目分成很多个小包，好维护。&lt;/p&gt;
+&lt;h4 id=&#34;111-go&#34;&gt;11.1 安装一个包go&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;go get &amp;lt;package-url-github&amp;gt;
+// 举个例子
+go get github.com/satori/go.uuid
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;包默认安装在&lt;code&gt;GOPATH&lt;/code&gt;环境变量设置的工作区中。可以使用&lt;code&gt;cd $GOPATH/pkg&lt;/code&gt;命令进入目录，查看已安装的包。windows下是&lt;code&gt;cd %GOPATH%\pkg&lt;/code&gt;，目前这个&lt;code&gt;GOPATH&lt;/code&gt;还是在win下不好用。&lt;/p&gt;
+&lt;h4 id=&#34;112&#34;&gt;11.2 自定义包&lt;/h4&gt;
+&lt;p&gt;首先在 &lt;code&gt;$GOPATH\src&lt;/code&gt;目录下创建一个&lt;code&gt;custom_package&lt;/code&gt;文件夹&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;mkdir custom_package
+cd custom_package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;要创建自定义包，我们首先要创建一个包含所需包名的文件夹，那我们就创建刚刚提到的&lt;code&gt;person&lt;/code&gt;包，即在&lt;code&gt;custom_package&lt;/code&gt;目录下创建一个&lt;code&gt;person&lt;/code&gt;文件夹，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;mkdir person
+cd person
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后在 &lt;code&gt;person&lt;/code&gt; 文件夹下创建一个 &lt;code&gt;person.go&lt;/code&gt;文件&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package person
+func Description(name string) string {
+  return &amp;quot;The person name is: &amp;quot; + name
+}
+func secretName(name string) string {
+  return &amp;quot;Do not share&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在我们需要安装这个包，以便引入并使用它。现在我们来安装它，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;&amp;gt; go install person
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后我们回到&lt;code&gt;main&lt;/code&gt;目录下，创建一个&lt;code&gt;20.go&lt;/code&gt;文件。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+import(
+  &amp;quot;custom_package/person&amp;quot;
+  &amp;quot;fmt&amp;quot;
+)
+func main(){ 
+  p := person.Description(&amp;quot;Milap&amp;quot;)
+  fmt.Println(p)
+}
+// =&amp;gt; The person name is: Milap
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在，我们可以导入我们创建的包 &lt;code&gt;person&lt;/code&gt; 并使用 &lt;code&gt;Description&lt;/code&gt; 函数了。注意，我们在包中创建的函数 &lt;code&gt;secretName&lt;/code&gt; 将不可访问。在 Go 中，不是大写字母开头的方法名是私有的。&lt;/p&gt;
+&lt;h4 id=&#34;113&#34;&gt;11.3 包的文档&lt;/h4&gt;
+&lt;p&gt;下载 &lt;code&gt;godoc&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+go get golang.org/x/tools/cmd/godoc
+
+go: downloading golang.org/x/tools v0.12.0
+go: downloading golang.org/x/sys v0.11.0
+go: downloading github.com/yuin/goldmark v1.4.13
+go: downloading golang.org/x/mod v0.12.0
+go: downloading github.com/yuin/goldmark v1.5.5
+go: trying upgrade to github.com/yuin/goldmark@v1.5.5
+go: added github.com/yuin/goldmark v1.5.5
+go: added golang.org/x/mod v0.12.0
+go: added golang.org/x/sys v0.11.0
+go: added golang.org/x/tools v0.12.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go 内置了对包文档。运行以下命令生成文档:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;go doc person Description
+
+// 结果
+package person // import &amp;quot;custom_package/person&amp;quot;
+
+func Description(name string) string
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这将为包 &lt;code&gt;person&lt;/code&gt; 中的 &lt;code&gt;Description&lt;/code&gt; 函数生成文档。要查看文档，使用以下命令运行web服务器:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;godoc -http=&amp;quot;:8080&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打开这个链接 &lt;a href=&#34;http://localhost:8080/pkg&#34;&gt;http://localhost:8080/pkg&lt;/a&gt;，就能看到文档了。&lt;/p&gt;
+&lt;h3 id=&#34;12-go&#34;&gt;12. Go中的一些内置包&lt;/h3&gt;
+&lt;h4 id=&#34;121-fmt&#34;&gt;12.1 fmt&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;fmt&lt;/code&gt;包实现了格式化输入输出的功能。我们已经使用过这个包进行标准输出了。&lt;/p&gt;
+&lt;h4 id=&#34;122-json&#34;&gt;12.2 json&lt;/h4&gt;
+&lt;p&gt;Go 中另外一个很有用的包是&lt;code&gt;json&lt;/code&gt;，它用来编码/解码&lt;code&gt;Json&lt;/code&gt;数据。我们来看一些邓编码/解码的例子：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;// 编码
+package main
+
+import (
+  &amp;quot;fmt&amp;quot;
+  &amp;quot;encoding/json&amp;quot;
+)
+
+func main(){
+  mapA := map[string]int{&amp;quot;apple&amp;quot;: 5, &amp;quot;lettuce&amp;quot;: 7}
+  mapB, _ := json.Marshal(mapA)
+  fmt.Println(string(mapB))
+}
+// 解码
+package main
+
+import (
+  &amp;quot;fmt&amp;quot;
+  &amp;quot;encoding/json&amp;quot;
+)
+
+type response struct {
+  PageNumber int `json:&amp;quot;page&amp;quot;`
+  Fruits []string `json:&amp;quot;fruits&amp;quot;`
+}
+
+func main(){
+  str := `{&amp;quot;page&amp;quot;: 1, &amp;quot;fruits&amp;quot;: [&amp;quot;apple&amp;quot;, &amp;quot;peach&amp;quot;]}`
+  res := response{}
+  json.Unmarshal([]byte(str), &amp;amp;res)
+  fmt.Println(res.PageNumber)
+}
+//=&amp;gt; 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当使用&lt;code&gt;Unmarshal&lt;/code&gt;解码json字节时，第一个参数是json字节，第二个参数是我们期望的解码后的结构体指针。注意：&lt;code&gt;json:&#34;page&#34;&lt;/code&gt;负责把&lt;code&gt;page&lt;/code&gt;映射到结构体中的&lt;code&gt;PageNumber&lt;/code&gt;键上。&lt;/p&gt;
+&lt;h3 id=&#34;13&#34;&gt;13. 错误处理&lt;/h3&gt;
+&lt;p&gt;错误是程序不希望出现的和意想不到的结果。假设我们正在对外部服务进行API调用。此API调用可能成功，也可能失败。当出现错误类型时，可以识别出程序中的错误。我们来看看这个例子:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;resp, err := http.Get(&amp;quot;http://example.com/&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在这里，对错误对象的API调用可能通过，也可能失败。我们可以检查错误是否为nil或者存在错误，并正确地处理响应：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+  &amp;quot;fmt&amp;quot;
+  &amp;quot;net/http&amp;quot;
+)
+
+func main(){
+  resp, err := http.Get(&amp;quot;http://example.com/&amp;quot;)
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  fmt.Println(resp)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;131&#34;&gt;13.1 返回自定义错误&lt;/h4&gt;
+&lt;p&gt;在写函数时，我们可能会遇到需要报错的情景，这时可以返回一个自定义的&lt;code&gt;error&lt;/code&gt;对象。&lt;/p&gt;
+&lt;p&gt;当我们编写自己的函数时，有时会出现错误。这些错误可以自定义一个 &lt;code&gt;error&lt;/code&gt; 对象返回：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func Increment(n int) (int, error) {
+  if n &amp;lt; 0 {
+    // return error object
+    return 0, errors.New(&amp;quot;math: cannot process negative number&amp;quot;)
+  }
+  return (n + 1), nil
+}
+func main() {
+  num := 5
+
+  if inc, err := Increment(num); err != nil {
+    fmt.Printf(&amp;quot;Failed Number: %v, error message: %v&amp;quot;, num, err)
+  }else {
+    fmt.Printf(&amp;quot;Incremented Number: %v&amp;quot;, inc)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Go 内置的大多数包，或者我们使用的外部包，都有错误处理机制。所以我们调用的任何函数都可能有错误。这些错误永远不会被忽略，并且总是在调用时总能被很好地处理，就像我们在上面的例子中所做的那样。&lt;/p&gt;
+&lt;h4 id=&#34;132-panic&#34;&gt;13.2 Panic&lt;/h4&gt;
+&lt;p&gt;Panic是指在程序执行过程中突然遇到的无法处理的问题。在Go中，panic不是处理程序异常的理想方式。建议使用error对象。当出现panic时，程序会停止运行，但会运行&lt;code&gt;defer&lt;/code&gt;语句代码。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;//Go
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+    f()
+    fmt.Println(&amp;quot;Returned normally from f.&amp;quot;)
+}
+
+func f() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println(&amp;quot;Recovered in f&amp;quot;, r)
+        }
+    }()
+    fmt.Println(&amp;quot;Calling g.&amp;quot;)
+    g(0)
+    fmt.Println(&amp;quot;Returned normally from g.&amp;quot;)
+}
+
+func g(i int) {
+    if i &amp;gt; 3 {
+        fmt.Println(&amp;quot;Panicking!&amp;quot;)
+        panic(fmt.Sprintf(&amp;quot;%v&amp;quot;, i))
+    }
+    defer fmt.Println(&amp;quot;Defer in g&amp;quot;, i)
+    fmt.Println(&amp;quot;Printing in g&amp;quot;, i)
+    g(i + 1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;133-defer&#34;&gt;13.3 Defer&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Defer&lt;/code&gt; 总是在函数结束时执行。&lt;/p&gt;
+&lt;p&gt;在上面的例子中，我们使用panic()来执行panic。如你所注见，有一个总是需要在函数结束执行后执行的defer语句。当我们需要在函数末尾执行某些操作时，例如关闭文件，就可以使用Defer。&lt;/p&gt;
+&lt;h3 id=&#34;14&#34;&gt;14. 并发&lt;/h3&gt;
+&lt;p&gt;Go 在设计时就考虑了并发性。 Go 中的并发可以通过轻量级线程&lt;code&gt;Go routines&lt;/code&gt;来实现。&lt;/p&gt;
+&lt;h4 id=&#34;141-go-routine&#34;&gt;14.1 Go routine&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Go routine&lt;/code&gt;是可以与另一个函数并行或并发运行的函数。创建一个&lt;code&gt;Go routine&lt;/code&gt;非常简单。只需在函数前面添加关键字Go，就可以使其并行执行。&lt;code&gt;Go routine&lt;/code&gt;非常轻量级，因此我们可以创建数千个&lt;code&gt;routine&lt;/code&gt;。让我们来看一个简单的例子:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+import (
+  &amp;quot;fmt&amp;quot;
+  &amp;quot;time&amp;quot;
+)
+func main() {
+  go c()
+  fmt.Println(&amp;quot;I am main&amp;quot;)
+  time.Sleep(time.Second * 2)
+}
+func c() {
+  time.Sleep(time.Second * 2)
+  fmt.Println(&amp;quot;I am concurrent&amp;quot;)
+}
+//=&amp;gt; I am main
+//=&amp;gt; I am concurrent
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;正如你在上面的例子中看到的，函数c是一个与Go主线程并行执行的 &lt;code&gt;Go routine&lt;/code&gt;。有时我们希望在多个线程之间共享资源。Go不喜欢与另一个线程共享一个线程的变量，因为这会增加死锁和资源等待的机会。还有另一种方法可以在 &lt;code&gt;Go routine&lt;/code&gt; 之间共享资源：那就是 &lt;code&gt;go channels&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;142-channels&#34;&gt;14.2 Channels&lt;/h4&gt;
+&lt;p&gt;我们可以使用通道在两个 &lt;code&gt;Go routine&lt;/code&gt; 之间传递数据。在创建通道时，有必要指定通道接收的数据类型。让我们创建一个字符串类型的通道，如下所示:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;c := make(chan string)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;有了这个通道，我们可以发送字符串类型的数据。我们可以在这个通道中发送和接收数据:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main(){
+  c := make(chan string)
+  go func(){ c &amp;lt;- &amp;quot;hello&amp;quot; }()
+  msg := &amp;lt;-c
+  fmt.Println(msg)
+}
+//=&amp;gt;&amp;quot;hello&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接收方&lt;code&gt;channel&lt;/code&gt;会一直等待，直到发送方将数据发数据到&lt;code&gt;channel&lt;/code&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;143-channel&#34;&gt;14.3 单向channel&lt;/h4&gt;
+&lt;p&gt;在某些情况下，我们希望 &lt;code&gt;Go routine&lt;/code&gt; 通过通道接收数据但不发送数据，反之亦然。为此，我们还可以创建一个单向通道。让我们来看一个简单的例子:&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+ &amp;quot;fmt&amp;quot;
+)
+
+func main() {
+ ch := make(chan string)
+
+ go sc(ch)
+ fmt.Println(&amp;lt;-ch)
+}
+
+func sc(ch chan&amp;lt;- string) {
+ ch &amp;lt;- &amp;quot;hello&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上面的例子中，sc是一个 &lt;code&gt;Go routine&lt;/code&gt; 例程，它只能向通道发送消息，但不能接收消息。&lt;/p&gt;
+&lt;h4 id=&#34;144-selectgo-routinechannel&#34;&gt;14.4 使用&lt;code&gt;select&lt;/code&gt;语句在&lt;code&gt;Go routine&lt;/code&gt;中处理多个&lt;code&gt;channel&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;一个函数可能正在等待多个通道。这时，我们可以使用&lt;code&gt;select&lt;/code&gt;语句。让我们看一个更清楚的例子：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+ &amp;quot;fmt&amp;quot;
+ &amp;quot;time&amp;quot;
+)
+
+func main() {
+ c1 := make(chan string)
+ c2 := make(chan string)
+ go speed1(c1)
+ go speed2(c2)
+ fmt.Println(&amp;quot;Th first to arrive is:&amp;quot;)
+ select {
+ case s1 := &amp;lt;-c1:
+  fmt.Println(s1)
+ case s2 := &amp;lt;-c2:
+  fmt.Println(s2)
+ }
+}
+
+func speed1(ch chan string) {
+ time.Sleep(2 * time.Second)
+ ch &amp;lt;- &amp;quot;speed 1&amp;quot;
+}
+
+func speed2(ch chan string) {
+ time.Sleep(1 * time.Second)
+ ch &amp;lt;- &amp;quot;speed 2&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上面的示例中，主进程正在等待两个通道c1和c2。对于主函数打印的select case语句，消息从第一个接收到的通道发送。&lt;/p&gt;
+&lt;h4 id=&#34;145-buffered-channel&#34;&gt;14.5 Buffered channel&lt;/h4&gt;
+&lt;p&gt;您可以在go中创建缓冲通道。对于缓冲通道，如果缓冲区已满，则发送到该通道的消息将被阻塞。让我们来看看这个例子：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main(){
+  ch := make(chan string, 2)
+  ch &amp;lt;- &amp;quot;hello&amp;quot;
+  ch &amp;lt;- &amp;quot;world&amp;quot;
+  ch &amp;lt;- &amp;quot;!&amp;quot; // extra message in buffer
+  fmt.Println(&amp;lt;-ch)
+}
+
+// =&amp;gt; fatal error: all goroutines are asleep - deadlock!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;正如我们在上面看到的，一个通道不能接受超过2个消息。&lt;/p&gt;
+&lt;h3 id=&#34;15-golang&#34;&gt;15. 为什么 &lt;code&gt;Golang&lt;/code&gt; 能够成功呢？&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simplicity… — Rob-pike  &lt;/p&gt;
+&lt;p&gt;因为简单...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
+      <link>https://testpoo.github.io/go入门.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
+       
+      <category>go</category> 
+      
+    </item>
     
     <item> 
       <title>Arch+openbox+tint2安装过程</title>  
@@ -367,7 +1159,7 @@ else:
 
 &lt;h3 id=&#34;14&#34;&gt;14. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Arch+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch+openbox+tint2安装过程.html</guid>
        
@@ -1962,7 +2754,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -6001,7 +6793,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -6280,7 +7072,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -6333,7 +7125,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -7799,7 +8591,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -7915,7 +8707,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -7947,7 +8739,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -9080,7 +9872,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -9855,7 +10647,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -10249,7 +11041,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -12131,7 +12923,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -13462,7 +14254,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -14283,7 +15075,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -14982,7 +15774,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -16188,7 +16980,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -16274,7 +17066,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -16661,7 +17453,7 @@ cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/loca
 cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
 cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -17668,7 +18460,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -17693,7 +18485,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -17787,7 +18579,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -18099,7 +18891,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -18219,7 +19011,7 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
 2022年 05月 19日 星期四 10：14 CST
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -18694,7 +19486,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -19199,7 +19991,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -19567,7 +20359,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -19761,7 +20553,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -19935,7 +20727,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -20142,7 +20934,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -20308,7 +21100,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -20539,7 +21331,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -20590,7 +21382,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-06-30 15:43:22</pubDate>  
+      <pubDate>2023-08-15 10:37:07</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

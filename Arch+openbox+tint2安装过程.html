@@ -48,7 +48,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/Arch+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch+openbox+tint2安装过程</span><span>2023-06-30&nbsp;&nbsp;共9835个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Arch+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch+openbox+tint2安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span><span>2022-04-18&nbsp;&nbsp;共14941个字</span></a></li>
             
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-08-15 10:37:07</span></div>
+      <div class="header"><span>Arch+openbox+tint2安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2023-08-31 14:53:13</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -74,22 +74,14 @@
 <li><a href="#10root">10.修改root密码</a></li>
 <li><a href="#11">11.安装引导程序</a></li>
 <li><a href="#12">12.创建用户</a></li>
-<li><a href="#6_1">6. 安装软件</a></li>
-<li><a href="#7_1">7.附录</a><ul>
-<li><a href="#71-deepin">7.1 安装deepin</a></li>
-<li><a href="#72-xfce4">7.2 安装xfce4</a></li>
-<li><a href="#73">7.3 网络问题</a></li>
-<li><a href="#74-nm">7.4 nm连接网络命令</a></li>
+<li><a href="#6-wm">6. 安装桌面/WM</a><ul>
+<li><a href="#61-openbox">6.1 安装openbox</a></li>
+<li><a href="#62-deepin">6.2 安装deepin</a></li>
+<li><a href="#63-xfce4">6.3 安装xfce4</a></li>
 </ul>
 </li>
-<li><a href="#4-sudo">4. 将当前用户加入sudo</a></li>
-<li><a href="#8-5">8. 去掉开机启动项停留的5秒和电池的问题</a></li>
-<li><a href="#9_1">9. 安装输入法</a></li>
-<li><a href="#10">10. 触摸板修改</a></li>
-<li><a href="#11-dpi">11. 设置dpi</a></li>
-<li><a href="#12-i3openbox">12. 启动i3/OpenBox</a></li>
-<li><a href="#13">13. 设置</a></li>
-<li><a href="#14">14. 详细配置文件</a></li>
+<li><a href="#7_1">7 网络问题</a></li>
+<li><a href="#8-nm">8. nm连接网络命令</a></li>
 </ul>
 </div>
 <h3 id="1">1.连接网络</h3>
@@ -166,18 +158,18 @@ swapon /dev/sda3
 # passwd poo
 </code></pre>
 
-<h3 id="6_1">6. 安装软件</h3>
-<pre class="codehilite"><code>pacman -S xorg-server install openbox obconf tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium
+<h3 id="6-wm">6. 安装桌面/WM</h3>
+<h4 id="61-openbox">6.1 安装openbox</h4>
+<pre class="codehilite"><code>pacman -S xorg-xinit install openbox obconf tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium
 </code></pre>
 
-<h3 id="7_1">7.附录</h3>
-<h4 id="71-deepin">7.1 安装deepin</h4>
+<h4 id="62-deepin">6.2 安装deepin</h4>
 <pre class="codehilite"><code>pacman -S xorg-server lightdm networkmanager deepin deepin-extra
 systemctl enable lightdm
 systemctl enable NetworkManager
 </code></pre>
 
-<h4 id="72-xfce4">7.2 安装xfce4</h4>
+<h4 id="63-xfce4">6.3 安装xfce4</h4>
 <pre class="codehilite"><code>pacman -S xfce4 xfce4-goodies nano sudo lightdm lightdm-gtk-greeter networkmanager xf86-video-intel network-manager-applet alsa-utils pulseaudio pulseaudio-alsa pavucontrol
 
 声音问题
@@ -187,14 +179,14 @@ sudo pacman -S pulseaudio-alsa
 sudo pacman -S pavucontrol      #与xfce4 panel里面的插件配合使用,必须要有这个进程
 </code></pre>
 
-<h4 id="73">7.3 网络问题</h4>
+<h3 id="7_1">7 网络问题</h3>
 <pre class="codehilite"><code># 安装nm: pacman -S networkmanager
 # 安装nm图形界面: nm-connection-editor
 # 安装nm系统托盘图标: network-manager-applet（nm-applet）
 # 开机启动nm: systemctl enable NetworkManager
 </code></pre>
 
-<h4 id="74-nm">7.4 nm连接网络命令</h4>
+<h3 id="8-nm">8. nm连接网络命令</h3>
 <pre class="codehilite"><code>nmcli 示例
 显示附近的 Wi-Fi 网络：
 
@@ -226,195 +218,7 @@ $ nmcli device
 关闭 Wi-Fi：
 
 $ nmcli radio wifi off
-</code></pre>
-
-<h3 id="4-sudo">4. 将当前用户加入sudo</h3>
-<pre class="codehilite"><code># 方法一
-su root
-nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
-
-# 方法二
-useradd -a -G sudo username
-reboot
-</code></pre>
-
-<h3 id="8-5">8. 去掉开机启动项停留的5秒和电池的问题</h3>
-<pre class="codehilite"><code>nano /etc/default/grub
-找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
-修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
-修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
-sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-</code></pre>
-
-<h3 id="9_1">9. 安装输入法</h3>
-<ul>
-<li>fcitx-rime</li>
-</ul>
-<pre class="codehilite"><code>sudo apt install fcitx-rime librime-data-wubi
-nano ~/.config/fcitx/rime/default.custom.yaml
-patch:
-  &quot;style/horizontal&quot;: true
-  &quot;menu/page_size&quot;: 5
-
-  schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
-</code></pre>
-
-<ul>
-<li>ibus-rime</li>
-</ul>
-<pre class="codehilite"><code>sudo apt install ibus-rime librime-data-wubi
-nano ~/.config/ibus/rime/default.custom.yaml
-patch:
-  schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
-
-nano ~/.config/ibus/rime/build/ibus_rime.yaml
-
-# 修改ibus_rime.yaml中horizontal为true
-
-style:
-   horizontal: true
-
-# 重新部署 ibus-rime
-</code></pre>
-
-<h3 id="10">10. 触摸板修改</h3>
-<pre class="codehilite"><code>sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
-
-Section &quot;InputClass&quot;
-        Identifier &quot;libinput touchpad catchall&quot;
-        MatchIsTouchpad &quot;on&quot;
-        MatchDevicePath &quot;/dev/input/event*&quot;
-        Driver &quot;libinput&quot;
-
-        Option &quot;Tapping&quot; &quot;on&quot; # 触摸以点击
-        Option &quot;ClickMethod&quot; &quot;clickfinger&quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
-        Option &quot;NaturalScrolling&quot; &quot;true&quot; # 自然滚动（反方向滚动）
-#        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
-EndSection
-</code></pre>
-
-<h3 id="11-dpi">11. 设置dpi</h3>
-<pre class="codehilite"><code>nano .Xresources
-
-Xft.dpi:120
-sudo xrdb ~/.Xresources
-reboot
-</code></pre>
-
-<h3 id="12-i3openbox">12. 启动i3/OpenBox</h3>
-<p>编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：</p>
-<pre class="codehilite"><code>if [ -z $DISPLAY ] &amp;&amp; [ $(tty) = &quot;/dev/tty1&quot; ];then
-    startx
-fi
-# 查看Ctrl-Alt-F1对应的那个tty
-echo $(tty)
-</code></pre>
-
-<h3 id="13">13. 设置</h3>
-<ul>
-<li>openbox</li>
-</ul>
-<p><strong>复制配置文件</strong></p>
-<pre class="codehilite"><code>$ mkdir -p ~/.config/openbox
-# openbox有以下文件{rc.xml,menu.xml,autostart,environment}
-$ cp /etc/xdg/openbox/* ~/.config/openbox/
-</code></pre>
-
-<p><strong>设置启动项</strong></p>
-<pre class="codehilite"><code># autostart.sh
-
-tint2 &amp;
-pcmanfm --desktop &amp;
-blueman-applet &amp;
-#volumeicon &amp;
-</code></pre>
-
-<p><strong>添加快捷键</strong></p>
-<pre class="codehilite"><code># keyboard中加入如下代码 声音和亮度快捷键绑定
-
-    &lt;!--自定义--&gt;
-    &lt;keybind key=&quot;XF86AudioMute&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-mute @DEFAULT_SINK@ toggle&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioLowerVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-volume @DEFAULT_SINK@ -5%&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioRaiseVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-volume @DEFAULT_SINK@ +5%&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessUp&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;light -A 5&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessDown&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;light -U 5&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-</code></pre>
-
-<ul>
-<li>tint2</li>
-</ul>
-<pre class="codehilite"><code># 亮度
-echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
-
-<pre class="codehilite"><code>#!/bin/bash
-# 增加亮度
-light -A 5
-notify-send &quot;当前亮度为: $(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
-
-<pre class="codehilite"><code>#!/bin/bash
-# 减少亮度
-light -U 5
-notify-send &quot;当前亮度为: $(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
-
-<pre class="codehilite"><code># 声音(volume.py)
-
-# coding=utf-8
-
-import os
-
-mute = os.popen('pactl get-sink-mute @DEFAULT_SINK@').read()
-volume = os.popen('pactl get-sink-volume @DEFAULT_SINK@').read()
-if mute[6] == &quot;否&quot;:
-    print('🔊'+volume[29:32])
-else:
-    print('🔇'+volume[29:32])
-</code></pre>
-
-<pre class="codehilite"><code># 网络(network.py)
-
-# coding=utf-8
-
-import os
-
-network = os.popen('hostname -I').read()
-
-if network == '\n':
-    print('🌐Down')
-else:
-    print('📶Nokia')
-</code></pre>
-
-<h3 id="14">14. 详细配置文件</h3>
-<p><code>https://github.com/testpoo/obconfig</code></p></div>
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

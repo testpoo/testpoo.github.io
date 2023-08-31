@@ -52,7 +52,7 @@
             
             <li><a href="https://testpoo.github.io/debian+kde设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+kde设置</span><span>2021-05-31&nbsp;&nbsp;共2048个字</span></a></li>
             
-            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共10409个字</span></a></li>
+            <li><a href="https://testpoo.github.io/debian+xfce设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+xfce设置</span><span>2021-05-10&nbsp;&nbsp;共4108个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/debian+gnome设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+gnome设置</span><span>2021-04-08&nbsp;&nbsp;共922个字</span></a></li>
             
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+xfce设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-08-15 10:37:07</span></div>
+      <div class="header"><span>debian+xfce设置</span><span>一个80后老人，专注测试领域<br />最后更新于2023-08-31 14:53:13</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -78,19 +78,17 @@
 <li><a href="#4">4. 图片路径</a></li>
 <li><a href="#5-lightdm">5. lightdm设置</a></li>
 <li><a href="#6-mtp">6. 支持mtp，连接安卓</a></li>
-<li><a href="#7">7. 设置关闭按钮</a></li>
-<li><a href="#8-gtk">8. 启动gtk编辑器</a></li>
-<li><a href="#9-grub">9. 修改grub背景</a></li>
-<li><a href="#10">10. 添加右键</a></li>
-<li><a href="#11-thunar">11. thunar侧边栏添加位置</a></li>
-<li><a href="#12">12. 启动花屏</a></li>
-<li><a href="#13-gtkcss">13. 添加gtk.css</a></li>
-<li><a href="#14-xfce4-docklike-plugin">14. 安装xfce4-docklike-plugin</a></li>
+<li><a href="#7-gtk">7. 启动gtk编辑器</a></li>
+<li><a href="#8-grub">8. 修改grub背景</a></li>
+<li><a href="#9">9. 添加右键</a></li>
+<li><a href="#10-thunar">10. thunar侧边栏添加位置</a></li>
+<li><a href="#11">11. 启动花屏</a></li>
+<li><a href="#12-gtkcss">12. 添加gtk.css</a></li>
+<li><a href="#13-xfce4-docklike-plugin">13. 安装xfce4-docklike-plugin</a></li>
 </ul>
 </div>
 <h3 id="1">1. 安装软件</h3>
-<p><code># sudo apt install filezilla stacer meld uget aria2 intel-microcode fonts-noto-cjk arc-theme moka-icon-theme</code></p>
-<p><code>sudo apt install filezilla stacer meld intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman catfish drawing</code></p>
+<p><code>sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman</code></p>
 <h3 id="2">2. 删除软件</h3>
 <pre class="codehilite"><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
@@ -101,6 +99,7 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 <li>快捷键设置:设置--&gt;键盘--&gt;应用程度快捷键</li>
 <li>窗口样式设置：设置--&gt;窗口管理器--&gt;样式+按钮布局</li>
 <li>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;辅助功能  最大化窗口时隐藏标题</li>
+<li>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;合成器  在dock窗口下显示阴影</li>
 <li>主题/字体设置：外观--&gt;样式+字体</li>
 <li>设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M  %H:%M%n%Y/%m/%d</li>
 </ul>
@@ -111,8 +110,8 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 <h3 id="5-lightdm">5. lightdm设置</h3>
 <pre class="codehilite"><code>/etc/lightdm/lightdm-gtk-greeter.conf
 [greeter]
-theme-name = Arc
-icon-theme-name = Moka
+theme-name = Arc-Lighter
+icon-theme-name = Papirus-Light
 font-name = Noto Sans Mono 11
 default-user-image = /usr/share/backgrounds/title.jpg
 clock-format = %A %F %H:%M 第%V周
@@ -129,48 +128,22 @@ greeter-hide-users=false 前的#去掉
 <ul>
 <li>安装gvfs-backends</li>
 </ul>
-<h3 id="7">7. 设置关闭按钮</h3>
-<pre class="codehilite"><code>安装xdotool
-[Desktop Entry]
-Name=close
-GenericName=window close
-Comment=window close
-Exec=sh -c &quot;xdotool key alt+F4&quot;
-Terminal=false
-Icon=window-close-symbolic
-
-[Desktop Entry]
-Name=minimize
-GenericName=window minimize
-Comment=window minimize
-Exec=sh -c &quot;xdotool key alt+F9&quot;
-Terminal=false
-Icon=window-minimize-symbolic
-
-[Desktop Entry]
-Name=maximize
-GenericName=window maximize
-Comment=window maximize
-Exec=sh -c &quot;xdotool key alt+F10&quot;
-Terminal=false
-Icon=window-maximize-symbolic
-
-当下的激活窗口，使用包 xdotool：
-xdotool getwindowfocus windowkill
-</code></pre>
-
-<h3 id="8-gtk">8. 启动gtk编辑器</h3>
+<h3 id="7-gtk">7. 启动gtk编辑器</h3>
 <pre class="codehilite"><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
 重启xfce-panel:xfce4-panel -r
 </code></pre>
 
-<h3 id="9-grub">9. 修改grub背景</h3>
-<pre class="codehilite"><code>/usr/share/desktop-base/homeworld-theme/grub/grub_background.sh
-WALLPAPER=/usr/share/backgrounds/background.png
-注：必须是png格式
+<h3 id="8-grub">8. 修改grub背景</h3>
+<pre class="codehilite"><code># 使用 su - 切换到 root 下，执行 sudo update-grub
+# 找到 Found backgroud image: /usr/share/images/desktop-base/desktop-grub.png
+# 执行 ls -l /usr/share/images/desktop-base/desktop-grub.png
+# 找到 /etc/alternatives/desktop-grub
+# 执行 ls -l /etc/alternatives/desktop-grub
+# 找到 /usr/share/desktop-base/active-theme/grub/grub-4x3.png 替换
+# 注：必须是png格式
 </code></pre>
 
-<h3 id="10">10. 添加右键</h3>
+<h3 id="9">9. 添加右键</h3>
 <pre class="codehilite"><code>ln -s %f 'Link to %n'
 Create a Link
 创建链接
@@ -190,15 +163,15 @@ Search for Files
 搜索文件
 </code></pre>
 
-<h3 id="11-thunar">11. thunar侧边栏添加位置</h3>
+<h3 id="10-thunar">10. thunar侧边栏添加位置</h3>
 <ul>
 <li>点击文件右键<code>send to--&gt;Side Panel</code></li>
 </ul>
-<h3 id="12">12. 启动花屏</h3>
+<h3 id="11">11. 启动花屏</h3>
 <pre class="codehilite"><code>xfwm4--&gt;vblank_mode=off
 </code></pre>
 
-<h3 id="13-gtkcss">13. 添加gtk.css</h3>
+<h3 id="12-gtkcss">12. 添加gtk.css</h3>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>
@@ -219,233 +192,21 @@ calendar.highlight { color: red; }
 calendar {padding: 0 10px; font-weight: bold;}
 </code></pre>
 
-<h3 id="14-xfce4-docklike-plugin">14. 安装xfce4-docklike-plugin</h3>
+<h3 id="13-xfce4-docklike-plugin">13. 安装xfce4-docklike-plugin</h3>
 <ul>
 <li>安装xfce4-docklike-plugin合并启动器和窗口管理器</li>
 </ul>
 <pre class="codehilite"><code># 编译使用到的软件
-apt install xfce4-dev-tools
-apt install libglib2.0-dev
-apt install libx11-dev
-apt install build-essential libgtk-3-dev pkg-config devhelp
-apt install libwnck-3-dev
-apt install libxfce4ui-2-dev
-apt install libxfce4panel-2-dev
-apt install libxfce4panel-2.0-dev
+apt install xfce4-dev-tools libglib2.0-dev libx11-dev build-essential libgtk-3-dev pkg-config devhelp libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev
 </code></pre>
 
 <ul>
-<li>汉化内容如下(zh_CN.po)：</li>
+<li>编译</li>
 </ul>
-<p>放到<code>xfce4-docklike-plugin\po</code>目录中编译</p>
-<pre class="codehilite"><code># SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR &lt;pu_yawei@qq.com&gt;, YEAR 2022.
-#
-msgid &quot;&quot;
-msgstr &quot;&quot;
-&quot;Project-Id-Version: \n&quot;
-&quot;Report-Msgid-Bugs-To: \n&quot;
-&quot;POT-Creation-Date: 2022-03-31 19:31-0700\n&quot;
-&quot;PO-Revision-Date: 2022-03-31 19:31+0800\n&quot;
-&quot;Language-Team: \n&quot;
-&quot;MIME-Version: 1.0\n&quot;
-&quot;Content-Type: text/plain; charset=UTF-8\n&quot;
-&quot;Content-Transfer-Encoding: 8bit\n&quot;
-&quot;X-Generator: Poedit 2.2.2\n&quot;
-&quot;Plural-Forms: nplurals=1; plural=0;\n&quot;
-&quot;Last-Translator: \n&quot;
-&quot;Language: zh_CN\n&quot;
-
-#: ../src/Wnck.cpp:198
-msgid &quot;Pinned to Dock&quot;
-msgstr &quot;固定到任务栏&quot;
-
-#: ../src/Wnck.cpp:198
-msgid &quot;Pin to Dock&quot;
-msgstr &quot;固定到任务栏&quot;
-
-#: ../src/Wnck.cpp:199
-msgid &quot;Edit Launcher&quot;
-msgstr &quot;编辑启动器&quot;
-
-#: ../src/Wnck.cpp:226
-msgid &quot;Close All&quot;
-msgstr &quot;关闭全部&quot;
-
-#: ../src/Wnck.cpp:245
-msgid &quot;Remove&quot;
-msgstr &quot;移除&quot;
-
-#: ../src/SettingsDialog.cpp:197
-#, c-format
-msgid &quot;&lt;b&gt;Only the first %u hotkeys(s) are enabled.&lt;/b&gt;\n&quot;
-msgstr &quot;&lt;b&gt;仅启用第一个 %u 热键。&lt;/b&gt;\n&quot;
-
-#: ../src/SettingsDialog.cpp:199
-#, c-format
-msgid &quot;&quot;
-&quot;The &lt;SUPER&gt;+%u combination seems already in use by another process.\n&quot;
-&quot;Check your Xfce settings.&quot;
-msgstr &quot;&quot;
-&quot;&lt;SUPER&gt;+%u组合似乎已被占用，\n&quot;
-&quot;检查您的 Xfce 设置。&quot;
-
-#. namespace SettingsDialog
-#: ../src/docklike.desktop.in.h:1
-msgid &quot;A modern, minimalist taskbar for Xfce&quot;
-msgstr &quot;适用于 Xfce 的现代简约任务栏&quot;
-
-#: ../src/_dialogs.xml.h:1
-msgid &quot;_Help&quot;
-msgstr &quot;_帮助&quot;
-
-#: ../src/_dialogs.xml.h:2
-msgid &quot;_Close&quot;
-msgstr &quot;_关闭&quot;
-
-#: ../src/_dialogs.xml.h:3
-msgid &quot;Don't show the window list for a single window&quot;
-msgstr &quot;不显示单个窗口的窗口列表&quot;
-
-#: ../src/_dialogs.xml.h:4
-msgid &quot;Only show applications on the current workspace&quot;
-msgstr &quot;仅显示当前工作区上的应用程序&quot;
-
-#: ../src/_dialogs.xml.h:5
-msgid &quot;Only show applications on the current display&quot;
-msgstr &quot;仅在当前显示屏上显示应用程序&quot;
-
-#: ../src/_dialogs.xml.h:6
-msgid &quot;Show preview thumbnails for open windows&quot;
-msgstr &quot;显示打开窗口的预览缩略图&quot;
-
-#: ../src/_dialogs.xml.h:7
-msgid &quot;Show the number of open windows (if more than 2)&quot;
-msgstr &quot;显示打开的窗口数（如果超过 2 个）&quot;
-
-#: ../src/_dialogs.xml.h:8
-msgid &quot;Behavior&quot;
-msgstr &quot;行为&quot;
-
-#: ../src/_dialogs.xml.h:9
-msgid &quot;Indicator style:&quot;
-msgstr &quot;指标样式：&quot;
-
-#: ../src/_dialogs.xml.h:10
-msgid &quot;Bars&quot;
-msgstr &quot;条&quot;
-
-#: ../src/_dialogs.xml.h:11
-msgid &quot;Dots&quot;
-msgstr &quot;点&quot;
-
-#: ../src/_dialogs.xml.h:12
-msgid &quot;Ciliora&quot;
-msgstr &quot;细条&quot;
-
-#: ../src/_dialogs.xml.h:13
-msgid &quot;Circles&quot;
-msgstr &quot;圆形&quot;
-
-#: ../src/_dialogs.xml.h:14
-msgid &quot;Rectangles&quot;
-msgstr &quot;矩形&quot;
-
-#: ../src/_dialogs.xml.h:15
-msgid &quot;None&quot;
-msgstr &quot;无&quot;
-
-#: ../src/_dialogs.xml.h:16
-msgid &quot;Indicator orientation:&quot;
-msgstr &quot;指标方向：&quot;
-
-#: ../src/_dialogs.xml.h:17
-msgid &quot;Automatic&quot;
-msgstr &quot;自动&quot;
-
-#: ../src/_dialogs.xml.h:18
-msgid &quot;Bottom&quot;
-msgstr &quot;底部&quot;
-
-#: ../src/_dialogs.xml.h:19
-msgid &quot;Right&quot;
-msgstr &quot;右边&quot;
-
-#: ../src/_dialogs.xml.h:20
-msgid &quot;Top&quot;
-msgstr &quot;顶部&quot;
-
-#: ../src/_dialogs.xml.h:21
-msgid &quot;Left&quot;
-msgstr &quot;左边&quot;
-
-#: ../src/_dialogs.xml.h:22
-msgid &quot;Active indicator:&quot;
-msgstr &quot;活动指标：&quot;
-
-#: ../src/_dialogs.xml.h:23
-msgid &quot;Force icon size:&quot;
-msgstr &quot;强制图标大小：&quot;
-
-#: ../src/_dialogs.xml.h:24
-msgid &quot;Inactive indicator:&quot;
-msgstr &quot;非活动指标：&quot;
-
-#: ../src/_dialogs.xml.h:25
-msgid &quot;Appearance&quot;
-msgstr &quot;外观&quot;
-
-#: ../src/_dialogs.xml.h:26
-msgid &quot;Switch between applications with &lt;SUPER&gt;+[1, 2, ...]&quot;
-msgstr &quot;使用 &lt;SUPER&gt;+[1， 2， ...] 在应用程序之间切换&quot;
-
-#: ../src/_dialogs.xml.h:27
-msgid &quot;Switch to the last window with &lt;SUPER&gt;&quot;
-msgstr &quot;使用&lt;SUPER&gt;切换到最后一个窗口&quot;
-
-#: ../src/_dialogs.xml.h:28
-msgid &quot;&quot;
-&quot;&lt;b&gt;This feature is disabled.&lt;/b&gt;\n&quot;
-&quot;It requires X11 XInput2.0 extension which is is not provided by your system.&quot;
-msgstr &quot;&quot;
-&quot;&lt;b&gt;此功能已禁用。&lt;/b&gt;\n&quot;
-&quot;它需要 X11 XInput2.0 扩展，而您的系统不提供该扩展。&quot;
-
-#: ../src/_dialogs.xml.h:30
-msgid &quot;Keyboard hotkeys&quot;
-msgstr &quot;键盘热键&quot;
-
-#: ../src/_dialogs.xml.h:31
-msgid &quot;Active indicator style:&quot;
-msgstr &quot;活动指标样式：&quot;
-
-#: ../src/_dialogs.xml.h:32
-msgid &quot;Inactive indicator style:&quot;
-msgstr &quot;非活动指标样式：&quot;
-
-#: ../src/_dialogs.xml.h:33
-msgid &quot;Get indicator color from theme&quot;
-msgstr &quot;从主题获取指示器颜色&quot;
-
-#: ../src/_dialogs.xml.h:34
-msgid &quot;Docklike Taskbar&quot;
-msgstr &quot;Docklike任务栏&quot;
-</code></pre>
-
-<ul>
-<li>编译成功后，从系统提取可用文件，语言文件这里只提取了中文</li>
-</ul>
-<pre class="codehilite"><code>#!/bin/bash
-
-mkdir -p ~/usr/share/xfce4/panel/plugins/
-mkdir -p ~/usr/lib/xfce4/panel/plugins/
-mkdir -p ~/usr/share/locale/zh_CN/LC_MESSAGES/
-cp /usr/share/xfce4/panel/plugins/docklike.desktop ~/usr/share/xfce4/panel/plugins/
-cp /usr/share/locale/zh_CN/LC_MESSAGES/xfce4-docklike-plugin.mo ~/usr/share/locale/zh_CN/LC_MESSAGES/
-cp /usr/lib/xfce4/panel/plugins/libdocklike.la ~/usr/lib/xfce4/panel/plugins/
-cp /usr/lib/xfce4/panel/plugins/libdocklike.so ~/usr/lib/xfce4/panel/plugins/
+<pre class="codehilite"><code>./autogen.sh --prefix=/home/poo/usr
+make
+sudo make install
+# 把usr复制到根目录下
 </code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">

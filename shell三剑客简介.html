@@ -48,7 +48,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span><span>2024-02-29&nbsp;&nbsp;共18846个字</span></a></li>
+            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span><span>2024-02-29&nbsp;&nbsp;共18477个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/Arch+openbox+tint2安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch+openbox+tint2安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span></a></li>
             
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>shell三剑客简介</span><span>一个80后老人，专注测试领域<br />最后更新于2024-03-04 10:11:18</span></div>
+      <div class="header"><span>shell三剑客简介</span><span>一个80后老人，专注测试领域<br />最后更新于2024-03-04 11:20:38</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -114,12 +114,12 @@
 </tr>
 </tbody>
 </table>
-<h3 id="2-grep"><strong>2. 三剑客之grep</strong></h3>
+<h3 id="2-grep">2. 三剑客之grep</h3>
 <p>grep 命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。grep全称是 Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。</p>
 <p>grep是文本查找或搜索工具，用于查找内容包含指定的范本样式的文本。它会一行一行循环匹配，匹配到相应的值时会先输出，然后换行继续匹配再换行直到所有的内容都匹配完。</p>
 <p>命令格式：<code>grep [option] pattern file</code></p>
 <p>大家熟悉的命令：<code>ps -ef|grep xxxx</code></p>
-<h4 id="21"><strong>2.1. 常用参数</strong></h4>
+<h4 id="21">2.1. 常用参数</h4>
 <ul>
 <li>
 <p>-n：显示行号；</p>
@@ -152,7 +152,7 @@
 <p>-C：后面可加数字，为context 的意思，除了列出该行外，前后的n行也列出来。</p>
 </li>
 </ul>
-<h4 id="22"><strong>2.2. 示例</strong></h4>
+<h4 id="22">2.2. 示例</h4>
 <p><strong>1.</strong> 查找多个文件中相同的内容</p>
 <pre class="codehilite"><code class="language-Shell">$ grep &quot;我们&quot; one two
 
@@ -198,7 +198,7 @@ is
 192.168.214.255
 </code></pre>
 
-<h3 id="3-sed"><strong>3. 三剑客之sed</strong></h3>
+<h3 id="3-sed">3. 三剑客之sed</h3>
 <p><code>sed</code> 是一种流编辑器，是非常好用的文本处理工具，配合正则使用更加强大。处理时，把当前处理的行存储在临时的缓冲区中，称为“模式空间”，接着 <code>sed</code> 命令处理缓冲区的内容，完成后输出到屏幕，接着处理下一行。文件内容没有改变，除非使用 <code>-i</code> 选项。</p>
 <p><code>sed</code> 主要用来编辑一个或多个文件，简化对文件的反复操作或者用来编写转换程序等。还有一个空间叫保持空间，又称暂存空间，可以暂时存放一些处理的数据，但不能直接输出，只能放到模式空间输出。</p>
 <p><strong>语法格式：</strong><code>sed [选项] [地址] [命令] file</code></p>
@@ -224,10 +224,10 @@ is
 <p><strong>2.</strong> 地址描述</p>
 <ul>
 <li>
-<p>first\~step：步长，每step行，从第first开始；</p>
+<p>first~step：步长，每step行，从第first开始；</p>
 </li>
 <li>
-<p>\$：匹配最后一行；</p>
+<p>$：匹配最后一行；</p>
 </li>
 <li>
 <p>/regexp/：正则表达式匹配行；</p>
@@ -242,7 +242,7 @@ is
 <p>addr1,+N：从addr1行开始，向后的N行；</p>
 </li>
 <li>
-<p>addr1,\~N：从addr1行开始，到N行结束。</p>
+<p>addr1,~N：从addr1行开始，到N行结束。</p>
 </li>
 </ul>
 <p><strong>3.</strong> 地址描述</p>
@@ -263,7 +263,7 @@ is
 <p>D：删除模式空间的第一行，开始下一个循环；</p>
 </li>
 <li>
-<p>\=：打印当前行号；</p>
+<p>=：打印当前行号；</p>
 </li>
 <li>
 <p>a：当前行下面追加文本；</p>
@@ -317,7 +317,7 @@ is
 <p>&amp;：引用已匹配字符串。</p>
 </li>
 </ul>
-<h4 id="32"><strong>3.2. 示例</strong></h4>
+<h4 id="32">3.2. 示例</h4>
 <p><strong>1.</strong> 从第一个空格开始全局替换成 <code>-</code></p>
 <pre class="codehilite"><code>$ echo &quot;hello world&quot; | sed 's/ /-/g'
 
@@ -409,7 +409,7 @@ $ cat three
 心情挺好的
 </code></pre>
 
-<p><strong>9.</strong> 分别用first\~step语法和命令n语法打印奇数行</p>
+<p><strong>9.</strong> 分别用first~step语法和命令n语法打印奇数行</p>
 <pre class="codehilite"><code>$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
@@ -418,11 +418,10 @@ $ cat three
 $ sed -n &quot;1~2p&quot; one
 今天天气不错
 我们下午没有课
-</code></pre>
 
-<!---->
 
-<pre class="codehilite"><code>$ cat -n one
+
+$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
      3  我们下午没有课
@@ -432,7 +431,7 @@ $ sed -n &quot;p;n&quot; one
 我们下午没有课
 </code></pre>
 
-<p><strong>10.</strong> 分别用first\~step语法和命令n语法打印偶数行</p>
+<p><strong>10.</strong> 分别用first~step语法和命令n语法打印偶数行</p>
 <pre class="codehilite"><code>$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
@@ -441,11 +440,10 @@ $ sed -n &quot;p;n&quot; one
 $ sed -n &quot;2~2p&quot; one
 挺风和日丽的
 心情挺好的
-</code></pre>
 
-<!---->
 
-<pre class="codehilite"><code>$ cat -n one
+
+$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
      3  我们下午没有课
@@ -455,7 +453,7 @@ $ sed -n &quot;n;p&quot; one
 心情挺好的
 </code></pre>
 
-<h3 id="4-awk"><strong>4. 三剑客之awk</strong></h3>
+<h3 id="4-awk">4. 三剑客之awk</h3>
 <p><code>awk</code> 是一个处理文本的编程语言工具，能用简短的程序处理标准输入或文件、数据排序、计算以及生成报表等等。</p>
 <p><strong>命令格式</strong>：<code>awk option 'pattern {action}' file</code></p>
 <ul>
@@ -473,16 +471,16 @@ $ sed -n &quot;n;p&quot; one
 <p>-F fs：指定fs为输入字段分隔符；</p>
 </li>
 <li>
-<p>-v var\=value：变量赋值；</p>
+<p>-v var=value：变量赋值；</p>
 </li>
 <li>
 <p>--posix：兼容POSIX正则表达式；</p>
 </li>
 <li>
-<p>--dump-variables\=[file]：把awk命令时的全局变量写入文件，默认文件是awkvars.out；</p>
+<p>--dump-variables=[file]：把awk命令时的全局变量写入文件，默认文件是awkvars.out；</p>
 </li>
 <li>
-<p>--profile\=[file]：格式化awk语句到文件，默认是awkprof.out。</p>
+<p>--profile=[file]：格式化awk语句到文件，默认是awkprof.out。</p>
 </li>
 </ul>
 <p><strong>2. 常用模式</strong></p>
@@ -511,8 +509,8 @@ $ sed -n &quot;n;p&quot; one
 <td style="text-align: left;">逻辑and，满足两个模式</td>
 </tr>
 <tr>
-<td style="text-align: left;">pattern || pattern</td>
-<td style="text-align: left;">逻辑or，满足其中一个模式</td>
+<td style="text-align: left;">pattern</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">! pattern</td>
@@ -551,7 +549,7 @@ poo
 sshd
 </code></pre>
 
-<h4 id="43-beginend"><strong>4.3. BEGIN和END</strong></h4>
+<h4 id="43-beginend">4.3. BEGIN和END</h4>
 <p><strong>语法结构:</strong> <code>awk 'BEGIN{ print "start" } pattern{ commands } END { print "end" }' filename</code> ，BEGIN语句+模式匹配+END语句三个部分组成，这三个部分都是可选项。</p>
 <p><strong>工作原理</strong></p>
 <ul>
@@ -595,7 +593,7 @@ fido            60179/tcp                       # fidonet EMSI over TCP
 This is a test of awk
 </code></pre>
 
-<h4 id="44"><strong>4.4. 内置变量</strong></h4>
+<h4 id="44">4.4. 内置变量</h4>
 <table>
 <thead>
 <tr>
@@ -605,11 +603,11 @@ This is a test of awk
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">\$0</td>
+<td style="text-align: left;">$0</td>
 <td style="text-align: left;">当前记录</td>
 </tr>
 <tr>
-<td style="text-align: left;">\$1\~\$n</td>
+<td style="text-align: left;">$1~$n</td>
 <td style="text-align: left;">当前记录的第N个字段</td>
 </tr>
 <tr>
@@ -715,7 +713,7 @@ a b c d
  b c d e f
 </code></pre>
 
-<h4 id="45"><strong>4.5. 运算符</strong></h4>
+<h4 id="45">4.5. 运算符</h4>
 <table>
 <thead>
 <tr>
@@ -729,7 +727,7 @@ a b c d
 <td style="text-align: left;">分组</td>
 </tr>
 <tr>
-<td style="text-align: left;">\$</td>
+<td style="text-align: left;">$</td>
 <td style="text-align: left;">字段引用</td>
 </tr>
 <tr>
@@ -749,15 +747,15 @@ a b c d
 <td style="text-align: left;">加法，减法</td>
 </tr>
 <tr>
-<td style="text-align: left;">| |&amp;</td>
-<td style="text-align: left;">管道，用于getline，print和printf</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td style="text-align: left;">&lt; &gt; &lt;\= &gt;\= !\= \=\=</td>
+<td style="text-align: left;">&lt; &gt; &lt;= &gt;= != ==</td>
 <td style="text-align: left;">关系运算符</td>
 </tr>
 <tr>
-<td style="text-align: left;">\~ !\~</td>
+<td style="text-align: left;">~ !~</td>
 <td style="text-align: left;">正则表达式匹配，否定正则表达式匹配</td>
 </tr>
 <tr>
@@ -765,15 +763,15 @@ a b c d
 <td style="text-align: left;">数组成员</td>
 </tr>
 <tr>
-<td style="text-align: left;">&amp;&amp; ||</td>
-<td style="text-align: left;">逻辑and，逻辑or</td>
+<td style="text-align: left;">&amp;&amp;</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">?:</td>
 <td style="text-align: left;">简写条件表达式：expr1 ? expr2 : expr3第一个表达式为真，执行expr2，否则执行expr3</td>
 </tr>
 <tr>
-<td style="text-align: left;">\= +\= -\= *\= /\= %\= ^\=</td>
+<td style="text-align: left;">= += -= *= /= %= ^=</td>
 <td style="text-align: left;">变量赋值运算符</td>
 </tr>
 </tbody>
@@ -845,9 +843,9 @@ no
 15
 </code></pre>
 
-<p><strong>6. 流程控制</strong>&#x20;</p>
+<p><strong>6. 流程控制</strong></p>
 <ul>
-<li><code>if</code> 语句  </li>
+<li><code>if</code> 语句</li>
 </ul>
 <p><strong>格式：</strong><code>if (condition) statement [ else statement ]</code></p>
 <pre class="codehilite"><code>$ seq 5 |awk '{if($0==3)print $0}'
@@ -862,7 +860,7 @@ no
 </code></pre>
 
 <ul>
-<li><code>while</code> 语句 </li>
+<li><code>while</code> 语句</li>
 </ul>
 <p><strong>格式：</strong><code>while (condition) statement</code></p>
 <p>遍历打印所有字段。</p>
@@ -875,7 +873,7 @@ no
 </code></pre>
 
 <ul>
-<li>&#x20;<code>for</code> 语句 </li>
+<li><code>for</code> 语句</li>
 </ul>
 <p><strong>格式：</strong><code>for (expr1; expr2; expr3) statement</code></p>
 <p>遍历打印所有字段。</p>

@@ -6,8 +6,8 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2024-03-04 10:11:18</pubDate>  
-    <lastBuildDate>2024-03-04 10:11:18</lastBuildDate>  
+    <pubDate>2024-03-04 11:20:38</pubDate>  
+    <lastBuildDate>2024-03-04 11:20:38</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -64,12 +64,12 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;2-grep&#34;&gt;&lt;strong&gt;2. 三剑客之grep&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;2-grep&#34;&gt;2. 三剑客之grep&lt;/h3&gt;
 &lt;p&gt;grep 命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。grep全称是 Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。&lt;/p&gt;
 &lt;p&gt;grep是文本查找或搜索工具，用于查找内容包含指定的范本样式的文本。它会一行一行循环匹配，匹配到相应的值时会先输出，然后换行继续匹配再换行直到所有的内容都匹配完。&lt;/p&gt;
 &lt;p&gt;命令格式：&lt;code&gt;grep [option] pattern file&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;大家熟悉的命令：&lt;code&gt;ps -ef|grep xxxx&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;21&#34;&gt;&lt;strong&gt;2.1. 常用参数&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;21&#34;&gt;2.1. 常用参数&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;-n：显示行号；&lt;/p&gt;
@@ -102,7 +102,7 @@
 &lt;p&gt;-C：后面可加数字，为context 的意思，除了列出该行外，前后的n行也列出来。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;22&#34;&gt;&lt;strong&gt;2.2. 示例&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;22&#34;&gt;2.2. 示例&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 查找多个文件中相同的内容&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ grep &amp;quot;我们&amp;quot; one two
 
@@ -148,7 +148,7 @@ is
 192.168.214.255
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3-sed&#34;&gt;&lt;strong&gt;3. 三剑客之sed&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;3-sed&#34;&gt;3. 三剑客之sed&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;sed&lt;/code&gt; 是一种流编辑器，是非常好用的文本处理工具，配合正则使用更加强大。处理时，把当前处理的行存储在临时的缓冲区中，称为“模式空间”，接着 &lt;code&gt;sed&lt;/code&gt; 命令处理缓冲区的内容，完成后输出到屏幕，接着处理下一行。文件内容没有改变，除非使用 &lt;code&gt;-i&lt;/code&gt; 选项。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sed&lt;/code&gt; 主要用来编辑一个或多个文件，简化对文件的反复操作或者用来编写转换程序等。还有一个空间叫保持空间，又称暂存空间，可以暂时存放一些处理的数据，但不能直接输出，只能放到模式空间输出。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;语法格式：&lt;/strong&gt;&lt;code&gt;sed [选项] [地址] [命令] file&lt;/code&gt;&lt;/p&gt;
@@ -174,10 +174,10 @@ is
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 地址描述&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;first\~step：步长，每step行，从第first开始；&lt;/p&gt;
+&lt;p&gt;first~step：步长，每step行，从第first开始；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;\$：匹配最后一行；&lt;/p&gt;
+&lt;p&gt;$：匹配最后一行；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;/regexp/：正则表达式匹配行；&lt;/p&gt;
@@ -192,7 +192,7 @@ is
 &lt;p&gt;addr1,+N：从addr1行开始，向后的N行；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;addr1,\~N：从addr1行开始，到N行结束。&lt;/p&gt;
+&lt;p&gt;addr1,~N：从addr1行开始，到N行结束。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 地址描述&lt;/p&gt;
@@ -213,7 +213,7 @@ is
 &lt;p&gt;D：删除模式空间的第一行，开始下一个循环；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;\=：打印当前行号；&lt;/p&gt;
+&lt;p&gt;=：打印当前行号；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;a：当前行下面追加文本；&lt;/p&gt;
@@ -267,7 +267,7 @@ is
 &lt;p&gt;&amp;amp;：引用已匹配字符串。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;32&#34;&gt;&lt;strong&gt;3.2. 示例&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;32&#34;&gt;3.2. 示例&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 从第一个空格开始全局替换成 &lt;code&gt;-&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;hello world&amp;quot; | sed &#39;s/ /-/g&#39;
 
@@ -359,7 +359,7 @@ $ cat three
 心情挺好的
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; 分别用first\~step语法和命令n语法打印奇数行&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; 分别用first~step语法和命令n语法打印奇数行&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
@@ -368,11 +368,10 @@ $ cat three
 $ sed -n &amp;quot;1~2p&amp;quot; one
 今天天气不错
 我们下午没有课
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;!----&gt;
 
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+
+$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
      3  我们下午没有课
@@ -382,7 +381,7 @@ $ sed -n &amp;quot;p;n&amp;quot; one
 我们下午没有课
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; 分别用first\~step语法和命令n语法打印偶数行&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; 分别用first~step语法和命令n语法打印偶数行&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
@@ -391,11 +390,10 @@ $ sed -n &amp;quot;p;n&amp;quot; one
 $ sed -n &amp;quot;2~2p&amp;quot; one
 挺风和日丽的
 心情挺好的
-&lt;/code&gt;&lt;/pre&gt;
 
-&lt;!----&gt;
 
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+
+$ cat -n one
      1  今天天气不错
      2  挺风和日丽的
      3  我们下午没有课
@@ -405,7 +403,7 @@ $ sed -n &amp;quot;n;p&amp;quot; one
 心情挺好的
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;4-awk&#34;&gt;&lt;strong&gt;4. 三剑客之awk&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;4-awk&#34;&gt;4. 三剑客之awk&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 是一个处理文本的编程语言工具，能用简短的程序处理标准输入或文件、数据排序、计算以及生成报表等等。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;命令格式&lt;/strong&gt;：&lt;code&gt;awk option &#39;pattern {action}&#39; file&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -423,16 +421,16 @@ $ sed -n &amp;quot;n;p&amp;quot; one
 &lt;p&gt;-F fs：指定fs为输入字段分隔符；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;-v var\=value：变量赋值；&lt;/p&gt;
+&lt;p&gt;-v var=value：变量赋值；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;--posix：兼容POSIX正则表达式；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;--dump-variables\=[file]：把awk命令时的全局变量写入文件，默认文件是awkvars.out；&lt;/p&gt;
+&lt;p&gt;--dump-variables=[file]：把awk命令时的全局变量写入文件，默认文件是awkvars.out；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;--profile\=[file]：格式化awk语句到文件，默认是awkprof.out。&lt;/p&gt;
+&lt;p&gt;--profile=[file]：格式化awk语句到文件，默认是awkprof.out。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;2. 常用模式&lt;/strong&gt;&lt;/p&gt;
@@ -461,8 +459,8 @@ $ sed -n &amp;quot;n;p&amp;quot; one
 &lt;td style=&#34;text-align: left;&#34;&gt;逻辑and，满足两个模式&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;pattern || pattern&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;逻辑or，满足其中一个模式&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;pattern&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;! pattern&lt;/td&gt;
@@ -501,7 +499,7 @@ poo
 sshd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;43-beginend&#34;&gt;&lt;strong&gt;4.3. BEGIN和END&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;43-beginend&#34;&gt;4.3. BEGIN和END&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;语法结构:&lt;/strong&gt; &lt;code&gt;awk &#39;BEGIN{ print &#34;start&#34; } pattern{ commands } END { print &#34;end&#34; }&#39; filename&lt;/code&gt; ，BEGIN语句+模式匹配+END语句三个部分组成，这三个部分都是可选项。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -545,7 +543,7 @@ fido            60179/tcp                       # fidonet EMSI over TCP
 This is a test of awk
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;44&#34;&gt;&lt;strong&gt;4.4. 内置变量&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;44&#34;&gt;4.4. 内置变量&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -555,11 +553,11 @@ This is a test of awk
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;\$0&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;$0&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;当前记录&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;\$1\~\$n&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;$1~$n&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;当前记录的第N个字段&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -665,7 +663,7 @@ a b c d
  b c d e f
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;45&#34;&gt;&lt;strong&gt;4.5. 运算符&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;45&#34;&gt;4.5. 运算符&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -679,7 +677,7 @@ a b c d
 &lt;td style=&#34;text-align: left;&#34;&gt;分组&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;\$&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;$&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;字段引用&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -699,15 +697,15 @@ a b c d
 &lt;td style=&#34;text-align: left;&#34;&gt;加法，减法&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;| |&amp;amp;&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;管道，用于getline，print和printf&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;&amp;lt; &amp;gt; &amp;lt;\= &amp;gt;\= !\= \=\=&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&amp;lt; &amp;gt; &amp;lt;= &amp;gt;= != ==&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;关系运算符&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;\~ !\~&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;~ !~&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;正则表达式匹配，否定正则表达式匹配&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -715,15 +713,15 @@ a b c d
 &lt;td style=&#34;text-align: left;&#34;&gt;数组成员&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;&amp;amp;&amp;amp; ||&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;逻辑and，逻辑or&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&amp;amp;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;?:&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;简写条件表达式：expr1 ? expr2 : expr3第一个表达式为真，执行expr2，否则执行expr3&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;\= +\= -\= *\= /\= %\= ^\=&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;= += -= *= /= %= ^=&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;变量赋值运算符&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -795,9 +793,9 @@ no
 15
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;6. 流程控制&lt;/strong&gt;&amp;#x20;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 流程控制&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;if&lt;/code&gt; 语句  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;if&lt;/code&gt; 语句&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;if (condition) statement [ else statement ]&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;{if($0==3)print $0}&#39;
@@ -812,7 +810,7 @@ no
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;while&lt;/code&gt; 语句 &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;while&lt;/code&gt; 语句&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;while (condition) statement&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;遍历打印所有字段。&lt;/p&gt;
@@ -825,7 +823,7 @@ no
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&amp;#x20;&lt;code&gt;for&lt;/code&gt; 语句 &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;for&lt;/code&gt; 语句&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;for (expr1; expr2; expr3) statement&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;遍历打印所有字段。&lt;/p&gt;
@@ -851,7 +849,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -889,7 +887,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
 &lt;p&gt;Faker 是一个 Python 包，可以为您生成虚假数据。无论您是需要引导数据库，创建外观漂亮的 XML 文档，填写持久性来对其进行压力测试，还是匿名化从生产服务中获取的数据，Faker 都适合您。&lt;/p&gt;
-&lt;h4 id=&#34;11&#34;&gt;&lt;strong&gt;1.1. 安装&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;11&#34;&gt;1.1. 安装&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pip install Faker
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -951,7 +949,7 @@ examples:
 
 &lt;h4 id=&#34;13&#34;&gt;1.3 官方文档&lt;/h4&gt;
 &lt;p&gt;faker官方文档：&lt;a href=&#34;https://faker.readthedocs.io/en/latest/index.html&#34;&gt;https://faker.readthedocs.io/en/latest/index.html&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2&#34;&gt;&lt;strong&gt;2. 简单使用&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;2&#34;&gt;2. 简单使用&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from faker import Faker
 &amp;gt;&amp;gt;&amp;gt; fake = Faker(locale=&#39;zh_CN&#39;)
 &amp;gt;&amp;gt;&amp;gt; fake.name()
@@ -974,47 +972,47 @@ examples:
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;zh_CN&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;中文简体&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_CN&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;zh_CN&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;zh_TW&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;中文繁体&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_TW&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;zh_TW&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;en_US&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;英语（美国）&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;en_US&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;en_US&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;en_GB&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;英语（英国）&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;en_GB&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;en_GB&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;de_DE&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;德语&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;de_DE&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;de_DE&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;ja_JP&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;日语&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;ja_JP&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;ja_JP&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;ko_KR&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;韩语&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;ko_KR&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;ko_KR&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;fr_FR&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;法语&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;fr_FR&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;fr_FR&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;es_ES&lt;/td&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;西班牙语&lt;/td&gt;
-&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_CN&#39;)&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale=&#39;zh_CN&#39;)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align: left;&#34;&gt;……&lt;/td&gt;
@@ -1024,8 +1022,8 @@ examples:
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;还有很多其他的语言，部分列举&lt;/p&gt;
-&lt;h3 id=&#34;4&#34;&gt;&lt;strong&gt;4. 其他方法&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;41&#34;&gt;&lt;strong&gt;4.1 地理信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&#34;4&#34;&gt;4. 其他方法&lt;/h3&gt;
+&lt;h4 id=&#34;41&#34;&gt;4.1 地理信息类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;city_suffix()：市，县
 # 市 或 县
 country()：国家
@@ -1054,7 +1052,7 @@ street_suffix()：街、路
 # 街 或 路
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;42&#34;&gt;&lt;strong&gt;4.2 基础信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;42&#34;&gt;4.2 基础信息类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;ssn()：生成身份证号
 # 460105195602289565
 bs()：随机公司服务名
@@ -1112,7 +1110,7 @@ phonenumber_prefix()：随机生成手机号段，如139
 # 180
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;43&#34;&gt;&lt;strong&gt;4.3 邮箱信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;43&#34;&gt;4.3 邮箱信息类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;ascii_company_email()：随机ASCII公司邮箱名
 # ming81@wangwang.cn
 ascii_email()：随机ASCII邮箱
@@ -1133,7 +1131,7 @@ safe_email()：安全邮箱
 # wdu@example.org
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;44&#34;&gt;&lt;strong&gt;4.4 网络基础信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;44&#34;&gt;4.4 网络基础信息类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;domain_name()：生成域名
 # jing.cn
 domain_word()：域词(即，不包含后缀)
@@ -1162,7 +1160,7 @@ image_url()：随机URL地址
 # https://picsum.photos/619/449
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;45&#34;&gt;&lt;strong&gt;4.5 浏览器信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;45&#34;&gt;4.5 浏览器信息类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;chrome()：随机生成Chrome的浏览器user_agent信息
 # Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2) AppleWebKit/533.1 (KHTML, like Gecko) Chrome/16.0.879.0 Safari/533.1
 firefox()：随机生成FireFox的浏览器user_agent信息
@@ -1179,7 +1177,7 @@ user_agent()：随机user_agent信息
 # Mozilla/5.0 (Windows; U; Windows 98; Win 9x 4.90) AppleWebKit/534.34.6 (KHTML, like Gecko) Version/5.1 Safari/534.34.6
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;46&#34;&gt;&lt;strong&gt;4.6 数字信息&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;46&#34;&gt;4.6 数字信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;numerify()：三位随机数字
 # 865
 random_digit()：0~9随机数
@@ -1198,7 +1196,7 @@ pydecimal()：随机Decimal数字（参考pyfloat参数）
 # 9371388754385663915393032330587677.707987943449603003369594742167786
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;47&#34;&gt;&lt;strong&gt;4.7 文本加密类&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;47&#34;&gt;4.7 文本加密类&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;pystr()：随机字符串
 # VXaBYNWVfBNuvoLNAkYc
 random_element()：随机字母
@@ -1314,7 +1312,7 @@ simple_profile()：随机生成简单档案信息
 # {&#39;username&#39;: &#39;qianghuang&#39;, &#39;name&#39;: &#39;董阳&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;澳门特别行政区沈阳市东城东莞街n座 902934&#39;, &#39;mail&#39;: &#39;guiying78@hotmail.com&#39;, &#39;birthdate&#39;: datetime.date(1928, 10, 19)}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;5&#34;&gt;&lt;strong&gt;5. 实战使用&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;5&#34;&gt;5. 实战使用&lt;/h3&gt;
 &lt;p&gt;在数据库建一张表，通过Faker造数据，插入到表中。并且打印Faker造的数据。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;# coding=utf-8
 
@@ -1378,7 +1376,7 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
@@ -2170,7 +2168,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -2339,7 +2337,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Arch+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch+openbox+tint2安装过程.html</guid>
        
@@ -3934,7 +3932,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -7953,7 +7951,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -8232,7 +8230,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -8285,7 +8283,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -9751,7 +9749,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -9867,7 +9865,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -9890,7 +9888,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -11023,7 +11021,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -11798,7 +11796,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -12192,7 +12190,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -14074,7 +14072,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -15405,7 +15403,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -16226,7 +16224,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -16925,7 +16923,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -18131,7 +18129,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -18217,7 +18215,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -18365,7 +18363,7 @@ make
 sudo make install
 # 把usr复制到根目录下
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -19372,7 +19370,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -19397,7 +19395,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -19491,7 +19489,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -19803,7 +19801,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -19923,7 +19921,7 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
 2022年 05月 19日 星期四 10：14 CST
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -20398,7 +20396,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -20903,7 +20901,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -21271,7 +21269,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -21465,7 +21463,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -21639,7 +21637,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -21846,7 +21844,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -22012,7 +22010,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -22243,7 +22241,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -22294,7 +22292,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <pubDate>2024-03-04 11:20:38</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

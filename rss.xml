@@ -6,9 +6,1385 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2023-08-31 14:53:13</pubDate>  
-    <lastBuildDate>2023-08-31 14:53:13</lastBuildDate>  
+    <pubDate>2024-03-04 10:11:18</pubDate>  
+    <lastBuildDate>2024-03-04 10:11:18</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>shell三剑客简介</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-shell&#34;&gt;1. shell三剑客简介&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-grep&#34;&gt;2. 三剑客之grep&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#21&#34;&gt;2.1. 常用参数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#22&#34;&gt;2.2. 示例&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-sed&#34;&gt;3. 三剑客之sed&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#31&#34;&gt;3.1 常用参数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#32&#34;&gt;3.2. 示例&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-awk&#34;&gt;4. 三剑客之awk&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#41&#34;&gt;4.1. 常用参数&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#42&#34;&gt;4.2. 示例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#43-beginend&#34;&gt;4.3. BEGIN和END&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#44&#34;&gt;4.4. 内置变量&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#45&#34;&gt;4.5. 运算符&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1-shell&#34;&gt;1. shell三剑客简介&lt;/h3&gt;
+&lt;p&gt;awk、grep、sed是linux操作文本的三大利器，合称文本三剑客，也是必须掌握的linux命令之一。三者的功能都是处理文本，但侧重点各不相同，其中属awk功能最强大，但也最复杂。grep更适合单纯的查找或匹配文本，sed更适合编辑匹配到的文本，awk更适合格式化文本，对文本进行较复杂格式处理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三剑客的特点:&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;命令&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;特点&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;使用场景&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;grep&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;擅长查找过滤&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;快速查找过滤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;sed&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;擅长取行和替换&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;需要快速进行替换/修改文件内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;awk&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;擅长取列、统计计算&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;文件取列、数据切片、对比/比较和统计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-grep&#34;&gt;&lt;strong&gt;2. 三剑客之grep&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;grep 命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。grep全称是 Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。&lt;/p&gt;
+&lt;p&gt;grep是文本查找或搜索工具，用于查找内容包含指定的范本样式的文本。它会一行一行循环匹配，匹配到相应的值时会先输出，然后换行继续匹配再换行直到所有的内容都匹配完。&lt;/p&gt;
+&lt;p&gt;命令格式：&lt;code&gt;grep [option] pattern file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;大家熟悉的命令：&lt;code&gt;ps -ef|grep xxxx&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;21&#34;&gt;&lt;strong&gt;2.1. 常用参数&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;-n：显示行号；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-i：忽略大小写；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-o：精准匹配；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-f：从文件每一行获取匹配模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-c：统计匹配的行数；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-E：使用扩展正则表达式，相当于egrep；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-v：反转查找，即输出与查找条件不相符合的行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-A：后面可加数字，为 after 的意思，除了列出该行外，后续的 n 行也列出来；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-B：后面可加数字，为 before 的意思，除了列出该行外，前面的 n 行也列出来；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-C：后面可加数字，为context 的意思，除了列出该行外，前后的n行也列出来。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;22&#34;&gt;&lt;strong&gt;2.2. 示例&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 查找多个文件中相同的内容&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ grep &amp;quot;我们&amp;quot; one two
+
+one:我们下午没有课
+two:我们是祖国的花朵
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 输出two文件和one文件中相同的行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ grep -n -f one two
+
+3:心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 输出在two文件中不在one文件中的行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ grep -v -f one two
+
+我们是祖国的花朵
+每天好开心啊
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 输出正则匹配到的内容&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;this is a test shell!&amp;quot; |grep -oE &amp;quot;[a-z]+&amp;quot;
+
+this
+is
+a
+test
+shell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; 只显示匹配的字符串&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;this is a test&amp;quot; |grep -o &amp;quot;is&amp;quot;
+
+is
+is
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; 匹配显示所有IP&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ ip a |grep -oE -0 &amp;quot;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&amp;quot;
+127.0.0.1
+--
+192.168.214.2
+192.168.214.255
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-sed&#34;&gt;&lt;strong&gt;3. 三剑客之sed&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sed&lt;/code&gt; 是一种流编辑器，是非常好用的文本处理工具，配合正则使用更加强大。处理时，把当前处理的行存储在临时的缓冲区中，称为“模式空间”，接着 &lt;code&gt;sed&lt;/code&gt; 命令处理缓冲区的内容，完成后输出到屏幕，接着处理下一行。文件内容没有改变，除非使用 &lt;code&gt;-i&lt;/code&gt; 选项。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sed&lt;/code&gt; 主要用来编辑一个或多个文件，简化对文件的反复操作或者用来编写转换程序等。还有一个空间叫保持空间，又称暂存空间，可以暂时存放一些处理的数据，但不能直接输出，只能放到模式空间输出。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;语法格式：&lt;/strong&gt;&lt;code&gt;sed [选项] [地址] [命令] file&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;31&#34;&gt;3.1 常用参数&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 选项描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;-n：不打印模式空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-e：执行脚本、表达式来处理；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-f：执行动作从文件读取执行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-i：修改原文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-r：使用扩展正则表达式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 地址描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;first\~step：步长，每step行，从第first开始；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;\$：匹配最后一行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;/regexp/：正则表达式匹配行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;number：只匹配指定行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;addr1,addr2：开始匹配addr1行开始，直接addr2行结束；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;addr1,+N：从addr1行开始，向后的N行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;addr1,\~N：从addr1行开始，到N行结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 地址描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;s/regexp/replacement/：替换字符串；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;p：打印当前模式空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;P：打印模式空间的第一行；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;d：删除模式空间，开始下一个循环；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;D：删除模式空间的第一行，开始下一个循环；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;\=：打印当前行号；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a：当前行下面追加文本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i：当前行上面插入文本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;c：所选行替换新文本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;q：立即退出sed脚本；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;r：追加文本来自文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;: label：label为b和t命令；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;b label：分支到脚本中带有标签的位置，如果分支不存在则分支到脚本的末尾；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;t label：如果s///是一个成功的替换，才跳转到标签；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;h H：复制/追加模式空间到保持空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;g G：复制/追加保持空间到模式空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;x：交换模式空间和保持空间内容；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;y：把一个字符翻译为另外的字符；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;l：打印模式空间的行，并显示控制字符\$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;n N：读取/追加下一行输入到模式空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;w filename：写入当前模式空间到文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;!：取反、否定；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;amp;：引用已匹配字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;32&#34;&gt;&lt;strong&gt;3.2. 示例&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 从第一个空格开始全局替换成 &lt;code&gt;-&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;hello world&amp;quot; | sed &#39;s/ /-/g&#39;
+
+hello-world
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 匹配替换字符串&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;hello world&amp;quot; | sed &#39;s/world/[&amp;amp;]/&#39;
+
+hello [world]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 打印指定行的内容&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+     1  今天天气不错
+     2  挺风和日丽的
+     3  我们下午没有课
+     4  心情挺好的
+
+$ sed -n &#39;2,4p&#39; one
+
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 读取一个文件的内容到另一个文件的匹配位置显示&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 把one的内容插入从three文件中通过&amp;quot;测试&amp;quot;匹配的“测试一下”后面，并打印出来
+$ cat one
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+
+$ cat three
+测试一下
+
+$ sed &amp;quot;/测试/r one&amp;quot; three
+测试一下
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; 匹配一个文件的内容写入到另一个文件&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 把从one中通过“今天”匹配的“今天天气不错”写入four
+$ sed &amp;quot;/今天/w four&amp;quot; one
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+
+$ cat four
+今天天气不错
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; 在匹配行后追加插入内容&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 把“测试两下”插入到“今天”匹配的“今天天气不错”下面
+$ sed &amp;quot;/^今天/a测试两下&amp;quot; one
+今天天气不错
+测试两下
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; 读取一个文件的内容写入到另一个文件的匹配位置&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 加“-i”会直接写入文件
+$ sed -i &amp;quot;/测试/r one&amp;quot; three
+$ cat one
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+$ cat three
+测试一下
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; 用s///直接替换字符串&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ sed &amp;quot;s/今天/昨天/&amp;quot; one
+昨天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;9.&lt;/strong&gt; 分别用first\~step语法和命令n语法打印奇数行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+     1  今天天气不错
+     2  挺风和日丽的
+     3  我们下午没有课
+     4  心情挺好的
+$ sed -n &amp;quot;1~2p&amp;quot; one
+今天天气不错
+我们下午没有课
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!----&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+     1  今天天气不错
+     2  挺风和日丽的
+     3  我们下午没有课
+     4  心情挺好的
+$ sed -n &amp;quot;p;n&amp;quot; one
+今天天气不错
+我们下午没有课
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; 分别用first\~step语法和命令n语法打印偶数行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+     1  今天天气不错
+     2  挺风和日丽的
+     3  我们下午没有课
+     4  心情挺好的
+$ sed -n &amp;quot;2~2p&amp;quot; one
+挺风和日丽的
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!----&gt;
+
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat -n one
+     1  今天天气不错
+     2  挺风和日丽的
+     3  我们下午没有课
+     4  心情挺好的
+$ sed -n &amp;quot;n;p&amp;quot; one
+挺风和日丽的
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-awk&#34;&gt;&lt;strong&gt;4. 三剑客之awk&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;awk&lt;/code&gt; 是一个处理文本的编程语言工具，能用简短的程序处理标准输入或文件、数据排序、计算以及生成报表等等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;命令格式&lt;/strong&gt;：&lt;code&gt;awk option &#39;pattern {action}&#39; file&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其中pattern表示AWK在数据中查找的内容，而action是在找到匹配内容时所执行的一系列命令。花括号用于根据特定的模式对一系列指令进行分组。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;awk处理的工作方式与数据库类似，支持对记录和字段处理，这也是grep和sed不能实现的。&lt;/p&gt;
+&lt;p&gt;在awk中，缺省的情况下将文本文件中的一行视为一个记录，逐行放到内存中处理，而将一行中的某一部分作为记录中的一个字段。用1,2,3...数字的方式顺序的表示行（记录）中的不同字段。用\$后跟数字，引用对应的字段，以逗号分隔，0表示整个行。&lt;/p&gt;
+&lt;h4 id=&#34;41&#34;&gt;4.1. 常用参数&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. 选项&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;-f program-file：从文件中读取awk程序源文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-F fs：指定fs为输入字段分隔符；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-v var\=value：变量赋值；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;--posix：兼容POSIX正则表达式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;--dump-variables\=[file]：把awk命令时的全局变量写入文件，默认文件是awkvars.out；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;--profile\=[file]：格式化awk语句到文件，默认是awkprof.out。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 常用模式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;Pattern&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;BEGIN{ }&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;给程序赋予初始状态，先执行的工作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;END{ }&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;程序结束之后执行的一些扫尾工作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;/regular expression/&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;为每个输入记录匹配正则表达式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;pattern &amp;amp;&amp;amp; pattern&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;逻辑and，满足两个模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;pattern || pattern&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;逻辑or，满足其中一个模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;! pattern&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;逻辑not，不满足模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;pattern1, pattern2&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;范围模式，匹配所有模式1的记录，直到匹配到模式2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;42&#34;&gt;4.2. 示例&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 从文件读取awk程序处理文件&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ nano test.awk
+{print $2}
+$ tail -n3 /etc/services |awk -f test.awk
+60179/tcp
+
+Local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 指定分隔符，打印指定字段，默认以空格分隔&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ tail -n3 /etc/services |awk &#39;{print $2}&#39;
+60179/tcp
+
+Local
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 指定冒号为分隔符打印&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 这里要用单印号
+$ tail -n5 /etc/passwd | awk -F &#39;:&#39; &#39;{print $1}&#39;
+polkitd
+rtkit
+colord
+poo
+sshd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;43-beginend&#34;&gt;&lt;strong&gt;4.3. BEGIN和END&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;语法结构:&lt;/strong&gt; &lt;code&gt;awk &#39;BEGIN{ print &#34;start&#34; } pattern{ commands } END { print &#34;end&#34; }&#39; filename&lt;/code&gt; ，BEGIN语句+模式匹配+END语句三个部分组成，这三个部分都是可选项。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一步执行BEGIN语句；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二步从文件或标准输入读取一行，然后再执行行pattern语句，逐行扫描文件到文件全部被读取；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三步执行END语句。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 通过print参数打印&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;hello&amp;quot; | awk &#39;BEGIN{print &amp;quot;welcome&amp;quot;} {print} END{print &amp;quot;this is a test of awk&amp;quot;}&#39;
+welcome
+hello
+this is a test of awk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 初始化标题打印&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ tail /etc/services | awk &#39;BEGIN{print &amp;quot;Service\t\tPort\t\t\tDescription\n&amp;quot;}{print $0}&#39;
+Service         Port                    Description
+
+sgi-cad         17004/tcp                       # Cluster Admin daemon
+binkp           24554/tcp                       # binkp fidonet protocol
+asp             27374/tcp                       # Address Search Protocol
+asp             27374/udp
+csync2          30865/tcp                       # cluster synchronization tool
+dircproxy       57000/tcp                       # Detachable IRC Proxy
+tfido           60177/tcp                       # fidonet EMSI over telnet
+fido            60179/tcp                       # fidonet EMSI over TCP
+
+# Local services
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 使用print逗号分隔时，打印则是以空格分界&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo | awk &#39;{a=&amp;quot;This is&amp;quot;; b=&amp;quot;a test&amp;quot;; c=&amp;quot;of awk&amp;quot;;print a,b,c}&#39;
+
+This is a test of awk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;44&#34;&gt;&lt;strong&gt;4.4. 内置变量&lt;/strong&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;变量名&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;\$0&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;当前记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;\$1\~\$n&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;当前记录的第N个字段&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;输入字段分隔符（-F作用相同）默认空格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;OFS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;输出字段分隔符，默认是空格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;RS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;输入记录分隔符，默认换行符\n&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;ORS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;输出记录分隔符，默认是换行符\n&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;NF&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;字段个数/列个数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;NR&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;统计记录编号，每处理一行记录，编号就会+1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FNR&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;统计记录编号，每处理一行记录，编号也会+1，与NR不同的是，处理第二个文件时，编号会重新计数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;OFS&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;输出字段分隔符，默认空格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;IGNORECASE&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;忽略大小写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; FS&lt;/p&gt;
+&lt;p&gt;创建带空格的测试文件，查看前赋值FS变量，改变默认分空隔符为冒号。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat test1.awk
+aa:bb:cc
+dd:ee:ff
+$ awk &#39;BEGIN{FS=&amp;quot;:&amp;quot;}{print $1,$2,$3}&#39; test1.awk
+aa bb cc
+dd ee ff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; OFS，&lt;code&gt;OFS&lt;/code&gt; 可以理解为 &lt;code&gt;FS&lt;/code&gt; 的逆向过程，即将输出字段的分隔符改为空格&lt;/p&gt;
+&lt;p&gt;创建带：的测试文件，查看前赋值 &lt;code&gt;OFS&lt;/code&gt; 变量，改变默认：隔符为空格。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ cat test2.awk
+aa bb cc
+dd ee ff
+$ awk &#39;BEGIN{OFS=&amp;quot;:&amp;quot;}{print $1,$2,$3}&#39; test2.awk
+aa:bb:cc
+dd:ee:ff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; RS，匹配分隔符号，默认以\n分隔每行&lt;/p&gt;
+&lt;p&gt;将/替换为换行（\n）输出：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;RS/test/of/awk&amp;quot; | awk &#39;BEGIN{RS=&amp;quot;/&amp;quot;}{print $0}&#39;
+RS
+test
+of
+awk
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; ORS，匹配每个记录的换行符（\n）,替换为指定的符号&lt;/p&gt;
+&lt;p&gt;将换行（\n）替换为+：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 10 | awk &#39;BEGIN{ORS=&amp;quot;+&amp;quot;}{print $0} END{print &amp;quot;\n&amp;quot;}&#39;
+
+1+2+3+4+5+6+7+8+9+10+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; NF，字段个数/列个数&lt;/p&gt;
+&lt;p&gt;打印字段个数：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;a b c d e f&amp;quot; | awk &#39;{print NF}&#39;
+
+6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印最后一个字段：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;a b c d e f&amp;quot; | awk &#39;{print $NF}&#39;
+
+f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印倒数第二个字段：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;a b c d e f&amp;quot; | awk &#39;{print $(NF-1)}&#39;
+e
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;排除最后两个字段：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;a b c d e f&amp;quot; | awk &#39;{$NF=&amp;quot;&amp;quot;;$(NF-1)=&amp;quot;&amp;quot;;print $0}&#39;
+a b c d
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;排除第一个字段：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ echo &amp;quot;a b c d e f&amp;quot; | awk &#39;{$1=&amp;quot;&amp;quot;;print $0}&#39;
+ b c d e f
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;45&#34;&gt;&lt;strong&gt;4.5. 运算符&lt;/strong&gt;&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;（....）&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;分组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;\$&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;字段引用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;++ --&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;递增和递减&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;+ - !&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;加号，减号，和逻辑否定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;* / %&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;乘，除和取余&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;+ -&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;加法，减法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;| |&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;管道，用于getline，print和printf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&amp;lt; &amp;gt; &amp;lt;\= &amp;gt;\= !\= \=\=&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;关系运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;\~ !\~&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;正则表达式匹配，否定正则表达式匹配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;in&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;数组成员&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&amp;amp;&amp;amp; ||&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;逻辑and，逻辑or&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;?:&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;简写条件表达式：expr1 ? expr2 : expr3第一个表达式为真，执行expr2，否则执行expr3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;\= +\= -\= *\= /\= %\= ^\=&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;变量赋值运算符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 求和&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ awk &#39;BEGIN{a=2;b=3; print a+b }&#39;
+
+5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; 感叹号 否定匹配&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ tail /etc/services |awk &#39;!/blp5/{print $0}&#39;
+
+sgi-cad         17004/tcp                       # Cluster Admin daemon
+binkp           24554/tcp                       # binkp fidonet protocol
+asp             27374/tcp                       # Address Search Protocol
+asp             27374/udp
+csync2          30865/tcp                       # cluster synchronization tool
+dircproxy       57000/tcp                       # Detachable IRC Proxy
+tfido           60177/tcp                       # fidonet EMSI over telnet
+fido            60179/tcp                       # fidonet EMSI over TCP
+
+# Local services
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; 求余&lt;/p&gt;
+&lt;p&gt;打印偶数行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;$0%2==0{print $0}&#39;
+
+2
+4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印奇数行&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;$0%2!=0{print $0}&#39;
+1
+3
+5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; 正则表达式匹配&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;$0%2!=0{print $0}&#39;
+1
+3
+5
+
+$ seq 5 |awk &#39;$0!~/[34]/{print $0}&#39;
+1
+2
+5
+
+$ seq 5 |awk &#39;$0!~/[^34]/{print $0}&#39;
+3
+4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; ?: 条件表达式，也叫三目运算&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ awk &#39;BEGIN{print 1==1?&amp;quot;yes&amp;quot;:&amp;quot;no&amp;quot;}&#39;
+yes
+
+$ awk &#39;BEGIN{print 1==2?&amp;quot;yes&amp;quot;:&amp;quot;no&amp;quot;}&#39;
+no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; 变量赋值&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;{sum+=$0}END{print sum}&#39;
+
+15
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;6. 流程控制&lt;/strong&gt;&amp;#x20;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;if&lt;/code&gt; 语句  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;if (condition) statement [ else statement ]&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ seq 5 |awk &#39;{if($0==3)print $0}&#39;
+3
+
+$ seq 5 |awk &#39;{if($0==3)print $0;else print &amp;quot;no&amp;quot;}&#39;
+no
+no
+3
+no
+no
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;while&lt;/code&gt; 语句 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;while (condition) statement&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;遍历打印所有字段。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ awk &#39;{i=1;while(i&amp;lt;=NF){print $i;i++}}&#39; one
+
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;#x20;&lt;code&gt;for&lt;/code&gt; 语句 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;格式：&lt;/strong&gt;&lt;code&gt;for (expr1; expr2; expr3) statement&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;遍历打印所有字段。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ awk &#39;{for(i=1;i&amp;lt;=NF;i++)print $i}&#39; one
+
+今天天气不错
+挺风和日丽的
+我们下午没有课
+心情挺好的
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt; 和 &lt;code&gt;continue&lt;/code&gt; 语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;break&lt;/code&gt; 跳过所有循环，&lt;code&gt;continue&lt;/code&gt; 跳过当前循环。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){break};print i}}&#39;
+1
+2
+
+$ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
+1
+2
+4
+5
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <link>https://testpoo.github.io/shell三剑客简介.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
+       
+      <category>linux</category> 
+      
+    </item>
+    
+    <item> 
+      <title>Python造假数据神器Faker</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 简介&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;1.1. 安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12&#34;&gt;1.2 查看帮助&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;1.3 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 简单使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-locale&#34;&gt;3. 参数 locale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 其他方法&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#41&#34;&gt;4.1 地理信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#42&#34;&gt;4.2 基础信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#43&#34;&gt;4.3 邮箱信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#44&#34;&gt;4.4 网络基础信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#45&#34;&gt;4.5 浏览器信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#46&#34;&gt;4.6 数字信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#47&#34;&gt;4.7 文本加密类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#48&#34;&gt;4.8 文件信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#49&#34;&gt;4.9 时间信息类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#410&#34;&gt;4.10 集合信息类&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5&#34;&gt;5. 实战使用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
+&lt;p&gt;Faker 是一个 Python 包，可以为您生成虚假数据。无论您是需要引导数据库，创建外观漂亮的 XML 文档，填写持久性来对其进行压力测试，还是匿名化从生产服务中获取的数据，Faker 都适合您。&lt;/p&gt;
+&lt;h4 id=&#34;11&#34;&gt;&lt;strong&gt;1.1. 安装&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pip install Faker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;12&#34;&gt;1.2 查看帮助&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;(faker) E:\project\faker&amp;gt;faker -h
+usage: faker [-h] [--version] [-v] [-o output] [-l LOCALE] [-r REPEAT] [-s SEP] [--seed SEED] [-i [INCLUDE ...]] [fake] [fake argument ...]
+
+faker version 23.2.1
+
+positional arguments:
+  fake                  name of the fake to generate output for (e.g. profile)
+  fake argument         optional arguments to pass to the fake (e.g. the profile fake takes an optional list of comma separated field names as the first argument)
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program&#39;s version number and exit
+  -v, --verbose         show INFO logging events instead of CRITICAL, which is the default. These logging events provide insight into localization of specific providers.
+  -o output             redirect output to a file
+  -l LOCALE, --lang LOCALE
+                        specify the language for a localized provider (e.g. de_DE)
+  -r REPEAT, --repeat REPEAT
+                        generate the specified number of outputs
+  -s SEP, --sep SEP     use the specified separator after each output
+  --seed SEED           specify a seed for the random generator so that results are repeatable. Also compatible with &#39;repeat&#39; option
+  -i [INCLUDE ...], --include [INCLUDE ...]
+                        list of additional custom providers to user, given as the import path of the module containing your Provider class (not the provider class itself)
+
+supported locales:
+
+  ar_AA, ar_AE, ar_BH, ar_EG, ar_JO, ar_PS, ar_SA, az_AZ, bg_BG, bn_BD, bs_BA, cs_CZ, da_DK, de, de_AT, de_CH, de_DE, dk_DK, el_CY, el_GR, en, en_AU, en_BD, en_CA, en_GB, en_IE, en_IN, en_NZ, en_PH, en_TH, en_US, es, es_AR, es_CA, es_CL, es_CO, es_ES, es_MX, et_EE, fa_IR, fi_FI, fil_PH, fr_BE, fr_CA, fr_CH, fr_FR, fr_QC, ga_IE, he_IL, hi_IN, hr_HR, hu_HU, hy_AM, id_ID, it_CH, it_IT, ja_JP, ka_GE, ko_KR, la, lb_LU, lt_LT, lv_LV, mt_MT, ne_NP, nl_BE, nl_NL, no_NO, or_IN, pl_PL, pt_BR, pt_PT, ro_RO, ru_RU, sk_SK, sl_SI, sq_AL, sv_SE, ta_IN, th, th_TH, tl_PH, tr_TR, tw_GH, uk_UA, vi_VN, zh_CN, zh_TW, zu_ZA
+
+  Faker can take a locale as an optional argument, to return localized data. If
+  no locale argument is specified, the factory falls back to the user&#39;s OS
+  locale as long as it is supported by at least one of the providers.
+     - for this user, the default locale is en_US.
+
+  If the optional argument locale and/or user&#39;s default locale is not available
+  for the specified provider, the factory falls back to faker&#39;s default locale,
+  which is en_US.
+
+examples:
+
+  $ faker address
+  968 Bahringer Garden Apt. 722
+  Kristinaland, NJ 09890
+
+  $ faker -l de_DE address
+  Samira-Niemeier-Allee 56
+  94812 Biedenkopf
+
+  $ faker profile ssn,birthdate
+  {&#39;ssn&#39;: u&#39;628-10-1085&#39;, &#39;birthdate&#39;: &#39;2008-03-29&#39;}
+
+  $ faker -r=3 -s=&amp;quot;;&amp;quot; name
+  Willam Kertzmann;
+  Josiah Maggio;
+  Gayla Schmitt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;13&#34;&gt;1.3 官方文档&lt;/h4&gt;
+&lt;p&gt;faker官方文档：&lt;a href=&#34;https://faker.readthedocs.io/en/latest/index.html&#34;&gt;https://faker.readthedocs.io/en/latest/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2&#34;&gt;&lt;strong&gt;2. 简单使用&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; from faker import Faker
+&amp;gt;&amp;gt;&amp;gt; fake = Faker(locale=&#39;zh_CN&#39;)
+&amp;gt;&amp;gt;&amp;gt; fake.name()
+&#39;曹洋&#39;
+&amp;gt;&amp;gt;&amp;gt; fake.address()
+&#39;西藏自治区玉英县六枝特长春街m座 669309&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-locale&#34;&gt;3. 参数 locale&lt;/h3&gt;
+&lt;p&gt;参数为生成数据的文化选项（语种），默认为 en_US，只有使用了相关文化，才能生成相对应的随机信息。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;用法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;zh_CN&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;中文简体&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_CN&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;zh_TW&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;中文繁体&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_TW&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;en_US&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;英语（美国）&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;en_US&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;en_GB&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;英语（英国）&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;en_GB&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;de_DE&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;德语&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;de_DE&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;ja_JP&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;日语&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;ja_JP&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;ko_KR&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;韩语&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;ko_KR&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;fr_FR&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;法语&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;fr_FR&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;es_ES&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;西班牙语&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Faker(locale\=&#39;zh_CN&#39;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;……&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;……&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;……&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;还有很多其他的语言，部分列举&lt;/p&gt;
+&lt;h3 id=&#34;4&#34;&gt;&lt;strong&gt;4. 其他方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;41&#34;&gt;&lt;strong&gt;4.1 地理信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;city_suffix()：市，县
+# 市 或 县
+country()：国家
+# 葡萄牙
+country_code()：国家编码
+# IN
+district()：区
+# 黄浦
+coordinate()：地理坐标
+# Decimal(&#39;-6.314017&#39;)
+latitude()：地理坐标(纬度)
+# Decimal(&#39;-52.842700&#39;)
+longitude()：地理坐标(经度)
+# Decimal(&#39;-103.420509&#39;)
+postcode()：邮编
+# 930438
+province()：省份
+# 贵州省
+address()：详细地址
+# 江西省荆门市山亭宜都街G座 379902
+street_address()：街道地址
+# 王路H座
+street_name()：街道名
+# 刘路
+street_suffix()：街、路
+# 街 或 路
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;42&#34;&gt;&lt;strong&gt;4.2 基础信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;ssn()：生成身份证号
+# 460105195602289565
+bs()：随机公司服务名
+# synthesize wireless channels
+company()：随机公司名（长）
+# 快讯科技有限公司
+company_prefix()：随机公司名（短）
+# 时刻
+company_suffix()：公司性质，如&#39;信息有限公司&#39;
+# 传媒有限公司
+credit_card_expire()：随机信用卡到期日，如&#39;03/30&#39;
+# 08/27
+credit_card_full()：生成完整信用卡信息
+# VISA 13 digit
+# 佳 魏
+# 4510659631299 09/27
+# CVC: 292
+credit_card_number()：信用卡号
+# 4841223722482
+credit_card_provider()：信用卡类型
+# Mastercard
+credit_card_security_code()：信用卡安全码
+# 511
+job()：随机职位
+# 临床协调员
+first_name()：第一个名字
+# 莉
+first_name_female()：女性名
+# 军
+first_name_male()：男性名
+# 军
+first_romanized_name()：罗马名
+# ping
+last_name()：最后一个名字
+# 谢
+last_name_female()：女姓
+# 韩
+last_name_male()：男姓
+# 顾
+last_romanized_name()：罗马姓氏
+# Feng
+name()：随机生成全名
+# 彭华
+name_female()：男性全名
+# 任宁
+name_male()：女性全名
+# 王俊
+romanized_name()：罗马名
+# Juan Sun
+msisdn()：移动台国际用户识别码，即移动用户的ISDN号码
+# 9271661830556
+phone_number()：随机生成手机号
+# 15237436258
+phonenumber_prefix()：随机生成手机号段，如139
+# 180
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;43&#34;&gt;&lt;strong&gt;4.3 邮箱信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;ascii_company_email()：随机ASCII公司邮箱名
+# ming81@wangwang.cn
+ascii_email()：随机ASCII邮箱
+# xiamin@guiyingjing.cn
+ascii_free_email()：随机ASCII免费邮箱
+# yan93@gmail.com
+ascii_safe_email()：随机ASCII安全邮箱
+# yeyan@example.com
+company_email()：公司邮箱
+# yong66@leizheng.cn
+email()：普通邮箱
+# leixiang@example.net
+free_email()：免费邮箱
+# osun@gmail.com
+free_email_domain()：免费邮箱域
+# http://hotmail.com
+safe_email()：安全邮箱
+# wdu@example.org
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;44&#34;&gt;&lt;strong&gt;4.4 网络基础信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;domain_name()：生成域名
+# jing.cn
+domain_word()：域词(即，不包含后缀)
+# qiang
+ipv4()：随机IP4地址
+# 188.216.215.251
+ipv6()：随机IP6地址
+# df53:6891:74b9:7177:98ec:44b3:3498:7c69
+mac_address()：随机MAC地址
+# f0:1e:24:b3:b7:e8
+tld()：网址域名后缀(.com,.net.cn,等等，不包括.)
+# cn
+uri()：随机URI地址
+# http://46.cn/searchindex.php
+uri_extension()：网址文件后缀
+# .php
+uri_page()：网址文件（不包含后缀）
+# main
+uri_path()：网址文件路径（不包含文件名）
+# search/category
+url()：随机URL地址
+# https://www.rencao.cn/
+user_name()：随机用户名
+# jgao
+image_url()：随机URL地址
+# https://picsum.photos/619/449
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;45&#34;&gt;&lt;strong&gt;4.5 浏览器信息类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;chrome()：随机生成Chrome的浏览器user_agent信息
+# Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2) AppleWebKit/533.1 (KHTML, like Gecko) Chrome/16.0.879.0 Safari/533.1
+firefox()：随机生成FireFox的浏览器user_agent信息
+# Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_12_2; rv:1.9.3.20) Gecko/8618-06-21 05:10:08 Firefox/3.6.4
+internet_explorer()：随机生成IE的浏览器user_agent信息
+# Mozilla/5.0 (compatible; MSIE 9.0; Windows 98; Win 9x 4.90; Trident/3.0)
+opera()：随机生成Opera的浏览器user_agent信息
+# Opera/8.47.(Windows NT 6.1; kok-IN) Presto/2.9.178 Version/12.00
+safari()：随机生成Safari的浏览器user_agent信息
+# Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_7_6 rv:5.0; mr-IN) AppleWebKit/535.25.4 (KHTML, like Gecko) Version/4.1 Safari/535.25.4
+linux_platform_token()：随机Linux信息
+# X11; Linux i686
+user_agent()：随机user_agent信息
+# Mozilla/5.0 (Windows; U; Windows 98; Win 9x 4.90) AppleWebKit/534.34.6 (KHTML, like Gecko) Version/5.1 Safari/534.34.6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;46&#34;&gt;&lt;strong&gt;4.6 数字信息&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;numerify()：三位随机数字
+# 865
+random_digit()：0~9随机数
+# 5
+random_digit_not_null()：1~9的随机数
+# 7
+random_int()：随机数字，默认0~9999，可以通过设置min,max来设置
+# 2497
+random_number()：随机数字，参数digits设置生成的数字位数
+# 25011312
+pyfloat()：随机Float数字
+# 955.707810796746
+pyint()：随机Int数字（参考random_int()参数）
+# 2673
+pydecimal()：随机Decimal数字（参考pyfloat参数）
+# 9371388754385663915393032330587677.707987943449603003369594742167786
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;47&#34;&gt;&lt;strong&gt;4.7 文本加密类&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;pystr()：随机字符串
+# VXaBYNWVfBNuvoLNAkYc
+random_element()：随机字母
+# c
+random_letter()：随机字母
+# R
+paragraph()：随机生成一个段落
+# 男人安全质量一起程序业务起来.因此非常浏览基本.
+paragraphs()：随机生成多个段落
+# [&#39;女人任何在线登录到了精华管理.功能这个来源学生选择根据孩子.工具决定内容法律基本查看.&#39;, &#39;不断有限大小下载.作者本站注意其中等级然后觉得.需要语言孩子作者手机积分.&#39;, &#39;合作操作选择.希望同时决定最大管理.一次业务软件只是社区因为查看.密码在线加入 显示这么.&#39;]
+sentence()：随机生成一句话
+# 最后回复就是上海出现不同.
+sentences()：随机生成多句话，与段落类似
+# [&#39;表示标题如果那些地区质量电话.&#39;, &#39;东西这个责任完全.&#39;, &#39;一起影响留言类型有限来自只有.&#39;]
+text()：随机生成一篇文章
+# 情况北京城市.技术没有可以安全政府完全电影.注意设备科技.
+# 主题已经或者的人.方式信息如果关于看到不是.留言报告详细标题相关基本.
+# 表示有些他们这里.制作就是成为方法希望他的电子单位.过程语言论坛可是.
+# 法律客户程序报告有限只要表示.最新时候无法计划.目前相关不是深圳我的.
+# 密码包括那么.地址一直说明商品.
+# 一点显示设备最新最大功能我的国内.日期知道原因.目前朋友重要.
+word()：随机生成词语
+# 活动
+words()：随机生成多个词语，用法与段落，句子，类似
+# [&#39;朋友&#39;, &#39;经验&#39;, &#39;出现&#39;]
+binary()：随机生成二进制编码
+boolean()：True/False
+# False
+language_code()：随机生成两位语言编码
+# iu
+locale()：随机生成语言/国际 信息
+# kw_GB
+md5()：随机生成MD5
+# 56065e546f9cf078702e713c6981ce35
+null_boolean()：NULL/True/False
+# True
+password()：随机生成密码,可选参数：length：密码长度；special_chars：是否能使用特殊字符；digits：是否包含数字；upper_case：是否包含大写字母；lower_case：是否包含小写字母
+# $68W0+xp$+
+sha1()：随机SHA1
+# 3030de488299d4ed76806447e3741201ba9a326a
+sha256()：随机SHA256
+# 42bc239bd183f2e3f60ec54fceabc2eca4074f8d3598bedd685985d20c863e07
+uuid4()：随机UUID
+# c0424eb8-6793-42fa-b2b8-01ce7d5db3c9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;48&#34;&gt;4.8 文件信息类&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;file_extension()：随机文件扩展名
+# json
+file_name()：随机文件名（包含扩展名，不包含路径）
+# 这是.
+gif file_path()：随机文件路径（包含文件名，扩展名）
+# /新闻/具有.
+odp mime_type()：随机mime Type
+# multipart/related
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;49&#34;&gt;4.9 时间信息类&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;am_pm()：AM/PM
+# PM
+century()：随机世纪
+# XII
+date()：随机日期
+# 2001-04-07
+date_between()：随机生成指定范围内日期，参数：start_date，end_date取值：具体日期或者today,-30d,-30y类似
+# 2011-04-21
+date_between_dates()：随机生成指定范围内日期，用法同上
+# 2022-11-15
+date_object()：随机生产从1970-1-1到指定日期的随机日期。
+# 2014-12-12
+date_this_month()：现在这个月的日期
+# 2022-11-12
+date_this_year()：现在这一年的日期
+# 2022-02-16
+date_time()：随机生成指定时间（1970年1月1日至今）
+# 1988-07-07 04:42:25
+date_time_ad()：生成公元1年到现在的随机时间
+# 1658-11-20 09:19:22
+date_time_between()：用法同dates
+# 2001-06-05 01:11:45
+future_date()：未来日期
+# 2022-12-02
+future_datetime()：未来时间
+# 2022-11-28 06:07:21
+month()：随机月份
+# 10
+month_name()：随机月份（汉语）
+# 十二月
+past_date()：随机生成已经过去的日期
+# 2022-11-06
+past_datetime()：随机生成已经过去的时间
+# 2022-10-28 18:36:07
+time()：随机24小时时间
+# 05:58:43
+timedelta()：随机获取时间差
+# /
+time_object()：随机24小时时间，time对象
+# 19:28:21
+time_series()：随机TimeSeries对象
+# &amp;lt;generator object Provider.time_series at 0x7fc346f30190&amp;gt;
+timezone()：随机时区
+# America/Noronha
+unix_time()：随机Unix时间
+# 55170123
+year()：随机年份
+# 1979
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;410&#34;&gt;4.10 集合信息类&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Cython&#34;&gt;profile()：随机生成档案信息
+# {&#39;job&#39;: &#39;高级建筑工程师/总工&#39;, &#39;company&#39;: &#39;诺依曼软件传媒有限公司&#39;, &#39;ssn&#39;: &#39;230822195904280066&#39;, &#39;residence&#39;: &#39;湖南省玉梅县高明符路J座 227449&#39;, &#39;current_location&#39;: (Decimal(&#39;75.297849&#39;), Decimal(&#39;-0.733280&#39;)), &#39;blood_group&#39;: &#39;A+&#39;, &#39;website&#39;: [&#39;https://guiyingxiulan.cn/&#39;, &#39;http://yanxiuying.net/&#39;], &#39;username&#39;: &#39;yangliu&#39;, &#39;name&#39;: &#39;徐玉梅&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;甘肃省红霞市永川李路K座 215966&#39;, &#39;mail&#39;: &#39;wliang@hotmail.com&#39;, &#39;birthdate&#39;: datetime.date(1960, 11, 28)}
+simple_profile()：随机生成简单档案信息
+# {&#39;username&#39;: &#39;qianghuang&#39;, &#39;name&#39;: &#39;董阳&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;澳门特别行政区沈阳市东城东莞街n座 902934&#39;, &#39;mail&#39;: &#39;guiying78@hotmail.com&#39;, &#39;birthdate&#39;: datetime.date(1928, 10, 19)}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5&#34;&gt;&lt;strong&gt;5. 实战使用&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;在数据库建一张表，通过Faker造数据，插入到表中。并且打印Faker造的数据。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;# coding=utf-8
+
+from faker import Faker
+import sqlite3
+
+# 连接到SQLite数据库（如果不存在则创建）
+conn = sqlite3.connect(&#39;faker.db&#39;)
+cursor = conn.cursor()
+
+# 表存在先删除
+delete_exists_table = &amp;quot;&amp;quot;&amp;quot;drop table if exists faker_user&amp;quot;&amp;quot;&amp;quot;
+cursor.execute(delete_exists_table)
+
+# 创建表格
+create_table_query = &#39;&#39;&#39;CREATE TABLE IF NOT EXISTS faker_user (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT, address TEXT)&#39;&#39;&#39;
+cursor.execute(create_table_query)
+
+fake = Faker(locale=&#39;zh_CN&#39;)
+
+# 插入数据
+for i in range(20):
+    sql = &amp;quot;&amp;quot;&amp;quot;insert into faker_user(username,password,address) 
+    values(&#39;%s&#39;,&#39;%s&#39;,&#39;%s&#39;)&amp;quot;&amp;quot;&amp;quot; % (fake.name(), fake.password(special_chars=False), fake.address())
+    cursor.execute(sql)
+
+# 提交更改
+conn.commit()
+
+# 查询数据
+select_data_query = &#39;SELECT * FROM faker_user&#39;
+cursor.execute(select_data_query)
+result = cursor.fetchall()
+for row in result:
+    print(&amp;quot;姓名:{}|密码:{}|地址:{}&amp;quot;.format(row[1], row[2], row[3]))
+
+# 关闭连接
+cursor.close()
+conn.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;输出的结果如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;姓名:马梅|密码:2hGP8eC186|地址:辽宁省拉萨县永川哈尔滨街I座 857047
+姓名:谭荣|密码:msBdcfeiZ3|地址:广东省成县海陵北镇路q座 413065
+姓名:陈俊|密码:nyULGcNf8g|地址:湖北省玲县璧山凌街z座 953074
+姓名:单峰|密码:w4WOAZzyx2|地址:青海省合山市兴山福州街h座 756882
+姓名:许亮|密码:2ABJj4d0AH|地址:福建省淑华县东丽侯街r座 882820
+姓名:杨娟|密码:xVwtOOCl2l|地址:湖北省海门县南溪苏路K座 405426
+姓名:李文|密码:5p8RTukwUw|地址:重庆市北京市安次杭州路A座 109157
+姓名:颜杰|密码:8SjPmLZtaB|地址:山东省福州县兴山赵街g座 375532
+姓名:宋玉英|密码:pNIPLaNeN7|地址:贵州省辛集市滨城邝路o座 250860
+姓名:吴慧|密码:9kXieqeeXX|地址:四川省建县萧山太原街Q座 687935
+姓名:杨岩|密码:eViwelXs9m|地址:宁夏回族自治区红梅县新城黄路M座 248851
+姓名:胡东|密码:HTVi6KVxD6|地址:安徽省秀芳市高港南昌路z座 391643
+姓名:古玉|密码:ndlGJS8uS8|地址:宁夏回族自治区北京市花溪陈路h座 217657
+姓名:李丽|密码:K6GYm0PQi5|地址:宁夏回族自治区嘉禾市清城陈路n座 754327
+姓名:孙桂珍|密码:NScteUAeX1|地址:河南省莉县东丽南宁路R座 968642
+姓名:何秀英|密码:7h6VzJ8u25|地址:香港特别行政区金凤市永川嘉禾路m座 814796
+姓名:黄玲|密码:7CPxLtH8WK|地址:上海市昆明市涪城王路J座 734183
+姓名:高林|密码:NRm011Zb4H|地址:海南省玉英县东城袁路i座 168381
+姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
+姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
+      <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
+       
+      <category>python</category> 
+      
+    </item>
     
     <item> 
       <title>go入门</title>  
@@ -794,7 +2170,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -963,7 +2339,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Arch+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch+openbox+tint2安装过程.html</guid>
        
@@ -2558,7 +3934,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -2809,26 +4185,6 @@ root_window.mainloop()
 &lt;td&gt;Toplevel&lt;/td&gt;
 &lt;td&gt;子窗口&lt;/td&gt;
 &lt;td&gt;在创建一个独立于主窗口之外的子窗口，位于主窗口的上一层，可作为其他控件的容器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PanedWindow&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;messagebox&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;LableFrame&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Spinbox&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -6597,7 +7953,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -6876,7 +8232,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -6929,7 +8285,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -8395,7 +9751,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -8511,7 +9867,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -8521,20 +9877,11 @@ v16.15.0
     
     <item> 
       <title>常用链接</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;搜索&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;测开&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;缴费查询&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h3 id=&#34;_1&#34;&gt;工具&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34;&gt;JSON格式化,xml转json工具&lt;/a&gt; | &lt;a href=&#34;https://www.intogif.com/&#34;&gt;在线gif动画制作工具&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34;&gt;在线协作绘图平台&lt;/a&gt; |  &lt;a href=&#34;https://fontawesome.com.cn/v4/cheatsheet&#34;&gt;fontawesome&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34;&gt;菜鸟工具，不止于工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34;&gt;猫啃网，最新最全的可免费商用中文字体下载网站！&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_2&#34;&gt;搜索&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗&lt;/a&gt; | &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗&lt;/a&gt; | &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt; | &lt;a href=&#34;https://yandex.com/&#34;&gt;yandex&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_3&#34;&gt;教程&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/zh/v2&#34;&gt;Git官方文档&lt;/a&gt; | &lt;a href=&#34;https://docs.python.org/zh-cn/3/&#34;&gt;Python3官方中文文档&lt;/a&gt; | &lt;a href=&#34;https://www.liaoxuefeng.com/&#34;&gt;廖雪峰的官方网站&lt;/a&gt; | &lt;a href=&#34;https://www.kuangstudy.com/course&#34;&gt;自学交流社区&lt;/a&gt; | &lt;a href=&#34;http://markdown.p2hp.com/basic-syntax/&#34;&gt;Markdown基本语法&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_4&#34;&gt;测开&lt;/h3&gt;
@@ -8543,7 +9890,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -9676,7 +11023,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -10451,7 +11798,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -10845,7 +12192,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -12727,7 +14074,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -14058,7 +15405,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -14879,7 +16226,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -15578,7 +16925,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -16784,7 +18131,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -16870,7 +18217,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -17018,7 +18365,7 @@ make
 sudo make install
 # 把usr复制到根目录下
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -18025,7 +19372,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -18050,7 +19397,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -18144,7 +19491,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -18456,7 +19803,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -18576,7 +19923,7 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
 2022年 05月 19日 星期四 10：14 CST
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -19051,7 +20398,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -19556,7 +20903,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -19924,7 +21271,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -20118,7 +21465,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -20292,7 +21639,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -20499,7 +21846,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -20665,7 +22012,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -20896,7 +22243,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -20947,7 +22294,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2023-08-31 14:53:13</pubDate>  
+      <pubDate>2024-03-04 10:11:18</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

@@ -6,9 +6,284 @@
     <description>一个80后老人，专注测试领域</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2024-03-04 13:51:13</pubDate>  
-    <lastBuildDate>2024-03-04 13:51:13</lastBuildDate>  
+    <pubDate>2024-05-28 10:11:52</pubDate>  
+    <lastBuildDate>2024-05-28 10:11:52</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>Jinja2简介</title>  
+      <description>&lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
+&lt;p&gt;Jinja 是一个快速、表现力强、可扩展的模板引擎。模板中的特殊占位符允许编写类似 Python 语法的代码。然后将数据传递给模板，以渲染最终文档。&lt;/p&gt;
+&lt;p&gt;特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;模板继承；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可在模板中定义和导入宏；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTML 模板可使用自动换码功能，防止来自不受信任用户输入的 XSS；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沙箱环境可安全地呈现不受信任的模板；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持异步，可生成无需额外语法即可自动处理同步和异步函数的模板；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 &lt;code&gt;Babel&lt;/code&gt; 支持 I18N；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模板会及时编译为优化的 Python 代码并缓存，也可以提前编译；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;精确展示模板中的异常行，使调试更容易；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可扩展过滤器、测试、函数甚至语法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2&#34;&gt;2. 安装&lt;/h3&gt;
+&lt;p&gt;建议使用最新版本的 Python。Jinja 支持 Python 3.7 及更新版本。建议使用虚拟环境，以便将项目依赖关系与其他项目和系统隔离。&lt;/p&gt;
+&lt;p&gt;使用 pip 安装最新版本的 Jinja：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;$ pip install Jinja2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;21&#34;&gt;2.1 依赖项&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;安装 Jinja 时会自动安装这些依赖项。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;MarkupSafe&lt;/code&gt; 会在渲染模板时转义不信任的输入，以避免注入攻击。&lt;/p&gt;
+&lt;h4 id=&#34;22&#34;&gt;2.2 可选依赖项&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;安装 Jinja 时不会自动安装。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Babel&lt;/code&gt; 在模板中提供翻译支持。&lt;/p&gt;
+&lt;h4 id=&#34;23-api&#34;&gt;2.3 基本API使用&lt;/h4&gt;
+&lt;p&gt;最基本的方式就是通过 &lt;code&gt;Template&lt;/code&gt; 创建一个模板并渲染它。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Shell&#34;&gt;&amp;gt;&amp;gt;&amp;gt; from jinja2 import Template
+&amp;gt;&amp;gt;&amp;gt; template = Template(&#39;Hello {{ name }}!&#39;)
+&amp;gt;&amp;gt;&amp;gt; template.render(name=&#39;test poo&#39;)
+&#39;Hello test poo!&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-api&#34;&gt;3 API&lt;/h3&gt;
+&lt;h4 id=&#34;31&#34;&gt;3.1 基础知识&lt;/h4&gt;
+&lt;p&gt;Jinja 使用一个名为 &#34;模板环境 &#34;的中心对象。该类的实例用于存储配置和全局对象，并用于从文件系统或其他位置加载模板。即使您使用模板类的构造函数从字符串创建模板，也会自动创建一个环境。&lt;/p&gt;
+&lt;p&gt;配置 &lt;code&gt;Jinja&lt;/code&gt; 为应用程序加载模板的最简单方法是使用 &lt;code&gt;PackageLoader&lt;/code&gt;。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;from jinja2 import Environment, PackageLoader, select_autoescape
+env = Environment(
+    loader=PackageLoader(&amp;quot;yourapp&amp;quot;)
+    autoescape=select_autoescape()
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这将创建一个带有加载器的模板环境，加载器会在 yourapp Python 软件包内的模板文件夹中查找模板。它还会启用 HTML 文件的自动换码功能。该加载器只要求 yourapp 是可导入的，它会为你找出文件夹的绝对路径。&lt;/p&gt;
+&lt;p&gt;不同的加载器可用于以其他方式或从其他位置加载模板。它们都列在下面的加载器部分。如果你想从更适合你的项目的来源加载模板，也可以自己编写。&lt;/p&gt;
+&lt;p&gt;要从该环境加载模板，请使用 get_template() 方法，它会返回已加载的模板。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;template = env.get_template(&amp;quot;mytemplate.html&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;调用 &lt;code&gt;render()&lt;/code&gt; 方法用一些变量渲染模板。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;print(template.render(the=&amp;quot;variables&amp;quot;, go=&amp;quot;here&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用模板加载器而不是向 Template 或 Environment.from_string() 传递字符串有很多好处。除了更容易使用外，它还能实现模板继承。&lt;/p&gt;
+&lt;h4 id=&#34;32-api&#34;&gt;3.2 高级API&lt;/h4&gt;
+&lt;p&gt;高级应用程序接口（High Level API）是您将在应用程序中使用的应用程序接口，用于加载和呈现 Jinja 模板。而低级应用程序接口（Low Level API）只有在你想深入研究 Jinja或开发扩展时才有用。&lt;/p&gt;
+&lt;p&gt;详见：&lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/api/#high-level-api&#34;&gt;https://jinja.palletsprojects.com/en/3.1.x/api/#high-level-api&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4&#34;&gt;4 模板&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Jinja 模板是一个简单的文本文件。Jinja 可以生成任何基于文本的格式（HTML、XML、CSV、LaTeX 等）。Jinja 模板不需要特定的扩展名：.html、.xml 或任何其他扩展名都可以。&lt;/p&gt;
+&lt;p&gt;一个模板包含变量和/或表达式，当模板被渲染时，这些变量和/或表达式将被替换为值；还包含标签，用于控制模板的逻辑。&lt;/p&gt;
+&lt;p&gt;下面是一个模板示例：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;My Webpage&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;ul id=&amp;quot;navigation&amp;quot;&amp;gt;
+    {% for item in navigation %}
+        &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ item.href }}&amp;quot;&amp;gt;{{ item.caption }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    {% endfor %}
+    &amp;lt;/ul&amp;gt;
+
+    &amp;lt;h1&amp;gt;My Webpage&amp;lt;/h1&amp;gt;
+    {{ a_variable }}
+
+    {# a comment #}
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的示例显示了默认配置设置。应用程序开发人员可以将语法配置从 &lt;code&gt;{% foo %}&lt;/code&gt; 更改为 &lt;code&gt;&amp;lt;% foo %&amp;gt;&lt;/code&gt; 或类似内容。&lt;/p&gt;
+&lt;p&gt;有几种分隔符。Jinja 的默认分隔符配置如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;{% ... %} 用于语句&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;{{ ... }} 用于要打印到模板输出的表达式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;{# ... #} 表示不包含在模板输出中的注释&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;行语句和注释也可以使用，但它们没有默认的前缀字符。要使用它们，请在创建环境时设置 &lt;code&gt;line_statement_prefix&lt;/code&gt; 和 &lt;code&gt;line_comment_prefix&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;详见：&lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/templates/&#34;&gt;https://jinja.palletsprojects.com/en/3.1.x/templates/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5&#34;&gt;5 集成&lt;/h3&gt;
+&lt;h4 id=&#34;51-flask&#34;&gt;5.1 Flask&lt;/h4&gt;
+&lt;p&gt;Flask 框架默认使用 Jinja 模板。Flask 会设置一个 Jinja 环境和模板加载器，并提供从视图函数轻松呈现模板的功能。&lt;/p&gt;
+&lt;h4 id=&#34;52-django&#34;&gt;5.2 Django&lt;/h4&gt;
+&lt;p&gt;Django 支持使用 Jinja 作为模板引擎，请参见 &lt;a href=&#34;https://docs.djangoproject.com/en/stable/topics/templates/#support-for-template-engines。&#34;&gt;https://docs.djangoproject.com/en/stable/topics/templates/#support-for-template-engines。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可集成的还有 &lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/integration/#babel&#34;&gt;Babel&lt;/a&gt; 和 &lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/integration/#pylons&#34;&gt;Pylons&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6&#34;&gt;6 实例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;渲染模板&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这个模板中，&lt;code&gt;{{ title }}&lt;/code&gt;、&lt;code&gt;{{ heading }}&lt;/code&gt; 和 &lt;code&gt;{{ name }}&lt;/code&gt; 是变量，将在渲染时被替换。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;from jinja2 import Template
+
+# 模板字符串
+template_string = &amp;quot;&amp;quot;&amp;quot;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;{{ title }}&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;{{ heading }}&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;嗨, {{ name }}!&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&amp;quot;&amp;quot;&amp;quot;
+
+# 创建模板对象
+template = Template(template_string)
+
+# 渲染模板
+print(template.render(title=&amp;quot;测试一下&amp;quot;, heading=&amp;quot;欢迎一下&amp;quot;, name=&amp;quot;初学者&amp;quot;)) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;运行结果：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;测试一下&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;欢迎一下&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;嗨, 初学者!&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;控制结构&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jinja2支持常见的控制结构，例如条件判断和循环。下面是一个使用循环的例子：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+{% for item in item_list %}
+    &amp;lt;li&amp;gt;{{ item }}&amp;lt;/li&amp;gt;
+{% endfor %}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在Python代码中，提供一个列表来渲染这个模板：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;print(template.render(item_list=[&amp;quot;苹果&amp;quot;, &amp;quot;香蕉&amp;quot;, &amp;quot;橘子&amp;quot;]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;模板继承&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;模板继承是Jinja2的一个强大功能。你可以创建一个基础模板，然后在其他模板中继承和扩展它。例如：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;基础模板（base.html）:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;{% block title %}{% endblock %}&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    {% block body %}
+    {% endblock %}
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;子模板（child.html）:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;{% extends &amp;quot;base.html&amp;quot; %}
+
+{% block title %}子页面标题{% endblock %}
+
+{% block body %}
+    &amp;lt;p&amp;gt;这是子页面的内容。&amp;lt;/p&amp;gt;
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;过滤器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jinja2还提供了多种过滤器，用于转换变量。例如，使用 &lt;code&gt;capitalize&lt;/code&gt; 过滤器将字符串的首字母大写：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;&amp;lt;p&amp;gt;{{ &amp;quot;hello world&amp;quot; | capitalize }}&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;过滤器是可以自己定义的，详见：&lt;a href=&#34;https://jinja.palletsprojects.com/en/3.1.x/api/#custom-filters&#34;&gt;https://jinja.palletsprojects.com/en/3.1.x/api/#custom-filters&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;集成 flask&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;安装 flask&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;pip install flask
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;项目结构&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;flaskr/
+│
+├── templates/
+│   └── index.html
+│
+└── flaskr.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;创建Jinja2模板&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;templates&lt;/code&gt; 目录下创建一个 &lt;code&gt;index.html&lt;/code&gt; 文件，作为我们的 &lt;code&gt;Jinja2&lt;/code&gt; 模板。这个模板将简单地展示一个传入的变量。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Flask with Jinja2&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Welcome to Flask with Jinja2&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;Hello, {{ name }}!&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Flask集成Jinja2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;flaskr.py&lt;/code&gt; 文件中，我们将创建一个FastAPI应用，并配置Jinja2环境。然后，我们将创建一个路由来渲染上面的模板。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-Python&#34;&gt;from flask import Flask, render_template
+
+# 创建我们的小程序 :)
+app = Flask(__name__)
+
+# 登陆页面
+@app.route(&#39;/&#39;, methods=[&#39;GET&#39;, &#39;POST&#39;])
+def test():
+    return render_template(&#39;index.html&#39;,name=&amp;quot;test poo!&amp;quot;)
+
+if __name__ == &#39;__main__&#39;:
+    app.run()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;运行应用&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;python flaskr.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
+      <link>https://testpoo.github.io/Jinja2简介.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
+       
+      <category>python</category> 
+      
+    </item>
     
     <item> 
       <title>shell三剑客简介</title>  
@@ -849,7 +1124,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -1376,11 +1651,2265 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
       <category>python</category> 
+      
+    </item>
+    
+    <item> 
+      <title>FastApi简析</title>  
+      <description>&lt;h1 id=&#34;1&#34;&gt;1. 简介&lt;/h1&gt;
+&lt;p&gt;FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架，使用 Python 3.6+ 并基于标准的 Python 类型提示。&lt;/p&gt;
+&lt;p&gt;关键特性:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;快速&lt;/strong&gt;：可与 &lt;strong&gt;NodeJS&lt;/strong&gt; 和 &lt;strong&gt;Go&lt;/strong&gt; 并肩的极高性能（归功于 Starlette 和 Pydantic）。最快的 Python web 框架之一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;高效编码&lt;/strong&gt;：提高功能开发速度约 200％ 至 300％。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更少 bug&lt;/strong&gt;：减少约 40％ 的人为（开发者）导致的错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;智能&lt;/strong&gt;：极佳的编辑器支持。处处皆可自动补全，减少调试时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;简单&lt;/strong&gt;：设计易于使用和学习，阅读文档的时间更短。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;简短&lt;/strong&gt;：使代码重复最小化。通过不同的参数声明实现丰富功能，bug 更少。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;健壮&lt;/strong&gt;：生产可用级别的代码。还有自动生成的交互式文档。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;标准化&lt;/strong&gt;：基于（并完全兼容）API 的相关开放标准：&lt;a href=&#34;https://github.com/OAI/OpenAPI-Specification&#34;&gt;OpenAPI&lt;/a&gt; (以前被称为 Swagger) 和 &lt;a href=&#34;https://json-schema.org/&#34;&gt;JSON Schema&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;2-fastapi&#34;&gt;2. FastAPI 特性&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;FastAPI&lt;/strong&gt; 提供了以下内容：&lt;/p&gt;
+&lt;h2 id=&#34;21&#34;&gt;2.1 基于开放标准&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用于创建 API 的 &lt;a href=&#34;https://github.com/OAI/OpenAPI-Specification&#34;&gt;&lt;strong&gt;OpenAPI&lt;/strong&gt;&lt;/a&gt; 包含了路径操作，请求参数，请求体，安全性等的声明。&lt;/li&gt;
+&lt;li&gt;使用 &lt;a href=&#34;https://json-schema.org/&#34;&gt;&lt;strong&gt;JSON Schema&lt;/strong&gt;&lt;/a&gt; (因为 OpenAPI 本身就是基于 JSON Schema 的)自动生成数据模型文档。&lt;/li&gt;
+&lt;li&gt;经过了缜密的研究后围绕这些标准而设计，并非狗尾续貂。&lt;/li&gt;
+&lt;li&gt;这也允许了在很多语言中自动&lt;strong&gt;生成客户端代码&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;22&#34;&gt;2.2 自动生成文档&lt;/h2&gt;
+&lt;p&gt;交互式 API 文档以及具探索性 web 界面。因为该框架是基于 OpenAPI，所以有很多可选项，FastAPI 默认自带两个交互式 API 文档。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagger-api/swagger-ui&#34;&gt;&lt;strong&gt;Swagger UI&lt;/strong&gt;&lt;/a&gt;，可交互式操作，能在浏览器中直接调用和测试你的 API 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;Swagger UI interaction&#34; src=&#34;https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;另外的 API 文档：&lt;a href=&#34;https://github.com/Rebilly/ReDoc&#34;&gt;&lt;strong&gt;ReDoc&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;ReDoc&#34; src=&#34;https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;23-python&#34;&gt;2.3 更主流的 Python&lt;/h2&gt;
+&lt;p&gt;全部都基于标准的 &lt;strong&gt;Python 3.6 类型&lt;/strong&gt;声明（感谢 Pydantic ）。没有新的语法需要学习。只需要标准的 Python 。&lt;/p&gt;
+&lt;p&gt;如果你需要2分钟来学习如何使用 Python 类型（即使你不使用 FastAPI ），看看这个简短的教程：&lt;a href=&#34;https://fastapi.tiangolo.com/zh/python-types/&#34;&gt;Python Types&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;编写带有类型标注的标准 Python：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;from datetime import date
+from pydantic import BaseModel 
+# Declare a variable as a str 
+# and get editor support inside the function 
+def main(user_id: str): 
+    return user_id 
+    # A Pydantic model 
+class User(BaseModel): 
+    id: int 
+    name: str 
+    joined: date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以像这样来使用：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;my_user: User = User(id=3, name=&amp;quot;John Doe&amp;quot;, joined=&amp;quot;2018-07-19&amp;quot;) 
+second_user_data = {
+    &amp;quot;id&amp;quot;: 4,
+    &amp;quot;name&amp;quot;: &amp;quot;Mary&amp;quot;,
+    &amp;quot;joined&amp;quot;: &amp;quot;2018-11-30&amp;quot;,
+}
+my_second_user: User = User(**second_user_data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;second_user_data&lt;/code&gt; 意思是:&lt;/p&gt;
+&lt;p&gt;直接将&lt;code&gt;second_user_data&lt;/code&gt;字典的键和值直接作为key-value参数传递，等同于：&lt;code&gt;User(id=4, name=&#34;Mary&#34;, joined=&#34;2018-11-30&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;24&#34;&gt;2.4 编辑器支持&lt;/h2&gt;
+&lt;p&gt;整个框架都被设计得易于使用且直观，所有的决定都在开发之前就在多个编辑器上进行了测试，来确保最佳的开发体验。&lt;/p&gt;
+&lt;p&gt;在最近的 Python 开发者调查中，我们能看到 &lt;a href=&#34;https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features&#34;&gt;被使用最多的功能是&#34;自动补全&#34;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;整个 &lt;strong&gt;FastAPI&lt;/strong&gt; 框架就是基于这一点的。任何地方都可以进行自动补全。&lt;/p&gt;
+&lt;p&gt;你几乎不需要经常回来看文档。&lt;/p&gt;
+&lt;p&gt;在这里，你的编辑器可能会这样帮助你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt; 中:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;editor support&#34; src=&#34;https://fastapi.tiangolo.com/img/vscode-completion.png&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/&#34;&gt;PyCharm&lt;/a&gt; 中:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&#34;editor support&#34; src=&#34;https://fastapi.tiangolo.com/img/pycharm-completion.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;你将能进行代码补全，这是在之前你可能曾认为不可能的事。例如，在来自请求 JSON 体（可能是嵌套的）中的键 &lt;code&gt;price&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;不会再输错键名，来回翻看文档，或者来回滚动寻找你最后使用的 &lt;code&gt;username&lt;/code&gt; 或者 &lt;code&gt;user_name&lt;/code&gt; 。&lt;/p&gt;
+&lt;h2 id=&#34;25&#34;&gt;2.5 简洁&lt;/h2&gt;
+&lt;p&gt;任何类型都有合理的&lt;strong&gt;默认值&lt;/strong&gt;，任何和地方都有可选配置。所有的参数被微调，来满足你的需求，定义成你需要的 API。&lt;/p&gt;
+&lt;p&gt;但是默认情况下，一切都能&lt;strong&gt;顺利工作&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;26&#34;&gt;2.6 验证&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;校验大部分（甚至所有）的 Python &lt;strong&gt;数据类型&lt;/strong&gt;，包括：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSON 对象 (&lt;code&gt;dict&lt;/code&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;JSON 数组 (&lt;code&gt;list&lt;/code&gt;) 定义成员类型。&lt;/li&gt;
+&lt;li&gt;字符串 (&lt;code&gt;str&lt;/code&gt;) 字段, 定义最小或最大长度。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数字 (&lt;code&gt;int&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;) 有最大值和最小值， 等等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;校验外来类型， 比如:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Email.&lt;/li&gt;
+&lt;li&gt;UUID.&lt;/li&gt;
+&lt;li&gt;...及其他.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有的校验都由完善且强大的 &lt;strong&gt;Pydantic&lt;/strong&gt; 处理。&lt;/p&gt;
+&lt;h2 id=&#34;27&#34;&gt;2.7 安全性及身份验证&lt;/h2&gt;
+&lt;p&gt;集成了安全性和身份认证。杜绝数据库或者数据模型的渗透风险。&lt;/p&gt;
+&lt;p&gt;OpenAPI 中定义的安全模式，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 基本认证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OAuth2&lt;/strong&gt; (也使用 &lt;strong&gt;JWT tokens&lt;/strong&gt;)。在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/security/oauth2-jwt/&#34;&gt;OAuth2 with JWT&lt;/a&gt;查看教程。&lt;/li&gt;
+&lt;li&gt;API 密钥，在:&lt;/li&gt;
+&lt;li&gt;请求头。&lt;/li&gt;
+&lt;li&gt;查询参数。&lt;/li&gt;
+&lt;li&gt;Cookies, 等等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;加上来自 Starlette（包括 &lt;strong&gt;session cookie&lt;/strong&gt;）的所有安全特性。&lt;/p&gt;
+&lt;p&gt;所有的这些都是可复用的工具和组件，可以轻松与你的系统，数据仓库，关系型以及 NoSQL 数据库等等集成。&lt;/p&gt;
+&lt;h2 id=&#34;28&#34;&gt;2.8 依赖注入&lt;/h2&gt;
+&lt;p&gt;FastAPI 有一个使用非常简单，但是非常强大的&lt;strong&gt;依赖注入&lt;/strong&gt;系统。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;甚至依赖也可以有依赖，创建一个层级或者&lt;strong&gt;“图”依赖&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;所有&lt;strong&gt;自动化处理&lt;/strong&gt;都由框架完成。&lt;/li&gt;
+&lt;li&gt;所有的依赖关系都可以从请求中获取数据，并且&lt;strong&gt;增加了路径操作&lt;/strong&gt;约束和自动文档生成。&lt;/li&gt;
+&lt;li&gt;即使在依赖项中被定义的&lt;em&gt;路径操作&lt;/em&gt; 也会&lt;strong&gt;自动验证&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;支持复杂的用户身份认证系统，&lt;strong&gt;数据库连接&lt;/strong&gt;等等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不依赖&lt;/strong&gt;数据库，前端等。 但是和它们集成很简单。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;29&#34;&gt;2.9 无限制&#34;插件&#34;&lt;/h2&gt;
+&lt;p&gt;或者说，导入并使用你需要的代码，而不需要它们。&lt;/p&gt;
+&lt;p&gt;任何集成都被设计得被易于使用（用依赖关系），你可以用和&lt;em&gt;路径操作&lt;/em&gt;相同的结构和语法，在两行代码中为你的应用创建一个“插件”。&lt;/p&gt;
+&lt;h2 id=&#34;210&#34;&gt;2.10 测试&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;100% 测试覆盖。&lt;/li&gt;
+&lt;li&gt;代码库100% 类型注释。&lt;/li&gt;
+&lt;li&gt;用于生产应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;3-starlette&#34;&gt;3. Starlette 特性&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;FastAPI&lt;/strong&gt; 和 &lt;a href=&#34;https://www.starlette.io/&#34;&gt;&lt;strong&gt;Starlette&lt;/strong&gt;&lt;/a&gt; 完全兼容(并基于)。所以，你有的其他的 Starlette 代码也能正常工作。&lt;code&gt;FastAPI&lt;/code&gt; 实际上是 &lt;code&gt;Starlette&lt;/code&gt;的一个子类。所以，如果你已经知道或者使用 Starlette，大部分的功能会以相同的方式工作。&lt;/p&gt;
+&lt;p&gt;通过 &lt;strong&gt;FastAPI&lt;/strong&gt; 你可以获得所有 &lt;strong&gt;Starlette&lt;/strong&gt; 的特性 ( FastAPI 就像加强版的 Starlette )：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;令人惊叹的性能。它是 &lt;a href=&#34;https://github.com/encode/starlette#performance&#34;&gt;Python 可用的最快的框架之一，和 &lt;strong&gt;NodeJS&lt;/strong&gt; 及 &lt;strong&gt;Go&lt;/strong&gt; 相当&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持 WebSocket&lt;/strong&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持 GraphQL&lt;/strong&gt; 。&lt;/li&gt;
+&lt;li&gt;后台任务处理。&lt;/li&gt;
+&lt;li&gt;Startup 和 shutdown 事件。&lt;/li&gt;
+&lt;li&gt;测试客户端基于 HTTPX。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CORS&lt;/strong&gt;, GZip, 静态文件, 流响应。&lt;/li&gt;
+&lt;li&gt;支持 &lt;strong&gt;Session 和 Cookie&lt;/strong&gt; 。&lt;/li&gt;
+&lt;li&gt;100% 测试覆盖率。&lt;/li&gt;
+&lt;li&gt;代码库 100% 类型注释。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;4-pydantic&#34;&gt;4. Pydantic 特性&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;FastAPI&lt;/strong&gt; 和 &lt;a href=&#34;https://pydantic-docs.helpmanual.io/&#34;&gt;&lt;strong&gt;Pydantic&lt;/strong&gt;&lt;/a&gt; 完全兼容(并基于)。所以，你有的其他的 Pydantic 代码也能正常工作。&lt;/p&gt;
+&lt;p&gt;兼容包括基于 Pydantic 的外部库， 例如用与数据库的 ORMs, ODMs。&lt;/p&gt;
+&lt;p&gt;这也意味着在很多情况下，你可以将从请求中获得的相同对象&lt;strong&gt;直接传到数据库&lt;/strong&gt;，因为所有的验证都是自动的。&lt;/p&gt;
+&lt;p&gt;反之亦然，在很多情况下，你也可以将从数据库中获取的对象&lt;strong&gt;直接传到客户端&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;通过 &lt;strong&gt;FastAPI&lt;/strong&gt; 你可以获得所有 &lt;strong&gt;Pydantic&lt;/strong&gt; (FastAPI 基于 Pydantic 做了所有的数据处理)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;更简单&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;没有新的模式定义 micro-language 需要学习。&lt;/li&gt;
+&lt;li&gt;如果你知道 Python types，你就知道如何使用 Pydantic。&lt;/li&gt;
+&lt;li&gt;和你 &lt;strong&gt;IDE/linter/brain&lt;/strong&gt; 适配:&lt;/li&gt;
+&lt;li&gt;因为 pydantic 数据结构仅仅是你定义的类的实例；自动补全，linting，mypy 以及你的直觉应该可以和你验证的数据一起正常工作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更快&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;在 &lt;a href=&#34;https://pydantic-docs.helpmanual.io/benchmarks/&#34;&gt;基准测试&lt;/a&gt; 中，Pydantic 比其他被测试的库都要快。&lt;/li&gt;
+&lt;li&gt;验证&lt;strong&gt;复杂结构&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;使用分层的 Pydantic 模型, Python &lt;code&gt;typing&lt;/code&gt;的 &lt;code&gt;List&lt;/code&gt; 和 &lt;code&gt;Dict&lt;/code&gt; 等等。&lt;/li&gt;
+&lt;li&gt;验证器使我们能够简单清楚的将复杂的数据模式定义、检查并记录为 JSON Schema。&lt;/li&gt;
+&lt;li&gt;你可以拥有深度&lt;strong&gt;嵌套的 JSON&lt;/strong&gt; 对象并对它们进行验证和注释。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可扩展&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;Pydantic 允许定义自定义数据类型或者你可以用验证器装饰器对被装饰的模型上的方法扩展验证。&lt;/li&gt;
+&lt;li&gt;100% 测试覆盖率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;5-python&#34;&gt;5. Python 类型提示简介&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Python 3.6+ 版本&lt;/strong&gt;加入了对&#34;类型提示&#34;的支持。&lt;/p&gt;
+&lt;p&gt;这些&lt;strong&gt;类型提示&lt;/strong&gt;是一种新的语法（在 Python 3.6 版本加入）用来声明一个变量的类型。&lt;/p&gt;
+&lt;p&gt;通过声明变量的类型，编辑器和一些工具能给你提供更好的支持。&lt;/p&gt;
+&lt;p&gt;这只是一个关于 Python 类型提示的&lt;strong&gt;快速入门 / 复习&lt;/strong&gt;。它仅涵盖与 &lt;strong&gt;FastAPI&lt;/strong&gt; 一起使用所需的最少部分，实际上只有很少一点。&lt;/p&gt;
+&lt;p&gt;整个 &lt;strong&gt;FastAPI&lt;/strong&gt; 都基于这些类型提示构建，它们带来了许多优点和好处。&lt;/p&gt;
+&lt;p&gt;但即使你不会用到 &lt;strong&gt;FastAPI&lt;/strong&gt;，了解一下类型提示也会让你从中受益。&lt;/p&gt;
+&lt;p&gt;如果你已经精通 Python，并且了解关于类型提示的一切知识，直接跳到下一章节吧。&lt;/p&gt;
+&lt;h2 id=&#34;51&#34;&gt;5.1 动机&lt;/h2&gt;
+&lt;p&gt;让我们从一个简单的例子开始：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;def get_full_name(first_name, last_name):
+    full_name = first_name.title() + &amp;quot; &amp;quot; + last_name.title()
+    return full_name print(get_full_name(&amp;quot;john&amp;quot;, &amp;quot;doe&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行这段程序将输出：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;John Doe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个函数做了下面这些事情：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接收 &lt;code&gt;first_name&lt;/code&gt; 和 &lt;code&gt;last_name&lt;/code&gt; 参数。&lt;/li&gt;
+&lt;li&gt;通过 &lt;code&gt;title()&lt;/code&gt; 将每个参数的第一个字母转换为大写形式。&lt;/li&gt;
+&lt;li&gt;中间用一个空格来拼接它们。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;511&#34;&gt;5.1.1 修改示例&lt;/h3&gt;
+&lt;p&gt;这是一个非常简单的程序。&lt;/p&gt;
+&lt;p&gt;现在假设你将从头开始编写这段程序。&lt;/p&gt;
+&lt;p&gt;在某一时刻，你开始定义函数，并且准备好了参数。&lt;/p&gt;
+&lt;p&gt;现在你需要调用一个&#34;将第一个字母转换为大写形式的方法&#34;。&lt;/p&gt;
+&lt;p&gt;等等，那个方法是什么来着？&lt;code&gt;upper&lt;/code&gt;？还是 &lt;code&gt;uppercase&lt;/code&gt;？&lt;code&gt;first_uppercase&lt;/code&gt;？&lt;code&gt;capitalize&lt;/code&gt;？&lt;/p&gt;
+&lt;p&gt;然后你尝试向程序员老手的朋友——编辑器自动补全寻求帮助。&lt;/p&gt;
+&lt;p&gt;输入函数的第一个参数 &lt;code&gt;first_name&lt;/code&gt;，输入点号（&lt;code&gt;.&lt;/code&gt;）然后敲下 &lt;code&gt;Ctrl+Space&lt;/code&gt; 来触发代码补全。&lt;/p&gt;
+&lt;p&gt;但遗憾的是并没有起什么作用：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image01.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;512&#34;&gt;5.1.2 添加类型&lt;/h3&gt;
+&lt;p&gt;让我们来修改上面例子的一行代码。&lt;/p&gt;
+&lt;p&gt;我们将把下面这段代码中的函数参数从：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;first_name, last_name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;改成：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;first_name: str, last_name: str
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;就是这样。&lt;/p&gt;
+&lt;p&gt;这些就是&#34;类型提示&#34;：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;def get_full_name(first_name: str, last_name: str):
+    full_name = first_name.title() + &amp;quot; &amp;quot; + last_name.title()
+    return full_name
+    print(get_full_name(&amp;quot;john&amp;quot;, &amp;quot;doe&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这和声明默认值是不同的，例如：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;first_name=&amp;quot;john&amp;quot;, last_name=&amp;quot;doe&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这两者不一样。&lt;/p&gt;
+&lt;p&gt;我们用的是冒号（&lt;code&gt;:&lt;/code&gt;），不是等号（&lt;code&gt;=&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;而且添加类型提示一般不会改变原来的运行结果。&lt;/p&gt;
+&lt;p&gt;现在假设我们又一次正在创建这个函数，这次添加了类型提示。&lt;/p&gt;
+&lt;p&gt;在同样的地方，通过 &lt;code&gt;Ctrl+Space&lt;/code&gt; 触发自动补全，你会发现：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image02.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;这样，你可以滚动查看选项，直到你找到看起来眼熟的那个：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image03.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;52&#34;&gt;5.2 更多动机&lt;/h2&gt;
+&lt;p&gt;下面是一个已经有类型提示的函数：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;def get_name_with_age(name: str, age: int):
+    name_with_age = name + &amp;quot; is this old: &amp;quot; + age
+    return name_with_age
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;因为编辑器已经知道了这些变量的类型，所以不仅能对代码进行补全，还能检查其中的错误：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image04.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;现在你知道了必须先修复这个问题，通过 &lt;code&gt;str(age)&lt;/code&gt; 把 &lt;code&gt;age&lt;/code&gt; 转换成字符串：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;def get_name_with_age(name: str, age: int):
+    name_with_age = name + &amp;quot; is this old: &amp;quot; + str(age)
+    return name_with_age
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;53&#34;&gt;5.3 声明类型&lt;/h2&gt;
+&lt;p&gt;你刚刚看到的就是声明类型提示的主要场景。用于函数的参数。&lt;/p&gt;
+&lt;p&gt;这也是你将在 &lt;strong&gt;FastAPI&lt;/strong&gt; 中使用它们的主要场景。&lt;/p&gt;
+&lt;h3 id=&#34;531&#34;&gt;5.3.1 简单类型&lt;/h3&gt;
+&lt;p&gt;不只是 &lt;code&gt;str&lt;/code&gt;，你能够声明所有的标准 Python 类型。&lt;/p&gt;
+&lt;p&gt;比如以下类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;int&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;float&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bool&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bytes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;def get_items(item_a: str, item_b: int, item_c: float, item_d: bool, item_e: bytes):
+    return item_a, item_b, item_c, item_d, item_d, item_e
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;532&#34;&gt;5.3.2 嵌套类型&lt;/h3&gt;
+&lt;p&gt;有些容器数据结构可以包含其他的值，比如 &lt;code&gt;dict&lt;/code&gt;、&lt;code&gt;list&lt;/code&gt;、&lt;code&gt;set&lt;/code&gt; 和 &lt;code&gt;tuple&lt;/code&gt;。它们内部的值也会拥有自己的类型。&lt;/p&gt;
+&lt;p&gt;你可以使用 Python 的 &lt;code&gt;typing&lt;/code&gt; 标准库来声明这些类型以及子类型。&lt;/p&gt;
+&lt;p&gt;它专门用来支持这些类型提示。&lt;/p&gt;
+&lt;h4 id=&#34;5321&#34;&gt;5.3.2.1 列表&lt;/h4&gt;
+&lt;p&gt;例如，让我们来定义一个由 &lt;code&gt;str&lt;/code&gt; 组成的 &lt;code&gt;list&lt;/code&gt; 变量。&lt;/p&gt;
+&lt;p&gt;从 &lt;code&gt;typing&lt;/code&gt; 模块导入 &lt;code&gt;List&lt;/code&gt;（注意是大写的 &lt;code&gt;L&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;from typing import List
+
+def process_items(items: List[str]):
+    for item in items:
+        print(item)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;同样以冒号（&lt;code&gt;:&lt;/code&gt;）来声明这个变量。&lt;/p&gt;
+&lt;p&gt;输入 &lt;code&gt;List&lt;/code&gt; 作为类型。&lt;/p&gt;
+&lt;p&gt;由于列表是带有&#34;子类型&#34;的类型，所以我们把子类型放在方括号中：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;from typing import List
+
+def process_items(items: List[str]):
+    for item in items:
+        print(item)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这表示：&#34;变量 &lt;code&gt;items&lt;/code&gt; 是一个 &lt;code&gt;list&lt;/code&gt;，并且这个列表里的每一个元素都是 &lt;code&gt;str&lt;/code&gt;&#34;。&lt;/p&gt;
+&lt;p&gt;这样，即使在处理列表中的元素时，你的编辑器也可以提供支持。&lt;/p&gt;
+&lt;p&gt;没有类型，几乎是不可能实现下面这样：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image05.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;注意，变量 &lt;code&gt;item&lt;/code&gt; 是列表 &lt;code&gt;items&lt;/code&gt; 中的元素之一。&lt;/p&gt;
+&lt;p&gt;而且，编辑器仍然知道它是一个 &lt;code&gt;str&lt;/code&gt;，并为此提供了支持。&lt;/p&gt;
+&lt;h4 id=&#34;5322&#34;&gt;5.3.2.2 元组和集合&lt;/h4&gt;
+&lt;p&gt;声明 &lt;code&gt;tuple&lt;/code&gt; 和 &lt;code&gt;set&lt;/code&gt; 的方法也是一样的：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;from typing import Set, Tuple
+
+def process_items(items_t: Tuple[int, int, str], items_s: Set[bytes]):
+    return items_t, items_s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量 &lt;code&gt;items_t&lt;/code&gt; 是一个 &lt;code&gt;tuple&lt;/code&gt;，其中的前两个元素都是 &lt;code&gt;int&lt;/code&gt; 类型, 最后一个元素是 &lt;code&gt;str&lt;/code&gt; 类型。&lt;/li&gt;
+&lt;li&gt;变量 &lt;code&gt;items_s&lt;/code&gt; 是一个 &lt;code&gt;set&lt;/code&gt;，其中的每个元素都是 &lt;code&gt;bytes&lt;/code&gt; 类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;5323&#34;&gt;5.3.2.3 字典&lt;/h4&gt;
+&lt;p&gt;定义 &lt;code&gt;dict&lt;/code&gt; 时，需要传入两个子类型，用逗号进行分隔。&lt;/p&gt;
+&lt;p&gt;第一个子类型声明 &lt;code&gt;dict&lt;/code&gt; 的所有键。&lt;/p&gt;
+&lt;p&gt;第二个子类型声明 &lt;code&gt;dict&lt;/code&gt; 的所有值：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;from typing import Dict
+
+def process_items(prices: Dict[str, float]):
+    for item_name, item_price in prices.items():
+        print(item_name)
+        print(item_price)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量 &lt;code&gt;prices&lt;/code&gt; 是一个 &lt;code&gt;dict&lt;/code&gt;：&lt;/li&gt;
+&lt;li&gt;这个 &lt;code&gt;dict&lt;/code&gt; 的所有键为 &lt;code&gt;str&lt;/code&gt; 类型（可以看作是字典内每个元素的名称）。&lt;/li&gt;
+&lt;li&gt;这个 &lt;code&gt;dict&lt;/code&gt; 的所有值为 &lt;code&gt;float&lt;/code&gt; 类型（可以看作是字典内每个元素的价格）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;533&#34;&gt;5.3.3 类作为类型&lt;/h3&gt;
+&lt;p&gt;你也可以将类声明为变量的类型。&lt;/p&gt;
+&lt;p&gt;假设你有一个名为 &lt;code&gt;Person&lt;/code&gt; 的类，拥有 name 属性：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;class Person:
+    def __init__(self, name: str):
+        self.name = name
+
+    def get_person_name(one_person: Person):
+        return one_person.name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来，你可以将一个变量声明为 &lt;code&gt;Person&lt;/code&gt; 类型：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;class Person:
+    def __init__(self, name: str):
+        self.name = name
+
+    def get_person_name(one_person: Person):
+        return one_person.name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后，你将再次获得所有的编辑器支持：&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;&#34; src=&#34;https://fastapi.tiangolo.com/img/python-types/image06.png&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;54-pydantic&#34;&gt;5.4 Pydantic 模型&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://pydantic-docs.helpmanual.io/&#34;&gt;Pydantic&lt;/a&gt; 是一个用来用来执行数据校验的 Python 库。&lt;/p&gt;
+&lt;p&gt;你可以将数据的&#34;结构&#34;声明为具有属性的类。&lt;/p&gt;
+&lt;p&gt;每个属性都拥有类型。&lt;/p&gt;
+&lt;p&gt;接着你用一些值来创建这个类的实例，这些值会被校验，并被转换为适当的类型（在需要的情况下），返回一个包含所有数据的对象。&lt;/p&gt;
+&lt;p&gt;然后，你将获得这个对象的所有编辑器支持。&lt;/p&gt;
+&lt;p&gt;下面的例子来自 Pydantic 官方文档：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;class Person:
+    def __init__(self, name: str):
+        self.name = name
+
+    def get_person_name(one_person: Person):
+        return one_person.name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;想进一步了解 &lt;a href=&#34;https://pydantic-docs.helpmanual.io/&#34;&gt;Pydantic，请阅读其文档&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;整个 &lt;strong&gt;FastAPI&lt;/strong&gt; 建立在 Pydantic 的基础之上。&lt;/p&gt;
+&lt;p&gt;实际上你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 看到很多这种情况。&lt;/p&gt;
+&lt;h2 id=&#34;55-fastapi&#34;&gt;5.5 FastAPI 中的类型提示&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FastAPI&lt;/strong&gt; 利用这些类型提示来做下面几件事。&lt;/p&gt;
+&lt;p&gt;使用 &lt;strong&gt;FastAPI&lt;/strong&gt; 时用类型提示声明参数可以获得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;编辑器支持&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型检查&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;并且 &lt;strong&gt;FastAPI&lt;/strong&gt; 还会用这些类型声明来：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义参数要求&lt;/strong&gt;：声明对请求路径参数、查询参数、请求头、请求体、依赖等的要求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;转换数据&lt;/strong&gt;：将来自请求的数据转换为需要的类型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;校验数据&lt;/strong&gt;： 对于每一个请求：&lt;/li&gt;
+&lt;li&gt;当数据校验失败时自动生成&lt;strong&gt;错误信息&lt;/strong&gt;返回给客户端。&lt;/li&gt;
+&lt;li&gt;使用 OpenAPI &lt;strong&gt;记录&lt;/strong&gt; API：&lt;/li&gt;
+&lt;li&gt;然后用于自动生成交互式文档的用户界面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
+&lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
+      <link>https://testpoo.github.io/FastApi简析.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
+       
+      <category>python</category> 
+      
+    </item>
+    
+    <item> 
+      <title>go测试库apitest简介</title>  
+      <description>&lt;h3 id=&#34;1&#34;&gt;1. 开始&lt;/h3&gt;
+&lt;h4 id=&#34;11&#34;&gt;1.1. 概述&lt;/h4&gt;
+&lt;p&gt;apitest是一个简单且可扩展的 Go 语言测试库。你可以使用 &lt;code&gt;apitest&lt;/code&gt; 来简化 REST 服务、HTTP handlers(事件处理器) 和HTTP客户端的测试。&lt;/p&gt;
+&lt;h4 id=&#34;12&#34;&gt;1.2. 特征&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可模拟外部http调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在测试完成时可呈现序列图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可扩展——支持各种注入点&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GraphQL（一种用于 API 的查询语言）支持&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自定义断言函数和模拟匹配器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JSON路径断言，css选择器断言等等&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;13&#34;&gt;1.3. 安装&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go get -u github.com/steinfletcher/apitest
+# 使用时导入
+import &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+# 就咱们现在这种网络状态，第一种方法基本不能用，目前只能手动下载，然后手动放到GOPATH/src/github.com/下。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;apitest遵循语义版本控制，使用 Github 版本管理发布。&lt;/p&gt;
+&lt;h4 id=&#34;14&#34;&gt;1.4. 一个测试例子的解析&lt;/h4&gt;
+&lt;p&gt;例子主要包括三个部分&lt;/p&gt;
+&lt;p&gt;配置：定义将要测试的HTTP请求处理程序和所有其他特定的测试配置，例如模拟、调试模式和报告&lt;/p&gt;
+&lt;p&gt;请求：定义测试输入，这通常是一个http请求需要的&lt;/p&gt;
+&lt;p&gt;预期：定义被测应用程序应该如何响应。这通常是一个http响应需要的&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestGetMessage(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        msg := `{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`
+        _, _ = w.Write([]byte(msg))
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New(). // 配置
+            HandlerFunc(handler).  // 不通过网络进行 HTTP 调用
+            Get(&amp;quot;/message&amp;quot;). // 请求，必须写
+            Expect(t).       // Expect(t).Body 匹配 HTTP 响应体
+            Body(`{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`).
+            Status(http.StatusOK).  // 断言http状态 http.StatusOK = 200
+            End()  // 测试结束
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用 &lt;code&gt;go test&lt;/code&gt; 执行测试，&lt;code&gt;go test -v&lt;/code&gt; 打印测试函数的所有细节，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;$ go test 1_hello_test.go
+ok      command-line-arguments  0.217s
+
+=============================================
+
+$ go test -v 1_hello_test.go
+=== RUN   TestGetMessage
+
+----------&amp;gt; inbound http request
+GET /message HTTP/1.1
+Host: sut
+
+
+
+&amp;lt;---------- final response
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: text/plain; charset=utf-8
+
+{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}
+Duration: 0s
+
+--- PASS: TestGetMessage (0.00s)
+PASS
+ok      command-line-arguments  0.220s5s
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;源文件和测试文件放在同一目录下，测试文件以 &lt;code&gt;_test&lt;/code&gt; 结尾，这个是固定格式，使用 &lt;code&gt;go build&lt;/code&gt; 进行编译时，&lt;code&gt;_test&lt;/code&gt; 文件不会编译。每个测试函数需要以 &lt;code&gt;Test&lt;/code&gt; 为前缀，每个性能测试函数需要以 &lt;code&gt;Benchmark&lt;/code&gt; 为前缀。&lt;/p&gt;
+&lt;h3 id=&#34;2&#34;&gt;2. 配置&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;APITest&lt;/code&gt; 配置类型公开了一些方法来注册测试钩子、启用调试日志记录、并定义被测处理程序。&lt;/p&gt;
+&lt;h4 id=&#34;21-debug&#34;&gt;2.1. Debug&lt;/h4&gt;
+&lt;p&gt;启用调试日志记录并把所有请求和响应交互的http连接情况写入控制台。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().
+  Debug().
+  Handler(myHandler)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样会记录整个模拟交互过程，这对于定位失败测试用例背后的原因非常有用。在下面的示例中，由于模拟的 URL 不正确，导致不匹配。控制台会将每个模拟不匹配的原因记录下来。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;----------&amp;gt; inbound http request
+GET /user HTTP/1.1
+Host: application
+
+failed to match mocks. Errors: received request did not match any mocks
+
+Mock 1 mismatches:
+• received path /user/12345 did not match mock path /preferences/12345
+
+Mock 2 mismatches:
+• received path /user/12345 did not match mock path /user/123456
+
+----------&amp;gt; request to mock
+GET /user/12345 HTTP/1.1
+Host: localhost:8080
+User-Agent: Go-http-client/1.1
+Accept-Encoding: gzip
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;22-http-handler&#34;&gt;2.2. HTTP Handler&lt;/h4&gt;
+&lt;p&gt;应该使用 Handler 或 HandlerFunc 测试定义的 &lt;code&gt;handler&lt;/code&gt;，其中 myHandler 是 一个Go的 &lt;code&gt;http.handler&lt;/code&gt;。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().Handler(myHandler)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;设置 Handler 时，apitest 不会通过网络进行 HTTP 调用。相反，提供的 HTTP Handler 的 &lt;code&gt;serveHTTP&lt;/code&gt; 方法在与测试代码相同的进程中调用。用户定义的请求和响应将通过 Go 的 &lt;code&gt;httptest&lt;/code&gt; 包转换成 &lt;code&gt;http.Request&lt;/code&gt; 和 &lt;code&gt;http.Response&lt;/code&gt; 类型。这里的目标是测试内部应用程序而非网络。这种方法使测试既快速又简单。如果你想要用真正的 http 客户端发起一个请求去运行应用程序，则需要通过网络执行。&lt;/p&gt;
+&lt;p&gt;Handler 例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestHandler(t *testing.T) {
+    handler := http.NewServeMux()
+    handler.HandleFunc(&amp;quot;/data&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        w.WriteHeader(http.StatusOK)
+    })
+
+    apitest.New().
+        Handler(handler).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;HandlerFunc 例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestHandlerFunc(t *testing.T) {
+    handlerFunc := func(w http.ResponseWriter, r *http.Request) {
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handlerFunc).
+        Post(&amp;quot;/login&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;23-hooks&#34;&gt;2.3. Hooks&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Intercept&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在请求调用前，&lt;code&gt;Intercept&lt;/code&gt; 和 &lt;code&gt;Observe&lt;/code&gt;类似。允许请求发起者将请求对象发送到被测系统之前对其进行更改。在此示例中，我们使用自定义方案设置请求参数。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestIntercept(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        if r.URL.RawQuery != &amp;quot;a[]=xxx&amp;amp;a[]=yyy&amp;quot; {
+            t.Fatal(&amp;quot;unexpected query&amp;quot;)
+        }
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Intercept(func(req *http.Request) {
+            req.URL.RawQuery = &amp;quot;a[]=xxx&amp;amp;a[]=yyy&amp;quot;
+        }).
+        Get(&amp;quot;/&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Observe&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Observe&lt;/code&gt; 可用于在测试完成时检查请求、响应和 APITest 实例。此方法在 apitest 内部使用，以捕获跨模拟服务器的所有交互，从而呈现测试结果。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestObserve(t *testing.T) {
+    var observeCalled bool
+
+    apitest.New().
+        Observe(func(res *http.Response, req *http.Request, apiTest *apitest.APITest) {
+            observeCalled = true
+            if http.StatusOK != res.StatusCode {
+                t.Fatal(&amp;quot;unexpected status code&amp;quot;)
+            }
+        }).
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/hello&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+
+    if !observeCalled {
+        t.Fatal(&amp;quot;Observe not called&amp;quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;24-networking&#34;&gt;2.4. Networking&lt;/h4&gt;
+&lt;p&gt;如果要针对正在运行的应用程序发起 HTTP 请求，则需要网络。并传递带有 cookie 的 http 请求，类似浏览器的会话行为，其中 cookie 要在多个 apitest 请求中留从。此方法可用于执行端到端的测试。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;fmt&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;net/http/cookiejar&amp;quot;
+    &amp;quot;testing&amp;quot;
+    &amp;quot;time&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+// TestEnableNetworking creates a server with two endpoints, /login sets a token via a cookie and /authenticated_resource
+// validates the token. A cookie jar is used to verify session persistence across multiple apitest instances
+func TestEnableNetworking(t *testing.T) {
+    srv := &amp;amp;http.Server{Addr: &amp;quot;localhost:9876&amp;quot;}
+    finish := make(chan struct{})
+    tokenValue := &amp;quot;ABCDEF&amp;quot;
+
+    http.HandleFunc(&amp;quot;/login&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;Token&amp;quot;, Value: tokenValue})
+        w.WriteHeader(203)
+    })
+
+    http.HandleFunc(&amp;quot;/authenticated_resource&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        token, err := r.Cookie(&amp;quot;Token&amp;quot;)
+        if err == http.ErrNoCookie {
+            w.WriteHeader(400)
+            return
+        }
+        if err != nil {
+            w.WriteHeader(500)
+            return
+        }
+
+        if token.Value != tokenValue {
+            t.Fatalf(&amp;quot;token did not equal %s&amp;quot;, tokenValue)
+        }
+        w.WriteHeader(204)
+    })
+
+    go func() {
+        if err := srv.ListenAndServe(); err != nil {
+            panic(err)
+        }
+    }()
+
+    go func() {
+        defer func() {
+            if r := recover(); r != nil {
+                fmt.Println(&amp;quot;Recovered in f&amp;quot;, r)
+            }
+        }()
+
+        cookieJar, _ := cookiejar.New(nil)
+        cli := &amp;amp;http.Client{
+            Timeout: time.Second * 1,
+            Jar:     cookieJar,
+        }
+
+        apitest.New().
+            EnableNetworking(cli).
+            Get(&amp;quot;http://localhost:9876/login&amp;quot;).
+            Expect(t).
+            Status(203).
+            End()
+
+        apitest.New().
+            EnableNetworking(cli).
+            Get(&amp;quot;http://localhost:9876/authenticated_resource&amp;quot;).
+            Expect(t).
+            Status(204).
+            End()
+
+        finish &amp;lt;- struct{}{}
+    }()
+
+    &amp;lt;-finish
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3&#34;&gt;3. 请求&lt;/h3&gt;
+&lt;p&gt;要配置对被测系统的初始请求，您可以指定请求参数，例如 http 方法、url、标头和 cookie。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().
+    Handler(handler).
+    Method(http.MethodGet).
+    URL(&amp;quot;/user/12345&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这非常冗长，因此为常见的 http 动作定义了一些快捷方式，这些动作对方法和 URL 进行了封闭。该示例可以更简洁地表示为：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.Handler(handler).
+    Get(&amp;quot;/user/12345&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你还可以用标准的 Go http.Request 来定义请求。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;req := httptest.NewRequest(http.MethodGet, &amp;quot;/user/1234&amp;quot;, nil)
+apitest.Handler(handler).
+    Request(req)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;31-basic-auth&#34;&gt;3.1. Basic Auth&lt;/h4&gt;
+&lt;p&gt;提供了一个向请求添加基本身份验证的方法。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;BasicAuth(&#34;username&#34;, &#34;password&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestRequests_BasicAuth(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        username, password, ok := r.BasicAuth()
+        if !ok {
+            w.WriteHeader(http.StatusBadRequest)
+            return
+        }
+
+        if username != &amp;quot;username&amp;quot; || password != &amp;quot;password&amp;quot; {
+            w.WriteHeader(http.StatusBadRequest)
+            return
+        }
+
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Get(&amp;quot;/hello&amp;quot;).
+        BasicAuth(&amp;quot;username&amp;quot;, &amp;quot;password&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;32-body&#34;&gt;3.2. Body&lt;/h4&gt;
+&lt;p&gt;有两个方法去设置请求体--&lt;code&gt;Bady&lt;/code&gt; 和 &lt;code&gt;JSON&lt;/code&gt; 。使用 &lt;code&gt;Body&lt;/code&gt; 将数据复制到原始请求中并包装在 &lt;code&gt;io.Reader&lt;/code&gt;。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Post(&amp;quot;/message&amp;quot;).Body(&amp;quot;hello&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;JSON&lt;/code&gt; 执行相同的操作并将提供的数据复制到正文，但 &lt;code&gt;JSON&lt;/code&gt; 方法还将内容类型设置为 &lt;code&gt;application/json&lt;/code&gt;。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Post(&amp;quot;/chat&amp;quot;).JSON(`{&amp;quot;message&amp;quot;: &amp;quot;hi&amp;quot;}`)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果要定义其他内容类型，请使用 &lt;code&gt;Body(data)&lt;/code&gt; 设置包体，使用 &lt;code&gt;header&lt;/code&gt; 设置标头。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Post(&amp;quot;/path&amp;quot;).
+Body(&amp;quot;&amp;lt;html&amp;gt;content&amp;lt;/html&amp;gt;&amp;quot;).
+Header(&amp;quot;Content-Type&amp;quot;, &amp;quot;text/html&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;JSON 包体例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestRequests_JSONBody(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        data, _ := ioutil.ReadAll(r.Body)
+        if string(data) != `{&amp;quot;a&amp;quot;: 12345}` {
+            w.WriteHeader(http.StatusInternalServerError)
+            return
+        }
+        if r.Header.Get(&amp;quot;Content-Type&amp;quot;) != &amp;quot;application/json&amp;quot; {
+            w.WriteHeader(http.StatusBadRequest)
+            return
+        }
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Post(&amp;quot;/hello&amp;quot;).
+        JSON(`{&amp;quot;a&amp;quot;: 12345}`).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;文本包体例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestRequests_TextBody(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        data, _ := ioutil.ReadAll(r.Body)
+        if string(data) != `hello` {
+            w.WriteHeader(http.StatusInternalServerError)
+            return
+        }
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Put(&amp;quot;/hello&amp;quot;).
+        Body(`hello`).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;33-cookies&#34;&gt;3.3. Cookies&lt;/h4&gt;
+&lt;p&gt;有多种方法可以指定 http 的请求 cookie。这些方法可以一起使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;简短形式&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Cookie(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cookies 是一个被用于获取已定义的不同数量的 cookie 的结构体。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Cookies(apitest.NewCookie(&amp;quot;name&amp;quot;).
+    Value(&amp;quot;value&amp;quot;).
+    Path(&amp;quot;/user&amp;quot;).
+    Domain(&amp;quot;example.com&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;该结构的底层字段都是指针类型。这样，断言库就可以忽略结构体中未定义的字段。&lt;/p&gt;
+&lt;h4 id=&#34;34-form&#34;&gt;3.4. Form&lt;/h4&gt;
+&lt;p&gt;在请求中创建 URL 表单有多种方法。以下几种方法可以一起使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;多个值的Form&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FormData 是一个可变函数，可用于为同一键获取不同数量的值。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;FormData(&amp;quot;name&amp;quot;, &amp;quot;value1&amp;quot;, &amp;quot;value2&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;简短的Form&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;FormData(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;35-graphql&#34;&gt;3.5. GraphQL&lt;/h4&gt;
+&lt;p&gt;以下帮助程序可简化 GraphQL 请求的构建。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Post(&amp;quot;/graphql&amp;quot;).
+GraphQLQuery(`query { todos { text } }`).
+
+Post(&amp;quot;/graphql&amp;quot;).
+GraphQLRequest(apitest.GraphQLRequestBody{
+    Query: &amp;quot;query someTest($arg: String!) { test(who: $arg) }&amp;quot;,
+    Variables: map[string]interface{}{
+        &amp;quot;arg&amp;quot;: &amp;quot;myArg&amp;quot;,
+    },
+    OperationName: &amp;quot;myOperation&amp;quot;,
+}).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;encoding/json&amp;quot;
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/stretchr/testify/assert&amp;quot;
+)
+
+func TestRequests_GraphQLQuery(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            bodyBytes, err := ioutil.ReadAll(r.Body)
+            if err != nil {
+                t.Fatal(err)
+            }
+
+            var req apitest.GraphQLRequestBody
+            if err := json.Unmarshal(bodyBytes, &amp;amp;req); err != nil {
+                t.Fatal(err)
+            }
+
+            assert.Equal(t, apitest.GraphQLRequestBody{
+                Query: `query { todos { text } }`,
+            }, req)
+
+            w.WriteHeader(http.StatusOK)
+        }).
+        Post(&amp;quot;/query&amp;quot;).
+        GraphQLQuery(`query { todos { text } }`).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+
+func TestRequests_GraphQLRequest(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            bodyBytes, err := ioutil.ReadAll(r.Body)
+            if err != nil {
+                t.Fatal(err)
+            }
+
+            var req apitest.GraphQLRequestBody
+            if err := json.Unmarshal(bodyBytes, &amp;amp;req); err != nil {
+                t.Fatal(err)
+            }
+
+            expected := apitest.GraphQLRequestBody{
+                Query:         `query { todos { text } }`,
+                OperationName: &amp;quot;myOperation&amp;quot;,
+                Variables: map[string]interface{}{
+                    &amp;quot;a&amp;quot;: float64(1),
+                    &amp;quot;b&amp;quot;: &amp;quot;2&amp;quot;,
+                },
+            }
+
+            assert.Equal(t, expected, req)
+
+            w.WriteHeader(http.StatusOK)
+        }).
+        Post(&amp;quot;/query&amp;quot;).
+        GraphQLRequest(apitest.GraphQLRequestBody{
+            Query: &amp;quot;query { todos { text } }&amp;quot;,
+            Variables: map[string]interface{}{
+                &amp;quot;a&amp;quot;: 1,
+                &amp;quot;b&amp;quot;: &amp;quot;2&amp;quot;,
+            },
+            OperationName: &amp;quot;myOperation&amp;quot;,
+        }).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的例子需要下载一些依赖项，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go get github.com/stretchr/testify
+go get github.com/davecgh/go-spew
+go get github.com/pmezard/go-difflib
+go get gopkg.in/yaml.v3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;36-headers&#34;&gt;3.6. Headers&lt;/h4&gt;
+&lt;p&gt;有多种方法可以指定 http 请求头。以下方法可以一起使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Map&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Headers(map[string]string{&amp;quot;name1&amp;quot;: &amp;quot;value1&amp;quot;, &amp;quot;name2&amp;quot;: &amp;quot;value2&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Params&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Header(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;37-intercept&#34;&gt;3.7. Intercept&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Intercept&lt;/code&gt; 会在请求前调用，允许实现者在请求对象发送到被测系统前对其进行更改。在本例中，我们使用自定义方案设置请求参数。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestIntercept(t *testing.T) {
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        if r.URL.RawQuery != &amp;quot;a[]=xxx&amp;amp;a[]=yyy&amp;quot; {
+            t.Fatal(&amp;quot;unexpected query&amp;quot;)
+        }
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Intercept(func(req *http.Request) {
+            req.URL.RawQuery = &amp;quot;a[]=xxx&amp;amp;a[]=yyy&amp;quot;
+        }).
+        Get(&amp;quot;/&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;38-query-params&#34;&gt;3.8. Query Params&lt;/h4&gt;
+&lt;p&gt;有多种指定查询参数的方法。这些方法可以一起使用。&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestRequests_Query(t *testing.T) {
+    expectedQueryString := &amp;quot;a=1&amp;amp;a=2&amp;amp;a=9&amp;amp;a=22&amp;amp;b=2&amp;quot;
+    handler := func(w http.ResponseWriter, r *http.Request) {
+        if expectedQueryString != r.URL.RawQuery {
+            w.WriteHeader(http.StatusBadRequest)
+            return
+        }
+        w.WriteHeader(http.StatusOK)
+    }
+
+    apitest.New().
+        HandlerFunc(handler).
+        Get(&amp;quot;/foo&amp;quot;).
+        Query(&amp;quot;a&amp;quot;, &amp;quot;9&amp;quot;).
+        Query(&amp;quot;a&amp;quot;, &amp;quot;22&amp;quot;).
+        QueryCollection(map[string][]string{&amp;quot;a&amp;quot;: {&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;}}).
+        QueryParams(map[string]string{&amp;quot;b&amp;quot;: &amp;quot;2&amp;quot;}).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Collection&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;QueryCollection(map[string][]string{&amp;quot;a&amp;quot;: {&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;}})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参数的值设置为 &lt;code&gt;a=1&amp;amp;a=2&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Custom&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果所提供的方法不合适，你可以定义自定义一个请求拦截器。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().
+    Handler(handler).
+    Intercept(func(req *http.Request) {
+        req.URL.RawQuery = &amp;quot;a[]=xxx&amp;amp;a[]=yyy&amp;quot;
+    }).
+    Get(&amp;quot;/path&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Map&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;QueryParams(map[string]string{&amp;quot;param1&amp;quot;: &amp;quot;value1&amp;quot;, &amp;quot;param2&amp;quot;: &amp;quot;value2&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Params&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Query(&amp;quot;param&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4&#34;&gt;4. 异常&lt;/h3&gt;
+&lt;p&gt;我们提供了多种机制来验证响应。如果这些机制都不能满足您的需要，您可以提供自定义的 Assert 函数。定义请求后，必须调用 Expect(t) 去定义期望的结果。&lt;/p&gt;
+&lt;h4 id=&#34;41-body&#34;&gt;4.1. Body&lt;/h4&gt;
+&lt;p&gt;通过在 &lt;code&gt;Body&lt;/code&gt; 方法中输入字符串去匹配 HTTP 响应体。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Expect(t).Body(`{&amp;quot;param&amp;quot;: &amp;quot;value&amp;quot;}`)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;断言库会检查内容是否为 JSON，如果是，则使用 testify 的 assert.JSONEq 方法执行断言。如果内容不是 JSON，则使用 testify 的 assert.Equal 方法。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package body
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertBody(t *testing.T) {
+    apitest.New().
+        HandlerFunc(handler).
+        Get(&amp;quot;/greeting&amp;quot;).
+        Expect(t).
+        Body(`{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`).
+        End()
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    w.WriteHeader(http.StatusOK)
+    w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+    _, _ = w.Write([]byte(`{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;42-cookies&#34;&gt;4.2. Cookies&lt;/h4&gt;
+&lt;p&gt;断言响应 cookie 的最简单方法是将 cookie 名称和值作为参数提供给 Cookie 方法。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Cookie(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertCookies(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;name&amp;quot;, Value: &amp;quot;value&amp;quot;})
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Cookie(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Cookie Not Present&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是与 CookiePresent 相反的行为，用于判断断言响应中不存在具有给定名称的 cookie。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;CookieNotPresent(&amp;quot;Session-Token&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertCookies_NotPresent(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;name&amp;quot;, Value: &amp;quot;value&amp;quot;})
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        CookieNotPresent(&amp;quot;token&amp;quot;).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Cookie Present&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有时，应用程序会生成一个具有动态值的 cookie。如果不需要断言值，可使用 CookiePresent 方法，它只会断言 cookie 已被设置为给定的键。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;CookiePresent(&amp;quot;Session-Token&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;apitest 会在内部保存 cookie，因此您可以多次调用此方法，对多个 cookie 进行断言。&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertCookies_Present(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;name&amp;quot;, Value: &amp;quot;value&amp;quot;})
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        CookiePresent(&amp;quot;name&amp;quot;).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Struct&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cookies 是一个被用于获取已定义的不同数量的 cookie 的结构体。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Cookies(apitest.NewCookie(&amp;quot;name&amp;quot;).
+    Value(&amp;quot;value&amp;quot;).
+    Path(&amp;quot;/user&amp;quot;).
+    Domain(&amp;quot;example.com&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;该结构的底层字段都是指针类型。这样，断言库就可以忽略结构体中未定义的字段。&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertCookies_Struct(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;name1&amp;quot;, Value: &amp;quot;value1&amp;quot;, Path: &amp;quot;/path1&amp;quot;, Secure: true})
+            http.SetCookie(w, &amp;amp;http.Cookie{Name: &amp;quot;name2&amp;quot;, Value: &amp;quot;value2&amp;quot;, Path: &amp;quot;/path2&amp;quot;, Secure: false})
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Cookies(
+            apitest.NewCookie(&amp;quot;name1&amp;quot;).Value(&amp;quot;value1&amp;quot;).Secure(true).Path(&amp;quot;/path1&amp;quot;),
+            apitest.NewCookie(&amp;quot;name2&amp;quot;).Value(&amp;quot;value2&amp;quot;).Secure(false).Path(&amp;quot;/path2&amp;quot;),
+        ).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;43&#34;&gt;4.3. 自定义&lt;/h4&gt;
+&lt;p&gt;通过执行签名 &lt;code&gt;fn func(*http.Response, *http.Request) error&lt;/code&gt;，提供自定义断言函数。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(func(res *http.Response, _ *http.Request) error {
+    if res.StatusCode &amp;gt;= 200 &amp;amp;&amp;amp; res.StatusCode &amp;lt; 400 {
+        return nil
+    }
+    return errors.New(&amp;quot;unexpected status code&amp;quot;)
+}).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;自定义断言函数可以是链式的。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package body
+
+import (
+    &amp;quot;errors&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssert_Custom(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusCreated)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(isSuccess).
+        End()
+}
+
+func isSuccess(res *http.Response, _ *http.Request) error {
+    if res.StatusCode &amp;gt;= 200 &amp;amp;&amp;amp; res.StatusCode &amp;lt; 400 {
+        return nil
+    }
+    return errors.New(&amp;quot;unexpected status code&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;44-headers&#34;&gt;4.4. Headers&lt;/h4&gt;
+&lt;p&gt;有两种方法可以指定 HTTP 响应头。以下方法可以连锁使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Map&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Headers(map[string]string{&amp;quot;name1&amp;quot;: &amp;quot;value1&amp;quot;, &amp;quot;name2&amp;quot;: &amp;quot;value2&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;头信息在 apitest 内部以规范形式存储。例如，&#34;accept-encoding &#34;的规范键是 &#34;Accept-Encoding&#34;。如果内容是 JSON，则使用 testify 的 assert.JSONEq 方法执行断言。如果内容不是 JSON，则使用 testify 的 assert.Equal 方法。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package body
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertHeaders_Map(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.Header().Set(&amp;quot;name1&amp;quot;, &amp;quot;value1&amp;quot;)
+            w.Header().Set(&amp;quot;name2&amp;quot;, &amp;quot;value2&amp;quot;)
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Headers(map[string]string{&amp;quot;name1&amp;quot;: &amp;quot;value1&amp;quot;, &amp;quot;name2&amp;quot;: &amp;quot;value2&amp;quot;}).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Params&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Header(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package body
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertHeaders_Params(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.Header().Set(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;)
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Header(&amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;45-json-path&#34;&gt;4.5. JSON Path&lt;/h4&gt;
+&lt;p&gt;您可以使用 JSONPath 来断言响应中的部分内容。当你只对响应中的特定字段感兴趣时，这就很有用了。首先要安装一个单独的模块来提供这些断言，如下：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;get -u github.com/steinfletcher/apitest-jsonpath&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath(t *testing.T) {
+    handler := http.NewServeMux()
+    handler.HandleFunc(&amp;quot;/data&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        w.WriteHeader(http.StatusOK)
+        w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+        _, _ = w.Write([]byte(`{
+          &amp;quot;aValue&amp;quot;: &amp;quot;0&amp;quot;,
+          &amp;quot;anObject&amp;quot;: {&amp;quot;a&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;b&amp;quot;:  12345},
+          &amp;quot;matches&amp;quot;: {
+            &amp;quot;anObject&amp;quot;: {
+              &amp;quot;aString&amp;quot;: &amp;quot;tom&amp;lt;3Beer&amp;quot;,
+              &amp;quot;aNumber&amp;quot;: 7.212,
+              &amp;quot;aBool&amp;quot;: true
+            },
+            &amp;quot;aString&amp;quot;: &amp;quot;tom&amp;lt;3Beer&amp;quot;,
+            &amp;quot;aNumber&amp;quot;: 7,
+            &amp;quot;aNumberSlice&amp;quot;: [7, 8, 9],
+            &amp;quot;aStringSlice&amp;quot;: [&amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;],
+            &amp;quot;anObjectSlice&amp;quot;: [{&amp;quot;key&amp;quot;:  &amp;quot;c&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;ABC&amp;quot;}]
+          }
+        }`))
+    })
+
+    apitest.New().
+        Handler(handler).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Equal(&amp;quot;aValue&amp;quot;, &amp;quot;0&amp;quot;)).
+        Assert(jsonpath.NotEqual(&amp;quot;aValue&amp;quot;, &amp;quot;1&amp;quot;)).
+        Assert(jsonpath.Present(&amp;quot;aValue&amp;quot;)).
+        Assert(jsonpath.NotPresent(&amp;quot;x&amp;quot;)).
+        Assert(jsonpath.Equal(`$.anObject`, map[string]interface{}{&amp;quot;a&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;b&amp;quot;: float64(12345)})).
+        Assert(jsonpath.Contains(`$.matches.anObjectSlice[? @.key==&amp;quot;c&amp;quot;].value`, &amp;quot;ABC&amp;quot;)).
+        Assert(
+            jsonpath.Root(&amp;quot;matches&amp;quot;).
+                Matches(`aString`, `^[mot]{3}&amp;lt;3[AB][re]{3}$`).
+                Matches(`aNumber`, `^\d$`).
+                Matches(`anObject.aNumber`, `^\d\.\d{3}$`).
+                Matches(`aNumberSlice[1]`, `^[80]$`).
+                Matches(`anObject.aBool`, `^true$`).
+                End(),
+        ).
+        Assert(
+            jsonpath.Chain().
+                NotPresent(&amp;quot;password&amp;quot;).
+                NotEqual(&amp;quot;aValue&amp;quot;, &amp;quot;12&amp;quot;).
+                End(),
+        ).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的项目需要用到如下依赖，如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;go get github.com/steinfletcher/apitest-jsonpath
+go get github.com/PaesslerAG/jsonpath
+go get github.com/PaesslerAG/gval
+go get github.com/shopspring/decimal
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Chain&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同时提供多种解决方案&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(
+    jsonpath.Chain().
+        Equal(&amp;quot;a&amp;quot;, &amp;quot;1&amp;quot;).
+        NotEqual(&amp;quot;b&amp;quot;, &amp;quot;2&amp;quot;).
+        Present(&amp;quot;c&amp;quot;).
+        End(),
+).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Chain(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;a&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;b&amp;quot;: &amp;quot;3&amp;quot;, &amp;quot;c&amp;quot;: &amp;quot;4&amp;quot;}`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Chain().
+            Equal(&amp;quot;a&amp;quot;, &amp;quot;1&amp;quot;).
+            NotEqual(&amp;quot;b&amp;quot;, &amp;quot;2&amp;quot;).
+            Present(&amp;quot;c&amp;quot;).
+            End()).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Contains&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当选择器返回使用 &lt;code&gt;Contains&lt;/code&gt; 的数组类型时，假设响应中的 JSON 主体为 {&#34;id&#34;： 12345, &#34;items&#34;： [{&#34;available&#34;: true, &#34;color&#34;: &#34;red&#34;}, {&#34;available&#34;: false, &#34;color&#34;: &#34;blue&#34;}]}, 我们可以选择所有在结果中可用于断言的颜色值。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Contains(&amp;quot;$.items[?@.available==true].color&amp;quot;, &amp;quot;red&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Contains(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{
+              &amp;quot;items&amp;quot;: [
+                {
+                  &amp;quot;available&amp;quot;: true,
+                  &amp;quot;color&amp;quot;: &amp;quot;red&amp;quot;
+                },
+                {
+                  &amp;quot;available&amp;quot;: false,
+                  &amp;quot;color&amp;quot;: &amp;quot;blue&amp;quot;
+                }
+              ]
+            }`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Contains(&amp;quot;$.items[?@.available==true].color&amp;quot;, &amp;quot;red&amp;quot;)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Equal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当选择器返回单个值时，使用 Equal。假设响应中的 JSON 主体为 {&#34;id&#34;： &#34;12345&#34;}&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Equal(&amp;quot;$.id&amp;quot;, &amp;quot;12345&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Equal(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Equal(&amp;quot;message&amp;quot;, &amp;quot;hello&amp;quot;)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Greater Than&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 &#34;大于 &#34;对返回值执行最小长度限制。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.GreaterThan(&amp;quot;$.items&amp;quot;, 2))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_GreaterThan_LessThan(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;items&amp;quot;: [3, 4]}`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.GreaterThan(&amp;quot;items&amp;quot;, 1)).
+        Assert(jsonpath.LessThan(&amp;quot;items&amp;quot;, 3)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;JWT Matchers&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;JWTHeaderEqual&lt;/code&gt; 和 &lt;code&gt;JWTPayloadEqual&lt;/code&gt; 可用于断言响应中的 JWT 内容（不会验证 JWT）。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func Test(t *testing.T) {
+    apitest.New().
+        HandlerFunc(myHandler).
+        Post(&amp;quot;/login&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.JWTPayloadEqual(fromAuthHeader, `$.sub`, &amp;quot;1234567890&amp;quot;)).
+        Assert(jsonpath.JWTHeaderEqual(fromAuthHeader, `$.alg`, &amp;quot;HS256&amp;quot;)).
+        End()
+}
+
+func fromAuthHeader(res *http.Response) (string, error) {
+    return res.Header.Get(&amp;quot;Authorization&amp;quot;), nil
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func Test(t *testing.T) {
+    apitest.New().
+        HandlerFunc(myHandler).
+        Post(&amp;quot;/login&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.JWTPayloadEqual(fromAuthHeader, `$.sub`, &amp;quot;1234567890&amp;quot;)).
+        Assert(jsonpath.JWTHeaderEqual(fromAuthHeader, `$.alg`, &amp;quot;HS256&amp;quot;)).
+        End()
+}
+
+func fromAuthHeader(res *http.Response) (string, error) {
+    return res.Header.Get(&amp;quot;Authorization&amp;quot;), nil
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Len&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;Len&lt;/code&gt; 检查返回值的长度。如果响应是 {&#34;items&#34;： [1, 2, 3]}，我们可以这样断言项的长度&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Len(&amp;quot;$.items&amp;quot;, 3))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Len(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            _, _ = w.Write([]byte(`{&amp;quot;items&amp;quot;: [1, 2, 3]}`))
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/hello&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Len(`$.items`, 3)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Less Than&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;LessThan&lt;/code&gt; 对返回值执行最大长度限制。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.LessThan(&amp;quot;$.items&amp;quot;, 2))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_GreaterThan_LessThan(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;items&amp;quot;: [3, 4]}`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.GreaterThan(&amp;quot;items&amp;quot;, 1)).
+        Assert(jsonpath.LessThan(&amp;quot;items&amp;quot;, 3)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Matches&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;Matches&lt;/code&gt; 检查字符串、数字或布尔类型的单个路径元素是否与正则表达式匹配。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Matches(&amp;quot;$.a&amp;quot;, &amp;quot;^[abc]{1,3}$&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Matches(t *testing.T) {
+    handler := http.NewServeMux()
+    handler.HandleFunc(&amp;quot;/data&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        w.WriteHeader(http.StatusOK)
+        w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+        _, _ = w.Write([]byte(`{
+          &amp;quot;matches&amp;quot;: {
+            &amp;quot;anObject&amp;quot;: {
+              &amp;quot;aString&amp;quot;: &amp;quot;tom&amp;lt;3Beer&amp;quot;,
+              &amp;quot;aNumber&amp;quot;: 7.212,
+              &amp;quot;aBool&amp;quot;: true
+            },
+            &amp;quot;aString&amp;quot;: &amp;quot;tom&amp;lt;3Beer&amp;quot;,
+            &amp;quot;aNumber&amp;quot;: 7,
+            &amp;quot;aNumberSlice&amp;quot;: [7, 8, 9],
+            &amp;quot;aStringSlice&amp;quot;: [&amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;],
+            &amp;quot;anObjectSlice&amp;quot;: [{&amp;quot;key&amp;quot;:  &amp;quot;c&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;ABC&amp;quot;}]
+          }
+        }`))
+    })
+
+    apitest.New().
+        Handler(handler).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(
+            jsonpath.Root(&amp;quot;matches&amp;quot;).
+                Matches(`aString`, `^[mot]{3}&amp;lt;3[AB][re]{3}$`).
+                Matches(`aNumber`, `^\d$`).
+                Matches(`anObject.aNumber`, `^\d\.\d{3}$`).
+                Matches(`aNumberSlice[1]`, `^[80]$`).
+                Matches(`anObject.aBool`, `^true$`).
+                End(),
+        ).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Not Equal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NotEqual&lt;/code&gt; 检查 json 路径表达式值是否不等于给定值&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.NotEqual(&amp;quot;$.id&amp;quot;, &amp;quot;56789&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_NotEqual(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;message&amp;quot;: &amp;quot;hello&amp;quot;}`))
+        }).
+        Get(&amp;quot;/data&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.NotEqual(&amp;quot;message&amp;quot;, &amp;quot;hello1&amp;quot;)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Not Present&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;NotPresent&lt;/code&gt; 来检查响应中是否缺少某个字段，而不对其值进行评估。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.NotPresent(&amp;quot;password&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_NotPresent(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;name&amp;quot;: &amp;quot;jan&amp;quot;}`))
+        }).
+        Get(&amp;quot;/user&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.NotPresent(&amp;quot;password&amp;quot;)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Present&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;检查响应中是否存在字段，但不评估其值。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Present(&amp;quot;token&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+    &amp;quot;github.com/steinfletcher/apitest-jsonpath&amp;quot;
+)
+
+func TestJSONPath_Present(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+            w.Header().Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+            _, _ = w.Write([]byte(`{&amp;quot;token&amp;quot;: &amp;quot;f9a5eb123c01de&amp;quot;}`))
+        }).
+        Post(&amp;quot;/login&amp;quot;).
+        Expect(t).
+        Assert(jsonpath.Present(&amp;quot;token&amp;quot;)).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Root&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Root&lt;/code&gt; 用于避免在body中出现重复路径。如下：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(jsonpath.Equal(&amp;quot;$.a.b.c.d&amp;quot;, &amp;quot;a&amp;quot;)).
+Assert(jsonpath.Equal(&amp;quot;$.a.b.c.e&amp;quot;, &amp;quot;b&amp;quot;)).
+Assert(jsonpath.Equal(&amp;quot;$.a.b.c.f&amp;quot;, &amp;quot;c&amp;quot;)).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;也可以这样定义 &lt;code&gt;Root&lt;/code&gt; 路径&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Assert(
+    jsonpath.Root(&amp;quot;a.b.c&amp;quot;).
+        Equal(&amp;quot;d&amp;quot;, &amp;quot;a&amp;quot;).
+        Equal(&amp;quot;e&amp;quot;, &amp;quot;b&amp;quot;).
+        Equal(&amp;quot;f&amp;quot;, &amp;quot;c&amp;quot;).
+        End(),
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;46-status-code&#34;&gt;4.6. Status code&lt;/h4&gt;
+&lt;p&gt;使用 &lt;code&gt;status&lt;/code&gt; 方法匹配 http 状态代码。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;Expect(t).Status(http.StatusOK)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package jsonpath
+
+import (
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestAssertions_StatusCode(t *testing.T) {
+    apitest.New().
+        HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+            w.WriteHeader(http.StatusOK)
+        }).
+        Get(&amp;quot;/ping&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        End()
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-mocks&#34;&gt;5. MOCKS&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;我们为什么要用 &lt;code&gt;mocks&lt;/code&gt;？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;应用程序与外部应用程序接口集成的情况非常普遍。在开发阶段运行测试时，最好有一个较短的反馈回路，而且测试必须是可重复和可再现的。与真正的外部应用程序接口集成会增加一些未知因素，这些因素往往会因为无法控制的原因而导致测试失败。&lt;/p&gt;
+&lt;p&gt;模拟外部调用可提高开发生命周期测试阶段的稳定性，帮助您更有信心地快速发布功能。这并不能取代集成测试。要不要进行mocks没有硬性规定，因项目而异。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mocks如何工作&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;apitest 中的 mock 在很大程度上受到了 gock 的启发。模拟包劫持了默认的 HTTP 传输，并实现了一个自定义的 RoundTrip 方法。如果发出的 HTTP 请求与定义的模拟集合相匹配，模拟中定义的结果将返回给调用者。&lt;/p&gt;
+&lt;h4 id=&#34;51-mocks&#34;&gt;5.1. 定义Mocks&lt;/h4&gt;
+&lt;p&gt;调用 &lt;code&gt;apitest.NewMock()&lt;/code&gt; 工厂方法可定义 mock。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var mock = apitest.NewMock().
+    Get(&amp;quot;http://external.com/user/12345&amp;quot;).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在上例中，当 HTTP 客户向 http://example.com/user/12345 发送 GET 请求时，{&#34;name&#34;： &#34;jon&#34;} 会在响应体中以 HTTP 状态代码 200 返回。&lt;/p&gt;
+&lt;p&gt;然后就可以在 apitest 配置部分添加 mock，如下所示：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().
+    Mocks(mock).
+    Handler(httpHandler).
+    Get(&amp;quot;/user&amp;quot;).
+    Expect(t).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package defining_mocks
+
+import (
+    &amp;quot;encoding/json&amp;quot;
+    &amp;quot;fmt&amp;quot;
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestMocks(t *testing.T) {
+    getUserMock := apitest.NewMock().
+        Get(&amp;quot;/user-api&amp;quot;).
+        RespondWith().
+        Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;1234&amp;quot;}`).
+        Status(http.StatusOK).
+        End()
+
+    getPreferencesMock := apitest.NewMock().
+        Get(&amp;quot;/preferences-api&amp;quot;).
+        RespondWith().
+        Body(`{&amp;quot;is_contactable&amp;quot;: false}`).
+        Status(http.StatusOK).
+        End()
+
+    apitest.New().
+        Mocks(getUserMock, getPreferencesMock).
+        Handler(myHandler()).
+        Get(&amp;quot;/user&amp;quot;).
+        Expect(t).
+        Status(http.StatusOK).
+        Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;, &amp;quot;is_contactable&amp;quot;: false}`).
+        End()
+}
+
+func myHandler() *http.ServeMux {
+    handler := http.NewServeMux()
+    handler.HandleFunc(&amp;quot;/user&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        var user user
+        if err := httpGet(&amp;quot;/user-api&amp;quot;, &amp;amp;user); err != nil {
+            w.WriteHeader(http.StatusInternalServerError)
+            return
+        }
+
+        var contactPreferences contactPreferences
+        if err := httpGet(&amp;quot;/preferences-api&amp;quot;, &amp;amp;contactPreferences); err != nil {
+            w.WriteHeader(http.StatusInternalServerError)
+            return
+        }
+
+        response := userResponse{
+            Name:          user.Name,
+            IsContactable: contactPreferences.IsContactable,
+        }
+
+        bytes, _ := json.Marshal(response)
+        _, err := w.Write(bytes)
+        if err != nil {
+            w.WriteHeader(http.StatusInternalServerError)
+            return
+        }
+
+        w.WriteHeader(http.StatusOK)
+    })
+    return handler
+}
+
+type user struct {
+    Name string `json:&amp;quot;name&amp;quot;`
+    ID   string `json:&amp;quot;id&amp;quot;`
+}
+
+type contactPreferences struct {
+    IsContactable bool `json:&amp;quot;is_contactable&amp;quot;`
+}
+
+type userResponse struct {
+    Name          string `json:&amp;quot;name&amp;quot;`
+    IsContactable bool   `json:&amp;quot;is_contactable&amp;quot;`
+}
+
+func httpGet(path string, response interface{}) error {
+    res, err := http.DefaultClient.Get(fmt.Sprintf(&amp;quot;http://localhost:8080%s&amp;quot;, path))
+    if err != nil {
+        return err
+    }
+
+    bytes, err := ioutil.ReadAll(res.Body)
+    if err != nil {
+        return err
+    }
+
+    err = json.Unmarshal(bytes, response)
+    if err != nil {
+        return err
+    }
+
+    return nil
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;52-matchers&#34;&gt;5.2. Matchers&lt;/h4&gt;
+&lt;p&gt;您可以为header、cookie、url 查询参数和body添加匹配器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Body 允许您为请求报文添加匹配器。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Post(&amp;quot;http://example.com/user/12345&amp;quot;).
+    Body(`{&amp;quot;username&amp;quot;: &amp;quot;John&amp;quot;}`).
+    RespondWith().
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果要处理 URL 编码的表单正文，可以使用 &lt;code&gt;FormData&lt;/code&gt; 来匹配键和值。正则表达式也可以作为值。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;FormData(&amp;quot;name&amp;quot;, &amp;quot;Simon&amp;quot;).
+FormData(&amp;quot;name&amp;quot;, &amp;quot;Jo([a-z]+)n&amp;quot;).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;您还可以要求表单体键存在（FormDataPresent）或不存在（FormDataNotPresent）。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;FormDataPresent(&amp;quot;name&amp;quot;).
+FormDataNotPresent(&amp;quot;pets&amp;quot;).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;JSONPath 扩展提供了一个自定义匹配器，支持在请求正文中进行匹配。这对部分匹配正文非常有用。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.NewMock().
+    Post(&amp;quot;/user-external&amp;quot;).
+    AddMatcher(mocks.Equal(&amp;quot;$.name&amp;quot;, &amp;quot;jan&amp;quot;)).
+    RespondWith().
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;例子&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;package matchers
+
+import (
+    &amp;quot;bytes&amp;quot;
+    jsonpath &amp;quot;github.com/steinfletcher/apitest-jsonpath/mocks&amp;quot;
+    &amp;quot;io/ioutil&amp;quot;
+    &amp;quot;net/http&amp;quot;
+    &amp;quot;testing&amp;quot;
+
+    &amp;quot;github.com/steinfletcher/apitest&amp;quot;
+)
+
+func TestMocks(t *testing.T) {
+    createUserMock := apitest.NewMock().
+        Post(&amp;quot;/user-external&amp;quot;).
+        AddMatcher(jsonpath.Equal(&amp;quot;$.name&amp;quot;, &amp;quot;jan&amp;quot;)).
+        RespondWith().
+        Status(http.StatusCreated).
+        End()
+
+    apitest.New().
+        Mocks(createUserMock).
+        Handler(myHandler()).
+        Post(&amp;quot;/user&amp;quot;).
+        JSON(map[string]string{&amp;quot;name&amp;quot;: &amp;quot;jan&amp;quot;}).
+        Expect(t).
+        Status(http.StatusCreated).
+        End()
+}
+
+func myHandler() *http.ServeMux {
+    handler := http.NewServeMux()
+    handler.HandleFunc(&amp;quot;/user&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+        reqBody, err := ioutil.ReadAll(r.Body)
+        if err != nil {
+            panic(err)
+        }
+
+        _, err = http.DefaultClient.Post(&amp;quot;http://localhost:8080/user-external&amp;quot;, &amp;quot;application/json&amp;quot;, bytes.NewReader(reqBody))
+        if err != nil {
+            panic(err)
+        }
+
+        w.WriteHeader(http.StatusCreated)
+    })
+    return handler
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Cookies&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Cookie&lt;/code&gt; 允许您为 cookie 名称和值添加匹配器。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    Cookie(&amp;quot;sessionid&amp;quot;, &amp;quot;1321&amp;quot;).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;您还可以要求 cookie 名称存在（&lt;code&gt;CookiePresent&lt;/code&gt;）或不存在（&lt;code&gt;CookieNotPresent&lt;/code&gt;）。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    CookiePresent(&amp;quot;trackingid&amp;quot;).
+    CookieNotPresent(&amp;quot;analytics&amp;quot;).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Custom matchers&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;您可以使用 &lt;code&gt;AddMatcher&lt;/code&gt; 编写自己的自定义匹配器。匹配器函数定义为 &lt;code&gt;func(*http.Request, *MockRequest) error&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Post(&amp;quot;http://example.com/user/12345&amp;quot;).
+    AddMatcher(func(req *http.Request, mockReq *MockRequest) error {
+        if req.Method == http.MethodPost {
+            return nil
+        }
+        return errors.New(&amp;quot;invalid http method&amp;quot;)
+    }).
+    RespondWith().
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Header&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Header&lt;/code&gt; 允许为头信息键和值添加匹配器。正则表达式也可以作为值&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    Header(&amp;quot;foo&amp;quot;, &amp;quot;bar&amp;quot;).
+    Header(&amp;quot;token&amp;quot;, &amp;quot;b([a-z]+)z&amp;quot;).
+    Headers(map[string]string{&amp;quot;name&amp;quot;: &amp;quot;John&amp;quot;})
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;您也可以要求头必须存在（&lt;code&gt;HeaderPresent&lt;/code&gt;）或不存在（&lt;code&gt;HeaderNotPresent&lt;/code&gt;）。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    HeaderPresent(&amp;quot;authtoken&amp;quot;).
+    HeaderNotPresent(&amp;quot;requestid&amp;quot;).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Query parameters&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;Query&lt;/code&gt;，您可以为 url 查询参数的键和值添加匹配器。正则表达式也可以作为值。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    Query(&amp;quot;page&amp;quot;, &amp;quot;1&amp;quot;).
+    Query(&amp;quot;name&amp;quot;, &amp;quot;Jo([a-z]+)n&amp;quot;).
+    QueryParams(map[string]string{&amp;quot;orderBy&amp;quot;: &amp;quot;ASC&amp;quot;}).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;您还可以要求查询参数存在（&lt;code&gt;QueryPresent&lt;/code&gt;）或不存在（&lt;code&gt;QueryNotPresent&lt;/code&gt;）。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var getUserMock = apitest.NewMock().
+    Get(&amp;quot;http://example.com/user/12345&amp;quot;).
+    QueryPresent(&amp;quot;page&amp;quot;).
+    QueryNotPresent(&amp;quot;name&amp;quot;).
+    RespondWith().
+    Body(`{&amp;quot;name&amp;quot;: &amp;quot;jon&amp;quot;}`).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;53-standalone&#34;&gt;5.3. Standalone&lt;/h4&gt;
+&lt;p&gt;通过使用 mock 生成器上的 &lt;code&gt;EndStandalone&lt;/code&gt; 终止方法，可以在 API 测试之外使用 mock。这对于在 API 测试之外测试 http 客户端非常有用。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;func TestMocks_Standalone(t *testing.T) {
+    cli := http.Client{Timeout: 5}
+    defer NewMock().
+        Post(&amp;quot;http://localhost:8080/path&amp;quot;).
+        Body(`{&amp;quot;a&amp;quot;, 12345}`).
+        RespondWith().
+        Status(http.StatusCreated).
+        EndStandalone()()
+
+    resp, err := cli.Post(&amp;quot;http://localhost:8080/path&amp;quot;,
+        &amp;quot;application/json&amp;quot;,
+        strings.NewReader(`{&amp;quot;a&amp;quot;, 12345}`))
+
+    assert.NoError(t, err)
+    assert.Equal(t, http.StatusCreated, resp.StatusCode)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;EndStandalone&lt;/code&gt; 会返回一个函数，在测试运行后调用该函数可将 http 传输重置为默认配置。&lt;/p&gt;
+&lt;p&gt;如果想在一个测试中注册多个独立模拟，请使用 &lt;code&gt;apitest.NewStandaloneMocks()&lt;/code&gt; 工厂方法。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;resetTransport := apitest.NewStandaloneMocks(
+    apitest.NewMock().
+        Post(&amp;quot;http://localhost:8080/path&amp;quot;).
+        Body(`{&amp;quot;a&amp;quot;: 12345}`).
+        RespondWith().
+        Status(http.StatusCreated).
+        End(),
+    apitest.NewMock().
+        Get(&amp;quot;http://localhost:8080/path&amp;quot;).
+        RespondWith().
+        Body(`{&amp;quot;a&amp;quot;: 12345}`).
+        Status(http.StatusOK).
+        End(),
+).End()
+defer resetTransport()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;6-integrations&#34;&gt;6. INTEGRATIONS&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 有许多注入点，因此很容易与其他第三方工具和测试库集成。&lt;/p&gt;
+&lt;h4 id=&#34;61-ginkgo&#34;&gt;6.1. Ginkgo&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 通过接口接受 &lt;code&gt;*testing.T&lt;/code&gt;。这样就可以与其他测试库（如 Ginkgo）集成。您可以通过 &lt;a href=&#34;https://onsi.github.io/ginkgo/#using-other-matcher-libraries&#34;&gt;GinkgoT()&lt;/a&gt; 生成一个模仿 &lt;code&gt;*testing.T&lt;/code&gt; 的对象，并直接与 Ginkgo 通信。请参阅完整示例 &lt;a href=&#34;https://github.com/steinfletcher/apitest/tree/master/examples/ginkgo&#34;&gt;此处&lt;/a&gt;。&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;var _ = Describe(&amp;quot;Ginkgo/Server&amp;quot;, func() {
+
+    var (
+        t      GinkgoTInterface
+        router *mux.Router
+    )
+
+    BeforeEach(func() {
+        t = GinkgoT()
+        router = server.NewApp().Router
+    })
+
+    Context(&amp;quot;Successful CookieMatching&amp;quot;, func() {
+        It(&amp;quot;cookies should be set correctly&amp;quot;, func() {
+            apitest.New().
+                Handler(router).
+                Get(&amp;quot;/user/1234&amp;quot;).
+                Expect(t).
+                Cookies(apitest.NewCookie(&amp;quot;TomsFavouriteDrink&amp;quot;).
+                    Value(&amp;quot;Beer&amp;quot;).
+                    Path(&amp;quot;/&amp;quot;)).
+                Status(http.StatusOK).
+                End()
+        })
+    })
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7-reports&#34;&gt;7. REPORTS&lt;/h3&gt;
+&lt;p&gt;apitest 包含一种报告机制，可以生成序列图，说明入站请求、最终响应、与模拟的任何交互，甚至数据库查询。您甚至可以实现自己的 &#34;ReportFormatter &#34;来消费报告数据，从而生成自己的报告。&lt;/p&gt;
+&lt;p&gt;报告支持的主要组成部分是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Event&lt;/strong&gt; 有两种类型的事件：HTTP 事件和自定义事件。HTTP 事件代表模拟交互、进入应用程序的请求和最终响应。自定义事件用于从任意来源生成数据。自定义事件包含标题和正文。我们在 apitest 中使用这种事件类型来记录数据库交互。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recorder&lt;/strong&gt; 记录测试执行期间发生的事件，如模拟交互、数据库交互以及与被测应用程序的 HTTP 交互。如果输入自己的记录器，就可以添加自定义事件，然后通过实现 ReportFormatter 来处理这些事件。这对于记录从亚马逊 S3 客户端等来源生成的自定义事件可能很有用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ReportFormatter&lt;/strong&gt; 用户可用于生成自定义报告的接口。接收报告记录器，该记录器会暴露事件。SequenceDiagramFormatter 是 apitest 中包含的此接口的实现，可根据事件数据渲染 HTML 序列图。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;71-sequence-diagrams&#34;&gt;7.1. Sequence diagrams&lt;/h4&gt;
+&lt;p&gt;配置报告程序以创建序列图，如下所示&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-go&#34;&gt;apitest.New().
+    Report(apitest.SequenceDiagram()).
+    Handler(handler).
+    Get(&amp;quot;/user&amp;quot;).
+    Expect(t).
+    Status(http.StatusOK).
+    End()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在这个 &lt;a href=&#34;https://github.com/steinfletcher/apitest/tree/master/examples/sequence-diagrams&#34;&gt;示例&lt;/a&gt; 中，我们实现了一个 REST API，并生成了一个与 http 交互的序列图。&lt;/p&gt;
+&lt;p&gt;生成的下图说明了测试中协作者之间的交互。&lt;code&gt;sut&lt;/code&gt; 块是被测系统。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diagram.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;对于每次交互，请求/响应的 http 线表示法都会呈现在图表下方的事件日志中&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
+      <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
+       
+      <category>go</category> 
       
     </item>
     
@@ -1437,7 +3966,7 @@ conn.close()
 &lt;li&gt;&lt;a href=&#34;#145-buffered-channel&#34;&gt;14.5 Buffered channel&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#15-golang&#34;&gt;15. 为什么 Golang 能够成功呢？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#15-golang&#34;&gt;15. 为什么 Golang 能够成功呢？&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 简介&lt;/h3&gt;
@@ -2168,7 +4697,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -2337,7 +4866,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Arch+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch+openbox+tint2安装过程.html</guid>
        
@@ -3932,7 +6461,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -7951,7 +10480,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -8010,6 +10539,7 @@ iface wlp1s0 inet dhcp
 &lt;li&gt;启动网卡：&lt;code&gt;ifup wlp1s0&lt;/code&gt; 需要在&lt;code&gt;root&lt;/code&gt;或&lt;code&gt;su -&lt;/code&gt;下重启&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2&#34;&gt;2. 修改源&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
@@ -8024,7 +10554,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;3&#34;&gt;3. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;apt install openbox xinit tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;apt install openbox xinit tint2 sakura pcmanfm ristretto fcitx-rime rime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;light 亮度
 slock 锁屏
 neofetch 系统信息
@@ -8065,7 +10595,7 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 &lt;ul&gt;
 &lt;li&gt;fcitx-rime&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime librime-data-wubi
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime rime-data-wubi
 nano ~/.config/fcitx/rime/default.custom.yaml
 patch:
   &amp;quot;style/horizontal&amp;quot;: true
@@ -8080,7 +10610,7 @@ patch:
 &lt;ul&gt;
 &lt;li&gt;ibus-rime&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime librime-data-wubi
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime rime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
@@ -8230,7 +10760,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -8283,7 +10813,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -9749,7 +12279,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -9865,7 +12395,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -9897,7 +12427,7 @@ v16.15.0
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -11030,7 +13560,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -11805,7 +14335,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -12199,7 +14729,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -14081,7 +16611,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -15412,7 +17942,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -16233,7 +18763,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -16932,7 +19462,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -18138,7 +20668,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -18160,7 +20690,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apt autoremove --purge kmail kaddressbook korganizer okular knotes akregator konqueror kwalletmanager k3b libreoffice*&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3&#34;&gt;3. 安装图标主题&lt;/h3&gt;
@@ -18224,7 +20754,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -18252,7 +20782,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime librime-data-wubi gvfs-backends papirus-icon-theme blueman&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git fcitx-rime rime-data-wubi gvfs-backends papirus-icon-theme blueman&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2&#34;&gt;2. 删除软件&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
@@ -18372,7 +20902,7 @@ make
 sudo make install
 # 把usr复制到根目录下
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -19379,7 +21909,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -19397,14 +21927,14 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git ibus-rime librime-data-wubi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk arc-theme git ibus-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3&#34;&gt;3. 删除多余的扩展&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -19429,7 +21959,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt install i3 xinit sakura rofi thunar feh fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin deepin-screenshot neofetch ristretto intel-microcode fonts-noto-cjk
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt install i3 xinit sakura rofi thunar feh fcitx-rime rime-data-wubi lxappearance xarchiver pulseaudio blueman thunar-archive-plugin deepin-screenshot neofetch ristretto intel-microcode fonts-noto-cjk
 
 # 安装xinit  X服务
 # i3 平铺式桌面管理器
@@ -19498,7 +22028,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -19810,7 +22340,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -19930,7 +22460,7 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
 2022年 05月 19日 星期四 10：14 CST
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
@@ -20405,7 +22935,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -20910,7 +23440,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -21278,7 +23808,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -21313,18 +23843,15 @@ shenyi = r
 &lt;/div&gt;
 &lt;h3 id=&#34;1&#34;&gt;1. 通用设置&lt;/h3&gt;
 &lt;h4 id=&#34;11&#34;&gt;1.1. 下载特殊版本链接&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新：2023 年 6 月 10 日： 从 Debian 12 (Bookworm) 开始，固件已包含在正常的 Debian 安装程序镜像中。用户无需再在此查找特殊版本。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso&#34;&gt;无驱动稳定版debian-11.5.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/&#34;&gt;稳定版&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso&#34;&gt;无驱动测试版debian-testing-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/firmware-11.5.0-amd64-netinst.iso&#34;&gt;有驱动稳定版firmware-11.5.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/firmware-testing-amd64-netinst.iso&#34;&gt;有驱动测试版firmware-testing-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/&#34;&gt;测试版&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;12&#34;&gt;1.2. 下载驱动&lt;/h4&gt;
@@ -21351,6 +23878,7 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h4 id=&#34;17&#34;&gt;1.7. 修改源&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
@@ -21373,7 +23901,7 @@ https://packages.debian.org/bookworm/firmware-misc-nonfree
 &lt;ul&gt;
 &lt;li&gt;fcitx-rime&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime librime-data-wubi
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime rime-data-wubi
 nano ~/.config/fcitx/rime/default.custom.yaml
 patch:
   &amp;quot;style/horizontal&amp;quot;: true
@@ -21388,7 +23916,7 @@ patch:
 &lt;ul&gt;
 &lt;li&gt;ibus-rime&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime librime-data-wubi
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime rime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
@@ -21472,7 +24000,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -21646,7 +24174,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -21853,7 +24381,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -22019,7 +24547,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -22250,7 +24778,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
@@ -22301,7 +24829,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-03-04 13:51:13</pubDate>  
+      <pubDate>2024-05-28 10:11:52</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        

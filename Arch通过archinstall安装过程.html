@@ -48,7 +48,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共2984个字</span></a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共3299个字</span></a></li>
             
             <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span><span>2024-02-29&nbsp;&nbsp;共18477个字</span></a></li>
             
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch通过archinstall安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2024-06-15 10:29:54</span></div>
+      <div class="header"><span>Arch通过archinstall安装过程</span><span>一个80后老人，专注测试领域<br />最后更新于2024-06-19 09:17:16</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -78,6 +78,7 @@
 <li><a href="#55">5.5.其他用法</a></li>
 </ul>
 </li>
+<li><a href="#6">6.安装软件</a></li>
 </ul>
 </div>
 <h3 id="1">1.连接网络</h3>
@@ -147,7 +148,14 @@ pacman-key --lsign-key &quot;farseerfc@archlinux.org&quot;
 <li><code>pacman -Sw</code> 包名：只下载包，不安装。</li>
 <li><code>pacman -Sc</code>：清理未安装的包文件，包文件位于 <code>/var/cache/pacman/pkg/</code> 目录。</li>
 <li><code>pacman -Scc</code>：清理所有的缓存文件。</li>
-</ul></div>
+</ul>
+<h3 id="6">6.安装软件</h3>
+<pre class="codehilite"><code># 安装的软件
+pacman -S fcitx5-im fcitx5-rime rime-wubi git firefox packagekit-qt6 sweeper gwenview spectacle firefox-ublock-origin fuse2 speech-dispatcher wqy-zenhei
+
+# 向日葵启动前执行
+systemctl start runsunloginclient.service
+</code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">

@@ -11,6 +11,13 @@
     <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
   </head>
 
+  
+  <style>
+    .toc {display: block;}
+    #catalog {display: none}
+  </style>
+  
+
   <body>
     <div class="sider">
       <div class="categories">
@@ -23,6 +30,12 @@
         <div class="scrollheight">
           <ul>
             
+            <li><a href="https://testpoo.github.io/关于我.html"><label style="color: #ffba48"></label>&nbsp;关于我</a></li>
+            
+            <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
+            
+            <li><a href="https://testpoo.github.io/问题解决.html"><label style="color: #ffba48"></label>&nbsp;问题解决</a></li>
+            
             <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><label style="color: #ffba48"></label>&nbsp;linux</a></li>
             
             <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #ffba48"></label>&nbsp;python</a></li>
@@ -33,11 +46,7 @@
             
             <li><a href="https://testpoo.github.io/面试问答.html"><label style="color: #ffba48"></label>&nbsp;笔记</a></li>
             
-            <li><a href="https://testpoo.github.io/常用链接.html"><label style="color: #ffba48"></label>&nbsp;常用链接</a></li>
-            
             <li><a href="https://testpoo.github.io/mysql函数汇总.html"><label style="color: #ffba48"></label>&nbsp;mysql</a></li>
-            
-            <li><a href="https://testpoo.github.io/问题解决.html"><label style="color: #ffba48"></label>&nbsp;问题解决</a></li>
             
           </ul>
         </div>
@@ -48,7 +57,7 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2020-05-19&nbsp;&nbsp;共2883个字</span></a></li>
+            <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span><span>2999-12-29&nbsp;&nbsp;共1392个字</span></a></li>
             
           </ul>
         </div>
@@ -56,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题解决</span><span>一个80后老人，专注测试领域<br />最后更新于2024-08-01 16:54:06</span></div>
+      <div class="header"><span>问题解决</span><span>一个80后测试老人<br />最后更新于2024-08-09 17:56:01</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts"><div class="toc">
 <ul>
@@ -64,16 +73,15 @@
 <li><a href="#ssh-key">创建一个 SSH key</a></li>
 <li><a href="#m">去除^M</a></li>
 <li><a href="#windowspythonpid">Windows下查找python进程PID</a></li>
-<li><a href="#vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</a></li>
-<li><a href="#vmwarecentos8">VMware安装CentOS相差8小时解决方法</a></li>
 </ul>
 </div>
 <blockquote>
 <h3 id="ssh">麒麟下ssh无法启动的问题处理</h3>
 </blockquote>
-<p><strong>解决方案</strong>
-这应该算是Ubuntu的一个bug，可以用下面的方法解决:</p>
-<pre class="codehilite"><code class="language-shell">ubuntugubuntu:-$ sudo /usr/sbin/sshd
+<pre class="codehilite"><code># 解决方案
+这应该算是Ubuntu的一个bug，可以用下面的方法解决:
+
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
 Missing privilege separation directory: /var/run/sshd
 ubuntugubuntu:-$ sudo mkdir /var/run/sshd
 ubuntugubuntu:-$ sudo /usr/sbin/sshd
@@ -84,9 +92,11 @@ tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN
 tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
 tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN
 tcp6 0 0 :::22 :::* LISTEN
+
+启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下
 </code></pre>
 
-<p>启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下</p>
+<hr />
 <blockquote>
 <h3 id="ssh-key">创建一个 SSH key</h3>
 </blockquote>
@@ -94,84 +104,31 @@ tcp6 0 0 :::22 :::* LISTEN
 默认生成地址~/.ssh/id_rsa.pub
 </code></pre>
 
+<hr />
 <blockquote>
 <h3 id="m">去除^M</h3>
 </blockquote>
-<p>vi下 <code>:%s/^M//g</code> 或者 <code>:1,$s/^M//g</code> 均可</p>
-<p>补充一点：<code>^M</code>是使用 <code>CTRL-V CTRL-M</code> 而不是字面上的 <code>^M</code></p>
+<pre class="codehilite"><code>vi下 :%s/^M//g 或者 :1,$s/^M//g 均可
+
+补充一点：^M是使用 CTRL-V CTRL-M 而不是字面上的 ^M
+</code></pre>
+
+<hr />
 <blockquote>
 <h3 id="windowspythonpid">Windows下查找python进程PID</h3>
 </blockquote>
-<p><code>wmic process where name="python.exe" list full</code></p>
-<blockquote>
-<h3 id="vmware-workstation-player-uefi">VMware Workstation Player 虚拟机支持UEFI配置方法</h3>
-</blockquote>
-<ol>
-<li>
-<p>新建虚拟机</p>
-</li>
-<li>
-<p>在虚拟机工作目录下找到.vmx格式文件</p>
-</li>
-<li>
-<p>编辑该文件，在文件中添加：<code>firmware = "efi"</code></p>
-</li>
-</ol>
-<blockquote>
-<h3 id="vmwarecentos8">VMware安装CentOS相差8小时解决方法</h3>
-</blockquote>
-<ul>
-<li>如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）</li>
-</ul>
-<pre class="codehilite"><code>[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 -08
-</code></pre>
-
-<ul>
-<li>将/etc/localtime指向上海时间</li>
-</ul>
-<pre class="codehilite"><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</code></pre>
-
-<p>然后再date可以看到CST了。</p>
-<pre class="codehilite"><code>[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 CST
-</code></pre>
-
-<ul>
-<li>下载ntp（需要联网）</li>
-</ul>
-<pre class="codehilite"><code># yum -y install ntp
-</code></pre>
-
-<ul>
-<li>停止旧的ntp</li>
-</ul>
-<pre class="codehilite"><code># service ntpd stop
-</code></pre>
-
-<ul>
-<li>校对时间</li>
-</ul>
-<pre class="codehilite"><code># ntpdate cn.pool.ntp.org
-</code></pre>
-
-<ul>
-<li>将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）</li>
-</ul>
-<pre class="codehilite"><code># hwclock -w
-</code></pre>
-
-<ul>
-<li>查看date</li>
-</ul>
-<pre class="codehilite"><code>[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 CST
+<pre class="codehilite"><code>wmic process where name=&quot;python.exe&quot; list full
 </code></pre></div>
     </div>
     <input class="xswitch xonoff" type="checkbox" id="nvacatalog">
     <div class="nav">
       <ul>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -201,8 +158,6 @@ tcp6 0 0 :::22 :::* LISTEN
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
         <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
@@ -231,8 +186,6 @@ tcp6 0 0 :::22 :::* LISTEN
         
         <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
         
-        <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span></a></li>
-        
         <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span></a></li>
         
         <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span></a></li>
@@ -248,8 +201,6 @@ tcp6 0 0 :::22 :::* LISTEN
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
         
       </ul>
     </div>

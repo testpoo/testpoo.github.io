@@ -3,12 +3,154 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
   <channel> 
     <title></title>  
-    <description>一个80后老人，专注测试领域</description>  
+    <description>一个80后测试老人</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2024-08-01 16:54:06</pubDate>  
-    <lastBuildDate>2024-08-01 16:54:06</lastBuildDate>  
+    <pubDate>2024-08-09 17:56:01</pubDate>  
+    <lastBuildDate>2024-08-09 17:56:01</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
+    
+    <item> 
+      <title>关于我</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;关于我&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;个人笔记&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;个人情况&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;联系我&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;_1&#34;&gt;关于我&lt;/h3&gt;
+&lt;p&gt;一个80后老人，专注测试领域。我喜欢新鲜事务，时刻摆弄着新诞生的东西；我也是一个怀旧的人，总是不自觉的回忆着过去的点点滴滴。新鲜事物带来的刺激以及快感很快就会悄然而去，最终变成怀旧的一部分。&lt;/p&gt;
+&lt;p&gt;我喜欢思考人生，反复琢磨着过去和未来，曾今和现在；沉浸在轮回的苦难中，无法自拔。过去也许都是美好的，面对现实的生活，总会感到无助，但从未被现实所打倒，每一次的崛起都是未来成功的基石。&lt;/p&gt;
+&lt;p&gt;我喜欢听音乐，常常把一些情感加到音乐里，这样，即使忘记了，听听那些从前的歌曲，就会多少想起些什么。&lt;/p&gt;
+&lt;p&gt;我不喜欢太复杂的事情，不喜欢太多的颜色，一切都简简单单就好。绿色、蓝色，是我喜欢的颜色，绿色代表健康美好，蓝色代表沉稳冷静；也许这就是自己所期望的自己吧！&lt;/p&gt;
+&lt;p&gt;我喜欢春天，那是因为时常会想起躺在自家门前大树下妈妈的怀中，微风拂过，那种温馨的感觉。&lt;/p&gt;
+&lt;p&gt;我不知道该怎么来写自己，介绍自己，因为我认为自己是善变的。我有时喜欢温柔的钢琴曲，有时又会喜欢一些很High的吉他音，有时沉稳、理智，有时暴躁、愤怒。或许这就是我吧，一个不定怎样的人。&lt;/p&gt;
+&lt;p&gt;或许在以后的以后，我会记录下我是怎样的一个人~！&lt;/p&gt;
+&lt;h3 id=&#34;_2&#34;&gt;个人笔记&lt;/h3&gt;
+&lt;p&gt;网址：&lt;a href=&#34;https://testpoo.github.io/&#34;&gt;testpoo.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;托管：&lt;a href=&#34;https://github.com/testpoo&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;程序：&lt;a href=&#34;https://github.com/testpoo/PyBlog&#34;&gt;PyBlog&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_3&#34;&gt;个人情况&lt;/h3&gt;
+&lt;p&gt;网名：畄月寒&lt;/p&gt;
+&lt;p&gt;籍贯：陕西&lt;/p&gt;
+&lt;p&gt;现居：西安&lt;/p&gt;
+&lt;p&gt;职业：&amp;lt;/&amp;gt;&lt;/p&gt;
+&lt;p&gt;喜欢的音乐人：Beyond 许巍 李健&lt;/p&gt;
+&lt;h3 id=&#34;_4&#34;&gt;联系我&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/testpoo&#34;&gt;https://github.com/testpoo&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;邮箱：&lt;a href=&#34;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#112;&amp;#117;&amp;#95;&amp;#121;&amp;#97;&amp;#119;&amp;#101;&amp;#105;&amp;#64;&amp;#113;&amp;#113;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&#34;&gt;&amp;#112;&amp;#117;&amp;#95;&amp;#121;&amp;#97;&amp;#119;&amp;#101;&amp;#105;&amp;#64;&amp;#113;&amp;#113;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微信：puyaweis&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
+      <link>https://testpoo.github.io/关于我.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
+       
+      <category>关于我</category> 
+      
+    </item>
+    
+    <item> 
+      <title>常用链接</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;测开&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;缴费查询&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;_1&#34;&gt;工具&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34;&gt;JSON格式化,xml转json工具&lt;/a&gt; | &lt;a href=&#34;https://www.intogif.com/&#34;&gt;在线gif动画制作工具&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34;&gt;在线协作绘图平台&lt;/a&gt; |  &lt;a href=&#34;https://fontawesome.com.cn/v4/cheatsheet&#34;&gt;fontawesome&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34;&gt;菜鸟工具，不止于工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34;&gt;猫啃网，最新最全的可免费商用中文字体下载网站！&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_2&#34;&gt;搜索&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗&lt;/a&gt; | &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt; | &lt;a href=&#34;https://yandex.com/&#34;&gt;yandex&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_3&#34;&gt;教程&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/zh/v2&#34;&gt;Git官方文档&lt;/a&gt; | &lt;a href=&#34;https://docs.python.org/zh-cn/3/&#34;&gt;Python3官方中文文档&lt;/a&gt; | &lt;a href=&#34;https://www.liaoxuefeng.com/&#34;&gt;廖雪峰的官方网站&lt;/a&gt; | &lt;a href=&#34;https://www.kuangstudy.com/course&#34;&gt;自学交流社区&lt;/a&gt; | &lt;a href=&#34;http://markdown.p2hp.com/basic-syntax/&#34;&gt;Markdown基本语法&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_4&#34;&gt;测开&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://testerhome.com/&#34;&gt;测试之家&lt;/a&gt; | &lt;a href=&#34;https://www.github.com&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
+      <link>https://testpoo.github.io/常用链接.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
+       
+      <category>常用链接</category> 
+      
+    </item>
+    
+    <item> 
+      <title>问题解决</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ssh&#34;&gt;麒麟下ssh无法启动的问题处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ssh-key&#34;&gt;创建一个 SSH key&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#m&#34;&gt;去除^M&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;ssh&#34;&gt;麒麟下ssh无法启动的问题处理&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 解决方案
+这应该算是Ubuntu的一个bug，可以用下面的方法解决:
+
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
+Missing privilege separation directory: /var/run/sshd
+ubuntugubuntu:-$ sudo mkdir /var/run/sshd
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
+ubuntugubuntu:-$ netstat -nlt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address Foreign Address State
+tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
+tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN
+tcp6 0 0 :::22 :::* LISTEN
+
+启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;ssh-key&#34;&gt;创建一个 SSH key&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot;
+默认生成地址~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;m&#34;&gt;去除^M&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;vi下 :%s/^M//g 或者 :1,$s/^M//g 均可
+
+补充一点：^M是使用 CTRL-V CTRL-M 而不是字面上的 ^M
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;wmic process where name=&amp;quot;python.exe&amp;quot; list full
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
+      <link>https://testpoo.github.io/问题解决.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
+       
+      <category>问题解决</category> 
+      
+    </item>
     
     <item> 
       <title>Arch通过archinstall安装过程</title>  
@@ -104,7 +246,7 @@ pacman -S fcitx5-im fcitx5-rime rime-wubi git firefox packagekit-qt6 sweeper gwe
 # 向日葵启动前执行
 systemctl start runsunloginclient.service
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Arch通过archinstall安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch通过archinstall安装过程.html</guid>
        
@@ -379,7 +521,7 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Jinja2简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
        
@@ -1226,7 +1368,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -1753,7 +1895,7 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
@@ -2165,7 +2307,7 @@ def process_items(prices: Dict[str, float]):
 &lt;/ul&gt;
 &lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
 &lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/FastApi简析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
        
@@ -4007,7 +4149,7 @@ defer resetTransport()
 &lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
        
@@ -4799,7 +4941,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -4968,7 +5110,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Arch手动安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch手动安装过程.html</guid>
        
@@ -6563,7 +6705,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -10582,7 +10724,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -10862,7 +11004,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
        
@@ -10915,7 +11057,7 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -12381,7 +12523,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -12497,43 +12639,11 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
       <category>笔记</category> 
-      
-    </item>
-    
-    <item> 
-      <title>常用链接</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;搜索&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;测开&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;缴费查询&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;_1&#34;&gt;工具&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34;&gt;JSON格式化,xml转json工具&lt;/a&gt; | &lt;a href=&#34;https://www.intogif.com/&#34;&gt;在线gif动画制作工具&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34;&gt;在线协作绘图平台&lt;/a&gt; |  &lt;a href=&#34;https://fontawesome.com.cn/v4/cheatsheet&#34;&gt;fontawesome&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34;&gt;菜鸟工具，不止于工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34;&gt;猫啃网，最新最全的可免费商用中文字体下载网站！&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_2&#34;&gt;搜索&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗&lt;/a&gt; | &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt; | &lt;a href=&#34;https://yandex.com/&#34;&gt;yandex&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_3&#34;&gt;教程&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/zh/v2&#34;&gt;Git官方文档&lt;/a&gt; | &lt;a href=&#34;https://docs.python.org/zh-cn/3/&#34;&gt;Python3官方中文文档&lt;/a&gt; | &lt;a href=&#34;https://www.liaoxuefeng.com/&#34;&gt;廖雪峰的官方网站&lt;/a&gt; | &lt;a href=&#34;https://www.kuangstudy.com/course&#34;&gt;自学交流社区&lt;/a&gt; | &lt;a href=&#34;http://markdown.p2hp.com/basic-syntax/&#34;&gt;Markdown基本语法&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_4&#34;&gt;测开&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://testerhome.com/&#34;&gt;测试之家&lt;/a&gt; | &lt;a href=&#34;https://www.github.com&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34;&gt;XFCE&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34;&gt;Linux软件&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; | &lt;a href=&#34;http://1.85.55.147:17007&#34;&gt;陕西政务服务网旧&lt;/a&gt; | &lt;a href=&#34;http://1.85.18.186:8615/&#34;&gt;西安市人社局&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
-      <link>https://testpoo.github.io/常用链接.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
-       
-      <category>常用链接</category> 
       
     </item>
     
@@ -13662,7 +13772,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -14437,7 +14547,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -14831,7 +14941,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -16713,7 +16823,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -18044,7 +18154,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -18865,7 +18975,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -19564,7 +19674,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -20770,7 +20880,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -20856,7 +20966,7 @@ FAILED (failures=1)
 &lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian+kde设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
        
@@ -21078,7 +21188,7 @@ make
 sudo make install
 # 把usr复制到根目录下，目前有不显示中文的问题，原因还没有找到
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian+xfce设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
        
@@ -22085,7 +22195,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -22110,7 +22220,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;ul&gt;
 &lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian+gnome设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
        
@@ -22204,7 +22314,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -22516,131 +22626,11 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
       <category>mysql</category> 
-      
-    </item>
-    
-    <item> 
-      <title>问题解决</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ssh&#34;&gt;麒麟下ssh无法启动的问题处理&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ssh-key&#34;&gt;创建一个 SSH key&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#m&#34;&gt;去除^M&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#vmware-workstation-player-uefi&#34;&gt;VMware Workstation Player 虚拟机支持UEFI配置方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#vmwarecentos8&#34;&gt;VMware安装CentOS相差8小时解决方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;ssh&#34;&gt;麒麟下ssh无法启动的问题处理&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;
-这应该算是Ubuntu的一个bug，可以用下面的方法解决:&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;ubuntugubuntu:-$ sudo /usr/sbin/sshd
-Missing privilege separation directory: /var/run/sshd
-ubuntugubuntu:-$ sudo mkdir /var/run/sshd
-ubuntugubuntu:-$ sudo /usr/sbin/sshd
-ubuntugubuntu:-$ netstat -nlt
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address Foreign Address State
-tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN
-tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
-tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN
-tcp6 0 0 :::22 :::* LISTEN
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;ssh-key&#34;&gt;创建一个 SSH key&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -C &amp;quot;your_email@example.com&amp;quot;
-默认生成地址~/.ssh/id_rsa.pub
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;h3 id=&#34;m&#34;&gt;去除^M&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;vi下 &lt;code&gt;:%s/^M//g&lt;/code&gt; 或者 &lt;code&gt;:1,$s/^M//g&lt;/code&gt; 均可&lt;/p&gt;
-&lt;p&gt;补充一点：&lt;code&gt;^M&lt;/code&gt;是使用 &lt;code&gt;CTRL-V CTRL-M&lt;/code&gt; 而不是字面上的 &lt;code&gt;^M&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;windowspythonpid&#34;&gt;Windows下查找python进程PID&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;wmic process where name=&#34;python.exe&#34; list full&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;vmware-workstation-player-uefi&#34;&gt;VMware Workstation Player 虚拟机支持UEFI配置方法&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;新建虚拟机&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在虚拟机工作目录下找到.vmx格式文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;编辑该文件，在文件中添加：&lt;code&gt;firmware = &#34;efi&#34;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;vmwarecentos8&#34;&gt;VMware安装CentOS相差8小时解决方法&lt;/h3&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;如果发现date与现在的时间差8个小时，需要修改。date之后，发现没有CTS（中国标准时间：China Standard Time UT+8:00）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 -08
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;将/etc/localtime指向上海时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后再date可以看到CST了。&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 CST
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;下载ntp（需要联网）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# yum -y install ntp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;停止旧的ntp&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# service ntpd stop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;校对时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# ntpdate cn.pool.ntp.org
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;将系统时间写入硬件（这步如果不执行重启机器后时间又会出问题）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# hwclock -w
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;查看date&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;[root@localhost ~]# date
-2022年 05月 19日 星期四 10：14 CST
-&lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
-      <link>https://testpoo.github.io/问题解决.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
-       
-      <category>问题解决</category> 
       
     </item>
     
@@ -23111,7 +23101,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -23616,7 +23606,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -23984,7 +23974,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -24176,7 +24166,7 @@ fi
 # 查看Ctrl-Alt-F1对应的那个tty
 echo $(tty)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/Debain通用设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
        
@@ -24350,7 +24340,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -24557,7 +24547,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -24723,7 +24713,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -24954,62 +24944,11 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
+      <pubDate>2024-08-09 17:56:01</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
       <category>debian</category> 
-      
-    </item>
-    
-    <item> 
-      <title>关于我</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;关于我&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;个人笔记&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;个人情况&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;联系我&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;_1&#34;&gt;关于我&lt;/h3&gt;
-&lt;p&gt;一个80后老人，专注测试领域。我喜欢新鲜事务，时刻摆弄着新诞生的东西；我也是一个怀旧的人，总是不自觉的回忆着过去的点点滴滴。新鲜事物带来的刺激以及快感很快就会悄然而去，最终变成怀旧的一部分。&lt;/p&gt;
-&lt;p&gt;我喜欢思考人生，反复琢磨着过去和未来，曾今和现在；沉浸在轮回的苦难中，无法自拔。过去也许都是美好的，面对现实的生活，总会感到无助，但从未被现实所打倒，每一次的崛起都是未来成功的基石。&lt;/p&gt;
-&lt;p&gt;我喜欢听音乐，常常把一些情感加到音乐里，这样，即使忘记了，听听那些从前的歌曲，就会多少想起些什么。&lt;/p&gt;
-&lt;p&gt;我不喜欢太复杂的事情，不喜欢太多的颜色，一切都简简单单就好。绿色、蓝色，是我喜欢的颜色，绿色代表健康美好，蓝色代表沉稳冷静；也许这就是自己所期望的自己吧！&lt;/p&gt;
-&lt;p&gt;我喜欢春天，那是因为时常会想起躺在自家门前大树下妈妈的怀中，微风拂过，那种温馨的感觉。&lt;/p&gt;
-&lt;p&gt;我不知道该怎么来写自己，介绍自己，因为我认为自己是善变的。我有时喜欢温柔的钢琴曲，有时又会喜欢一些很High的吉他音，有时沉稳、理智，有时暴躁、愤怒。或许这就是我吧，一个不定怎样的人。&lt;/p&gt;
-&lt;p&gt;或许在以后的以后，我会记录下我是怎样的一个人~！&lt;/p&gt;
-&lt;h3 id=&#34;_2&#34;&gt;个人笔记&lt;/h3&gt;
-&lt;p&gt;网址：&lt;a href=&#34;https://testpoo.github.io/&#34;&gt;testpoo.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;托管：&lt;a href=&#34;https://github.com/testpoo&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;程序：&lt;a href=&#34;https://github.com/testpoo/PyBlog&#34;&gt;PyBlog&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_3&#34;&gt;个人情况&lt;/h3&gt;
-&lt;p&gt;网名：畄月寒&lt;/p&gt;
-&lt;p&gt;籍贯：陕西&lt;/p&gt;
-&lt;p&gt;现居：西安&lt;/p&gt;
-&lt;p&gt;职业：&amp;lt;/&amp;gt;&lt;/p&gt;
-&lt;p&gt;副业：艰难寻找中&lt;/p&gt;
-&lt;p&gt;语言：西府话、普通话、英文&lt;/p&gt;
-&lt;p&gt;喜欢的音乐人：Beyond 许巍 李健&lt;/p&gt;
-&lt;p&gt;喜欢的音乐：《The Last of the Mohicans》《清心普善咒》《concerto pour deux voix》&lt;/p&gt;
-&lt;h3 id=&#34;_4&#34;&gt;联系我&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/testpoo&#34;&gt;https://github.com/testpoo&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;邮箱：&lt;a href=&#34;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#112;&amp;#117;&amp;#95;&amp;#121;&amp;#97;&amp;#119;&amp;#101;&amp;#105;&amp;#64;&amp;#113;&amp;#113;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&#34;&gt;&amp;#112;&amp;#117;&amp;#95;&amp;#121;&amp;#97;&amp;#119;&amp;#101;&amp;#105;&amp;#64;&amp;#113;&amp;#113;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;微信：puyaweis&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>  
-      <pubDate>2024-08-01 16:54:06</pubDate>  
-      <link>https://testpoo.github.io/关于我.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
-       
-      <category>笔记</category> 
       
     </item>
     

@@ -3,11 +3,11 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
   <channel> 
     <title></title>  
-    <description>一个80后测试老人</description>  
+    <description>一个85后测试老人</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2024-08-12 16:45:03</pubDate>  
-    <lastBuildDate>2024-08-12 16:45:03</lastBuildDate>  
+    <pubDate>2024-08-13 14:23:34</pubDate>  
+    <lastBuildDate>2024-08-13 14:23:34</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -21,7 +21,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;_1&#34;&gt;关于我&lt;/h3&gt;
-&lt;p&gt;一个80后老人，专注测试领域。我喜欢新鲜事务，时刻摆弄着新诞生的东西；我也是一个怀旧的人，总是不自觉的回忆着过去的点点滴滴。新鲜事物带来的刺激以及快感很快就会悄然而去，最终变成怀旧的一部分。&lt;/p&gt;
+&lt;p&gt;一个85后老人，专注测试领域。我喜欢新鲜事务，时刻摆弄着新诞生的东西；我也是一个怀旧的人，总是不自觉的回忆着过去的点点滴滴。新鲜事物带来的刺激以及快感很快就会悄然而去，最终变成怀旧的一部分。&lt;/p&gt;
 &lt;p&gt;我喜欢思考人生，反复琢磨着过去和未来，曾今和现在；沉浸在轮回的苦难中，无法自拔。过去也许都是美好的，面对现实的生活，总会感到无助，但从未被现实所打倒，每一次的崛起都是未来成功的基石。&lt;/p&gt;
 &lt;p&gt;我喜欢听音乐，常常把一些情感加到音乐里，这样，即使忘记了，听听那些从前的歌曲，就会多少想起些什么。&lt;/p&gt;
 &lt;p&gt;我不喜欢太复杂的事情，不喜欢太多的颜色，一切都简简单单就好。绿色、蓝色，是我喜欢的颜色，绿色代表健康美好，蓝色代表沉稳冷静；也许这就是自己所期望的自己吧！&lt;/p&gt;
@@ -30,7 +30,7 @@
 &lt;p&gt;或许在以后的以后，我会记录下我是怎样的一个人~！&lt;/p&gt;
 &lt;h3 id=&#34;_2&#34;&gt;个人笔记&lt;/h3&gt;
 &lt;p&gt;网址：&lt;a href=&#34;https://testpoo.github.io/&#34;&gt;testpoo.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;托管：&lt;a href=&#34;https://github.com/testpoo&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;托管：&lt;a href=&#34;https://github.com/testpoo/testpoo.github.io/&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;程序：&lt;a href=&#34;https://github.com/testpoo/PyBlog&#34;&gt;PyBlog&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;_3&#34;&gt;个人情况&lt;/h3&gt;
 &lt;p&gt;网名：畄月寒&lt;/p&gt;
@@ -50,7 +50,7 @@
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        
@@ -62,28 +62,32 @@
       <title>常用链接</title>  
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;搜索&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;测开&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;缴费查询&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt; 工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt; 搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt; 教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt; 测开&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#linux&#34;&gt; Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt; 缴费查询&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;h3 id=&#34;_1&#34;&gt;工具&lt;/h3&gt;
+&lt;h3 id=&#34;_1&#34;&gt; 工具&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://wannianli.tianqi.com/&#34; title=&#34;提供万年历查询&#34;&gt;万年历&lt;/a&gt; | &lt;a href=&#34;https://www.bejson.com/&#34; title=&#34;JSON格式化,xml转json工具&#34;&gt;BEJSON&lt;/a&gt; | &lt;a href=&#34;https://www.processon.com/login?f=index&#34; title=&#34;在线协作绘图平台&#34;&gt;ProcessOn&lt;/a&gt; | &lt;a href=&#34;https://fontawesome.com.cn/v4/cheatsheet&#34; title=&#34;Fontawesome中文版webfont,是一款基于css框架的网页字体图标库，它完全免费&#34;&gt;Fontawesome中文网&lt;/a&gt; | &lt;a href=&#34;https://c.runoob.com/&#34; title=&#34;菜鸟工具，为开发设计人员提供在线工具&#34;&gt;菜鸟工具&lt;/a&gt; | &lt;a href=&#34;https://www.maoken.com/&#34; title=&#34;最新最全的可免费商用中文字体下载网站&#34;&gt;猫啃网&lt;/a&gt; | &lt;a href=&#34;http://www.fhdq.net/&#34; title=&#34;符号大全-特殊符号-特殊符号大全&#34;&gt;符号大全&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_2&#34;&gt;搜索&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;_2&#34;&gt; 搜索&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.baidu.com&#34; title=&#34;百度一下，你就知道&#34;&gt;百度&lt;/a&gt; | &lt;a href=&#34;https://www.bing.com&#34; title=&#34;必应可帮助你将理论付诸实践，使得搜索更加方便快捷，从而达到事半功倍的效果&#34;&gt;必应&lt;/a&gt; | &lt;a href=&#34;https://www.sogou.com/&#34;&gt;搜狗搜索&lt;/a&gt; | 
 &lt;a href=&#34;https://www.so.com/&#34;&gt;360搜索&lt;/a&gt; | &lt;a href=&#34;https://yandex.com/&#34;&gt;yandex&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_3&#34;&gt;教程&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;_3&#34;&gt; 教程&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://git-scm.com/book/zh/v2&#34;&gt;Git官方文档&lt;/a&gt; | &lt;a href=&#34;https://docs.python.org/zh-cn/3/&#34;&gt;Python3官方中文文档&lt;/a&gt; | &lt;a href=&#34;https://www.liaoxuefeng.com/&#34;&gt;廖雪峰的官方网站&lt;/a&gt; | &lt;a href=&#34;http://markdown.p2hp.com/basic-syntax/&#34;&gt;Markdown基本语法&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_4&#34;&gt;测开&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;_4&#34;&gt; 测开&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;http://testerhome.com/&#34;&gt;测试之家&lt;/a&gt; | &lt;a href=&#34;https://www.github.com&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;linux&#34;&gt; Linux&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34; title=&#34;Xfce 是类 UNIX 操作系统的轻量级桌面环境&#34;&gt;XFCE官网&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34; title=&#34;Debian GNU/Linux 是一个操作系统及自由软件的发行版，它是由一群自愿付出时间和精力的用户来维护并更新的。&#34;&gt;Debian官网&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34; title=&#34;All Linux Software on AlternativeTo&#34;&gt;Linux Software&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;_5&#34;&gt;缴费查询&lt;/h3&gt;
+&lt;h3 id=&#34;_5&#34;&gt; 缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; &lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/常用链接.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
        
@@ -145,11 +149,584 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;/blockquote&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;wmic process where name=&amp;quot;python.exe&amp;quot; list full
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/问题解决.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
        
       <category>问题解决</category> 
+      
+    </item>
+    
+    <item> 
+      <title>debian安装设置</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 下载特殊版本链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-u&#34;&gt;2. 制作自启动U盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-sudo&#34;&gt;4. 将当前用户加入sudo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-debain5&#34;&gt;5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 修改源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7-gnome&#34;&gt;7. Gnome桌面设置&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#71&#34;&gt;7.1 安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#72&#34;&gt;7.2. 删除不需要软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#73&#34;&gt;7.3. 删除多余的扩展&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8-xfce&#34;&gt;8. xfce桌面设置&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#81&#34;&gt;8.1. 安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#82&#34;&gt;8.2. 删除软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#83&#34;&gt;8.3. 设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#84&#34;&gt;8.4 添加触摸板关启脚本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#85&#34;&gt;8.5 添加缺少的图标&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#86&#34;&gt;8.6. 图片路径&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#87-lightdm&#34;&gt;8.7. lightdm设置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#88-mtp&#34;&gt;8.8. 支持mtp，连接安卓&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#89-gtk&#34;&gt;8.9. 启动gtk编辑器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#810-grub&#34;&gt;8.10. 修改grub背景&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#811&#34;&gt;8.11. 添加右键&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#812-thunar&#34;&gt;8.12. thunar侧边栏添加位置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#813&#34;&gt;8.13. 启动花屏&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#814-gtkcss&#34;&gt;8.14. 添加gtk.css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#815-xfce4-docklike-plugin&#34;&gt;8.15. 安装xfce4-docklike-plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9-kde&#34;&gt;9. kde桌面设置&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#91&#34;&gt;9.1. 安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#92&#34;&gt;9.2. 删除不需要软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#93&#34;&gt;9.3. 安装图标主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#94&#34;&gt;9.4. 安装窗口装饰&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#95-sddm&#34;&gt;9.5. 安装SDDM主题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#96&#34;&gt;9.6. 解决无法更换头像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#97&#34;&gt;9.7. 修改设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#10-rime&#34;&gt;10. rime输入法设置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1. 下载特殊版本链接&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2023 年 6 月 10 日： 从 Debian 12 (Bookworm) 开始，固件已包含在正常的 Debian 安装程序镜像中，用户无需再在此查找特殊版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/&#34;&gt;稳定版：https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/&#34;&gt;测试版：https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;附驱动下载地址（可选）：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://packages.debian.org/bookworm/firmware-misc-nonfree&#34;&gt;https://packages.debian.org/bookworm/firmware-misc-nonfree&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-u&#34;&gt;2. 制作自启动U盘&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;dd if=xxx.iso of=/dev/disk&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3&#34;&gt;3. 安装&lt;/h3&gt;
+&lt;p&gt;选择非自动安装，在安装更新步骤，去掉安装更新，理由，安装更新使用的是Debian官方源，特别慢，可在安装好后，使用国内源，再安装。&lt;/p&gt;
+&lt;h3 id=&#34;4-sudo&#34;&gt;4. 将当前用户加入sudo&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 方法一
+su root
+nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
+
+# 方法二
+useradd -a -G sudo username
+reboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-debain5&#34;&gt;5. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nano /etc/default/grub
+找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
+修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
+修改GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet&amp;quot; 加acpi=force
+sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;6&#34;&gt;6. 修改源&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7-gnome&#34;&gt;7. Gnome桌面设置&lt;/h3&gt;
+&lt;h4 id=&#34;71&#34;&gt;7.1 安装软件&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk git ibus-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;72&#34;&gt;7.2. 删除不需要软件&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;73&#34;&gt;7.3. 删除多余的扩展&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-xfce&#34;&gt;8. xfce桌面设置&lt;/h3&gt;
+&lt;h4 id=&#34;81&#34;&gt;8.1. 安装软件&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install fonts-wqy-zenhei git fcitx5-rime rime-data-wubi gvfs-backends blueman xinput yaru-theme-gtk yaru-theme-icon&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;82&#34;&gt;8.2. 删除软件&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
+sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;83&#34;&gt;8.3. 设置&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;快捷键设置:设置--&amp;gt;键盘--&amp;gt;应用程度快捷键&lt;/li&gt;
+&lt;li&gt;窗口样式设置：设置--&amp;gt;窗口管理器--&amp;gt;样式+按钮布局&lt;/li&gt;
+&lt;li&gt;窗口管理器微调：设置--&amp;gt;窗口管理器微调--&amp;gt;辅助功能  最大化窗口时隐藏标题&lt;/li&gt;
+&lt;li&gt;窗口管理器微调：设置--&amp;gt;窗口管理器微调--&amp;gt;合成器  在dock窗口下显示阴影&lt;/li&gt;
+&lt;li&gt;主题/字体设置：外观--&amp;gt;样式+字体&lt;/li&gt;
+&lt;li&gt;设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M  %H:%M%n%Y/%m/%d&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;84&#34;&gt;8.4 添加触摸板关启脚本&lt;/h4&gt;
+&lt;p&gt;本机快捷键Fn+F8==Super+Ctrl_L&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/bin/sh
+
+dev_id=`xinput list | grep &#39;Touch[pP]ad&#39; | sed -E &#39;s/^.*id=([0-9]+).*$/\1/g&#39;`
+dev_state=`xinput --list-props $dev_id | grep &#39;Device Enabled&#39; | sed -E &#39;s/^.*:.*([01]).*$/\1/g&#39;`
+
+if [ $dev_state -eq 1 ]; then
+    xinput disable $dev_id
+    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &amp;quot;触摸板已关闭&amp;quot;
+elif [ $dev_state -eq 0 ]; then
+    xinput enable $dev_id
+    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &amp;quot;触摸板已开启&amp;quot;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;85&#34;&gt;8.5 添加缺少的图标&lt;/h4&gt;
+&lt;p&gt;xfce菜单图标替换成&lt;code&gt;/usr/share/pixmaps/xfce4_xicon4.pngl&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/usr/bin/python3 env
+# coding=utf-8
+
+import os
+
+dirs = &amp;quot;/usr/share/icons/Yaru/&amp;quot;
+
+files = [[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal.png&amp;quot;],
+[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminalemulator.png&amp;quot;],
+[&amp;quot;filemanager-app.png&amp;quot;,&amp;quot;org.xfce.filemanager.png&amp;quot;],
+[&amp;quot;webbrowser-app.png&amp;quot;,&amp;quot;org.xfce.webbrowser.png&amp;quot;],
+[&amp;quot;edit-find.png&amp;quot;,&amp;quot;org.xfce.appfinder.png&amp;quot;],
+[&amp;quot;mail-read.png&amp;quot;,&amp;quot;org.xfce.mailreader.png&amp;quot;],
+[&amp;quot;filemanager-app.png&amp;quot;,&amp;quot;org.xfce.thunar.png&amp;quot;],
+[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal-settings.png&amp;quot;],
+[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal-settings.png&amp;quot;],
+[&amp;quot;org.gnome.TextEditor.png&amp;quot;,&amp;quot;org.xfce.mousepad.png&amp;quot;],
+[&amp;quot;system-monitor-app.png&amp;quot;,&amp;quot;org.xfce.taskmanager.png&amp;quot;],
+[&amp;quot;session-properties.png&amp;quot;,&amp;quot;org.xfce.session.png&amp;quot;],
+[&amp;quot;preferences-desktop-display.png&amp;quot;,&amp;quot;org.xfce.settings.display.png&amp;quot;],
+[&amp;quot;user-desktop.png&amp;quot;,&amp;quot;org.xfce.xfdesktop.png&amp;quot;],
+[&amp;quot;screenshot-app.png&amp;quot;,&amp;quot;org.xfce.screenshooter.png&amp;quot;],
+[&amp;quot;preferences-system-power.png&amp;quot;,&amp;quot;org.xfce.powermanager.png&amp;quot;],
+[&amp;quot;network-wired-offline-symbolic.svg&amp;quot;,&amp;quot;nm-device-wired.svg&amp;quot;],
+[&amp;quot;network-wireless-disabled-symbolic.svg&amp;quot;,&amp;quot;nm-no-connection.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-none-symbolic.svg&amp;quot;,&amp;quot;nm-signal-00.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-none-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-00-secure.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-weak-symbolic.svg&amp;quot;,&amp;quot;nm-signal-25.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-weak-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-25-secure.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-ok-symbolic.svg&amp;quot;,&amp;quot;nm-signal-50.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-ok-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-50-secure.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-good-symbolic.svg&amp;quot;,&amp;quot;nm-signal-75.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-good-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-75-secure.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-excellent-symbolic.svg&amp;quot;,&amp;quot;nm-signal-100.svg&amp;quot;],
+[&amp;quot;network-wireless-signal-excellent-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-100-secure.svg&amp;quot;],
+[&amp;quot;bluetooth.png&amp;quot;,&amp;quot;blueman.png&amp;quot;],
+[&amp;quot;bluetooth-active-symbolic.svg&amp;quot;,&amp;quot;blueman-tray.svg&amp;quot;],
+[&amp;quot;bluetooth-active-symbolic.svg&amp;quot;,&amp;quot;blueman-active.svg&amp;quot;],
+[&amp;quot;bluetooth-disconnected-symbolic.svg&amp;quot;,&amp;quot;blueman-disabled.svg&amp;quot;],
+[&amp;quot;gallery-app.png&amp;quot;,&amp;quot;org.xfce.ristretto.png&amp;quot;],
+[&amp;quot;application-x-model.png&amp;quot;,&amp;quot;org.xfce.settings.appearance.png&amp;quot;]
+]
+
+for ofile,nfile in files:
+    temp =os.popen(&amp;quot;find &amp;quot;+dirs+&amp;quot; -name &amp;quot;+ofile)
+    lists = [x.replace(ofile,&#39;&#39;) for x in temp.read().split(&#39;\n&#39;)]
+    for li in lists:
+        if li != &#39;&#39; and os.path.exists(li+nfile) == False:
+            os.system(&amp;quot;ln -s &amp;quot;+li+ofile+&amp;quot; &amp;quot;+li+nfile)
+os.system(&amp;quot;gtk-update-icon-cache /usr/share/icons/Yaru&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;86&#34;&gt;8.6. 图片路径&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;/usr/share/backgrounds
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;87-lightdm&#34;&gt;8.7. lightdm设置&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;/etc/lightdm/lightdm-gtk-greeter.conf
+[greeter]
+theme-name = Yaru
+icon-theme-name = Yaru
+font-name = Noto Sans Mono 11
+default-user-image = /usr/share/backgrounds/title.jpg
+clock-format = %A %F %H:%M 第%V周
+background = /usr/share/backgrounds/background.png
+xft-dpi = 120
+indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
+#hide-user-image = true
+
+/etc/lightdm/lightdm.conf
+greeter-hide-users=false 前的#去掉
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;88-mtp&#34;&gt;8.8. 支持mtp，连接安卓&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;安装gvfs-backends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;89-gtk&#34;&gt;8.9. 启动gtk编辑器&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;xfce4-panel -q &amp;amp;&amp;amp; GTK_DEBUG=interactive xfce4-panel
+重启xfce-panel:xfce4-panel -r
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;810-grub&#34;&gt;8.10. 修改grub背景&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 使用 su - 切换到 root 下，执行 sudo update-grub
+# 找到 Found backgroud image: /usr/share/images/desktop-base/desktop-grub.png
+# 执行 ls -l /usr/share/images/desktop-base/desktop-grub.png
+# 找到 /etc/alternatives/desktop-grub
+# 执行 ls -l /etc/alternatives/desktop-grub
+# 找到 /usr/share/desktop-base/active-theme/grub/grub-4x3.png 替换
+# 注：必须是png格式
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;811&#34;&gt;8.11. 添加右键&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;ln -s %f &#39;Link to %n&#39;
+Create a Link
+创建链接
+Create a symbolic link for each selected item
+给每个选择的项目创建一个链接
+
+pkexec thunar %F
+Open as Root
+管理员打开
+Open the folder with administration
+管理员打开文件夹
+
+catfish %f
+Search
+搜索
+Search for Files
+搜索文件
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;812-thunar&#34;&gt;8.12. thunar侧边栏添加位置&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;点击文件右键&lt;code&gt;send to--&amp;gt;Side Panel&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;813&#34;&gt;8.13. 启动花屏&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;xfwm4--&amp;gt;vblank_mode=off
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;814-gtkcss&#34;&gt;8.14. 添加gtk.css&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;路径&lt;code&gt;~/config/gtk3.0/gtk.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#pulseaudio-button image,#xfce4-power-manager-plugin image,#xfce4-notification-plugin image{
+            -gtk-icon-transform: scale(0.4);
+}
+
+#clock-button {font-size: 14px;}
+
+#indicator-button* { -gtk-icon-transform: scale(1.2); }
+
+#whiskermenu-window {
+   background-color: #ffbba4;
+   background-image: linear-gradient(#e66465, #9198e5);
+   color: #ffffff; }
+
+calendar.highlight { color: #e95420; }
+calendar {padding: 0 5px; font-weight: bold;border-radius: 5px;font-size: 14px;border: none;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;815-xfce4-docklike-plugin&#34;&gt;8.15. 安装xfce4-docklike-plugin&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;安装xfce4-docklike-plugin合并启动器和窗口管理器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 编译使用到的软件
+apt install xfce4-dev-tools libglib2.0-dev libx11-dev build-essential libgtk-3-dev pkg-config devhelp libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;./autogen.sh --prefix=/home/poo/usr
+make
+sudo make install
+# 把usr复制到根目录下，目前有不显示中文的问题，原因还没有找到
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;9-kde&#34;&gt;9. kde桌面设置&lt;/h3&gt;
+&lt;h4 id=&#34;91&#34;&gt;9.1. 安装软件&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install fonts-noto-cjk git fcitx5-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;92&#34;&gt;9.2. 删除不需要软件&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;apt autoremove --purge kmail kaddressbook korganizer okular knotes akregator konqueror kwalletmanager k3b juk dragonplayer gimp imagemagick* kontrast kmenuedit qt5-style-kvantum kdeconnect* kmouth kmousetool kmag xterm&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;93&#34;&gt;9.3. 安装图标主题&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;通过&lt;code&gt;https://github.com/yeyushengfan258/Win11-icon-theme&lt;/code&gt;下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;Win11-icon-theme&lt;/code&gt;目录，执行&lt;code&gt;./install.sh -a&lt;/code&gt;命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;94&#34;&gt;9.4. 安装窗口装饰&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;通过&lt;code&gt;https://github.com/vinceliuice/Colloid-kde/&lt;/code&gt;下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装窗口装饰元素&lt;code&gt;Colloid-light-round&lt;/code&gt;到&lt;code&gt;~/.local/share/aurorae/themes/&lt;/code&gt;下&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;95-sddm&#34;&gt;9.5. 安装SDDM主题&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;通过&lt;code&gt;https://github.com/MarianArlt/kde-plasma-chili&lt;/code&gt;下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;kde-plasma-chili&lt;/code&gt;目录，执行&lt;code&gt;cp -r kde-plasma-chili /usr/share/sddm/themes&lt;/code&gt;命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;96&#34;&gt;9.6. 解决无法更换头像&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;这是账号服务的一个缺陷: 打开&lt;code&gt;sudo nano /usr/lib/systemd/system/accounts-daemon.service&lt;/code&gt;文件，修改&lt;code&gt;PrivateTmp=true&lt;/code&gt;为&lt;code&gt;PrivateTmp=false&lt;/code&gt;，然后重启即可解决问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;97&#34;&gt;9.7. 修改设置&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;桌面背景修改：设置--&amp;gt;更改壁纸--&amp;gt;壁纸类型：每日一图--&amp;gt;提供：必应&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双击打开文件：设置--&amp;gt;点击文件或文件夹时--&amp;gt;选中他们&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;去掉程序特效：设置--&amp;gt;外观--&amp;gt;光标--&amp;gt;配置程序启动动效，沟选“无动效”，沟去“启动动效”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;去掉欢迎屏幕：设置--&amp;gt;外观--&amp;gt;欢迎屏幕选无。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;锁屏背景修改：设置--&amp;gt;工作区行为--&amp;gt;锁屏--&amp;gt;配置--&amp;gt;壁纸类型：每日一图--&amp;gt;提供：必应&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改登录画面：设置--&amp;gt;开机与关机--&amp;gt;登录屏幕(SDDM)--&amp;gt;选择安装的新画面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改用户头像：设置--&amp;gt;用户--&amp;gt;修改用户头像&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;触摸板设置：设置--&amp;gt;输入设备--&amp;gt;触摸板--&amp;gt;手指轻触&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;10-rime&#34;&gt;10. rime输入法设置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;fcitx-rime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime rime-data-wubi
+nano ~/.config/fcitx/rime/default.custom.yaml
+patch:
+  &amp;quot;style/horizontal&amp;quot;: true
+  &amp;quot;menu/page_size&amp;quot;: 5
+
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ibus-rime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime rime-data-wubi
+nano ~/.config/ibus/rime/default.custom.yaml
+patch:
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+
+nano ~/.config/ibus/rime/build/ibus_rime.yaml
+
+# 修改ibus_rime.yaml中horizontal为true
+
+style:
+   horizontal: true
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/debian安装设置.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/debian安装设置.html</guid>
+       
+      <category>系统安装</category> 
+      
+    </item>
+    
+    <item> 
+      <title>javascript代码小抄</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;获取工作日&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;_1&#34;&gt;获取工作日&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;function getWorkdays() {
+    const startDate = new Date(document.querySelector(&amp;quot;[name=&#39;startime&#39;]&amp;quot;).value);
+    const endDate = new Date(document.querySelector(&amp;quot;[name=&#39;endtime&#39;]&amp;quot;).value);
+    const holidays = {{ holidays|safe if holidays else [] }}; //节假日
+    const extradays = {{ extradays|safe if extradays else [] }}; //补班
+    let days = 0;
+    let currentDate = startDate;
+
+    // 确保结束日期在开始日期之后
+    if (currentDate &amp;gt; endDate) {
+        [startDate, endDate] = [endDate, startDate];
+    }
+
+    while (currentDate &amp;lt;= endDate) {
+        const temp = currentDate.getFullYear().toString() + &#39;-&#39; + (currentDate.getMonth() + 1).toString() + &#39;-&#39; + currentDate.getDate().toString();
+        if (![0, 6].includes(currentDate.getDay()) &amp;amp;&amp;amp; !holidays.includes(temp) || extradays.includes(temp)) {
+            days++;
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+    document.querySelector(&amp;quot;[name=&#39;spentime&#39;]&amp;quot;).value = days;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;</description>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/javascript代码小抄.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/javascript代码小抄.html</guid>
+       
+      <category>代码小抄</category> 
+      
+    </item>
+    
+    <item> 
+      <title>python代码小抄</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;清空文件夹&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;获取任意周的周一和周五&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;获取工作日&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;_1&#34;&gt;清空文件夹&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;def delFile(path):
+    paths = os.listdir(path)
+    if paths != []:
+        for f in paths:
+            filepath = os.path.join(path, f)
+            os.remove(filepath)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;_2&#34;&gt;获取任意周的周一和周五&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;def get_which_week_monday_and_firday_by_date(move_days):
+    needTime = datetime.strptime(time.strftime(&amp;quot;%Y-%m-%d&amp;quot;, time.localtime()) + &amp;quot; 00:00:00&amp;quot;, &amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;)
+    weekStartTime = needTime - timedelta(days=needTime.weekday() + move_days, hours=needTime.hour, minutes=needTime.minute, seconds=needTime.second, microseconds=needTime.microsecond)
+    weekEndTime = weekStartTime + timedelta(days=4, hours=23, minutes=59, seconds=59)
+    weekStartTime = weekStartTime.strftime(&amp;quot;%Y-%m-%d&amp;quot;)
+    weekEndTime = weekEndTime.strftime(&amp;quot;%Y-%m-%d&amp;quot;)
+    return weekStartTime, weekEndTime
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;_3&#34;&gt;获取工作日&lt;/h3&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;def calculate_workdays(start_date, end_date):
+    start_date = datetime.strptime(start_date,&#39;%Y-%m-%d&#39;)
+    end_date = datetime.strptime(end_date,&#39;%Y-%m-%d&#39;)
+    # 法定假期
+    holi_days = [datetime.strptime(holiday,&#39;%Y-%m-%d&#39;) for holiday in holidays]
+    # 补班
+    extra_days = [datetime.strptime(extraday,&#39;%Y-%m-%d&#39;) for extraday in extradays]
+    current_date = start_date
+    workdays = 0
+    while current_date &amp;lt;= end_date:
+        if current_date.weekday() not in [5, 6] and current_date not in holi_days or current_date in extra_days:
+            workdays += 1
+        current_date += timedelta(days=1)
+    return workdays
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/python代码小抄.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/python代码小抄.html</guid>
+       
+      <category>代码小抄</category> 
+      
+    </item>
+    
+    <item> 
+      <title>只有一个读音的九篇古文</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;羿裔熠邑彝&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;饥鸡集矶记&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;季姬击鸡记&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;施氏食狮史&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;熙戏犀&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_6&#34;&gt;于瑜欲渔&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_7&#34;&gt;吏李立莅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_8&#34;&gt;遗镒疑医&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_9&#34;&gt;易姨医胰&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_10&#34;&gt;对联一则&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;_1&#34;&gt;羿裔熠邑彝&lt;/h3&gt;
+&lt;p&gt;羿裔熠，邑彝，义医，艺诣。熠姨遗一裔伊，伊仪迤，衣旖，异奕矣。熠意伊矣，易衣以贻伊，伊遗衣，衣异衣以意异熠，熠抑矣。伊驿邑，弋一翳 ，弈毅。毅仪奕，诣弈，衣异，意逸。毅诣伊，益伊，伊怡，已臆毅矣，毅亦怡伊。翌，伊亦弈毅。毅以蜴贻伊，伊亦贻衣以毅。伊疫，呓毅， 癔异矣，倚椅咿咿，毅亦咿咿。毅诣熠，意以熠，议熠医伊，熠懿毅，意役毅逸。毅以熠宜伊，翼逸。熠驿邑以医伊，疑伊胰痍，以蚁医伊，伊遗异，溢，伊咦。熠移伊，刈薏以医，伊益矣。伊忆毅，亦呓毅矣，熠意伊毅已逸，熠意役伊。伊异，噫，缢。熠癔，亦缢。&lt;/p&gt;
+&lt;h3 id=&#34;_2&#34;&gt;饥鸡集矶记&lt;/h3&gt;
+&lt;p&gt;唧唧鸡，鸡唧唧。几鸡挤挤集矶脊。机极疾，鸡饥极，鸡冀已技击及鲫。机既济蓟畿，鸡计疾机激几鲫。机疾极，鲫极悸，急急挤集矶级际。继即鲫迹极寂寂，继即几鸡既饥，即唧唧。&lt;/p&gt;
+&lt;h3 id=&#34;_3&#34;&gt;季姬击鸡记&lt;/h3&gt;
+&lt;p&gt;季姬寂，集鸡，鸡即棘鸡。棘鸡饥叽，季姬及箕稷济鸡。鸡既济，跻姬笈，季姬忌，急咭鸡，鸡急，继圾几，季姬急，即籍箕击鸡，箕疾击几伎，即齑，鸡叽集几基，季姬急极屐击鸡，鸡既殛，季姬激，即记《季姬击鸡记》。&lt;/p&gt;
+&lt;h3 id=&#34;_4&#34;&gt;施氏食狮史&lt;/h3&gt;
+&lt;p&gt;石室诗士施氏，嗜狮，誓食十狮。适施氏时时适市视狮。十时，适十狮适市。是时，适施氏适市。氏视是十狮，恃矢势，使是十狮逝世。氏拾是十狮尸，适石室。石室湿，氏使侍拭石室。石室拭，氏始试食是十狮尸。食时，始识是十狮尸，实十石狮尸。试释是事。&lt;/p&gt;
+&lt;h3 id=&#34;_5&#34;&gt;熙戏犀&lt;/h3&gt;
+&lt;p&gt;西溪犀，喜嬉戏。席熙夕夕携犀徙，席熙细细习洗犀。犀吸溪，戏袭熙。席熙嘻嘻希息戏。惜犀嘶嘶喜袭熙。&lt;/p&gt;
+&lt;h3 id=&#34;_6&#34;&gt;于瑜欲渔&lt;/h3&gt;
+&lt;p&gt;于瑜欲渔，遇余于寓。语余：“余欲渔于渝淤，与余渔渝欤？”余语于瑜：“余欲鬻玉，俞禹欲玉，余欲遇俞于俞寓。”余与于瑜遇俞于俞寓，逾俞隅，欲鬻玉与俞，遇雨，雨逾俞宇。余语于俞：“余欲渔于渝淤，遇雨俞宇，欲渔欤？鬻玉欤？”于瑜与余御雨于俞寓，俞鬻玉与余禹，雨愈，余与于瑜踽踽逾逾俞宇，渔于渝淤。&lt;/p&gt;
+&lt;h3 id=&#34;_7&#34;&gt;吏李立莅&lt;/h3&gt;
+&lt;p&gt;吏李立莅，赲逦屴岦峛沥俚黎，立艃漓里叕鲤礼黎，罹沴厉离，俚黎蛎鹂历呖。&lt;/p&gt;
+&lt;h3 id=&#34;_8&#34;&gt;遗镒疑医&lt;/h3&gt;
+&lt;p&gt;伊姨殪，遗亿镒。伊诣邑，意医姨疫。一医医伊姨。翌，亿镒遗，疑医，以议医。医以伊疑，缢，以移伊疑。伊倚椅以忆，忆以亿镒遗，以议伊医，亦缢。噫，亦异矣！&lt;/p&gt;
+&lt;h3 id=&#34;_9&#34;&gt;易姨医胰&lt;/h3&gt;
+&lt;p&gt;易姨悒悒，依议诣夷医。医疑胰疫，遗意易姨倚椅，以异仪移姨胰，弋异蚁一亿，胰液溢，蚁殪，胰以医。易胰怡怡，贻医一夷衣。医衣夷衣，怡怡奕奕。噫！以蚁医胰，异矣！以夷衣贻夷医亦宜矣！&lt;/p&gt;
+&lt;h3 id=&#34;_10&#34;&gt;对联一则&lt;/h3&gt;
+&lt;p&gt;上联：
+齐妻起棋，齐欺妻气，妻弃七棋。
+下联：
+伊姨移椅，伊倚姨疑，姨遗一椅。&lt;/p&gt;</description>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/只有一个读音的九篇古文.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/只有一个读音的九篇古文.html</guid>
+       
+      <category>其他</category> 
+      
+    </item>
+    
+    <item> 
+      <title>独孤羊放妻春条书</title>  
+      <description>&lt;p&gt;盖闻一日夫妻，有百日恩情，独孤何人竟遇娘子。一舟共渡需十年修得，同床邀梦则是三世之缘。独孤与娘子本欲花下携手，共事炊烟，造伉俪之深情，成他人之艳羡。&lt;/p&gt;
+&lt;p&gt;然独孤生于仵作之家，向为世人所轻，又无通达性情，难令娘子欢颜。虽有雕虫小技，造泥俑以营生，挡盗贼于墓穴，亦不为世人所重。&lt;/p&gt;
+&lt;p&gt;悠悠七载，间隙既生，怨忿难平，已为深谷。独孤内欲改性情，然朝夕难至，独孤外欲弃仵作，怎奈年久生情。独孤苍苍而娘子青青，若以此拖宕竟困娘子，独孤不为。&lt;/p&gt;
+&lt;p&gt;今放春条，欢喜各生。伏愿娘子，觅得良家，对镜展眉，育女生儿，六亲皆欢。独孤无憾，为留后凭，雍州拾阳县独孤羊谨立。&lt;/p&gt;</description>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/独孤羊放妻春条书.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/独孤羊放妻春条书.html</guid>
+       
+      <category>其他</category> 
       
     </item>
     
@@ -247,11 +824,11 @@ pacman -S fcitx5-im fcitx5-rime rime-wubi git firefox packagekit-qt6 sweeper gwe
 # 向日葵启动前执行
 systemctl start runsunloginclient.service
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Arch通过archinstall安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch通过archinstall安装过程.html</guid>
        
-      <category>linux</category> 
+      <category>系统安装</category> 
       
     </item>
     
@@ -545,11 +1122,11 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Jinja2简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
        
-      <category>python</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -1392,11 +1969,11 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
-      <category>linux</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -1919,11 +2496,11 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
-      <category>python</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -2331,11 +2908,11 @@ def process_items(prices: Dict[str, float]):
 &lt;/ul&gt;
 &lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
 &lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/FastApi简析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -4173,11 +4750,11 @@ defer resetTransport()
 &lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
        
-      <category>go</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -4965,11 +5542,11 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
-      <category>go</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -5134,11 +5711,11 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Arch手动安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch手动安装过程.html</guid>
        
-      <category>linux</category> 
+      <category>系统安装</category> 
       
     </item>
     
@@ -6729,11 +7306,11 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
-      <category>python</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -10748,16 +11325,16 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
     <item> 
-      <title>debian+openbox+tint2安装过程</title>  
+      <title>debian+openbox安装过程</title>  
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1-wifi&#34;&gt;1. 连接wifi&lt;/a&gt;&lt;/li&gt;
@@ -10768,7 +11345,7 @@ root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 安装输入法&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 触摸板修改&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#8-dpi&#34;&gt;8. 设置dpi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#9-i3openbox&#34;&gt;9. 启动i3/OpenBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9-openbox&#34;&gt;9. 启动OpenBox&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10. 设置&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11. 详细配置文件&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -10920,7 +11497,7 @@ sudo xrdb ~/.Xresources
 reboot
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;9-i3openbox&#34;&gt;9. 启动i3/OpenBox&lt;/h3&gt;
+&lt;h3 id=&#34;9-openbox&#34;&gt;9. 启动OpenBox&lt;/h3&gt;
 &lt;p&gt;编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;if [ -z $DISPLAY ] &amp;amp;&amp;amp; [ $(tty) = &amp;quot;/dev/tty1&amp;quot; ];then
     startx
@@ -11028,20 +11605,17 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
-      <link>https://testpoo.github.io/debian+openbox+tint2安装过程.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/debian+openbox+tint2安装过程.html</guid>
+      <pubDate>2024-08-13 14:23:34</pubDate>  
+      <link>https://testpoo.github.io/debian+openbox安装过程.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/debian+openbox安装过程.html</guid>
        
-      <category>debian</category> 
+      <category>系统安装</category> 
       
     </item>
     
     <item> 
       <title>面试问答</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;&lt;/ul&gt;
-&lt;/div&gt;
-&lt;blockquote&gt;
+      <description>&lt;blockquote&gt;
 &lt;p&gt;你来我们公司的时候，有没有提前了解一下我公司的情况？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者的自我学习能力与对将要做的事情的把控能力，避免盲目性，提高可塑性。&lt;/p&gt;
@@ -11081,11 +11655,11 @@ else:
 &lt;p&gt;你自己所期待加入的测试团队是什么样的？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
-      <category>笔记</category> 
+      <category>其他</category> 
       
     </item>
     
@@ -12547,11 +13121,11 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
-      <category>笔记</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -12663,11 +13237,11 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
-      <category>笔记</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -13796,11 +14370,11 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
-      <category>mysql</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -14571,11 +15145,11 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
-      <category>linux</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -14965,11 +15539,11 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
-      <category>笔记</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -16847,11 +17421,11 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
-      <category>笔记</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -18178,11 +18752,11 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -18999,11 +19573,11 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
-      <category>笔记</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -19698,11 +20272,11 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -20904,319 +21478,11 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
-      <category>python</category> 
-      
-    </item>
-    
-    <item> 
-      <title>debian+kde设置</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 安装软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 删除不需要软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 安装图标主题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 安装窗口装饰&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#5-sddm&#34;&gt;5. 安装SDDM主题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6. 解决无法更换头像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7. 修改设置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install fonts-noto-cjk git fcitx5-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;apt autoremove --purge kmail kaddressbook korganizer okular knotes akregator konqueror kwalletmanager k3b juk dragonplayer gimp imagemagick* kontrast kmenuedit qt5-style-kvantum kdeconnect* kmouth kmousetool kmag xterm&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3&#34;&gt;3. 安装图标主题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;通过&lt;code&gt;https://github.com/yeyushengfan258/Win11-icon-theme&lt;/code&gt;下载&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;code&gt;Win11-icon-theme&lt;/code&gt;目录，执行&lt;code&gt;./install.sh -a&lt;/code&gt;命令&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4&#34;&gt;4. 安装窗口装饰&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;通过&lt;code&gt;https://github.com/vinceliuice/Colloid-kde/&lt;/code&gt;下载&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;安装窗口装饰元素&lt;code&gt;Colloid-light-round&lt;/code&gt;到&lt;code&gt;~/.local/share/aurorae/themes/&lt;/code&gt;下&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;5-sddm&#34;&gt;5. 安装SDDM主题&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;通过&lt;code&gt;https://github.com/MarianArlt/kde-plasma-chili&lt;/code&gt;下载&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;code&gt;kde-plasma-chili&lt;/code&gt;目录，执行&lt;code&gt;cp -r kde-plasma-chili /usr/share/sddm/themes&lt;/code&gt;命令&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;6&#34;&gt;6. 解决无法更换头像&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;这是账号服务的一个缺陷: 打开&lt;code&gt;sudo nano /usr/lib/systemd/system/accounts-daemon.service&lt;/code&gt;文件，修改&lt;code&gt;PrivateTmp=true&lt;/code&gt;为&lt;code&gt;PrivateTmp=false&lt;/code&gt;，然后重启即可解决问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;7&#34;&gt;7. 修改设置&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;桌面背景修改：设置--&amp;gt;更改壁纸--&amp;gt;壁纸类型：每日一图--&amp;gt;提供：必应&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;双击打开文件：设置--&amp;gt;点击文件或文件夹时--&amp;gt;选中他们&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;去掉程序特效：设置--&amp;gt;外观--&amp;gt;光标--&amp;gt;配置程序启动动效，沟选“无动效”，沟去“启动动效”。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;去掉欢迎屏幕：设置--&amp;gt;外观--&amp;gt;欢迎屏幕选无。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;锁屏背景修改：设置--&amp;gt;工作区行为--&amp;gt;锁屏--&amp;gt;配置--&amp;gt;壁纸类型：每日一图--&amp;gt;提供：必应&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改登录画面：设置--&amp;gt;开机与关机--&amp;gt;登录屏幕(SDDM)--&amp;gt;选择安装的新画面&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改用户头像：设置--&amp;gt;用户--&amp;gt;修改用户头像&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;触摸板设置：设置--&amp;gt;输入设备--&amp;gt;触摸板--&amp;gt;手指轻触&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;绽放设置：设置--&amp;gt;显示器配置--&amp;gt;全局缩放率：125% &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
-      <link>https://testpoo.github.io/debian+kde设置.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/debian+kde设置.html</guid>
-       
-      <category>debian</category> 
-      
-    </item>
-    
-    <item> 
-      <title>debian+xfce设置</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 安装软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 删除软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 设置&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#31&#34;&gt;3.1 添加触摸板关启脚本&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#32&#34;&gt;3.2 添加缺少的图标&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4. 图片路径&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#5-lightdm&#34;&gt;5. lightdm设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#6-mtp&#34;&gt;6. 支持mtp，连接安卓&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#7-gtk&#34;&gt;7. 启动gtk编辑器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#8-grub&#34;&gt;8. 修改grub背景&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#9&#34;&gt;9. 添加右键&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#10-thunar&#34;&gt;10. thunar侧边栏添加位置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11. 启动花屏&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#12-gtkcss&#34;&gt;12. 添加gtk.css&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#13-xfce4-docklike-plugin&#34;&gt;13. 安装xfce4-docklike-plugin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install fonts-wqy-zenhei git fcitx5-rime rime-data-wubi gvfs-backends blueman xinput yaru-theme-gtk yaru-theme-icon&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2&#34;&gt;2. 删除软件&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
-sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;3&#34;&gt;3. 设置&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;快捷键设置:设置--&amp;gt;键盘--&amp;gt;应用程度快捷键&lt;/li&gt;
-&lt;li&gt;窗口样式设置：设置--&amp;gt;窗口管理器--&amp;gt;样式+按钮布局&lt;/li&gt;
-&lt;li&gt;窗口管理器微调：设置--&amp;gt;窗口管理器微调--&amp;gt;辅助功能  最大化窗口时隐藏标题&lt;/li&gt;
-&lt;li&gt;窗口管理器微调：设置--&amp;gt;窗口管理器微调--&amp;gt;合成器  在dock窗口下显示阴影&lt;/li&gt;
-&lt;li&gt;主题/字体设置：外观--&amp;gt;样式+字体&lt;/li&gt;
-&lt;li&gt;设置时钟格式：%A %F %H:%M 第%V周  %F%n%H:%M  %H:%M%n%Y/%m/%d&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;31&#34;&gt;3.1 添加触摸板关启脚本&lt;/h4&gt;
-&lt;p&gt;本机快捷键Fn+F8==Super+Ctrl_L&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/bin/sh
-
-dev_id=`xinput list | grep &#39;Touch[pP]ad&#39; | sed -E &#39;s/^.*id=([0-9]+).*$/\1/g&#39;`
-dev_state=`xinput --list-props $dev_id | grep &#39;Device Enabled&#39; | sed -E &#39;s/^.*:.*([01]).*$/\1/g&#39;`
-
-if [ $dev_state -eq 1 ]; then
-    xinput disable $dev_id
-    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &amp;quot;触摸板已关闭&amp;quot;
-elif [ $dev_state -eq 0 ]; then
-    xinput enable $dev_id
-    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &amp;quot;触摸板已开启&amp;quot;
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;32&#34;&gt;3.2 添加缺少的图标&lt;/h4&gt;
-&lt;p&gt;xfce菜单图标替换成&lt;code&gt;/usr/share/pixmaps/xfce4_xicon4.pngl&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/usr/bin/python3 env
-# coding=utf-8
-
-import os
-
-dirs = &amp;quot;/usr/share/icons/Yaru/&amp;quot;
-
-files = [[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal.png&amp;quot;],
-[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminalemulator.png&amp;quot;],
-[&amp;quot;filemanager-app.png&amp;quot;,&amp;quot;org.xfce.filemanager.png&amp;quot;],
-[&amp;quot;webbrowser-app.png&amp;quot;,&amp;quot;org.xfce.webbrowser.png&amp;quot;],
-[&amp;quot;edit-find.png&amp;quot;,&amp;quot;org.xfce.appfinder.png&amp;quot;],
-[&amp;quot;mail-read.png&amp;quot;,&amp;quot;org.xfce.mailreader.png&amp;quot;],
-[&amp;quot;filemanager-app.png&amp;quot;,&amp;quot;org.xfce.thunar.png&amp;quot;],
-[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal-settings.png&amp;quot;],
-[&amp;quot;terminal-app.png&amp;quot;,&amp;quot;org.xfce.terminal-settings.png&amp;quot;],
-[&amp;quot;org.gnome.TextEditor.png&amp;quot;,&amp;quot;org.xfce.mousepad.png&amp;quot;],
-[&amp;quot;system-monitor-app.png&amp;quot;,&amp;quot;org.xfce.taskmanager.png&amp;quot;],
-[&amp;quot;session-properties.png&amp;quot;,&amp;quot;org.xfce.session.png&amp;quot;],
-[&amp;quot;preferences-desktop-display.png&amp;quot;,&amp;quot;org.xfce.settings.display.png&amp;quot;],
-[&amp;quot;user-desktop.png&amp;quot;,&amp;quot;org.xfce.xfdesktop.png&amp;quot;],
-[&amp;quot;screenshot-app.png&amp;quot;,&amp;quot;org.xfce.screenshooter.png&amp;quot;],
-[&amp;quot;preferences-system-power.png&amp;quot;,&amp;quot;org.xfce.powermanager.png&amp;quot;],
-[&amp;quot;network-wired-offline-symbolic.svg&amp;quot;,&amp;quot;nm-device-wired.svg&amp;quot;],
-[&amp;quot;network-wireless-disabled-symbolic.svg&amp;quot;,&amp;quot;nm-no-connection.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-none-symbolic.svg&amp;quot;,&amp;quot;nm-signal-00.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-none-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-00-secure.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-weak-symbolic.svg&amp;quot;,&amp;quot;nm-signal-25.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-weak-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-25-secure.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-ok-symbolic.svg&amp;quot;,&amp;quot;nm-signal-50.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-ok-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-50-secure.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-good-symbolic.svg&amp;quot;,&amp;quot;nm-signal-75.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-good-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-75-secure.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-excellent-symbolic.svg&amp;quot;,&amp;quot;nm-signal-100.svg&amp;quot;],
-[&amp;quot;network-wireless-signal-excellent-secure-symbolic.svg&amp;quot;,&amp;quot;nm-signal-100-secure.svg&amp;quot;],
-[&amp;quot;bluetooth.png&amp;quot;,&amp;quot;blueman.png&amp;quot;],
-[&amp;quot;bluetooth-active-symbolic.svg&amp;quot;,&amp;quot;blueman-tray.svg&amp;quot;],
-[&amp;quot;bluetooth-active-symbolic.svg&amp;quot;,&amp;quot;blueman-active.svg&amp;quot;],
-[&amp;quot;bluetooth-disconnected-symbolic.svg&amp;quot;,&amp;quot;blueman-disabled.svg&amp;quot;],
-[&amp;quot;gallery-app.png&amp;quot;,&amp;quot;org.xfce.ristretto.png&amp;quot;],
-[&amp;quot;application-x-model.png&amp;quot;,&amp;quot;org.xfce.settings.appearance.png&amp;quot;]
-]
-
-for ofile,nfile in files:
-    temp =os.popen(&amp;quot;find &amp;quot;+dirs+&amp;quot; -name &amp;quot;+ofile)
-    lists = [x.replace(ofile,&#39;&#39;) for x in temp.read().split(&#39;\n&#39;)]
-    for li in lists:
-        if li != &#39;&#39; and os.path.exists(li+nfile) == False:
-            os.system(&amp;quot;ln -s &amp;quot;+li+ofile+&amp;quot; &amp;quot;+li+nfile)
-os.system(&amp;quot;gtk-update-icon-cache /usr/share/icons/Yaru&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;4&#34;&gt;4. 图片路径&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;/usr/share/backgrounds
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;5-lightdm&#34;&gt;5. lightdm设置&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;/etc/lightdm/lightdm-gtk-greeter.conf
-[greeter]
-theme-name = Yaru
-icon-theme-name = Yaru
-font-name = Noto Sans Mono 11
-default-user-image = /usr/share/backgrounds/title.jpg
-clock-format = %A %F %H:%M 第%V周
-background = /usr/share/backgrounds/background.png
-xft-dpi = 120
-indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
-#hide-user-image = true
-
-/etc/lightdm/lightdm.conf
-greeter-hide-users=false 前的#去掉
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;6-mtp&#34;&gt;6. 支持mtp，连接安卓&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;安装gvfs-backends&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;7-gtk&#34;&gt;7. 启动gtk编辑器&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;xfce4-panel -q &amp;amp;&amp;amp; GTK_DEBUG=interactive xfce4-panel
-重启xfce-panel:xfce4-panel -r
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;8-grub&#34;&gt;8. 修改grub背景&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 使用 su - 切换到 root 下，执行 sudo update-grub
-# 找到 Found backgroud image: /usr/share/images/desktop-base/desktop-grub.png
-# 执行 ls -l /usr/share/images/desktop-base/desktop-grub.png
-# 找到 /etc/alternatives/desktop-grub
-# 执行 ls -l /etc/alternatives/desktop-grub
-# 找到 /usr/share/desktop-base/active-theme/grub/grub-4x3.png 替换
-# 注：必须是png格式
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;9&#34;&gt;9. 添加右键&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;ln -s %f &#39;Link to %n&#39;
-Create a Link
-创建链接
-Create a symbolic link for each selected item
-给每个选择的项目创建一个链接
-
-pkexec thunar %F
-Open as Root
-管理员打开
-Open the folder with administration
-管理员打开文件夹
-
-catfish %f
-Search
-搜索
-Search for Files
-搜索文件
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;10-thunar&#34;&gt;10. thunar侧边栏添加位置&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;点击文件右键&lt;code&gt;send to--&amp;gt;Side Panel&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;11&#34;&gt;11. 启动花屏&lt;/h3&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;xfwm4--&amp;gt;vblank_mode=off
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;12-gtkcss&#34;&gt;12. 添加gtk.css&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;路径&lt;code&gt;~/config/gtk3.0/gtk.css&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#pulseaudio-button image,#xfce4-power-manager-plugin image,#xfce4-notification-plugin image{
-            -gtk-icon-transform: scale(0.4);
-}
-
-#clock-button {font-size: 14px;}
-
-#indicator-button* { -gtk-icon-transform: scale(1.2); }
-
-#whiskermenu-window {
-   background-color: #ffbba4;
-   background-image: linear-gradient(#e66465, #9198e5);
-   color: #ffffff; }
-
-calendar.highlight { color: #e95420; }
-calendar {padding: 0 5px; font-weight: bold;border-radius: 5px;font-size: 14px;border: none;}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;13-xfce4-docklike-plugin&#34;&gt;13. 安装xfce4-docklike-plugin&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;安装xfce4-docklike-plugin合并启动器和窗口管理器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 编译使用到的软件
-apt install xfce4-dev-tools libglib2.0-dev libx11-dev build-essential libgtk-3-dev pkg-config devhelp libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;编译&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;./autogen.sh --prefix=/home/poo/usr
-make
-sudo make install
-# 把usr复制到根目录下，目前有不显示中文的问题，原因还没有找到
-&lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
-      <link>https://testpoo.github.io/debian+xfce设置.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/debian+xfce设置.html</guid>
-       
-      <category>debian</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -22219,36 +22485,11 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
-      <category>python</category> 
-      
-    </item>
-    
-    <item> 
-      <title>debian+gnome设置</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 安装软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2. 删除不需要软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3. 删除多余的扩展&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;1&#34;&gt;1. 安装软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;sudo apt install intel-microcode fonts-noto-cjk git ibus-rime rime-data-wubi&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2&#34;&gt;2. 删除不需要软件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;apt autoremove --purge evolution libreoffice* gnome-calendar cheese gnome-chess gnome-clocks gnome-contacts evolution five-or-more four-in-a-row hitori gnome-klotski lightsoff gnome-mahjongg gnome-maps gnome-mines gnome-music gnome-nibbles quadrapassel gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex gnome-todo totem gnome-2048 gnome-weather goldendict rhythmbox shotwell simple-scan synaptic termit transmission-gtk yelp zhcon aisleriot iagno gnome-sound-recorder fcitx5*&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3&#34;&gt;3. 删除多余的扩展&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;删除/usr/share/gnome-shell/extensions下除user-theme以外的所有扩展&lt;/li&gt;
-&lt;/ul&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
-      <link>https://testpoo.github.io/debian+gnome设置.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/debian+gnome设置.html</guid>
-       
-      <category>debian</category> 
+      <category>测试</category> 
       
     </item>
     
@@ -22338,11 +22579,11 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
-      <category>debian</category> 
+      <category>系统安装</category> 
       
     </item>
     
@@ -22650,11 +22891,11 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
-      <category>mysql</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -23125,11 +23366,11 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -23630,11 +23871,11 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
-      <category>笔记</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -23998,203 +24239,11 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
-      <category>笔记</category> 
-      
-    </item>
-    
-    <item> 
-      <title>Debain通用设置</title>  
-      <description>&lt;div class=&#34;toc&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1. 通用设置&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;1.1. 下载特殊版本链接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#12&#34;&gt;1.2. 下载驱动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#13-u&#34;&gt;1.3. 制作自启动U盘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#14&#34;&gt;1.4. 安装&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#15-sudo&#34;&gt;1.5. 将当前用户加入sudo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#16-debain5&#34;&gt;1.6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#17&#34;&gt;1.7. 修改源&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#18&#34;&gt;1.8. 缺少驱动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#19&#34;&gt;1.9. 安装输入法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2-i3openbox&#34;&gt;2. i3/OpenBox中的通用设置&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#21&#34;&gt;2.1. 触摸板修改&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#22-dpi&#34;&gt;2.2. 设置dpi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#23-wifi&#34;&gt;2.3. 连接wifi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#24-i3openbox&#34;&gt;2.4. 启动i3/OpenBox&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;1&#34;&gt;1. 通用设置&lt;/h3&gt;
-&lt;h4 id=&#34;11&#34;&gt;1.1. 下载特殊版本链接&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;更新：2023 年 6 月 10 日： 从 Debian 12 (Bookworm) 开始，固件已包含在正常的 Debian 安装程序镜像中。用户无需再在此查找特殊版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/&#34;&gt;稳定版&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/&#34;&gt;测试版&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;12&#34;&gt;1.2. 下载驱动&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;13-u&#34;&gt;1.3. 制作自启动U盘&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;dd if=xxx.iso of=/dev/disk&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;14&#34;&gt;1.4. 安装&lt;/h4&gt;
-&lt;h4 id=&#34;15-sudo&#34;&gt;1.5. 将当前用户加入sudo&lt;/h4&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 方法一
-su root
-nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
-
-# 方法二
-useradd -a -G sudo username
-reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;16-debain5&#34;&gt;1.6. 去掉debain开机启动项停留的5秒和电池的问题&lt;/h4&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nano /etc/default/grub
-找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
-修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
-修改GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet&amp;quot; 加acpi=force
-sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;17&#34;&gt;1.7. 修改源&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/help/debian/&lt;/a&gt;&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;18&#34;&gt;1.8. 缺少驱动&lt;/h4&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 添加驱动
-https://packages.debian.org/bookworm/firmware-misc-nonfree
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;19&#34;&gt;1.9. 安装输入法&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;fcitx-rime&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install fcitx-rime rime-data-wubi
-nano ~/.config/fcitx/rime/default.custom.yaml
-patch:
-  &amp;quot;style/horizontal&amp;quot;: true
-  &amp;quot;menu/page_size&amp;quot;: 5
-
-  schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ibus-rime&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo apt install ibus-rime rime-data-wubi
-nano ~/.config/ibus/rime/default.custom.yaml
-patch:
-  schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
-
-nano ~/.config/ibus/rime/build/ibus_rime.yaml
-
-# 修改ibus_rime.yaml中horizontal为true
-
-style:
-   horizontal: true
-
-# 重新部署 ibus-rime
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;2-i3openbox&#34;&gt;2. i3/OpenBox中的通用设置&lt;/h3&gt;
-&lt;h4 id=&#34;21&#34;&gt;2.1. 触摸板修改&lt;/h4&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
-
-Section &amp;quot;InputClass&amp;quot;
-        Identifier &amp;quot;libinput touchpad catchall&amp;quot;
-        MatchIsTouchpad &amp;quot;on&amp;quot;
-        MatchDevicePath &amp;quot;/dev/input/event*&amp;quot;
-        Driver &amp;quot;libinput&amp;quot;
-
-        Option &amp;quot;Tapping&amp;quot; &amp;quot;on&amp;quot; # 触摸以点击
-        Option &amp;quot;ClickMethod&amp;quot; &amp;quot;clickfinger&amp;quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
-        Option &amp;quot;NaturalScrolling&amp;quot; &amp;quot;true&amp;quot; # 自然滚动（反方向滚动）
-#        Option &amp;quot;ScrollMethod&amp;quot; &amp;quot;edge&amp;quot; # 边缘滚动页面
-EndSection
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;22-dpi&#34;&gt;2.2. 设置dpi&lt;/h4&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;nano .Xresources
-
-Xft.dpi:120
-sudo xrdb ~/.Xresources
-reboot
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;23-wifi&#34;&gt;2.3. 连接wifi&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;查看网卡：&lt;code&gt;ip a&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;先安装 &lt;code&gt;wpa_supplicant&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;配置网络参数：&lt;code&gt;su -l -c &#34;wpa_passphrase WIFI名字 WIFI密码 &amp;gt; /etc/wpa_supplicant/wpa_supplicant.conf&#34;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;配置接口&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;查看WIFI网卡名称&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;编辑文件/etc/network/interfaces&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;添加接口参数如下：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;auto wlp1s0 #(wlp1s0 为网卡名)
-iface wlp1s0 inet dhcp
-    wpa-deriver wext
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;启动网卡：&lt;code&gt;ifup wlp1s0&lt;/code&gt; 需要在&lt;code&gt;root&lt;/code&gt;或&lt;code&gt;su -&lt;/code&gt;下重启&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;24-i3openbox&#34;&gt;2.4. 启动i3/OpenBox&lt;/h4&gt;
-&lt;p&gt;编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：&lt;/p&gt;
-&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;if [ -z $DISPLAY ] &amp;amp;&amp;amp; [ $(tty) = &amp;quot;/dev/tty1&amp;quot; ];then
-    startx
-fi
-# 查看Ctrl-Alt-F1对应的那个tty
-echo $(tty)
-&lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
-      <link>https://testpoo.github.io/Debain通用设置.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/Debain通用设置.html</guid>
-       
-      <category>debian</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -24364,11 +24413,11 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
-      <category>mysql</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -24571,11 +24620,11 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
-      <category>python</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -24737,11 +24786,11 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
-      <category>笔记</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -24750,229 +24799,227 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1-apt&#34;&gt;1. apt命令用法&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1) 从软件源服务器获取最新的软件信息并缓存到本地&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2) 从本地仓库中对比系统中所有已安装的软件，如果有新版本的话则进行升级&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3&#34;&gt;3）列出本地仓库中所有的软件包名&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#4&#34;&gt;4) 从本地仓库中查找指定的包名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#5&#34;&gt;5) 列出系统中所有已安装的包名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#6-list&#34;&gt;6) 与list类似，通过给出的关键字进行搜索，列出所有的包和其描述&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#7&#34;&gt;7) 列出指定包的详细情况&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#8&#34;&gt;8) 安装指定的包，并同时安装其依赖的其他包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#9&#34;&gt;9) 卸载包，但不删除相关配置文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#10&#34;&gt;10) 卸载因安装软件自动安装的依赖，而现在又不需要的依赖包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#11&#34;&gt;11) 卸载包，同时删除相关配置文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#12&#34;&gt;12) 删除所有已下载的软件包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#13-clean&#34;&gt;#### 13) 类似clean，但删除的是过期的包（即已不能下载或者是无用的包）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_1&#34;&gt;从软件源服务器获取最新的软件信息并缓存到本地&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_2&#34;&gt;从本地仓库中对比系统中所有已安装的软件，如果有新版本的话则进行升级&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_3&#34;&gt;列出本地仓库中所有的软件包名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_4&#34;&gt;从本地仓库中查找指定的包名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_5&#34;&gt;列出系统中所有已安装的包名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#list&#34;&gt;与list类似，通过给出的关键字进行搜索，列出所有的包和其描述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_6&#34;&gt;列出指定包的详细情况&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_7&#34;&gt;安装指定的包，并同时安装其依赖的其他包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_8&#34;&gt;卸载包，但不删除相关配置文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_9&#34;&gt;卸载因安装软件自动安装的依赖，而现在又不需要的依赖包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_10&#34;&gt;卸载包，同时删除相关配置文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_11&#34;&gt;删除所有已下载的软件包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clean&#34;&gt;类似clean，但删除的是过期的包（即已不能下载或者是无用的包）&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-dpkg&#34;&gt;2. dpkg命令用法&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#1_1&#34;&gt;1）安装软件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#2_1&#34;&gt;2）安装一个目录下面所有的软件包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#3_1&#34;&gt;3）释放软件包，但是不进行配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#4_1&#34;&gt;4）重新配置和释放软件包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#5_1&#34;&gt;5）删除软件包（保留其配置信息）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#6&#34;&gt;6）替代软件包的信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#7_1&#34;&gt;7）合并软件包信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#8_1&#34;&gt;8）从软件包里面读取软件的信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#9_1&#34;&gt;9）删除一个包（包括配置信息）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#10uninstall&#34;&gt;10）丢失所有的Uninstall的软件包信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#11avaliable&#34;&gt;11）删除软件包的Avaliable信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#12_1&#34;&gt;12）查找只有部分安装的软件包信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#13&#34;&gt;13）比较同一个包的不同版本之间的差别&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#14&#34;&gt;14）显示帮助信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#15dpkglicence&#34;&gt;15）显示dpkg的Licence&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#16dpkg&#34;&gt;16）显示dpkg的版本号&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#17deb&#34;&gt;17）建立一个deb文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#18deb&#34;&gt;18）显示一个Deb文件的目录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#19deb&#34;&gt;19）显示一个Deb的说明&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#20deb&#34;&gt;20）搜索Deb包&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#21deb&#34;&gt;21)显示所有已经安装的Deb包，同时显示版本号以及简短说明&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#22&#34;&gt;22）报告指定包的状态信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#23&#34;&gt;23）显示一个包安装到系统里面的文件目录信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#24&#34;&gt;24）搜索指定包里面的文件（模糊查询）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#25&#34;&gt;25）显示包的具体信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_12&#34;&gt;安装软件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_13&#34;&gt;安装一个目录下面所有的软件包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_14&#34;&gt;释放软件包，但是不进行配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_15&#34;&gt;重新配置和释放软件包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_16&#34;&gt;删除软件包（保留其配置信息）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_17&#34;&gt;替代软件包的信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_18&#34;&gt;合并软件包信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_19&#34;&gt;从软件包里面读取软件的信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_20&#34;&gt;删除一个包（包括配置信息）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#uninstall&#34;&gt;丢失所有的Uninstall的软件包信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#avaliable&#34;&gt;删除软件包的Avaliable信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_21&#34;&gt;查找只有部分安装的软件包信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_22&#34;&gt;比较同一个包的不同版本之间的差别&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_23&#34;&gt;显示帮助信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dpkglicence&#34;&gt;显示dpkg的Licence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dpkg&#34;&gt;显示dpkg的版本号&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deb&#34;&gt;建立一个deb文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deb_1&#34;&gt;显示一个Deb文件的目录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deb_2&#34;&gt;显示一个Deb的说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deb_3&#34;&gt;搜索Deb包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deb_4&#34;&gt;显示所有已经安装的Deb包，同时显示版本号以及简短说明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_24&#34;&gt;报告指定包的状态信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_25&#34;&gt;显示一个包安装到系统里面的文件目录信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_26&#34;&gt;搜索指定包里面的文件（模糊查询）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#_27&#34;&gt;显示包的具体信息&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;1-apt&#34;&gt;1. apt命令用法&lt;/h3&gt;
-&lt;h4 id=&#34;1&#34;&gt;1) 从软件源服务器获取最新的软件信息并缓存到本地&lt;/h4&gt;
+&lt;h4 id=&#34;_1&#34;&gt;从软件源服务器获取最新的软件信息并缓存到本地&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt update
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;因为很多apt的其他命令都是要通过比对版本信息来进行操作的，如果每次都去对比线上的版本信息效率肯定不理想，也没必要，所以做了一个缓存的机制。&lt;/p&gt;
-&lt;h4 id=&#34;2&#34;&gt;2) 从本地仓库中对比系统中所有已安装的软件，如果有新版本的话则进行升级&lt;/h4&gt;
+&lt;h4 id=&#34;_2&#34;&gt;从本地仓库中对比系统中所有已安装的软件，如果有新版本的话则进行升级&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt upgrade
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;3&#34;&gt;3）列出本地仓库中所有的软件包名&lt;/h3&gt;
+&lt;h4 id=&#34;_3&#34;&gt;列出本地仓库中所有的软件包名&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt list
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;4&#34;&gt;4) 从本地仓库中查找指定的包名&lt;/h4&gt;
+&lt;h4 id=&#34;_4&#34;&gt;从本地仓库中查找指定的包名&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt list [package]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;支持通配符，比如&#34;apt list zlib*&#34;就能列出以zlib开头的所有包名&lt;/p&gt;
-&lt;h4 id=&#34;5&#34;&gt;5) 列出系统中所有已安装的包名&lt;/h4&gt;
+&lt;h4 id=&#34;_5&#34;&gt;列出系统中所有已安装的包名&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt list --installed
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;6-list&#34;&gt;6) 与list类似，通过给出的关键字进行搜索，列出所有的包和其描述&lt;/h4&gt;
+&lt;h4 id=&#34;list&#34;&gt;与list类似，通过给出的关键字进行搜索，列出所有的包和其描述&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt search [key]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;7&#34;&gt;7) 列出指定包的详细情况&lt;/h4&gt;
+&lt;h4 id=&#34;_6&#34;&gt;列出指定包的详细情况&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt show [package]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;列出指定包的详细情况，包名要填写完整。&lt;/p&gt;
 &lt;p&gt;可以看到非常完整的信息，比如版本、大小、依赖的其他包等。&lt;/p&gt;
-&lt;h4 id=&#34;8&#34;&gt;8) 安装指定的包，并同时安装其依赖的其他包&lt;/h4&gt;
+&lt;h4 id=&#34;_7&#34;&gt;安装指定的包，并同时安装其依赖的其他包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt install [package]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;9&#34;&gt;9) 卸载包，但不删除相关配置文件&lt;/h4&gt;
+&lt;h4 id=&#34;_8&#34;&gt;卸载包，但不删除相关配置文件&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt remove [package]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;包名支持通配符&lt;/p&gt;
-&lt;h4 id=&#34;10&#34;&gt;10) 卸载因安装软件自动安装的依赖，而现在又不需要的依赖包&lt;/h4&gt;
+&lt;h4 id=&#34;_9&#34;&gt;卸载因安装软件自动安装的依赖，而现在又不需要的依赖包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt autoremove
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;11&#34;&gt;11) 卸载包，同时删除相关配置文件&lt;/h4&gt;
+&lt;h4 id=&#34;_10&#34;&gt;卸载包，同时删除相关配置文件&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt purge [package]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;包名支持通配符&lt;/p&gt;
-&lt;h4 id=&#34;12&#34;&gt;12) 删除所有已下载的软件包&lt;/h4&gt;
+&lt;h4 id=&#34;_11&#34;&gt;删除所有已下载的软件包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt clean
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;13-clean&#34;&gt;#### 13) 类似clean，但删除的是过期的包（即已不能下载或者是无用的包）&lt;/h4&gt;
+&lt;h4 id=&#34;clean&#34;&gt;类似clean，但删除的是过期的包（即已不能下载或者是无用的包）&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt autoclean
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;2-dpkg&#34;&gt;2. dpkg命令用法&lt;/h3&gt;
 &lt;p&gt;dpkg是一个Debian的一个命令行工具，它可以用来安装、删除、构建和管理Debian的软件包。
 下面是它的一些命令解释：&lt;/p&gt;
-&lt;h4 id=&#34;1_1&#34;&gt;1）安装软件&lt;/h4&gt;
+&lt;h4 id=&#34;_12&#34;&gt;安装软件&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -i &amp;lt;.deb file name&amp;gt;
 示例：dpkg -i avg71flm_r28-1_i386.deb
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;2_1&#34;&gt;2）安装一个目录下面所有的软件包&lt;/h4&gt;
+&lt;h4 id=&#34;_13&#34;&gt;安装一个目录下面所有的软件包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -R
 示例：dpkg -R /usr/local/src
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;3_1&#34;&gt;3）释放软件包，但是不进行配置&lt;/h4&gt;
+&lt;h4 id=&#34;_14&#34;&gt;释放软件包，但是不进行配置&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –unpack package_file 如果和-R一起使用，参数可以是一个目录
 示例：dpkg –unpack avg71flm_r28-1_i386.deb
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;4_1&#34;&gt;4）重新配置和释放软件包&lt;/h4&gt;
+&lt;h4 id=&#34;_15&#34;&gt;重新配置和释放软件包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –configure package_file
 如果和-a一起使用，将配置所有没有配置的软件包
 示例：dpkg –configure avg71flm_r28-1_i386.deb
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;5_1&#34;&gt;5）删除软件包（保留其配置信息）&lt;/h4&gt;
+&lt;h4 id=&#34;_16&#34;&gt;删除软件包（保留其配置信息）&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -r
 示例：dpkg -r avg71flm
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;6&#34;&gt;6）替代软件包的信息&lt;/h4&gt;
+&lt;h4 id=&#34;_17&#34;&gt;替代软件包的信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –update-avail &amp;lt;Packages-file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;7_1&#34;&gt;7）合并软件包信息&lt;/h4&gt;
+&lt;h4 id=&#34;_18&#34;&gt;合并软件包信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;dpkg –merge-avail &amp;lt;Packages-file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;8_1&#34;&gt;8）从软件包里面读取软件的信息&lt;/h4&gt;
+&lt;h4 id=&#34;_19&#34;&gt;从软件包里面读取软件的信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -A package_file
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;9_1&#34;&gt;9）删除一个包（包括配置信息）&lt;/h4&gt;
+&lt;h4 id=&#34;_20&#34;&gt;删除一个包（包括配置信息）&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -P
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;10uninstall&#34;&gt;10）丢失所有的Uninstall的软件包信息&lt;/h4&gt;
+&lt;h4 id=&#34;uninstall&#34;&gt;丢失所有的Uninstall的软件包信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –forget-old-unavail
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;11avaliable&#34;&gt;11）删除软件包的Avaliable信息&lt;/h4&gt;
+&lt;h4 id=&#34;avaliable&#34;&gt;删除软件包的Avaliable信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –clear-avail
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;12_1&#34;&gt;12）查找只有部分安装的软件包信息&lt;/h4&gt;
+&lt;h4 id=&#34;_21&#34;&gt;查找只有部分安装的软件包信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -C
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;13&#34;&gt;13）比较同一个包的不同版本之间的差别&lt;/h4&gt;
+&lt;h4 id=&#34;_22&#34;&gt;比较同一个包的不同版本之间的差别&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –compare-versions ver1 op ver2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;14&#34;&gt;14）显示帮助信息&lt;/h4&gt;
+&lt;h4 id=&#34;_23&#34;&gt;显示帮助信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –help
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;15dpkglicence&#34;&gt;15）显示dpkg的Licence&lt;/h4&gt;
+&lt;h4 id=&#34;dpkglicence&#34;&gt;显示dpkg的Licence&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –licence (or) dpkg –license
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;16dpkg&#34;&gt;16）显示dpkg的版本号&lt;/h4&gt;
+&lt;h4 id=&#34;dpkg&#34;&gt;显示dpkg的版本号&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg –version
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;17deb&#34;&gt;17）建立一个deb文件&lt;/h4&gt;
+&lt;h4 id=&#34;deb&#34;&gt;建立一个deb文件&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -b direc×y [filename]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;18deb&#34;&gt;18）显示一个Deb文件的目录&lt;/h4&gt;
+&lt;h4 id=&#34;deb_1&#34;&gt;显示一个Deb文件的目录&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -c filename
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;19deb&#34;&gt;19）显示一个Deb的说明&lt;/h4&gt;
+&lt;h4 id=&#34;deb_2&#34;&gt;显示一个Deb的说明&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -I filename [control-file]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;20deb&#34;&gt;20）搜索Deb包&lt;/h4&gt;
+&lt;h4 id=&#34;deb_3&#34;&gt;搜索Deb包&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -l package-name-pattern
 示例：dpkg -I vim
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;21deb&#34;&gt;21)显示所有已经安装的Deb包，同时显示版本号以及简短说明&lt;/h4&gt;
+&lt;h4 id=&#34;deb_4&#34;&gt;显示所有已经安装的Deb包，同时显示版本号以及简短说明&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -l
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;22&#34;&gt;22）报告指定包的状态信息&lt;/h4&gt;
+&lt;h4 id=&#34;_24&#34;&gt;报告指定包的状态信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -s package-name
 示例：dpkg -s ssh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;23&#34;&gt;23）显示一个包安装到系统里面的文件目录信息&lt;/h4&gt;
+&lt;h4 id=&#34;_25&#34;&gt;显示一个包安装到系统里面的文件目录信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -L package-Name
 示例：dpkg -L apache2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;24&#34;&gt;24）搜索指定包里面的文件（模糊查询）&lt;/h4&gt;
+&lt;h4 id=&#34;_26&#34;&gt;搜索指定包里面的文件（模糊查询）&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -S filename-search-pattern
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;25&#34;&gt;25）显示包的具体信息&lt;/h4&gt;
+&lt;h4 id=&#34;_27&#34;&gt;显示包的具体信息&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-12 16:45:03</pubDate>  
+      <pubDate>2024-08-13 14:23:34</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        
-      <category>debian</category> 
+      <category>技术</category> 
       
     </item>
     

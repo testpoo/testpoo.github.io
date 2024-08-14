@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>测试铺</title>
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/xui.css">
     <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
     <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
   </head>
@@ -31,28 +30,28 @@
             
             <li><a href="https://testpoo.github.io/问题解决.html"><label style="color: #38b6fd"></label>&nbsp;问题解决</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #ffba48"></label>&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/婚书两则.html"><label style="color: #38b6fd"></label>&nbsp;摘录</a></li>
             
-            <li><a href="https://testpoo.github.io/javascript代码小抄.html"><label style="color: #ffba48"></label>&nbsp;代码小抄</a></li>
+            <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
             
-            <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><label style="color: #ffba48"></label>&nbsp;其他</a></li>
+            <li><a href="https://testpoo.github.io/javascript代码小抄.html"><label style="color: #38b6fd"></label>&nbsp;代码小抄</a></li>
             
-            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #ffba48"></label>&nbsp;测试</a></li>
+            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
             
-            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #ffba48"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
           </ul>
         </div>
         <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:https://github.com/testpoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
       </div>
       <div class="articles">
-        <div class="category">分类：代码小抄</div>
+        <div class="category"> 代码小抄</div>
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1157个字</span><span class="tag">javascript</span></a></li>
+            <li ><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></a></li>
             
-            <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1876个字</span><span class="tag">python</span></a></li>
+            <li style="background: #f9fafb;border: 0px;"><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共3488个字</span><span class="tag">python</span></a></li>
             
           </ul>
         </div>
@@ -60,19 +59,68 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>python代码小抄</span><span>一个85后测试老人<br />最后更新于2024-08-13 14:23:34</span></div>
+      <div class="header"><span>python代码小抄</span><span>一个85后测试老人<br />最后更新于2024-08-14 15:13:49</span></div>
       <input class="xswitch xonoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
-<li><a href="#_1">清空文件夹</a></li>
-<li><a href="#_2">获取任意周的周一和周五</a></li>
-<li><a href="#_3">获取工作日</a></li>
+<li><a href="#jinja2"> JinJa2代码</a></li>
+<li><a href="#mysql"> MySQL数据库连接</a></li>
+<li><a href="#_1"> 清空文件夹</a></li>
+<li><a href="#_2"> 获取任意周的周一和周五</a></li>
+<li><a href="#_3"> 获取工作日</a></li>
 </ul>
 </div>
-<blockquote>
-<h3 id="_1">清空文件夹</h3>
-</blockquote>
+<h3 id="jinja2"> JinJa2代码</h3>
+<pre class="codehilite"><code># 注册过滤器
+env = app.jinja_env
+env.filters[&quot;sum_car_food_by_category&quot;] = sum_car_food_by_category
+
+# 全局变量设置
+@app.context_processor
+def getSiteUrl():
+    return dict(SITEURL=SITEURL)
+
+# app执行前执行
+@app.before_request
+def authority():
+    path = request.path
+    if not session.get('logged_in'):
+        if path not in ('/', '/login') and not path.startswith('/static'):
+            return redirect(url_for('login'))
+    elif session.get('logged_in'):
+        if ''.join(['/',path.split(&quot;/&quot;)[1]]) not in auths(session['username']):
+            return redirect(url_for('unPlan'))
+</code></pre>
+
+<hr />
+<h3 id="mysql"> MySQL数据库连接</h3>
+<pre class="codehilite"><code>import pymysql
+
+dblink = {&quot;url&quot;: &quot;127.0.0.1&quot;, &quot;username&quot;: &quot;test&quot;, &quot;password&quot;: &quot;11111111&quot;, &quot;database&quot;: &quot;test&quot;}
+def selectOne(sql, info=[]):
+    try:
+        # 连接MySQL数据库
+        db = pymysql.connect(host=dblink['url'], user=dblink['username'], password=dblink['password'],db=dblink['database'], charset='utf8')
+        # 使用cursor()方法获取操作游标
+        cursor = db.cursor()
+        # 使用execute()方法执行sql语句
+        cursor.execute(sql, info)
+        # 使用fetchone()方法获取所有数据
+        results = cursor.fetchall()
+        return results
+    except Exception as err:
+        logUtility.logger.debug(&quot;事务处理失败: {}&quot;.format(str(err)))
+        return '事务处理失败'
+    else:
+        LogUtility.logger.debug(&quot;事务处理成功&quot;)
+    # 关闭数据库
+    finally:
+        db.close()
+</code></pre>
+
+<hr />
+<h3 id="_1"> 清空文件夹</h3>
 <pre class="codehilite"><code>def delFile(path):
     paths = os.listdir(path)
     if paths != []:
@@ -82,9 +130,7 @@
 </code></pre>
 
 <hr />
-<blockquote>
-<h3 id="_2">获取任意周的周一和周五</h3>
-</blockquote>
+<h3 id="_2"> 获取任意周的周一和周五</h3>
 <pre class="codehilite"><code>def get_which_week_monday_and_firday_by_date(move_days):
     needTime = datetime.strptime(time.strftime(&quot;%Y-%m-%d&quot;, time.localtime()) + &quot; 00:00:00&quot;, &quot;%Y-%m-%d %H:%M:%S&quot;)
     weekStartTime = needTime - timedelta(days=needTime.weekday() + move_days, hours=needTime.hour, minutes=needTime.minute, seconds=needTime.second, microseconds=needTime.microsecond)
@@ -95,9 +141,7 @@
 </code></pre>
 
 <hr />
-<blockquote>
-<h3 id="_3">获取工作日</h3>
-</blockquote>
+<h3 id="_3"> 获取工作日</h3>
 <pre class="codehilite"><code>def calculate_workdays(start_date, end_date):
     start_date = datetime.strptime(start_date,'%Y-%m-%d')
     end_date = datetime.strptime(end_date,'%Y-%m-%d')
@@ -131,6 +175,8 @@
         <li><a href="https://testpoo.github.io/常用链接.html"><span><label style="color: #38b6fd"></label>&nbsp;常用链接</span></a></li>
         
         <li><a href="https://testpoo.github.io/问题解决.html"><span><label style="color: #38b6fd"></label>&nbsp;问题解决</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         

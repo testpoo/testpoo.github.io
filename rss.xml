@@ -3,11 +3,11 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
   <channel> 
     <title></title>  
-    <description>一个85后测试老人</description>  
+    <description>这生活啊，他就是一场电影！</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2024-08-14 15:13:49</pubDate>  
-    <lastBuildDate>2024-08-14 15:13:49</lastBuildDate>  
+    <pubDate>2024-08-15 14:26:09</pubDate>  
+    <lastBuildDate>2024-08-15 14:26:09</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -50,7 +50,7 @@
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        
@@ -59,7 +59,7 @@
     </item>
     
     <item> 
-      <title>常用链接</title>  
+      <title>网址集</title>  
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#_1&#34;&gt; 工具&lt;/a&gt;&lt;/li&gt;
@@ -85,18 +85,19 @@
 &lt;hr /&gt;
 &lt;h3 id=&#34;linux&#34;&gt; Linux&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.xfce.org/&#34; title=&#34;Xfce 是类 UNIX 操作系统的轻量级桌面环境&#34;&gt;XFCE官网&lt;/a&gt; | &lt;a href=&#34;https://www.debian.org&#34; title=&#34;Debian GNU/Linux 是一个操作系统及自由软件的发行版，它是由一群自愿付出时间和精力的用户来维护并更新的。&#34;&gt;Debian官网&lt;/a&gt; | &lt;a href=&#34;https://alternativeto.net/platform/linux/&#34; title=&#34;All Linux Software on AlternativeTo&#34;&gt;Linux Software&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;_5&#34;&gt; 缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://zwfw.shaanxi.gov.cn/&#34;&gt;陕西政务服务网&lt;/a&gt; | &lt;a href=&#34;http://zwfw.xa.gov.cn/zdpyc/door/&#34;&gt;西安政务服务网&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34;&gt;陕西医保网上大厅&lt;/a&gt; &lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
-      <link>https://testpoo.github.io/常用链接.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/常用链接.html</guid>
+      <pubDate>2024-08-15 14:26:09</pubDate>  
+      <link>https://testpoo.github.io/网址集.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/网址集.html</guid>
        
-      <category>常用链接</category> 
+      <category>网址集</category> 
       
     </item>
     
     <item> 
-      <title>问题解决</title>  
+      <title>问题集</title>  
       <description>&lt;div class=&#34;toc&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#ssh&#34;&gt; 麒麟下ssh无法启动的问题处理&lt;/a&gt;&lt;/li&gt;
@@ -141,11 +142,52 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;h3 id=&#34;windowspythonpid&#34;&gt; Windows下查找python进程PID&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;wmic process where name=&amp;quot;python.exe&amp;quot; list full
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
-      <link>https://testpoo.github.io/问题解决.html</link>  
-      <guid isPermaLink="true">https://testpoo.github.io/问题解决.html</guid>
+      <pubDate>2024-08-15 14:26:09</pubDate>  
+      <link>https://testpoo.github.io/问题集.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/问题集.html</guid>
        
-      <category>问题解决</category> 
+      <category>问题集</category> 
+      
+    </item>
+    
+    <item> 
+      <title>CSS代码小抄</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#css-div&#34;&gt; CSS 计算 div 的宽度和高度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hr&#34;&gt; 好看的 hr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;css-div&#34;&gt; &lt;code&gt;CSS&lt;/code&gt; 计算 &lt;code&gt;div&lt;/code&gt; 的宽度和高度&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# calc + vw 计算宽度
+width: 800px; /* fallback for b*/
+width: -moz-calc(100vw - (2 * 10)px);
+width: -webkit-calc(100vw -(2 * 10)px);
+width: calc(100vw - (2 * 10)px);
+
+# calc + vh 计算高度
+height: 800px;
+height: -moz-calc(100vh - (2 * 10)px);
+height: -webkit-calc(100vh - (2 * 10)px);
+height: calc(100vh - (2 * 10)px);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&#34;hr&#34;&gt; 好看的 &lt;code&gt;hr&lt;/code&gt;&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;hr {
+    border: 0;
+    padding: 3px;
+    background: linear-gradient(135deg, red, orange,green, blue, purple);
+    --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
+    -webkit-mask-image: var(--mask-image);
+    mask-image: var(--mask-image);
+}
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
+      <link>https://testpoo.github.io/CSS代码小抄.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/CSS代码小抄.html</guid>
+       
+      <category>代码小抄</category> 
       
     </item>
     
@@ -180,7 +222,7 @@ tcp6 0 0 :::22 :::* LISTEN
 递以白头之约，&lt;br /&gt;
 书向鸿笺好将红叶之盟，&lt;br /&gt;
 载明鸳谱。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/婚书两则.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/婚书两则.html</guid>
        
@@ -248,8 +290,14 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;附驱动下载地址（可选）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian-nonfree/firmware/bookworm/current/firmware.zip&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://packages.debian.org/bookworm/firmware-misc-nonfree&#34;&gt;https://packages.debian.org/bookworm/firmware-misc-nonfree&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;2-u&#34;&gt;2. 制作自启动U盘&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;dd if=xxx.iso of=/dev/disk&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3&#34;&gt;3. 安装&lt;/h3&gt;
@@ -589,7 +637,7 @@ nano ~/.config/ibus/rime/build/ibus_rime.yaml
 style:
    horizontal: true
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/debian安装设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian安装设置.html</guid>
        
@@ -630,7 +678,7 @@ style:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/javascript代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/javascript代码小抄.html</guid>
        
@@ -735,7 +783,7 @@ def selectOne(sql, info=[]):
         current_date += timedelta(days=1)
     return workdays
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/python代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python代码小抄.html</guid>
        
@@ -785,7 +833,7 @@ def selectOne(sql, info=[]):
 齐妻起棋，齐欺妻气，妻弃七棋。
 下联：
 伊姨移椅，伊倚姨疑，姨遗一椅。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/只有一个读音的九篇古文.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/只有一个读音的九篇古文.html</guid>
        
@@ -802,7 +850,7 @@ def selectOne(sql, info=[]):
 &lt;p&gt;然独孤生于仵作之家，向为世人所轻，又无通达性情，难令娘子欢颜。虽有雕虫小技，造泥俑以营生，挡盗贼于墓穴，亦不为世人所重。&lt;/p&gt;
 &lt;p&gt;悠悠七载，间隙既生，怨忿难平，已为深谷。独孤内欲改性情，然朝夕难至，独孤外欲弃仵作，怎奈年久生情。独孤苍苍而娘子青青，若以此拖宕竟困娘子，独孤不为。&lt;/p&gt;
 &lt;p&gt;今放春条，欢喜各生。伏愿娘子，觅得良家，对镜展眉，育女生儿，六亲皆欢。独孤无憾，为留后凭，雍州拾阳县独孤羊谨立。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/独孤羊放妻春条书.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/独孤羊放妻春条书.html</guid>
        
@@ -904,7 +952,7 @@ pacman -S fcitx5-im fcitx5-rime rime-wubi git firefox packagekit-qt6 sweeper gwe
 # 向日葵启动前执行
 systemctl start runsunloginclient.service
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Arch通过archinstall安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch通过archinstall安装过程.html</guid>
        
@@ -1202,11 +1250,11 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Jinja2简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
        
-      <category>测试</category> 
+      <category>技术</category> 
       
     </item>
     
@@ -2049,7 +2097,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -2576,7 +2624,7 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
@@ -3030,7 +3078,7 @@ def process_items(prices: Dict[str, float]):
 &lt;/ul&gt;
 &lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
 &lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/FastApi简析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
        
@@ -4925,7 +4973,7 @@ defer resetTransport()
 &lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
        
@@ -5717,7 +5765,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -5886,7 +5934,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Arch手动安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch手动安装过程.html</guid>
        
@@ -7481,7 +7529,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -11500,7 +11548,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -11780,7 +11828,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/debian+openbox安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox安装过程.html</guid>
        
@@ -11833,7 +11881,7 @@ else:
 &lt;li&gt;你自己所期待加入的测试团队是什么样的？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -13299,7 +13347,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -13415,7 +13463,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -14548,7 +14596,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -15323,7 +15371,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -15717,7 +15765,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -17599,7 +17647,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -18930,7 +18978,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -19751,7 +19799,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -20450,7 +20498,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -21656,7 +21704,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -22663,7 +22711,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -22757,7 +22805,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -23069,7 +23117,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -23544,7 +23592,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -24049,7 +24097,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -24417,7 +24465,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -24591,7 +24639,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -24795,7 +24843,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -24961,7 +25009,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -25190,7 +25238,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2024-08-14 15:13:49</pubDate>  
+      <pubDate>2024-08-15 14:26:09</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        

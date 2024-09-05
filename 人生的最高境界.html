@@ -45,60 +45,45 @@
         <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:https://github.com/testpoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
       </div>
       <div class="articles">
-        <div class="category"> 代码小抄</div>
+        <div class="category"> 摘录</div>
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共935个字</span><span class="tag">css</span></li></a>
+            <a href="https://testpoo.github.io/人生的最高境界.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;人生的最高境界</span><span>2024-09-05&nbsp;&nbsp;共186个字</span><span class="tag">摘录</span><span class="tag">人生格言</span></li></a>
             
-            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></li></a>
+            <a href="https://testpoo.github.io/中国朝代顺序口诀.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;中国朝代顺序口诀</span><span>2024-08-19&nbsp;&nbsp;共611个字</span><span class="tag">摘录</span><span class="tag">朝代口诀</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共3912个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/国际象棋棋子代号.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;国际象棋棋子代号</span><span>2024-08-16&nbsp;&nbsp;共277个字</span><span class="tag">摘录</span><span class="tag">国际象棋</span><span class="tag">棋子代号</span></li></a>
+            
+            <a href="https://testpoo.github.io/婚书两则.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span><span>2024-08-14&nbsp;&nbsp;共450个字</span><span class="tag">摘录</span><span class="tag">婚书</span></li></a>
+            
+            <a href="https://testpoo.github.io/只有一个读音的九篇古文.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span><span>2024-08-13&nbsp;&nbsp;共1677个字</span><span class="tag">摘录</span><span class="tag">一个读音</span></li></a>
+            
+            <a href="https://testpoo.github.io/独孤羊放妻春条书.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span><span>2024-08-13&nbsp;&nbsp;共345个字</span><span class="tag">摘录</span><span class="tag">唐朝诡事录之西行</span></li></a>
+            
+            <a href="https://testpoo.github.io/面试问答.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span><span>2022-06-21&nbsp;&nbsp;共946个字</span><span class="tag">面试</span></li></a>
+            
+            <a href="https://testpoo.github.io/紫薇斗数解析.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;紫薇斗数解析</span><span>2020-07-18&nbsp;&nbsp;共14274个字</span><span class="tag">紫薇斗数</span></li></a>
             
           </ul>
         </div>
-        <div class="item-num">总共3项</div>
+        <div class="item-num">总共8项</div>
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>javascript代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-09-05 16:36:24</span></div>
+      <div class="header"><span>人生的最高境界</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-09-05 16:36:24</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
-        <div class="toc">
-<ul>
-<li><a href="#_1"> 获取工作日</a></li>
-</ul>
-</div>
-<h3 id="_1"> 获取工作日</h3>
-<pre class="codehilite"><code>function getWorkdays() {
-    const startDate = new Date(document.querySelector(&quot;[name='startime']&quot;).value);
-    const endDate = new Date(document.querySelector(&quot;[name='endtime']&quot;).value);
-    const holidays = {{ holidays|safe if holidays else [] }}; //节假日
-    const extradays = {{ extradays|safe if extradays else [] }}; //补班
-    let days = 0;
-    let currentDate = startDate;
-
-    // 确保结束日期在开始日期之后
-    if (currentDate &gt; endDate) {
-        [startDate, endDate] = [endDate, startDate];
-    }
-
-    while (currentDate &lt;= endDate) {
-        const temp = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
-        if (![0, 6].includes(currentDate.getDay()) &amp;&amp; !holidays.includes(temp) || extradays.includes(temp)) {
-            days++;
-        }
-        currentDate.setDate(currentDate.getDate() + 1);
-    }
-    document.querySelector(&quot;[name='spentime']&quot;).value = days;
-}
-</code></pre>
-
-<hr />
+        <blockquote>
+<p>来源于网络搜集</p>
+</blockquote>
+<p>如果你熬到了，一个人喝茶，一个人跑步，一个人旅行，一个人看书，没有电话，没有邀约，没有聚会，没有所谓的些社交。</p>
+<p><strong>早睡早起，善待自己，无欲无求，云淡风轻，不在乎别人的评价。</strong></p>
+<p>那么恭喜你，你已经达到了人生的最高境界。</p>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
-            <li>本文链接：<a href="https://testpoo.github.io/javascript代码小抄.html">https://testpoo.github.io/javascript代码小抄.html</a></li>
+            <li>本文链接：<a href="https://testpoo.github.io/人生的最高境界.html">https://testpoo.github.io/人生的最高境界.html</a></li>
             <li>版权声明：本铺所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"> BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
           </ul>
         </div>

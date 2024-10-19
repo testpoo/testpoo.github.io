@@ -36,7 +36,7 @@
             
             <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
             
-            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
             
@@ -49,15 +49,15 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共15458个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共35153个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共3299个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共7292个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共9379个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共7939个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16174个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2803个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9016个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-09-05 16:36:24</span></div>
+      <div class="header"><span>debian安装设置</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -139,37 +139,37 @@
 <h3 id="3">3. 安装</h3>
 <p>选择非自动安装，在安装更新步骤，去掉安装更新，理由，安装更新使用的是Debian官方源，特别慢，可在安装好后，使用国内源，再安装。</p>
 <h3 id="4-sudo">4. 将当前用户加入sudo</h3>
-<pre class="codehilite"><code># 方法一
+<div class="codehilite"><pre><span></span><code># 方法一
 su root
 nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
 
 # 方法二
 useradd -a -G sudo username
 reboot
-</code></pre>
+</code></pre></div>
 
 <h3 id="5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</h3>
-<pre class="codehilite"><code>nano /etc/default/grub
+<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
 找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-</code></pre>
+</code></pre></div>
 
 <h3 id="6">6. 修改源</h3>
 <p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a></p>
-<pre class="codehilite"><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bookworm-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+</code></pre></div>
 
 <h3 id="7-gnome">7. Gnome桌面设置</h3>
 <h4 id="71">7.1 安装软件</h4>
@@ -184,9 +184,9 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 <h4 id="81">8.1. 安装软件</h4>
 <p><code>sudo apt install fonts-wqy-zenhei git fcitx5-rime rime-data-wubi gvfs-backends blueman xinput yaru-theme-gtk yaru-theme-icon</code></p>
 <h4 id="82">8.2. 删除软件</h4>
-<pre class="codehilite"><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
+<div class="codehilite"><pre><span></span><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
-</code></pre>
+</code></pre></div>
 
 <h4 id="83">8.3. 设置</h4>
 <ul>
@@ -199,179 +199,179 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 </ul>
 <h4 id="84">8.4 添加触摸板关启脚本</h4>
 <p>本机快捷键Fn+F8==Super+Ctrl_L</p>
-<pre class="codehilite"><code>#!/bin/sh
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 
-dev_id=`xinput list | grep 'Touch[pP]ad' | sed -E 's/^.*id=([0-9]+).*$/\1/g'`
-dev_state=`xinput --list-props $dev_id | grep 'Device Enabled' | sed -E 's/^.*:.*([01]).*$/\1/g'`
+<span class="nv">dev_id</span><span class="o">=</span><span class="sb">`</span>xinput<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;Touch[pP]ad&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/^.*id=([0-9]+).*$/\1/g&#39;</span><span class="sb">`</span>
+<span class="nv">dev_state</span><span class="o">=</span><span class="sb">`</span>xinput<span class="w"> </span>--list-props<span class="w"> </span><span class="nv">$dev_id</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;Device Enabled&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;s/^.*:.*([01]).*$/\1/g&#39;</span><span class="sb">`</span>
 
-if [ $dev_state -eq 1 ]; then
-    xinput disable $dev_id
-    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &quot;触摸板已关闭&quot;
-elif [ $dev_state -eq 0 ]; then
-    xinput enable $dev_id
-    notify-send -i /home/poo/.poo/input-touchpad.png -t 1500 &quot;触摸板已开启&quot;
-fi
-</code></pre>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$dev_state</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>xinput<span class="w"> </span>disable<span class="w"> </span><span class="nv">$dev_id</span>
+<span class="w">    </span>notify-send<span class="w"> </span>-i<span class="w"> </span>/home/poo/.poo/input-touchpad.png<span class="w"> </span>-t<span class="w"> </span><span class="m">1500</span><span class="w"> </span><span class="s2">&quot;触摸板已关闭&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$dev_state</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>xinput<span class="w"> </span><span class="nb">enable</span><span class="w"> </span><span class="nv">$dev_id</span>
+<span class="w">    </span>notify-send<span class="w"> </span>-i<span class="w"> </span>/home/poo/.poo/input-touchpad.png<span class="w"> </span>-t<span class="w"> </span><span class="m">1500</span><span class="w"> </span><span class="s2">&quot;触摸板已开启&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
 
 <h4 id="85">8.5 添加缺少的图标</h4>
 <p>xfce菜单图标替换成<code>/usr/share/pixmaps/xfce4_xicon4.pngl</code></p>
-<pre class="codehilite"><code>#!/usr/bin/python3 env
-# coding=utf-8
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/python3 env</span>
+<span class="c1"># coding=utf-8</span>
 
-import os
+<span class="kn">import</span> <span class="nn">os</span>
 
-dirs = &quot;/usr/share/icons/Yaru/&quot;
+<span class="n">dirs</span> <span class="o">=</span> <span class="s2">&quot;/usr/share/icons/Yaru/&quot;</span>
 
-files = [[&quot;terminal-app.png&quot;,&quot;org.xfce.terminal.png&quot;],
-[&quot;terminal-app.png&quot;,&quot;org.xfce.terminalemulator.png&quot;],
-[&quot;filemanager-app.png&quot;,&quot;org.xfce.filemanager.png&quot;],
-[&quot;webbrowser-app.png&quot;,&quot;org.xfce.webbrowser.png&quot;],
-[&quot;edit-find.png&quot;,&quot;org.xfce.appfinder.png&quot;],
-[&quot;mail-read.png&quot;,&quot;org.xfce.mailreader.png&quot;],
-[&quot;filemanager-app.png&quot;,&quot;org.xfce.thunar.png&quot;],
-[&quot;terminal-app.png&quot;,&quot;org.xfce.terminal-settings.png&quot;],
-[&quot;terminal-app.png&quot;,&quot;org.xfce.terminal-settings.png&quot;],
-[&quot;org.gnome.TextEditor.png&quot;,&quot;org.xfce.mousepad.png&quot;],
-[&quot;system-monitor-app.png&quot;,&quot;org.xfce.taskmanager.png&quot;],
-[&quot;session-properties.png&quot;,&quot;org.xfce.session.png&quot;],
-[&quot;preferences-desktop-display.png&quot;,&quot;org.xfce.settings.display.png&quot;],
-[&quot;user-desktop.png&quot;,&quot;org.xfce.xfdesktop.png&quot;],
-[&quot;screenshot-app.png&quot;,&quot;org.xfce.screenshooter.png&quot;],
-[&quot;preferences-system-power.png&quot;,&quot;org.xfce.powermanager.png&quot;],
-[&quot;network-wired-offline-symbolic.svg&quot;,&quot;nm-device-wired.svg&quot;],
-[&quot;network-wireless-disabled-symbolic.svg&quot;,&quot;nm-no-connection.svg&quot;],
-[&quot;network-wireless-signal-none-symbolic.svg&quot;,&quot;nm-signal-00.svg&quot;],
-[&quot;network-wireless-signal-none-secure-symbolic.svg&quot;,&quot;nm-signal-00-secure.svg&quot;],
-[&quot;network-wireless-signal-weak-symbolic.svg&quot;,&quot;nm-signal-25.svg&quot;],
-[&quot;network-wireless-signal-weak-secure-symbolic.svg&quot;,&quot;nm-signal-25-secure.svg&quot;],
-[&quot;network-wireless-signal-ok-symbolic.svg&quot;,&quot;nm-signal-50.svg&quot;],
-[&quot;network-wireless-signal-ok-secure-symbolic.svg&quot;,&quot;nm-signal-50-secure.svg&quot;],
-[&quot;network-wireless-signal-good-symbolic.svg&quot;,&quot;nm-signal-75.svg&quot;],
-[&quot;network-wireless-signal-good-secure-symbolic.svg&quot;,&quot;nm-signal-75-secure.svg&quot;],
-[&quot;network-wireless-signal-excellent-symbolic.svg&quot;,&quot;nm-signal-100.svg&quot;],
-[&quot;network-wireless-signal-excellent-secure-symbolic.svg&quot;,&quot;nm-signal-100-secure.svg&quot;],
-[&quot;bluetooth.png&quot;,&quot;blueman.png&quot;],
-[&quot;bluetooth-active-symbolic.svg&quot;,&quot;blueman-tray.svg&quot;],
-[&quot;bluetooth-active-symbolic.svg&quot;,&quot;blueman-active.svg&quot;],
-[&quot;bluetooth-disconnected-symbolic.svg&quot;,&quot;blueman-disabled.svg&quot;],
-[&quot;gallery-app.png&quot;,&quot;org.xfce.ristretto.png&quot;],
-[&quot;application-x-model.png&quot;,&quot;org.xfce.settings.appearance.png&quot;]
-]
+<span class="n">files</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminal.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminalemulator.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;filemanager-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.filemanager.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;webbrowser-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.webbrowser.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;edit-find.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.appfinder.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;mail-read.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.mailreader.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;filemanager-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.thunar.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminal-settings.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminal-settings.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;org.gnome.TextEditor.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.mousepad.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;system-monitor-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.taskmanager.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;session-properties.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.session.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;preferences-desktop-display.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.settings.display.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;user-desktop.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.xfdesktop.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;screenshot-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.screenshooter.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;preferences-system-power.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.powermanager.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wired-offline-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-device-wired.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-disabled-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-no-connection.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-none-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-00.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-none-secure-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-00-secure.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-weak-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-25.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-weak-secure-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-25-secure.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-ok-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-50.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-ok-secure-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-50-secure.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-good-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-75.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-good-secure-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-75-secure.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-excellent-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-100.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;network-wireless-signal-excellent-secure-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;nm-signal-100-secure.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;bluetooth.png&quot;</span><span class="p">,</span><span class="s2">&quot;blueman.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;bluetooth-active-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;blueman-tray.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;bluetooth-active-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;blueman-active.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;bluetooth-disconnected-symbolic.svg&quot;</span><span class="p">,</span><span class="s2">&quot;blueman-disabled.svg&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;gallery-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.ristretto.png&quot;</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;application-x-model.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.settings.appearance.png&quot;</span><span class="p">]</span>
+<span class="p">]</span>
 
-for ofile,nfile in files:
-    temp =os.popen(&quot;find &quot;+dirs+&quot; -name &quot;+ofile)
-    lists = [x.replace(ofile,'') for x in temp.read().split('\n')]
-    for li in lists:
-        if li != '' and os.path.exists(li+nfile) == False:
-            os.system(&quot;ln -s &quot;+li+ofile+&quot; &quot;+li+nfile)
-os.system(&quot;gtk-update-icon-cache /usr/share/icons/Yaru&quot;)
-</code></pre>
+<span class="k">for</span> <span class="n">ofile</span><span class="p">,</span><span class="n">nfile</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">temp</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;find &quot;</span><span class="o">+</span><span class="n">dirs</span><span class="o">+</span><span class="s2">&quot; -name &quot;</span><span class="o">+</span><span class="n">ofile</span><span class="p">)</span>
+    <span class="n">lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">temp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">lists</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">li</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;ln -s &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">ofile</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;gtk-update-icon-cache /usr/share/icons/Yaru&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <h4 id="86">8.6. 图片路径</h4>
-<pre class="codehilite"><code>/usr/share/backgrounds
-</code></pre>
+<div class="codehilite"><pre><span></span><code>/usr/share/backgrounds
+</code></pre></div>
 
 <h4 id="87-lightdm">8.7. lightdm设置</h4>
-<pre class="codehilite"><code>/etc/lightdm/lightdm-gtk-greeter.conf
-[greeter]
-theme-name = Yaru
-icon-theme-name = Yaru
-font-name = Noto Sans Mono 11
-default-user-image = /usr/share/backgrounds/title.jpg
-clock-format = %A %F %H:%M 第%V周
-background = /usr/share/backgrounds/background.png
-xft-dpi = 120
-indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
-#hide-user-image = true
+<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="n">greeter</span><span class="p">.</span><span class="n">conf</span>
+<span class="o">[</span><span class="n">greeter</span><span class="o">]</span>
+<span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Yaru</span>
+<span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Yaru</span>
+<span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Noto</span><span class="w"> </span><span class="n">Sans</span><span class="w"> </span><span class="n">Mono</span><span class="w"> </span><span class="mi">11</span>
+<span class="k">default</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">backgrounds</span><span class="o">/</span><span class="n">title</span><span class="p">.</span><span class="n">jpg</span>
+<span class="n">clock</span><span class="o">-</span><span class="nf">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">A</span><span class="w"> </span><span class="o">%</span><span class="n">F</span><span class="w"> </span><span class="o">%</span><span class="nl">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span><span class="w"> </span><span class="n">第</span><span class="o">%</span><span class="n">V周</span>
+<span class="n">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">backgrounds</span><span class="o">/</span><span class="n">background</span><span class="p">.</span><span class="n">png</span>
+<span class="n">xft</span><span class="o">-</span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
+<span class="n">indicators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="k">host</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">clock</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">a11y</span><span class="p">;</span><span class="o">~</span><span class="k">session</span><span class="p">;</span><span class="o">~</span><span class="nf">power</span>
+<span class="n">#hide</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
 
-/etc/lightdm/lightdm.conf
-greeter-hide-users=false 前的#去掉
-</code></pre>
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="p">.</span><span class="n">conf</span>
+<span class="n">greeter</span><span class="o">-</span><span class="n">hide</span><span class="o">-</span><span class="n">users</span><span class="o">=</span><span class="k">false</span><span class="w"> </span><span class="n">前的#去掉</span>
+</code></pre></div>
 
 <h4 id="88-mtp">8.8. 支持mtp，连接安卓</h4>
 <ul>
 <li>安装gvfs-backends</li>
 </ul>
 <h4 id="89-gtk">8.9. 启动gtk编辑器</h4>
-<pre class="codehilite"><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
+<div class="codehilite"><pre><span></span><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
 重启xfce-panel:xfce4-panel -r
-</code></pre>
+</code></pre></div>
 
 <h4 id="810-grub">8.10. 修改grub背景</h4>
-<pre class="codehilite"><code># 使用 su - 切换到 root 下，执行 sudo update-grub
+<div class="codehilite"><pre><span></span><code># 使用 su - 切换到 root 下，执行 sudo update-grub
 # 找到 Found backgroud image: /usr/share/images/desktop-base/desktop-grub.png
 # 执行 ls -l /usr/share/images/desktop-base/desktop-grub.png
 # 找到 /etc/alternatives/desktop-grub
 # 执行 ls -l /etc/alternatives/desktop-grub
 # 找到 /usr/share/desktop-base/active-theme/grub/grub-4x3.png 替换
 # 注：必须是png格式
-</code></pre>
+</code></pre></div>
 
 <h4 id="811">8.11. 添加右键</h4>
-<pre class="codehilite"><code>ln -s %f 'Link to %n'
-Create a Link
+<div class="codehilite"><pre><span></span><code><span class="nv">ln</span><span class="w"> </span><span class="o">-</span><span class="nv">s</span><span class="w"> </span><span class="o">%</span><span class="nv">f</span><span class="w"> </span><span class="s1">&#39;Link to %n&#39;</span>
+<span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">Link</span>
 创建链接
-Create a symbolic link for each selected item
+<span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">symbolic</span><span class="w"> </span><span class="nv">link</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">selected</span><span class="w"> </span><span class="nv">item</span>
 给每个选择的项目创建一个链接
 
-pkexec thunar %F
-Open as Root
+<span class="nv">pkexec</span><span class="w"> </span><span class="nv">thunar</span><span class="w"> </span><span class="o">%</span><span class="nv">F</span>
+<span class="nv">Open</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">Root</span>
 管理员打开
-Open the folder with administration
+<span class="nv">Open</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">folder</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">administration</span>
 管理员打开文件夹
 
-catfish %f
-Search
+<span class="nv">catfish</span><span class="w"> </span><span class="o">%</span><span class="nv">f</span>
+<span class="nv">Search</span>
 搜索
-Search for Files
+<span class="nv">Search</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">Files</span>
 搜索文件
-</code></pre>
+</code></pre></div>
 
 <h4 id="812-thunar">8.12. thunar侧边栏添加位置</h4>
 <ul>
 <li>点击文件右键<code>send to--&gt;Side Panel</code></li>
 </ul>
 <h4 id="813">8.13. 启动花屏</h4>
-<pre class="codehilite"><code>xfwm4--&gt;vblank_mode=off
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">xfwm4</span><span class="o">--&gt;</span><span class="n">vblank_mode</span><span class="o">=</span><span class="n">off</span>
+</code></pre></div>
 
 <h4 id="814-gtkcss">8.14. 添加gtk.css</h4>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>
-<pre class="codehilite"><code>#pulseaudio-button image,#xfce4-power-manager-plugin image,#xfce4-notification-plugin image{
-            -gtk-icon-transform: scale(0.4);
-}
+<div class="codehilite"><pre><span></span><code><span class="p">#</span><span class="nn">pulseaudio-button</span><span class="w"> </span><span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-power-manager-plugin</span><span class="w"> </span><span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-notification-plugin</span><span class="w"> </span><span class="nt">image</span><span class="p">{</span>
+<span class="w">            </span><span class="nv">-gtk-icon-transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
+<span class="p">}</span>
 
-#clock-button {font-size: 14px;}
+<span class="p">#</span><span class="nn">clock-button</span><span class="w"> </span><span class="p">{</span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;}</span>
 
-#indicator-button* { -gtk-icon-transform: scale(1.2); }
+<span class="p">#</span><span class="nn">indicator-button</span><span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">-gtk-icon-transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 
-#whiskermenu-window {
-   background-color: #ffbba4;
-   background-image: linear-gradient(#e66465, #9198e5);
-   color: #ffffff; }
+<span class="p">#</span><span class="nn">whiskermenu-window</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffbba4</span><span class="p">;</span>
+<span class="w">   </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mh">#e66465</span><span class="p">,</span><span class="w"> </span><span class="mh">#9198e5</span><span class="p">);</span>
+<span class="w">   </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
-calendar.highlight { color: #e95420; }
-calendar {padding: 0 5px; font-weight: bold;border-radius: 5px;font-size: 14px;border: none;}
-</code></pre>
+<span class="nt">calendar</span><span class="p">.</span><span class="nc">highlight</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e95420</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nt">calendar</span><span class="w"> </span><span class="p">{</span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;}</span>
+</code></pre></div>
 
 <h4 id="815-xfce4-docklike-plugin">8.15. 安装xfce4-docklike-plugin</h4>
 <ul>
 <li>安装xfce4-docklike-plugin合并启动器和窗口管理器</li>
 </ul>
-<pre class="codehilite"><code># 编译使用到的软件
-apt install xfce4-dev-tools libglib2.0-dev libx11-dev build-essential libgtk-3-dev pkg-config devhelp libwnck-3-dev libxfce4ui-2-dev libxfce4panel-2.0-dev
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 编译使用到的软件</span>
+<span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span><span class="w"> </span><span class="n">libglib2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libx11</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">essential</span><span class="w"> </span><span class="n">libgtk</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="w"> </span><span class="n">devhelp</span><span class="w"> </span><span class="n">libwnck</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libxfce4ui</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span><span class="w"> </span><span class="n">libxfce4panel</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">dev</span>
+</code></pre></div>
 
 <ul>
 <li>编译</li>
 </ul>
-<pre class="codehilite"><code>./autogen.sh --prefix=/home/poo/usr
+<div class="codehilite"><pre><span></span><code>./autogen.sh --prefix=/home/poo/usr
 make
 sudo make install
 # 把usr复制到根目录下，目前有不显示中文的问题，原因还没有找到
-</code></pre>
+</code></pre></div>
 
 <h3 id="9-kde">9. kde桌面设置</h3>
 <h4 id="91">9.1. 安装软件</h4>
@@ -443,7 +443,7 @@ sudo make install
 <ul>
 <li>fcitx-rime</li>
 </ul>
-<pre class="codehilite"><code>sudo apt install fcitx-rime rime-data-wubi
+<div class="codehilite"><pre><span></span><code>sudo apt install fcitx-rime rime-data-wubi
 nano ~/.config/fcitx/rime/default.custom.yaml
 patch:
   &quot;style/horizontal&quot;: true
@@ -453,12 +453,24 @@ patch:
     - schema: wubi_pinyin
     - schema: luna_pinyin_simp
     - schema: wubi86
-</code></pre>
+</code></pre></div>
+
+<ul>
+<li>fcitx5-rime</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>sudo apt install fcitx-rime rime-data-wubi
+nano ~/.local/share/fcitx5/rime/default.custom.yaml
+patch:
+  schema_list:
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+</code></pre></div>
 
 <ul>
 <li>ibus-rime</li>
 </ul>
-<pre class="codehilite"><code>sudo apt install ibus-rime rime-data-wubi
+<div class="codehilite"><pre><span></span><code>sudo apt install ibus-rime rime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
@@ -472,7 +484,7 @@ nano ~/.config/ibus/rime/build/ibus_rime.yaml
 
 style:
    horizontal: true
-</code></pre>
+</code></pre></div>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -502,21 +514,21 @@ style:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
         
@@ -540,9 +552,9 @@ style:
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -570,11 +582,11 @@ style:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

@@ -36,7 +36,7 @@
             
             <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
             
-            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
             
@@ -49,15 +49,15 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共15458个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共35153个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共3299个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共7292个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共9379个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共7939个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16174个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共2803个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9016个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-09-05 16:36:24</span></div>
+      <div class="header"><span>debian+openbox安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -107,33 +107,33 @@
 <p>添加接口参数如下：</p>
 </li>
 </ul>
-<pre class="codehilite"><code>auto wlp1s0 #(wlp1s0 为网卡名)
+<div class="codehilite"><pre><span></span><code>auto wlp1s0 #(wlp1s0 为网卡名)
 iface wlp1s0 inet dhcp
     wpa-deriver wext
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre>
+</code></pre></div>
 
 <ul>
 <li>启动网卡：<code>ifup wlp1s0</code> 需要在<code>root</code>或<code>su -</code>下重启</li>
 </ul>
 <h3 id="2">2. 修改源</h3>
 <p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a></p>
-<pre class="codehilite"><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">bookworm-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span>
+<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span><span class="w"> </span><span class="kp">bookworm-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
+<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+<span class="c"># # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span>
+</code></pre></div>
 
 <h3 id="3">3. 安装软件</h3>
 <p><code>apt install openbox xinit tint2 sakura pcmanfm ristretto fcitx-rime rime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium</code></p>
-<pre class="codehilite"><code>light 亮度
+<div class="codehilite"><pre><span></span><code>light 亮度
 slock 锁屏
 neofetch 系统信息
 tint2 任务栏
@@ -149,31 +149,31 @@ dunst 通知
 volumeicon-alsa 音量控制
 network-manager-gnome 网络
 mate-power-manager 电源
-</code></pre>
+</code></pre></div>
 
 <h3 id="4-sudo">4. 将当前用户加入sudo</h3>
-<pre class="codehilite"><code># 方法一
+<div class="codehilite"><pre><span></span><code># 方法一
 su root
 nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
 
 # 方法二
 useradd -a -G sudo username
 reboot
-</code></pre>
+</code></pre></div>
 
 <h3 id="5-debain5">5. 去掉debain开机启动项停留的5秒和电池的问题</h3>
-<pre class="codehilite"><code>nano /etc/default/grub
+<div class="codehilite"><pre><span></span><code>nano /etc/default/grub
 找到 GRUB_DEFAULT=x,并将x改为希望启动系统的序号,默认 x == 0，即默认启动项是 Debian,启动项从上往下数分别是 0 、 1 、 2 。。。
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-</code></pre>
+</code></pre></div>
 
 <h3 id="6">6. 安装输入法</h3>
 <ul>
 <li>fcitx-rime</li>
 </ul>
-<pre class="codehilite"><code>sudo apt install fcitx-rime rime-data-wubi
+<div class="codehilite"><pre><span></span><code>sudo apt install fcitx-rime rime-data-wubi
 nano ~/.config/fcitx/rime/default.custom.yaml
 patch:
   &quot;style/horizontal&quot;: true
@@ -183,12 +183,12 @@ patch:
     - schema: wubi_pinyin
     - schema: luna_pinyin_simp
     - schema: wubi86
-</code></pre>
+</code></pre></div>
 
 <ul>
 <li>ibus-rime</li>
 </ul>
-<pre class="codehilite"><code>sudo apt install ibus-rime rime-data-wubi
+<div class="codehilite"><pre><span></span><code>sudo apt install ibus-rime rime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
@@ -204,10 +204,10 @@ style:
    horizontal: true
 
 # 重新部署 ibus-rime
-</code></pre>
+</code></pre></div>
 
 <h3 id="7">7. 触摸板修改</h3>
-<pre class="codehilite"><code>sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
+<div class="codehilite"><pre><span></span><code>sudo nano /usr/share/X11/xorg.conf.d/40-libinput.conf
 
 Section &quot;InputClass&quot;
         Identifier &quot;libinput touchpad catchall&quot;
@@ -220,121 +220,121 @@ Section &quot;InputClass&quot;
         Option &quot;NaturalScrolling&quot; &quot;true&quot; # 自然滚动（反方向滚动）
 #        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
 EndSection
-</code></pre>
+</code></pre></div>
 
 <h3 id="8-dpi">8. 设置dpi</h3>
-<pre class="codehilite"><code>nano .Xresources
+<div class="codehilite"><pre><span></span><code>nano .Xresources
 
 Xft.dpi:120
 sudo xrdb ~/.Xresources
 reboot
-</code></pre>
+</code></pre></div>
 
 <h3 id="9-openbox">9. 启动OpenBox</h3>
 <p>编辑（不存在即新建）文件~/.bash_profile（在tty下登录是不会执行.bashrc的），新增一行内容如下：</p>
-<pre class="codehilite"><code>if [ -z $DISPLAY ] &amp;&amp; [ $(tty) = &quot;/dev/tty1&quot; ];then
-    startx
-fi
-# 查看Ctrl-Alt-F1对应的那个tty
-echo $(tty)
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="o">-</span><span class="nv">z</span><span class="w"> </span><span class="mh">$D</span><span class="nv">ISPLAY</span><span class="w"> </span>]<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>[<span class="w"> </span>$<span class="ss">(</span><span class="nv">tty</span><span class="ss">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/dev/tty1&quot;</span><span class="w"> </span>]<span class="c1">;then</span>
+<span class="w">    </span><span class="nv">startx</span>
+<span class="nv">fi</span>
+#<span class="w"> </span>查看<span class="nv">Ctrl</span><span class="o">-</span><span class="nv">Alt</span><span class="o">-</span><span class="nv">F1</span>对应的那个<span class="nv">tty</span>
+<span class="nv">echo</span><span class="w"> </span>$<span class="ss">(</span><span class="nv">tty</span><span class="ss">)</span>
+</code></pre></div>
 
 <h3 id="10">10. 设置</h3>
 <ul>
 <li>openbox</li>
 </ul>
 <p><strong>复制配置文件</strong></p>
-<pre class="codehilite"><code>$ mkdir -p ~/.config/openbox
-# openbox有以下文件{rc.xml,menu.xml,autostart,environment}
-$ cp /etc/xdg/openbox/* ~/.config/openbox/
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.config/openbox
+<span class="c1"># openbox有以下文件{rc.xml,menu.xml,autostart,environment}</span>
+$<span class="w"> </span>cp<span class="w"> </span>/etc/xdg/openbox/*<span class="w"> </span>~/.config/openbox/
+</code></pre></div>
 
 <p><strong>设置启动项</strong></p>
-<pre class="codehilite"><code># autostart.sh
+<div class="codehilite"><pre><span></span><code># autostart.sh
 
 tint2 &amp;
 pcmanfm --desktop &amp;
 blueman-applet &amp;
 #volumeicon &amp;
-</code></pre>
+</code></pre></div>
 
 <p><strong>添加快捷键</strong></p>
-<pre class="codehilite"><code># keyboard中加入如下代码 声音和亮度快捷键绑定
+<div class="codehilite"><pre><span></span><code>#<span class="w"> </span>keyboard中加入如下代码<span class="w"> </span>声音和亮度快捷键绑定
 
-    &lt;!--自定义--&gt;
-    &lt;keybind key=&quot;XF86AudioMute&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-mute @DEFAULT_SINK@ toggle&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioLowerVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-volume @DEFAULT_SINK@ -5%&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioRaiseVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;pactl set-sink-volume @DEFAULT_SINK@ +5%&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessUp&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;light -A 5&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessDown&quot;&gt;
-      &lt;action name=&quot;Execute&quot;&gt;
-        &lt;execute&gt;light -U 5&lt;/execute&gt;
-      &lt;/action&gt;
-    &lt;/keybind&gt;
-</code></pre>
+<span class="w">    </span><span class="cm">&lt;!--自定义--&gt;</span>
+<span class="w">    </span><span class="nt">&lt;keybind</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;XF86AudioMute&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execute&gt;</span>pactl<span class="w"> </span>set-sink-mute<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span>toggle<span class="nt">&lt;/execute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/keybind&gt;</span>
+<span class="w">    </span><span class="nt">&lt;keybind</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;XF86AudioLowerVolume&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execute&gt;</span>pactl<span class="w"> </span>set-sink-volume<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span>-5%<span class="nt">&lt;/execute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/keybind&gt;</span>
+<span class="w">    </span><span class="nt">&lt;keybind</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;XF86AudioRaiseVolume&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execute&gt;</span>pactl<span class="w"> </span>set-sink-volume<span class="w"> </span>@DEFAULT_SINK@<span class="w"> </span>+5%<span class="nt">&lt;/execute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/keybind&gt;</span>
+<span class="w">    </span><span class="nt">&lt;keybind</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;XF86MonBrightnessUp&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execute&gt;</span>light<span class="w"> </span>-A<span class="w"> </span>5<span class="nt">&lt;/execute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/keybind&gt;</span>
+<span class="w">    </span><span class="nt">&lt;keybind</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;XF86MonBrightnessDown&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execute&gt;</span>light<span class="w"> </span>-U<span class="w"> </span>5<span class="nt">&lt;/execute&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/action&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/keybind&gt;</span>
+</code></pre></div>
 
 <ul>
 <li>tint2</li>
 </ul>
-<pre class="codehilite"><code># 亮度
+<div class="codehilite"><pre><span></span><code># 亮度
 echo &quot;☀️$(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
+</code></pre></div>
 
-<pre class="codehilite"><code>#!/bin/bash
-# 增加亮度
-light -A 5
-notify-send &quot;当前亮度为: $(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 增加亮度</span>
+light<span class="w"> </span>-A<span class="w"> </span><span class="m">5</span>
+notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut<span class="w"> </span>--delimiter<span class="o">=</span>.<span class="w"> </span>-f1<span class="k">)</span><span class="s2">%&quot;</span>
+</code></pre></div>
 
-<pre class="codehilite"><code>#!/bin/bash
-# 减少亮度
-light -U 5
-notify-send &quot;当前亮度为: $(light|cut --delimiter=. -f1)%&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># 减少亮度</span>
+light<span class="w"> </span>-U<span class="w"> </span><span class="m">5</span>
+notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </span><span class="k">$(</span>light<span class="p">|</span>cut<span class="w"> </span>--delimiter<span class="o">=</span>.<span class="w"> </span>-f1<span class="k">)</span><span class="s2">%&quot;</span>
+</code></pre></div>
 
-<pre class="codehilite"><code># 声音(volume.py)
+<div class="codehilite"><pre><span></span><code><span class="c1"># 声音(volume.py)</span>
 
-# coding=utf-8
+<span class="c1"># coding=utf-8</span>
 
-import os
+<span class="kn">import</span> <span class="nn">os</span>
 
-mute = os.popen('pactl get-sink-mute @DEFAULT_SINK@').read()
-volume = os.popen('pactl get-sink-volume @DEFAULT_SINK@').read()
-if mute[6] == &quot;否&quot;:
-    print('🔊'+volume[29:32])
-else:
-    print('🔇'+volume[29:32])
-</code></pre>
+<span class="n">mute</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;否&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+</code></pre></div>
 
-<pre class="codehilite"><code># 网络(network.py)
+<div class="codehilite"><pre><span></span><code><span class="c1"># 网络(network.py)</span>
 
-# coding=utf-8
+<span class="c1"># coding=utf-8</span>
 
-import os
+<span class="kn">import</span> <span class="nn">os</span>
 
-network = os.popen('hostname -I').read()
+<span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-if network == '\n':
-    print('🌐Down')
-else:
-    print('📶Nokia')
-</code></pre>
+<span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
+</code></pre></div>
 
 <h3 id="11">11. 详细配置文件</h3>
 <p><code>https://github.com/testpoo/obconfig</code></p>
@@ -367,21 +367,21 @@ else:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
         
@@ -405,9 +405,9 @@ else:
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -435,11 +435,11 @@ else:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

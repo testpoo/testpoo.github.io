@@ -49,15 +49,15 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共35153个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共36121个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共7292个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共8682个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共9379个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共6212个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16174个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16798个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9016个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9087个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
+      <div class="header"><span>debian安装设置</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -184,7 +184,7 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 <h4 id="81">8.1. 安装软件</h4>
 <p><code>sudo apt install fonts-wqy-zenhei git fcitx5-rime rime-data-wubi gvfs-backends blueman xinput yaru-theme-gtk yaru-theme-icon</code></p>
 <h4 id="82">8.2. 删除软件</h4>
-<div class="codehilite"><pre><span></span><code># sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic --purge
 sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 </code></pre></div>
 
@@ -218,11 +218,11 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/python3 env</span>
 <span class="c1"># coding=utf-8</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="n">dirs</span> <span class="o">=</span> <span class="s2">&quot;/usr/share/icons/Yaru/&quot;</span>
+<span class="n">dirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/usr/share/icons/Yaru/&quot;</span>
 
-<span class="n">files</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminal.png&quot;</span><span class="p">],</span>
+<span class="n">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminal.png&quot;</span><span class="p">],</span>
 <span class="p">[</span><span class="s2">&quot;terminal-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.terminalemulator.png&quot;</span><span class="p">],</span>
 <span class="p">[</span><span class="s2">&quot;filemanager-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.filemanager.png&quot;</span><span class="p">],</span>
 <span class="p">[</span><span class="s2">&quot;webbrowser-app.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.webbrowser.png&quot;</span><span class="p">],</span>
@@ -258,12 +258,12 @@ sudo apt autoremove libreoffice* exfalso quodlibet synaptic --purge
 <span class="p">[</span><span class="s2">&quot;application-x-model.png&quot;</span><span class="p">,</span><span class="s2">&quot;org.xfce.settings.appearance.png&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 
-<span class="k">for</span> <span class="n">ofile</span><span class="p">,</span><span class="n">nfile</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="n">temp</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;find &quot;</span><span class="o">+</span><span class="n">dirs</span><span class="o">+</span><span class="s2">&quot; -name &quot;</span><span class="o">+</span><span class="n">ofile</span><span class="p">)</span>
-    <span class="n">lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">temp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
-    <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">lists</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">li</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;ln -s &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">ofile</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">ofile</span><span class="p">,</span><span class="n">nfile</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">files</span><span class="p">:</span>
+<span class="w">    </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s2">&quot;find &quot;</span><span class="o">+</span><span class="n">dirs</span><span class="o">+</span><span class="s2">&quot; -name &quot;</span><span class="o">+</span><span class="n">ofile</span><span class="p">)</span>
+<span class="w">    </span><span class="n">lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">ofile</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">temp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">li</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">lists</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">li</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">False</span><span class="p">:</span>
+<span class="w">            </span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;ln -s &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">ofile</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">li</span><span class="o">+</span><span class="n">nfile</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;gtk-update-icon-cache /usr/share/icons/Yaru&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -375,7 +375,7 @@ sudo make install
 
 <h3 id="9-kde">9. kde桌面设置</h3>
 <h4 id="91">9.1. 安装软件</h4>
-<p><code>sudo apt install fonts-noto-cjk git fcitx5-rime rime-data-wubi</code></p>
+<p><code>sudo apt install fonts-noto-cjk git fcitx5-rime rime-data-wubi plasma-calendar-addons</code></p>
 <h4 id="92">9.2. 删除不需要软件</h4>
 <p><code>apt autoremove --purge kmail kaddressbook korganizer okular knotes akregator konqueror kwalletmanager k3b juk dragonplayer gimp imagemagick* kontrast kmenuedit qt5-style-kvantum kdeconnect* kmouth kmousetool kmag xterm</code></p>
 <h4 id="93">9.3. 安装图标主题</h4>
@@ -450,9 +450,9 @@ patch:
   &quot;menu/page_size&quot;: 5
 
   schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
+    <span class="k">-</span> schema: wubi_pinyin
+    <span class="k">-</span> schema: luna_pinyin_simp
+    <span class="k">-</span> schema: wubi86
 </code></pre></div>
 
 <ul>
@@ -462,9 +462,9 @@ patch:
 nano ~/.local/share/fcitx5/rime/default.custom.yaml
 patch:
   schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
+    <span class="k">-</span> schema: wubi_pinyin
+    <span class="k">-</span> schema: luna_pinyin_simp
+    <span class="k">-</span> schema: wubi86
 </code></pre></div>
 
 <ul>
@@ -474,13 +474,13 @@ patch:
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
+    <span class="k">-</span> schema: wubi_pinyin
+    <span class="k">-</span> schema: luna_pinyin_simp
+    <span class="k">-</span> schema: wubi86
 
 nano ~/.config/ibus/rime/build/ibus_rime.yaml
 
-# 修改ibus_rime.yaml中horizontal为true
+<span class="gh">#</span> 修改ibus_rime.yaml中horizontal为true
 
 style:
    horizontal: true
@@ -514,15 +514,15 @@ style:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -552,9 +552,9 @@ style:
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -582,11 +582,11 @@ style:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

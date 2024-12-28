@@ -49,15 +49,15 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共35153个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共36121个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共7292个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共8682个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共9379个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共6212个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16174个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16798个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9016个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9087个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+openbox安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
+      <div class="header"><span>debian+openbox安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -180,9 +180,9 @@ patch:
   &quot;menu/page_size&quot;: 5
 
   schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
+    <span class="k">-</span> schema: wubi_pinyin
+    <span class="k">-</span> schema: luna_pinyin_simp
+    <span class="k">-</span> schema: wubi86
 </code></pre></div>
 
 <ul>
@@ -192,18 +192,18 @@ patch:
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
-    - schema: wubi_pinyin
-    - schema: luna_pinyin_simp
-    - schema: wubi86
+    <span class="k">-</span> schema: wubi_pinyin
+    <span class="k">-</span> schema: luna_pinyin_simp
+    <span class="k">-</span> schema: wubi86
 
 nano ~/.config/ibus/rime/build/ibus_rime.yaml
 
-# 修改ibus_rime.yaml中horizontal为true
+<span class="gh">#</span> 修改ibus_rime.yaml中horizontal为true
 
 style:
    horizontal: true
 
-# 重新部署 ibus-rime
+<span class="gh">#</span> 重新部署 ibus-rime
 </code></pre></div>
 
 <h3 id="7">7. 触摸板修改</h3>
@@ -218,7 +218,7 @@ Section &quot;InputClass&quot;
         Option &quot;Tapping&quot; &quot;on&quot; # 触摸以点击
         Option &quot;ClickMethod&quot; &quot;clickfinger&quot; # 触摸板不再拥有中右键区域的区分，与之代替的是双指代表右键，三指代表中键。
         Option &quot;NaturalScrolling&quot; &quot;true&quot; # 自然滚动（反方向滚动）
-#        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
+<span class="gh">#</span>        Option &quot;ScrollMethod&quot; &quot;edge&quot; # 边缘滚动页面
 EndSection
 </code></pre></div>
 
@@ -312,28 +312,28 @@ notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </spa
 
 <span class="c1"># coding=utf-8</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="n">mute</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">volume</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;否&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="n">mute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-mute @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">volume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;pactl get-sink-volume @DEFAULT_SINK@&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">if</span><span class="w"> </span><span class="n">mute</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;否&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔊&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🔇&#39;</span><span class="o">+</span><span class="n">volume</span><span class="p">[</span><span class="mi">29</span><span class="p">:</span><span class="mi">32</span><span class="p">])</span>
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># 网络(network.py)</span>
 
 <span class="c1"># coding=utf-8</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="n">network</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">network</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;hostname -I&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;🌐Down&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;📶Nokia&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 <h3 id="11">11. 详细配置文件</h3>
@@ -367,15 +367,15 @@ notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </spa
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -405,9 +405,9 @@ notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </spa
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -435,11 +435,11 @@ notify-send<span class="w"> </span><span class="s2">&quot;当前亮度为: </spa
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

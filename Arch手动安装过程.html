@@ -49,15 +49,15 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共35153个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共36121个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共7292个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共8682个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共9379个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共6212个字</span><span class="tag">linux</span><span class="tag">arch</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16174个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+openbox安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span><span>2022-07-18&nbsp;&nbsp;共16798个字</span><span class="tag">debian</span><span class="tag">openbox</span><span class="tag">tint2</span><span class="tag">linux</span></li></a>
             
-            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9016个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian+i3安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span><span>2021-04-08&nbsp;&nbsp;共9087个字</span><span class="tag">debian</span><span class="tag">i3</span><span class="tag">linux</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch手动安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
+      <div class="header"><span>Arch手动安装过程</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -195,37 +195,37 @@ sudo pacman -S pavucontrol      #与xfce4 panel里面的插件配合使用,必�
 </code></pre></div>
 
 <h3 id="8-nm">8. nm连接网络命令</h3>
-<div class="codehilite"><pre><span></span><code><span class="nv">nmcli</span><span class="w"> </span>示例
-显示附近的<span class="w"> </span><span class="nv">Wi</span><span class="o">-</span><span class="nv">Fi</span><span class="w"> </span>网络：
+<div class="codehilite"><pre><span></span><code>nmcli 示例
+显示附近的 Wi-Fi 网络：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="nv">wifi</span><span class="w"> </span><span class="nv">list</span>
-连接到<span class="w"> </span><span class="nv">Wi</span><span class="o">-</span><span class="nv">Fi</span><span class="w"> </span>网络：
+$ nmcli device wifi list
+连接到 Wi-Fi 网络：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="nv">wifi</span><span class="w"> </span><span class="k">connect</span><span class="w"> </span><span class="nv">SSID_</span>或<span class="nv">_BSSID</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span>密码
-连接到隐藏的<span class="w"> </span><span class="nv">Wi</span><span class="o">-</span><span class="nv">Fi</span><span class="w"> </span>网络：
+$ nmcli device wifi connect SSID_或_BSSID password 密码
+连接到隐藏的 Wi-Fi 网络：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="nv">wifi</span><span class="w"> </span><span class="k">connect</span><span class="w"> </span><span class="nv">SSID_</span>或<span class="nv">_BSSID</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span>密码<span class="w"> </span><span class="nv">hidden</span><span class="w"> </span><span class="nv">yes</span>
-连接到<span class="w"> </span><span class="nv">wlan1</span><span class="w"> </span>网络接口上的<span class="w"> </span><span class="nv">Wi</span><span class="o">-</span><span class="nv">Fi</span>：
+$ nmcli device wifi connect SSID_或_BSSID password 密码 hidden yes
+连接到 wlan1 网络接口上的 Wi-Fi：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="nv">wifi</span><span class="w"> </span><span class="k">connect</span><span class="w"> </span><span class="nv">SSID_</span>或<span class="nv">_BSSID</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span>密码<span class="w"> </span><span class="nv">ifname</span><span class="w"> </span><span class="nv">wlan1</span><span class="w"> </span><span class="nv">profile_name</span>
+$ nmcli device wifi connect SSID_或_BSSID password 密码 ifname wlan1 profile_name
 断开网络接口上的连接：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span><span class="w"> </span><span class="k">disconnect</span><span class="w"> </span><span class="nv">ifname</span><span class="w"> </span><span class="nv">eth0</span>
-显示连接列表及其名称、<span class="nv">UUID</span>、类型和支持设备：
+$ nmcli device disconnect ifname eth0
+显示连接列表及其名称、UUID、类型和支持设备：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="k">show</span>
+$ nmcli connection show
 激活连接（即使用现有配置文件连接到网络）：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="nv">name_</span>或<span class="nv">_uuid</span>
+$ nmcli connection up name_或_uuid
 删除连接：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">connection</span><span class="w"> </span><span class="nv">delete</span><span class="w"> </span><span class="nv">name_</span>或<span class="nv">_uuid</span>
+$ nmcli connection delete name_或_uuid
 显示所有网络设备及其状态：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">device</span>
-关闭<span class="w"> </span><span class="nv">Wi</span><span class="o">-</span><span class="nv">Fi</span>：
+$ nmcli device
+关闭 Wi-Fi：
 
-$<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><span class="nv">radio</span><span class="w"> </span><span class="nv">wifi</span><span class="w"> </span><span class="nv">off</span>
+$ nmcli radio wifi off
 </code></pre></div>
         <div class="copyright">
           <ul>
@@ -256,15 +256,15 @@ $<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><s
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -294,9 +294,9 @@ $<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><s
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -324,11 +324,11 @@ $<span class="w"> </span><span class="nv">nmcli</span><span class="w"> </span><s
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

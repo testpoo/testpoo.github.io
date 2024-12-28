@@ -49,21 +49,21 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共47506个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
+            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共47713个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
             
             <a href="https://testpoo.github.io/go测试库apitest简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;go测试库apitest简介</span><span>2023-08-23&nbsp;&nbsp;共238363个字</span><span class="tag">go</span><span class="tag">apitest</span></li></a>
             
-            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共131087个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共132807个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
             
-            <a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共55617个字</span><span class="tag">cypress</span><span class="tag">自动化测试</span></li></a>
+            <a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共58230个字</span><span class="tag">cypress</span><span class="tag">自动化测试</span></li></a>
             
             <a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span><span>2022-05-24&nbsp;&nbsp;共6145个字</span><span class="tag">自动化测试</span></li></a>
             
-            <a href="https://testpoo.github.io/性能监控各指令详解.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共131984个字</span><span class="tag">性能</span><span class="tag">监控</span></li></a>
+            <a href="https://testpoo.github.io/性能监控各指令详解.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共118003个字</span><span class="tag">性能</span><span class="tag">监控</span></li></a>
             
-            <a href="https://testpoo.github.io/nose简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共255429个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/nose简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共269994个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
             
-            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共92705个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
+            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共88050个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
             
           </ul>
         </div>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python自动化之unittest</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-10-19 20:00:39</span></div>
+      <div class="header"><span>Python自动化之unittest</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -234,35 +234,35 @@
 <p>有了类的初始化与释放，测试用例的初始化与释放，我们可以将多个测试用例中相同的代码提取出来，减少自动化测试冗余，这样便于维护。
 下面看这样一个例子，我们打开谷歌浏览器，输入百度网址并进行搜索，搜索后关闭浏览器</p>
 <p>2.py</p>
-<div class="codehilite"><pre><span></span><code>#<span class="nv">coding</span><span class="o">=</span><span class="nv">utf</span><span class="o">-</span><span class="mi">8</span>
-<span class="nv">import</span><span class="w"> </span><span class="nv">unittest</span>
-<span class="nv">from</span><span class="w"> </span><span class="nv">selenium</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="nv">webdriver</span>
-<span class="nv">import</span><span class="w"> </span><span class="nv">time</span>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>coding=utf-8
+import unittest
+from selenium import webdriver
+import time
 
-<span class="nv">class</span><span class="w"> </span><span class="nv">forTest</span><span class="ss">(</span><span class="nv">unittest</span>.<span class="nv">TestCase</span><span class="ss">)</span>:
-<span class="w">    </span>#<span class="w"> </span>测试用例初始化
-<span class="w">    </span>#<span class="w"> </span>打开谷歌浏览器，并进入百度
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">setUp</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">webdriver</span>.<span class="nv">Chrome</span><span class="ss">()</span>
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="ss">)</span>
-<span class="w">    </span>#<span class="w"> </span>测试用例释放
-<span class="w">    </span>#<span class="w"> </span>等待<span class="w"> </span><span class="mi">3</span><span class="nv">s</span>，关闭浏览器
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">tearDown</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">time</span>.<span class="nv">sleep</span><span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">quit</span><span class="ss">()</span>
-<span class="w"> </span>
-<span class="w">    </span>#<span class="w"> </span>输入<span class="s1">&#39;苹果&#39;</span>，并点击搜索
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_1</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">find_element_by_id</span><span class="ss">(</span><span class="s1">&#39;kw&#39;</span><span class="ss">)</span>.<span class="nv">send_keys</span><span class="ss">(</span><span class="s1">&#39;苹果&#39;</span><span class="ss">)</span>
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">find_element_by_id</span><span class="ss">(</span><span class="s1">&#39;su&#39;</span><span class="ss">)</span>.<span class="nv">click</span><span class="ss">()</span>
-<span class="w"> </span>
-<span class="w">    </span>#<span class="w"> </span>输入<span class="s1">&#39;香蕉&#39;</span>，并点击搜索
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_2</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">find_element_by_id</span><span class="ss">(</span><span class="s1">&#39;kw&#39;</span><span class="ss">)</span>.<span class="nv">send_keys</span><span class="ss">(</span><span class="s1">&#39;香蕉&#39;</span><span class="ss">)</span>
-<span class="w">        </span><span class="nv">self</span>.<span class="nv">driver</span>.<span class="nv">find_element_by_id</span><span class="ss">(</span><span class="s1">&#39;su&#39;</span><span class="ss">)</span>.<span class="nv">click</span><span class="ss">()</span>
-<span class="w"> </span>
-<span class="k">if</span><span class="w"> </span><span class="nv">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span>:
-<span class="w">    </span><span class="nv">unittest</span>.<span class="nv">main</span><span class="ss">(</span><span class="nv">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="ss">)</span>
+class forTest(unittest.TestCase):
+    # 测试用例初始化
+    # 打开谷歌浏览器，并进入百度
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get(&#39;http://www.baidu.com&#39;)
+    # 测试用例释放
+    # 等待 3s，关闭浏览器
+    def tearDown(self):
+        time.sleep(3)
+        self.driver.quit()
+ 
+    # 输入&#39;苹果&#39;，并点击搜索
+    def test_1(self):
+        self.driver.find_element_by_id(&#39;kw&#39;).send_keys(&#39;苹果&#39;)
+        self.driver.find_element_by_id(&#39;su&#39;).click()
+ 
+    # 输入&#39;香蕉&#39;，并点击搜索
+    def test_2(self):
+        self.driver.find_element_by_id(&#39;kw&#39;).send_keys(&#39;香蕉&#39;)
+        self.driver.find_element_by_id(&#39;su&#39;).click()
+ 
+if __name__ == &#39;__main__&#39;:
+    unittest.main(verbosity=2)
 </code></pre></div>
 
 <p>上面的案例中，我们将打开谷歌浏览器，进入百度，放在 setUp 中，完成每个测试用例之前的初始化，浏览器的关闭放在tearDown 中，完成测试用例的释放</p>
@@ -629,53 +629,53 @@ OK
 </code></pre></div>
 
 <p>执行结果：</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">test_yam_1___</span>张三<span class="nv">____23__</span><span class="w"> </span><span class="ss">(</span><span class="nv">__main__</span>.<span class="nv">MyTestCase</span><span class="ss">)</span><span class="w"> </span>...<span class="w"> </span>
-<span class="o">========</span>测试开始<span class="o">========</span>
-张三
+<div class="codehilite"><pre><span></span><code><span class="nx">test_yam_1___张三____23__</span><span class="w"> </span><span class="p">(</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">MyTestCase</span><span class="p">)</span><span class="w"> </span><span class="o">...</span><span class="w"> </span>
+<span class="o">========</span><span class="nx">测试开始</span><span class="o">========</span>
+<span class="nx">张三</span>
 <span class="mi">23</span>
-<span class="o">========</span>测试结束<span class="o">========</span>
-<span class="nv">ok</span>
-<span class="nv">test_yam_2___</span>李四<span class="nv">____25__</span><span class="w"> </span><span class="ss">(</span><span class="nv">__main__</span>.<span class="nv">MyTestCase</span><span class="ss">)</span><span class="w"> </span>...<span class="w"> </span>
-<span class="o">========</span>测试开始<span class="o">========</span>
-李四
-<span class="o">========</span>测试结束<span class="o">========</span>
-<span class="nv">FAIL</span>
-<span class="nv">test_yam_3___</span>王五<span class="nv">____27__</span><span class="w"> </span><span class="ss">(</span><span class="nv">__main__</span>.<span class="nv">MyTestCase</span><span class="ss">)</span><span class="w"> </span>...
-<span class="o">========</span>测试开始<span class="o">========</span>
-王五
-<span class="o">========</span>测试结束<span class="o">========</span>
-<span class="nv">FAIL</span>
+<span class="o">========</span><span class="nx">测试结束</span><span class="o">========</span>
+<span class="nx">ok</span>
+<span class="nx">test_yam_2___李四____25__</span><span class="w"> </span><span class="p">(</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">MyTestCase</span><span class="p">)</span><span class="w"> </span><span class="o">...</span><span class="w"> </span>
+<span class="o">========</span><span class="nx">测试开始</span><span class="o">========</span>
+<span class="nx">李四</span>
+<span class="o">========</span><span class="nx">测试结束</span><span class="o">========</span>
+<span class="nx">FAIL</span>
+<span class="nx">test_yam_3___王五____27__</span><span class="w"> </span><span class="p">(</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">MyTestCase</span><span class="p">)</span><span class="w"> </span><span class="o">...</span>
+<span class="o">========</span><span class="nx">测试开始</span><span class="o">========</span>
+<span class="nx">王五</span>
+<span class="o">========</span><span class="nx">测试结束</span><span class="o">========</span>
+<span class="nx">FAIL</span>
 
 <span class="o">======================================================================</span>
-<span class="nv">FAIL</span>:<span class="w"> </span><span class="nv">test_yam_2___</span>李四<span class="nv">____25__</span><span class="w"> </span><span class="ss">(</span><span class="nv">__main__</span>.<span class="nv">MyTestCase</span><span class="ss">)</span>
+<span class="nx">FAIL</span><span class="p">:</span><span class="w"> </span><span class="nx">test_yam_2___李四____25__</span><span class="w"> </span><span class="p">(</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">MyTestCase</span><span class="p">)</span>
 <span class="o">----------------------------------------------------------------------</span>
-<span class="nv">Traceback</span><span class="w"> </span><span class="ss">(</span><span class="nv">most</span><span class="w"> </span><span class="nv">recent</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="nl">last</span><span class="ss">)</span>:
-<span class="w">  </span><span class="nv">File</span><span class="w"> </span><span class="s2">&quot;C:\Program Files\Python38\lib\site-packages\ddt.py&quot;</span>,<span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="mi">182</span>,<span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">wrapper</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">func</span><span class="ss">(</span><span class="nv">self</span>,<span class="w"> </span><span class="o">*</span><span class="nv">args</span>,<span class="w"> </span><span class="o">**</span><span class="nv">kwargs</span><span class="ss">)</span>
-<span class="w">  </span><span class="nv">File</span><span class="w"> </span><span class="s2">&quot;c:/Users/dell/Desktop/test/9.py&quot;</span>,<span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="mi">28</span>,<span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">test_yam</span>
-<span class="w">    </span><span class="nv">self</span>.<span class="nv">assertEqual</span><span class="ss">(</span><span class="nv">name</span>,<span class="w"> </span><span class="s1">&#39;张三&#39;</span>,<span class="w"> </span><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NotEqual&#39;</span><span class="ss">)</span>
-<span class="nv">AssertionError</span>:<span class="w"> </span><span class="s1">&#39;李四&#39;</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;张三&#39;</span>
-<span class="o">-</span><span class="w"> </span>李四
-<span class="o">+</span><span class="w"> </span>张三
-<span class="w"> </span>:<span class="w"> </span><span class="nv">NotEqual</span>
+<span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Program Files\Python38\lib\site-packages\ddt.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">182</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">wrapper</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">func</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;c:/Users/dell/Desktop/test/9.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">test_yam</span>
+<span class="w">    </span><span class="kp">self</span><span class="p">.</span><span class="nx">assertEqual</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">张三</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">NotEqual</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="nx">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">李四</span><span class="err">&#39;</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">张三</span><span class="err">&#39;</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">李四</span>
+<span class="o">+</span><span class="w"> </span><span class="nx">张三</span>
+<span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nx">NotEqual</span>
 
 <span class="o">======================================================================</span>
-<span class="nv">FAIL</span>:<span class="w"> </span><span class="nv">test_yam_3___</span>王五<span class="nv">____27__</span><span class="w"> </span><span class="ss">(</span><span class="nv">__main__</span>.<span class="nv">MyTestCase</span><span class="ss">)</span>
+<span class="nx">FAIL</span><span class="p">:</span><span class="w"> </span><span class="nx">test_yam_3___王五____27__</span><span class="w"> </span><span class="p">(</span><span class="nx">__main__</span><span class="p">.</span><span class="nx">MyTestCase</span><span class="p">)</span>
 <span class="o">----------------------------------------------------------------------</span>
-<span class="nv">Traceback</span><span class="w"> </span><span class="ss">(</span><span class="nv">most</span><span class="w"> </span><span class="nv">recent</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="nl">last</span><span class="ss">)</span>:
-<span class="w">  </span><span class="nv">File</span><span class="w"> </span><span class="s2">&quot;C:\Program Files\Python38\lib\site-packages\ddt.py&quot;</span>,<span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="mi">182</span>,<span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">wrapper</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">func</span><span class="ss">(</span><span class="nv">self</span>,<span class="w"> </span><span class="o">*</span><span class="nv">args</span>,<span class="w"> </span><span class="o">**</span><span class="nv">kwargs</span><span class="ss">)</span>
-<span class="w">  </span><span class="nv">File</span><span class="w"> </span><span class="s2">&quot;c:/Users/dell/Desktop/test/9.py&quot;</span>,<span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="mi">28</span>,<span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">test_yam</span>
-<span class="w">    </span><span class="nv">self</span>.<span class="nv">assertEqual</span><span class="ss">(</span><span class="nv">name</span>,<span class="w"> </span><span class="s1">&#39;张三&#39;</span>,<span class="w"> </span><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NotEqual&#39;</span><span class="ss">)</span>
-<span class="nv">AssertionError</span>:<span class="w"> </span><span class="s1">&#39;王五&#39;</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;张三&#39;</span>
-<span class="o">-</span><span class="w"> </span>王五
-<span class="o">+</span><span class="w"> </span>张三
-<span class="w"> </span>:<span class="w"> </span><span class="nv">NotEqual</span>
+<span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Program Files\Python38\lib\site-packages\ddt.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">182</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">wrapper</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">func</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nx">args</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kwargs</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;c:/Users/dell/Desktop/test/9.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">test_yam</span>
+<span class="w">    </span><span class="kp">self</span><span class="p">.</span><span class="nx">assertEqual</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">张三</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">NotEqual</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="nx">AssertionError</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">王五</span><span class="err">&#39;</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">张三</span><span class="err">&#39;</span>
+<span class="o">-</span><span class="w"> </span><span class="nx">王五</span>
+<span class="o">+</span><span class="w"> </span><span class="nx">张三</span>
+<span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nx">NotEqual</span>
 
 <span class="o">----------------------------------------------------------------------</span>
-<span class="nv">Ran</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nv">tests</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="mi">0</span>.<span class="mi">003</span><span class="nv">s</span>
+<span class="nx">Ran</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nx">tests</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m m-Double">0.003</span><span class="nx">s</span>
 
-<span class="nv">FAILED</span><span class="w"> </span><span class="ss">(</span><span class="nv">failures</span><span class="o">=</span><span class="mi">2</span><span class="ss">)</span>
+<span class="nx">FAILED</span><span class="w"> </span><span class="p">(</span><span class="nx">failures</span><span class="p">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>可以看到第一个例子执行正确，后面的例子，执行结果和预期不一致，返回 NotEqual，从最终结果看，执行了三条用例，失败两条。</p>
@@ -818,31 +818,31 @@ FAILED (skipped=3, expected failures=1, unexpected successes=1)
 </ul>
 <p>通过例子讲解最容易理解，看一个最简单的例子，下面的代码中有五个测试用例，程序运行的结果和测试用例在代码中位置是没有关系的，结果永远打印 1 2 3 4 5，这是因为测试用例的执行顺序默认是按照字典顺序执行的，如何才能控制测试用例的执行顺序呢，这就需要使用测试套件了。</p>
 <p>testCase.py</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">import</span><span class="w"> </span><span class="nv">unittest</span>
-<span class="nv">class</span><span class="w"> </span><span class="nv">MyTestCase</span><span class="ss">(</span><span class="nv">unittest</span>.<span class="nv">TestCase</span><span class="ss">)</span>:
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">setUp</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">pass</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">tearDown</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">pass</span>
-<span class="w">        </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_2</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;2&quot;</span><span class="ss">)</span>
-<span class="w">        </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_1</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;1&quot;</span><span class="ss">)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_4</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;4&quot;</span><span class="ss">)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_3</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;3&quot;</span><span class="ss">)</span><span class="w"> </span>
-<span class="w">    </span>
-<span class="w">    </span><span class="nv">def</span><span class="w"> </span><span class="nv">test_5</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
-<span class="w">        </span><span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;5&quot;</span><span class="ss">)</span>
-<span class="w">    </span>
-<span class="k">if</span><span class="w"> </span><span class="nv">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span>:
-<span class="w">    </span><span class="nv">unittest</span>.<span class="nv">main</span><span class="ss">(</span><span class="nv">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span><code>import unittest
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        pass
+    
+    def tearDown(self):
+        pass
+        
+    def test_2(self):
+        print(&quot;2&quot;)
+        
+    def test_1(self):
+        print(&quot;1&quot;)
+    
+    def test_4(self):
+        print(&quot;4&quot;)
+    
+    def test_3(self):
+        print(&quot;3&quot;) 
+    
+    def test_5(self):
+        print(&quot;5&quot;)
+    
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre></div>
 
 <p>运行结果：</p>
@@ -862,13 +862,13 @@ OK
 </code></pre></div>
 
 <p>再建一个py 文件11.py</p>
-<div class="codehilite"><pre><span></span><code>#coding=utf-8
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>coding=utf-8
 import unittest
 from testCase import *
     
-# 创建一个测试套件 list
+<span class="gh">#</span> 创建一个测试套件 list
 suite = unittest.TestSuite()
-# 方法一，添加测试用例（子元素）到测试套件（集合）
+<span class="gh">#</span> 方法一，添加测试用例（子元素）到测试套件（集合）
 suite.addTest(MyTestCase(&#39;test_3&#39;))
 suite.addTest(MyTestCase(&quot;test_1&quot;))
 suite.addTest(MyTestCase(&quot;test_5&quot;))
@@ -892,34 +892,34 @@ runner.run(suite)
 
 <p>上面的方法每次添加测试用例都需要调用 addTest 函数，能不能一次添加多个测试用例</p>
 <p>12.py</p>
-<div class="codehilite"><pre><span></span><code>#coding=utf-8
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>coding=utf-8
 import unittest
 from testCase import *
 
-# 创建一个测试套件 list
+<span class="gh">#</span> 创建一个测试套件 list
 suite = unittest.TestSuite()
 
-# 方法二，批量添加测试用例
+<span class="gh">#</span> 方法二，批量添加测试用例
 cases = [MyTestCase(&#39;test_3&#39;), MyTestCase(&#39;test_1&#39;), MyTestCase(&#39;test_5&#39;)]
 suite.addTests(cases)
 
-# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
+<span class="gh">#</span> 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
 runner = unittest.TextTestRunner(verbosity=2)
 runner.run(suite)
 </code></pre></div>
 
 <p>如果测试用例非常多，或者有多个文件中的测试用例都需要测试，这样添加也不是很方便，我们好可以按照文件路径，将该路径下需要测试的文件添加进测试套件中</p>
 <p>13.py</p>
-<div class="codehilite"><pre><span></span><code>#coding=utf-8
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>coding=utf-8
 import unittest
-from testCase import *
+from testCase import <span class="gs">*</span>
 
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
+<span class="gs"># 创建一个测试套件 list</span>
+<span class="gs">suite = unittest.TestSuite()</span>
 
-# 方法三，批量运行多个unittest类
-test_dir = &#39;./&#39;
-# start_dir 参数指定文件路径，pattern 执行规则，&#39;s*.py&#39; 表示以 &quot;s&quot; 开头，&quot;.py&quot; 的都加入测试套件中
+<span class="gs"># 方法三，批量运行多个unittest类</span>
+<span class="gs">test_dir = &#39;./&#39;</span>
+<span class="gs"># start_dir 参数指定文件路径，pattern 执行规则，&#39;s*</span>.py&#39; 表示以 &quot;s&quot; 开头，&quot;.py&quot; 的都加入测试套件中
 discover = unittest.defaultTestLoader.discover(start_dir = test_dir, pattern = &#39;t*.py&#39;)
 
 runner = unittest.TextTestRunner(verbosity=2)
@@ -1100,15 +1100,15 @@ runner.run(discover) # 通过 run 函数运行测试用例
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -1138,9 +1138,9 @@ runner.run(discover) # 通过 run 函数运行测试用例
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -1168,11 +1168,11 @@ runner.run(discover) # 通过 run 函数运行测试用例
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

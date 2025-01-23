@@ -53,7 +53,7 @@
             
             <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共3912个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共6959个字</span><span class="tag">python</span></li></a>
             
           </ul>
         </div>
@@ -61,11 +61,14 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>python代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-01-23 09:09:18</span></div>
+      <div class="header"><span>python代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-01-23 17:23:17</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
+<li><a href="#linux"> 获取Linux程序名称/命令/图标/分类</a></li>
+<li><a href="#linux_1"> 获取Linux程序图标</a></li>
+<li><a href="#tkinter"> 如何确定在tkinter中单击了哪个按钮</a></li>
 <li><a href="#python"> python定时任务</a></li>
 <li><a href="#jinja2"> JinJa2代码</a></li>
 <li><a href="#mysql"> MySQL数据库连接</a></li>
@@ -74,6 +77,69 @@
 <li><a href="#_3"> 获取工作日</a></li>
 </ul>
 </div>
+<h3 id="linux"> 获取Linux程序名称/命令/图标/分类</h3>
+<pre class="codehilite"><code>path = &quot;/usr/share/applications/&quot;
+lists = [list for list in os.listdir(path) if len(list.split(&quot;.&quot;))&gt;1 and list.split(&quot;.&quot;)[1] == &quot;desktop&quot;]
+apps = []
+for list in lists:
+    lines = open(path + list,&quot;r&quot;).readlines()
+    dicts = {}
+    for line in lines:
+        if line.startswith(&quot;Name=&quot;):
+            dicts['Name'] = re.split(&quot;=|\n&quot;,line)[1]
+        elif line.startswith(&quot;Name[zh_CN]=&quot;):
+            dicts['NameCN'] = re.split(&quot;=|\n&quot;,line)[1]
+        elif line.startswith(&quot;Exec=&quot;):
+            dicts['Exec'] = re.sub(&quot; %U| %F| %f| %u&quot;,&quot;&quot;,re.split(&quot;=|\n&quot;,line)[1])
+        elif line.startswith(&quot;Icon=&quot;):
+            dicts['Icon'] = re.split(&quot;=|\n&quot;,line)[1]
+        elif line.startswith(&quot;Categories=&quot;):
+            dicts['Categories'] = re.split(&quot;=|\n&quot;,line)[1]
+        elif line.startswith(&quot;[Desktop Action&quot;):
+            break
+    if 'NameCN' in dicts:
+        dicts['Name'] = dicts['NameCN']
+        dicts.pop('NameCN')
+    if dicts != {} and 'Icon' in dicts:
+        apps.append(dicts)
+</code></pre>
+
+<hr />
+<h3 id="linux_1"> 获取Linux程序图标</h3>
+<pre class="codehilite"><code># directries第一个元素是当前图标
+directries = [&quot;/usr/share/icons/Yaru/48x48/&quot;,&quot;/usr/share/icons/gnome/48x48/&quot;,&quot;/usr/share/pixmaps/&quot;,&quot;/usr/share/icons/hicolor/scalable/&quot;,&quot;/usr/share/icons/hicolor/48x48/&quot;,&quot;/opt/&quot;]
+
+def find_images_glob(self,directries,event=None):
+    image_paths={}
+    for directry in directries:
+        for dirpath, dirnames, filenames in os.walk(directry):
+            for app in apps:
+                if app['Icon']+&quot;.png&quot; in filenames:
+                    if app['Icon']+&quot;.png&quot; not in image_paths:
+                        image_paths[app['Icon']] = dirpath + &quot;/&quot; + app['Icon']+&quot;.png&quot;
+                elif app['Icon']+&quot;.svg&quot; in filenames:
+                    if app['Icon']+&quot;.svg&quot; not in image_paths:
+                        image_paths[app['Icon']] = dirpath + &quot;/&quot; + app['Icon']+&quot;.svg&quot;
+                elif len(app['Icon'].split(&quot;/&quot;))&gt;1:
+                    if app['Icon'].split(&quot;/&quot;)[-1] not in image_paths:
+                        image_paths[app['Icon'].split(&quot;/&quot;)[-1].split('.')[0]] = app['Icon']
+    return image_paths
+</code></pre>
+
+<hr />
+<h3 id="tkinter"> 如何确定在tkinter中单击了哪个按钮</h3>
+<pre class="codehilite"><code>方法1：
+from functools import partial
+
+for i in range(10):
+    btn = Button(frame,text=&quot;Button&quot;,command=partial(click, i))
+
+方法2：
+for i in range(10):
+    btn = Button(frame,text=&quot;Button&quot;,command=lambda i=i: click(i))
+</code></pre>
+
+<hr />
 <h3 id="python"> python定时任务</h3>
 <pre class="codehilite"><code>#!/usr/bin/env python
 import time

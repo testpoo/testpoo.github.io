@@ -30,13 +30,13 @@
             
             <li><a href="https://testpoo.github.io/问题集.html"><label style="color: #38b6fd"></label>&nbsp;问题集</a></li>
             
+            <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
+            
             <li><a href="https://testpoo.github.io/人生的最高境界.html"><label style="color: #38b6fd"></label>&nbsp;摘录</a></li>
             
             <li><a href="https://testpoo.github.io/CSS代码小抄.html"><label style="color: #38b6fd"></label>&nbsp;代码小抄</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
-            
-            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共6242个字</span><span class="tag">css</span></li></a>
+            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共935个字</span><span class="tag">css</span></li></a>
             
-            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共7746个字</span><span class="tag">javascript</span></li></a>
+            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共14418个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共3912个字</span><span class="tag">python</span></li></a>
             
           </ul>
         </div>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>python代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
+      <div class="header"><span>python代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-01-23 09:09:18</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -75,95 +75,95 @@
 </ul>
 </div>
 <h3 id="python"> python定时任务</h3>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<pre class="codehilite"><code>#!/usr/bin/env python
+import time
 
-<span class="k">while</span><span class="w"> </span><span class="kc">True</span><span class="p">:</span>
-<span class="w">    </span><span class="n">time_now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span><span class="w"> </span><span class="c1"># 刷新</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">time_now</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;09:39:00&quot;</span><span class="p">:</span><span class="w"> </span>
-<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()))</span><span class="w">  </span>
-<span class="w">        </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1"># 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次</span>
-</code></pre></div>
+while True:
+    time_now = time.strftime(&quot;%H:%M:%S&quot;, time.localtime()) # 刷新
+    if time_now == &quot;09:39:00&quot;: 
+        print(time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime()))  
+        time.sleep(2) # 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次
+</code></pre>
 
 <hr />
 <h3 id="jinja2"> JinJa2代码</h3>
-<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">注册过滤器</span>
-<span class="n">env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">jinja_env</span>
-<span class="n">env</span><span class="p">.</span><span class="n">filters</span><span class="o">[</span><span class="n">&quot;sum_car_food_by_category&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum_car_food_by_category</span>
+<pre class="codehilite"><code># 注册过滤器
+env = app.jinja_env
+env.filters[&quot;sum_car_food_by_category&quot;] = sum_car_food_by_category
 
-<span class="err">#</span><span class="w"> </span><span class="n">全局变量设置</span>
-<span class="nv">@app</span><span class="p">.</span><span class="n">context_processor</span>
-<span class="n">def</span><span class="w"> </span><span class="n">getSiteUrl</span><span class="p">()</span><span class="err">:</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dict</span><span class="p">(</span><span class="n">SITEURL</span><span class="o">=</span><span class="n">SITEURL</span><span class="p">)</span>
+# 全局变量设置
+@app.context_processor
+def getSiteUrl():
+    return dict(SITEURL=SITEURL)
 
-<span class="err">#</span><span class="w"> </span><span class="n">app执行前执行</span>
-<span class="nv">@app</span><span class="p">.</span><span class="n">before_request</span>
-<span class="n">def</span><span class="w"> </span><span class="n">authority</span><span class="p">()</span><span class="err">:</span>
-<span class="w">    </span><span class="k">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="k">path</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">session</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s1">&#39;logged_in&#39;</span><span class="p">)</span><span class="err">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;/login&#39;</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">path</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;/static&#39;</span><span class="p">)</span><span class="err">:</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">))</span>
-<span class="w">    </span><span class="n">elif</span><span class="w"> </span><span class="k">session</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s1">&#39;logged_in&#39;</span><span class="p">)</span><span class="err">:</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="o">[</span><span class="n">&#39;/&#39;,path.split(&quot;/&quot;)[1</span><span class="o">]</span><span class="err">]</span><span class="p">)</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">auths</span><span class="p">(</span><span class="k">session</span><span class="o">[</span><span class="n">&#39;username&#39;</span><span class="o">]</span><span class="p">)</span><span class="err">:</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;unPlan&#39;</span><span class="p">))</span>
-</code></pre></div>
+# app执行前执行
+@app.before_request
+def authority():
+    path = request.path
+    if not session.get('logged_in'):
+        if path not in ('/', '/login') and not path.startswith('/static'):
+            return redirect(url_for('login'))
+    elif session.get('logged_in'):
+        if ''.join(['/',path.split(&quot;/&quot;)[1]]) not in auths(session['username']):
+            return redirect(url_for('unPlan'))
+</code></pre>
 
 <hr />
 <h3 id="mysql"> MySQL数据库连接</h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pymysql</span>
+<pre class="codehilite"><code>import pymysql
 
-<span class="n">dblink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11111111&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;database&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">selectOne</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="o">=</span><span class="p">[]):</span>
-<span class="w">    </span><span class="k">try</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># 连接MySQL数据库</span>
-<span class="w">        </span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span><span class="n">db</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
-<span class="w">        </span><span class="c1"># 使用cursor()方法获取操作游标</span>
-<span class="w">        </span><span class="n">cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="w">        </span><span class="c1"># 使用execute()方法执行sql语句</span>
-<span class="w">        </span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
-<span class="w">        </span><span class="c1"># 使用fetchone()方法获取所有数据</span>
-<span class="w">        </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">results</span>
-<span class="w">    </span><span class="k">except</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">err</span><span class="p">:</span>
-<span class="w">        </span><span class="n">logUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理失败: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;事务处理失败&#39;</span>
-<span class="w">    </span><span class="k">else</span><span class="p">:</span>
-<span class="w">        </span><span class="n">LogUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理成功&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="c1"># 关闭数据库</span>
-<span class="w">    </span><span class="k">finally</span><span class="p">:</span>
-<span class="w">        </span><span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
+dblink = {&quot;url&quot;: &quot;127.0.0.1&quot;, &quot;username&quot;: &quot;test&quot;, &quot;password&quot;: &quot;11111111&quot;, &quot;database&quot;: &quot;test&quot;}
+def selectOne(sql, info=[]):
+    try:
+        # 连接MySQL数据库
+        db = pymysql.connect(host=dblink['url'], user=dblink['username'], password=dblink['password'],db=dblink['database'], charset='utf8')
+        # 使用cursor()方法获取操作游标
+        cursor = db.cursor()
+        # 使用execute()方法执行sql语句
+        cursor.execute(sql, info)
+        # 使用fetchone()方法获取所有数据
+        results = cursor.fetchall()
+        return results
+    except Exception as err:
+        logUtility.logger.debug(&quot;事务处理失败: {}&quot;.format(str(err)))
+        return '事务处理失败'
+    else:
+        LogUtility.logger.debug(&quot;事务处理成功&quot;)
+    # 关闭数据库
+    finally:
+        db.close()
+</code></pre>
 
 <hr />
 <h3 id="_1"> 清空文件夹</h3>
-<div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">delFile</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>:
-<span class="w">    </span><span class="nv">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span>.<span class="nv">listdir</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">paths</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span>[]:
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">paths</span>:
-<span class="w">            </span><span class="nv">filepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span>.<span class="nv">path</span>.<span class="nv">join</span><span class="ss">(</span><span class="nv">path</span>,<span class="w"> </span><span class="nv">f</span><span class="ss">)</span>
-<span class="w">            </span><span class="nv">os</span>.<span class="nv">remove</span><span class="ss">(</span><span class="nv">filepath</span><span class="ss">)</span>
-</code></pre></div>
+<pre class="codehilite"><code>def delFile(path):
+    paths = os.listdir(path)
+    if paths != []:
+        for f in paths:
+            filepath = os.path.join(path, f)
+            os.remove(filepath)
+</code></pre>
 
 <hr />
 <h3 id="_2"> 获取任意周的周一和周五</h3>
-<div class="codehilite"><pre><span></span><code>def get_which_week_monday_and_firday_by_date(move_days):
+<pre class="codehilite"><code>def get_which_week_monday_and_firday_by_date(move_days):
     needTime = datetime.strptime(time.strftime(&quot;%Y-%m-%d&quot;, time.localtime()) + &quot; 00:00:00&quot;, &quot;%Y-%m-%d %H:%M:%S&quot;)
     weekStartTime = needTime - timedelta(days=needTime.weekday() + move_days, hours=needTime.hour, minutes=needTime.minute, seconds=needTime.second, microseconds=needTime.microsecond)
     weekEndTime = weekStartTime + timedelta(days=4, hours=23, minutes=59, seconds=59)
     weekStartTime = weekStartTime.strftime(&quot;%Y-%m-%d&quot;)
     weekEndTime = weekEndTime.strftime(&quot;%Y-%m-%d&quot;)
     return weekStartTime, weekEndTime
-</code></pre></div>
+</code></pre>
 
 <hr />
 <h3 id="_3"> 获取工作日</h3>
-<div class="codehilite"><pre><span></span><code>def calculate_workdays(start_date, end_date):
-    start_date = datetime.strptime(start_date,&#39;%Y-%m-%d&#39;)
-    end_date = datetime.strptime(end_date,&#39;%Y-%m-%d&#39;)
+<pre class="codehilite"><code>def calculate_workdays(start_date, end_date):
+    start_date = datetime.strptime(start_date,'%Y-%m-%d')
+    end_date = datetime.strptime(end_date,'%Y-%m-%d')
     # 法定假期
-    holi_days = [datetime.strptime(holiday,&#39;%Y-%m-%d&#39;) for holiday in holidays]
+    holi_days = [datetime.strptime(holiday,'%Y-%m-%d') for holiday in holidays]
     # 补班
-    extra_days = [datetime.strptime(extraday,&#39;%Y-%m-%d&#39;) for extraday in extradays]
+    extra_days = [datetime.strptime(extraday,'%Y-%m-%d') for extraday in extradays]
     current_date = start_date
     workdays = 0
     while current_date &lt;= end_date:
@@ -171,7 +171,7 @@
             workdays += 1
         current_date += timedelta(days=1)
     return workdays
-</code></pre></div>
+</code></pre>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -191,6 +191,8 @@
         
         <li><a href="https://testpoo.github.io/问题集.html"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span></a></li>
+        
         <li><a href="https://testpoo.github.io/人生的最高境界.html"><span><label style="color: #38b6fd"></label>&nbsp;人生的最高境界</span></a></li>
         
         <li><a href="https://testpoo.github.io/中国朝代顺序口诀.html"><span><label style="color: #38b6fd"></label>&nbsp;中国朝代顺序口诀</span></a></li>
@@ -207,15 +209,15 @@
         
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
-        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
         
@@ -269,11 +271,11 @@
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

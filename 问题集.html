@@ -38,13 +38,13 @@
             
             <li><a href="https://testpoo.github.io/问题集.html"><label style="color: #38b6fd"></label>&nbsp;问题集</a></li>
             
+            <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
+            
             <li><a href="https://testpoo.github.io/人生的最高境界.html"><label style="color: #38b6fd"></label>&nbsp;摘录</a></li>
             
             <li><a href="https://testpoo.github.io/CSS代码小抄.html"><label style="color: #38b6fd"></label>&nbsp;代码小抄</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
-            
-            <li><a href="https://testpoo.github.io/shell三剑客简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/Jinja2简介.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
             
@@ -57,7 +57,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/问题集.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span><span>2999-12-29&nbsp;&nbsp;共4757个字</span><span class="tag">问题集</span></li></a>
+            <a href="https://testpoo.github.io/问题集.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span><span>2999-12-29&nbsp;&nbsp;共1300个字</span><span class="tag">问题集</span></li></a>
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>问题集</span><span>人生如逆旅，我亦是行人。<br />最后更新于2024-12-28 20:49:58</span></div>
+      <div class="header"><span>问题集</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-01-23 09:09:18</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -77,41 +77,41 @@
 </ul>
 </div>
 <h3 id="ssh"> 麒麟下ssh无法启动的问题处理</h3>
-<div class="codehilite"><pre><span></span><code><span class="s s-Atom">#</span> <span class="s s-Atom">解决方案</span>
-<span class="s s-Atom">这应该算是Ubuntu的一个bug，可以用下面的方法解决</span><span class="o">:</span>
+<pre class="codehilite"><code># 解决方案
+这应该算是Ubuntu的一个bug，可以用下面的方法解决:
 
-<span class="s s-Atom">ubuntugubuntu</span><span class="p">:</span><span class="s s-Atom">-</span><span class="err">$</span> <span class="s s-Atom">sudo</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">sshd</span>
-<span class="nv">Missing</span> <span class="s s-Atom">privilege</span> <span class="s s-Atom">separation</span> <span class="s s-Atom">directory</span><span class="p">:</span> <span class="o">/</span><span class="s s-Atom">var</span><span class="o">/</span><span class="s s-Atom">run</span><span class="o">/</span><span class="s s-Atom">sshd</span>
-<span class="s s-Atom">ubuntugubuntu</span><span class="p">:</span><span class="s s-Atom">-</span><span class="err">$</span> <span class="s s-Atom">sudo</span> <span class="s s-Atom">mkdir</span> <span class="o">/</span><span class="s s-Atom">var</span><span class="o">/</span><span class="s s-Atom">run</span><span class="o">/</span><span class="s s-Atom">sshd</span>
-<span class="s s-Atom">ubuntugubuntu</span><span class="p">:</span><span class="s s-Atom">-</span><span class="err">$</span> <span class="s s-Atom">sudo</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">sshd</span>
-<span class="s s-Atom">ubuntugubuntu</span><span class="p">:</span><span class="s s-Atom">-</span><span class="err">$</span> <span class="s s-Atom">netstat</span> <span class="o">-</span><span class="s s-Atom">nlt</span>
-<span class="nv">Active</span> <span class="nv">Internet</span> <span class="nf">connections</span> <span class="p">(</span><span class="s s-Atom">only</span> <span class="s s-Atom">servers</span><span class="p">)</span>
-<span class="nv">Proto</span> <span class="nv">Recv</span><span class="o">-</span><span class="nv">Q</span> <span class="nv">Send</span><span class="o">-</span><span class="nv">Q</span> <span class="nv">Local</span> <span class="nv">Address</span> <span class="nv">Foreign</span> <span class="nv">Address</span> <span class="nv">State</span>
-<span class="s s-Atom">tcp</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">53</span> <span class="mf">0.0.0.0</span><span class="o">:*</span> <span class="nv">LISTEN</span>
-<span class="s s-Atom">tcp</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">0.0.0.0</span><span class="o">:</span><span class="mi">22</span> <span class="mf">0.0.0.0</span><span class="o">:*</span> <span class="nv">LISTEN</span>
-<span class="s s-Atom">tcp</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">631</span> <span class="mf">0.0.0.0</span><span class="o">:*</span> <span class="nv">LISTEN</span>
-<span class="s s-Atom">tcp6</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">:::</span><span class="mi">22</span> <span class="o">:::*</span> <span class="nv">LISTEN</span>
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
+Missing privilege separation directory: /var/run/sshd
+ubuntugubuntu:-$ sudo mkdir /var/run/sshd
+ubuntugubuntu:-$ sudo /usr/sbin/sshd
+ubuntugubuntu:-$ netstat -nlt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address Foreign Address State
+tcp 0 0 127.0.0.1:53 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
+tcp 0 0 127.0.0.1:631 0.0.0.0:* LISTEN
+tcp6 0 0 :::22 :::* LISTEN
 
-<span class="s s-Atom">启动端口22表示ssh服务成功启动，可以使用ssh</span> <span class="s s-Atom">localhost测试下</span>
-</code></pre></div>
+启动端口22表示ssh服务成功启动，可以使用ssh localhost测试下
+</code></pre>
 
 <hr />
 <h3 id="ssh-key"> 创建一个 SSH key</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">rsa</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="ss">&quot;your_email@example.com&quot;</span>
-<span class="n">默认生成地址</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span>
-</code></pre></div>
+<pre class="codehilite"><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+默认生成地址~/.ssh/id_rsa.pub
+</code></pre>
 
 <hr />
 <h3 id="m"> 去除^M</h3>
-<div class="codehilite"><pre><span></span><code>vi下 :%s/^M//g 或者 :1,$s/^M//g 均可
+<pre class="codehilite"><code>vi下 :%s/^M//g 或者 :1,$s/^M//g 均可
 
 补充一点：^M是使用 CTRL-V CTRL-M 而不是字面上的 ^M
-</code></pre></div>
+</code></pre>
 
 <hr />
 <h3 id="windowspythonpid"> Windows下查找python进程PID</h3>
-<div class="codehilite"><pre><span></span><code>wmic process where name=&quot;python.exe&quot; list full
-</code></pre></div>
+<pre class="codehilite"><code>wmic process where name=&quot;python.exe&quot; list full
+</code></pre>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -131,6 +131,8 @@
         
         <li><a href="https://testpoo.github.io/问题集.html"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span></a></li>
         
+        <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span></a></li>
+        
         <li><a href="https://testpoo.github.io/人生的最高境界.html"><span><label style="color: #38b6fd"></label>&nbsp;人生的最高境界</span></a></li>
         
         <li><a href="https://testpoo.github.io/中国朝代顺序口诀.html"><span><label style="color: #38b6fd"></label>&nbsp;中国朝代顺序口诀</span></a></li>
@@ -147,15 +149,15 @@
         
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
-        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
         
@@ -209,11 +211,11 @@
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         

@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/安装dockerswarm.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span><span>2025-03-12&nbsp;&nbsp;共6119个字</span><span class="tag">dockerswarm</span></li></a>
+            <a href="https://testpoo.github.io/安装dockerswarm.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span><span>2025-03-12&nbsp;&nbsp;共6230个字</span><span class="tag">dockerswarm</span></li></a>
             
             <a href="https://testpoo.github.io/Jinja2简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span><span>2024-02-29&nbsp;&nbsp;共8808个字</span><span class="tag">jinja2</span><span class="tag">python</span></li></a>
             
@@ -95,7 +95,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>安装dockerswarm</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 14:04:22</span></div>
+      <div class="header"><span>安装dockerswarm</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 17:54:26</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -108,7 +108,9 @@
 <li><a href="#51-swarm">5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：</a></li>
 <li><a href="#52">5.2 添加工作节点</a></li>
 <li><a href="#53-swarm">5.3 验证 Swarm 集群</a></li>
-<li><a href="#6mysql">6.安装mysql服务</a></li>
+</ul>
+</li>
+<li><a href="#6mysql">6.安装mysql服务</a><ul>
 <li><a href="#61-mysql">6.1 拉取 MySQL 镜像</a></li>
 <li><a href="#62-overlay">6.2 创建网络(overlay)</a></li>
 <li><a href="#63-mysql">6.3 创建 MySQL 服务</a></li>
@@ -117,6 +119,8 @@
 </li>
 <li><a href="#7mysql">7.安装mysql客户端</a><ul>
 <li><a href="#71-mysql">7.1 拉取 MySQL 镜像</a></li>
+<li><a href="#72-overlay">7.2 创建网络(overlay)</a></li>
+<li><a href="#73-mysql-client">7.3 创建 MySQL Client 服务</a></li>
 </ul>
 </li>
 <li><a href="#8-docker-swarm">8. Docker Swarm 集群环境删除服务</a></li>
@@ -144,18 +148,18 @@ gpg --export 7EA0A9C3F273FCD8 | sudo gpg --dearmor -o /usr/share/keyrings/docker
 <h4 id="51-swarm">5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：</h4>
 <pre class="codehilite"><code>docker swarm init --advertise-addr 192.168.214.34
 ===============================================================================
-Swarm initialized: current node (zsjzo4r1wt3e84bz7d6u5i5x4) is now a manager.
+Swarm initialized: current node (************************) is now a manager.
 
 To add a worker to this swarm, run the following command:
 
-    docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
+    docker swarm join --token SWMTKN-1-************************************************ 192.168.214.34:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ===============================================================================
 </code></pre>
 
 <h4 id="52">5.2 添加工作节点</h4>
-<pre class="codehilite"><code>docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
+<pre class="codehilite"><code>docker swarm join --token SWMTKN-1-************************************************ 192.168.214.34:2377
 
 重新加入swarm
 docker swarm join-token manager # 管理节点
@@ -166,7 +170,7 @@ docker swarm join-token worker  # 工作节点
 <pre class="codehilite"><code>docker node ls
 </code></pre>
 
-<h4 id="6mysql">6.安装mysql服务</h4>
+<h3 id="6mysql">6.安装mysql服务</h3>
 <pre class="codehilite"><code># 添加清华源
 sudo nano /etc/docker/daemon.json
 
@@ -219,9 +223,9 @@ docker service ps mysql-service
 <h3 id="7mysql">7.安装mysql客户端</h3>
 <h4 id="71-mysql">7.1 拉取 MySQL 镜像</h4>
 <p>同6.1</p>
-<p>7.2 创建网络(overlay)</p>
+<h4 id="72-overlay">7.2 创建网络(overlay)</h4>
 <p>同6.2</p>
-<p>7.3 创建 MySQL Client 服务</p>
+<h4 id="73-mysql-client">7.3 创建 MySQL Client 服务</h4>
 <p>在管理节点上执行以下命令来创建一个临时的 MySQL Client 服务，以连接到 MySQL 数据库：</p>
 <pre class="codehilite"><code>docker service create \
     --name mysql-client-service \

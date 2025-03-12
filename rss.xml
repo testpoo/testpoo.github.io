@@ -6,8 +6,8 @@
     <description>人生如逆旅，我亦是行人。</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2025-01-23 17:23:17</pubDate>  
-    <lastBuildDate>2025-01-23 17:23:17</lastBuildDate>  
+    <pubDate>2025-03-12 14:04:22</pubDate>  
+    <lastBuildDate>2025-03-12 14:04:22</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -50,7 +50,7 @@
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        
@@ -88,7 +88,7 @@
 &lt;hr /&gt;
 &lt;h3 id=&#34;_5&#34;&gt; 缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://ggfw.xars12333.cn/#/personalServices&#34; target=&#34;_blank&#34;&gt;西安市人力资源和社会保障局-公共服务平台&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34; target=&#34;_blank&#34;&gt;陕西医保网上大厅&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/网址集.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/网址集.html</guid>
        
@@ -142,11 +142,179 @@ tcp6 0 0 :::22 :::* LISTEN
 &lt;h3 id=&#34;windowspythonpid&#34;&gt; Windows下查找python进程PID&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;wmic process where name=&amp;quot;python.exe&amp;quot; list full
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/问题集.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/问题集.html</guid>
        
       <category>问题集</category> 
+      
+    </item>
+    
+    <item> 
+      <title>安装dockerswarm</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1debiandocker&#34;&gt;1.Debian下安装docker依赖&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2dockerubuntu&#34;&gt;2.安装证书，docker官网访问不了，用ubuntu的，网络不行，多试几次&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3docker&#34;&gt;3.添加docker清华源&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4docker&#34;&gt;4.安装docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-docker-swarm&#34;&gt;5.初始化 Docker Swarm 集群&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#51-swarm&#34;&gt;5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#52&#34;&gt;5.2 添加工作节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#53-swarm&#34;&gt;5.3 验证 Swarm 集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6mysql&#34;&gt;6.安装mysql服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#61-mysql&#34;&gt;6.1 拉取 MySQL 镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#62-overlay&#34;&gt;6.2 创建网络(overlay)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#63-mysql&#34;&gt;6.3 创建 MySQL 服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#64&#34;&gt;6.4 验证服务是否正常运行&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7mysql&#34;&gt;7.安装mysql客户端&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#71-mysql&#34;&gt;7.1 拉取 MySQL 镜像&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8-docker-swarm&#34;&gt;8. Docker Swarm 集群环境删除服务&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#9-docker&#34;&gt;9. 进入docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1debiandocker&#34;&gt;1.Debian下安装docker依赖&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2dockerubuntu&#34;&gt;2.安装证书，docker官网访问不了，用ubuntu的，网络不行，多试几次&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7EA0A9C3F273FCD8
+gpg --export 7EA0A9C3F273FCD8 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3docker&#34;&gt;3.添加docker清华源&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;echo &amp;quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -cs) stable&amp;quot; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4docker&#34;&gt;4.安装docker&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;apt install docker-ce docker-ce-cli containerd.io -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;5-docker-swarm&#34;&gt;5.初始化 Docker Swarm 集群&lt;/h3&gt;
+&lt;h4 id=&#34;51-swarm&#34;&gt;5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker swarm init --advertise-addr 192.168.214.34
+===============================================================================
+Swarm initialized: current node (zsjzo4r1wt3e84bz7d6u5i5x4) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
+
+To add a manager to this swarm, run &#39;docker swarm join-token manager&#39; and follow the instructions.
+===============================================================================
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;52&#34;&gt;5.2 添加工作节点&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
+
+重新加入swarm
+docker swarm join-token manager # 管理节点
+docker swarm join-token worker  # 工作节点
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;53-swarm&#34;&gt;5.3 验证 Swarm 集群&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker node ls
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;6mysql&#34;&gt;6.安装mysql服务&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 添加清华源
+sudo nano /etc/docker/daemon.json
+
+{
+    &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://docker.mirrors.tuna.tsinghua.edu.cn&amp;quot;]
+}
+
+systemctl restart docker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;61-mysql&#34;&gt;6.1 拉取 MySQL 镜像&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker pull mysql:8.0  # 直接拉取镜像
+
+docker pull docker.mirrors.tuna.tsinghua.edu.cn/library/mysql:8.0  # 通过清华源拉取镜像
+
+docker save -o xvlan-mysql.tar sicap-repo.com/library/mysql:5.7.43  # 从SiCAP导出一个  # 从别的地方导出一个镜像
+docker load -i /home/poo/xvlan-mysql.tar  # 导入镜像
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;62-overlay&#34;&gt;6.2 创建网络(overlay)&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;# 在管理节点上执行以下命令来创建一个网络
+docker network create -d overlay mysql-net
+
+# 参数说明：-d overlay：指定网络驱动为 overlay，这是 Docker Swarm 用于跨节点通信的网络类型。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;63-mysql&#34;&gt;6.3 创建 MySQL 服务&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker service create \
+  --name mysql-service \
+  --network mysql-net \
+  -e MYSQL_ROOT_PASSWORD=123456 \
+  -p 3306:3306 \
+  --mount type=volume,source=mysql-data,target=/var/lib/mysql \
+sicap-repo.com/library/mysql:5.7.43
+
+# 参数说明：
+# --name mysql-service：为服务指定名称，这里是 mysql-service。
+# --network mysql-net：将服务连接到之前创建的 mysql-net 网络。
+# -e MYSQL_ROOT_PASSWORD=your_password：设置 MySQL 的 root 用户密码，你需要将 your_password 替换为实际密码。
+# -p 3306:3306：将容器内的 3306 端口映射到宿主机的 3306 端口，以便外部可以访问 MySQL 服务。
+# --mount type=volume,source=mysql-data,target=/var/lib/mysql：使用 Docker 卷 mysql-data 进行数据持久化，将其挂载到容器内的 /var/lib/mysql 目录，该目录是 MySQL 存储数据的默认位置。
+# mysql:8.0：指定使用的 MySQL 镜像版本。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;64&#34;&gt;6.4 验证服务是否正常运行&lt;/h4&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker service ls
+docker service ps mysql-service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7mysql&#34;&gt;7.安装mysql客户端&lt;/h3&gt;
+&lt;h4 id=&#34;71-mysql&#34;&gt;7.1 拉取 MySQL 镜像&lt;/h4&gt;
+&lt;p&gt;同6.1&lt;/p&gt;
+&lt;p&gt;7.2 创建网络(overlay)&lt;/p&gt;
+&lt;p&gt;同6.2&lt;/p&gt;
+&lt;p&gt;7.3 创建 MySQL Client 服务&lt;/p&gt;
+&lt;p&gt;在管理节点上执行以下命令来创建一个临时的 MySQL Client 服务，以连接到 MySQL 数据库：&lt;/p&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker service create \
+    --name mysql-client-service \
+    --network mysql-net \
+    --mode replicated \
+    --replicas 1 \
+    --constraint &amp;quot;node.role==worker&amp;quot; \
+    sicap-repo.com/library/mysql:5.7.43 \
+    mysql -h 192.168.214.34 -P 3306 -u root -p123456
+
+docker service create \
+    --name mysql-client-service \
+    --network mysql-net \
+    sicap-repo.com/library/mysql:5.7.43 \
+    mysql -h 192.168.214.35 -P 3306 -u root -p123456
+
+# 参数解释：
+# --name mysql-client-service：为服务指定名称，便于后续管理。
+# --network mysql-net：将服务连接到之前创建的 Overlay 网络。
+# --mode replicated：指定服务模式为副本模式，即创建多个相同的副本。
+# --replicas 1：设置副本数量为 1，即只创建一个 MySQL Client 实例。
+# --constraint &amp;quot;node.role==worker&amp;quot;：约束服务只能在工作节点上运行。
+# mysql:8.0：使用的 MySQL 镜像版本。
+# mysql -h &amp;lt;MySQL 服务主机地址&amp;gt; -P &amp;lt;端口&amp;gt; -u &amp;lt;用户名&amp;gt; -p&amp;lt;密码&amp;gt;：容器启动后执行的命令，用于连接到 MySQL 服务。请将 &amp;lt;MySQL 服务主机地址&amp;gt;、&amp;lt;端口&amp;gt;、&amp;lt;用户名&amp;gt; 和 &amp;lt;密码&amp;gt; 替换为实际的值。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;8-docker-swarm&#34;&gt;8. Docker Swarm 集群环境删除服务&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker service ls
+docker service rm &amp;lt;服务 ID 或名称&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;9-docker&#34;&gt;9. 进入docker&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;dock exec -it &amp;lt;窗口 ID&amp;gt; bash
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
+      <link>https://testpoo.github.io/安装dockerswarm.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/安装dockerswarm.html</guid>
+       
+      <category>技术</category> 
       
     </item>
     
@@ -297,7 +465,7 @@ bindsym $mod+Control_L exec /home/poo/公共/touchpad.py
 # 设置窗口浮动
 for_window [class=&amp;quot;wechat&amp;quot;] floating enable
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/debian+sway安装设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+sway安装设置.html</guid>
        
@@ -313,7 +481,7 @@ for_window [class=&amp;quot;wechat&amp;quot;] floating enable
 &lt;p&gt;如果你熬到了，一个人喝茶，一个人跑步，一个人旅行，一个人看书，没有电话，没有邀约，没有聚会，没有所谓的些社交。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;早睡早起，善待自己，无欲无求，云淡风轻，不在乎别人的评价。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;那么恭喜你，你已经达到了人生的最高境界。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/人生的最高境界.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/人生的最高境界.html</guid>
        
@@ -350,7 +518,7 @@ for_window [class=&amp;quot;wechat&amp;quot;] floating enable
 明到崇帧帝，大顺立闯王，金田太平国，时适清道光，&lt;br /&gt;
 九传至光绪，维新有康梁，换位至宣统，民国废末皇，&lt;br /&gt;
 五四风雨骤，建国存新纲，抗日反内战，五星红旗扬。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/中国朝代顺序口诀.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/中国朝代顺序口诀.html</guid>
        
@@ -381,7 +549,7 @@ for_window [class=&amp;quot;wechat&amp;quot;] floating enable
 &lt;p&gt;马(Knight): 代号为N。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/国际象棋棋子代号.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/国际象棋棋子代号.html</guid>
        
@@ -422,7 +590,7 @@ height: calc(100vh - (2 * 10)px);
     mask-image: var(--mask-image);
 }
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/CSS代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/CSS代码小抄.html</guid>
        
@@ -461,7 +629,7 @@ height: calc(100vh - (2 * 10)px);
 递以白头之约，&lt;br /&gt;
 书向鸿笺好将红叶之盟，&lt;br /&gt;
 载明鸳谱。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/婚书两则.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/婚书两则.html</guid>
        
@@ -875,7 +1043,7 @@ nano ~/.config/ibus/rime/build/ibus_rime.yaml
 style:
    horizontal: true
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/debian安装设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian安装设置.html</guid>
        
@@ -916,7 +1084,7 @@ style:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/javascript代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/javascript代码小抄.html</guid>
        
@@ -1100,7 +1268,7 @@ def selectOne(sql, info=[]):
         current_date += timedelta(days=1)
     return workdays
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/python代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python代码小抄.html</guid>
        
@@ -1150,7 +1318,7 @@ def selectOne(sql, info=[]):
 齐妻起棋，齐欺妻气，妻弃七棋。
 下联：
 伊姨移椅，伊倚姨疑，姨遗一椅。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/只有一个读音的九篇古文.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/只有一个读音的九篇古文.html</guid>
        
@@ -1167,7 +1335,7 @@ def selectOne(sql, info=[]):
 &lt;p&gt;然独孤生于仵作之家，向为世人所轻，又无通达性情，难令娘子欢颜。虽有雕虫小技，造泥俑以营生，挡盗贼于墓穴，亦不为世人所重。&lt;/p&gt;
 &lt;p&gt;悠悠七载，间隙既生，怨忿难平，已为深谷。独孤内欲改性情，然朝夕难至，独孤外欲弃仵作，怎奈年久生情。独孤苍苍而娘子青青，若以此拖宕竟困娘子，独孤不为。&lt;/p&gt;
 &lt;p&gt;今放春条，欢喜各生。伏愿娘子，觅得良家，对镜展眉，育女生儿，六亲皆欢。独孤无憾，为留后凭，雍州拾阳县独孤羊谨立。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/独孤羊放妻春条书.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/独孤羊放妻春条书.html</guid>
        
@@ -1269,7 +1437,7 @@ pacman -S fcitx5-im fcitx5-rime rime-wubi git firefox packagekit-qt6 sweeper gwe
 # 向日葵启动前执行
 systemctl start runsunloginclient.service
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Arch通过archinstall安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch通过archinstall安装过程.html</guid>
        
@@ -1567,7 +1735,7 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Jinja2简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
        
@@ -2414,7 +2582,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -2941,7 +3109,7 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
@@ -3395,7 +3563,7 @@ def process_items(prices: Dict[str, float]):
 &lt;/ul&gt;
 &lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
 &lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/FastApi简析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
        
@@ -5290,7 +5458,7 @@ defer resetTransport()
 &lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
        
@@ -6082,7 +6250,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -6251,7 +6419,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Arch手动安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch手动安装过程.html</guid>
        
@@ -7846,7 +8014,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -11865,7 +12033,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -12145,7 +12313,7 @@ else:
 
 &lt;h3 id=&#34;11&#34;&gt;11. 详细配置文件&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;https://github.com/testpoo/obconfig&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/debian+openbox安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+openbox安装过程.html</guid>
        
@@ -12198,7 +12366,7 @@ else:
 &lt;li&gt;你自己所期待加入的测试团队是什么样的？&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;考察面试者在以前测试团队中有哪些不协调？当然，最重要的是，也能提供给你一些信息，这个员工以后如何更好地管理与沟通！&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/面试问答.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/面试问答.html</guid>
        
@@ -13664,7 +13832,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -13780,7 +13948,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -14913,7 +15081,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -15688,7 +15856,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -16082,7 +16250,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -17964,7 +18132,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -19295,7 +19463,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -20116,7 +20284,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -20815,7 +20983,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -22021,7 +22189,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -23028,7 +23196,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -23122,7 +23290,7 @@ assign [class=&amp;quot;X-terminal-emulator&amp;quot;] 1
 https://www.lifewire.com/beginners-guide-to-conky-4043352
 展示在桌面：own_window_type override
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/debian+i3安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian+i3安装过程.html</guid>
        
@@ -23434,7 +23602,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -23939,7 +24107,7 @@ systemctl status mysqld
 &lt;blockquote&gt;
 &lt;p&gt;截空&lt;/p&gt;
 &lt;/blockquote&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/紫薇斗数解析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/紫薇斗数解析.html</guid>
        
@@ -24414,7 +24582,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -24919,7 +25087,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -25287,7 +25455,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -25461,7 +25629,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        
@@ -25665,7 +25833,7 @@ mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -25831,7 +25999,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -26060,7 +26228,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;命令行：dpkg -p package-name
 示例：dpkg -p cacti
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2025-01-23 17:23:17</pubDate>  
+      <pubDate>2025-03-12 14:04:22</pubDate>  
       <link>https://testpoo.github.io/debian命令apt和dpkg用法.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian命令apt和dpkg用法.html</guid>
        

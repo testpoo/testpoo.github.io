@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/安装dockerswarm.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span><span>2025-03-12&nbsp;&nbsp;共6119个字</span><span class="tag">dockerswarm</span></li></a>
+            <a href="https://testpoo.github.io/安装dockerswarm.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span><span>2025-03-12&nbsp;&nbsp;共6119个字</span><span class="tag">dockerswarm</span></li></a>
             
             <a href="https://testpoo.github.io/Jinja2简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span><span>2024-02-29&nbsp;&nbsp;共8808个字</span><span class="tag">jinja2</span><span class="tag">python</span></li></a>
             
@@ -73,7 +73,7 @@
             
             <a href="https://testpoo.github.io/Python正则表达式.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span><span>2021-06-23&nbsp;&nbsp;共21614个字</span><span class="tag">python</span><span class="tag">正则表达式</span></li></a>
             
-            <a href="https://testpoo.github.io/mysql的安装.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span><span>2020.05.09&nbsp;&nbsp;共8129个字</span><span class="tag">mysql</span><span class="tag">安装</span></li></a>
+            <a href="https://testpoo.github.io/mysql的安装.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span><span>2020.05.09&nbsp;&nbsp;共8129个字</span><span class="tag">mysql</span><span class="tag">安装</span></li></a>
             
             <a href="https://testpoo.github.io/分分种学会python3.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span><span>2020-05-14&nbsp;&nbsp;共10704个字</span><span class="tag">python</span></li></a>
             
@@ -95,315 +95,171 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>mysql的安装</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 14:04:22</span></div>
+      <div class="header"><span>安装dockerswarm</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 14:04:22</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
-<li><a href="#mysql">Mysql的安装</a></li>
-<li><a href="#mysql_1">下载mysql安装包</a></li>
-<li><a href="#mariadb">删除mariadb</a></li>
-<li><a href="#_1">安装离线包</a></li>
-<li><a href="#mysql_2">创建mysql用户和组</a></li>
-<li><a href="#mysql_3">Mysql配置</a></li>
-<li><a href="#_2">服务启停</a></li>
-<li><a href="#_3">数据库操作</a></li>
+<li><a href="#1debiandocker">1.Debian下安装docker依赖</a></li>
+<li><a href="#2dockerubuntu">2.安装证书，docker官网访问不了，用ubuntu的，网络不行，多试几次</a></li>
+<li><a href="#3docker">3.添加docker清华源</a></li>
+<li><a href="#4docker">4.安装docker</a></li>
+<li><a href="#5-docker-swarm">5.初始化 Docker Swarm 集群</a><ul>
+<li><a href="#51-swarm">5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：</a></li>
+<li><a href="#52">5.2 添加工作节点</a></li>
+<li><a href="#53-swarm">5.3 验证 Swarm 集群</a></li>
+<li><a href="#6mysql">6.安装mysql服务</a></li>
+<li><a href="#61-mysql">6.1 拉取 MySQL 镜像</a></li>
+<li><a href="#62-overlay">6.2 创建网络(overlay)</a></li>
+<li><a href="#63-mysql">6.3 创建 MySQL 服务</a></li>
+<li><a href="#64">6.4 验证服务是否正常运行</a></li>
+</ul>
+</li>
+<li><a href="#7mysql">7.安装mysql客户端</a><ul>
+<li><a href="#71-mysql">7.1 拉取 MySQL 镜像</a></li>
+</ul>
+</li>
+<li><a href="#8-docker-swarm">8. Docker Swarm 集群环境删除服务</a></li>
+<li><a href="#9-docker">9. 进入docker</a></li>
 </ul>
 </div>
-<h3 id="mysql">Mysql的安装</h3>
-<p>以centos离线安装为例</p>
-<h3 id="mysql_1">下载mysql安装包</h3>
-<p>从Mysql官方网站内下载 <a href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
-<p>选择以下版本进行安装</p>
-<pre class="codehilite"><code>Red Hat Enterprice Linux / Oracle Linux
-Red Hat Enterprice Linux 8 / Oracle Linux 8 (x86,64-bit)
-
-下载包信息：mysql-8.0.20-1.el8.x86_64.rpm-bundle.tar|8.0.20|650.2M    
+<h3 id="1debiandocker">1.Debian下安装docker依赖</h3>
+<pre class="codehilite"><code>apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
 </code></pre>
 
-<h3 id="mariadb">删除mariadb</h3>
-<p>查看系统中是否存的mariadb，如果存在，将其删除，即可以如下操作：</p>
-<pre class="codehilite"><code>rpm -qa | grep mariadb
-# 如果有返回信息，说明存在mariadb，如下：
-mariadb-libs-5.5.56-2.el7.x86_64
-# 删除命令为：
-rpm -e --nodeps mariadb-libs-5.5.56-2.el7.x86_64
+<h3 id="2dockerubuntu">2.安装证书，docker官网访问不了，用ubuntu的，网络不行，多试几次</h3>
+<pre class="codehilite"><code>gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 7EA0A9C3F273FCD8
+gpg --export 7EA0A9C3F273FCD8 | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 </code></pre>
 
-<h3 id="_1">安装离线包</h3>
-<p>解压缩mysql离线安装包</p>
-<pre class="codehilite"><code>cd /home/test
-tar -xvf mysql-8.0.20-1.el8.x86_64.rpm-bundle.tar
+<h3 id="3docker">3.添加docker清华源</h3>
+<pre class="codehilite"><code>echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 </code></pre>
 
-<p>解压缩之后，包含以下rpm包</p>
-<pre class="codehilite"><code>mysql-community-libs-8.0.20-1.el8.x86_64.rpm
-mysql-community-embedded-compat-8.0.20-1.el8.x86_64.rpm
-mysql-community-devel-8.0.20-1.el8.x86_64.rpm
-mysql-community-server-8.0.20-1.el8.x86_64.rpm
-mysql-community-libs-compat-8.0.20-1.el8.x86_64.rpm
-mysql-community-client-8.0.20-1.el8.x86_64.rpm
-mysql-community-common-8.0.20-1.el8.x86_64.rpm
-mysql-community-test-8.0.20-1.el8.x86_64.rpm
+<h3 id="4docker">4.安装docker</h3>
+<pre class="codehilite"><code>apt install docker-ce docker-ce-cli containerd.io -y
 </code></pre>
 
-<p>安装rmp包，逐个安装，命令如下：</p>
-<pre class="codehilite"><code># 必须安装
-rpm -ivh mysql-community-common-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-libs-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-client-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-server-8.0.20-1.el8.x86_64.rpm
-# 非必须安装
-rpm -ivh mysql-community-libs-compat-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-embedded-compat-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-devel-8.0.20-1.el8.x86_64.rpm
-rpm -ivh mysql-community-test-8.0.20-1.el8.x86_64.rpm
+<h3 id="5-docker-swarm">5.初始化 Docker Swarm 集群</h3>
+<h4 id="51-swarm">5.1 选择一台主机作为管理节点，在该主机上执行以下命令初始化 Swarm 集群：</h4>
+<pre class="codehilite"><code>docker swarm init --advertise-addr 192.168.214.34
+===============================================================================
+Swarm initialized: current node (zsjzo4r1wt3e84bz7d6u5i5x4) is now a manager.
 
-注意：如果有依赖缺失的问题，请按照错误提示，自行安装缺失的依赖
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+===============================================================================
 </code></pre>
 
-<h3 id="mysql_2">创建mysql用户和组</h3>
-<pre class="codehilite"><code>groupadd mysql
-useradd -g mysql mysql
+<h4 id="52">5.2 添加工作节点</h4>
+<pre class="codehilite"><code>docker swarm join --token SWMTKN-1-340k5q3uyzcj83cbxvc5x9jb66q42r4pqub5zrbhkneopbdu3y-6u8c5jtvy0auqrg44onihxs11 192.168.214.34:2377
 
-# 设置用户的密码
-passwd mysql
+重新加入swarm
+docker swarm join-token manager # 管理节点
+docker swarm join-token worker  # 工作节点
 </code></pre>
 
-<h3 id="mysql_3">Mysql配置</h3>
-<p>新建my.cnf文件</p>
-<pre class="codehilite"><code>touch /etc/my.cnf
+<h4 id="53-swarm">5.3 验证 Swarm 集群</h4>
+<pre class="codehilite"><code>docker node ls
 </code></pre>
 
-<p>配置文件内容</p>
-<pre class="codehilite"><code>[mysqld]
-########basic settings########
-federated
-user=mysql
-datadir = /data/mysql
-transaction_isolation = READ-COMMITTED
-explicit_defaults_for_timestamp = 1
-#bind-address = 0.0.0.0  # 表示允许任何主机登陆MySQL
-port = 3306
-socket = /tmp/mysql.sock
-federated
-########log settings##########
-log-bin=mysql-bin
-expire_logs_days = 5
-log-error = /data/mysql_log/error.log
-long_query_time = 10
-slow_query_log = 1
-slow_query_log_file = /data/mysql_log/slowquery.log
-log_throttle_queries_not_using_indexes = 10
-binlog_format=ROW
-########innodb settings########
-#索引和数据缓冲区大小，一般设置物理内存的60%-70%
-innodb_buffer_pool_size=6G
-innodb_buffer_pool_instances = 8
-innodb_buffer_pool_load_at_startup = 1
-innodb_buffer_pool_dump_at_shutdown = 1
-#innodb_page_size = 8192
-innodb_lock_wait_timeout = 50
-innodb_file_format = Barracuda
-innodb_file_format_max = Barracuda
-innodb_purge_threads = 4
-innodb_large_prefix = 1
-innodb_print_all_deadlocks = 1
-innodb_strict_mode = 1
-innodb_sort_buffer_size = 32M
-#默认值为 48M. 有很高写入吞吐量
-innodb_log_file_size=1G
-#InnoDB 存储引擎的事务日志所使用的缓冲区
-innodb_log_buffer_size = 16M
-innodb_flush_log_at_trx_commit=2
-#修改InnoDB为独立表空间模式,每个数据库的每个表都会生成一个数据空间
-innodb_file_per_table=1
-#限制Innodb能打开的表的数据
-#innodb_file_io_threads=4
-#5.6以后分为读和写，根据事务特性进行修改，原则为总数加起来&lt;=cpu个数*每个cpu核数
-innodb_read_io_threads=4
-innodb_write_io_threads=4
-#如果使用硬件RAID磁盘控制器, 需要设置为 O_DIRECT
-#innodb_flush_method=O_DIRECT
-#设置会影响InnoDB每秒在后台执行多少操作
-innodb_io_capacity=800
-[mysqld]
-########basic settings########
-federated
-user=mysql
-datadir = /data/mysql
-transaction_isolation = READ-COMMITTED
-explicit_defaults_for_timestamp = 1
-#bind-address = 0.0.0.0  # 表示允许任何主机登陆MySQL
-port = 3306
-socket = /tmp/mysql.sock
-federated
-########log settings##########
-log-bin=mysql-bin
-expire_logs_days = 5
-log-error = /data/mysql_log/error.log
-long_query_time = 10
-slow_query_log = 1
-slow_query_log_file = /data/mysql_log/slowquery.log
-log_throttle_queries_not_using_indexes = 10
-binlog_format=ROW
-########innodb settings########
-#索引和数据缓冲区大小，一般设置物理内存的60%-70%
-innodb_buffer_pool_size=6G
-innodb_buffer_pool_instances = 8
-innodb_buffer_pool_load_at_startup = 1
-innodb_buffer_pool_dump_at_shutdown = 1
-#innodb_page_size = 8192
-innodb_lock_wait_timeout = 50
-innodb_file_format = Barracuda
-innodb_file_format_max = Barracuda
-innodb_purge_threads = 4
-innodb_large_prefix = 1
-innodb_print_all_deadlocks = 1
-innodb_strict_mode = 1
-innodb_sort_buffer_size = 32M
-#默认值为 48M. 有很高写入吞吐量
-innodb_log_file_size=1G
-#InnoDB 存储引擎的事务日志所使用的缓冲区
-innodb_log_buffer_size = 16M
-#关键参数，0代表大约每秒写入到日志并同步到磁盘，数据库故障会丢失1秒左右事务数据。1为每执行一条SQL后写入到日志并同步到磁盘，I/O开销大，执行完SQL要等待日志读写，效率低。2代表只把日志写入到系统缓存区，再每秒同步到磁盘，效率很高，如果服&gt;务器故障，才会丢失事务数据。对数据安全性要求不是很高的推荐设置2，性能高，修改后效果明显。
-innodb_flush_log_at_trx_commit=2
-#修改InnoDB为独立表空间模式,每个数据库的每个表都会生成一个数据空间
-innodb_file_per_table=1
-#限制Innodb能打开的表的数据
-#innodb_file_io_threads=4
-#5.6以后分为读和写，根据事务特性进行修改，原则为总数加起来&lt;=cpu个数*每个cpu核数
-innodb_read_io_threads=4
-innodb_write_io_threads=4
-#如果使用硬件RAID磁盘控制器, 需要设置为 O_DIRECT
-#innodb_flush_method=O_DIRECT
-#设置会影响InnoDB每秒在后台执行多少操作
-innodb_io_capacity=800
-innodb_io_capacity_max=1000
-#这个参数必须要和innodb_io_capacity设置一样
-innodb_lru_scan_depth=800
-#限制了一次有多少线程能进入内核,0表示不限制进入内核的数量
-innodb_thread_concurrency = 32
-#除了缓存表数据和索引外,可以为操作所需的其他内部项分配缓存来提升InnoDB的性能,这些内存就可以通过此参数来分配
-innodb_additional_mem_pool_size=8M
-#修改为基于行的复制
-innodb_autoinc_lock_mode = 2
+<h4 id="6mysql">6.安装mysql服务</h4>
+<pre class="codehilite"><code># 添加清华源
+sudo nano /etc/docker/daemon.json
 
-secure_file_priv=&quot;&quot;
-##############cache#############
-max_allowed_packet = 2048M
-#内部内存临时表的最大值
-tmp_table_size=128M
-tmpdir = /data/mysql/mysql_tmp
-collation_server=utf8_general_ci
-character_set_server=utf8
-#即跳过外部锁定
-skip-external-locking
-skip-name-resolve
-#MySQL能暂存的连接数量(根据实际设置)
-back_log=1024
-#指定索引缓冲区的大小,只对MyISAM表起作用,这里写上也没有关系
-key_buffer_size=128M
-#这条指令限定用于每个数据库线程的栈大小
-thread_stack=256k
-#当一个查询不断地扫描某一个表,MySQL会为它分配一段内存缓冲区
-read_buffer_size=128M
-#线程缓存
-thread_cache_size=16
-#查询缓存大小
-query_cache_size=128M
-#内部内存临时表的最大值,每个线程都要分配
-max_heap_table_size=128M
-#将查询结果放入查询缓存中
-query_cache_limit = 3M
-query_cache_min_res_unit = 2k
-bulk_insert_buffer_size = 64M
-query_cache_type=1
-#代表在事务过程中容纳二进制日志SQL语句的缓存大小
-binlog_cache_size = 2M
-#同样是缓存表大小
-table_open_cache=128
-#缓存线程
-#thread_cache=16000
-#推荐设置为服务器 CPU核数的2倍
-thread_concurrency=16
-interactive_timeout=28800
-wait_timeout=28800
-#表和表联接的缓冲区的大小
-join_buffer_size = 32M
-#是一个connection级参数,在每个connection第一次需要使用这个buffer的时候,一次性分配设置的内存
-sort_buffer_size = 32M
-#随机读取数据缓冲区使用内存
-read_rnd_buffer_size = 32M
-group_concat_max_len = 102400 #你要的最大长度
-##################################################
-#connect 是一个MySQL中与安全有关的计数器值,它负责阻止过多尝试失败的客户端以防止暴力破解密码
-max-connect-errors=1000
-#连接数
-max-connections=1000
-##################################################
-#开启查询缓存
-explicit_defaults_for_timestamp=true
-###################################################
-[client]
-socket=/tmp/mysql.sock
+{
+    &quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.tuna.tsinghua.edu.cn&quot;]
+}
+
+systemctl restart docker
 </code></pre>
 
-<h3 id="_2">服务启停</h3>
-<ul>
-<li>查看服务状态</li>
-</ul>
-<pre class="codehilite"><code>systemctl status mysqld
+<h4 id="61-mysql">6.1 拉取 MySQL 镜像</h4>
+<pre class="codehilite"><code>docker pull mysql:8.0  # 直接拉取镜像
+
+docker pull docker.mirrors.tuna.tsinghua.edu.cn/library/mysql:8.0  # 通过清华源拉取镜像
+
+docker save -o xvlan-mysql.tar sicap-repo.com/library/mysql:5.7.43  # 从SiCAP导出一个  # 从别的地方导出一个镜像
+docker load -i /home/poo/xvlan-mysql.tar  # 导入镜像
 </code></pre>
 
-<ul>
-<li>停止服务</li>
-</ul>
-<pre class="codehilite"><code>service mysqld stop
+<h4 id="62-overlay">6.2 创建网络(overlay)</h4>
+<pre class="codehilite"><code># 在管理节点上执行以下命令来创建一个网络
+docker network create -d overlay mysql-net
+
+# 参数说明：-d overlay：指定网络驱动为 overlay，这是 Docker Swarm 用于跨节点通信的网络类型。
 </code></pre>
 
-<ul>
-<li>初始化数据库</li>
-</ul>
-<pre class="codehilite"><code>mysqld --initialize --console
+<h4 id="63-mysql">6.3 创建 MySQL 服务</h4>
+<pre class="codehilite"><code>docker service create \
+  --name mysql-service \
+  --network mysql-net \
+  -e MYSQL_ROOT_PASSWORD=123456 \
+  -p 3306:3306 \
+  --mount type=volume,source=mysql-data,target=/var/lib/mysql \
+sicap-repo.com/library/mysql:5.7.43
+
+# 参数说明：
+# --name mysql-service：为服务指定名称，这里是 mysql-service。
+# --network mysql-net：将服务连接到之前创建的 mysql-net 网络。
+# -e MYSQL_ROOT_PASSWORD=your_password：设置 MySQL 的 root 用户密码，你需要将 your_password 替换为实际密码。
+# -p 3306:3306：将容器内的 3306 端口映射到宿主机的 3306 端口，以便外部可以访问 MySQL 服务。
+# --mount type=volume,source=mysql-data,target=/var/lib/mysql：使用 Docker 卷 mysql-data 进行数据持久化，将其挂载到容器内的 /var/lib/mysql 目录，该目录是 MySQL 存储数据的默认位置。
+# mysql:8.0：指定使用的 MySQL 镜像版本。
 </code></pre>
 
-<ul>
-<li>目录授权</li>
-</ul>
-<pre class="codehilite"><code>chown -R mysql:mysql /var/lib/mysql/
+<h4 id="64">6.4 验证服务是否正常运行</h4>
+<pre class="codehilite"><code>docker service ls
+docker service ps mysql-service
 </code></pre>
 
-<ul>
-<li>启动mysql服务</li>
-</ul>
-<pre class="codehilite"><code>systemctl start mysqld
-systemctl status mysqld
+<h3 id="7mysql">7.安装mysql客户端</h3>
+<h4 id="71-mysql">7.1 拉取 MySQL 镜像</h4>
+<p>同6.1</p>
+<p>7.2 创建网络(overlay)</p>
+<p>同6.2</p>
+<p>7.3 创建 MySQL Client 服务</p>
+<p>在管理节点上执行以下命令来创建一个临时的 MySQL Client 服务，以连接到 MySQL 数据库：</p>
+<pre class="codehilite"><code>docker service create \
+    --name mysql-client-service \
+    --network mysql-net \
+    --mode replicated \
+    --replicas 1 \
+    --constraint &quot;node.role==worker&quot; \
+    sicap-repo.com/library/mysql:5.7.43 \
+    mysql -h 192.168.214.34 -P 3306 -u root -p123456
+
+docker service create \
+    --name mysql-client-service \
+    --network mysql-net \
+    sicap-repo.com/library/mysql:5.7.43 \
+    mysql -h 192.168.214.35 -P 3306 -u root -p123456
+
+# 参数解释：
+# --name mysql-client-service：为服务指定名称，便于后续管理。
+# --network mysql-net：将服务连接到之前创建的 Overlay 网络。
+# --mode replicated：指定服务模式为副本模式，即创建多个相同的副本。
+# --replicas 1：设置副本数量为 1，即只创建一个 MySQL Client 实例。
+# --constraint &quot;node.role==worker&quot;：约束服务只能在工作节点上运行。
+# mysql:8.0：使用的 MySQL 镜像版本。
+# mysql -h &lt;MySQL 服务主机地址&gt; -P &lt;端口&gt; -u &lt;用户名&gt; -p&lt;密码&gt;：容器启动后执行的命令，用于连接到 MySQL 服务。请将 &lt;MySQL 服务主机地址&gt;、&lt;端口&gt;、&lt;用户名&gt; 和 &lt;密码&gt; 替换为实际的值。
 </code></pre>
 
-<h3 id="_3">数据库操作</h3>
-<ul>
-<li>查看临时密码：</li>
-</ul>
-<pre class="codehilite"><code>grep 'password' /var/log/mysqld.log |head -n 1
+<h3 id="8-docker-swarm">8. Docker Swarm 集群环境删除服务</h3>
+<pre class="codehilite"><code>docker service ls
+docker service rm &lt;服务 ID 或名称&gt;
 </code></pre>
 
-<ul>
-<li>用临时密码登录数据库</li>
-</ul>
-<pre class="codehilite"><code>mysql -u root -p 回车键
-然后输入临时密码（输入时不会显示出来，输入完直接回车）
-</code></pre>
-
-<ul>
-<li>修改mysql密码</li>
-</ul>
-<pre class="codehilite"><code>alter USER 'root'@'localhost' IDENTIFIED BY '123456';
+<h3 id="9-docker">9. 进入docker</h3>
+<pre class="codehilite"><code>dock exec -it &lt;窗口 ID&gt; bash
 </code></pre>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
-            <li>本文链接：<a href="https://testpoo.github.io/mysql的安装.html">https://testpoo.github.io/mysql的安装.html</a></li>
+            <li>本文链接：<a href="https://testpoo.github.io/安装dockerswarm.html">https://testpoo.github.io/安装dockerswarm.html</a></li>
             <li>版权声明：本铺所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"> BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
           </ul>
         </div>

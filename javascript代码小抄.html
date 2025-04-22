@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/问题集.html"><label style="color: #38b6fd"></label>&nbsp;问题集</a></li>
             
-            <li><a href="https://testpoo.github.io/安装dockerswarm.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共935个字</span><span class="tag">css</span></li></a>
+            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共6242个字</span><span class="tag">css</span></li></a>
             
-            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></li></a>
+            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共7746个字</span><span class="tag">javascript</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共6959个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共35143个字</span><span class="tag">python</span></li></a>
             
           </ul>
         </div>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>javascript代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 17:54:26</span></div>
+      <div class="header"><span>javascript代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-04-22 14:13:43</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -70,29 +70,29 @@
 </ul>
 </div>
 <h3 id="_1"> 获取工作日</h3>
-<pre class="codehilite"><code>function getWorkdays() {
-    const startDate = new Date(document.querySelector(&quot;[name='startime']&quot;).value);
-    const endDate = new Date(document.querySelector(&quot;[name='endtime']&quot;).value);
-    const holidays = {{ holidays|safe if holidays else [] }}; //节假日
-    const extradays = {{ extradays|safe if extradays else [] }}; //补班
-    let days = 0;
-    let currentDate = startDate;
+<div class="codehilite"><pre><span></span><code><span class="n">function</span><span class="w"> </span><span class="n">getWorkdays</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">Date</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s2">&quot;[name=&#39;startime&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">endDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">Date</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s2">&quot;[name=&#39;endtime&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">holidays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">holidays</span><span class="o">|</span><span class="n">safe</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">holidays</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}};</span><span class="w"> </span><span class="o">//</span><span class="err">节假日</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">extradays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">extradays</span><span class="o">|</span><span class="n">safe</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">extradays</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}};</span><span class="w"> </span><span class="o">//</span><span class="err">补班</span>
+<span class="w">    </span><span class="n">let</span><span class="w"> </span><span class="n">days</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">let</span><span class="w"> </span><span class="n">currentDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">startDate</span><span class="p">;</span>
 
-    // 确保结束日期在开始日期之后
-    if (currentDate &gt; endDate) {
-        [startDate, endDate] = [endDate, startDate];
-    }
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="err">确保结束日期在开始日期之后</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currentDate</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">endDate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">[</span><span class="n">startDate</span><span class="p">,</span><span class="w"> </span><span class="n">endDate</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">endDate</span><span class="p">,</span><span class="w"> </span><span class="n">startDate</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 
-    while (currentDate &lt;= endDate) {
-        const temp = currentDate.getFullYear().toString() + '-' + (currentDate.getMonth() + 1).toString() + '-' + currentDate.getDate().toString();
-        if (![0, 6].includes(currentDate.getDay()) &amp;&amp; !holidays.includes(temp) || extradays.includes(temp)) {
-            days++;
-        }
-        currentDate.setDate(currentDate.getDate() + 1);
-    }
-    document.querySelector(&quot;[name='spentime']&quot;).value = days;
-}
-</code></pre>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">currentDate</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">endDate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currentDate</span><span class="o">.</span><span class="n">getFullYear</span><span class="p">()</span><span class="o">.</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">currentDate</span><span class="o">.</span><span class="n">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">currentDate</span><span class="o">.</span><span class="n">getDate</span><span class="p">()</span><span class="o">.</span><span class="n">toString</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="n">currentDate</span><span class="o">.</span><span class="n">getDay</span><span class="p">())</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">holidays</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">extradays</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">days</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">currentDate</span><span class="o">.</span><span class="n">setDate</span><span class="p">(</span><span class="n">currentDate</span><span class="o">.</span><span class="n">getDate</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="s2">&quot;[name=&#39;spentime&#39;]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">days</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <hr />
         <div class="copyright">
@@ -114,7 +114,9 @@
         
         <li><a href="https://testpoo.github.io/问题集.html"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span></a></li>
         
-        <li><a href="https://testpoo.github.io/安装dockerswarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span></a></li>
+        <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/安装docker-swarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装docker-swarm</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span></a></li>
         
@@ -128,15 +130,15 @@
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -166,9 +168,9 @@
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         

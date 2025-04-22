@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/问题集.html"><label style="color: #38b6fd"></label>&nbsp;问题集</a></li>
             
-            <li><a href="https://testpoo.github.io/安装dockerswarm.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共935个字</span><span class="tag">css</span></li></a>
+            <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共6242个字</span><span class="tag">css</span></li></a>
             
-            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共1134个字</span><span class="tag">javascript</span></li></a>
+            <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共7746个字</span><span class="tag">javascript</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共6959个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共35143个字</span><span class="tag">python</span></li></a>
             
           </ul>
         </div>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>CSS代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-03-12 17:54:26</span></div>
+      <div class="header"><span>CSS代码小抄</span><span>人生如逆旅，我亦是行人。<br />最后更新于2025-04-22 14:13:43</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -71,30 +71,30 @@
 </ul>
 </div>
 <h3 id="css-div"> <code>CSS</code> 计算 <code>div</code> 的宽度和高度</h3>
-<pre class="codehilite"><code># calc + vw 计算宽度
-width: 800px; /* fallback for b*/
-width: -moz-calc(100vw - (2 * 10)px);
-width: -webkit-calc(100vw -(2 * 10)px);
-width: calc(100vw - (2 * 10)px);
+<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nt">calc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">vw</span><span class="w"> </span><span class="nt">计算宽度</span>
+<span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">800px</span><span class="o">;</span><span class="w"> </span><span class="c">/* fallback for b*/</span>
+<span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">-moz-calc</span><span class="o">(</span><span class="nt">100vw</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
+<span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">-webkit-calc</span><span class="o">(</span><span class="nt">100vw</span><span class="w"> </span><span class="nt">-</span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
+<span class="nt">width</span><span class="o">:</span><span class="w"> </span><span class="nt">calc</span><span class="o">(</span><span class="nt">100vw</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
 
-# calc + vh 计算高度
-height: 800px;
-height: -moz-calc(100vh - (2 * 10)px);
-height: -webkit-calc(100vh - (2 * 10)px);
-height: calc(100vh - (2 * 10)px);
-</code></pre>
+<span class="err">#</span><span class="w"> </span><span class="nt">calc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">vh</span><span class="w"> </span><span class="nt">计算高度</span>
+<span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">800px</span><span class="o">;</span>
+<span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">-moz-calc</span><span class="o">(</span><span class="nt">100vh</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
+<span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">-webkit-calc</span><span class="o">(</span><span class="nt">100vh</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
+<span class="nt">height</span><span class="o">:</span><span class="w"> </span><span class="nt">calc</span><span class="o">(</span><span class="nt">100vh</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="o">(</span><span class="nt">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">10</span><span class="o">)</span><span class="nt">px</span><span class="o">);</span>
+</code></pre></div>
 
 <hr />
 <h3 id="hr"> 好看的 <code>hr</code></h3>
-<pre class="codehilite"><code>hr {
-    border: 0;
-    padding: 3px;
-    background: linear-gradient(135deg, red, orange,green, blue, purple);
-    --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
-    -webkit-mask-image: var(--mask-image);
-    mask-image: var(--mask-image);
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">hr</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">border</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="n">px</span><span class="p">;</span>
+<span class="w">    </span><span class="n">background</span><span class="p">:</span><span class="w"> </span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="mi">135</span><span class="n">deg</span><span class="p">,</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">orange</span><span class="p">,</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="n">purple</span><span class="p">);</span>
+<span class="w">    </span><span class="o">--</span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="w"> </span><span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="mi">135</span><span class="n">deg</span><span class="p">,</span><span class="w"> </span><span class="c1">#000 0px, #000 1px, transparent 1px, transparent 6px);</span>
+<span class="w">    </span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="w"> </span><span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="p">:</span><span class="w"> </span><span class="k">var</span><span class="p">(</span><span class="o">--</span><span class="n">mask</span><span class="o">-</span><span class="n">image</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -114,7 +114,9 @@ height: calc(100vh - (2 * 10)px);
         
         <li><a href="https://testpoo.github.io/问题集.html"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span></a></li>
         
-        <li><a href="https://testpoo.github.io/安装dockerswarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装dockerswarm</span></a></li>
+        <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/安装docker-swarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装docker-swarm</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span></a></li>
         
@@ -128,15 +130,15 @@ height: calc(100vh - (2 * 10)px);
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
@@ -166,9 +168,9 @@ height: calc(100vh - (2 * 10)px);
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
-        
         <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         

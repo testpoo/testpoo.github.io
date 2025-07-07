@@ -49,9 +49,9 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian+sway安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span><span>2025-01-15&nbsp;&nbsp;共4565个字</span><span class="tag">debian</span><span class="tag">sway</span></li></a>
+            <a href="https://testpoo.github.io/debian+sway安装设置.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span><span>2025-01-15&nbsp;&nbsp;共5911个字</span><span class="tag">debian</span><span class="tag">sway</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共15977个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2024-08-13&nbsp;&nbsp;共15974个字</span><span class="tag">debian</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">linux</span></li></a>
             
             <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2024-06-15&nbsp;&nbsp;共3299个字</span><span class="tag">linux</span><span class="tag">arch</span><span class="tag">archinstall</span></li></a>
             
@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian+sway安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-07-03 15:28:24</span></div>
+      <div class="header"><span>debian+sway安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-07-07 16:01:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -86,6 +86,9 @@
 </div>
 <h3 id="1-sway">1. 安装Sway及相关软件</h3>
 <pre class="codehilite"><code>sudo apt install fcitx5 fcitx5-rime rime-data-wubi thunar xarchiver pulseaudio blueman thunar-archive-plugin fonts-noto-cjk sway swaybg swayidle swaylock foot wofi seatd xwayland grim git brightnessctl wl-clipboard slurp upower
+
+# wl-clipboard 剪切板
+# slurp 截图选框
 </code></pre>
 
 <h3 id="2">2. 输入法环境变量设置</h3>
@@ -93,7 +96,7 @@
 <pre class="codehilite"><code>nano /etc/environment
 
 XIM=&quot;fcitx&quot;
-GTK_IM_MODULE=fcitx
+#GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=&quot;@im=fcitx&quot;
 INPUT_METHOD=fcitx
@@ -118,7 +121,7 @@ cp /etc/sway/config ~/.config/sway/
 
 <h3 id="5">5. 修改程序启动器</h3>
 <pre class="codehilite"><code># 注释掉$menu行，改为以下内容：
-set $menu wofi --show=drun --lines=6 --allow-images --prompt=&quot;请输入软件名称&quot;
+set $menu set $menu wofi -S drun -I -G -p &quot;请输入程序名称&quot;
 </code></pre>
 
 <h3 id="6-foot">6. 设置终端(foot)字体大小</h3>
@@ -149,7 +152,9 @@ input &quot;2362:597:SYNA3602:00_093A:0255_Touchpad&quot; {
 </code></pre>
 
 <h3 id="10-sway">10. Sway配置文件修改</h3>
-<pre class="codehilite"><code>set $menu wofi --show=drun -I --prompt=&quot;请输入软件名称&quot;
+<pre class="codehilite"><code>exec_always swaybg -i /home/poo/图片/2.jpg
+
+set $menu set $menu wofi -S drun -I -G -p &quot;请输入程序名称&quot;
 
 output eDP-1 resolution 1920x1200 position 0,0 scale 1.25
 
@@ -161,12 +166,15 @@ input &quot;2362:597:SYNA3602:00_093A:0255_Touchpad&quot; {
     events enabled
 }
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+exec_always --no-startup-id fcitx5 -d --replace
+exec_always --no-startup-id blueman-applet
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
 
 # 隐藏或者显示bar
 # bar toggle, hide or show
@@ -185,7 +193,7 @@ bindsym $mod+Shift+Tab workspace prev
 # bindsym $mod+b border toggle
 
 # 默认设置没标题栏
-default_border none
+default_border pixel 0
 
 # foucus follows mouse(cursor)
 focus_follows_mouse yes
@@ -203,17 +211,31 @@ mode &quot;$mode_system&quot; {
     bindsym Return mode &quot;default&quot;
     bindsym Escape mode &quot;default&quot;
 }
+
 bindsym $mod+p mode &quot;$mode_system&quot;
 
-exec_always fcitx5 -d --replace
-exec --no-startup-id blueman-applet
-
 bindsym $mod+t exec Thunar
-bindsym $mod+q exec chromium
-bindsym $mod+Control_L exec /home/poo/公共/touchpad.py
+bindsym $mod+q exec firefox-esr
+bindsym $mod+Control_L exec /home/poo/.config/sway/touchpad.py;exec pkill -SIGUSR1 -f /home/poo/.config/sway/bar.sh
+bindsym $mod+Shift+s exec grim -g &quot;$(slurp)&quot; - | wl-copy
+bindsym Print exec grim - | wl-copy
+bindsym $mod+Shift+i exec /home/poo/.config/sway/systeminfo | wofi -d -G -s /home/poo/.config/sway/systeminfo.css -W 485 -H 530
 
 # 设置窗口浮动
 for_window [class=&quot;wechat&quot;] floating enable
+for_window [app_id=&quot;io.github.quodlibet.QuodLibet&quot;] floating enable
+
+# 弹窗
+# popups
+for_window [window_role=&quot;pop-up&quot;] floating enable
+for_window [window_role=&quot;task_dialog&quot;] floating enable
+for_window [title=&quot;文件操作进度&quot;] floating enable
+for_window [title=&quot;确认替换文件&quot;] floating enable
+
+#for_window [app_id=&quot;firefox-esr&quot;] move container workspace number $ws1
+#for_window [app_id=&quot;Thunar&quot;] move container workspace number $ws2
+#for_window [app_id=&quot;foot&quot;] move container workspace number $ws3
+#for_window [app_id=&quot;sublime_text&quot;] move container workspace number $ws4
 </code></pre>
         <div class="copyright">
           <ul>

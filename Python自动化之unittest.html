@@ -24,21 +24,21 @@
         <div class="scrollheight">
           <ul>
             
-            <li><a href="https://testpoo.github.io/关于我.html"><label style="color: #38b6fd"></label>&nbsp;关于我</a></li>
+            <li><a href="https://testpoo.github.io/关于我.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;关于我</a></li>
             
-            <li><a href="https://testpoo.github.io/网址集.html"><label style="color: #38b6fd"></label>&nbsp;网址集</a></li>
+            <li><a href="https://testpoo.github.io/网址集.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;网址集</a></li>
             
-            <li><a href="https://testpoo.github.io/问题集.html"><label style="color: #38b6fd"></label>&nbsp;问题集</a></li>
+            <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><label style="color: #38b6fd"></label>&nbsp;技术</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;系统安装</a></li>
             
-            <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><label style="color: #38b6fd"></label>&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
-            <li><a href="https://testpoo.github.io/人生的最高境界.html"><label style="color: #38b6fd"></label>&nbsp;摘录</a></li>
+            <li><a href="https://testpoo.github.io/使用tar包安装mysql.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;技术</a></li>
             
-            <li><a href="https://testpoo.github.io/CSS代码小抄.html"><label style="color: #38b6fd"></label>&nbsp;代码小抄</a></li>
+            <li><a href="https://testpoo.github.io/CSS代码小抄.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;代码小抄</a></li>
             
-            <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><label style="color: #38b6fd"></label>&nbsp;测试</a></li>
+            <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html" style="color: #ff9023;"><label style="color: #ff9023;"></label>&nbsp;&nbsp;测试</a></li>
             
           </ul>
         </div>
@@ -63,7 +63,7 @@
             
             <a href="https://testpoo.github.io/nose简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共57734个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
             
-            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: #f9fafb;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共27130个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
+            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共26941个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
             
           </ul>
         </div>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python自动化之unittest</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-07-07 16:01:58</span></div>
+      <div class="header"><span>Python自动化之unittest</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-09-28 14:51:10</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -114,45 +114,45 @@
 <h4 id="11-unittest">1.1 unittest 初体验</h4>
 <p>先通过实例对unittest来个直观了解吧</p>
 <p>1.py</p>
-<pre class="codehilite"><code># coding=utf-8
+<pre class="codehilite"><code># coding=utf-8
 
-import unittest
+import unittest
 
-# 通过继承 unittest.TestCase 来实现用例
-class forTest(unittest.TestCase):
-    # 类的初始化
-    @classmethod
-    def setUpClass(cls):
-        print('class')
-    # 类的释放
-    @classmethod
-    def tearDownClass(cls):
-        print('tclass')
-        
-    # 测试用例初始化
-    def setUp(self):
-        print(&quot;setUp&quot;)
-    # 测试用例释放
-    def tearDown(self):
-        print(&quot;teadDown&quot;)
-    
-    # 测试用例
-    def test_a(self):
-        print(&quot;a&quot;)
-    # 测试用例
-    def test_b(self):
-        print(&quot;b&quot;)
-    
-    # 函数
-    def add(self, a, b):
-        return a + b
-    # 测试用例
-    def test_c(self):
-        c = self.add(1, 3)
-        print('c =', c)
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+# 通过继承 unittest.TestCase 来实现用例
+class forTest(unittest.TestCase):
+    # 类的初始化
+    @classmethod
+    def setUpClass(cls):
+        print('class')
+    # 类的释放
+    @classmethod
+    def tearDownClass(cls):
+        print('tclass')
+
+    # 测试用例初始化
+    def setUp(self):
+        print(&quot;setUp&quot;)
+    # 测试用例释放
+    def tearDown(self):
+        print(&quot;teadDown&quot;)
+
+    # 测试用例
+    def test_a(self):
+        print(&quot;a&quot;)
+    # 测试用例
+    def test_b(self):
+        print(&quot;b&quot;)
+
+    # 函数
+    def add(self, a, b):
+        return a + b
+    # 测试用例
+    def test_c(self):
+        c = self.add(1, 3)
+        print('c =', c)
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>对上面的程序进行讲解：</p>
@@ -194,7 +194,7 @@ if __name__ == &quot;__main__&quot;:
 <p>1 (默认模式): 非常类似静默模式 只是在每个成功的用例前面有个“.” 每个失败的用例前面有个“F”，每个跳过的案例前面有个“S”，每个预期失败真失败的案例前面有个“X”，每个预期失败却成功的案例前面有个“U”</p>
 </li>
 <li>
-<p>2 (详细模式):测试结果会显示每个测试用例的所有相关的信息 并且 你在命令行里加入不同的参数可以起到一样的效果</p>
+<p>2 (详细模式):测试结果会显示每个测试用例的所有相关的信息 并且 你在命令行里加入不同的参数可以起到一样的效果</p>
 </li>
 </ol>
 <p>运行结果分析：</p>
@@ -235,34 +235,34 @@ OK
 下面看这样一个例子，我们打开谷歌浏览器，输入百度网址并进行搜索，搜索后关闭浏览器</p>
 <p>2.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from selenium import webdriver
-import time
+import unittest
+from selenium import webdriver
+import time
 
-class forTest(unittest.TestCase):
-    # 测试用例初始化
-    # 打开谷歌浏览器，并进入百度
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver.get('http://www.baidu.com')
-    # 测试用例释放
-    # 等待 3s，关闭浏览器
-    def tearDown(self):
-        time.sleep(3)
-        self.driver.quit()
- 
-    # 输入'苹果'，并点击搜索
-    def test_1(self):
-        self.driver.find_element_by_id('kw').send_keys('苹果')
-        self.driver.find_element_by_id('su').click()
- 
-    # 输入'香蕉'，并点击搜索
-    def test_2(self):
-        self.driver.find_element_by_id('kw').send_keys('香蕉')
-        self.driver.find_element_by_id('su').click()
- 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+class forTest(unittest.TestCase):
+    # 测试用例初始化
+    # 打开谷歌浏览器，并进入百度
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get('http://www.baidu.com')
+    # 测试用例释放
+    # 等待 3s，关闭浏览器
+    def tearDown(self):
+        time.sleep(3)
+        self.driver.quit()
+
+    # 输入'苹果'，并点击搜索
+    def test_1(self):
+        self.driver.find_element_by_id('kw').send_keys('苹果')
+        self.driver.find_element_by_id('su').click()
+
+    # 输入'香蕉'，并点击搜索
+    def test_2(self):
+        self.driver.find_element_by_id('kw').send_keys('香蕉')
+        self.driver.find_element_by_id('su').click()
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>上面的案例中，我们将打开谷歌浏览器，进入百度，放在 setUp 中，完成每个测试用例之前的初始化，浏览器的关闭放在tearDown 中，完成测试用例的释放</p>
@@ -287,24 +287,24 @@ OK
 </ul>
 <p>直接看例子比较直观</p>
 <p>3.py</p>
-<pre class="codehilite"><code># coding=utf-8
-import unittest
-from ddt import ddt
-from ddt import data    # 导入data
+<pre class="codehilite"><code># coding=utf-8
+import unittest
+from ddt import ddt
+from ddt import data    # 导入data
 
-# 类之前定义装饰器，表示在类中要使用ddt了
+# 类之前定义装饰器，表示在类中要使用ddt了
 @ddt
-class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        print('\n{:=^20}'.format(&quot;测试开始&quot;))
-    def tearDown(self):
-        print(&quot;{:=^20}&quot;.format('测试结束'))
-    # data用于设定参数
-    @data('苹果', '香蕉', '葡萄', '石榴')
-    def test_1(self, txt):
-        print(txt)
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        print('\n{:=^20}'.format(&quot;测试开始&quot;))
+    def tearDown(self):
+        print(&quot;{:=^20}&quot;.format('测试结束'))
+    # data用于设定参数
+    @data('苹果', '香蕉', '葡萄', '石榴')
+    def test_1(self, txt):
+        print(txt)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>运行结果：</p>
@@ -337,25 +337,25 @@ OK
 <p>我们改变一下设定的参数，将 data 设定的参数改为 (('苹果', '香蕉'), ('葡萄', '石榴'))，再进行测试，如下所示</p>
 <p>4.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from ddt import ddt
-from ddt import data
+import unittest
+from ddt import ddt
+from ddt import data
 
-# 类之前定义装饰器，表示在类中要使用ddt了
+# 类之前定义装饰器，表示在类中要使用ddt了
 @ddt
-class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        print('\n{:=^20}'.format(&quot;测试开始&quot;))
-    def tearDown(self):
-        print(&quot;{:=^20}&quot;.format('测试结束'))
- 
-    # data 用于设定参数，将包 ('苹果', '香蕉') 作为一个整体赋值给 txt
-    @data(('苹果', '香蕉'), ('葡萄', '石榴'))
-    def test_1(self, txt):
-        print(txt)
- 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        print('\n{:=^20}'.format(&quot;测试开始&quot;))
+    def tearDown(self):
+        print(&quot;{:=^20}&quot;.format('测试结束'))
+
+    # data 用于设定参数，将包 ('苹果', '香蕉') 作为一个整体赋值给 txt
+    @data(('苹果', '香蕉'), ('葡萄', '石榴'))
+    def test_1(self, txt):
+        print(txt)
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>运行结果如下：</p>
@@ -378,26 +378,26 @@ OK
 <p>加入解包后的代码如下所示：</p>
 <p>5.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from ddt import ddt
-from ddt import data
-from ddt import unpack # 导入unpack
+import unittest
+from ddt import ddt
+from ddt import data
+from ddt import unpack # 导入unpack
 
-# 类之前定义装饰器，表示在类中要使用ddt了
+# 类之前定义装饰器，表示在类中要使用ddt了
 @ddt
-class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        print('\n{:=^20}'.format(&quot;测试开始&quot;))
-    def tearDown(self):
-        print(&quot;{:=^20}&quot;.format('测试结束'))
-    @data(('苹果', '香蕉'), ('葡萄', '石榴'))
-    # 解包，将 ('苹果', '香蕉') 解包，'苹果' 赋值给 txt1，'香蕉'赋值给 txt2
-    @unpack
-    def test_3(self, txt1, txt2):
-        print(txt1)
-        print(txt2)
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        print('\n{:=^20}'.format(&quot;测试开始&quot;))
+    def tearDown(self):
+        print(&quot;{:=^20}&quot;.format('测试结束'))
+    @data(('苹果', '香蕉'), ('葡萄', '石榴'))
+    # 解包，将 ('苹果', '香蕉') 解包，'苹果' 赋值给 txt1，'香蕉'赋值给 txt2
+    @unpack
+    def test_3(self, txt1, txt2):
+        print(txt1)
+        print(txt2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>运行结果如下：</p>
@@ -421,35 +421,35 @@ OK
 <p>上面的例子中，我们将输入的参数直接固定了，其实也可以通过文件读取，读取结果决定</p>
 <p>6.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from ddt import ddt
-from ddt import data
-from ddt import unpack
+import unittest
+from ddt import ddt
+from ddt import data
+from ddt import unpack
 
-def readFile():
-    params = []
-    file = open('6.ddt.txt', 'r', encoding = 'utf-8')
-    for line in file.readlines():
-        params.append(line.strip('\n').split(','))
-return params
+def readFile():
+    params = []
+    file = open('6.ddt.txt', 'r', encoding = 'utf-8')
+    for line in file.readlines():
+        params.append(line.strip('\n').split(','))
+return params
 
-# 类之前定义装饰器，表示在类中要使用ddt了
+# 类之前定义装饰器，表示在类中要使用ddt了
 @ddt
-class MyTestCase(unittest.TestCase):
-    def setUp(self) -&gt; None:
-        print('{:=^20}'.format(&quot;测试开始&quot;))
-    def tearDown(self) -&gt; None:
-        print(&quot;{:=^20}&quot;.format('测试结束'))
+class MyTestCase(unittest.TestCase):
+    def setUp(self) -&gt; None:
+        print('{:=^20}'.format(&quot;测试开始&quot;))
+    def tearDown(self) -&gt; None:
+        print(&quot;{:=^20}&quot;.format('测试结束'))
 
-    # 从文件中读取
-    @data(*readFile())
-    @unpack
-    def test_1(self, txt1, txt2):
-        print(txt1)
-        print(txt2)
+    # 从文件中读取
+    @data(*readFile())
+    @unpack
+    def test_1(self, txt1, txt2):
+        print(txt1)
+        print(txt2)
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>6.ddt.txt 文件中的内如下：</p>
@@ -480,30 +480,30 @@ OK
 <p>打开浏览器进入百度查询的例子中我们发现除了输入的参数不同，test_1(self) 和 test_2(self) 完全相同，这里我们就要通过 data 设定参数实现在一个测试用例中输入不同的参数</p>
 <p>7.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from selenium import webdriver
-import time
-from ddt import ddt
-from ddt import data
-    
-# 在 class 前定义 @ddt，用于表示要使用 ddt 了
+import unittest
+from selenium import webdriver
+import time
+from ddt import ddt
+from ddt import data
+
+# 在 class 前定义 @ddt，用于表示要使用 ddt 了
 @ddt
-class forTestTest(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver.get('http://www.baidu.com')
-    def tearDown(self):
-        time.sleep(3)
-        self.driver.quit()
-        
-    # data 用于设定参数
-    @data('苹果', '香蕉', '石榴')
-    def test_1(self, txt):
-        self.driver.find_element_by_id('kw').send_keys(txt)
-        self.driver.find_element_by_id('su').click()
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+class forTestTest(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get('http://www.baidu.com')
+    def tearDown(self):
+        time.sleep(3)
+        self.driver.quit()
+
+    # data 用于设定参数
+    @data('苹果', '香蕉', '石榴')
+    def test_1(self, txt):
+        self.driver.find_element_by_id('kw').send_keys(txt)
+        self.driver.find_element_by_id('su').click()
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>运行结果，谷歌浏览器被打开三次，进入百度，分别输入 '苹果'，'香蕉'，'石榴'，每次浏览器关闭之后，才打开下一次，再进行搜索</p>
@@ -522,39 +522,39 @@ OK
 <p>上面的例子中，我们将输入的参数直接固定了，其实也可以通过文件读取，决定进入哪一个url 和输入的参数</p>
 <p>8.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from selenium import webdriver
-import time
-from ddt import ddt
-from ddt import data
-from ddt import unpack
-    
-def readFile():
-    params = []
-    file = open('8.ddt.txt', 'r', encoding = 'utf-8')
-    for line in file.readlines():
-        params.append(line.strip('\n').split(','))
-    return params
-    
+import unittest
+from selenium import webdriver
+import time
+from ddt import ddt
+from ddt import data
+from ddt import unpack
+
+def readFile():
+    params = []
+    file = open('8.ddt.txt', 'r', encoding = 'utf-8')
+    for line in file.readlines():
+        params.append(line.strip('\n').split(','))
+    return params
+
 @ddt
-class forTestTest(unittest.TestCase):
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-    def tearDown(self):
-        time.sleep(3)
-        self.driver.quit()
-                    
-    # data 用于设定参数，表示参数由 readFile() 函数的返回值决定
-    # unpack 用于解析参数，例如将['http://www.baidu.com', '苹果'] 分别 赋值给 url 和 txt
-    @data(*readFile())
-    @unpack
-    def test_1(self, url, txt):
-        self.driver.get(url)
-        self.driver.find_element_by_id('kw').send_keys(txt)
-        self.driver.find_element_by_id('su').click()
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+class forTestTest(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+    def tearDown(self):
+        time.sleep(3)
+        self.driver.quit()
+
+    # data 用于设定参数，表示参数由 readFile() 函数的返回值决定
+    # unpack 用于解析参数，例如将['http://www.baidu.com', '苹果'] 分别 赋值给 url 和 txt
+    @data(*readFile())
+    @unpack
+    def test_1(self, url, txt):
+        self.driver.get(url)
+        self.driver.find_element_by_id('kw').send_keys(txt)
+        self.driver.find_element_by_id('su').click()
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>8.ddt.txt 文件中的内容如下：</p>
@@ -588,38 +588,38 @@ OK
 <p>上面的代码</p>
 <p>9.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from ddt import ddt
-from ddt import data
-from ddt import unpack
+import unittest
+from ddt import ddt
+from ddt import data
+from ddt import unpack
 
-def readFile():
-    params = []
-    file = open('9.ddt.txt', 'r', encoding = 'utf-8')
-    for line in file.readlines():
-        params.append(line.strip('\n').split(','))
-return params
+def readFile():
+    params = []
+    file = open('9.ddt.txt', 'r', encoding = 'utf-8')
+    for line in file.readlines():
+        params.append(line.strip('\n').split(','))
+return params
 
-# 类之前定义装饰器，表示在类中要使用ddt了
+# 类之前定义装饰器，表示在类中要使用ddt了
 @ddt
-class MyTestCase(unittest.TestCase):
-    def setUp(self) -&gt; None:
-        print('\n{:=^20}'.format(&quot;测试开始&quot;))
-    def tearDown(self) -&gt; None:
-        print(&quot;{:=^20}&quot;.format('测试结束'))
-    
-    @data(*readFile())
-    @unpack
-    def test_yam(self, name, age):
-        # 获取参数name
-        print(name)
-        # 这里做断言，当断言不相等的时候返回 msg
-        self.assertEqual(name, '张三', msg = 'NotEqual')
-        # 获取为 text 的 value
-        print(age)
-    
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+class MyTestCase(unittest.TestCase):
+    def setUp(self) -&gt; None:
+        print('\n{:=^20}'.format(&quot;测试开始&quot;))
+    def tearDown(self) -&gt; None:
+        print(&quot;{:=^20}&quot;.format('测试结束'))
+
+    @data(*readFile())
+    @unpack
+    def test_yam(self, name, age):
+        # 获取参数name
+        print(name)
+        # 这里做断言，当断言不相等的时候返回 msg
+        self.assertEqual(name, '张三', msg = 'NotEqual')
+        # 获取为 text 的 value
+        print(age)
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>文件内容：</p>
@@ -753,46 +753,46 @@ FAILED (failures=2)
 <p>直接看例子更加直观</p>
 <p>10.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-    
-class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        pass
-    
-    def tearDown(self):
-        pass
-    
-    def test_1(self):
-        print('1')
-    
-    # 无条件跳过该条用例
-    @unittest.skip(&quot;不想运行&quot;)
-    def test_2(self):
-        print('2')
-    
-    # 有条件跳过操作，条件为True跳过
-    @unittest.skipIf(1 &lt; 2, '1 &lt; 2 为True，条件成立，跳过执行')
-    def test_3(self):
-        print('3')
-    
-    # 有条件执行跳过，条件为False跳过
-    @unittest.skipUnless(1 &gt; 2, 'Unless的理由，条件为False，跳过执行')
-    def test_4(self):
-        print('4')
-    
-    # 标记该测试预期为失败 ，如果该测试方法运行失败，则该测试不算做失败
-    @unittest.expectedFailure
-    def test_5(self):
-        print('5')
-        self.assertEqual(4, 3, msg = 'Equal')
-    
-    @unittest.expectedFailure
-    def test_6(self):
-        print('6')
-        self.assertNotEqual(4, 3, msg = 'NotEqual')
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+import unittest
+
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def test_1(self):
+        print('1')
+
+    # 无条件跳过该条用例
+    @unittest.skip(&quot;不想运行&quot;)
+    def test_2(self):
+        print('2')
+
+    # 有条件跳过操作，条件为True跳过
+    @unittest.skipIf(1 &lt; 2, '1 &lt; 2 为True，条件成立，跳过执行')
+    def test_3(self):
+        print('3')
+
+    # 有条件执行跳过，条件为False跳过
+    @unittest.skipUnless(1 &gt; 2, 'Unless的理由，条件为False，跳过执行')
+    def test_4(self):
+        print('4')
+
+    # 标记该测试预期为失败 ，如果该测试方法运行失败，则该测试不算做失败
+    @unittest.expectedFailure
+    def test_5(self):
+        print('5')
+        self.assertEqual(4, 3, msg = 'Equal')
+
+    @unittest.expectedFailure
+    def test_6(self):
+        print('6')
+        self.assertNotEqual(4, 3, msg = 'NotEqual')
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>执行结果如下，可以看到，test_2，test_3，test_4 跳过，test_5执行失败，但不算做失败</p>
@@ -818,31 +818,31 @@ FAILED (skipped=3, expected failures=1, unexpected successes=1)
 </ul>
 <p>通过例子讲解最容易理解，看一个最简单的例子，下面的代码中有五个测试用例，程序运行的结果和测试用例在代码中位置是没有关系的，结果永远打印 1 2 3 4 5，这是因为测试用例的执行顺序默认是按照字典顺序执行的，如何才能控制测试用例的执行顺序呢，这就需要使用测试套件了。</p>
 <p>testCase.py</p>
-<pre class="codehilite"><code>import unittest
-class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        pass
-    
-    def tearDown(self):
-        pass
-        
-    def test_2(self):
-        print(&quot;2&quot;)
-        
-    def test_1(self):
-        print(&quot;1&quot;)
-    
-    def test_4(self):
-        print(&quot;4&quot;)
-    
-    def test_3(self):
-        print(&quot;3&quot;) 
-    
-    def test_5(self):
-        print(&quot;5&quot;)
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+<pre class="codehilite"><code>import unittest
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def test_2(self):
+        print(&quot;2&quot;)
+
+    def test_1(self):
+        print(&quot;1&quot;)
+
+    def test_4(self):
+        print(&quot;4&quot;)
+
+    def test_3(self):
+        print(&quot;3&quot;) 
+
+    def test_5(self):
+        print(&quot;5&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>运行结果：</p>
@@ -863,17 +863,17 @@ OK
 
 <p>再建一个py 文件11.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from testCase import *
-    
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
-# 方法一，添加测试用例（子元素）到测试套件（集合）
+import unittest
+from testCase import *
+
+# 创建一个测试套件 list
+suite = unittest.TestSuite()
+# 方法一，添加测试用例（子元素）到测试套件（集合）
 suite.addTest(MyTestCase('test_3'))
 suite.addTest(MyTestCase(&quot;test_1&quot;))
 suite.addTest(MyTestCase(&quot;test_5&quot;))
 
-runner = unittest.TextTestRunner(verbosity=2)
+runner = unittest.TextTestRunner(verbosity=2)
 runner.run(suite)
 </code></pre>
 
@@ -893,68 +893,68 @@ OK
 <p>上面的方法每次添加测试用例都需要调用 addTest 函数，能不能一次添加多个测试用例</p>
 <p>12.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from testCase import *
+import unittest
+from testCase import *
 
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
+# 创建一个测试套件 list
+suite = unittest.TestSuite()
 
-# 方法二，批量添加测试用例
-cases = [MyTestCase('test_3'), MyTestCase('test_1'), MyTestCase('test_5')]
+# 方法二，批量添加测试用例
+cases = [MyTestCase('test_3'), MyTestCase('test_1'), MyTestCase('test_5')]
 suite.addTests(cases)
 
-# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
-runner = unittest.TextTestRunner(verbosity=2)
+# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
+runner = unittest.TextTestRunner(verbosity=2)
 runner.run(suite)
 </code></pre>
 
 <p>如果测试用例非常多，或者有多个文件中的测试用例都需要测试，这样添加也不是很方便，我们好可以按照文件路径，将该路径下需要测试的文件添加进测试套件中</p>
 <p>13.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from testCase import *
+import unittest
+from testCase import *
 
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
+# 创建一个测试套件 list
+suite = unittest.TestSuite()
 
-# 方法三，批量运行多个unittest类
-test_dir = './'
-# start_dir 参数指定文件路径，pattern 执行规则，'s*.py' 表示以 &quot;s&quot; 开头，&quot;.py&quot; 的都加入测试套件中
-discover = unittest.defaultTestLoader.discover(start_dir = test_dir, pattern = 't*.py')
+# 方法三，批量运行多个unittest类
+test_dir = './'
+# start_dir 参数指定文件路径，pattern 执行规则，'s*.py' 表示以 &quot;s&quot; 开头，&quot;.py&quot; 的都加入测试套件中
+discover = unittest.defaultTestLoader.discover(start_dir = test_dir, pattern = 't*.py')
 
-runner = unittest.TextTestRunner(verbosity=2)
-runner.run(discover) # 通过 run 函数运行测试用例
+runner = unittest.TextTestRunner(verbosity=2)
+runner.run(discover) # 通过 run 函数运行测试用例
 </code></pre>
 
 <p>还可以执行类的名字，执行该类下面所有的测试用例，使用 loadTestsFromName 函数或者 loadTestsFromTestCase 都可以，案例如下：</p>
 <p>14.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from testCase import *
+import unittest
+from testCase import *
 
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
+# 创建一个测试套件 list
+suite = unittest.TestSuite()
 
-# 方法四，给出文件名和类名，就能测试所有的测试用例
+# 方法四，给出文件名和类名，就能测试所有的测试用例
 suite.addTests(unittest.TestLoader().loadTestsFromName('testCase.MyTestCase'))
 
-# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
-runner = unittest.TextTestRunner(verbosity=2)
+# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
+runner = unittest.TextTestRunner(verbosity=2)
 runner.run(suite)
 </code></pre>
 
 <p>15.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from testCase import *
+import unittest
+from testCase import *
 
-# 创建一个测试套件 list
-suite = unittest.TestSuite()
+# 创建一个测试套件 list
+suite = unittest.TestSuite()
 
-# 方法五，给出类名，就能测试所有的测试用例
+# 方法五，给出类名，就能测试所有的测试用例
 suite.addTests(unittest.TestLoader().loadTestsFromTestCase(MyTestCase))
-# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
-runner = unittest.TextTestRunner(verbosity=2)
+# 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)
+runner = unittest.TextTestRunner(verbosity=2)
 runner.run(suite)
 </code></pre>
 
@@ -975,60 +975,60 @@ runner.run(suite)
 <p><code>from HTMLTestRunner import HTMLTestRunner</code></p>
 <p>下面就通过案例进行演示</p>
 <p>testCase.py 文件</p>
-<pre class="codehilite"><code>import unittest
-class MyTestCase(unittest.TestCase):
-    def setUp(self) -&gt; None:
-        pass
-    
-    def tearDown(self) -&gt; None:
-        pass
-    
-    def test_2(self):
-        print(&quot;2&quot;)
-    
-    def test_1(self):
-        print(&quot;1&quot;)
-    
-    def test_4(self):
-        print(&quot;4&quot;)
-    
-    def test_3(self):
-        print(&quot;3&quot;)
-    
-    def test_5(self):
-        print(&quot;5&quot;)
-    
-if __name__ == &quot;__main__&quot;:
-    unittest.main(verbosity=2)
+<pre class="codehilite"><code>import unittest
+class MyTestCase(unittest.TestCase):
+    def setUp(self) -&gt; None:
+        pass
+
+    def tearDown(self) -&gt; None:
+        pass
+
+    def test_2(self):
+        print(&quot;2&quot;)
+
+    def test_1(self):
+        print(&quot;1&quot;)
+
+    def test_4(self):
+        print(&quot;4&quot;)
+
+    def test_3(self):
+        print(&quot;3&quot;)
+
+    def test_5(self):
+        print(&quot;5&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main(verbosity=2)
 </code></pre>
 
 <p>16.py</p>
 <pre class="codehilite"><code>#coding=utf-8
-import unittest
-from suite_case import MyTestCase
-from HTMLTestRunner import HTMLTestRunner
-import os
+import unittest
+from suite_case import MyTestCase
+from HTMLTestRunner import HTMLTestRunner
+import os
 
-suite = unittest.TestSuite()
+suite = unittest.TestSuite()
 
-report_path = './report/'
-report_file = report_path + 'report.html'
-# 路径不存在就创建一个文件夹
-if not os.path.exists(report_path):
-    os.mkdir(report_path)
+report_path = './report/'
+report_file = report_path + 'report.html'
+# 路径不存在就创建一个文件夹
+if not os.path.exists(report_path):
+    os.mkdir(report_path)
 else:
 pass
 
-report_name = '测试报告名称'
-report_title = '测试报告标题'
-report_desc = '测试报告描述'
-    
-with open(report_file, 'wb') as report:
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(MyTestCase))
-    # 套件结合 TextTestRunner 对象进行运行，相当于 unittest.mian()
-    # 如果结合 HTMLTestRunner 使用，则需要调用 HTMLTestRunner 中的运行器
-    runner = HTMLTestRunner(stream = report, title = report_title, description = report_desc)
-    runner.run(suite)
+report_name = '测试报告名称'
+report_title = '测试报告标题'
+report_desc = '测试报告描述'
+
+with open(report_file, 'wb') as report:
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(MyTestCase))
+    # 套件结合 TextTestRunner 对象进行运行，相当于 unittest.mian()
+    # 如果结合 HTMLTestRunner 使用，则需要调用 HTMLTestRunner 中的运行器
+    runner = HTMLTestRunner(stream = report, title = report_title, description = report_desc)
+    runner.run(suite)
 </code></pre>
 
 <p>运行 就会成成 report.html 文件，浏览器打开该文件，如下所示：</p>
@@ -1088,13 +1088,19 @@ with open(report_file, 'wb') as report:
         
         <li><a href="https://testpoo.github.io/网址集.html"><span><label style="color: #38b6fd"></label>&nbsp;网址集</span></a></li>
         
-        <li><a href="https://testpoo.github.io/问题集.html"><span><label style="color: #38b6fd"></label>&nbsp;问题集</span></a></li>
+        <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
         <li><a href="https://testpoo.github.io/安装docker-swarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装docker-swarm</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian+sway安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+sway安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/人生的最高境界.html"><span><label style="color: #38b6fd"></label>&nbsp;人生的最高境界</span></a></li>
         
@@ -1106,8 +1112,6 @@ with open(report_file, 'wb') as report:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
         <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
@@ -1115,8 +1119,6 @@ with open(report_file, 'wb') as report:
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
@@ -1135,8 +1137,6 @@ with open(report_file, 'wb') as report:
         <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian+openbox安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+openbox安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span></a></li>
         
@@ -1162,8 +1162,6 @@ with open(report_file, 'wb') as report:
         
         <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian+i3安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;debian+i3安装过程</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
         
         <li><a href="https://testpoo.github.io/紫薇斗数解析.html"><span><label style="color: #38b6fd"></label>&nbsp;紫薇斗数解析</span></a></li>
@@ -1179,8 +1177,6 @@ with open(report_file, 'wb') as report:
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/debian命令apt和dpkg用法.html"><span><label style="color: #38b6fd"></label>&nbsp;debian命令apt和dpkg用法</span></a></li>
         
       </ul>
     </div>

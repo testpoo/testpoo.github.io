@@ -51,7 +51,7 @@
             
             <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-09-28&nbsp;&nbsp;共4930个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共17484个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共17146个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-09-28 14:51:10</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-09 17:54:40</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -84,11 +84,9 @@
 <li><a href="#74">7.4. 添加触摸板关启脚本</a></li>
 <li><a href="#75-lightdm">7.5. lightdm设置</a></li>
 <li><a href="#76-gtk">7.6. 启动gtk编辑器</a></li>
-<li><a href="#77-grub">7.7. 修改grub背景</a></li>
-<li><a href="#78">7.8. 添加右键</a></li>
-<li><a href="#79-thunar">7.9. thunar侧边栏添加位置</a></li>
-<li><a href="#810">8.10. 启动花屏</a></li>
-<li><a href="#711-gtkcss">7.11. 添加gtk.css</a></li>
+<li><a href="#77">7.7. 添加右键</a></li>
+<li><a href="#78">7.8. 启动花屏</a></li>
+<li><a href="#79-gtkcss">7.9. 添加gtk.css</a></li>
 </ul>
 </li>
 <li><a href="#8-kde">8. kde桌面设置</a><ul>
@@ -189,8 +187,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main c
 <h4 id="71">7.1. 删除软件</h4>
 <p><code>sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic xfburn xterm xfce4-whiskermenu-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-verve-plugin xfce4-timer-plugin xfce4-smartbookmark-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-diskperf-plugin xfce4-battery-plugin xfce4-sensors-plugin xfce4-systemload-plugin xfce4-xkb-plugin xfce4-netload-plugin xfce4-mailwatch-plugin xfce4-clipman-plugin xfce4-fsguard-plugin atril xfce4-genmon-plugin xsane --purge</code></p>
 <h4 id="72">7.2. 安装软件</h4>
-<p><code>sudo apt install ibus git ibus-rime rime-data-wubi gvfs-backends blueman yaru-theme-gtk fonts-noto-cjk webext-ublock-origin-firefox ristretto xfce4-screenshooter xfce4-taskmanager xfce4-docklike-plugin</code></p>
-<p>安装图标 <code>https://github.com/vinceliuice/Qogir-icon-theme</code></p>
+<p><code>sudo apt install ibus git ibus-rime rime-data-wubi gvfs-backends blueman yaru-theme-gtk fonts-noto-cjk webext-ublock-origin-firefox ristretto xfce4-screenshooter xfce4-taskmanager xfce4-docklike-plugin pkexec pipewire-audio firefox-esr-l10n-zh-cn</code></p>
+<p>可选图标 <code>https://github.com/vinceliuice/McMojave-circle</code></p>
 <h4 id="73">7.3. 设置</h4>
 <ul>
 <li>快捷键设置:设置--&gt;键盘--&gt;应用程度快捷键</li>
@@ -219,7 +217,7 @@ icon-theme-name = Qogir-icon
 font-name = Noto Sans Mono 10
 default-user-image = #distributor-logo
 clock-format = %A %F %H:%M 第%V周
-background = /usr/share/desktop-base/active-theme/grub/grub-4x3.png
+background = /usr/share/backgrounds/background.png
 xft-dpi = 120
 indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
 #hide-user-image = true
@@ -233,11 +231,7 @@ greeter-hide-users=false 前的#去掉
 重启xfce-panel:xfce4-panel -r
 </code></pre>
 
-<h4 id="77-grub">7.7. 修改grub背景</h4>
-<pre class="codehilite"><code>找到 /usr/share/desktop-base/active-theme/grub/grub-4x3.png 替换, 必须是png格式
-</code></pre>
-
-<h4 id="78">7.8. 添加右键</h4>
+<h4 id="77">7.7. 添加右键</h4>
 <pre class="codehilite"><code>ln -s %f 'Link to %n'
 Create a Link
 创建链接
@@ -257,15 +251,11 @@ Search for Files
 搜索文件
 </code></pre>
 
-<h4 id="79-thunar">7.9. thunar侧边栏添加位置</h4>
-<ul>
-<li>点击文件右键<code>send to--&gt;Side Panel</code></li>
-</ul>
-<h4 id="810">8.10. 启动花屏</h4>
+<h4 id="78">7.8. 启动花屏</h4>
 <pre class="codehilite"><code>xfwm4--&gt;vblank_mode=off
 </code></pre>
 
-<h4 id="711-gtkcss">7.11. 添加gtk.css</h4>
+<h4 id="79-gtkcss">7.9. 添加gtk.css</h4>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>

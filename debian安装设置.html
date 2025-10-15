@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #ff9023;"><label style="color: #ff9023;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -51,7 +51,7 @@
             
             <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-09-28&nbsp;&nbsp;共4930个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共17146个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共18392个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-09 17:54:40</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-15 15:09:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -161,6 +161,9 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 
 <h3 id="5">5. 修改源</h3>
 <p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a></p>
+<ul>
+<li>传统格式（/etc/apt/sources.list）</li>
+</ul>
 <pre class="codehilite"><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
@@ -172,6 +175,36 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main c
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main contrib non-free non-free-firmware
 # deb https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
 # # deb-src https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
+</code></pre>
+
+<ul>
+<li>DEB822 格式（/etc/apt/sources.list.d/debian.sources）</li>
+</ul>
+<pre class="codehilite"><code>Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/debian
+Suites: testing testing-updates testing-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# Types: deb-src
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/debian
+# Suites: testing testing-updates testing-backports
+# Components: main contrib non-free non-free-firmware
+# Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security
+Suites: testing-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security
+# Suites: testing-security
+# Components: main contrib non-free non-free-firmware
+# Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 </code></pre>
 
 <h3 id="6-gnome">6. Gnome桌面设置</h3>
@@ -463,7 +496,7 @@ profile nomad {
 
 <h3 id="11-wayfire">11. wayfire窗口管理器设置</h3>
 <h4 id="111-wayfire">11.1. 安装wayfire及相关软件</h4>
-<pre class="codehilite"><code>sudo apt install wayfire swaybg swayidle swaylock fcitx5 fcitx5-rime rime-data-wubi thunar xarchiver pipewire-audio blueman thunar-archive-plugin fonts-noto-cjk xfce4-terminal xfce4-appfinder seatd xwayland git brightnessctl firefox-esr mako-notifier
+<pre class="codehilite"><code>sudo apt install wayfire swaybg swayidle swaylock fcitx5 fcitx5-rime rime-data-wubi thunar xarchiver pipewire-audio blueman thunar-archive-plugin fonts-noto-cjk xfce4-terminal xfce4-appfinder seatd xwayland git brightnessctl firefox-esr webext-ublock-origin-firefox firefox-esr-l10n-zh-cn mako-notifier grim wl-clipboard slurp libglib2.0-bin waybar chromium chromium-l10n
 </code></pre>
 
 <h4 id="112-wayfire">11.2. 启动wayfire</h4>

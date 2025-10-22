@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch手动安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-09-28&nbsp;&nbsp;共4930个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共4184个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共18392个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-10-22&nbsp;&nbsp;共4600个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共16429个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
           </ul>
         </div>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch手动安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-15 15:09:58</span></div>
+      <div class="header"><span>Arch手动安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-22 16:07:02</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -79,9 +79,8 @@
 <li><a href="#11">11.安装引导程序</a></li>
 <li><a href="#12">12.创建用户</a></li>
 <li><a href="#6-wm">6. 安装桌面/WM</a><ul>
-<li><a href="#61-openbox">6.1 安装openbox</a></li>
-<li><a href="#62-deepin">6.2 安装deepin</a></li>
-<li><a href="#63-xfce4">6.3 安装xfce4</a></li>
+<li><a href="#61-deepin">6.1 安装deepin</a></li>
+<li><a href="#62-xfce4">6.2 安装xfce4</a></li>
 </ul>
 </li>
 <li><a href="#7_1">7 网络问题</a></li>
@@ -163,17 +162,13 @@ swapon /dev/sda3
 </code></pre>
 
 <h3 id="6-wm">6. 安装桌面/WM</h3>
-<h4 id="61-openbox">6.1 安装openbox</h4>
-<pre class="codehilite"><code>pacman -S xorg-xinit install openbox obconf tint2 sakura pcmanfm ristretto fcitx-rime librime-data-wubi lxappearance xarchiver pulseaudio blueman sudo git intel-microcode fonts-noto-cjk slock light jgmenu chromium chromium-l10n webext-ublock-origin-chromium
-</code></pre>
-
-<h4 id="62-deepin">6.2 安装deepin</h4>
+<h4 id="61-deepin">6.1 安装deepin</h4>
 <pre class="codehilite"><code>pacman -S xorg-server lightdm networkmanager deepin deepin-extra
 systemctl enable lightdm
 systemctl enable NetworkManager
 </code></pre>
 
-<h4 id="63-xfce4">6.3 安装xfce4</h4>
+<h4 id="62-xfce4">6.2 安装xfce4</h4>
 <pre class="codehilite"><code>pacman -S xfce4 xfce4-goodies nano sudo lightdm lightdm-gtk-greeter networkmanager xf86-video-intel network-manager-applet alsa-utils pulseaudio pulseaudio-alsa pavucontrol
 
 声音问题
@@ -242,6 +237,8 @@ $ nmcli radio wifi off
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
+        <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
@@ -284,13 +281,9 @@ $ nmcli radio wifi off
         
         <li><a href="https://testpoo.github.io/go入门.html"><span><label style="color: #38b6fd"></label>&nbsp;go入门</span></a></li>
         
-        <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
-        
         <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span></a></li>
         
         <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span></a></li>
         

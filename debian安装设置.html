@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch手动安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-09-28&nbsp;&nbsp;共4930个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共4184个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共18392个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-10-22&nbsp;&nbsp;共4600个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2023-06-30&nbsp;&nbsp;共4575个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共16429个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
           </ul>
         </div>
@@ -61,12 +61,12 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-15 15:09:58</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2025-10-22 16:07:02</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
-<li><a href="#1">1. 下载特殊版本链接</a></li>
+<li><a href="#1">1. 下载链接</a></li>
 <li><a href="#2-u">2. 制作自启动U盘</a></li>
 <li><a href="#3-sudo">3. 将当前用户加入sudo</a></li>
 <li><a href="#4-debain5">4. 去掉debain开机启动项停留的5秒和电池的问题</a></li>
@@ -111,10 +111,9 @@
 <li><a href="#102-labwc">10.2. 启动labwc</a></li>
 <li><a href="#103-labwc">10.3. 添加labwc配置文件</a></li>
 <li><a href="#104">10.4. 输入法环境变量设置</a></li>
-<li><a href="#105-rcxml">10.5. 添加快捷键rc.xml</a></li>
-<li><a href="#106">10.6 开机启动设置</a></li>
-<li><a href="#107-foot">10.7. 设置终端(foot)字体大小</a></li>
-<li><a href="#108-kanshi">10.8. 设置kanshi</a></li>
+<li><a href="#105">10.5 开机启动设置</a></li>
+<li><a href="#106-foot">10.6. 设置终端(foot)字体大小</a></li>
+<li><a href="#107-kanshi">10.7. 设置kanshi</a></li>
 </ul>
 </li>
 <li><a href="#11-wayfire">11. wayfire窗口管理器设置</a><ul>
@@ -128,10 +127,7 @@
 <li><a href="#12-rime">12. rime输入法设置</a></li>
 </ul>
 </div>
-<h3 id="1">1. 下载特殊版本链接</h3>
-<blockquote>
-<p>2023 年 6 月 10 日： 从 Debian 12 (Bookworm) 开始，固件已包含在正常的 Debian 安装程序镜像中，用户无需再在此查找特殊版本。</p>
-</blockquote>
+<h3 id="1">1. 下载链接</h3>
 <ul>
 <li>
 <p><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/">稳定版：https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/</a></p>
@@ -153,7 +149,9 @@ reboot
 </code></pre>
 
 <h3 id="4-debain5">4. 去掉debain开机启动项停留的5秒和电池的问题</h3>
-<pre class="codehilite"><code>nano /etc/default/grub
+<pre class="codehilite"><code># 使用grup时使用，使用systemd-boot请忽略
+
+nano /etc/default/grub
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
@@ -224,16 +222,24 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 <p>可选图标 <code>https://github.com/vinceliuice/McMojave-circle</code></p>
 <h4 id="73">7.3. 设置</h4>
 <ul>
-<li>快捷键设置:设置--&gt;键盘--&gt;应用程度快捷键</li>
-<li>窗口样式设置：设置--&gt;窗口管理器--&gt;样式+按钮布局</li>
-<li>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;辅助功能  最大化窗口时隐藏标题</li>
+<li>
+<p>快捷键设置:设置--&gt;键盘--&gt;应用程度快捷键</p>
+</li>
+<li>
+<p>窗口样式设置：设置--&gt;窗口管理器--&gt;样式+按钮布局</p>
+</li>
+<li>
+<p>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;辅助功能  最大化窗口时隐藏标题</p>
+</li>
 <li>
 <p>窗口管理器微调：设置--&gt;窗口管理器微调--&gt;合成器  在dock窗口下显示阴影</p>
 </li>
 <li>
 <p>主题/字体设置：外观--&gt;样式+字体</p>
 </li>
-<li>设置时钟格式：%A %F %H:%M 第%V周 | %F%n%H:%M | %H:%M%n%Y/%m/%d</li>
+<li>
+<p>设置时钟格式：%A %F %H:%M 第%V周 | %F%n%H:%M | %H:%M%n%Y/%m/%d</p>
+</li>
 </ul>
 <h4 id="74">7.4. 添加触摸板关启脚本</h4>
 <p>本机快捷键Fn+F8==Super+Ctrl_L</p>
@@ -433,41 +439,7 @@ SDL_IM_MODULE=fcitx
 GLFW_IM_MODULE=fcitx
 </code></pre>
 
-<h4 id="105-rcxml">10.5. 添加快捷键rc.xml</h4>
-<pre class="codehilite"><code>    &lt;!--自定义--&gt;
-    &lt;keybind key=&quot;W-s&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;wofi --show=drun --lines=6 --allow-images --prompt='请输入软件名称'&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioRaiseVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;pactl set-sink-volume @DEFAULT_SINK@ +5%&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioLowerVolume&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;pactl set-sink-volume @DEFAULT_SINK@ -5%&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioMute&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;pactl set-sink-mute @DEFAULT_SINK@ toggle&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86AudioMicMute&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;pactl set-source-mute @DEFAULT_SOURCE@ toggle&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessDown&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;brightnessctl set 5%-&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;XF86MonBrightnessUp&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;brightnessctl set 5%+&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;W-s&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;wofi --show=drun -I --gtk-dark -x 0 -y 324 -W 300 -H 600 -p '请输入软件名称'&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;W-q&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;firefox-esr&quot; /&gt;
-    &lt;/keybind&gt;
-    &lt;keybind key=&quot;W-e&quot;&gt;
-      &lt;action name=&quot;Execute&quot; command=&quot;thunar&quot; /&gt;
-    &lt;/keybind&gt;
-</code></pre>
-
-<h4 id="106">10.6 开机启动设置</h4>
+<h4 id="105">10.5 开机启动设置</h4>
 <pre class="codehilite"><code>nano autostart
 
 # 背景设置
@@ -477,14 +449,14 @@ fcitx5 &gt;/dev/null 2&gt;&amp;1 &amp;
 blueman-applet &gt;/dev/null 2&gt;&amp;1 &amp;
 </code></pre>
 
-<h4 id="107-foot">10.7. 设置终端(foot)字体大小</h4>
+<h4 id="106-foot">10.6. 设置终端(foot)字体大小</h4>
 <pre class="codehilite"><code>cp -r /etc/foot/ ~/.config/foot/
 vi ~/.config/foot/foot.ini
 
 font=monospace:size=12
 </code></pre>
 
-<h4 id="108-kanshi">10.8. 设置kanshi</h4>
+<h4 id="107-kanshi">10.7. 设置kanshi</h4>
 <pre class="codehilite"><code>mkdir -p ~/.config/kanshi
 nano config
 
@@ -596,6 +568,8 @@ GLFW_IM_MODULE=fcitx
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
+        <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
@@ -638,13 +612,9 @@ GLFW_IM_MODULE=fcitx
         
         <li><a href="https://testpoo.github.io/go入门.html"><span><label style="color: #38b6fd"></label>&nbsp;go入门</span></a></li>
         
-        <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
-        
         <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/面试问答.html"><span><label style="color: #38b6fd"></label>&nbsp;面试问答</span></a></li>
         
         <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span></a></li>
         

@@ -1,0 +1,638 @@
+<!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>测试铺</title>
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/markdown.css">
+    <link rel="stylesheet" type="text/css" href="https://testpoo.github.io/themes/css/style.css">
+    <link rel="shortcut icon" type="image/ico" href="https://testpoo.github.io/themes/img/favicon.ico">
+  </head>
+
+  
+
+  <body>
+    <div class="sider">
+      <div class="categories">
+        <div class="title">
+          <a href="https://testpoo.github.io">
+            <img src="https://testpoo.github.io/themes/img/title.jpg">
+            <div class="linkbutton testpoo">测试铺</div>
+          </a>
+        </div>
+        <div class="scrollheight">
+          <ul>
+            
+            <li><a href="https://testpoo.github.io/关于我.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;关于我</a></li>
+            
+            <li><a href="https://testpoo.github.io/网址集.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;网址集</a></li>
+            
+            <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
+            
+            <li><a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            
+            <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
+            
+            <li><a href="https://testpoo.github.io/使用tar包安装mysql.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;技术</a></li>
+            
+            <li><a href="https://testpoo.github.io/CSS代码小抄.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;代码小抄</a></li>
+            
+            <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;测试</a></li>
+            
+          </ul>
+        </div>
+        <div class="github"><a href="https://github.com/testpoo" target="_blank" title="GitHub:https://github.com/testpoo"></a><a href="#" title="微信号：puyaweis"></a><a href="#" title="邮箱：pu_yawei@qq.com"></a><a href="https://testpoo.github.io/rss.xml" target="_blank"></a></div>
+      </div>
+      <div class="articles">
+        <div class="category"> 系统安装</div>
+        <div class="scrollheight">
+          <ul>
+            
+            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共13621个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
+            
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共4184个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
+            
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2025-10-22&nbsp;&nbsp;共4600个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span></li></a>
+            
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2025-09-28&nbsp;&nbsp;共16503个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            
+          </ul>
+        </div>
+        <div class="item-num">总共4项</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="header"><span>Labwc菜单的几种生成方法</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-02-08 11:21:13</span></div>
+      <input class="pswitch ponoff" type="checkbox" id="catalog">
+      <div class="posts">
+        <div class="toc">
+<ul>
+<li><a href="#1">1.程序超过一定数量折叠菜单</a></li>
+<li><a href="#2">2.程序按一定类型分类</a></li>
+</ul>
+</div>
+<h3 id="1">1.程序超过一定数量折叠菜单</h3>
+<pre class="codehilite"><code>#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser,math
+
+logouts = [
+  {
+    &quot;Name&quot;: &quot;锁屏&quot;,
+    &quot;Exec&quot;: &quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;,
+    &quot;Icon&quot;: &quot;system-lock-screen&quot;
+  },
+#  {
+#    &quot;Name&quot;: &quot;挂起&quot;,
+#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend&quot;
+#  },
+#  {
+#    &quot;Name&quot;: &quot;休眼&quot;,
+#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;
+#  },
+  {
+    &quot;Name&quot;: &quot;重载&quot;,
+    &quot;Exec&quot;: &quot;labwc -r&quot;,
+    &quot;Icon&quot;: &quot;systemback&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;退出&quot;,
+    &quot;Exec&quot;: &quot;labwc -e&quot;,
+    &quot;Icon&quot;: &quot;system-log-out&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;重启&quot;,
+    &quot;Exec&quot;: &quot;systemctl reboot&quot;,
+    &quot;Icon&quot;: &quot;system-reboot&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;关机&quot;,
+    &quot;Exec&quot;: &quot;systemctl poweroff -i&quot;,
+    &quot;Icon&quot;: &quot;system-shutdown&quot;
+  }
+]
+
+exclude = [
+  'Avahi Zeroconf 浏览器',
+  'Avahi SSH 服务器的浏览器',
+  'Avahi VNC 服务器的浏览器',
+  'Foot Server',
+  'Foot Client'
+]
+
+file_path = '/usr/share/applications/'
+file_names = os.listdir(file_path)
+
+app_lists = []
+num= 30
+i = 0
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding='utf-8')
+    if not config.has_section('Desktop Entry'):
+        continue
+    if config.get('Desktop Entry','Type') != &quot;Application&quot; or config.get('Desktop Entry','NoDisplay', fallback='false') != 'false' or 'LABWC' not in config.get('Desktop Entry','OnlyShowIn', fallback='LABWC').split(';'):
+        continue
+    if config.has_option('Desktop Entry','Name[zh_CN]'):
+        Name = config.get('Desktop Entry','Name[zh_CN]')
+    elif config.has_option('Desktop Entry','Name[zh]'):
+        Name = config.get('Desktop Entry','Name[zh]')
+    elif config.has_option('Desktop Entry','Name'):
+        Name = config.get('Desktop Entry','Name')
+    else:
+        continue
+    if config.has_option('Desktop Entry','Exec'):
+        Exec = config.get('Desktop Entry','Exec').split('%')[0]
+    else:
+        continue
+    if config.has_option('Desktop Entry','Icon'):
+        Icon = config.get('Desktop Entry','Icon')
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon])
+
+app_lists.sort()
+cols = math.ceil(len(app_lists)/num)
+
+def items(label, icon, exec):
+    print('&lt;item label=&quot;' + label + '&quot; icon=&quot;' + icon + '&quot;&gt;')
+    print('&lt;action name=&quot;Execute&quot; command=&quot;' + exec + '&quot; /&gt;')
+    print('&lt;/item&gt;')
+
+def menus(app_lists, num, i):
+    for app in app_lists[0:num]:
+        items(app[0], app[2], app[1])
+    if cols &gt; i and len(app_lists) &gt;= num:
+        i += 1
+        print('&lt;menu id=&quot;more&quot; icon=&quot;application-sql&quot; label=&quot;更多程序&quot;&gt;')
+        menus(app_lists[num:], num, i)
+        print('&lt;/menu&gt;')
+
+print('&lt;openbox_pipe_menu&gt;')
+menus(app_lists, num, i)
+print('  &lt;separator /&gt;')
+for app in logouts:
+    items(app[&quot;Name&quot;], app[&quot;Icon&quot;], app[&quot;Exec&quot;])
+print('&lt;/openbox_pipe_menu&gt;')
+</code></pre>
+
+<h3 id="2">2.程序按一定类型分类</h3>
+<ul>
+<li>单一程序只有一个分类</li>
+</ul>
+<pre class="codehilite"><code>#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser
+from collections import defaultdict
+
+cats = {
+  &quot;Office&quot;: [
+    &quot;办公&quot;,
+    &quot;applications-office&quot;
+  ],
+  &quot;Development&quot;: [
+    &quot;开发&quot;,
+    &quot;applications-development&quot;
+  ],
+  &quot;Graphics&quot;: [
+    &quot;图形&quot;,
+    &quot;applications-graphics&quot;
+  ],
+  &quot;Network&quot;: [
+    &quot;互联网&quot;,
+    &quot;applications-network&quot;
+  ],
+  &quot;Education&quot;: [
+    &quot;教育&quot;,
+    &quot;applications-education&quot;
+  ],
+  &quot;Science&quot;: [
+    &quot;科学&quot;,
+    &quot;applications-science&quot;
+  ],
+  &quot;Games&quot;: [
+    &quot;游戏&quot;,
+    &quot;applications-games&quot;
+  ],
+  &quot;System&quot;: [
+    &quot;系统&quot;,
+    &quot;applications-system&quot;
+  ],
+  &quot;Utility&quot;: [
+    &quot;附件&quot;,
+    &quot;applications-utilities&quot;
+  ],
+  &quot;Settings&quot;: [
+    &quot;设置&quot;,
+    &quot;applications-system-orange&quot;
+  ],
+  &quot;AudioVideo&quot;: [
+    &quot;多媒体&quot;,
+    &quot;applications-multimedia&quot;
+  ],
+  &quot;others&quot;:[
+    &quot;其他&quot;,
+    &quot;applications-other&quot;
+  ]
+}
+
+logouts = [
+  {
+    &quot;Name&quot;: &quot;锁屏&quot;,
+    &quot;Exec&quot;: &quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;,
+    &quot;Icon&quot;: &quot;system-lock-screen&quot;
+  },
+#  {
+#    &quot;Name&quot;: &quot;挂起&quot;,
+#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend&quot;
+#  },
+#  {
+#    &quot;Name&quot;: &quot;休眼&quot;,
+#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;
+#  },
+  {
+    &quot;Name&quot;: &quot;重载&quot;,
+    &quot;Exec&quot;: &quot;labwc -r&quot;,
+    &quot;Icon&quot;: &quot;systemback&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;退出&quot;,
+    &quot;Exec&quot;: &quot;labwc -e&quot;,
+    &quot;Icon&quot;: &quot;system-log-out&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;重启&quot;,
+    &quot;Exec&quot;: &quot;systemctl reboot&quot;,
+    &quot;Icon&quot;: &quot;system-reboot&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;关机&quot;,
+    &quot;Exec&quot;: &quot;systemctl poweroff -i&quot;,
+    &quot;Icon&quot;: &quot;system-shutdown&quot;
+  }
+]
+
+exclude = [
+  'Avahi Zeroconf 浏览器',
+  'Avahi SSH 服务器的浏览器',
+  'Avahi VNC 服务器的浏览器',
+  'Foot Server',
+  'Foot Client'
+]
+
+file_path = '/usr/share/applications/'
+file_names = os.listdir(file_path)
+
+app_lists = []
+app_dicts = defaultdict(list)
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding='utf-8')
+    if not config.has_section('Desktop Entry'):
+        continue
+    if config.get('Desktop Entry','Type') != &quot;Application&quot; or config.get('Desktop Entry','NoDisplay', fallback='false') != 'false' or 'LABWC' not in config.get('Desktop Entry','OnlyShowIn', fallback='LABWC').split(';'):
+        continue
+    if config.has_option('Desktop Entry','Name[zh_CN]'):
+        Name = config.get('Desktop Entry','Name[zh_CN]')
+    elif config.has_option('Desktop Entry','Name[zh]'):
+        Name = config.get('Desktop Entry','Name[zh]')
+    elif config.has_option('Desktop Entry','Name'):
+        Name = config.get('Desktop Entry','Name')
+    else:
+        continue
+    if config.has_option('Desktop Entry','Exec'):
+        Exec = config.get('Desktop Entry','Exec').split('%')[0]
+    else:
+        continue
+    if config.has_option('Desktop Entry','Icon'):
+        Icon = config.get('Desktop Entry','Icon')
+    else:
+        continue
+    if config.has_option('Desktop Entry','Categories'):
+        Categories = config.get('Desktop Entry','Categories').split(';')[:-1]
+        Category = &quot;others&quot;
+        for cat in Categories:
+            if cat in cats:
+                Category = cat
+                break
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon,Category])
+
+app_lists.sort()
+for app in app_lists:
+    app_dicts[app[3]].append(app)
+
+app_dicts = dict(sorted(app_dicts.items(), key=lambda item: item[0]))
+
+print('&lt;openbox_pipe_menu&gt;')
+for key in app_dicts:
+    print('&lt;menu id=&quot;' + key + '&quot; icon=&quot;' + cats[key][1] + '&quot; label=&quot;' + cats[key][0] + '&quot;&gt;')
+    for app in app_dicts[key]:
+        print('&lt;item label=&quot;' + app[0] + '&quot; icon=&quot;' + app[2] + '&quot;&gt;')
+        print('&lt;action name=&quot;Execute&quot; command=&quot;' + app[1] + '&quot; /&gt;')
+        print('&lt;/item&gt;')
+    print('&lt;/menu&gt;')
+print('  &lt;separator /&gt;')
+for app in logouts:
+    print('&lt;item label=&quot;' + app[&quot;Name&quot;] + '&quot; icon=&quot;' + app[&quot;Icon&quot;] + '&quot;&gt;')
+    print('&lt;action name=&quot;Execute&quot; command=&quot;' + app[&quot;Exec&quot;] + '&quot; /&gt;')
+    print('&lt;/item&gt;')
+print('&lt;/openbox_pipe_menu&gt;')
+</code></pre>
+
+<ul>
+<li>单一程序可能有多个分类</li>
+</ul>
+<pre class="codehilite"><code>#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser
+from collections import defaultdict
+
+cats = {
+  &quot;Office&quot;: [
+    &quot;办公&quot;,
+    &quot;applications-office&quot;
+  ],
+  &quot;Development&quot;: [
+    &quot;开发&quot;,
+    &quot;applications-development&quot;
+  ],
+  &quot;Graphics&quot;: [
+    &quot;图形&quot;,
+    &quot;applications-graphics&quot;
+  ],
+  &quot;Network&quot;: [
+    &quot;互联网&quot;,
+    &quot;applications-network&quot;
+  ],
+  &quot;Education&quot;: [
+    &quot;教育&quot;,
+    &quot;applications-education&quot;
+  ],
+  &quot;Science&quot;: [
+    &quot;科学&quot;,
+    &quot;applications-science&quot;
+  ],
+  &quot;Games&quot;: [
+    &quot;游戏&quot;,
+    &quot;applications-games&quot;
+  ],
+  &quot;System&quot;: [
+    &quot;系统&quot;,
+    &quot;applications-system&quot;
+  ],
+  &quot;Utility&quot;: [
+    &quot;附件&quot;,
+    &quot;applications-utilities&quot;
+  ],
+  &quot;Settings&quot;: [
+    &quot;设置&quot;,
+    &quot;applications-system-orange&quot;
+  ],
+  &quot;AudioVideo&quot;: [
+    &quot;多媒体&quot;,
+    &quot;applications-multimedia&quot;
+  ],
+  &quot;others&quot;:[
+    &quot;其他&quot;,
+    &quot;applications-other&quot;
+  ]
+}
+
+logouts = [
+  {
+    &quot;Name&quot;: &quot;锁屏&quot;,
+    &quot;Exec&quot;: &quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;,
+    &quot;Icon&quot;: &quot;system-lock-screen&quot;
+  },
+#  {
+#    &quot;Name&quot;: &quot;挂起&quot;,
+#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend&quot;
+#  },
+#  {
+#    &quot;Name&quot;: &quot;休眼&quot;,
+#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,
+#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;
+#  },
+  {
+    &quot;Name&quot;: &quot;重载&quot;,
+    &quot;Exec&quot;: &quot;labwc -r&quot;,
+    &quot;Icon&quot;: &quot;systemback&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;退出&quot;,
+    &quot;Exec&quot;: &quot;labwc -e&quot;,
+    &quot;Icon&quot;: &quot;system-log-out&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;重启&quot;,
+    &quot;Exec&quot;: &quot;systemctl reboot&quot;,
+    &quot;Icon&quot;: &quot;system-reboot&quot;
+  },
+  {
+    &quot;Name&quot;: &quot;关机&quot;,
+    &quot;Exec&quot;: &quot;systemctl poweroff -i&quot;,
+    &quot;Icon&quot;: &quot;system-shutdown&quot;
+  }
+]
+
+exclude = [
+  'Avahi Zeroconf 浏览器',
+  'Avahi SSH 服务器的浏览器',
+  'Avahi VNC 服务器的浏览器',
+  'Foot Server',
+  'Foot Client'
+]
+
+file_path = '/usr/share/applications/'
+file_names = os.listdir(file_path)
+
+app_lists = []
+app_dicts = defaultdict(list)
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding='utf-8')
+    if not config.has_section('Desktop Entry'):
+        continue
+    if config.get('Desktop Entry','Type') != &quot;Application&quot; or config.get('Desktop Entry','NoDisplay', fallback='false') != 'false' or 'LABWC' not in config.get('Desktop Entry','OnlyShowIn', fallback='LABWC').split(';'):
+        continue
+    if config.has_option('Desktop Entry','Name[zh_CN]'):
+        Name = config.get('Desktop Entry','Name[zh_CN]')
+    elif config.has_option('Desktop Entry','Name[zh]'):
+        Name = config.get('Desktop Entry','Name[zh]')
+    elif config.has_option('Desktop Entry','Name'):
+        Name = config.get('Desktop Entry','Name')
+    else:
+        continue
+    if config.has_option('Desktop Entry','Exec'):
+        Exec = config.get('Desktop Entry','Exec').split('%')[0]
+    else:
+        continue
+    if config.has_option('Desktop Entry','Icon'):
+        Icon = config.get('Desktop Entry','Icon')
+    else:
+        continue
+    if config.has_option('Desktop Entry','Categories'):
+        Categories = config.get('Desktop Entry','Categories').split(';')[:-1]
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon,Categories])
+
+app_lists.sort()
+cats_list = [k for k, v in cats.items()]
+
+for app in app_lists:
+    intersection = list(set(cats_list) &amp; set(app[3]))
+    if intersection != []:
+        for key in intersection:
+            app_dicts[key].append(app)
+    else:
+        app_dicts['others'].append(app)
+
+app_dicts = dict(sorted(app_dicts.items(), key=lambda item: item[0]))
+
+print('&lt;openbox_pipe_menu&gt;')
+for key in app_dicts:
+    print('&lt;menu id=&quot;' + key + '&quot; icon=&quot;' + cats[key][1] + '&quot; label=&quot;' + cats[key][0] + '&quot;&gt;')
+    for app in app_dicts[key]:
+        print('&lt;item label=&quot;' + app[0] + '&quot; icon=&quot;' + app[2] + '&quot;&gt;')
+        print('&lt;action name=&quot;Execute&quot; command=&quot;' + app[1] + '&quot; /&gt;')
+        print('&lt;/item&gt;')
+    print('&lt;/menu&gt;')
+print('  &lt;separator /&gt;')
+for app in logouts:
+    print('&lt;item label=&quot;' + app[&quot;Name&quot;] + '&quot; icon=&quot;' + app[&quot;Icon&quot;] + '&quot;&gt;')
+    print('&lt;action name=&quot;Execute&quot; command=&quot;' + app[&quot;Exec&quot;] + '&quot; /&gt;')
+    print('&lt;/item&gt;')
+print('&lt;/openbox_pipe_menu&gt;')
+</code></pre>
+        <div class="copyright">
+          <ul>
+            <li>本文作者：畄月寒</li>
+            <li>本文链接：<a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html">https://testpoo.github.io/Labwc菜单的几种生成方法.html</a></li>
+            <li>版权声明：本铺所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"> BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <input class="pswitch ponoff" type="checkbox" id="nvacatalog">
+    <div class="nav">
+      <ul>
+        
+        <li><a href="https://testpoo.github.io/关于我.html"><span><label style="color: #38b6fd"></label>&nbsp;关于我</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/网址集.html"><span><label style="color: #38b6fd"></label>&nbsp;网址集</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/西安看病去哪里.html"><span><label style="color: #38b6fd"></label>&nbsp;西安看病去哪里</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/安装docker-swarm.html"><span><label style="color: #38b6fd"></label>&nbsp;安装docker-swarm</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/人生的最高境界.html"><span><label style="color: #38b6fd"></label>&nbsp;人生的最高境界</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/中国朝代顺序口诀.html"><span><label style="color: #38b6fd"></label>&nbsp;中国朝代顺序口诀</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/国际象棋棋子代号.html"><span><label style="color: #38b6fd"></label>&nbsp;国际象棋棋子代号</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/CSS代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/FastApi简析.html"><span><label style="color: #38b6fd"></label>&nbsp;FastApi简析</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/go测试库apitest简介.html"><span><label style="color: #38b6fd"></label>&nbsp;go测试库apitest简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/go入门.html"><span><label style="color: #38b6fd"></label>&nbsp;go入门</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/BeautifulSoup简介.html"><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/tkinter教程.html"><span><label style="color: #38b6fd"></label>&nbsp;tkinter教程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html"><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/性能监控各指令详解.html"><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python进阶.html"><span><label style="color: #38b6fd"></label>&nbsp;Python进阶</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Git简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Git简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python正则表达式.html"><span><label style="color: #38b6fd"></label>&nbsp;Python正则表达式</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/nose简介.html"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Python自动化之unittest.html"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql的安装.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql的安装</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/紫薇斗数解析.html"><span><label style="color: #38b6fd"></label>&nbsp;紫薇斗数解析</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/分分种学会python3.html"><span><label style="color: #38b6fd"></label>&nbsp;分分种学会python3</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Markdown笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;Markdown笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+      </ul>
+    </div>
+  </body>
+
+  </html>

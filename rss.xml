@@ -6,8 +6,8 @@
     <description>减少幻想，减少欲望，多读书，多实践</description>  
     <link></link>  
     <atom:link href="测试铺/feed.xml" rel="self" type="application/rss+xml"/>  
-    <pubDate>2026-02-04 19:02:19</pubDate>  
-    <lastBuildDate>2026-02-04 19:02:19</lastBuildDate>  
+    <pubDate>2026-02-08 11:21:13</pubDate>  
+    <lastBuildDate>2026-02-08 11:21:13</lastBuildDate>  
     <generator>PyBlog v0.0.1</generator> 
     
     <item> 
@@ -50,7 +50,7 @@
 &lt;p&gt;微信：puyaweis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/关于我.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/关于我.html</guid>
        
@@ -96,7 +96,7 @@
 &lt;hr /&gt;
 &lt;h3 id=&#34;_6&#34;&gt; 缴费查询&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://ggfw.xars12333.cn/#/personalServices&#34; target=&#34;_blank&#34;&gt;西安市人力资源和社会保障局-公共服务平台&lt;/a&gt; | &lt;a href=&#34;https://zwfw.shaanxi.gov.cn/ggfw/hallEnter/#/personLogin&#34; target=&#34;_blank&#34;&gt;陕西医保网上大厅&lt;/a&gt;&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/网址集.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/网址集.html</guid>
        
@@ -206,11 +206,477 @@ slmgr -dlv
 &lt;h3 id=&#34;winpythonpid&#34;&gt; Win下查找python进程PID&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;wmic process where name=&amp;quot;python.exe&amp;quot; list full
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/小技巧.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/小技巧.html</guid>
        
       <category>小技巧</category> 
+      
+    </item>
+    
+    <item> 
+      <title>Labwc菜单的几种生成方法</title>  
+      <description>&lt;div class=&#34;toc&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1&#34;&gt;1.程序超过一定数量折叠菜单&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2&#34;&gt;2.程序按一定类型分类&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;1&#34;&gt;1.程序超过一定数量折叠菜单&lt;/h3&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser,math
+
+logouts = [
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;锁屏&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;swaylock -f -i /home/poo/图片/background.png -c 015000&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-lock-screen&amp;quot;
+  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;挂起&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl suspend&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend&amp;quot;
+#  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;休眼&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl hibernate&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend-hibernate&amp;quot;
+#  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重载&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -r&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;systemback&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;退出&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -e&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-log-out&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重启&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl reboot&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-reboot&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;关机&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl poweroff -i&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-shutdown&amp;quot;
+  }
+]
+
+exclude = [
+  &#39;Avahi Zeroconf 浏览器&#39;,
+  &#39;Avahi SSH 服务器的浏览器&#39;,
+  &#39;Avahi VNC 服务器的浏览器&#39;,
+  &#39;Foot Server&#39;,
+  &#39;Foot Client&#39;
+]
+
+file_path = &#39;/usr/share/applications/&#39;
+file_names = os.listdir(file_path)
+
+app_lists = []
+num= 30
+i = 0
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding=&#39;utf-8&#39;)
+    if not config.has_section(&#39;Desktop Entry&#39;):
+        continue
+    if config.get(&#39;Desktop Entry&#39;,&#39;Type&#39;) != &amp;quot;Application&amp;quot; or config.get(&#39;Desktop Entry&#39;,&#39;NoDisplay&#39;, fallback=&#39;false&#39;) != &#39;false&#39; or &#39;LABWC&#39; not in config.get(&#39;Desktop Entry&#39;,&#39;OnlyShowIn&#39;, fallback=&#39;LABWC&#39;).split(&#39;;&#39;):
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name&#39;)
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Exec&#39;):
+        Exec = config.get(&#39;Desktop Entry&#39;,&#39;Exec&#39;).split(&#39;%&#39;)[0]
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Icon&#39;):
+        Icon = config.get(&#39;Desktop Entry&#39;,&#39;Icon&#39;)
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon])
+
+app_lists.sort()
+cols = math.ceil(len(app_lists)/num)
+
+def items(label, icon, exec):
+    print(&#39;&amp;lt;item label=&amp;quot;&#39; + label + &#39;&amp;quot; icon=&amp;quot;&#39; + icon + &#39;&amp;quot;&amp;gt;&#39;)
+    print(&#39;&amp;lt;action name=&amp;quot;Execute&amp;quot; command=&amp;quot;&#39; + exec + &#39;&amp;quot; /&amp;gt;&#39;)
+    print(&#39;&amp;lt;/item&amp;gt;&#39;)
+
+def menus(app_lists, num, i):
+    for app in app_lists[0:num]:
+        items(app[0], app[2], app[1])
+    if cols &amp;gt; i and len(app_lists) &amp;gt;= num:
+        i += 1
+        print(&#39;&amp;lt;menu id=&amp;quot;more&amp;quot; icon=&amp;quot;application-sql&amp;quot; label=&amp;quot;更多程序&amp;quot;&amp;gt;&#39;)
+        menus(app_lists[num:], num, i)
+        print(&#39;&amp;lt;/menu&amp;gt;&#39;)
+
+print(&#39;&amp;lt;openbox_pipe_menu&amp;gt;&#39;)
+menus(app_lists, num, i)
+print(&#39;  &amp;lt;separator /&amp;gt;&#39;)
+for app in logouts:
+    items(app[&amp;quot;Name&amp;quot;], app[&amp;quot;Icon&amp;quot;], app[&amp;quot;Exec&amp;quot;])
+print(&#39;&amp;lt;/openbox_pipe_menu&amp;gt;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2&#34;&gt;2.程序按一定类型分类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单一程序只有一个分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser
+from collections import defaultdict
+
+cats = {
+  &amp;quot;Office&amp;quot;: [
+    &amp;quot;办公&amp;quot;,
+    &amp;quot;applications-office&amp;quot;
+  ],
+  &amp;quot;Development&amp;quot;: [
+    &amp;quot;开发&amp;quot;,
+    &amp;quot;applications-development&amp;quot;
+  ],
+  &amp;quot;Graphics&amp;quot;: [
+    &amp;quot;图形&amp;quot;,
+    &amp;quot;applications-graphics&amp;quot;
+  ],
+  &amp;quot;Network&amp;quot;: [
+    &amp;quot;互联网&amp;quot;,
+    &amp;quot;applications-network&amp;quot;
+  ],
+  &amp;quot;Education&amp;quot;: [
+    &amp;quot;教育&amp;quot;,
+    &amp;quot;applications-education&amp;quot;
+  ],
+  &amp;quot;Science&amp;quot;: [
+    &amp;quot;科学&amp;quot;,
+    &amp;quot;applications-science&amp;quot;
+  ],
+  &amp;quot;Games&amp;quot;: [
+    &amp;quot;游戏&amp;quot;,
+    &amp;quot;applications-games&amp;quot;
+  ],
+  &amp;quot;System&amp;quot;: [
+    &amp;quot;系统&amp;quot;,
+    &amp;quot;applications-system&amp;quot;
+  ],
+  &amp;quot;Utility&amp;quot;: [
+    &amp;quot;附件&amp;quot;,
+    &amp;quot;applications-utilities&amp;quot;
+  ],
+  &amp;quot;Settings&amp;quot;: [
+    &amp;quot;设置&amp;quot;,
+    &amp;quot;applications-system-orange&amp;quot;
+  ],
+  &amp;quot;AudioVideo&amp;quot;: [
+    &amp;quot;多媒体&amp;quot;,
+    &amp;quot;applications-multimedia&amp;quot;
+  ],
+  &amp;quot;others&amp;quot;:[
+    &amp;quot;其他&amp;quot;,
+    &amp;quot;applications-other&amp;quot;
+  ]
+}
+
+logouts = [
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;锁屏&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;swaylock -f -i /home/poo/图片/background.png -c 015000&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-lock-screen&amp;quot;
+  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;挂起&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl suspend&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend&amp;quot;
+#  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;休眼&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl hibernate&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend-hibernate&amp;quot;
+#  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重载&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -r&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;systemback&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;退出&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -e&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-log-out&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重启&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl reboot&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-reboot&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;关机&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl poweroff -i&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-shutdown&amp;quot;
+  }
+]
+
+exclude = [
+  &#39;Avahi Zeroconf 浏览器&#39;,
+  &#39;Avahi SSH 服务器的浏览器&#39;,
+  &#39;Avahi VNC 服务器的浏览器&#39;,
+  &#39;Foot Server&#39;,
+  &#39;Foot Client&#39;
+]
+
+file_path = &#39;/usr/share/applications/&#39;
+file_names = os.listdir(file_path)
+
+app_lists = []
+app_dicts = defaultdict(list)
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding=&#39;utf-8&#39;)
+    if not config.has_section(&#39;Desktop Entry&#39;):
+        continue
+    if config.get(&#39;Desktop Entry&#39;,&#39;Type&#39;) != &amp;quot;Application&amp;quot; or config.get(&#39;Desktop Entry&#39;,&#39;NoDisplay&#39;, fallback=&#39;false&#39;) != &#39;false&#39; or &#39;LABWC&#39; not in config.get(&#39;Desktop Entry&#39;,&#39;OnlyShowIn&#39;, fallback=&#39;LABWC&#39;).split(&#39;;&#39;):
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name&#39;)
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Exec&#39;):
+        Exec = config.get(&#39;Desktop Entry&#39;,&#39;Exec&#39;).split(&#39;%&#39;)[0]
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Icon&#39;):
+        Icon = config.get(&#39;Desktop Entry&#39;,&#39;Icon&#39;)
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Categories&#39;):
+        Categories = config.get(&#39;Desktop Entry&#39;,&#39;Categories&#39;).split(&#39;;&#39;)[:-1]
+        Category = &amp;quot;others&amp;quot;
+        for cat in Categories:
+            if cat in cats:
+                Category = cat
+                break
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon,Category])
+
+app_lists.sort()
+for app in app_lists:
+    app_dicts[app[3]].append(app)
+
+app_dicts = dict(sorted(app_dicts.items(), key=lambda item: item[0]))
+
+print(&#39;&amp;lt;openbox_pipe_menu&amp;gt;&#39;)
+for key in app_dicts:
+    print(&#39;&amp;lt;menu id=&amp;quot;&#39; + key + &#39;&amp;quot; icon=&amp;quot;&#39; + cats[key][1] + &#39;&amp;quot; label=&amp;quot;&#39; + cats[key][0] + &#39;&amp;quot;&amp;gt;&#39;)
+    for app in app_dicts[key]:
+        print(&#39;&amp;lt;item label=&amp;quot;&#39; + app[0] + &#39;&amp;quot; icon=&amp;quot;&#39; + app[2] + &#39;&amp;quot;&amp;gt;&#39;)
+        print(&#39;&amp;lt;action name=&amp;quot;Execute&amp;quot; command=&amp;quot;&#39; + app[1] + &#39;&amp;quot; /&amp;gt;&#39;)
+        print(&#39;&amp;lt;/item&amp;gt;&#39;)
+    print(&#39;&amp;lt;/menu&amp;gt;&#39;)
+print(&#39;  &amp;lt;separator /&amp;gt;&#39;)
+for app in logouts:
+    print(&#39;&amp;lt;item label=&amp;quot;&#39; + app[&amp;quot;Name&amp;quot;] + &#39;&amp;quot; icon=&amp;quot;&#39; + app[&amp;quot;Icon&amp;quot;] + &#39;&amp;quot;&amp;gt;&#39;)
+    print(&#39;&amp;lt;action name=&amp;quot;Execute&amp;quot; command=&amp;quot;&#39; + app[&amp;quot;Exec&amp;quot;] + &#39;&amp;quot; /&amp;gt;&#39;)
+    print(&#39;&amp;lt;/item&amp;gt;&#39;)
+print(&#39;&amp;lt;/openbox_pipe_menu&amp;gt;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;单一程序可能有多个分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;#!/usr/bin/env python3
+# coding=utf-8
+
+import os,configparser
+from collections import defaultdict
+
+cats = {
+  &amp;quot;Office&amp;quot;: [
+    &amp;quot;办公&amp;quot;,
+    &amp;quot;applications-office&amp;quot;
+  ],
+  &amp;quot;Development&amp;quot;: [
+    &amp;quot;开发&amp;quot;,
+    &amp;quot;applications-development&amp;quot;
+  ],
+  &amp;quot;Graphics&amp;quot;: [
+    &amp;quot;图形&amp;quot;,
+    &amp;quot;applications-graphics&amp;quot;
+  ],
+  &amp;quot;Network&amp;quot;: [
+    &amp;quot;互联网&amp;quot;,
+    &amp;quot;applications-network&amp;quot;
+  ],
+  &amp;quot;Education&amp;quot;: [
+    &amp;quot;教育&amp;quot;,
+    &amp;quot;applications-education&amp;quot;
+  ],
+  &amp;quot;Science&amp;quot;: [
+    &amp;quot;科学&amp;quot;,
+    &amp;quot;applications-science&amp;quot;
+  ],
+  &amp;quot;Games&amp;quot;: [
+    &amp;quot;游戏&amp;quot;,
+    &amp;quot;applications-games&amp;quot;
+  ],
+  &amp;quot;System&amp;quot;: [
+    &amp;quot;系统&amp;quot;,
+    &amp;quot;applications-system&amp;quot;
+  ],
+  &amp;quot;Utility&amp;quot;: [
+    &amp;quot;附件&amp;quot;,
+    &amp;quot;applications-utilities&amp;quot;
+  ],
+  &amp;quot;Settings&amp;quot;: [
+    &amp;quot;设置&amp;quot;,
+    &amp;quot;applications-system-orange&amp;quot;
+  ],
+  &amp;quot;AudioVideo&amp;quot;: [
+    &amp;quot;多媒体&amp;quot;,
+    &amp;quot;applications-multimedia&amp;quot;
+  ],
+  &amp;quot;others&amp;quot;:[
+    &amp;quot;其他&amp;quot;,
+    &amp;quot;applications-other&amp;quot;
+  ]
+}
+
+logouts = [
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;锁屏&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;swaylock -f -i /home/poo/图片/background.png -c 015000&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-lock-screen&amp;quot;
+  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;挂起&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl suspend&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend&amp;quot;
+#  },
+#  {
+#    &amp;quot;Name&amp;quot;: &amp;quot;休眼&amp;quot;,
+#    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl hibernate&amp;quot;,
+#    &amp;quot;Icon&amp;quot;: &amp;quot;system-suspend-hibernate&amp;quot;
+#  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重载&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -r&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;systemback&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;退出&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;labwc -e&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-log-out&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;重启&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl reboot&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-reboot&amp;quot;
+  },
+  {
+    &amp;quot;Name&amp;quot;: &amp;quot;关机&amp;quot;,
+    &amp;quot;Exec&amp;quot;: &amp;quot;systemctl poweroff -i&amp;quot;,
+    &amp;quot;Icon&amp;quot;: &amp;quot;system-shutdown&amp;quot;
+  }
+]
+
+exclude = [
+  &#39;Avahi Zeroconf 浏览器&#39;,
+  &#39;Avahi SSH 服务器的浏览器&#39;,
+  &#39;Avahi VNC 服务器的浏览器&#39;,
+  &#39;Foot Server&#39;,
+  &#39;Foot Client&#39;
+]
+
+file_path = &#39;/usr/share/applications/&#39;
+file_names = os.listdir(file_path)
+
+app_lists = []
+app_dicts = defaultdict(list)
+
+for name in file_names:
+    config = configparser.RawConfigParser()
+    config.read(file_path + name, encoding=&#39;utf-8&#39;)
+    if not config.has_section(&#39;Desktop Entry&#39;):
+        continue
+    if config.get(&#39;Desktop Entry&#39;,&#39;Type&#39;) != &amp;quot;Application&amp;quot; or config.get(&#39;Desktop Entry&#39;,&#39;NoDisplay&#39;, fallback=&#39;false&#39;) != &#39;false&#39; or &#39;LABWC&#39; not in config.get(&#39;Desktop Entry&#39;,&#39;OnlyShowIn&#39;, fallback=&#39;LABWC&#39;).split(&#39;;&#39;):
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh_CN]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name[zh]&#39;)
+    elif config.has_option(&#39;Desktop Entry&#39;,&#39;Name&#39;):
+        Name = config.get(&#39;Desktop Entry&#39;,&#39;Name&#39;)
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Exec&#39;):
+        Exec = config.get(&#39;Desktop Entry&#39;,&#39;Exec&#39;).split(&#39;%&#39;)[0]
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Icon&#39;):
+        Icon = config.get(&#39;Desktop Entry&#39;,&#39;Icon&#39;)
+    else:
+        continue
+    if config.has_option(&#39;Desktop Entry&#39;,&#39;Categories&#39;):
+        Categories = config.get(&#39;Desktop Entry&#39;,&#39;Categories&#39;).split(&#39;;&#39;)[:-1]
+    else:
+        continue
+    if Name not in exclude:
+        app_lists.append([Name,Exec,Icon,Categories])
+
+app_lists.sort()
+cats_list = [k for k, v in cats.items()]
+
+for app in app_lists:
+    intersection = list(set(cats_list) &amp;amp; set(app[3]))
+    if intersection != []:
+        for key in intersection:
+            app_dicts[key].append(app)
+    else:
+        app_dicts[&#39;others&#39;].append(app)
+
+app_dicts = dict(sorted(app_dicts.items(), key=lambda item: item[0]))
+
+print(&#39;&amp;lt;openbox_pipe_menu&amp;gt;&#39;)
+for key in app_dicts:
+    print(&#39;&amp;lt;menu id=&amp;quot;&#39; + key + &#39;&amp;quot; icon=&amp;quot;&#39; + cats[key][1] + &#39;&amp;quot; label=&amp;quot;&#39; + cats[key][0] + &#39;&amp;quot;&amp;gt;&#39;)
+    for app in app_dicts[key]:
+        print(&#39;&amp;lt;item label=&amp;quot;&#39; + app[0] + &#39;&amp;quot; icon=&amp;quot;&#39; + app[2] + &#39;&amp;quot;&amp;gt;&#39;)
+        print(&#39;&amp;lt;action name=&amp;quot;Execute&amp;quot; command=&amp;quot;&#39; + app[1] + &#39;&amp;quot; /&amp;gt;&#39;)
+        print(&#39;&amp;lt;/item&amp;gt;&#39;)
+    print(&#39;&amp;lt;/menu&amp;gt;&#39;)
+print(&#39;  &amp;lt;separator /&amp;gt;&#39;)
+for app in logouts:
+    print(&#39;&amp;lt;item label=&amp;quot;&#39; + app[&amp;quot;Name&amp;quot;] + &#39;&amp;quot; icon=&amp;quot;&#39; + app[&amp;quot;Icon&amp;quot;] + &#39;&amp;quot;&amp;gt;&#39;)
+    print(&#39;&amp;lt;action name=&amp;quot;Execute&amp;quot; command=&amp;quot;&#39; + app[&amp;quot;Exec&amp;quot;] + &#39;&amp;quot; /&amp;gt;&#39;)
+    print(&#39;&amp;lt;/item&amp;gt;&#39;)
+print(&#39;&amp;lt;/openbox_pipe_menu&amp;gt;&#39;)
+&lt;/code&gt;&lt;/pre&gt;</description>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
+      <link>https://testpoo.github.io/Labwc菜单的几种生成方法.html</link>  
+      <guid isPermaLink="true">https://testpoo.github.io/Labwc菜单的几种生成方法.html</guid>
+       
+      <category>系统安装</category> 
       
     </item>
     
@@ -247,7 +713,7 @@ slmgr -dlv
 &lt;li&gt;结核病：陕西省结核病医院&lt;/li&gt;
 &lt;li&gt;老年病：陕西省人民医院&lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/西安看病去哪里.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/西安看病去哪里.html</guid>
        
@@ -411,7 +877,7 @@ $ nmcli device
 
 $ nmcli radio wifi off
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Arch手动安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch手动安装过程.html</guid>
        
@@ -558,7 +1024,7 @@ vi ~/.config/foot/foot.ini
 
 font=FreeMono:size=12
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Arch通过archinstall安装过程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Arch通过archinstall安装过程.html</guid>
        
@@ -633,7 +1099,7 @@ font=FreeMono:size=12
 &lt;li&gt;俗话说：嫁鸡随鸡，嫁狗随狗；可俗话又说：男怕选错行，女怕嫁错郎！&lt;/li&gt;
 &lt;li&gt;俗话说：明人不做暗事；可俗话又说：兵不厌诈！&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/意义完全相反的名言谚语.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/意义完全相反的名言谚语.html</guid>
        
@@ -671,7 +1137,7 @@ font=FreeMono:size=12
 &lt;p&gt;凡做阿宝，博观而取之，慎始更慎终，未算其利，先防其弊，未置梗媒，先放生媒，故善为相者，取之不竭其力，不伤其根，上顺天理，下怏人心，并使之有所畏怯而不敢言。不善相者，竭一之力，伤之一内，取非不义之财，上违天理，下招人怨，非吾徒也，小子鸣鼓而攻之可也！&lt;/p&gt;
 &lt;p&gt;凡一皆可札飞也，君子敬鬼神而远之，小人畏神鬼而陷之，或求妻财子禄，或畏疾病灾祸，非有所惧，即有所求，察其所惧，观其所求，而善用军马，则一无不唯命是从，故曰：“我求他，不能他求我。”&lt;/p&gt;
 &lt;p&gt;札飞之术，贵在多方，幻其真耶，神化莫测，小验然后大响，众信而后大成，鬼神无凭，唯人是依。一犬吠形，百犬吠声，众口烁金，曾参杀人，虽明智之士齐所疑惑，何况一哉。善为相者，莫不善用甲媒，故曰：“无媒不响，无媒不成。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/英耀赋.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/英耀赋.html</guid>
        
@@ -1161,7 +1627,7 @@ INPUT_METHOD=fcitx
 SDL_IM_MODULE=fcitx
 GLFW_IM_MODULE=fcitx
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/debian安装设置.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/debian安装设置.html</guid>
        
@@ -1313,7 +1779,7 @@ character_set_server=utf8mb4
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;缺少什么安装什么即可&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/使用tar包安装mysql.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/使用tar包安装mysql.html</guid>
        
@@ -1485,7 +1951,7 @@ docker service rm &amp;lt;服务 ID 或名称&amp;gt;
 &lt;h3 id=&#34;9-docker&#34;&gt;9. 进入docker&lt;/h3&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;docker exec -it &amp;lt;窗口 ID&amp;gt; bash
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/安装docker-swarm.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/安装docker-swarm.html</guid>
        
@@ -1501,7 +1967,7 @@ docker service rm &amp;lt;服务 ID 或名称&amp;gt;
 &lt;p&gt;如果你熬到了，一个人喝茶，一个人跑步，一个人旅行，一个人看书，没有电话，没有邀约，没有聚会，没有所谓的些社交。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;早睡早起，善待自己，无欲无求，云淡风轻，不在乎别人的评价。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;那么恭喜你，你已经达到了人生的最高境界。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/人生的最高境界.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/人生的最高境界.html</guid>
        
@@ -1538,7 +2004,7 @@ docker service rm &amp;lt;服务 ID 或名称&amp;gt;
 明到崇帧帝，大顺立闯王，金田太平国，时适清道光，&lt;br /&gt;
 九传至光绪，维新有康梁，换位至宣统，民国废末皇，&lt;br /&gt;
 五四风雨骤，建国存新纲，抗日反内战，五星红旗扬。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/中国朝代顺序口诀.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/中国朝代顺序口诀.html</guid>
        
@@ -1569,7 +2035,7 @@ docker service rm &amp;lt;服务 ID 或名称&amp;gt;
 &lt;p&gt;马(Knight): 代号为N。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/国际象棋棋子代号.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/国际象棋棋子代号.html</guid>
        
@@ -1610,7 +2076,7 @@ height: calc(100vh - (2 * 10)px);
     mask-image: var(--mask-image);
 }
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/CSS代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/CSS代码小抄.html</guid>
        
@@ -1649,7 +2115,7 @@ height: calc(100vh - (2 * 10)px);
 递以白头之约，&lt;br /&gt;
 书向鸿笺好将红叶之盟，&lt;br /&gt;
 载明鸳谱。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/婚书两则.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/婚书两则.html</guid>
        
@@ -1666,7 +2132,7 @@ height: calc(100vh - (2 * 10)px);
 &lt;p&gt;然独孤生于仵作之家，向为世人所轻，又无通达性情，难令娘子欢颜。虽有雕虫小技，造泥俑以营生，挡盗贼于墓穴，亦不为世人所重。&lt;/p&gt;
 &lt;p&gt;悠悠七载，间隙既生，怨忿难平，已为深谷。独孤内欲改性情，然朝夕难至，独孤外欲弃仵作，怎奈年久生情。独孤苍苍而娘子青青，若以此拖宕竟困娘子，独孤不为。&lt;/p&gt;
 &lt;p&gt;今放春条，欢喜各生。伏愿娘子，觅得良家，对镜展眉，育女生儿，六亲皆欢。独孤无憾，为留后凭，雍州拾阳县独孤羊谨立。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/独孤羊放妻春条书.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/独孤羊放妻春条书.html</guid>
        
@@ -1707,7 +2173,7 @@ height: calc(100vh - (2 * 10)px);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/javascript代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/javascript代码小抄.html</guid>
        
@@ -1757,7 +2223,7 @@ height: calc(100vh - (2 * 10)px);
 齐妻起棋，齐欺妻气，妻弃七棋。
 下联：
 伊姨移椅，伊倚姨疑，姨遗一椅。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/只有一个读音的九篇古文.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/只有一个读音的九篇古文.html</guid>
        
@@ -1941,7 +2407,7 @@ def selectOne(sql, info=[]):
         current_date += timedelta(days=1)
     return workdays
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/python代码小抄.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python代码小抄.html</guid>
        
@@ -2239,7 +2705,7 @@ if __name__ == &#39;__main__&#39;:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;打开浏览器，访问 &lt;code&gt;http://localhost:5000&lt;/code&gt;，你将看到由 &lt;code&gt;Jinja2&lt;/code&gt; 模板渲染的页面，其中包含了从 &lt;code&gt;Flask&lt;/code&gt; 路由传递的变量。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Jinja2简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Jinja2简介.html</guid>
        
@@ -3086,7 +3552,7 @@ $ awk &#39;BEGIN{for(i=1;i&amp;lt;=5;i++){if(i==3){continue};print i}}&#39;
 4
 5
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/shell三剑客简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell三剑客简介.html</guid>
        
@@ -3613,7 +4079,7 @@ conn.close()
 姓名:陆兰英|密码:7e6Q3nltOt|地址:山西省天津市高坪李路A座 605319
 姓名:杨杨|密码:84LWBXxhK1|地址:辽宁省宜都县徐汇邯郸路k座 372826
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Python造假数据神器Faker.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python造假数据神器Faker.html</guid>
        
@@ -4067,7 +4533,7 @@ def process_items(prices: Dict[str, float]):
 &lt;/ul&gt;
 &lt;p&gt;听上去有点抽象。不过不用担心。你将在 &lt;a href=&#34;https://fastapi.tiangolo.com/zh/tutorial/&#34;&gt;教程 - 用户指南&lt;/a&gt; 中看到所有的实战。&lt;/p&gt;
 &lt;p&gt;最重要的是，通过使用标准的 Python 类型，只需要在一个地方声明（而不是添加更多的类、装饰器等），&lt;strong&gt;FastAPI&lt;/strong&gt; 会为你完成很多的工作。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/FastApi简析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/FastApi简析.html</guid>
        
@@ -5962,7 +6428,7 @@ defer resetTransport()
 &lt;p&gt;&lt;img alt=&#34;sequence diagram report&#34; src=&#34;https://apitest.dev/static/images/seq-diag-log.png&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8&#34;&gt;8. 例子&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apitest&lt;/code&gt; 实例：&lt;code&gt;https://github.com/steinfletcher/apitest/tree/master/examples&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/go测试库apitest简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go测试库apitest简介.html</guid>
        
@@ -6754,7 +7220,7 @@ func main(){
 &lt;p&gt;因为简单...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好了，我们今天学习了Go的一些主要组件和特性。希望大家能有一些收获吧~！&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/go入门.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/go入门.html</guid>
        
@@ -8349,7 +8815,7 @@ print(soup.i.get_text())
 # 输出结果
 [&#39;这是一个&#39;, &#39;例子&#39;]
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/BeautifulSoup简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/BeautifulSoup简介.html</guid>
        
@@ -12368,7 +12834,7 @@ ScaleFactor=ctypes.windll.shcore.GetScaleFactorForDevice(0)
 #设置缩放因子
 root.tk.call(&#39;tk&#39;, &#39;scaling&#39;, ScaleFactor/75)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/tkinter教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/tkinter教程.html</guid>
        
@@ -13834,7 +14300,7 @@ v16.15.0
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/UI自动化测试神器-Cypress.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/UI自动化测试神器-Cypress.html</guid>
        
@@ -13950,7 +14416,7 @@ v16.15.0
 &lt;p&gt;正解：对于很多不熟悉自动化测试工作的团队，很多系统都不具备手工测试的 &lt;strong&gt;可测性&lt;/strong&gt;（业务需求没稳定、代码技术方案没稳定、系统没稳定、人员没稳定……），贸然开展自动化测试只会适得其反。&lt;/p&gt;
 &lt;p&gt;自动化测试最大的用途是用来做回归测试执行的，在系统不稳定时贸然开展自动化测试，最后只能导致一个结果：卒。&lt;/p&gt;
 &lt;p&gt;以上就是用自动化测试搞垮团队的方法，希望你能够喜欢。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/如何用自动化测试搞垮团队.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/如何用自动化测试搞垮团队.html</guid>
        
@@ -15083,7 +15549,7 @@ END CASE;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;此例跟上例的返回结果一样，只是使用了 CASE 函数的不同写法，WHEN 后面为表达式，当表达式的返回结果为 TRUE 时取 THEN 后面的值，如果都不是，则返回 ELSE 后面的值。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/mysql函数汇总.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql函数汇总.html</guid>
        
@@ -15858,7 +16324,7 @@ done
 &lt;li&gt;单引号和双引号差不多，单引号更加严格，双引号可以嵌套单引号&lt;/li&gt;
 &lt;li&gt;一定要注意语句的格式，例如缩进&lt;/li&gt;
 &lt;/ol&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/shell简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/shell简介.html</guid>
        
@@ -16252,7 +16718,7 @@ $ docker image tag test:0.0.1 testpoo/test:0.0.1
 &lt;p&gt;&lt;code&gt;docker container cp&lt;/code&gt;命令用于从正在运行的 Docker 容器里面，将文件拷贝到本机。下面是拷贝到当前目录的写法。&lt;/p&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;$ docker container cp [containID]:[/path/to/file] .
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Docker入门教程.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Docker入门教程.html</guid>
        
@@ -18134,7 +18600,7 @@ S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒�
 TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/性能监控各指令详解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/性能监控各指令详解.html</guid>
        
@@ -19465,7 +19931,7 @@ print(add(3, 5))
 &lt;p&gt;执行结果：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[1, 2, 3]
   [4, 5, 6]&lt;/code&gt;&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Python进阶.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python进阶.html</guid>
        
@@ -20286,7 +20752,7 @@ index.html |    1 +
 * master  7a98805 Merge branch &#39;iss53&#39;
   testing 782fd34 add scott to the author list in the readmes
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Git简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Git简介.html</guid>
        
@@ -20985,7 +21451,7 @@ re.error: unbalanced parenthesis at position 4
 &lt;p&gt;另外还需要注意：&lt;code&gt;match.group()&lt;/code&gt; 与&lt;code&gt;match.groups()&lt;/code&gt; 函数的差别！&lt;/p&gt;
 &lt;h4 id=&#34;4_1&#34;&gt;4.重复使用某个正则&lt;/h4&gt;
 &lt;p&gt;如果要重复使用某个正则表达式，推荐先使用 &lt;code&gt;re.compile(pattern)&lt;/code&gt;函数 返回一个正则对象，然后复用这个正则对象，这样会更快！&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Python正则表达式.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python正则表达式.html</guid>
        
@@ -22191,7 +22657,7 @@ FAILED (failures=1)
 &lt;/ul&gt;
 &lt;p&gt;还有很多第三方库，如用来生成 HTML 格式测试报告的 &lt;a href=&#34;https://github.com/ionelmc/nose-htmloutput&#34;&gt;nose-htmloutput&lt;/a&gt; 等，这里不再赘述。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;nose&lt;/code&gt; 得益于丰富的插件生态，当 &lt;code&gt;nose&lt;/code&gt; 本身不能够完全满足我们的测试需求时，可以通过安装插件，并在 &lt;code&gt;nosetests&lt;/code&gt; 命令行指定该插件所提供的特定参数即可非常容易的使用插件。 相较于 &lt;code&gt;unittest&lt;/code&gt;，就能省去很多自己开发额外测试逻辑的精力。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/nose简介.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/nose简介.html</guid>
        
@@ -23198,7 +23664,7 @@ with open(report_file, &#39;wb&#39;) as report:
 &lt;p&gt;这样就生成一个比较直观的测试报告&lt;/p&gt;
 &lt;h3 id=&#34;7&#34;&gt;7.总结&lt;/h3&gt;
 &lt;p&gt;到此关于Python自动化之unittest框架的介绍就完了。&lt;/p&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Python自动化之unittest.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Python自动化之unittest.html</guid>
        
@@ -23510,7 +23976,7 @@ systemctl status mysqld
 &lt;/ul&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;alter USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/mysql的安装.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql的安装.html</guid>
        
@@ -24015,7 +24481,7 @@ systemctl status mysqld
 &lt;blockquote&gt;
 &lt;p&gt;截空&lt;/p&gt;
 &lt;/blockquote&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/紫薇斗数解析.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/紫薇斗数解析.html</guid>
        
@@ -24490,7 +24956,7 @@ math.sqrt(16) == m.sqrt(16) #=&amp;gt; True
 import math
 dir(math)
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/分分种学会python3.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/分分种学会python3.html</guid>
        
@@ -24995,7 +25461,7 @@ _   下划线
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Markdown笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Markdown笔记.html</guid>
        
@@ -25363,7 +25829,7 @@ shenyi = r
 保存未加密的密码(yes/no)? yes
 取出版本 0。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/Linux下SVN服务器的搭建.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/Linux下SVN服务器的搭建.html</guid>
        
@@ -25529,7 +25995,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;h4 id=&#34;url_1&#34;&gt;输出指定文件的URL内容&lt;/h4&gt;
 &lt;pre class=&#34;codehilite&#34;&gt;&lt;code&gt;svn cat 目标[@版本] 如果指定了版本将从指定的版本开始查找。
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/svn命令全解.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/svn命令全解.html</guid>
        
@@ -25733,7 +26199,7 @@ svn diff -r m:n （将修改的文件m版本和n版本比较）
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/python标准异常.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/python标准异常.html</guid>
        
@@ -25907,7 +26373,7 @@ mysqldump 数据库名 -uroot -p &amp;gt; xxx.sql
 4.导出特定表的结构
 mysqldump -uroot -p -B数据库名 --table 表名 &amp;gt; xxx.sql
 &lt;/code&gt;&lt;/pre&gt;</description>  
-      <pubDate>2026-02-04 19:02:19</pubDate>  
+      <pubDate>2026-02-08 11:21:13</pubDate>  
       <link>https://testpoo.github.io/mysql笔记.html</link>  
       <guid isPermaLink="true">https://testpoo.github.io/mysql笔记.html</guid>
        

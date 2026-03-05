@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共57688个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52628个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25893个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-05 16:57:47</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-05 17:04:02</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -117,17 +117,16 @@
 <li><a href="#106-foot">10.6. 设置终端(foot)字体大小</a></li>
 <li><a href="#107-wlr-randr">10.7. 设置wlr-randr</a></li>
 <li><a href="#108">10.8. 其他</a></li>
-<li><a href="#24">2.4. 其他</a></li>
 </ul>
 </li>
 <li><a href="#11-wayfire">11. wayfire窗口管理器设置</a><ul>
 <li><a href="#111-wayfire">11.1. 安装wayfire及相关软件</a></li>
 <li><a href="#112-wayfire">11.2. 启动wayfire</a></li>
 <li><a href="#113-wayfire">11.3. wayfire</a></li>
-</ul>
-</li>
 <li><a href="#114">11.4. 输入法环境变量设置</a></li>
 <li><a href="#115-foot">11.5. 设置终端(foot)字体大小</a></li>
+</ul>
+</li>
 <li><a href="#12-rime">12. rime输入法设置</a></li>
 <li><a href="#13-iwd">13. iwd无法联网</a></li>
 </ul>
@@ -492,25 +491,6 @@ wlr-ranr --output eDP-1 --scale 1.25
 <span class="err">#</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin稳定版是4</span><span class="m m-Double">.1.1</span><span class="p">,</span><span class="w"> </span><span class="m m-Double">4.2</span><span class="nx">以后才支持</span><span class="p">&lt;</span><span class="nx">css</span><span class="p">&gt;</span><span class="nx">标签</span><span class="err">，</span><span class="nx">目前只支持gtk</span><span class="p">.</span><span class="nx">css中书写</span><span class="err">，</span><span class="w"> </span><span class="nx">所以强制在稳定版本中安装4</span><span class="m m-Double">.3</span>
 </code></pre></div>
 
-<h4 id="24">2.4. 其他</h4>
-<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">启动pipewire</span>
-<span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="nx">pipewire</span>
-<span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">pipewire</span>
-
-<span class="err">#</span><span class="w"> </span><span class="nx">通过wtype关联labwc</span><span class="w"> </span><span class="nx">root</span><span class="o">-</span><span class="nx">menu</span><span class="err">，</span><span class="nx">通过xfce启动器实现</span>
-<span class="nx">名称</span><span class="err">：</span><span class="nx">程序菜单</span><span class="w">  </span><span class="nx">命令</span><span class="err">：</span><span class="nx">wtype</span><span class="w"> </span><span class="o">-</span><span class="nx">M</span><span class="w"> </span><span class="nx">logo</span><span class="w"> </span><span class="o">-</span><span class="nx">k</span><span class="w"> </span><span class="nx">p</span>
-
-<span class="err">#</span><span class="w"> </span><span class="nx">强制xfce4</span><span class="o">-</span><span class="nx">panel所有插件以内部方式运行</span>
-<span class="nx">xfconf</span><span class="o">-</span><span class="nx">query</span><span class="w"> </span><span class="o">-</span><span class="nx">c</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="o">-</span><span class="nx">p</span><span class="w"> </span><span class="o">/</span><span class="nx">force</span><span class="o">-</span><span class="nx">all</span><span class="o">-</span><span class="nx">internal</span><span class="w"> </span><span class="o">-</span><span class="nx">t</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">-</span><span class="nx">s</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">--</span><span class="nx">create</span>
-
-<span class="err">#</span><span class="w"> </span><span class="nx">gtk程序添加最大化和最小化按钮</span><span class="err">，</span><span class="nx">需要安装libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="nx">wm</span><span class="p">.</span><span class="nx">preferences</span><span class="w"> </span><span class="nx">button</span><span class="o">-</span><span class="nx">layout</span><span class="w"> </span><span class="s">&quot;:minimize,maximize,close&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">添加最大化和最小化按钮</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="kd">interface</span><span class="w"> </span><span class="nx">gtk</span><span class="o">-</span><span class="nx">theme</span><span class="w"> </span><span class="s">&quot;主题名称&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">设置主题</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="kd">interface</span><span class="w"> </span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span><span class="w"> </span><span class="s">&quot;图标主题名称&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">设置图标</span>
-
-<span class="err">#</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin稳定版是4</span><span class="m m-Double">.1.1</span><span class="p">,</span><span class="w"> </span><span class="m m-Double">4.2</span><span class="nx">以后才支持</span><span class="p">&lt;</span><span class="nx">css</span><span class="p">&gt;</span><span class="nx">标签</span><span class="err">，</span><span class="nx">目前只支持gtk</span><span class="p">.</span><span class="nx">css中书写</span><span class="err">，</span><span class="w"> </span><span class="nx">所以强制在稳定版本中安装4</span><span class="m m-Double">.3</span>
-</code></pre></div>
-
 <h3 id="11-wayfire">11. wayfire窗口管理器设置</h3>
 <h4 id="111-wayfire">11.1. 安装wayfire及相关软件</h4>
 <div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">wayfire</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">audio</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">fonts</span><span class="o">-</span><span class="n">noto</span><span class="o">-</span><span class="n">cjk</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">terminal</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">appfinder</span><span class="w"> </span><span class="n">seatd</span><span class="w"> </span><span class="n">xwayland</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="w"> </span><span class="n">webext</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="o">-</span><span class="n">firefox</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">mako</span><span class="o">-</span><span class="n">notifier</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">libglib2</span><span class="mf">.0</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="n">waybar</span><span class="w"> </span><span class="n">chromium</span><span class="w"> </span><span class="n">chromium</span><span class="o">-</span><span class="n">l10n</span>
@@ -528,7 +508,7 @@ wlr-ranr --output eDP-1 --scale 1.25
 <div class="codehilite"><pre><span></span><code>cp /usr/share/wayfire/examples/wayfire.ini ~/.config/wayfire.ini
 </code></pre></div>
 
-<h3 id="114">11.4. 输入法环境变量设置</h3>
+<h4 id="114">11.4. 输入法环境变量设置</h4>
 <p>启用fcitx输入需要配置环境变量：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
 
@@ -541,7 +521,7 @@ wlr-ranr --output eDP-1 --scale 1.25
 <span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
 </code></pre></div>
 
-<h3 id="115-foot">11.5. 设置终端(foot)字体大小</h3>
+<h4 id="115-foot">11.5. 设置终端(foot)字体大小</h4>
 <div class="codehilite"><pre><span></span><code>cp -r /etc/foot/ ~/.config/foot/
 vi ~/.config/foot/foot.ini
 

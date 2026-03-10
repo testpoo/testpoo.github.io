@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52628个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25937个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25893个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52801个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
-            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
+            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共73235个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
             <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共5797个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Labwc菜单的几种生成方法</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-05 17:04:02</span></div>
+      <div class="header"><span>Labwc菜单的几种生成方法</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-10 22:52:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -78,12 +78,12 @@
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="nn">configparser</span><span class="o">,</span><span class="nn">math</span>
 
-<span class="n">logouts</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-lock-screen&quot;</span>
-  <span class="p">},</span>
+<span class="n">logouts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-lock-screen&quot;</span>
+<span class="w">  </span><span class="p">},</span>
 <span class="c1">#  {</span>
 <span class="c1">#    &quot;Name&quot;: &quot;挂起&quot;,</span>
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,</span>
@@ -94,91 +94,91 @@
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,</span>
 <span class="c1">#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;</span>
 <span class="c1">#  },</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重载&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;systemback&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;退出&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-log-out&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重启&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-reboot&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;关机&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-shutdown&quot;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重载&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemback&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;退出&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-log-out&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重启&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-reboot&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;关机&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-shutdown&quot;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 
-<span class="n">exclude</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Client&#39;</span>
+<span class="n">exclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Client&#39;</span>
 <span class="p">]</span>
 
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/usr/share/applications/&#39;</span>
-<span class="n">file_names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="n">file_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/usr/share/applications/&#39;</span>
+<span class="n">file_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
-<span class="n">app_lists</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">num</span><span class="o">=</span> <span class="mi">30</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">app_lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="n">num</span><span class="o">=</span><span class="w"> </span><span class="mi">30</span>
+<span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">file_names</span><span class="p">:</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;Application&quot;</span> <span class="ow">or</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;false&#39;</span> <span class="ow">or</span> <span class="s1">&#39;LABWC&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
-        <span class="n">Exec</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
-        <span class="n">Icon</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">Name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">:</span>
-        <span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file_names</span><span class="p">:</span>
+<span class="w">    </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;Application&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;false&#39;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;LABWC&#39;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">exclude</span><span class="p">:</span>
+<span class="w">        </span><span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">])</span>
 
 <span class="n">app_lists</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="n">cols</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">app_lists</span><span class="p">)</span><span class="o">/</span><span class="n">num</span><span class="p">)</span>
+<span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">app_lists</span><span class="p">)</span><span class="o">/</span><span class="n">num</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">items</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="n">exec</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span> <span class="o">+</span> <span class="n">label</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">icon</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span> <span class="o">+</span> <span class="n">exec</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">items</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="w"> </span><span class="n">icon</span><span class="p">,</span><span class="w"> </span><span class="n">exec</span><span class="p">):</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">icon</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">app_lists</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num</span><span class="p">]:</span>
-        <span class="n">items</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">cols</span> <span class="o">&gt;</span> <span class="n">i</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">app_lists</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">num</span><span class="p">:</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;more&quot; icon=&quot;application-sql&quot; label=&quot;更多程序&quot;&gt;&#39;</span><span class="p">)</span>
-        <span class="n">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">[</span><span class="n">num</span><span class="p">:],</span> <span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">):</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_lists</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num</span><span class="p">]:</span>
+<span class="w">        </span><span class="n">items</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">cols</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">app_lists</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">num</span><span class="p">:</span>
+<span class="w">        </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;more&quot; icon=&quot;application-sql&quot; label=&quot;更多程序&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">[</span><span class="n">num</span><span class="p">:],</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
-<span class="n">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<span class="n">menus</span><span class="p">(</span><span class="n">app_lists</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &lt;separator /&gt;&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">logouts</span><span class="p">:</span>
-    <span class="n">items</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">],</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">],</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">logouts</span><span class="p">:</span>
+<span class="w">    </span><span class="n">items</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -190,65 +190,65 @@
 <span class="c1"># coding=utf-8</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="nn">configparser</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">defaultdict</span>
 
-<span class="n">cats</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Office&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;办公&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-office&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Development&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;开发&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-development&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Graphics&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;图形&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-graphics&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Network&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;互联网&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-network&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Education&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;教育&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-education&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Science&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;科学&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-science&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Games&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;游戏&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-games&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;System&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;系统&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-system&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Utility&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;附件&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-utilities&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Settings&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;设置&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-system-orange&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;AudioVideo&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;多媒体&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-multimedia&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;others&quot;</span><span class="p">:[</span>
-    <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-other&quot;</span>
-  <span class="p">]</span>
+<span class="n">cats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;Office&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;办公&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-office&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Development&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;开发&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-development&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Graphics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;图形&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-graphics&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Network&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;互联网&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-network&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Education&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;教育&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-education&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Science&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;科学&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-science&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Games&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;游戏&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-games&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;System&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;系统&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-system&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Utility&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;附件&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-utilities&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;设置&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-system-orange&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;AudioVideo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;多媒体&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-multimedia&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;others&quot;</span><span class="p">:[</span>
+<span class="w">    </span><span class="s2">&quot;其他&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-other&quot;</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="n">logouts</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-lock-screen&quot;</span>
-  <span class="p">},</span>
+<span class="n">logouts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-lock-screen&quot;</span>
+<span class="w">  </span><span class="p">},</span>
 <span class="c1">#  {</span>
 <span class="c1">#    &quot;Name&quot;: &quot;挂起&quot;,</span>
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,</span>
@@ -259,96 +259,96 @@
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,</span>
 <span class="c1">#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;</span>
 <span class="c1">#  },</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重载&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;systemback&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;退出&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-log-out&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重启&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-reboot&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;关机&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-shutdown&quot;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重载&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemback&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;退出&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-log-out&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重启&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-reboot&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;关机&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-shutdown&quot;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 
-<span class="n">exclude</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Client&#39;</span>
+<span class="n">exclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Client&#39;</span>
 <span class="p">]</span>
 
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/usr/share/applications/&#39;</span>
-<span class="n">file_names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="n">file_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/usr/share/applications/&#39;</span>
+<span class="n">file_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
-<span class="n">app_lists</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">app_dicts</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">app_lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="n">app_dicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">file_names</span><span class="p">:</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;Application&quot;</span> <span class="ow">or</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;false&#39;</span> <span class="ow">or</span> <span class="s1">&#39;LABWC&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
-        <span class="n">Exec</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
-        <span class="n">Icon</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">):</span>
-        <span class="n">Categories</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">Category</span> <span class="o">=</span> <span class="s2">&quot;others&quot;</span>
-        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">Categories</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">cats</span><span class="p">:</span>
-                <span class="n">Category</span> <span class="o">=</span> <span class="n">cat</span>
-                <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">Name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">:</span>
-        <span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">,</span><span class="n">Category</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file_names</span><span class="p">:</span>
+<span class="w">    </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;Application&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;false&#39;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;LABWC&#39;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Categories</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">        </span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;others&quot;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Categories</span><span class="p">:</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cats</span><span class="p">:</span>
+<span class="w">                </span><span class="n">Category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cat</span>
+<span class="w">                </span><span class="k">break</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">exclude</span><span class="p">:</span>
+<span class="w">        </span><span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">,</span><span class="n">Category</span><span class="p">])</span>
 
 <span class="n">app_lists</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">app_lists</span><span class="p">:</span>
-    <span class="n">app_dicts</span><span class="p">[</span><span class="n">app</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_lists</span><span class="p">:</span>
+<span class="w">    </span><span class="n">app_dicts</span><span class="p">[</span><span class="n">app</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="n">app_dicts</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">app_dicts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">app_dicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">app_dicts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">app_dicts</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;&#39;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; label=&quot;&#39;</span> <span class="o">+</span> <span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_dicts</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &lt;separator /&gt;&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">logouts</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">logouts</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -359,65 +359,65 @@
 <span class="c1"># coding=utf-8</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="nn">configparser</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">defaultdict</span>
 
-<span class="n">cats</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Office&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;办公&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-office&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Development&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;开发&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-development&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Graphics&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;图形&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-graphics&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Network&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;互联网&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-network&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Education&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;教育&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-education&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Science&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;科学&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-science&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Games&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;游戏&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-games&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;System&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;系统&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-system&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Utility&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;附件&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-utilities&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;Settings&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;设置&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-system-orange&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;AudioVideo&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;多媒体&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-multimedia&quot;</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;others&quot;</span><span class="p">:[</span>
-    <span class="s2">&quot;其他&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;applications-other&quot;</span>
-  <span class="p">]</span>
+<span class="n">cats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;Office&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;办公&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-office&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Development&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;开发&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-development&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Graphics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;图形&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-graphics&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Network&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;互联网&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-network&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Education&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;教育&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-education&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Science&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;科学&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-science&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Games&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;游戏&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-games&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;System&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;系统&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-system&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Utility&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;附件&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-utilities&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;Settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;设置&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-system-orange&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;AudioVideo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;多媒体&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-multimedia&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="s2">&quot;others&quot;</span><span class="p">:[</span>
+<span class="w">    </span><span class="s2">&quot;其他&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;applications-other&quot;</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="n">logouts</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-lock-screen&quot;</span>
-  <span class="p">},</span>
+<span class="n">logouts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;锁屏&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;swaylock -f -i /home/poo/图片/background.png -c 015000&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-lock-screen&quot;</span>
+<span class="w">  </span><span class="p">},</span>
 <span class="c1">#  {</span>
 <span class="c1">#    &quot;Name&quot;: &quot;挂起&quot;,</span>
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl suspend&quot;,</span>
@@ -428,98 +428,98 @@
 <span class="c1">#    &quot;Exec&quot;: &quot;systemctl hibernate&quot;,</span>
 <span class="c1">#    &quot;Icon&quot;: &quot;system-suspend-hibernate&quot;</span>
 <span class="c1">#  },</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重载&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;systemback&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;退出&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-log-out&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;重启&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-reboot&quot;</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;关机&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Exec&quot;</span><span class="p">:</span> <span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Icon&quot;</span><span class="p">:</span> <span class="s2">&quot;system-shutdown&quot;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重载&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -r&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemback&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;退出&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;labwc -e&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-log-out&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;重启&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl reboot&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-reboot&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;关机&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Exec&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;systemctl poweroff -i&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;system-shutdown&quot;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">]</span>
 
-<span class="n">exclude</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;Foot Client&#39;</span>
+<span class="n">exclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">&#39;Avahi Zeroconf 浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi SSH 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Avahi VNC 服务器的浏览器&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Server&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Foot Client&#39;</span>
 <span class="p">]</span>
 
-<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;/usr/share/applications/&#39;</span>
-<span class="n">file_names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="n">file_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/usr/share/applications/&#39;</span>
+<span class="n">file_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
 
-<span class="n">app_lists</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">app_dicts</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">app_lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="n">app_dicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">file_names</span><span class="p">:</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;Application&quot;</span> <span class="ow">or</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;false&#39;</span> <span class="ow">or</span> <span class="s1">&#39;LABWC&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
-        <span class="n">Name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
-        <span class="n">Exec</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
-        <span class="n">Icon</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">):</span>
-        <span class="n">Categories</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">Name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">:</span>
-        <span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">,</span><span class="n">Categories</span><span class="p">])</span>
+<span class="k">for</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file_names</span><span class="p">:</span>
+<span class="w">    </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configparser</span><span class="o">.</span><span class="n">RawConfigParser</span><span class="p">()</span>
+<span class="w">    </span><span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">file_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_section</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">&quot;Application&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;NoDisplay&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;false&#39;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;LABWC&#39;</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;OnlyShowIn&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;LABWC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh_CN]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name[zh]&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Name&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Exec&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Icon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Icon&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">has_option</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="n">Categories</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Desktop Entry&#39;</span><span class="p">,</span><span class="s1">&#39;Categories&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">continue</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">exclude</span><span class="p">:</span>
+<span class="w">        </span><span class="n">app_lists</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">Name</span><span class="p">,</span><span class="n">Exec</span><span class="p">,</span><span class="n">Icon</span><span class="p">,</span><span class="n">Categories</span><span class="p">])</span>
 
 <span class="n">app_lists</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="n">cats_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">cats</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="n">cats_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cats</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
 
-<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">app_lists</span><span class="p">:</span>
-    <span class="n">intersection</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cats_list</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
-    <span class="k">if</span> <span class="n">intersection</span> <span class="o">!=</span> <span class="p">[]:</span>
-        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">intersection</span><span class="p">:</span>
-            <span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">app_dicts</span><span class="p">[</span><span class="s1">&#39;others&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_lists</span><span class="p">:</span>
+<span class="w">    </span><span class="n">intersection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cats_list</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nb">set</span><span class="p">(</span><span class="n">app</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">intersection</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="p">[]:</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">intersection</span><span class="p">:</span>
+<span class="w">            </span><span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="n">app_dicts</span><span class="p">[</span><span class="s1">&#39;others&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="n">app_dicts</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">app_dicts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">app_dicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">app_dicts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span><span class="w"> </span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">app_dicts</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;&#39;</span> <span class="o">+</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; label=&quot;&#39;</span> <span class="o">+</span> <span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_dicts</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;menu id=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">app_dicts</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/menu&gt;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &lt;separator /&gt;&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">logouts</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; icon=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span> <span class="o">+</span> <span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">logouts</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;item label=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; icon=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Icon&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;action name=&quot;Execute&quot; command=&quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">app</span><span class="p">[</span><span class="s2">&quot;Exec&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/item&gt;&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&lt;/openbox_pipe_menu&gt;&#39;</span><span class="p">)</span>
 </code></pre></div>
         <div class="copyright">
@@ -541,9 +541,9 @@
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span></a></li>
         
@@ -551,9 +551,9 @@
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
-        
         <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -569,9 +569,9 @@
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
@@ -625,11 +625,11 @@
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
       </ul>
     </div>

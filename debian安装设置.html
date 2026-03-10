@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52628个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25937个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25893个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52801个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
-            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
+            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共73235个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
             <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共5797个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-05 17:04:02</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-10 22:52:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -97,8 +97,8 @@
 <li><a href="#83">8.3. 安装图标主题</a></li>
 <li><a href="#84">8.4. 安装窗口装饰</a></li>
 <li><a href="#85-sddm">8.5. 安装SDDM主题</a></li>
-<li><a href="#86">8.6. 解决无法更换头像</a></li>
-<li><a href="#87">8.7. 修改设置</a></li>
+<li><a href="#86">8.6. 修改设置</a></li>
+<li><a href="#87">8.7. 其他</a></li>
 </ul>
 </li>
 <li><a href="#9-sway">9. Sway窗口管理器设置</a><ul>
@@ -351,11 +351,7 @@ xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
 <p>进入<code>kde-plasma-chili</code>目录，执行<code>cp -r kde-plasma-chili /usr/share/sddm/themes</code>命令</p>
 </li>
 </ul>
-<h4 id="86">8.6. 解决无法更换头像</h4>
-<ul>
-<li>这是账号服务的一个缺陷: 打开<code>sudo nano /usr/lib/systemd/system/accounts-daemon.service</code>文件，修改<code>PrivateTmp=true</code>为<code>PrivateTmp=false</code>，然后重启即可解决问题，这个问题已经不存在。</li>
-</ul>
-<h4 id="87">8.7. 修改设置</h4>
+<h4 id="86">8.6. 修改设置</h4>
 <ul>
 <li>
 <p>桌面背景修改：设置--&gt;更改壁纸--&gt;壁纸类型：每日一图--&gt;提供：必应</p>
@@ -385,6 +381,10 @@ xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
 <p>绽放设置：设置--&gt;显示器配置--&gt;全局缩放率：125% </p>
 </li>
 </ul>
+<h4 id="87">8.7. 其他</h4>
+<p>使用的桌面环境为KDE，使用Wayland会话，发行版为Debian，自带的Fcitx5后，每次Fcitx5启动时都会在右下角看到如下提示：检测到设置了 GTK_IM_MODULE 和 QT_IM_MODULE 而且 Wayland 输入法前端正在正常工作。推荐不设置 GTK_IM_MODULE 和 QT_IM_MODULE 从而使用 Wayland 输入法前端。更多信息请参见 https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#KDE_Plasma</p>
+<p>可供参考的文档：https://github.com/fcitx/fcitx/issues/422</p>
+<p>解决办法：sudo apt purge im-config</p>
 <h3 id="9-sway">9. Sway窗口管理器设置</h3>
 <h4 id="91-sway">9.1. 安装Sway及相关软件</h4>
 <div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">audio</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">fonts</span><span class="o">-</span><span class="n">noto</span><span class="o">-</span><span class="n">cjk</span><span class="w"> </span><span class="n">sway</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">foot</span><span class="w"> </span><span class="n">wofi</span><span class="w"> </span><span class="n">xwayland</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">upower</span><span class="w"> </span><span class="n">webext</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="o">-</span><span class="n">firefox</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">libglib2</span><span class="mf">.0</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="n">iwd</span><span class="w"> </span><span class="n">papirus</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span>
@@ -588,7 +588,7 @@ style:
 <span class="o">[</span><span class="n">General</span><span class="o">]</span>
 <span class="n">EnableNetworkConfiguration</span><span class="o">=</span><span class="k">true</span>
 
-<span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">iwd</span><span class="p">.</span><span class="n">service</span><span class="w"> </span><span class="c1">--now</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">iwd</span><span class="p">.</span><span class="n">service</span><span class="w"> </span><span class="o">--</span><span class="n">now</span>
 
 <span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
 
@@ -616,9 +616,9 @@ style:
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span></a></li>
         
@@ -626,9 +626,9 @@ style:
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
-        
         <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -644,9 +644,9 @@ style:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
@@ -700,11 +700,11 @@ style:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
       </ul>
     </div>

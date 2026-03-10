@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共55433个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
+            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共47713个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
             
             <a href="https://testpoo.github.io/go测试库apitest简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;go测试库apitest简介</span><span>2023-08-23&nbsp;&nbsp;共238363个字</span><span class="tag">go</span><span class="tag">apitest</span></li></a>
             
-            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共128875个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共132807个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
             
             <a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共58230个字</span><span class="tag">cypress</span><span class="tag">自动化测试</span></li></a>
             
@@ -61,9 +61,9 @@
             
             <a href="https://testpoo.github.io/性能监控各指令详解.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共118003个字</span><span class="tag">性能</span><span class="tag">监控</span></li></a>
             
-            <a href="https://testpoo.github.io/nose简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共269419个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/nose简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共269994个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
             
-            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共82380个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
+            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共92454个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
             
           </ul>
         </div>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Python自动化之unittest</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-05 17:04:02</span></div>
+      <div class="header"><span>Python自动化之unittest</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-10 22:52:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -120,39 +120,39 @@
 
 <span class="c1"># 通过继承 unittest.TestCase 来实现用例</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">forTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="c1"># 类的初始化</span>
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span>
-    <span class="c1"># 类的释放</span>
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDownClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tclass&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 类的初始化</span>
+<span class="w">    </span><span class="nd">@classmethod</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 类的释放</span>
+<span class="w">    </span><span class="nd">@classmethod</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDownClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tclass&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 测试用例初始化</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;setUp&quot;</span><span class="p">)</span>
-    <span class="c1"># 测试用例释放</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;teadDown&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 测试用例初始化</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;setUp&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 测试用例释放</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;teadDown&quot;</span><span class="p">)</span>
 
-    <span class="c1"># 测试用例</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-    <span class="c1"># 测试用例</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 测试用例</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 测试用例</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 
-    <span class="c1"># 函数</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="c1"># 测试用例</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 函数</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">):</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
+<span class="w">    </span><span class="c1"># 测试用例</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>对上面的程序进行讲解：</p>
@@ -236,33 +236,33 @@
 <p>2.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">webdriver</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">forTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="c1"># 测试用例初始化</span>
-    <span class="c1"># 打开谷歌浏览器，并进入百度</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
-    <span class="c1"># 测试用例释放</span>
-    <span class="c1"># 等待 3s，关闭浏览器</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># 测试用例初始化</span>
+<span class="w">    </span><span class="c1"># 打开谷歌浏览器，并进入百度</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 测试用例释放</span>
+<span class="w">    </span><span class="c1"># 等待 3s，关闭浏览器</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 
-    <span class="c1"># 输入&#39;苹果&#39;，并点击搜索</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># 输入&#39;苹果&#39;，并点击搜索</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
 
-    <span class="c1"># 输入&#39;香蕉&#39;，并点击搜索</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;香蕉&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># 输入&#39;香蕉&#39;，并点击搜索</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="s1">&#39;香蕉&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>上面的案例中，我们将打开谷歌浏览器，进入百度，放在 setUp 中，完成每个测试用例之前的初始化，浏览器的关闭放在tearDown 中，完成测试用例的释放</p>
@@ -289,22 +289,22 @@
 <p>3.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>    <span class="c1"># 导入data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span><span class="w">    </span><span class="c1"># 导入data</span>
 
 <span class="c1"># 类之前定义装饰器，表示在类中要使用ddt了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
-    <span class="c1"># data用于设定参数</span>
-    <span class="nd">@data</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">,</span> <span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;石榴&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="c1"># data用于设定参数</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;香蕉&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;葡萄&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;石榴&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">txt</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果：</p>
@@ -338,24 +338,24 @@ OK
 <p>4.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
 
 <span class="c1"># 类之前定义装饰器，表示在类中要使用ddt了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
 
-    <span class="c1"># data 用于设定参数，将包 (&#39;苹果&#39;, &#39;香蕉&#39;) 作为一个整体赋值给 txt</span>
-    <span class="nd">@data</span><span class="p">((</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;石榴&#39;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># data 用于设定参数，将包 (&#39;苹果&#39;, &#39;香蕉&#39;) 作为一个整体赋值给 txt</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">((</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;香蕉&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;葡萄&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;石榴&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">txt</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果如下：</p>
@@ -379,25 +379,25 @@ OK
 <p>5.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">unpack</span> <span class="c1"># 导入unpack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">unpack</span><span class="w"> </span><span class="c1"># 导入unpack</span>
 
 <span class="c1"># 类之前定义装饰器，表示在类中要使用ddt了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
-    <span class="nd">@data</span><span class="p">((</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;葡萄&#39;</span><span class="p">,</span> <span class="s1">&#39;石榴&#39;</span><span class="p">))</span>
-    <span class="c1"># 解包，将 (&#39;苹果&#39;, &#39;香蕉&#39;) 解包，&#39;苹果&#39; 赋值给 txt1，&#39;香蕉&#39;赋值给 txt2</span>
-    <span class="nd">@unpack</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt1</span><span class="p">,</span> <span class="n">txt2</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt1</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt2</span><span class="p">)</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">((</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;香蕉&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;葡萄&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;石榴&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="c1"># 解包，将 (&#39;苹果&#39;, &#39;香蕉&#39;) 解包，&#39;苹果&#39; 赋值给 txt1，&#39;香蕉&#39;赋值给 txt2</span>
+<span class="w">    </span><span class="nd">@unpack</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">txt1</span><span class="p">,</span><span class="w"> </span><span class="n">txt2</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt1</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果如下：</p>
@@ -422,34 +422,34 @@ OK
 <p>6.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">unpack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">unpack</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">readFile</span><span class="p">():</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;6.ddt.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-        <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
-<span class="k">return</span> <span class="n">params</span>
+<span class="w">    </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;6.ddt.txt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="w">        </span><span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<span class="k">return</span><span class="w"> </span><span class="n">params</span>
 
 <span class="c1"># 类之前定义装饰器，表示在类中要使用ddt了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
 
-    <span class="c1"># 从文件中读取</span>
-    <span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
-    <span class="nd">@unpack</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt1</span><span class="p">,</span> <span class="n">txt2</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt1</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">txt2</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 从文件中读取</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
+<span class="w">    </span><span class="nd">@unpack</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">txt1</span><span class="p">,</span><span class="w"> </span><span class="n">txt2</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt1</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">txt2</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>6.ddt.txt 文件中的内如下：</p>
@@ -481,29 +481,29 @@ OK
 <p>7.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">webdriver</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
 
 <span class="c1"># 在 class 前定义 @ddt，用于表示要使用 ddt 了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">forTestTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.baidu.com&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 
-    <span class="c1"># data 用于设定参数</span>
-    <span class="nd">@data</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span> <span class="s1">&#39;香蕉&#39;</span><span class="p">,</span> <span class="s1">&#39;石榴&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># data 用于设定参数</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">(</span><span class="s1">&#39;苹果&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;香蕉&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;石榴&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">txt</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果，谷歌浏览器被打开三次，进入百度，分别输入 '苹果'，'香蕉'，'石榴'，每次浏览器关闭之后，才打开下一次，再进行搜索</p>
@@ -523,38 +523,38 @@ OK
 <p>8.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selenium</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">webdriver</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">unpack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">unpack</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">readFile</span><span class="p">():</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;8.ddt.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-        <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">params</span>
+<span class="w">    </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;8.ddt.txt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="w">        </span><span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">params</span>
 
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">forTestTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">()</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
 
-    <span class="c1"># data 用于设定参数，表示参数由 readFile() 函数的返回值决定</span>
-    <span class="c1"># unpack 用于解析参数，例如将[&#39;http://www.baidu.com&#39;, &#39;苹果&#39;] 分别 赋值给 url 和 txt</span>
-    <span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
-    <span class="nd">@unpack</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># data 用于设定参数，表示参数由 readFile() 函数的返回值决定</span>
+<span class="w">    </span><span class="c1"># unpack 用于解析参数，例如将[&#39;http://www.baidu.com&#39;, &#39;苹果&#39;] 分别 赋值给 url 和 txt</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
+<span class="w">    </span><span class="nd">@unpack</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">txt</span><span class="p">):</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;kw&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;su&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>8.ddt.txt 文件中的内容如下：</p>
@@ -589,37 +589,37 @@ OK
 <p>9.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">ddt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">data</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span> <span class="n">unpack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ddt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ddt</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">unpack</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">readFile</span><span class="p">():</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;9.ddt.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-        <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
-<span class="k">return</span> <span class="n">params</span>
+<span class="w">    </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;9.ddt.txt&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="w">        </span><span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<span class="k">return</span><span class="w"> </span><span class="n">params</span>
 
 <span class="c1"># 类之前定义装饰器，表示在类中要使用ddt了</span>
 <span class="nd">@ddt</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{:=^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;测试开始&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:=^20}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;测试结束&#39;</span><span class="p">))</span>
 
-    <span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
-    <span class="nd">@unpack</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_yam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-        <span class="c1"># 获取参数name</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-        <span class="c1"># 这里做断言，当断言不相等的时候返回 msg</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;NotEqual&#39;</span><span class="p">)</span>
-        <span class="c1"># 获取为 text 的 value</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@data</span><span class="p">(</span><span class="o">*</span><span class="n">readFile</span><span class="p">())</span>
+<span class="w">    </span><span class="nd">@unpack</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_yam</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">):</span>
+<span class="w">        </span><span class="c1"># 获取参数name</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="w">        </span><span class="c1"># 这里做断言，当断言不相等的时候返回 msg</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;张三&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NotEqual&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="c1"># 获取为 text 的 value</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>文件内容：</p>
@@ -756,43 +756,43 @@ OK
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 无条件跳过该条用例</span>
-    <span class="nd">@unittest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;不想运行&quot;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 无条件跳过该条用例</span>
+<span class="w">    </span><span class="nd">@unittest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;不想运行&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 有条件跳过操作，条件为True跳过</span>
-    <span class="nd">@unittest</span><span class="o">.</span><span class="n">skipIf</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;1 &lt; 2 为True，条件成立，跳过执行&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 有条件跳过操作，条件为True跳过</span>
+<span class="w">    </span><span class="nd">@unittest</span><span class="o">.</span><span class="n">skipIf</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;1 &lt; 2 为True，条件成立，跳过执行&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 有条件执行跳过，条件为False跳过</span>
-    <span class="nd">@unittest</span><span class="o">.</span><span class="n">skipUnless</span><span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Unless的理由，条件为False，跳过执行&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 有条件执行跳过，条件为False跳过</span>
+<span class="w">    </span><span class="nd">@unittest</span><span class="o">.</span><span class="n">skipUnless</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unless的理由，条件为False，跳过执行&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 标记该测试预期为失败 ，如果该测试方法运行失败，则该测试不算做失败</span>
-    <span class="nd">@unittest</span><span class="o">.</span><span class="n">expectedFailure</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Equal&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># 标记该测试预期为失败 ，如果该测试方法运行失败，则该测试不算做失败</span>
+<span class="w">    </span><span class="nd">@unittest</span><span class="o">.</span><span class="n">expectedFailure</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Equal&#39;</span><span class="p">)</span>
 
-    <span class="nd">@unittest</span><span class="o">.</span><span class="n">expectedFailure</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_6</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertNotEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;NotEqual&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nd">@unittest</span><span class="o">.</span><span class="n">expectedFailure</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_6</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="bp">self</span><span class="o">.</span><span class="n">assertNotEqual</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NotEqual&#39;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>执行结果如下，可以看到，test_2，test_3，test_4 跳过，test_5执行失败，但不算做失败</p>
@@ -820,29 +820,29 @@ FAILED (skipped=3, expected failures=1, unexpected successes=1)
 <p>testCase.py</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span> 
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span><span class="w"> </span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果：</p>
@@ -864,16 +864,16 @@ OK
 <p>再建一个py 文件11.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 
 <span class="c1"># 创建一个测试套件 list</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 <span class="c1"># 方法一，添加测试用例（子元素）到测试套件（集合）</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTest</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_3&#39;</span><span class="p">))</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTest</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">(</span><span class="s2">&quot;test_1&quot;</span><span class="p">))</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTest</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">(</span><span class="s2">&quot;test_5&quot;</span><span class="p">))</span>
 
-<span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 
@@ -894,17 +894,17 @@ OK
 <p>12.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 
 <span class="c1"># 创建一个测试套件 list</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 
 <span class="c1"># 方法二，批量添加测试用例</span>
-<span class="n">cases</span> <span class="o">=</span> <span class="p">[</span><span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_3&#39;</span><span class="p">),</span> <span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_1&#39;</span><span class="p">),</span> <span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_5&#39;</span><span class="p">)]</span>
+<span class="n">cases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_3&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_1&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">MyTestCase</span><span class="p">(</span><span class="s1">&#39;test_5&#39;</span><span class="p">)]</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">cases</span><span class="p">)</span>
 
 <span class="c1"># 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)</span>
-<span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 
@@ -912,49 +912,49 @@ OK
 <p>13.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 
 <span class="c1"># 创建一个测试套件 list</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 
 <span class="c1"># 方法三，批量运行多个unittest类</span>
-<span class="n">test_dir</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span>
+<span class="n">test_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;./&#39;</span>
 <span class="c1"># start_dir 参数指定文件路径，pattern 执行规则，&#39;s*.py&#39; 表示以 &quot;s&quot; 开头，&quot;.py&quot; 的都加入测试套件中</span>
-<span class="n">discover</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">defaultTestLoader</span><span class="o">.</span><span class="n">discover</span><span class="p">(</span><span class="n">start_dir</span> <span class="o">=</span> <span class="n">test_dir</span><span class="p">,</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;t*.py&#39;</span><span class="p">)</span>
+<span class="n">discover</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">defaultTestLoader</span><span class="o">.</span><span class="n">discover</span><span class="p">(</span><span class="n">start_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test_dir</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;t*.py&#39;</span><span class="p">)</span>
 
-<span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discover</span><span class="p">)</span> <span class="c1"># 通过 run 函数运行测试用例</span>
+<span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discover</span><span class="p">)</span><span class="w"> </span><span class="c1"># 通过 run 函数运行测试用例</span>
 </code></pre></div>
 
 <p>还可以执行类的名字，执行该类下面所有的测试用例，使用 loadTestsFromName 函数或者 loadTestsFromTestCase 都可以，案例如下：</p>
 <p>14.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 
 <span class="c1"># 创建一个测试套件 list</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 
 <span class="c1"># 方法四，给出文件名和类名，就能测试所有的测试用例</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromName</span><span class="p">(</span><span class="s1">&#39;testCase.MyTestCase&#39;</span><span class="p">))</span>
 
 <span class="c1"># 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)</span>
-<span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 
 <p>15.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">testCase</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="o">*</span>
 
 <span class="c1"># 创建一个测试套件 list</span>
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 
 <span class="c1"># 方法五，给出类名，就能测试所有的测试用例</span>
 <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">))</span>
 <span class="c1"># 套件通过TextTestRunner对象运行，功能相当于unittest.main(verbosity=2)</span>
-<span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 
@@ -977,58 +977,58 @@ OK
 <p>testCase.py 文件</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">pass</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="k">pass</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_4</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_3</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">test_5</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="vm">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="w">    </span><span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>16.py</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#coding=utf-8</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">suite_case</span><span class="w"> </span><span class="kn">import</span> <span class="n">MyTestCase</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">HTMLTestRunner</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTMLTestRunner</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">suite_case</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">MyTestCase</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">HTMLTestRunner</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">HTMLTestRunner</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+<span class="n">suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
 
-<span class="n">report_path</span> <span class="o">=</span> <span class="s1">&#39;./report/&#39;</span>
-<span class="n">report_file</span> <span class="o">=</span> <span class="n">report_path</span> <span class="o">+</span> <span class="s1">&#39;report.html&#39;</span>
+<span class="n">report_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;./report/&#39;</span>
+<span class="n">report_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">report_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;report.html&#39;</span>
 <span class="c1"># 路径不存在就创建一个文件夹</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">report_path</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">report_path</span><span class="p">)</span>
+<span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">report_path</span><span class="p">):</span>
+<span class="w">    </span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">report_path</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
 <span class="k">pass</span>
 
-<span class="n">report_name</span> <span class="o">=</span> <span class="s1">&#39;测试报告名称&#39;</span>
-<span class="n">report_title</span> <span class="o">=</span> <span class="s1">&#39;测试报告标题&#39;</span>
-<span class="n">report_desc</span> <span class="o">=</span> <span class="s1">&#39;测试报告描述&#39;</span>
+<span class="n">report_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;测试报告名称&#39;</span>
+<span class="n">report_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;测试报告标题&#39;</span>
+<span class="n">report_desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;测试报告描述&#39;</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">report_file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">report</span><span class="p">:</span>
-    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">))</span>
-    <span class="c1"># 套件结合 TextTestRunner 对象进行运行，相当于 unittest.mian()</span>
-    <span class="c1"># 如果结合 HTMLTestRunner 使用，则需要调用 HTMLTestRunner 中的运行器</span>
-    <span class="n">runner</span> <span class="o">=</span> <span class="n">HTMLTestRunner</span><span class="p">(</span><span class="n">stream</span> <span class="o">=</span> <span class="n">report</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="n">report_title</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="n">report_desc</span><span class="p">)</span>
-    <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+<span class="k">with</span><span class="w"> </span><span class="nb">open</span><span class="p">(</span><span class="n">report_file</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">report</span><span class="p">:</span>
+<span class="w">    </span><span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">MyTestCase</span><span class="p">))</span>
+<span class="w">    </span><span class="c1"># 套件结合 TextTestRunner 对象进行运行，相当于 unittest.mian()</span>
+<span class="w">    </span><span class="c1"># 如果结合 HTMLTestRunner 使用，则需要调用 HTMLTestRunner 中的运行器</span>
+<span class="w">    </span><span class="n">runner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HTMLTestRunner</span><span class="p">(</span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">report</span><span class="p">,</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">report_title</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">report_desc</span><span class="p">)</span>
+<span class="w">    </span><span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行 就会成成 report.html 文件，浏览器打开该文件，如下所示：</p>
@@ -1090,9 +1090,9 @@ OK
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html"><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span></a></li>
         
@@ -1100,9 +1100,9 @@ OK
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
-        
         <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -1118,9 +1118,9 @@ OK
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
@@ -1174,11 +1174,11 @@ OK
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
       </ul>
     </div>

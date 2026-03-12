@@ -51,7 +51,7 @@
             
             <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共6242个字</span><span class="tag">css</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共26065个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共24341个字</span><span class="tag">python</span></li></a>
             
             <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共7746个字</span><span class="tag">javascript</span></li></a>
             
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>python代码小抄</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-10 22:52:58</span></div>
+      <div class="header"><span>python代码小抄</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-12 19:38:28</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -129,14 +129,14 @@ def find_images_glob(self,directries,event=None):
 <hr />
 <h3 id="tkinter"> 如何确定在tkinter中单击了哪个按钮</h3>
 <div class="codehilite"><pre><span></span><code><span class="n">方法1</span><span class="err">：</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">partial</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
 
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<span class="w">    </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Button</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">click</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">click</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
 
 <span class="n">方法2</span><span class="err">：</span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<span class="w">    </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Button</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="k">lambda</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="p">:</span><span class="w"> </span><span class="n">click</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">btn</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button&quot;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="p">:</span> <span class="n">click</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </code></pre></div>
 
 <hr />
@@ -144,11 +144,11 @@ def find_images_glob(self,directries,event=None):
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">while</span><span class="w"> </span><span class="kc">True</span><span class="p">:</span>
-<span class="w">    </span><span class="n">time_now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span><span class="w"> </span><span class="c1"># 刷新</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">time_now</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;09:39:00&quot;</span><span class="p">:</span><span class="w"> </span>
-<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()))</span><span class="w">  </span>
-<span class="w">        </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1"># 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span> <span class="c1"># 刷新</span>
+    <span class="k">if</span> <span class="n">time_now</span> <span class="o">==</span> <span class="s2">&quot;09:39:00&quot;</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()))</span>  
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 因为以秒定时，所以暂停2秒，使之不会在1秒内执行多次</span>
 </code></pre></div>
 
 <hr />
@@ -178,26 +178,26 @@ def find_images_glob(self,directries,event=None):
 <h3 id="mysql"> MySQL数据库连接</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pymysql</span>
 
-<span class="n">dblink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;11111111&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;database&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">}</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">selectOne</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="o">=</span><span class="p">[]):</span>
-<span class="w">    </span><span class="k">try</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># 连接MySQL数据库</span>
-<span class="w">        </span><span class="n">db</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">user</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span><span class="n">db</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">],</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
-<span class="w">        </span><span class="c1"># 使用cursor()方法获取操作游标</span>
-<span class="w">        </span><span class="n">cursor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<span class="w">        </span><span class="c1"># 使用execute()方法执行sql语句</span>
-<span class="w">        </span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
-<span class="w">        </span><span class="c1"># 使用fetchone()方法获取所有数据</span>
-<span class="w">        </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">results</span>
-<span class="w">    </span><span class="k">except</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">err</span><span class="p">:</span>
-<span class="w">        </span><span class="n">logUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理失败: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s1">&#39;事务处理失败&#39;</span>
-<span class="w">    </span><span class="k">else</span><span class="p">:</span>
-<span class="w">        </span><span class="n">LogUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理成功&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="c1"># 关闭数据库</span>
-<span class="w">    </span><span class="k">finally</span><span class="p">:</span>
-<span class="w">        </span><span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">dblink</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;11111111&quot;</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">selectOne</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">info</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 连接MySQL数据库</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span> <span class="n">user</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span> <span class="n">password</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span><span class="n">db</span><span class="o">=</span><span class="n">dblink</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">],</span> <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+        <span class="c1"># 使用cursor()方法获取操作游标</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="c1"># 使用execute()方法执行sql语句</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+        <span class="c1"># 使用fetchone()方法获取所有数据</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">results</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="n">logUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理失败: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="s1">&#39;事务处理失败&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">LogUtility</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;事务处理成功&quot;</span><span class="p">)</span>
+    <span class="c1"># 关闭数据库</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
 <hr />
@@ -267,9 +267,9 @@ def find_images_glob(self,directries,event=None):
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
-        
         <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -285,13 +285,13 @@ def find_images_glob(self,directries,event=None):
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
         <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
@@ -313,9 +313,9 @@ def find_images_glob(self,directries,event=None):
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -341,11 +341,11 @@ def find_images_glob(self,directries,event=None):
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
       </ul>
     </div>

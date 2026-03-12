@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25937个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25893个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共52801个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共49311个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
-            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共73235个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
+            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
             <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共5797个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-10 22:52:58</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-12 19:38:28</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -111,20 +111,14 @@
 <li><a href="#10-labwc">10. labwc窗口管理器设置</a><ul>
 <li><a href="#101-labwc">10.1. 安装labwc及相关软件</a></li>
 <li><a href="#102-labwc">10.2. 启动labwc</a></li>
-<li><a href="#103-labwc">10.3. 添加labwc配置文件</a></li>
-<li><a href="#104">10.4. 输入法环境变量设置</a></li>
-<li><a href="#105">10.5 开机启动设置</a></li>
-<li><a href="#106-foot">10.6. 设置终端(foot)字体大小</a></li>
-<li><a href="#107-wlr-randr">10.7. 设置wlr-randr</a></li>
-<li><a href="#108">10.8. 其他</a></li>
+<li><a href="#103">10.3. 其他</a></li>
 </ul>
 </li>
 <li><a href="#11-wayfire">11. wayfire窗口管理器设置</a><ul>
 <li><a href="#111-wayfire">11.1. 安装wayfire及相关软件</a></li>
 <li><a href="#112-wayfire">11.2. 启动wayfire</a></li>
 <li><a href="#113-wayfire">11.3. wayfire</a></li>
-<li><a href="#114">11.4. 输入法环境变量设置</a></li>
-<li><a href="#115-foot">11.5. 设置终端(foot)字体大小</a></li>
+<li><a href="#114-foot">11.4. 设置终端(foot)字体大小</a></li>
 </ul>
 </li>
 <li><a href="#12-rime">12. rime输入法设置</a></li>
@@ -419,9 +413,9 @@ font=monospace:size=12
 
 <h3 id="10-labwc">10. labwc窗口管理器设置</h3>
 <h4 id="101-labwc">10.1. 安装labwc及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">terminal</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">appfinder</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">amberol</span><span class="w"> </span><span class="nx">firefox</span><span class="o">-</span><span class="nx">esr</span><span class="w"> </span><span class="nx">firefox</span><span class="o">-</span><span class="nx">esr</span><span class="o">-</span><span class="nx">l10n</span><span class="o">-</span><span class="nx">zh</span><span class="o">-</span><span class="nx">cn</span><span class="w"> </span><span class="nx">webext</span><span class="o">-</span><span class="nx">ublock</span><span class="o">-</span><span class="nx">origin</span><span class="o">-</span><span class="nx">firefox</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
+<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">foot</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">chromium</span><span class="w"> </span><span class="nx">chromium</span><span class="o">-</span><span class="nx">l10n</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
 
-<span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">autoremove</span><span class="w"> </span><span class="o">--</span><span class="nx">purge</span><span class="w"> </span><span class="nx">wpasupplicant</span>
+<span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">autoremove</span><span class="w"> </span><span class="o">--</span><span class="nx">purge</span><span class="w"> </span><span class="nx">wpasupplicant</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">tiny</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">common</span>
 </code></pre></div>
 
 <h4 id="102-labwc">10.2. 启动labwc</h4>
@@ -432,47 +426,7 @@ font=monospace:size=12
 <span class="nv">fi</span>
 </code></pre></div>
 
-<h4 id="103-labwc">10.3. 添加labwc配置文件</h4>
-<div class="codehilite"><pre><span></span><code>mkdir -p ~/.config/labwc
-cp /usr/share/doc/labwc/* ~/.config/labwc/
-</code></pre></div>
-
-<h4 id="104">10.4. 输入法环境变量设置</h4>
-<p>启用fcitx输入需要配置环境变量：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">config</span><span class="o">/</span><span class="n">labwc</span><span class="o">/</span><span class="n">environment</span>
-
-<span class="n">XIM</span><span class="o">=</span><span class="ss">&quot;fcitx&quot;</span>
-<span class="n">#GTK_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">XMODIFIERS</span><span class="o">=</span><span class="ss">&quot;@im=fcitx&quot;</span>
-<span class="n">INPUT_METHOD</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">SDL_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-</code></pre></div>
-
-<h4 id="105">10.5 开机启动设置</h4>
-<div class="codehilite"><pre><span></span><code>nano autostart
-
-# 背景设置
-swaybg -i &#39;/home/poo/图片/3.jpg&#39; &gt;/dev/null 2&gt;&amp;1 &amp;
-
-fcitx5 &gt;/dev/null 2&gt;&amp;1 &amp;
-blueman-applet &gt;/dev/null 2&gt;&amp;1 &amp;
-</code></pre></div>
-
-<h4 id="106-foot">10.6. 设置终端(foot)字体大小</h4>
-<div class="codehilite"><pre><span></span><code>cp -r /etc/foot/ ~/.config/foot/
-vi ~/.config/foot/foot.ini
-
-font=monospace:size=12
-</code></pre></div>
-
-<h4 id="107-wlr-randr">10.7. 设置wlr-randr</h4>
-<div class="codehilite"><pre><span></span><code># 缩放1.25
-wlr-ranr --output eDP-1 --scale 1.25
-</code></pre></div>
-
-<h4 id="108">10.8. 其他</h4>
+<h4 id="103">10.3. 其他</h4>
 <div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">启动pipewire</span>
 <span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="nx">pipewire</span>
 <span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">pipewire</span>
@@ -508,24 +462,11 @@ wlr-ranr --output eDP-1 --scale 1.25
 <div class="codehilite"><pre><span></span><code>cp /usr/share/wayfire/examples/wayfire.ini ~/.config/wayfire.ini
 </code></pre></div>
 
-<h4 id="114">11.4. 输入法环境变量设置</h4>
-<p>启用fcitx输入需要配置环境变量：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
+<h4 id="114-foot">11.4. 设置终端(foot)字体大小</h4>
+<div class="codehilite"><pre><span></span><code>cp -r /etc/xdg/foot/ ~/.config/foot/
+nano ~/.config/foot/foot.ini
 
-<span class="n">XIM</span><span class="o">=</span><span class="ss">&quot;fcitx&quot;</span>
-<span class="n">#GTK_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">XMODIFIERS</span><span class="o">=</span><span class="ss">&quot;@im=fcitx&quot;</span>
-<span class="n">INPUT_METHOD</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">SDL_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-</code></pre></div>
-
-<h4 id="115-foot">11.5. 设置终端(foot)字体大小</h4>
-<div class="codehilite"><pre><span></span><code>cp -r /etc/foot/ ~/.config/foot/
-vi ~/.config/foot/foot.ini
-
-# 也可以直接在/etc/foot/foot.ini中修改
+# 也可以直接在/etc/xdg/foot/foot.ini中修改
 font=monospace:size=12
 </code></pre></div>
 
@@ -588,7 +529,7 @@ style:
 <span class="o">[</span><span class="n">General</span><span class="o">]</span>
 <span class="n">EnableNetworkConfiguration</span><span class="o">=</span><span class="k">true</span>
 
-<span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">iwd</span><span class="p">.</span><span class="n">service</span><span class="w"> </span><span class="o">--</span><span class="n">now</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">iwd</span><span class="p">.</span><span class="n">service</span><span class="w"> </span><span class="c1">--now</span>
 
 <span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
 
@@ -626,9 +567,9 @@ style:
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
-        
         <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -644,13 +585,13 @@ style:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
-        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
-        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
         <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
@@ -672,9 +613,9 @@ style:
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         
@@ -700,11 +641,11 @@ style:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
       </ul>
     </div>

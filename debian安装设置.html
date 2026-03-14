@@ -51,7 +51,7 @@
             
             <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25893个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共49311个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共49756个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-12 19:38:28</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-14 22:35:22</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -104,8 +104,6 @@
 <li><a href="#9-sway">9. Sway窗口管理器设置</a><ul>
 <li><a href="#91-sway">9.1. 安装Sway及相关软件</a></li>
 <li><a href="#92-sway">9.2. 启动Sway</a></li>
-<li><a href="#93-sway">9.3. 配置sway</a></li>
-<li><a href="#94-foot">9.4. 设置终端(foot)字体大小</a></li>
 </ul>
 </li>
 <li><a href="#10-labwc">10. labwc窗口管理器设置</a><ul>
@@ -147,7 +145,7 @@ reboot
 </code></pre></div>
 
 <h3 id="4-debain5">4. 去掉debain开机启动项停留的5秒和电池的问题</h3>
-<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 使用grub时使用，使用systemd-boot请忽略
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 使用grub时使用，**使用systemd-boot请忽略**
 
 nano /etc/default/grub
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
@@ -397,25 +395,19 @@ xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
 <span class="nv">fi</span>
 </code></pre></div>
 
-<h4 id="93-sway">9.3. 配置sway</h4>
-<div class="codehilite"><pre><span></span><code>mkdir -p ~/.config/sway
-cp /etc/sway/config ~/.config/sway/
-
-# 编辑~/.config/sway
-</code></pre></div>
-
-<h4 id="94-foot">9.4. 设置终端(foot)字体大小</h4>
-<div class="codehilite"><pre><span></span><code>cp -r /etc/foot/ ~/.config/foot/
-vi ~/.config/foot/foot.ini
-
-font=monospace:size=12
-</code></pre></div>
-
 <h3 id="10-labwc">10. labwc窗口管理器设置</h3>
 <h4 id="101-labwc">10.1. 安装labwc及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">foot</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">chromium</span><span class="w"> </span><span class="nx">chromium</span><span class="o">-</span><span class="nx">l10n</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
+<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">foot</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
 
 <span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">autoremove</span><span class="w"> </span><span class="o">--</span><span class="nx">purge</span><span class="w"> </span><span class="nx">wpasupplicant</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">tiny</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">common</span>
+</code></pre></div>
+
+<p>需要安装google-chrome，在/etc/apt/sources.list.d/google-chrome.sources文件中添加以下内容：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span>
+<span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">dl</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">com</span><span class="sr">/linux/chrome/deb/</span>
+<span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">stable</span>
+<span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>
+<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/etc/apt/trusted.gpg.d/g</span><span class="n">oogle</span><span class="o">-</span><span class="n">chrome</span><span class="o">.</span><span class="na">gpg</span>
 </code></pre></div>
 
 <h4 id="102-labwc">10.2. 启动labwc</h4>

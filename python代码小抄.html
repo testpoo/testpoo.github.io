@@ -51,7 +51,7 @@
             
             <a href="https://testpoo.github.io/CSS代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;CSS代码小抄</span><span>2024-08-15&nbsp;&nbsp;共6242个字</span><span class="tag">css</span></li></a>
             
-            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共24341个字</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/python代码小抄.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span><span>2024-08-13&nbsp;&nbsp;共25845个字</span><span class="tag">python</span></li></a>
             
             <a href="https://testpoo.github.io/javascript代码小抄.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span><span>2024-08-13&nbsp;&nbsp;共7746个字</span><span class="tag">javascript</span></li></a>
             
@@ -61,22 +61,39 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>python代码小抄</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-14 22:35:22</span></div>
+      <div class="header"><span>python代码小抄</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-20 19:40:17</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
+<li><a href="#_1"> 图片文本化</a></li>
 <li><a href="#linux"> 获取Linux程序名称/命令/图标/分类</a></li>
 <li><a href="#linux_1"> 获取Linux程序图标</a></li>
 <li><a href="#tkinter"> 如何确定在tkinter中单击了哪个按钮</a></li>
 <li><a href="#python"> python定时任务</a></li>
 <li><a href="#jinja2"> JinJa2代码</a></li>
 <li><a href="#mysql"> MySQL数据库连接</a></li>
-<li><a href="#_1"> 清空文件夹</a></li>
-<li><a href="#_2"> 获取任意周的周一和周五</a></li>
-<li><a href="#_3"> 获取工作日</a></li>
+<li><a href="#_2"> 清空文件夹</a></li>
+<li><a href="#_3"> 获取任意周的周一和周五</a></li>
+<li><a href="#_4"> 获取工作日</a></li>
 </ul>
 </div>
+<h3 id="_1"> 图片文本化</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+
+<span class="c1"># 你的 SVG 文件路径</span>
+<span class="n">svg_path</span> <span class="o">=</span> <span class="s2">&quot;music.svg&quot;</span>
+
+<span class="c1"># 转 Base64</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">svg_path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">base64_str</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+<span class="c1"># 输出最终可以用在 CSS 里的字符串</span>
+<span class="n">css_bg</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;(&quot;data:image/svg+xml;base64,</span><span class="si">{</span><span class="n">base64_str</span><span class="si">}</span><span class="s1">&quot;)&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">css_bg</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
 <h3 id="linux"> 获取Linux程序名称/命令/图标/分类</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;/usr/share/applications/&quot;</span>
 <span class="n">lists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">list for list in os.listdir(path) if len(list.split(&quot;.&quot;))&gt;1 and list.split(&quot;.&quot;)[1</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;desktop&quot;</span><span class="err">]</span>
@@ -201,7 +218,7 @@ def find_images_glob(self,directries,event=None):
 </code></pre></div>
 
 <hr />
-<h3 id="_1"> 清空文件夹</h3>
+<h3 id="_2"> 清空文件夹</h3>
 <div class="codehilite"><pre><span></span><code><span class="nv">def</span><span class="w"> </span><span class="nv">delFile</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>:
 <span class="w">    </span><span class="nv">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span>.<span class="nv">listdir</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">paths</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span>[]:
@@ -211,7 +228,7 @@ def find_images_glob(self,directries,event=None):
 </code></pre></div>
 
 <hr />
-<h3 id="_2"> 获取任意周的周一和周五</h3>
+<h3 id="_3"> 获取任意周的周一和周五</h3>
 <div class="codehilite"><pre><span></span><code>def get_which_week_monday_and_firday_by_date(move_days):
     needTime = datetime.strptime(time.strftime(&quot;%Y-%m-%d&quot;, time.localtime()) + &quot; 00:00:00&quot;, &quot;%Y-%m-%d %H:%M:%S&quot;)
     weekStartTime = needTime - timedelta(days=needTime.weekday() + move_days, hours=needTime.hour, minutes=needTime.minute, seconds=needTime.second, microseconds=needTime.microsecond)
@@ -222,7 +239,7 @@ def find_images_glob(self,directries,event=None):
 </code></pre></div>
 
 <hr />
-<h3 id="_3"> 获取工作日</h3>
+<h3 id="_4"> 获取工作日</h3>
 <div class="codehilite"><pre><span></span><code>def calculate_workdays(start_date, end_date):
     start_date = datetime.strptime(start_date,&#39;%Y-%m-%d&#39;)
     end_date = datetime.strptime(end_date,&#39;%Y-%m-%d&#39;)

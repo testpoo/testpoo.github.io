@@ -49,11 +49,11 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共55433个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
+            <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共47713个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
             
             <a href="https://testpoo.github.io/go测试库apitest简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;go测试库apitest简介</span><span>2023-08-23&nbsp;&nbsp;共238363个字</span><span class="tag">go</span><span class="tag">apitest</span></li></a>
             
-            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共128875个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/BeautifulSoup简介.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;BeautifulSoup简介</span><span>2022-11-30&nbsp;&nbsp;共132807个字</span><span class="tag">beautifulsoup</span><span class="tag">python</span></li></a>
             
             <a href="https://testpoo.github.io/UI自动化测试神器-Cypress.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;UI自动化测试神器-Cypress</span><span>2022-06-14&nbsp;&nbsp;共58230个字</span><span class="tag">cypress</span><span class="tag">自动化测试</span></li></a>
             
@@ -61,9 +61,9 @@
             
             <a href="https://testpoo.github.io/性能监控各指令详解.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;性能监控各指令详解</span><span>2021-12-22&nbsp;&nbsp;共118003个字</span><span class="tag">性能</span><span class="tag">监控</span></li></a>
             
-            <a href="https://testpoo.github.io/nose简介.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共269419个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
+            <a href="https://testpoo.github.io/nose简介.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;nose简介</span><span>2021-06-04&nbsp;&nbsp;共269994个字</span><span class="tag">nose</span><span class="tag">python</span></li></a>
             
-            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共82380个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
+            <a href="https://testpoo.github.io/Python自动化之unittest.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python自动化之unittest</span><span>2021-04-21&nbsp;&nbsp;共92454个字</span><span class="tag">python</span><span class="tag">unittest</span></li></a>
             
           </ul>
         </div>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>nose简介</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-03-20 19:40:17</span></div>
+      <div class="header"><span>nose简介</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-04-05 21:47:31</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -624,7 +624,7 @@
 
 <p>如果你不想使用unittest框架测试结束时这种显示方式，可以在脚本中使用以下方式：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">nose</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">nose</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nose</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </code></pre></div>
 
 <h4 id="41-nose">4.1 nose测试实践</h4>
@@ -779,23 +779,23 @@ OK
 <p>nose支持在每个用例前使用with_setup来自定义测试用例的setUp及tearDown功能，如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># coding=utf-8</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">with_setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">with_setup</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">setup_func</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;set up test fixtures&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;set up test fixtures&quot;</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">teardown_func</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tear down test fixtures&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tear down test fixtures&quot;</span><span class="p">)</span>
 
-<span class="nd">@with_setup</span><span class="p">(</span><span class="n">setup_func</span><span class="p">,</span> <span class="n">teardown_func</span><span class="p">)</span>
+<span class="nd">@with_setup</span><span class="p">(</span><span class="n">setup_func</span><span class="p">,</span><span class="w"> </span><span class="n">teardown_func</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_1</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test_1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test_1&quot;</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_2</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test_2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test_2&quot;</span><span class="p">)</span>
 
-<span class="n">test_2</span><span class="o">.</span><span class="n">setup</span> <span class="o">=</span> <span class="n">setup_func</span>
-<span class="n">test_2</span><span class="o">.</span><span class="n">teardown</span> <span class="o">=</span> <span class="n">teardown_func</span>
+<span class="n">test_2</span><span class="o">.</span><span class="n">setup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_func</span>
+<span class="n">test_2</span><span class="o">.</span><span class="n">teardown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">teardown_func</span>
 </code></pre></div>
 
 <p>运行结果：</p>
@@ -871,21 +871,21 @@ test_2.teardown = teardown_func
 <h3 id="5">5. 子测试/测试生成器</h3>
 <p><code>nose</code> 除了支持 <code>unittest</code> 中的 <code>TestCase.subTest</code>，还支持一种更为强大的子测试编写方式，也就是 <code>测试生成器（Test generators）</code>，通过 <code>yield</code> 实现。</p>
 <p>在下面的示例中，定义一个 <code>test_evens</code> 测试函数，里面生成了 5 个子测试 <code>check_even</code>：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_evens</span><span class="p">():</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">test_evens</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
         <span class="k">yield</span> <span class="n">check_even</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="mi">3</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">check_even</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">nn</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">check_even</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">nn</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">nn</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 </code></pre></div>
 
 <p>此外，相较于 <code>unittest.TestCase.subTest</code> 多个子测试只能执行一次测试前置和清理，<code>nose</code>的 <code>测试生成器</code> 可以支持每个子测试执行一次测试前置和清理，如：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_generator</span><span class="p">():</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">test_generator</span><span class="p">():</span>
     <span class="c1"># ...</span>
     <span class="k">yield</span> <span class="n">func</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">arg</span> <span class="c1"># ...</span>
 
 <span class="nd">@with_setup</span><span class="p">(</span><span class="n">setup_func</span><span class="p">,</span> <span class="n">teardown_func</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">something_about</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
 </code></pre></div>
 
@@ -949,11 +949,11 @@ def check_even(n, nn):
 <p>为了使写用例更加容易，nose.tools提供了部分便利的功能函数，下面写几个常用的，如下：</p>
 <h4 id="61-nosetoolsok_expr-msgnone">6.1 nose.tools.ok_(expr, msg=None)</h4>
 <p>标准的assert，例子如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">ok_</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">ok_</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_lean_2</span><span class="p">():</span>
-    <span class="nb">print</span> <span class="s2">&quot;test_case_2&quot;</span>
-    <span class="n">ok_</span><span class="p">(</span><span class="mi">4</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="w"> </span><span class="s2">&quot;test_case_2&quot;</span>
+<span class="w">    </span><span class="n">ok_</span><span class="p">(</span><span class="mi">4</span><span class="o">==</span><span class="mi">3</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果如下：</p>
@@ -983,10 +983,10 @@ def check_even(n, nn):
 <p>断言结果<code>AssertionError: Error</code></p>
 <h4 id="62-nosetoolseq_a-b-msgnone">6.2 nose.tools.eq_(a, b, msg=None)</h4>
 <p>将参数a与b快速对比</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">eq_</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">eq_</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_task_2</span><span class="p">():</span>
-    <span class="n">eq_</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Wrong&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">eq_</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;Wrong&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果如下：</p>
@@ -1012,9 +1012,9 @@ def check_even(n, nn):
 <p>断言结果<code>AssertionError: Wrong</code></p>
 <h4 id="63-nosetoolsassert_inmember-container-msgnone">6.3 nose.tools.assert_in(member, container, msg=None)</h4>
 <p>代码如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">assert_in</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">assert_in</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_task_3</span><span class="p">():</span>
-    <span class="n">assert_in</span><span class="p">(</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;test  in failed&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">assert_in</span><span class="p">(</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;test  in failed&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>运行结果如下：</p>
@@ -1041,12 +1041,12 @@ def check_even(n, nn):
 <h4 id="64-nosetoolsset_trace">6.4 nose.tools.set_trace()</h4>
 <p>单步调试工具，在多个模块，大程序时这个功能好用。内部使用的是pdb.set_trace。</p>
 <p>代码如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">assert_in</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">set_trace</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">assert_in</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">set_trace</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_task_4</span><span class="p">():</span>
-    <span class="n">set_trace</span><span class="p">()</span>
-    <span class="n">assert_in</span><span class="p">(</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;test in failed&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">set_trace</span><span class="p">()</span>
+<span class="w">    </span><span class="n">assert_in</span><span class="p">(</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="n">msg</span><span class="o">=</span><span class="s2">&quot;test in failed&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>结果如下：</p>
@@ -1095,12 +1095,12 @@ exec  pdb
 
 <h4 id="65-nosetoolstimedlimit">6.5 nose.tools.timed(limit)</h4>
 <p>测试必须在设定的时间内（以秒为单位）完成 ，否则测试失败；代码如下：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">timed</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nose.tools</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">timed</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="nd">@timed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    
+<span class="nd">@timed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">    </span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_lean_5</span><span class="p">():</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 
 <p>测试结果如下：</p>
@@ -1299,9 +1299,9 @@ exec  pdb
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
-        
         <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -1373,11 +1373,11 @@ exec  pdb
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
+        <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         
       </ul>
     </div>

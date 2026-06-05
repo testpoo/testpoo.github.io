@@ -30,6 +30,8 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
+            <li><a href="https://testpoo.github.io/virsh命令简述.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;测试</a></li>
+            
             <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
@@ -37,8 +39,6 @@
             <li><a href="https://testpoo.github.io/使用tar包安装mysql.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;技术</a></li>
             
             <li><a href="https://testpoo.github.io/CSS代码小抄.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;代码小抄</a></li>
-            
-            <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;测试</a></li>
             
           </ul>
         </div>
@@ -49,13 +49,13 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共25937个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-03-05&nbsp;&nbsp;共7404个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共50064个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共16729个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
-            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共73235个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
+            <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共13621个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共5797个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
+            <a href="https://testpoo.github.io/Arch手动安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span><span>2025-10-22&nbsp;&nbsp;共4184个字</span><span class="tag">deep</span><span class="tag">xfce</span></li></a>
             
           </ul>
         </div>
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-04-05 21:47:31</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-05 13:46:44</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -135,71 +135,71 @@
 <h3 id="2-u">2. 制作自启动U盘</h3>
 <p><code>dd if=xxx.iso of=/dev/disk</code></p>
 <h3 id="3-sudo">3. 将当前用户加入sudo</h3>
-<div class="codehilite"><pre><span></span><code># 方法一
+<pre class="codehilite"><code># 方法一
 su root
 nano /etc/sudoers添加 username ALL=(ALL:ALL) ALL
 
 # 方法二
 useradd -a -G sudo username
 reboot
-</code></pre></div>
+</code></pre>
 
 <h3 id="4-debain5">4. 去掉debain开机启动项停留的5秒和电池的问题</h3>
-<div class="codehilite"><pre><span></span><code><span class="gh">#</span> 使用grub时使用，**使用systemd-boot请忽略**
+<pre class="codehilite"><code># 使用grub时使用，**使用systemd-boot请忽略**
 
 nano /etc/default/grub
 修改GRUB_TIMEOUT=5改为GRUB_TIMEOUT=0
 修改GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot; 加acpi=force
 sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文件中
-</code></pre></div>
+</code></pre>
 
 <h3 id="5">5. 修改源</h3>
 <p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">https://mirrors.tuna.tsinghua.edu.cn/help/debian/</a></p>
 <ul>
 <li>传统格式（/etc/apt/sources.list）</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
-<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">testing</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware</span>
-<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">testing-updates</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free non-free-firmware</span>
-<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian/</span><span class="w"> </span><span class="kp">testing-backports</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-backports main contrib non-free non-free-firmware</span>
-<span class="k">deb</span><span class="w"> </span><span class="s">https://mirrors.tuna.tsinghua.edu.cn/debian-security</span><span class="w"> </span><span class="kp">testing-security</span><span class="w"> </span><span class="kp">main</span><span class="w"> </span><span class="kp">contrib</span><span class="w"> </span><span class="kp">non-free</span><span class="w"> </span><span class="kp">non-free-firmware</span>
-<span class="c"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main contrib non-free non-free-firmware</span>
-<span class="c"># deb https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware</span>
-<span class="c"># # deb-src https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware</span>
-</code></pre></div>
+<pre class="codehilite"><code># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-backports main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security testing-security main contrib non-free non-free-firmware
+# deb https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
+# # deb-src https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
+</code></pre>
 
 <ul>
 <li>DEB822 格式（/etc/apt/sources.list.d/debian.sources）</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span>
-<span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">tuna</span><span class="o">.</span><span class="na">tsinghua</span><span class="o">.</span><span class="na">edu</span><span class="o">.</span><span class="na">cn</span><span class="o">/</span><span class="n">debian</span>
-<span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">updates</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">backports</span>
-<span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">contrib</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
-<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/usr/share/keyrings/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="na">gpg</span>
+<pre class="codehilite"><code>Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/debian
+Suites: testing testing-updates testing-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-<span class="err">#</span><span class="w"> </span><span class="err">默认注释了源码镜像以提高</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">update</span><span class="w"> </span><span class="err">速度，如有需要可自行取消注释</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span><span class="o">-</span><span class="n">src</span>
-<span class="err">#</span><span class="w"> </span><span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">tuna</span><span class="o">.</span><span class="na">tsinghua</span><span class="o">.</span><span class="na">edu</span><span class="o">.</span><span class="na">cn</span><span class="o">/</span><span class="n">debian</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">updates</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">backports</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">contrib</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/usr/share/keyrings/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="na">gpg</span>
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# Types: deb-src
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/debian
+# Suites: testing testing-updates testing-backports
+# Components: main contrib non-free non-free-firmware
+# Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-<span class="err">#</span><span class="w"> </span><span class="err">以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换</span>
-<span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span>
-<span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">tuna</span><span class="o">.</span><span class="na">tsinghua</span><span class="o">.</span><span class="na">edu</span><span class="o">.</span><span class="na">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span>
-<span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">security</span>
-<span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">contrib</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
-<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/usr/share/keyrings/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="na">gpg</span>
+# 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
+Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security
+Suites: testing-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-<span class="err">#</span><span class="w"> </span><span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span><span class="o">-</span><span class="n">src</span>
-<span class="err">#</span><span class="w"> </span><span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">mirrors</span><span class="o">.</span><span class="na">tuna</span><span class="o">.</span><span class="na">tsinghua</span><span class="o">.</span><span class="na">edu</span><span class="o">.</span><span class="na">cn</span><span class="o">/</span><span class="n">debian</span><span class="o">-</span><span class="n">security</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">testing</span><span class="o">-</span><span class="n">security</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">contrib</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">free</span><span class="o">-</span><span class="n">firmware</span>
-<span class="err">#</span><span class="w"> </span><span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/usr/share/keyrings/</span><span class="n">debian</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="na">gpg</span>
-</code></pre></div>
+# Types: deb-src
+# URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security
+# Suites: testing-security
+# Components: main contrib non-free non-free-firmware
+# Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+</code></pre>
 
 <h3 id="6-gnome">6. Gnome桌面设置</h3>
 <h4 id="61">6.1 安装软件</h4>
@@ -212,9 +212,9 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 </ul>
 <h3 id="7-xfce">7. xfce桌面设置</h3>
 <h4 id="71">7.1. 删除软件</h4>
-<p><code>sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic xfburn xterm xfce4-whiskermenu-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-verve-plugin xfce4-timer-plugin xfce4-smartbookmark-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-diskperf-plugin xfce4-battery-plugin xfce4-sensors-plugin xfce4-systemload-plugin xfce4-xkb-plugin xfce4-netload-plugin xfce4-mailwatch-plugin xfce4-clipman-plugin xfce4-fsguard-plugin atril xfce4-genmon-plugin xsane --purge</code></p>
+<p><code>sudo apt autoremove libreoffice* exfalso parole quodlibet synaptic xfburn xterm xfce4-whiskermenu-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-verve-plugin xfce4-timer-plugin xfce4-smartbookmark-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-diskperf-plugin xfce4-battery-plugin xfce4-sensors-plugin xfce4-systemload-plugin xfce4-xkb-plugin xfce4-netload-plugin xfce4-mailwatch-plugin xfce4-clipman-plugin xfce4-fsguard-plugin atril xfce4-genmon-plugin xsane tango-icon-theme vim-tiny --purge</code></p>
 <h4 id="72">7.2. 安装软件</h4>
-<p><code>sudo apt install ibus git ibus-rime rime-data-wubi gvfs-backends blueman yaru-theme-gtk fonts-noto-cjk webext-ublock-origin-firefox ristretto xfce4-screenshooter xfce4-taskmanager xfce4-docklike-plugin pkexec pipewire-audio firefox-esr-l10n-zh-cn</code></p>
+<p><code>sudo apt install git fcitx5 fcitx5-rime rime-data-wubi gvfs-backends blueman yaru-theme-gtk fonts-noto-cjk webext-ublock-origin-firefox ristretto xfce4-screenshooter xfce4-taskmanager xfce4-docklike-plugin pkexec pipewire-audio firefox-esr-l10n-zh-cn</code></p>
 <p>可选图标 <code>https://github.com/vinceliuice/McMojave-circle</code>  <code>https://github.com/yeyushengfan258/Reversal-icon-theme.git</code></p>
 <h4 id="73">7.3. 设置</h4>
 <ul>
@@ -246,76 +246,76 @@ sudo update-grub，该命令将刚才的修改更新至 /boot/grub/grub.cfg 文�
 <h4 id="74">7.4. 添加触摸板关启脚本</h4>
 <p>本机快捷键Fn+F8==Super+Ctrl_L</p>
 <p>直接在键盘中设置该命令，直接打开关闭触摸板工具</p>
-<div class="codehilite"><pre><span></span><code>xfce4-mouse-settings --device=&quot;SYNA3602:00 093A:0255 Touchpad&quot;
+<pre class="codehilite"><code>xfce4-mouse-settings --device=&quot;SYNA3602:00 093A:0255 Touchpad&quot;
 xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
-</code></pre></div>
+</code></pre>
 
 <h4 id="75-lightdm">7.5. lightdm设置</h4>
-<div class="codehilite"><pre><span></span><code><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="n">greeter</span><span class="p">.</span><span class="n">conf</span>
-<span class="o">[</span><span class="n">greeter</span><span class="o">]</span>
-<span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Yaru</span>
-<span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Reversal</span><span class="o">-</span><span class="n">blue</span><span class="o">-</span><span class="n">light</span>
-<span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Noto</span><span class="w"> </span><span class="n">Sans</span><span class="w"> </span><span class="n">Mono</span><span class="w"> </span><span class="mi">10</span>
-<span class="k">default</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">#distributor</span><span class="o">-</span><span class="n">logo</span>
-<span class="n">clock</span><span class="o">-</span><span class="nf">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">A</span><span class="w"> </span><span class="o">%</span><span class="n">F</span><span class="w"> </span><span class="o">%</span><span class="nl">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span><span class="w"> </span><span class="n">第</span><span class="o">%</span><span class="n">V周</span>
-<span class="n">background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">backgrounds</span><span class="o">/</span><span class="n">background</span><span class="p">.</span><span class="n">png</span>
-<span class="n">xft</span><span class="o">-</span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
-<span class="n">indicators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="k">host</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">clock</span><span class="p">;</span><span class="o">~</span><span class="n">spacer</span><span class="p">;</span><span class="o">~</span><span class="n">a11y</span><span class="p">;</span><span class="o">~</span><span class="k">session</span><span class="p">;</span><span class="o">~</span><span class="nf">power</span>
-<span class="n">#hide</span><span class="o">-</span><span class="k">user</span><span class="o">-</span><span class="nc">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
+<pre class="codehilite"><code>/etc/lightdm/lightdm-gtk-greeter.conf
+[greeter]
+theme-name = Yaru
+icon-theme-name = Reversal-blue-light
+font-name = Noto Sans Mono 10
+default-user-image = #distributor-logo
+clock-format = %A %F %H:%M 第%V周
+background = /usr/share/backgrounds/background.png
+xft-dpi = 120
+indicators = ~host;~spacer;~clock;~spacer;~a11y;~session;~power
+#hide-user-image = true
 
-<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">lightdm</span><span class="o">/</span><span class="n">lightdm</span><span class="p">.</span><span class="n">conf</span>
-<span class="n">greeter</span><span class="o">-</span><span class="n">hide</span><span class="o">-</span><span class="n">users</span><span class="o">=</span><span class="k">false</span><span class="w"> </span><span class="n">前的#去掉</span>
-</code></pre></div>
+/etc/lightdm/lightdm.conf
+greeter-hide-users=false 前的#去掉
+</code></pre>
 
 <h4 id="76-gtk">7.6. 启动gtk编辑器</h4>
-<div class="codehilite"><pre><span></span><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
+<pre class="codehilite"><code>xfce4-panel -q &amp;&amp; GTK_DEBUG=interactive xfce4-panel
 重启xfce-panel:xfce4-panel -r
-</code></pre></div>
+</code></pre>
 
 <h4 id="77">7.7. 添加右键</h4>
-<div class="codehilite"><pre><span></span><code><span class="nv">ln</span><span class="w"> </span><span class="o">-</span><span class="nv">s</span><span class="w"> </span><span class="o">%</span><span class="nv">f</span><span class="w"> </span><span class="s1">&#39;Link to %n&#39;</span>
-<span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">Link</span>
+<pre class="codehilite"><code>ln -s %f 'Link to %n'
+Create a Link
 创建链接
-<span class="nv">Create</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">symbolic</span><span class="w"> </span><span class="nv">link</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">selected</span><span class="w"> </span><span class="nv">item</span>
+Create a symbolic link for each selected item
 给每个选择的项目创建一个链接
 
-<span class="nv">pkexec</span><span class="w"> </span><span class="nv">thunar</span><span class="w"> </span><span class="o">%</span><span class="nv">F</span>
-<span class="nv">Open</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">Root</span>
+pkexec thunar %F
+Open as Root
 管理员打开
-<span class="nv">Open</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">folder</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">administration</span>
+Open the folder with administration
 管理员打开文件夹
 
-<span class="nv">catfish</span><span class="w"> </span><span class="o">%</span><span class="nv">f</span>
-<span class="nv">Search</span>
+catfish %f
+Search
 搜索
-<span class="nv">Search</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">Files</span>
+Search for Files
 搜索文件
-</code></pre></div>
+</code></pre>
 
 <h4 id="78">7.8. 启动花屏</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">xfwm4</span><span class="o">--&gt;</span><span class="n">vblank_mode</span><span class="o">=</span><span class="n">off</span>
-</code></pre></div>
+<pre class="codehilite"><code>xfwm4--&gt;vblank_mode=off
+</code></pre>
 
 <h4 id="79-gtkcss">7.9. 添加gtk.css</h4>
 <ul>
 <li>路径<code>~/config/gtk3.0/gtk.css</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="p">#</span><span class="nn">pulseaudio-button</span><span class="w"> </span><span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-power-manager-plugin</span><span class="w"> </span><span class="nt">image</span><span class="o">,</span><span class="p">#</span><span class="nn">xfce4-notification-plugin</span><span class="w"> </span><span class="nt">image</span><span class="p">{</span>
-<span class="w">            </span><span class="nv">-gtk-icon-transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">0.4</span><span class="p">);</span>
-<span class="p">}</span>
+<pre class="codehilite"><code>#pulseaudio-button image,#xfce4-power-manager-plugin image,#xfce4-notification-plugin image{
+            -gtk-icon-transform: scale(0.4);
+}
 
-<span class="p">#</span><span class="nn">clock-button</span><span class="w"> </span><span class="p">{</span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;}</span>
+#clock-button {font-size: 14px;}
 
-<span class="p">#</span><span class="nn">indicator-button</span><span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">-gtk-icon-transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+#indicator-button* { -gtk-icon-transform: scale(1.2); }
 
-<span class="p">#</span><span class="nn">whiskermenu-window</span><span class="w"> </span><span class="p">{</span>
-<span class="w">   </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffbba4</span><span class="p">;</span>
-<span class="w">   </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mh">#e66465</span><span class="p">,</span><span class="w"> </span><span class="mh">#9198e5</span><span class="p">);</span>
-<span class="w">   </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+#whiskermenu-window {
+   background-color: #ffbba4;
+   background-image: linear-gradient(#e66465, #9198e5);
+   color: #ffffff; }
 
-<span class="nt">calendar</span><span class="p">.</span><span class="nc">highlight</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e95420</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="nt">calendar</span><span class="w"> </span><span class="p">{</span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;}</span>
-</code></pre></div>
+calendar.highlight { color: #e95420; }
+calendar {padding: 0 5px; font-weight: bold;border-radius: 5px;font-size: 14px;border: none;}
+</code></pre>
 
 <h3 id="8-kde">8. kde桌面设置</h3>
 <h4 id="81">8.1. 安装软件</h4>
@@ -385,157 +385,157 @@ xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
 <p>解决办法：sudo apt purge im-config</p>
 <h3 id="9-sway">9. Sway窗口管理器设置</h3>
 <h4 id="91-sway">9.1. 安装Sway及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">audio</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">fonts</span><span class="o">-</span><span class="n">noto</span><span class="o">-</span><span class="n">cjk</span><span class="w"> </span><span class="n">sway</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">foot</span><span class="w"> </span><span class="n">wofi</span><span class="w"> </span><span class="n">xwayland</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">upower</span><span class="w"> </span><span class="n">webext</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="o">-</span><span class="n">firefox</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">libglib2</span><span class="mf">.0</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="n">iwd</span><span class="w"> </span><span class="n">papirus</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span>
+<pre class="codehilite"><code>sudo apt install fcitx5 fcitx5-rime rime-data-wubi thunar xarchiver pipewire-audio blueman thunar-archive-plugin fonts-noto-cjk sway swaybg swayidle swaylock foot wofi xwayland grim git brightnessctl wl-clipboard slurp upower webext-ublock-origin-firefox firefox-esr firefox-esr-l10n-zh-cn libglib2.0-bin iwd papirus-icon-theme
 
-<span class="p">#</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="err">剪切板</span>
-<span class="p">#</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="err">截图选框</span>
+# wl-clipboard 剪切板
+# slurp 截图选框
 
-<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">autoremove</span><span class="w"> </span><span class="o">--</span><span class="n">purge</span><span class="w"> </span><span class="n">wpasupplicant</span>
-</code></pre></div>
+sudo apt autoremove --purge wpasupplicant
+</code></pre>
 
 <h4 id="92-sway">9.2. 启动Sway</h4>
-<div class="codehilite"><pre><span></span><code>#<span class="w"> </span>编辑<span class="w"> </span><span class="o">~/</span>.<span class="nv">profile</span>加入以下内容即可：
+<pre class="codehilite"><code># 编辑 ~/.profile加入以下内容即可：
 
-<span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="o">-</span><span class="nv">z</span><span class="w"> </span><span class="s2">&quot;$DISPLAY&quot;</span><span class="w"> </span>]<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>[<span class="w"> </span><span class="s2">&quot;$(tty)&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/dev/tty1&quot;</span><span class="w"> </span>]<span class="c1">; then</span>
-<span class="w">  </span><span class="k">exec</span><span class="w"> </span><span class="nv">sway</span>
-<span class="nv">fi</span>
-</code></pre></div>
+if [ -z &quot;$DISPLAY&quot; ] &amp;&amp; [ &quot;$(tty)&quot; = &quot;/dev/tty1&quot; ]; then
+  exec sway
+fi
+</code></pre>
 
 <h3 id="10-labwc">10. labwc窗口管理器设置</h3>
 <h4 id="101-labwc">10.1. 安装labwc及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">foot</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
+<pre class="codehilite"><code>sudo apt install labwc swaybg swayidle swaylock wlr-randr fcitx5 fcitx5-rime rime-data-wubi thunar thunar-archive-plugin foot xfce4-panel xfce4-genmon-plugin xarchiver pipewire-audio blueman fonts-noto-cjk git brightnessctl wlopm mako-notifier upower grim slurp wl-clipboard wtype iwd ristretto libglib2.0-bin papirus-icon-theme
 
-<span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">autoremove</span><span class="w"> </span><span class="o">--</span><span class="nx">purge</span><span class="w"> </span><span class="nx">wpasupplicant</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">tiny</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">common</span>
-</code></pre></div>
+sudo apt autoremove --purge wpasupplicant vim-tiny vim-common
+</code></pre>
 
 <p>需要安装google-chrome，在/etc/apt/sources.list.d/google-chrome.sources文件中添加以下内容：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Types</span><span class="o">:</span><span class="w"> </span><span class="n">deb</span>
-<span class="n">URIs</span><span class="o">:</span><span class="w"> </span><span class="n">https</span><span class="o">://</span><span class="n">dl</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">com</span><span class="sr">/linux/chrome/deb/</span>
-<span class="n">Suites</span><span class="o">:</span><span class="w"> </span><span class="n">stable</span>
-<span class="n">Components</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>
-<span class="n">Signed</span><span class="o">-</span><span class="n">By</span><span class="o">:</span><span class="w"> </span><span class="sr">/etc/apt/trusted.gpg.d/g</span><span class="n">oogle</span><span class="o">-</span><span class="n">chrome</span><span class="o">.</span><span class="na">gpg</span>
-</code></pre></div>
+<pre class="codehilite"><code>Types: deb
+URIs: https://dl.google.com/linux/chrome/deb/
+Suites: stable
+Components: main
+Signed-By: /etc/apt/trusted.gpg.d/google-chrome.gpg
+</code></pre>
 
 <h4 id="102-labwc">10.2. 启动labwc</h4>
-<div class="codehilite"><pre><span></span><code>#<span class="w"> </span>编辑<span class="w"> </span><span class="o">~/</span>.<span class="nv">profile</span>加入以下内容即可：
+<pre class="codehilite"><code># 编辑 ~/.profile加入以下内容即可：
 
-<span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="o">-</span><span class="nv">z</span><span class="w"> </span><span class="s2">&quot;$DISPLAY&quot;</span><span class="w"> </span>]<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>[<span class="w"> </span><span class="s2">&quot;$(tty)&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/dev/tty1&quot;</span><span class="w"> </span>]<span class="c1">; then</span>
-<span class="w">  </span><span class="k">exec</span><span class="w"> </span><span class="nv">labwc</span>
-<span class="nv">fi</span>
-</code></pre></div>
+if [ -z &quot;$DISPLAY&quot; ] &amp;&amp; [ &quot;$(tty)&quot; = &quot;/dev/tty1&quot; ]; then
+  exec labwc
+fi
+</code></pre>
 
 <h4 id="103">10.3. 其他</h4>
-<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">启动pipewire</span>
-<span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="nx">pipewire</span>
-<span class="nx">systemctl</span><span class="w"> </span><span class="o">--</span><span class="nx">user</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">pipewire</span>
+<pre class="codehilite"><code># 启动pipewire
+systemctl --user status pipewire
+systemctl --user start pipewire
 
-<span class="err">#</span><span class="w"> </span><span class="nx">通过wtype关联labwc</span><span class="w"> </span><span class="nx">root</span><span class="o">-</span><span class="nx">menu</span><span class="err">，</span><span class="nx">通过xfce启动器实现</span>
-<span class="nx">名称</span><span class="err">：</span><span class="nx">程序菜单</span><span class="w">  </span><span class="nx">命令</span><span class="err">：</span><span class="nx">wtype</span><span class="w"> </span><span class="o">-</span><span class="nx">M</span><span class="w"> </span><span class="nx">logo</span><span class="w"> </span><span class="o">-</span><span class="nx">k</span><span class="w"> </span><span class="nx">p</span>
+# 通过wtype关联labwc root-menu，通过xfce启动器实现
+名称：程序菜单  命令：wtype -M logo -k p
 
-<span class="err">#</span><span class="w"> </span><span class="nx">强制xfce4</span><span class="o">-</span><span class="nx">panel所有插件以内部方式运行</span>
-<span class="nx">xfconf</span><span class="o">-</span><span class="nx">query</span><span class="w"> </span><span class="o">-</span><span class="nx">c</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="o">-</span><span class="nx">p</span><span class="w"> </span><span class="o">/</span><span class="nx">force</span><span class="o">-</span><span class="nx">all</span><span class="o">-</span><span class="nx">internal</span><span class="w"> </span><span class="o">-</span><span class="nx">t</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">-</span><span class="nx">s</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">--</span><span class="nx">create</span>
+# 强制xfce4-panel所有插件以内部方式运行
+xfconf-query -c xfce4-panel -p /force-all-internal -t bool -s true --create
 
-<span class="err">#</span><span class="w"> </span><span class="nx">gtk程序添加最大化和最小化按钮</span><span class="err">，</span><span class="nx">需要安装libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="nx">wm</span><span class="p">.</span><span class="nx">preferences</span><span class="w"> </span><span class="nx">button</span><span class="o">-</span><span class="nx">layout</span><span class="w"> </span><span class="s">&quot;:minimize,maximize,close&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">添加最大化和最小化按钮</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="kd">interface</span><span class="w"> </span><span class="nx">gtk</span><span class="o">-</span><span class="nx">theme</span><span class="w"> </span><span class="s">&quot;主题名称&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">设置主题</span>
-<span class="nx">gsettings</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">org</span><span class="p">.</span><span class="nx">gnome</span><span class="p">.</span><span class="nx">desktop</span><span class="p">.</span><span class="kd">interface</span><span class="w"> </span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span><span class="w"> </span><span class="s">&quot;图标主题名称&quot;</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">设置图标</span>
+# gtk程序添加最大化和最小化按钮，需要安装libglib2.0-bin
+gsettings set org.gnome.desktop.wm.preferences button-layout &quot;:minimize,maximize,close&quot;  # 添加最大化和最小化按钮
+gsettings set org.gnome.desktop.interface gtk-theme &quot;主题名称&quot;  # 设置主题
+gsettings set org.gnome.desktop.interface icon-theme &quot;图标主题名称&quot;  # 设置图标
 
-<span class="err">#</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin稳定版是4</span><span class="m m-Double">.1.1</span><span class="p">,</span><span class="w"> </span><span class="m m-Double">4.2</span><span class="nx">以后才支持</span><span class="p">&lt;</span><span class="nx">css</span><span class="p">&gt;</span><span class="nx">标签</span><span class="err">，</span><span class="nx">目前只支持gtk</span><span class="p">.</span><span class="nx">css中书写</span><span class="err">，</span><span class="w"> </span><span class="nx">所以强制在稳定版本中安装4</span><span class="m m-Double">.3</span>
-</code></pre></div>
+# xfce4-genmon-plugin稳定版是4.1.1, 4.2以后才支持&lt;css&gt;标签，目前只支持gtk.css中书写， 所以强制在稳定版本中安装4.3
+</code></pre>
 
 <h3 id="11-wayfire">11. wayfire窗口管理器设置</h3>
 <h4 id="111-wayfire">11.1. 安装wayfire及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">wayfire</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">audio</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">fonts</span><span class="o">-</span><span class="n">noto</span><span class="o">-</span><span class="n">cjk</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">terminal</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">appfinder</span><span class="w"> </span><span class="n">seatd</span><span class="w"> </span><span class="n">xwayland</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="w"> </span><span class="n">webext</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="o">-</span><span class="n">firefox</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">esr</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">mako</span><span class="o">-</span><span class="n">notifier</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">libglib2</span><span class="mf">.0</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="n">waybar</span><span class="w"> </span><span class="n">chromium</span><span class="w"> </span><span class="n">chromium</span><span class="o">-</span><span class="n">l10n</span>
-</code></pre></div>
+<pre class="codehilite"><code>sudo apt install wayfire swaybg swayidle swaylock fcitx5 fcitx5-rime rime-data-wubi thunar xarchiver pipewire-audio blueman thunar-archive-plugin fonts-noto-cjk xfce4-terminal xfce4-appfinder seatd xwayland git brightnessctl firefox-esr webext-ublock-origin-firefox firefox-esr-l10n-zh-cn mako-notifier grim wl-clipboard slurp libglib2.0-bin waybar chromium chromium-l10n
+</code></pre>
 
 <h4 id="112-wayfire">11.2. 启动wayfire</h4>
-<div class="codehilite"><pre><span></span><code>#<span class="w"> </span>编辑<span class="w"> </span><span class="o">~/</span>.<span class="nv">profile</span>加入以下内容即可：
+<pre class="codehilite"><code># 编辑 ~/.profile加入以下内容即可：
 
-<span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="o">-</span><span class="nv">z</span><span class="w"> </span><span class="s2">&quot;$DISPLAY&quot;</span><span class="w"> </span>]<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>[<span class="w"> </span><span class="s2">&quot;$(tty)&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/dev/tty1&quot;</span><span class="w"> </span>]<span class="c1">; then</span>
-<span class="w">  </span><span class="k">exec</span><span class="w"> </span><span class="nv">wayfire</span>
-<span class="nv">fi</span>
-</code></pre></div>
+if [ -z &quot;$DISPLAY&quot; ] &amp;&amp; [ &quot;$(tty)&quot; = &quot;/dev/tty1&quot; ]; then
+  exec wayfire
+fi
+</code></pre>
 
 <h4 id="113-wayfire">11.3. wayfire</h4>
-<div class="codehilite"><pre><span></span><code>cp /usr/share/wayfire/examples/wayfire.ini ~/.config/wayfire.ini
-</code></pre></div>
+<pre class="codehilite"><code>cp /usr/share/wayfire/examples/wayfire.ini ~/.config/wayfire.ini
+</code></pre>
 
 <h4 id="114-foot">11.4. 设置终端(foot)字体大小</h4>
-<div class="codehilite"><pre><span></span><code>cp -r /etc/xdg/foot/ ~/.config/foot/
+<pre class="codehilite"><code>cp -r /etc/xdg/foot/ ~/.config/foot/
 nano ~/.config/foot/foot.ini
 
 # 也可以直接在/etc/xdg/foot/foot.ini中修改
 font=monospace:size=12
-</code></pre></div>
+</code></pre>
 
 <h3 id="12-rime">12. rime输入法设置</h3>
 <ul>
 <li>fcitx5-rime</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>sudo apt install fcitx5-rime rime-data-wubi
+<pre class="codehilite"><code>sudo apt install fcitx5-rime rime-data-wubi
 nano ~/.local/share/fcitx5/rime/default.custom.yaml
 patch:
   schema_list:
-    <span class="k">-</span> schema: wubi_pinyin
-    <span class="k">-</span> schema: luna_pinyin_simp
-    <span class="k">-</span> schema: wubi86
-</code></pre></div>
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
+</code></pre>
 
 <ul>
 <li>ibus-rime</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>sudo apt install ibus-rime rime-data-wubi
+<pre class="codehilite"><code>sudo apt install ibus-rime rime-data-wubi
 nano ~/.config/ibus/rime/default.custom.yaml
 patch:
   schema_list:
-    <span class="k">-</span> schema: wubi_pinyin
-    <span class="k">-</span> schema: luna_pinyin_simp
-    <span class="k">-</span> schema: wubi86
+    - schema: wubi_pinyin
+    - schema: luna_pinyin_simp
+    - schema: wubi86
 
 nano ~/.config/ibus/rime/build/ibus_rime.yaml
 
-<span class="gh">#</span> 修改ibus_rime.yaml中horizontal为true
+# 修改ibus_rime.yaml中horizontal为true
 
 style:
    horizontal: true
-</code></pre></div>
+</code></pre>
 
 <ul>
 <li>wayland下xwayland程序fcitx输入法支持，需要配置环境变量：</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
+<pre class="codehilite"><code>nano /etc/environment
 
-<span class="n">XIM</span><span class="o">=</span><span class="ss">&quot;fcitx&quot;</span>
-<span class="n">#GTK_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">XMODIFIERS</span><span class="o">=</span><span class="ss">&quot;@im=fcitx&quot;</span>
-<span class="n">INPUT_METHOD</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">SDL_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-</code></pre></div>
+XIM=&quot;fcitx&quot;
+#GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=&quot;@im=fcitx&quot;
+INPUT_METHOD=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=fcitx
+</code></pre>
 
 <ul>
 <li>Chromium支持wayland并支持fcitx5</li>
 </ul>
-<div class="codehilite"><pre><span></span><code># 目前Chromium已经自动支持wayland和fcitx5，不再需要下面的语句，仅做留存
+<pre class="codehilite"><code># 目前Chromium已经自动支持wayland和fcitx5，不再需要下面的语句，仅做留存
 --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3 --gtk-version=4
-</code></pre></div>
+</code></pre>
 
 <h3 id="13-iwd">13. iwd无法联网</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">iwd</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">conf</span>
+<pre class="codehilite"><code>sudo nano /etc/iwd/main.conf
 
-<span class="o">[</span><span class="n">General</span><span class="o">]</span>
-<span class="n">EnableNetworkConfiguration</span><span class="o">=</span><span class="k">true</span>
+[General]
+EnableNetworkConfiguration=true
 
-<span class="n">sudo</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">iwd</span><span class="p">.</span><span class="n">service</span><span class="w"> </span><span class="o">--</span><span class="n">now</span>
+sudo systemctl enable iwd.service --now
 
-<span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
+sudo nano /etc/resolv.conf
 
-<span class="n">nameserver</span><span class="w"> </span><span class="mf">223.5.5.5</span>
-<span class="n">nameserver</span><span class="w"> </span><span class="mf">119.29.29.29</span>
+nameserver 223.5.5.5
+nameserver 119.29.29.29
 
-<span class="n">systemctl</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">iwd</span>
-</code></pre></div>
+systemctl restart iwd
+</code></pre>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -555,6 +555,8 @@ style:
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
+        <li><a href="https://testpoo.github.io/virsh命令简述.html"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span></a></li>
+        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
         
         <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
@@ -565,9 +567,9 @@ style:
         
         <li><a href="https://testpoo.github.io/Arch手动安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch手动安装过程</span></a></li>
         
-        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
-        
         <li><a href="https://testpoo.github.io/意义完全相反的名言谚语.html"><span><label style="color: #38b6fd"></label>&nbsp;意义完全相反的名言谚语</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/英耀赋.html"><span><label style="color: #38b6fd"></label>&nbsp;英耀赋</span></a></li>
         
         <li><a href="https://testpoo.github.io/使用tar包安装mysql.html"><span><label style="color: #38b6fd"></label>&nbsp;使用tar包安装mysql</span></a></li>
         
@@ -583,11 +585,11 @@ style:
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
@@ -639,9 +641,9 @@ style:
         
         <li><a href="https://testpoo.github.io/Linux下SVN服务器的搭建.html"><span><label style="color: #38b6fd"></label>&nbsp;Linux下SVN服务器的搭建</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql笔记.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql笔记</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python标准异常.html"><span><label style="color: #38b6fd"></label>&nbsp;python标准异常</span></a></li>
         
         <li><a href="https://testpoo.github.io/svn命令全解.html"><span><label style="color: #38b6fd"></label>&nbsp;svn命令全解</span></a></li>
         

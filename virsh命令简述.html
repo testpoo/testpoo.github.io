@@ -30,11 +30,11 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
+            <li><a href="https://testpoo.github.io/停止精神内耗.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
+            
             <li><a href="https://testpoo.github.io/virsh命令简述.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;测试</a></li>
             
             <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;系统安装</a></li>
-            
-            <li><a href="https://testpoo.github.io/西安看病去哪里.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
             <li><a href="https://testpoo.github.io/使用tar包安装mysql.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;技术</a></li>
             
@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/virsh命令简述.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span><span>2026-06-05&nbsp;&nbsp;共1534个字</span><span class="tag">virsh</span><span class="tag">kvm</span></li></a>
+            <a href="https://testpoo.github.io/virsh命令简述.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span><span>2026-06-05&nbsp;&nbsp;共1120个字</span><span class="tag">virsh</span><span class="tag">kvm</span></li></a>
             
             <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共15548个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
             
@@ -73,61 +73,62 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>virsh命令简述</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-05 13:46:44</span></div>
+      <div class="header"><span>virsh命令简述</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-12 16:36:58</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
-<ul>
-<li><a href="#_1">查看虚拟机状态：</a></li>
-<li><a href="#_2">启动虚拟机</a></li>
-<li><a href="#_3">关闭虚拟机：</a></li>
-<li><a href="#_4">强制停止虚拟机(断电）</a></li>
-<li><a href="#_5">删除虚拟机</a></li>
-<li><a href="#_6">控制台连接虚拟机</a></li>
-<li><a href="#_7">实时监控</a></li>
-<li><a href="#_8">动态扩容</a></li>
-<li><a href="#_9">内存热插拔</a></li>
-<li><a href="#_10">灾难恢复</a></li>
-<li><a href="#_11">性能分析</a></li>
-<li><a href="#_12">创建快照</a></li>
-<li><a href="#_13">删除快照</a></li>
-<li><a href="#_14">查看快照</a></li>
-<li><a href="#_15">恢复快照</a></li>
-<li><a href="#_16">查找上级快照</a></li>
-</ul>
+<ul></ul>
 </div>
-<h1 id="_1">查看虚拟机状态：</h1>
-<p>virsh list --all</p>
-<h1 id="_2">启动虚拟机</h1>
-<p>virsh start debian </p>
-<h1 id="_3">关闭虚拟机：</h1>
-<p>virsh shutdown debian</p>
-<h1 id="_4">强制停止虚拟机(断电）</h1>
-<p>virsh destroy debian </p>
-<h1 id="_5">删除虚拟机</h1>
-<p>virsh undefine debian</p>
-<h1 id="_6">控制台连接虚拟机</h1>
-<p>virsh console debian</p>
-<h1 id="_7">实时监控</h1>
-<p>virsh dominfo debian</p>
-<h1 id="_8">动态扩容</h1>
-<p>virsh setvcpus debian 2 --live</p>
-<h1 id="_9">内存热插拔</h1>
-<p>virsh setmem debian 2G --live</p>
-<h1 id="_10">灾难恢复</h1>
-<p>virsh restore saved_state.file</p>
-<h1 id="_11">性能分析</h1>
-<p>virsh domstats --cpu-total debian</p>
-<h1 id="_12">创建快照</h1>
-<p>virsh snapshot-create-as debian debian_snap</p>
-<h1 id="_13">删除快照</h1>
-<p>virsh snapshot-delete debian debian_snap</p>
-<h1 id="_14">查看快照</h1>
-<p>virsh snapshot-list debian</p>
-<h1 id="_15">恢复快照</h1>
-<p>virsh snapshot-revert debian debian_snap</p>
-<h1 id="_16">查找上级快照</h1>
-<p>virsh snapshot-parent debian debian_snap</p>
+<ol>
+<li>
+<p>查看虚拟机状态： <code>virsh list --all</code></p>
+</li>
+<li>
+<p>启动虚拟机： <code>virsh start debian</code></p>
+</li>
+<li>
+<p>关闭虚拟机： <code>virsh shutdown debian</code></p>
+</li>
+<li>
+<p>强制停止虚拟机(断电)： <code>virsh destroy debian</code></p>
+</li>
+<li>
+<p>删除虚拟机： <code>virsh undefine debian</code></p>
+</li>
+<li>
+<p>控制台连接虚拟机： <code>virsh console debian</code></p>
+</li>
+<li>
+<p>实时监控： <code>virsh dominfo debian</code></p>
+</li>
+<li>
+<p>动态扩容： <code>virsh setvcpus debian 2 --live</code></p>
+</li>
+<li>
+<p>内存热插拔： <code>virsh setmem debian 2G --live</code></p>
+</li>
+<li>
+<p>灾难恢复： <code>virsh restore saved_state.file</code></p>
+</li>
+<li>
+<p>性能分析： <code>virsh domstats --cpu-total debian</code></p>
+</li>
+<li>
+<p>创建快照： <code>virsh snapshot-create-as debian debian_snap</code></p>
+</li>
+<li>
+<p>删除快照： <code>virsh snapshot-delete debian debian_snap</code></p>
+</li>
+<li>
+<p>查看快照： <code>virsh snapshot-list debian</code></p>
+</li>
+<li>
+<p>恢复快照： <code>virsh snapshot-revert debian debian_snap</code></p>
+</li>
+<li>
+<p>查找上级快照： <code>virsh snapshot-parent debian debian_snap</code></p>
+</li>
+</ol>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -146,6 +147,8 @@
         <li><a href="https://testpoo.github.io/网址集.html"><span><label style="color: #38b6fd"></label>&nbsp;网址集</span></a></li>
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/停止精神内耗.html"><span><label style="color: #38b6fd"></label>&nbsp;停止精神内耗</span></a></li>
         
         <li><a href="https://testpoo.github.io/virsh命令简述.html"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span></a></li>
         

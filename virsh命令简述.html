@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/virsh命令简述.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span><span>2026-06-05&nbsp;&nbsp;共1120个字</span><span class="tag">virsh</span><span class="tag">kvm</span></li></a>
+            <a href="https://testpoo.github.io/virsh命令简述.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;virsh命令简述</span><span>2026-06-05&nbsp;&nbsp;共7759个字</span><span class="tag">virsh</span><span class="tag">kvm</span></li></a>
             
             <a href="https://testpoo.github.io/Python造假数据神器Faker.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span><span>2024-02-27&nbsp;&nbsp;共15548个字</span><span class="tag">python</span><span class="tag">faker</span></li></a>
             
@@ -73,62 +73,303 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>virsh命令简述</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-12 16:36:58</span></div>
+      <div class="header"><span>virsh命令简述</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-18 15:39:41</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
-<ul></ul>
+<ul>
+<li><a href="#1-kvm">1. 安装kvm</a></li>
+<li><a href="#2-kvm">2. 安装kvm虚拟机</a></li>
+<li><a href="#3">3. 配置网桥连接模式</a></li>
+<li><a href="#4">4. 配置内存</a></li>
+<li><a href="#5-cpu">5. 配置CPU</a></li>
+<li><a href="#6">6. 修改虚拟机名称</a></li>
+<li><a href="#7">7. 添加网卡</a></li>
+<li><a href="#8-virbr0">8. 删除virbr0虚拟网卡</a></li>
+<li><a href="#9">9. 常用命令</a></li>
+<li><a href="#10">10. 创建外部快照</a></li>
+<li><a href="#11">11. 创建差分盘</a></li>
+<li><a href="#12">12. 外部快照完整删除方案</a></li>
+<li><a href="#13">13. 合并快照</a><ul>
+<li><a href="#131-vda">13.1 执行在线合并（vda 为磁盘设备）</a></li>
+<li><a href="#132">13.2 关机离线合并（虚拟机停机更稳定）</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<ol>
-<li>
-<p>查看虚拟机状态： <code>virsh list --all</code></p>
-</li>
-<li>
-<p>启动虚拟机： <code>virsh start debian</code></p>
-</li>
-<li>
-<p>关闭虚拟机： <code>virsh shutdown debian</code></p>
-</li>
-<li>
-<p>强制停止虚拟机(断电)： <code>virsh destroy debian</code></p>
-</li>
-<li>
-<p>删除虚拟机： <code>virsh undefine debian</code></p>
-</li>
-<li>
-<p>控制台连接虚拟机： <code>virsh console debian</code></p>
-</li>
-<li>
-<p>实时监控： <code>virsh dominfo debian</code></p>
-</li>
-<li>
-<p>动态扩容： <code>virsh setvcpus debian 2 --live</code></p>
-</li>
-<li>
-<p>内存热插拔： <code>virsh setmem debian 2G --live</code></p>
-</li>
-<li>
-<p>灾难恢复： <code>virsh restore saved_state.file</code></p>
-</li>
-<li>
-<p>性能分析： <code>virsh domstats --cpu-total debian</code></p>
-</li>
-<li>
-<p>创建快照： <code>virsh snapshot-create-as debian debian_snap</code></p>
-</li>
-<li>
-<p>删除快照： <code>virsh snapshot-delete debian debian_snap</code></p>
-</li>
-<li>
-<p>查看快照： <code>virsh snapshot-list debian</code></p>
-</li>
-<li>
-<p>恢复快照： <code>virsh snapshot-revert debian debian_snap</code></p>
-</li>
-<li>
-<p>查找上级快照： <code>virsh snapshot-parent debian debian_snap</code></p>
-</li>
-</ol>
+<h3 id="1-kvm">1. 安装<code>kvm</code></h3>
+<pre class="codehilite"><code>yum install -y qemu-kvm libvirt virt-install
+</code></pre>
+
+<h3 id="2-kvm">2. 安装kvm虚拟机</h3>
+<pre class="codehilite"><code>virt-install \
+--virt-type=kvm \
+--name=ifcos1 \
+--vcpus=2 \
+--memory=8192 \
+--cdrom=/home/iso/IFCOS3.1.1-x86_64-20180104162508.iso \
+--disk path=/home/vms/ifcos1.qcow2,size=80,format=qcow2 \
+--os-type=linux \
+--graphics vnc,listen=0.0.0.0 \
+--noautoconsole
+#--extra-args='console=ttyS0'
+</code></pre>
+
+<h3 id="3">3. 配置网桥连接模式</h3>
+<pre class="codehilite"><code># 添加br0虚拟机网桥
+brctl addbr br0
+
+# 增加配置文件：/etc/sysconfig/network-scripts/ifcfg-br0
+TYPE=Bridge
+BOOTPROTO=static
+NA_CONTROLLED=no
+DEVICE=br0
+ONBOOT=yes
+IPADDR=192.168.211.50
+NETMASK=255.255.255.0
+GATEWAY=192.168.211.254
+DNS1=218.30.19.40
+DNS2=61.134.1.4
+
+# 修改物理网卡配置：/etc/sysconfig/network-scripts/ifcfg-p4p1
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NM_CONTROLLED=no
+NAME=p4p1
+UUID=eb99acab-4332-4848-b031-3dcab72d3231
+DEVICE=p4p1
+ONBOOT=yes
+BRIDGE=br0
+
+# 在 /etc/libvirt/qemu/ifcos.xml修改网络配置
+&lt;interface type='bridge'&gt;
+      &lt;mac address='52:54:00:e4:ec:55'/&gt;
+      &lt;source bridge='br0'/&gt;
+      &lt;model type='virtio'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;
+&lt;/interface&gt;
+
+# 应用配置
+virsh define /etc/libvirt/qemu/ifcos.xml
+</code></pre>
+
+<h3 id="4">4. 配置内存</h3>
+<pre class="codehilite"><code>virsh shutdown debian
+virsh setmaxmem debian 15728640
+virsh start debian
+virsh setmem debian 10000000
+virsh dominfo debian
+</code></pre>
+
+<h3 id="5-cpu">5. 配置CPU</h3>
+<pre class="codehilite"><code>virsh setvcpus debian --maximum 4 --config
+virsh vcpucount debian
+virsh setvcpus debian --count 4 --config
+</code></pre>
+
+<h3 id="6">6. 修改虚拟机名称</h3>
+<pre class="codehilite"><code>cd /etc/libvirt/qemu
+virsh dumpxml ifcos58 &gt; ifcos.xml
+virsh snapshot-dumpxml ifcos58 ifcos_211.58 &gt; ifcos_211.58.xml
+virsh snapshot-dumpxml ifcos58 sicap_3.2.8base_40424 &gt; sicap_3.2.8base_40424.xml
+virsh snapshot-dumpxml ifcos58 sicap_3.3.1_200709 &gt; sicap_3.3.1_200709.xml
+mv /home/vms/ifcos58.qcow2 /home/vms/ifcos.qcow2
+sed -i 's/ifcos58/ifcos/g' /etc/libvirt/qemu/ifcos.xml  /etc/libvirt/qemu/sicap_3.2.8base_40424.xml /etc/libvirt/qemu/sicap_3.3.1_200709.xml
+virsh snapshot-delete ifcos58 sicap_3.3.1_200709
+virsh undefine ifcos58
+virsh define /etc/libvirt/qemu/ifcos.xml
+virsh snapshot-create --redefine ifcos ifcos_211.58.xml
+virsh snapshot-create --redefine ifcos sicap_3.2.8base_40424.xml
+virsh snapshot-create --redefine ifcos sicap_3.3.1_200709.xml
+</code></pre>
+
+<h3 id="7">7. 添加网卡</h3>
+<pre class="codehilite"><code>virsh domiflist ifcos
+virsh attach-interface ifcos --type bridge --source br0
+virsh dumpxml ifcos  &gt;/etc/libvirt/qemu/ifcos.xml
+virsh define /etc/libvirt/qemu/ifcos.xml
+</code></pre>
+
+<h3 id="8-virbr0">8. 删除virbr0虚拟网卡</h3>
+<pre class="codehilite"><code>#查看是否有连接相关虚拟设备
+virsh net-list 
+virsh net-destroy default 
+virsh net-undefine default
+
+#备份kvm虚拟机
+qemu-img convert -c -O qcow2 centos7.qcow2 test.qcow2
+
+#虚拟机添加磁盘
+qemu-img create -f qcow2 kylin_sicap.qcow2 100G
+virsh destroy kylin
+virsh edit kylin
+#修改磁盘配置，增加以下内容
+    &lt;disk type='file' device='disk'&gt;
+      &lt;driver name='qemu' type='qcow2'/&gt;
+      &lt;source file='/home/vms/kylin_sicap.qcow2'/&gt;
+      &lt;target dev='vdb' bus='virtio'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x1'/&gt;
+    &lt;/disk&gt;
+virsh start kylin
+
+#显示快照的继承关系
+virsh snapshot-list ifcos --tree
+</code></pre>
+
+<h3 id="9">9. 常用命令</h3>
+<pre class="codehilite"><code># 查看虚拟机状态
+virsh list --all
+
+# 启动虚拟机
+virsh start debian
+
+# 关闭虚拟机
+virsh shutdown debian
+
+# 强制停止虚拟机(断电)
+virsh destroy debian
+
+# 删除虚拟机
+virsh undefine debian
+
+# 控制台连接虚拟机
+virsh console debian
+
+# 实时监控
+virsh dominfo debian
+
+# 动态扩容
+virsh setvcpus debian 2 --live
+
+# 内存热插拔
+virsh setmem debian 2G --live
+
+# 灾难恢复
+virsh restore saved_state.file
+
+# 性能分析
+virsh domstats --cpu-total debian
+
+# 创建内部快照
+virsh snapshot-create-as debian debian_snap
+
+# 删除内部快照
+virsh snapshot-delete debian debian_snap
+
+# 恢复内部快照
+virsh snapshot-revert debian debian_snap
+
+# 查看快照
+virsh snapshot-list debian
+
+# 查找上级快照
+virsh snapshot-parent debian debian_snap
+</code></pre>
+
+<h3 id="10">10. 创建外部快照</h3>
+<p>外部快照必须加上 --disk-only，只能保存磁盘状态</p>
+<pre class="codehilite"><code>virsh snapshot-create-as --domain 虚拟机名 --name 快照名称 --disk-only --external
+</code></pre>
+
+<p>参数说明：
+--disk-only：只做磁盘快照，不保存内存
+--external：外部快照，生成独立差分 qcow2，原盘变为 backing 底层
+--name snap_A：自定义快照名</p>
+<p>指定快照文件存放路径（常用）</p>
+<pre class="codehilite"><code>virsh snapshot-create-as \
+--domain test-vm \
+--name snap_A \
+--disk-only \
+--diskspec vda,snapshot=external,file=/var/lib/libvirt/images/test-vm-snapA.qcow2
+
+virsh snapshot-create-as uos-server sicap260617 &quot;安徽邮政升级包&quot; --disk-only --atomic --diskspec vda,snapshot=external,file=/home/vms/uos-server.sicap260617
+</code></pre>
+
+<p>vda：虚拟机磁盘设备名
+file=xxx：自定义快照差分文件路径</p>
+<h3 id="11">11. 创建差分盘</h3>
+<p>查看快照详细XML，拿到快照A磁盘文件路径</p>
+<pre class="codehilite"><code>virsh snapshot-dumpxml 虚拟机名 --snapshotname 快照A名称
+</code></pre>
+
+<p>找到这一行，复制file=后的完整路径：</p>
+<pre class="codehilite"><code>&lt;source file=&quot;/xxx/xxx-snapA.qcow2&quot;/&gt;
+</code></pre>
+
+<p>以快照 A 为后端，新建空白差分盘</p>
+<pre class="codehilite"><code>qemu-img create -f qcow2 -b /路径/快照A.qcow2 /路径/new-test.qcow2
+</code></pre>
+
+<p>然后将生成的差分盘路径写到source file中，如果不用了，删除这个差分盘。</p>
+<h3 id="12">12. 外部快照完整删除方案</h3>
+<pre class="codehilite"><code># 关闭虚拟机
+virsh destroy 虚拟机名
+# 查看当前正在读写的 overlay 增量文件
+virsh domblklist 虚拟机名
+# 输出 vda        /xxx/vm-active.qcow2  这个就是存放你操作改动的文件
+
+# 删除当前增量（所有操作全部丢弃）
+rm -f /xxx/vm-active.qcow2
+
+# 以快照 A 为底层，新建空白差分盘（回到纯净快照 A）
+qemu-img create -f qcow2 -b /快照A完整路径 /xxx/vm-active.qcow2
+
+# -b 父盘路径，-F 指定父盘格式（防报错）
+qemu-img create -f qcow2 -b /home/vms/uos-server.uos_init_211.sicap241122 -F qcow2 /home/vms/uos-server.active
+
+# 开机
+virsh start 虚拟机名
+
+# 配套清理 libvirt 快照列表
+如果创建快照时带了--external元数据，列表里还残留 snapA 记录，只删元数据不删磁盘文件
+virsh snapshot-delete 虚拟机名 --snapshotname snap_A --metadata
+
+# 保留虚拟机所有数据，合并删除快照
+</code></pre>
+
+<h3 id="13">13. 合并快照</h3>
+<p>如果你创建了链式快照 base ← snapA ← snapB ← active，想删掉中间snapA且保留全部数据，用blockcommit在线合并，无需关机。
+示例：删除快照 A，把 A 的数据合并到底层 base</p>
+<pre class="codehilite"><code># 查看当前磁盘
+virsh domblklist 虚拟机名
+# 完整链查看
+qemu-img info --backing-chain /当前active磁盘路径
+</code></pre>
+
+<h4 id="131-vda">13.1 执行在线合并（vda 为磁盘设备）</h4>
+<pre class="codehilite"><code>virsh blockcommit 虚拟机名 vda \
+--base=/base.qcow2 \
+--top=/snapA.qcow2 \
+--active --verbose --pivot
+
+参数说明：
+--base：底层镜像
+--top：要删除的快照文件
+--active --pivot：合并完成后自动切换磁盘指向，虚拟机不停机
+</code></pre>
+
+<p>合并完成确认虚拟机正常运行后，删除无用快照文件</p>
+<pre class="codehilite"><code>rm -f /snapA.qcow2
+</code></pre>
+
+<p>清理 libvirt 快照元数据</p>
+<pre class="codehilite"><code>virsh snapshot-delete 虚拟机名 --snapshotname snap_A --metadata
+</code></pre>
+
+<h4 id="132">13.2 关机离线合并（虚拟机停机更稳定）</h4>
+<pre class="codehilite"><code># 关机
+virsh destroy 虚拟机名
+# 将snapA所有数据提交到底层base
+qemu-img commit /snapA.qcow2
+# 修改上层快照backing指向base，解除依赖
+qemu-img rebase -u -b /base.qcow2 /snapB.qcow2
+# 删除快照A文件
+rm -f /snapA.qcow2
+</code></pre>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>

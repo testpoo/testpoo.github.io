@@ -49,7 +49,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-06-30&nbsp;&nbsp;共8697个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-06-30&nbsp;&nbsp;共8797个字</span><span class="tag">archinstall</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
             <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共16729个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-06-30 09:40:58</span></div>
+      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-07-03 12:12:30</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -137,10 +137,16 @@ pacman -Sy archlinuxcn-keyring
 <h3 id="5-xfce">5. 安装xfce</h3>
 <h4 id="51-xfce">5.1. 安装xfce及相关软件</h4>
 <pre class="codehilite"><code># 安装的软件
-sudo pacman -S light-locker firefox libreoffice-fresh libreoffice-fresh-zh-cn gst-plugins-good git firefox-ublock-origin fcitx5 fcitx5-rime rime-wubi
+sudo pacman -S light-locker firefox libreoffice-fresh libreoffice-fresh-zh-cn git firefox-ublock-origin ibus ibus-table ibus-table-chinese blueman
+
+# PooMusic需要
+gst-plugins-good python-mutagen
+
+# 微信需要
+xcb-util-image xcb-util-renderutil
 
 # 卸载的软件
-sudo pacman -Rns htop xfburn vim parole xfce4-sensors xfce4-notes xfce4-dict xfce4-sensors-plugin xfce4-notes-plugin xfce4-dict xfce4-screensaver xfce4-whiskermenu-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-verve-plugin xfce4-timer-plugin xfce4-smartbookmark-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-diskperf-plugin xfce4-battery-plugin xfce4-systemload-plugin xfce4-xkb-plugin xfce4-netload-plugin xfce4-mailwatch-plugin xfce4-clipman-plugin xfce4-fsguard-plugin xfce4-genmon-plugin xfce4-eyes-plugin xfce4-mount-plugin xfce4-mpc-plugin xfce4-time-out-plugin
+sudo pacman -Rns htop xfburn vim parole xfce4-sensors-plugin xfce4-notes-plugin xfce4-dict xfce4-sensors-plugin xfce4-notes-plugin xfce4-dict xfce4-screensaver xfce4-whiskermenu-plugin xfce4-weather-plugin xfce4-wavelan-plugin xfce4-verve-plugin xfce4-timer-plugin xfce4-smartbookmark-plugin xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-diskperf-plugin xfce4-battery-plugin xfce4-systemload-plugin xfce4-xkb-plugin xfce4-netload-plugin xfce4-mailwatch-plugin xfce4-clipman-plugin xfce4-fsguard-plugin xfce4-genmon-plugin xfce4-eyes-plugin xfce4-mount-plugin xfce4-mpc-plugin xfce4-time-out-plugin
 </code></pre>
 
 <h4 id="52">5.2. 输入法环境变量设置</h4>

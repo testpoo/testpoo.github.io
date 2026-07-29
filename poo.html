@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 关键移动端配置，解决点击无响应、缩放问题 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>四则运算题库</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+            /* 解决移动端点击高亮、触摸失效 */
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            max-width: 420px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        /* 题目区域 */
+        .title-box {
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 32px;
+            font-weight: bold;
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        /* 答案输入框 */
+        #answerInput {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #666;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        /* 数字键盘容器 */
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        /* 按键通用样式 增大点击区域 */
+        .key {
+            padding: 20px 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e8e8e8;
+            cursor: pointer;
+            min-height: 60px;
+        }
+        .key:active:not(:disabled) {
+            background-color: #c8c8c8;
+        }
+        .key:disabled {
+            background-color: #f5f5f5;
+            color: #bbb;
+            cursor: not-allowed;
+        }
+        .clear-key {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .dot-key {
+            background-color: #4ecdc4;
+            color: white;
+        }
+        /* 对错标识 提交后替换键盘 */
+        .result-icon {
+            display: none;
+            text-align: center;
+            font-size: 120px;
+            font-weight: bold;
+            height: 325px;
+            line-height: 325px;
+        }
+        .icon-right {
+            color: #00b42a;
+        }
+        .icon-wrong {
+            color: #f53f3f;
+        }
+        /* 提交/下一题按钮 加高点击区域 */
+        #submitBtn {
+            width: 100%;
+            padding: 22px 18px;
+            min-height: 70px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2d8cf0;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        #submitBtn:active {
+            background-color: #1b78d8;
+        }
+    </style>
+</head>
+<body>
+    <!-- 题目显示区域 -->
+    <div class="title-box" id="questionBox">1 + 2 = ?</div>
+
+    <!-- 答案输入框 -->
+    <input type="text" id="answerInput" readonly placeholder="请点击下方数字输入答案">
+
+    <!-- 数字键盘区域 -->
+    <div class="keyboard-wrap">
+        <div class="keyboard">
+            <button class="key num-key" data-val="1">1</button>
+            <button class="key num-key" data-val="2">2</button>
+            <button class="key num-key" data-val="3">3</button>
+            <button class="key num-key" data-val="4">4</button>
+            <button class="key num-key" data-val="5">5</button>
+            <button class="key num-key" data-val="6">6</button>
+            <button class="key num-key" data-val="7">7</button>
+            <button class="key num-key" data-val="8">8</button>
+            <button class="key num-key" data-val="9">9</button>
+            <button class="key dot-key num-key" data-val=".">.</button>
+            <button class="key num-key" data-val="0">0</button>
+            <button class="key clear-key" id="clearBtn">清除</button>
+        </div>
+        <!-- 提交后替换键盘显示对错符号 -->
+        <div class="result-icon icon-right">✓</div>
+        <div class="result-icon icon-wrong">✕</div>
+    </div>
+
+    <!-- 提交/下一题按钮 -->
+    <button id="submitBtn">提交答案</button>
+
+    <script>
+        const questionBox = document.getElementById('questionBox');
+        const answerInput = document.getElementById('answerInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const numKeys = document.querySelectorAll('.num-key');
+        const keyboard = document.querySelector('.keyboard');
+        const iconRight = document.querySelector('.icon-right');
+        const iconWrong = document.querySelector('.icon-wrong');
+
+        let currentAnswer = 0;
+        let isSubmitted = false;
+
+        // 生成四则运算题目
+        function createQuestion() {
+            let a = Math.floor(Math.random() * 20) + 1;
+            let b = Math.floor(Math.random() * 20) + 1;
+            const ops = ['+', '-', '×', '÷'];
+            let op = ops[Math.floor(Math.random() * ops.length)];
+
+            switch(op) {
+                case '-':
+                    if(a < b) [a, b] = [b, a];
+                    currentAnswer = a - b;
+                    break;
+                case '×':
+                    currentAnswer = a * b;
+                    break;
+                case '÷':
+                    currentAnswer = a;
+                    a = a * b;
+                    break;
+                default:
+                    currentAnswer = a + b;
+            }
+            questionBox.innerText = `${a} ${op} ${b} = ?`;
+        }
+
+        // 重置页面，恢复键盘，隐藏对错符号
+        function resetStatus() {
+            isSubmitted = false;
+            answerInput.value = '';
+            submitBtn.innerText = '提交答案';
+            keyboard.style.display = 'grid';
+            iconRight.style.display = 'none';
+            iconWrong.style.display = 'none';
+            numKeys.forEach(key => key.disabled = false);
+            clearBtn.disabled = false;
+            createQuestion();
+        }
+
+        // 统一绑定点击+触摸事件，解决手机点击无反应
+        function bindTouchClick(element, callback) {
+            let isTouch = false;
+            element.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                isTouch = true;
+                callback();
+            })
+            element.addEventListener('click', () => {
+                if (!isTouch) callback();
+                isTouch = false;
+            })
+        }
+
+        // 绑定所有数字按键
+        numKeys.forEach(key => {
+            bindTouchClick(key, () => {
+                const val = key.dataset.val;
+                if(val === '.' && answerInput.value.includes('.')) return;
+                answerInput.value += val;
+            })
+        })
+
+        // 清除按钮
+        bindTouchClick(clearBtn, () => {
+            answerInput.value = '';
+        })
+
+        // 提交按钮
+        bindTouchClick(submitBtn, () => {
+            if(!isSubmitted) {
+                const userInput = answerInput.value.trim();
+                if(userInput === '') return;
+                const userAns = parseFloat(userInput);
+                isSubmitted = true;
+                keyboard.style.display = 'none';
+                if(userAns === currentAnswer) {
+                    iconRight.style.display = 'block';
+                } else {
+                    iconWrong.style.display = 'block';
+                }
+                submitBtn.innerText = '下一题';
+            } else {
+                resetStatus();
+            }
+        })
+
+        resetStatus();
+    </script>
+</body>
+</html>

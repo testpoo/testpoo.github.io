@@ -49,9 +49,9 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-08-03&nbsp;&nbsp;共37549个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-08-03&nbsp;&nbsp;共37878个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共43909个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共44163个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-09-07 15:55:07</span></div>
+      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-09-14 15:56:56</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -75,6 +75,7 @@
 <li><a href="#41-xfce">4.1. 安装xfce及相关软件</a></li>
 <li><a href="#42">4.2. 输入法环境变量设置</a></li>
 <li><a href="#43-lightdm">4.3. Lightdm配置</a></li>
+<li><a href="#44-gtkcss">4.4. 添加gtk.css</a></li>
 </ul>
 </li>
 <li><a href="#5kde">5.安装KDE</a></li>
@@ -133,7 +134,7 @@ reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 <h3 id="4-xfce">4. 安装xfce</h3>
 <h4 id="41-xfce">4.1. 安装xfce及相关软件</h4>
 <div class="codehilite"><pre><span></span><code><span class="c1"># 安装的软件</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="n">firefox</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">qogir</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">git</span><span class="w"> </span><span class="n">wqy</span><span class="o">-</span><span class="n">zenhei</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="n">firefox</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">qogir</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">git</span><span class="w"> </span><span class="n">wqy</span><span class="o">-</span><span class="n">zenhei</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">docklike</span><span class="o">-</span><span class="n">plugin</span>
 
 <span class="c1"># PooMusic需要</span>
 <span class="n">gst</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">good</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">mutagen</span>
@@ -142,7 +143,7 @@ reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 <span class="n">xcb</span><span class="o">-</span><span class="n">util</span><span class="o">-</span><span class="n">image</span><span class="w"> </span><span class="n">xcb</span><span class="o">-</span><span class="n">util</span><span class="o">-</span><span class="n">renderutil</span><span class="w"> </span><span class="n">xcb</span><span class="o">-</span><span class="n">util</span><span class="o">-</span><span class="n">wm</span>
 
 <span class="c1"># sublime输入需要</span>
-<span class="n">fcitx5</span><span class="o">-</span><span class="n">gtk</span>
+<span class="n">fcitx5</span><span class="o">-</span><span class="n">gtk</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">qt</span>
 
 <span class="c1"># 卸载的软件</span>
 <span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">Rns</span><span class="w"> </span><span class="n">htop</span><span class="w"> </span><span class="n">xfburn</span><span class="w"> </span><span class="n">vim</span><span class="w"> </span><span class="n">parole</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">sensors</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">notes</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">dict</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">sensors</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">notes</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">dict</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">whiskermenu</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">weather</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">wavelan</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">verve</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">timer</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">smartbookmark</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">cpufreq</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">cpugraph</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">diskperf</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">battery</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">systemload</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">xkb</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">netload</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">mailwatch</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">clipman</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">fsguard</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">genmon</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">eyes</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">mount</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">mpc</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">out</span><span class="o">-</span><span class="n">plugin</span>
@@ -153,26 +154,18 @@ reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 <p>添加ibus登录时启动：<code>ibus-daemon -rxRd</code></p>
 <div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
 
-<span class="n">XIM</span><span class="o">=</span><span class="ss">&quot;ibus&quot;</span>
 <span class="n">GTK_IM_MODULE</span><span class="o">=</span><span class="n">ibus</span>
 <span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="n">ibus</span>
 <span class="n">XMODIFIERS</span><span class="o">=</span><span class="ss">&quot;@im=ibus&quot;</span>
-<span class="n">INPUT_METHOD</span><span class="o">=</span><span class="n">ibus</span>
-<span class="n">SDL_IM_MODULE</span><span class="o">=</span><span class="n">ibus</span>
-<span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">ibus</span>
 </code></pre></div>
 
 <p><strong>fcitx</strong></p>
 <p>启用fcitx输入需要配置环境变量：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
 
-<span class="n">XIM</span><span class="o">=</span><span class="ss">&quot;fcitx&quot;</span>
 <span class="n">GTK_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
 <span class="n">QT_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
 <span class="n">XMODIFIERS</span><span class="o">=</span><span class="ss">&quot;@im=fcitx&quot;</span>
-<span class="n">INPUT_METHOD</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">SDL_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
-<span class="n">GLFW_IM_MODULE</span><span class="o">=</span><span class="n">fcitx</span>
 </code></pre></div>
 
 <h4 id="43-lightdm">4.3. Lightdm配置</h4>
@@ -185,6 +178,16 @@ reflector -c China -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 <span class="nt">xft-dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">120</span>
 <span class="nt">indicators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="nt">host</span><span class="o">;~</span><span class="nt">spacer</span><span class="o">;~</span><span class="nt">clock</span><span class="o">;~</span><span class="nt">spacer</span><span class="o">;~</span><span class="nt">a11y</span><span class="o">;~</span><span class="nt">session</span><span class="o">;~</span><span class="nt">power</span>
 <span class="p">#</span><span class="nn">hide-user-image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">true</span>
+</code></pre></div>
+
+<h4 id="44-gtkcss">4.4. 添加gtk.css</h4>
+<ul>
+<li>路径<code>~/config/gtk-3.0/gtk.css</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="p">#</span><span class="nn">docklike-plugin</span><span class="w"> </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <h3 id="5kde">5.安装KDE</h3>

@@ -49,9 +49,9 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-08-03&nbsp;&nbsp;共37549个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-08-03&nbsp;&nbsp;共37878个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共43909个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-03-05&nbsp;&nbsp;共44163个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-09-07 15:55:07</span></div>
+      <div class="header"><span>debian安装设置</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-09-14 15:56:56</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -121,6 +121,7 @@
 </li>
 <li><a href="#12-rime">12. rime输入法设置</a></li>
 <li><a href="#13-iwd">13. iwd无法联网</a></li>
+<li><a href="#13-zram">13. 配置zram</a></li>
 </ul>
 </div>
 <h3 id="1">1. 下载链接</h3>
@@ -216,18 +217,6 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 <h4 id="72">7.2. 安装软件</h4>
 <p><code>sudo apt install git fcitx5 fcitx5-rime rime-data-wubi gvfs-backends blueman fonts-noto-cjk webext-ublock-origin-firefox ristretto xfce4-screenshooter xfce4-taskmanager pkexec pipewire-audio firefox-esr-l10n-zh-cn papirus-icon-theme zram-tools</code></p>
 <p>可选图标 <code>https://github.com/vinceliuice/McMojave-circle</code>  <code>https://github.com/yeyushengfan258/Reversal-icon-theme.git</code></p>
-<ul>
-<li>配置zram</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 安装zram</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">zram</span><span class="o">-</span><span class="n">tools</span>
-<span class="c1"># 配置zram</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">zramswap</span>
-<span class="c1"># 查看</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">swapon</span><span class="w"> </span><span class="o">--</span><span class="n">show</span>
-<span class="n">sudo</span><span class="w"> </span><span class="n">zramctl</span>
-</code></pre></div>
-
 <h4 id="73">7.3. 设置</h4>
 <ul>
 <li>
@@ -415,9 +404,9 @@ xfce4-mouse-settings -d &quot;SYNA3602:00 093A:0255 Touchpad&quot;
 
 <h3 id="10-labwc">10. labwc窗口管理器设置</h3>
 <h4 id="101-labwc">10.1. 安装labwc及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">labwc</span><span class="w"> </span><span class="nx">swaybg</span><span class="w"> </span><span class="nx">swayidle</span><span class="w"> </span><span class="nx">swaylock</span><span class="w"> </span><span class="nx">wlr</span><span class="o">-</span><span class="nx">randr</span><span class="w"> </span><span class="nx">fcitx5</span><span class="w"> </span><span class="nx">fcitx5</span><span class="o">-</span><span class="nx">rime</span><span class="w"> </span><span class="nx">rime</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">wubi</span><span class="w"> </span><span class="nx">thunar</span><span class="w"> </span><span class="nx">thunar</span><span class="o">-</span><span class="nx">archive</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">foot</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">panel</span><span class="w"> </span><span class="nx">xfce4</span><span class="o">-</span><span class="nx">genmon</span><span class="o">-</span><span class="nx">plugin</span><span class="w"> </span><span class="nx">xarchiver</span><span class="w"> </span><span class="nx">pipewire</span><span class="o">-</span><span class="nx">audio</span><span class="w"> </span><span class="nx">blueman</span><span class="w"> </span><span class="nx">fonts</span><span class="o">-</span><span class="nx">noto</span><span class="o">-</span><span class="nx">cjk</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">brightnessctl</span><span class="w"> </span><span class="nx">wlopm</span><span class="w"> </span><span class="nx">mako</span><span class="o">-</span><span class="nx">notifier</span><span class="w"> </span><span class="nx">upower</span><span class="w"> </span><span class="nx">grim</span><span class="w"> </span><span class="nx">slurp</span><span class="w"> </span><span class="nx">wl</span><span class="o">-</span><span class="nx">clipboard</span><span class="w"> </span><span class="nx">wtype</span><span class="w"> </span><span class="nx">iwd</span><span class="w"> </span><span class="nx">ristretto</span><span class="w"> </span><span class="nx">libglib2</span><span class="m m-Double">.0</span><span class="o">-</span><span class="nx">bin</span><span class="w"> </span><span class="nx">papirus</span><span class="o">-</span><span class="nx">icon</span><span class="o">-</span><span class="nx">theme</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">labwc</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">wlr</span><span class="o">-</span><span class="n">randr</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">terminal</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">panel</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">genmon</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">pipewire</span><span class="o">-</span><span class="n">audio</span><span class="w"> </span><span class="n">blueman</span><span class="w"> </span><span class="n">fonts</span><span class="o">-</span><span class="n">noto</span><span class="o">-</span><span class="n">cjk</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">wlopm</span><span class="w"> </span><span class="n">mako</span><span class="o">-</span><span class="n">notifier</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">wtype</span><span class="w"> </span><span class="n">iwd</span><span class="w"> </span><span class="n">ristretto</span><span class="w"> </span><span class="n">libglib2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">bin</span><span class="w"> </span><span class="n">webext</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="o">-</span><span class="n">firefox</span><span class="w"> </span><span class="n">zram</span><span class="o">-</span><span class="n">tools</span><span class="w"> </span><span class="n">upower</span>
 
-<span class="nx">sudo</span><span class="w"> </span><span class="nx">apt</span><span class="w"> </span><span class="nx">autoremove</span><span class="w"> </span><span class="o">--</span><span class="nx">purge</span><span class="w"> </span><span class="nx">wpasupplicant</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">tiny</span><span class="w"> </span><span class="nx">vim</span><span class="o">-</span><span class="nx">common</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">autoremove</span><span class="w"> </span><span class="o">--</span><span class="n">purge</span><span class="w"> </span><span class="n">wpasupplicant</span><span class="w"> </span><span class="n">vim</span><span class="o">-</span><span class="n">tiny</span><span class="w"> </span><span class="n">vim</span><span class="o">-</span><span class="n">common</span>
 </code></pre></div>
 
 <p>需要安装google-chrome，在/etc/apt/sources.list.d/google-chrome.sources文件中添加以下内容：</p>
@@ -547,6 +536,19 @@ style:
 <span class="n">nameserver</span><span class="w"> </span><span class="mf">119.29.29.29</span>
 
 <span class="n">systemctl</span><span class="w"> </span><span class="n">restart</span><span class="w"> </span><span class="n">iwd</span>
+</code></pre></div>
+
+<h3 id="13-zram">13. 配置zram</h3>
+<ul>
+<li>不用swap，改用zram</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 安装zram</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">zram</span><span class="o">-</span><span class="n">tools</span>
+<span class="c1"># 配置zram</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">zramswap</span>
+<span class="c1"># 查看</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">swapon</span><span class="w"> </span><span class="o">--</span><span class="n">show</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">zramctl</span>
 </code></pre></div>
         <div class="copyright">
           <ul>

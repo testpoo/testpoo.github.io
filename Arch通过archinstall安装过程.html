@@ -30,7 +30,7 @@
             
             <li><a href="https://testpoo.github.io/小技巧.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;小技巧</a></li>
             
-            <li><a href="https://testpoo.github.io/debian安装设置.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
+            <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html" style="color: #0e73e9;"><label style="color: #0e73e9;"></label>&nbsp;&nbsp;系统安装</a></li>
             
             <li><a href="https://testpoo.github.io/停止精神内耗.html" ><label style="color: #38b6fd"></label>&nbsp;&nbsp;摘录</a></li>
             
@@ -49,9 +49,9 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-10-21&nbsp;&nbsp;共49759个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
+            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-10-30&nbsp;&nbsp;共34631个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
             
-            <a href="https://testpoo.github.io/Arch通过archinstall安装过程.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span><span>2026-10-15&nbsp;&nbsp;共35139个字</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span></li></a>
+            <a href="https://testpoo.github.io/debian安装设置.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span><span>2026-10-21&nbsp;&nbsp;共50026个字</span><span class="tag">gnome</span><span class="tag">xfce</span><span class="tag">kde</span><span class="tag">sway</span><span class="tag">labwc</span><span class="tag">wayfire</span></li></a>
             
             <a href="https://testpoo.github.io/Labwc菜单的几种生成方法.html#current"><li ><span><label style="color: #38b6fd"></label>&nbsp;Labwc菜单的几种生成方法</span><span>2026-02-08&nbsp;&nbsp;共56537个字</span><span class="tag">labwc</span><span class="tag">menu</span></li></a>
             
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-10-22 23:03:45</span></div>
+      <div class="header"><span>Arch通过archinstall安装过程</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-10-30 10:43:24</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
@@ -97,11 +97,11 @@
 </li>
 <li><a href="#8aur">8.安装aur软件</a></li>
 <li><a href="#9pacman">9.pacman命令</a><ul>
-<li><a href="#91">9.1.更新系统</a></li>
-<li><a href="#92">9.2.安装包</a></li>
-<li><a href="#93">9.3.删除包</a></li>
-<li><a href="#94">9.4.搜索包</a></li>
-<li><a href="#95">9.5.其他用法</a></li>
+<li><a href="#91">9.1.系统更新</a></li>
+<li><a href="#92">9.2.软件包安装</a></li>
+<li><a href="#93">9.3.软件包删除</a></li>
+<li><a href="#94">9.4.软件包查询</a></li>
+<li><a href="#95">9.5.清理缓存</a></li>
 </ul>
 </li>
 </ul>
@@ -242,11 +242,10 @@ font=FreeMono:size=12
 
 <h3 id="7-labwc">7. 安装Labwc</h3>
 <h4 id="71-labwc">7.1 安装Labwc及相关软件</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="n">firefox</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">gvfs</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">foot</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">ristretto</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">man</span><span class="o">-</span><span class="n">db</span><span class="w"> </span><span class="mi">7</span><span class="n">zip</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">wlr</span><span class="o">-</span><span class="n">randr</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">wlopm</span><span class="w"> </span><span class="n">mako</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">bluetui</span><span class="w"> </span><span class="n">tela</span><span class="o">-</span><span class="n">circle</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">blue</span><span class="w"> </span><span class="n">wtype</span><span class="w"> </span><span class="n">gtk</span><span class="o">-</span><span class="n">layer</span><span class="o">-</span><span class="n">shell</span><span class="w"> </span><span class="n">upower</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="n">firefox</span><span class="w"> </span><span class="n">firefox</span><span class="o">-</span><span class="n">ublock</span><span class="o">-</span><span class="n">origin</span><span class="w"> </span><span class="n">thunar</span><span class="w"> </span><span class="n">gvfs</span><span class="w"> </span><span class="n">xarchiver</span><span class="w"> </span><span class="n">thunar</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">plugin</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">panel</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">appfinder</span><span class="w"> </span><span class="n">xfce4</span><span class="o">-</span><span class="n">terminal</span><span class="w"> </span><span class="n">fcitx5</span><span class="w"> </span><span class="n">fcitx5</span><span class="o">-</span><span class="n">rime</span><span class="w"> </span><span class="n">rime</span><span class="o">-</span><span class="n">wubi</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">wl</span><span class="o">-</span><span class="n">clipboard</span><span class="w"> </span><span class="n">ristretto</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="w"> </span><span class="n">libreoffice</span><span class="o">-</span><span class="n">fresh</span><span class="o">-</span><span class="n">zh</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">man</span><span class="o">-</span><span class="n">db</span><span class="w"> </span><span class="mi">7</span><span class="n">zip</span><span class="w"> </span><span class="n">swaybg</span><span class="w"> </span><span class="n">swayidle</span><span class="w"> </span><span class="n">swaylock</span><span class="w"> </span><span class="n">wlr</span><span class="o">-</span><span class="n">randr</span><span class="w"> </span><span class="n">brightnessctl</span><span class="w"> </span><span class="n">wlopm</span><span class="w"> </span><span class="n">mako</span><span class="w"> </span><span class="n">grim</span><span class="w"> </span><span class="n">slurp</span><span class="w"> </span><span class="n">qogir</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">theme</span><span class="o">-</span><span class="n">git</span><span class="w"> </span><span class="n">upower</span>
 
 <span class="n">PooMusic</span><span class="p">:</span><span class="w"> </span><span class="n">python</span><span class="o">-</span><span class="n">mutagen</span><span class="w"> </span><span class="n">gst</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">good</span>
 <span class="n">WeChat</span><span class="p">:</span><span class="w"> </span><span class="n">xcb</span><span class="o">-</span><span class="n">util</span><span class="o">-</span><span class="n">image</span>
-<span class="err">窗口表列</span><span class="p">:</span><span class="w"> </span><span class="err">需要</span><span class="n">wlrctl</span>
 
 <span class="n">sudo</span><span class="w"> </span><span class="n">pacman</span><span class="w"> </span><span class="o">-</span><span class="n">Rns</span><span class="w"> </span><span class="n">alacritty</span><span class="w"> </span><span class="n">htop</span><span class="w"> </span><span class="n">smartmontools</span><span class="w"> </span><span class="n">vim</span><span class="w"> </span><span class="n">wget</span><span class="w"> </span><span class="n">lightdm</span><span class="w"> </span><span class="n">lightdm</span><span class="o">-</span><span class="n">gtk</span><span class="o">-</span><span class="n">greeter</span>
 </code></pre></div>
@@ -322,38 +321,58 @@ font=FreeMono:size=12
 </code></pre></div>
 
 <h3 id="9pacman">9.pacman命令</h3>
-<p><code>pacman</code> 是 <code>Arch Linux</code> 的包管理器。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 <code>Arch</code> 库还是用户自己创建，<code>pacman</code> 都能方便得管理。</p>
-<h4 id="91">9.1.更新系统</h4>
-<p>在 <code>Archlinux</code> 中，使用一条命令即可对整个系统进行更新：<code>pacman -Syu</code></p>
-<p>如果你已经使用 <code>pacman -Sy</code> 将本地的包数据库与远程的仓库进行了同步，也可以只执行：<code>pacman -Su</code></p>
-<h4 id="92">9.2.安装包</h4>
-<ul>
-<li><code>pacman -S</code> 包名：例如，执行 <code>pacman -S firefox</code> 将安装 <code>Firefox</code>。你也可以同时安装多个包，只需以空格分隔包名即可。</li>
-<li><code>pacman -Sy</code> 包名：与上面命令不同的是，该命令将在同步包数据库后再执行安装。</li>
-<li><code>pacman -Sv</code> 包名：在显示一些操作信息后执行安装。</li>
-<li><code>pacman -U</code> 包名：安装本地包，其扩展名为 pkg.tar.gz。</li>
-<li><code>pacman -U http://www.example.com/repo/example.pkg.tar.xz</code> 安装一个远程包（不在 <code>pacman</code> 配置的源里面）</li>
-</ul>
-<h4 id="93">9.3.删除包</h4>
-<ul>
-<li><code>pacman -R</code> 包名：该命令将只删除包，保留其全部已经安装的依赖关系</li>
-<li><code>pacman -Rs</code> 包名：在删除包的同时，删除其所有没有被其他已安装软件包使用的依赖关系</li>
-<li><code>pacman -Rsc</code> 包名：在删除包的同时，删除所有依赖这个软件包的程序</li>
-<li><code>pacman -Rd</code> 包名：在删除包时不检查依赖。</li>
-</ul>
-<h4 id="94">9.4.搜索包</h4>
-<ul>
-<li><code>pacman -Ss</code> 关键字：在仓库中搜索含关键字的包。</li>
-<li><code>pacman -Qs</code> 关键字： 搜索已安装的包。</li>
-<li><code>pacman -Qi</code> 包名：查看有关包的详尽信息。</li>
-<li><code>pacman -Ql</code> 包名：列出该包的文件。</li>
-</ul>
-<h4 id="95">9.5.其他用法</h4>
-<ul>
-<li><code>pacman -Sw</code> 包名：只下载包，不安装。</li>
-<li><code>pacman -Sc</code>：清理未安装的包文件，包文件位于 <code>/var/cache/pacman/pkg/</code> 目录。</li>
-<li><code>pacman -Scc</code>：清理所有的缓存文件。</li>
-</ul>
+<p><code>pacman</code> 是 <code>Arch Linux</code> 的包管理器。</p>
+<h4 id="91">9.1.系统更新</h4>
+<div class="codehilite"><pre><span></span><code># 更新所有已安装的软件包
+sudo pacman -Syu
+
+# 仅更新软件包数据库(不实际更新软件)
+sudo pacman -Sy
+</code></pre></div>
+
+<h4 id="92">9.2.软件包安装</h4>
+<div class="codehilite"><pre><span></span><code># 安装单个软件包
+sudo pacman -S 包名
+
+# 安装多个软件包
+sudo pacman -S 包名1 包名2 包名3
+
+# 安装本地软件包文件(不处理依赖)
+sudo pacman -U /路径/到/包名.pkg.tar.zst
+</code></pre></div>
+
+<h4 id="93">9.3.软件包删除</h4>
+<div class="codehilite"><pre><span></span><code># 删除软件包但保留其依赖
+sudo pacman -R 包名
+
+# 删除软件包及其不再需要的依赖
+sudo pacman -Rs 包名
+
+# 删除软件包及其所有配置文件
+sudo pacman -Rns 包名
+</code></pre></div>
+
+<h4 id="94">9.4.软件包查询</h4>
+<div class="codehilite"><pre><span></span><code># 搜索软件包(名称和描述)
+pacman -Ss 关键词
+
+# 列出已安装的软件包
+pacman -Q
+
+# 查询某个文件属于哪个软件包
+pacman -Qo /路径/到/文件
+
+# 显示软件包详细信息
+pacman -Qi 包名
+</code></pre></div>
+
+<h4 id="95">9.5.清理缓存</h4>
+<div class="codehilite"><pre><span></span><code># 清理未安装软件包的缓存
+sudo pacman -Sc
+
+# 清理所有软件包的缓存(包括已安装的)
+sudo pacman -Scc
+</code></pre></div>
         <div class="copyright">
           <ul>
             <li>本文作者：畄月寒</li>
@@ -373,9 +392,9 @@ font=FreeMono:size=12
         
         <li><a href="https://testpoo.github.io/小技巧.html"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span></a></li>
         
-        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
-        
         <li><a href="https://testpoo.github.io/Arch通过archinstall安装过程.html"><span><label style="color: #38b6fd"></label>&nbsp;Arch通过archinstall安装过程</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/debian安装设置.html"><span><label style="color: #38b6fd"></label>&nbsp;debian安装设置</span></a></li>
         
         <li><a href="https://testpoo.github.io/停止精神内耗.html"><span><label style="color: #38b6fd"></label>&nbsp;停止精神内耗</span></a></li>
         
@@ -405,17 +424,17 @@ font=FreeMono:size=12
         
         <li><a href="https://testpoo.github.io/婚书两则.html"><span><label style="color: #38b6fd"></label>&nbsp;婚书两则</span></a></li>
         
+        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
+        
         <li><a href="https://testpoo.github.io/只有一个读音的九篇古文.html"><span><label style="color: #38b6fd"></label>&nbsp;只有一个读音的九篇古文</span></a></li>
         
         <li><a href="https://testpoo.github.io/独孤羊放妻春条书.html"><span><label style="color: #38b6fd"></label>&nbsp;独孤羊放妻春条书</span></a></li>
         
-        <li><a href="https://testpoo.github.io/python代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;python代码小抄</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/javascript代码小抄.html"><span><label style="color: #38b6fd"></label>&nbsp;javascript代码小抄</span></a></li>
+        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/shell三剑客简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell三剑客简介</span></a></li>
-        
-        <li><a href="https://testpoo.github.io/Jinja2简介.html"><span><label style="color: #38b6fd"></label>&nbsp;Jinja2简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Python造假数据神器Faker.html"><span><label style="color: #38b6fd"></label>&nbsp;Python造假数据神器Faker</span></a></li>
         
@@ -433,9 +452,9 @@ font=FreeMono:size=12
         
         <li><a href="https://testpoo.github.io/如何用自动化测试搞垮团队.html"><span><label style="color: #38b6fd"></label>&nbsp;如何用自动化测试搞垮团队</span></a></li>
         
-        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
-        
         <li><a href="https://testpoo.github.io/mysql函数汇总.html"><span><label style="color: #38b6fd"></label>&nbsp;mysql函数汇总</span></a></li>
+        
+        <li><a href="https://testpoo.github.io/shell简介.html"><span><label style="color: #38b6fd"></label>&nbsp;shell简介</span></a></li>
         
         <li><a href="https://testpoo.github.io/Docker入门教程.html"><span><label style="color: #38b6fd"></label>&nbsp;Docker入门教程</span></a></li>
         

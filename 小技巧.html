@@ -57,7 +57,7 @@
         <div class="scrollheight">
           <ul>
             
-            <a href="https://testpoo.github.io/小技巧.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span><span>2999-12-29&nbsp;&nbsp;共4979个字</span><span class="tag">小技巧</span></li></a>
+            <a href="https://testpoo.github.io/小技巧.html#current"><li style="background: aliceblue;border: 0px;" id="current"><span><label style="color: #38b6fd"></label>&nbsp;小技巧</span><span>2999-12-29&nbsp;&nbsp;共3795个字</span><span class="tag">小技巧</span></li></a>
             
           </ul>
         </div>
@@ -65,43 +65,32 @@
       </div>
     </div>
     <div class="main">
-      <div class="header"><span>小技巧</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-10-30 10:43:24</span></div>
+      <div class="header"><span>小技巧</span><span>减少幻想，减少欲望，多读书，多实践<br />最后更新于2026-10-30 15:28:31</span></div>
       <input class="pswitch ponoff" type="checkbox" id="catalog">
       <div class="posts">
         <div class="toc">
 <ul>
-<li><a href="#linuxwin"> Linux下清理Win换行符</a></li>
+<li><a href="#linuxwinm-r"> Linux下清理Win换行符（^M 或 \r）</a></li>
 <li><a href="#linuxntfs"> Linux下无法挂载ntfs</a></li>
-<li><a href="#wps"> WPS不登录无法编辑</a></li>
 <li><a href="#linuxzip"> linux下解压zip乱码问题</a></li>
 <li><a href="#deb"> deb重新打包</a></li>
 <li><a href="#win11-ltsc-2024-"> WIN11-LTSC-2024-激活</a></li>
 <li><a href="#ssh-key"> 创建一个 SSH key</a></li>
-<li><a href="#m"> 去除^M</a></li>
 <li><a href="#winpythonpid"> Win下查找python进程PID</a></li>
 </ul>
 </div>
-<h3 id="linuxwin"> Linux下清理Win换行符</h3>
+<h3 id="linuxwinm-r"> Linux下清理Win换行符（^M 或 \r）</h3>
 <div class="codehilite"><pre><span></span><code>sed -i &#39;s/\r//&#39; srcipt.py
+
+vi下 :%s/^M//g 或者 :1,$s/^M//g 均可  # 补充一点：^M是使用 CTRL-V CTRL-M 而不是字面上的 ^M
+
+nano下 Ctrl+O,Alt+D  # 会在Win和Linux换行符中切换
 </code></pre></div>
 
 <hr />
 <h3 id="linuxntfs"> Linux下无法挂载ntfs</h3>
 <div class="codehilite"><pre><span></span><code>sudo apt install ntfs-3g
 sudo ntfsfix -d /dev/sda1
-</code></pre></div>
-
-<hr />
-<h3 id="wps"> WPS不登录无法编辑</h3>
-<p>WPS不登录无法编辑，可将下列代码保存为reg格式，然后执行，即可编辑</p>
-<div class="codehilite"><pre><span></span><code>Windows Registry Editor Version 5.00
-
-<span class="k">[</span><span class="nb">HKEY_CURRENT_USER</span><span class="k">\Software\kingsoft\Office\6.0\plugins\officespace\flogin]</span>
-<span class="na">&quot;enableForceLoginForFirstInstallDevice&quot;</span><span class="o">=</span><span class="s">&quot;false&quot;</span>
-<span class="na">&quot;enableForceLoginStyle_202111&quot;</span><span class="o">=</span><span class="s">&quot;false&quot;</span>
-<span class="na">&quot;isForceLoginNewDevice202111&quot;</span><span class="o">=</span><span class="s">&quot;false&quot;</span>
-<span class="na">&quot;lastSkipVistorModeTime&quot;</span><span class="o">=</span><span class="nv">dword</span><span class="p">:</span><span class="m">ffffffff</span>
-<span class="na">&quot;lastSkipGuideLoginTime&quot;</span><span class="o">=</span><span class="nv">hex(b)</span><span class="p">:</span><span class="m">ff,ff,ff,ff,ff,ff,ff,6f</span>
 </code></pre></div>
 
 <hr />
@@ -162,13 +151,6 @@ slmgr -dlv
 <div class="codehilite"><pre><span></span><code><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">rsa</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="ss">&quot;your_email@example.com&quot;</span>
 
 <span class="n">默认生成地址</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span>
-</code></pre></div>
-
-<hr />
-<h3 id="m"> 去除^M</h3>
-<div class="codehilite"><pre><span></span><code>vi下 :%s/^M//g 或者 :1,$s/^M//g 均可
-
-补充一点：^M是使用 CTRL-V CTRL-M 而不是字面上的 ^M
 </code></pre></div>
 
 <hr />
